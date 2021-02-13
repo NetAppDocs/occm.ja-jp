@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task_managing_data_fusion.html 
+keywords: data identifiers, personal data, sensitive personal data, compliance, data fusion 
+summary: 「 Data Fusion 」と呼ばれる機能を使用すると、組織のデータをスキャンして、データベースから一意の識別子がファイルやその他のデータベースで見つかったかどうかを確認できます。基本的には、 Cloud Compliance スキャンで識別される「個人データ」のリストを作成します。これにより、機密性の高いデータがすべてのファイル内でどこに保存されているかを完全に把握できます。 
+---
+= Data Fusion を使用して個人データ識別子を追加する
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Data Fusion では、次の機能を使用して組織のデータをスキャンし、データベースから一意の識別子がファイルやその他のデータベースで見つかったかどうかを確認できます。基本的には、クラウドコンプライアンススキャンで識別される「個人データ」のリストを作成します。これにより、機密データが存在する可能性のある場所に関する全体像が _all_your ファイルに表示されます。
+
+
+
+== データベースからカスタムの個人データ識別子を作成する
+
+データベーステーブルで特定の列を選択することで、 Cloud Compliance がスキャンで検索する追加の識別子を選択できます。たとえば、次の図は、データ Fusion を使用してボリューム、バケット、およびデータベースをスキャンし、 Oracle データベースからすべての顧客 ID が出現する状況を示しています。
+
+image:diagram_compliance_data_fusion.png["データベースのコンテンツをソースとして使用して、同じデータを含むファイルを識別する方法を示す図。"]
+
+このように、 2 つのボリュームと 1 つの S3 バケットにそれぞれ一意の顧客 ID が見つかりました。データベーステーブル内の一致も識別されます。
+
+が必要です link:task_scanning_databases.html#adding-the-database-server["データベースサーバを少なくとも 1 つ追加しました"^] データ Fusion ソースを追加する前に、を Cloud Compliance に追加します。
+
+. [ スキャン設定 ] ページで、ソースデータが存在するデータベースの [ データ Fusion の管理 ] をクリックします。
++
+image:screenshot_compliance_manage_data_fusion.png["ソース列を追加する [ データの管理（ Manage Data Fusion ） ] ボタンを選択するスクリーンショット。"]
+
+. 次のページで [Add Data Fusion source*] をクリックします。
+. [Add Data Fusion Source_] ページで、次の手順を実行します。
++
+.. ドロップダウンメニューからデータベーススキーマを選択します。
+.. そのスキーマにテーブル名を入力します。
+.. 使用する一意の識別子を含む列を入力します。
++
+複数の列を追加する場合は、各列名またはテーブルビュー名を別々の行に入力します。
+
++
+image:screenshot_compliance_add_data_fusion.png["データ Fusion ソースのスキーマ、テーブル、および列を識別するスクリーンショット。"]
+
+
+
+. [Add Data Fusion Source*] をクリックします。
++
+Data Fusion のインベントリページには、クラウドコンプライアンスでスキャンするように設定したデータベースソース列が表示されます。
+
++
+image:screenshot_compliance_data_fusion_list.png["Data Fusion で設定したすべてのデータソース参照のスクリーンショット。"]
+
+
+
+次のスキャンの後、この新しい情報は、 ［ 個人 ］ 結果セクションの ［ ダッシュボード ］ 、 ［ 個人データ ］ フィルタの ［ 調査 ］ ページに表示されます。追加した各ソース・カラムは ' フィルタ・リストに "Table.column" として表示されますたとえば 'Customers .Customer ID' のように表示されます
+
+
+
+== Data Fusion ソースの削除
+
+特定の Data Fusion ソースを使用してファイルをスキャンしない場合は、 Data Fusion インベントリページからソース行を選択し、 ［ * データ Fusion ソースの削除 * ］ をクリックします。
+
+image:screenshot_compliance_delete_data_fusion.png["データ Fusion ソースを削除する方法を示すスクリーンショット。"]

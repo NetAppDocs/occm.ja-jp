@@ -1,0 +1,256 @@
+---
+sidebar: sidebar 
+permalink: task_tiering.html 
+keywords: tier, tiering, cold data, hot data, storage tiering, data tiering, S3 tiering, fabricpool, fabric pool, s3 endpoint, endpoint, connection, performance tier, capacity tier, object store, azure tiering, blob tiering, azure blob, container, inactive, gcp, tiering in gcp, tiering requirements 
+summary: ホットデータ用の SSD または HDD の高パフォーマンス階層と、アクセス頻度の低いデータ用のオブジェクトストレージの大容量階層を組み合わせることで、 Cloud Volumes ONTAP のストレージコストを削減できます。データ階層化は、 FabricPool テクノロジによって実現されます。 
+---
+= 使用頻度の低いデータを低コストのオブジェクトストレージに階層化
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ホットデータ用の SSD または HDD の高パフォーマンス階層と、アクセス頻度の低いデータ用のオブジェクトストレージの大容量階層を組み合わせることで、 Cloud Volumes ONTAP のストレージコストを削減できます。データ階層化は、 FabricPool テクノロジによって実現されます。概要については、を参照してください link:concept_data_tiering.html["データ階層化の概要"]。
+
+データの階層化を設定するには、次の操作を実行する必要があります。
+
+
+
+==== サポートされている構成を選択します
+
+[role="quick-margin-para"]
+ほとんどの構成がサポートされています。最新バージョンを実行している Cloud Volumes ONTAP Standard 、 Premium 、または BYOL システムがある場合は、この方法を推奨します。 link:task_tiering.html#configurations-that-support-data-tiering["詳細はこちら。"]。
+
+
+
+==== Cloud Volumes ONTAP とオブジェクトストレージ間の接続を確認します
+
+* AWS では、 S3 への VPC エンドポイントが必要です。 <<Requirements to tier cold data to AWS S3,詳細はこちら。>>。
+* Azure では、 Cloud Manager に必要な権限が付与されていれば何も実行する必要はありません。 <<Requirements to tier cold data to Azure Blob storage,詳細はこちら。>>。
+* GCP の場合、プライベート Google アクセスのサブネットを設定し、サービスアカウントを設定する必要があります。 <<Requirements to tier cold data to a Google Cloud Storage bucket,詳細はこちら。>>。
+
+
+
+
+==== 階層化が有効なアグリゲートがあることを確認してください
+
+[role="quick-margin-para"]
+ボリュームでデータ階層化を有効にするには、アグリゲートでデータ階層化が有効になっている必要があります。新しいボリュームと既存のボリュームの要件を確認しておく必要があります。 <<Ensuring that tiering is enabled on aggregates,詳細はこちら。>>。
+
+
+
+==== ボリュームを作成、変更、またはレプリケートするときに階層化ポリシーを選択します
+
+[role="quick-margin-para"]
+ボリュームを作成、変更、またはレプリケートするときに、 Cloud Manager から階層化ポリシーを選択するよう求められます。
+
+* link:task_tiering.html#tiering-data-from-read-write-volumes["読み取り / 書き込みボリュームでのデータの階層化"]
+* link:task_tiering.html#tiering-data-from-data-protection-volumes["データ保護ボリューム上のデータの階層化"]
+
+
+[NOTE]
+.データ階層化に不要なもの
+====
+* データの階層化を有効にするために機能ライセンスをインストールする必要はありません。
+* 大容量階層（ S3 バケット、 Azure BLOB コンテナ、 GCP バケット）を作成する必要はありません。クラウドマネージャーがそれを実現します。
+* システムレベルでデータの階層化を有効にする必要はありません。
++
+Cloud Manager は、システム作成時にコールドデータ用のオブジェクトストアを作成し、 <<Enabling data tiering after implementing the requirements,接続または権限に問題がないことが必要です>>。その後は、ボリューム（および場合によっては、 <<Ensuring that tiering is enabled on aggregates,アグリゲート>>）。
+
+
+
+====
+
+
+== データ階層化をサポートする構成
+
+特定の構成と機能を使用する場合は、データ階層化を有効にできます。
+
+* データ階層化は、次のバージョン以降、 Cloud Volumes ONTAP の Standard 、 Premium 、および BYOL でサポートされます。
++
+** AWS でバージョン 9.2 を実行します
+** Azure のシングルノードシステムの場合はバージョン 9.4
+** Azure バージョン 9.6 （ HA ペアを使用）
+** GCP のバージョン 9.6
++
+
+NOTE: データ階層化は、 DS3_v2 仮想マシンタイプの Azure ではサポートされていません。
+
+
+
+* AWS では、パフォーマンス階層は汎用 SSD 、プロビジョニングされた IOPS SSD 、スループットに最適化された HDD のいずれかになります。
+* Azure では、 Premium SSD Managed Disks 、 Standard SSD Managed Disks 、 Standard HDD Managed Disks のいずれかです。
+* GCP では、 SSD または HDD （標準ディスク）のどちらかです。
+* データ階層化は暗号化テクノロジでサポートされています。
+* ボリュームでシンプロビジョニングを有効にする必要があります。
+
+
+
+
+== 要件
+
+クラウドプロバイダに応じて、 Cloud Volumes ONTAP がコールドデータをオブジェクトストレージに階層化できるように、特定の接続と権限を設定する必要があります。
+
+
+
+=== コールドデータを AWS S3 に階層化するための要件
+
+Cloud Volumes ONTAP が S3 に接続されていることを確認します。この接続を提供する最善の方法は、 S3 サービスへの vPC エンドポイントを作成することです。手順については、を参照してください https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["AWS のドキュメント：「 Creating a Gateway Endpoint"^]。
+
+vPC エンドポイントを作成するときは、 Cloud Volumes ONTAP インスタンスに対応するリージョン、 vPC 、およびルートテーブルを必ず選択してください。S3 エンドポイントへのトラフィックを有効にする発信 HTTPS ルールを追加するには、セキュリティグループも変更する必要があります。そうしないと、 Cloud Volumes ONTAP は S3 サービスに接続できません。
+
+問題が発生した場合は、を参照してください https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["AWS のサポートナレッジセンター：ゲートウェイ VPC エンドポイントを使用して S3 バケットに接続できないのはなぜですか。"^]。
+
+
+
+=== コールドデータを Azure BLOB ストレージに階層化するための要件
+
+必要な権限が Cloud Manager に割り当てられていれば、パフォーマンス階層と大容量階層の間に接続を設定する必要はありません。Cloud Manager ポリシーに以下の権限が設定されている場合、 Cloud Manager は VNet サービスエンドポイントを有効にします。
+
+[source, json]
+----
+"Microsoft.Network/virtualNetworks/subnets/write",
+"Microsoft.Network/routeTables/join/action",
+----
+権限は最新のに含まれています https://mysupport.netapp.com/site/info/cloud-manager-policies["Cloud Manager ポリシー"]。
+
+
+
+=== コールドデータを Google Cloud Storage に階層化するための要件 バケット
+
+* Cloud Volumes ONTAP が存在するサブネットは、プライベート Google アクセス用に設定する必要があります。手順については、を参照してください https://cloud.google.com/vpc/docs/configure-private-google-access["Google Cloud のドキュメント：「 Configuring Private Google Access"^]。
+* 次の要件を満たすサービスアカウントが必要です。
++
+** 事前に定義された Storage Admin ロールが必要です。
+** Connector サービスアカウントは、この階層化サービスアカウントの _ サービスアカウント User_ である必要があります。
++
+link:task_creating_gcp_service_account.html["詳細な手順を参照してください"]。
+
+
+
+
+
+
+
+=== 要件の実装後にデータ階層化を有効化
+
+接続や権限に問題がなければ、 Cloud Manager はシステムの作成時にコールドデータ用のオブジェクトストアを作成します。システムを作成するまで上記の要件を満たしていない場合は、階層化を手動で有効にする必要があります。これにより、オブジェクトストアが作成されます。
+
+.手順
+. <<Requirements,すべての要件を満たしていることを確認します>>。
+. キャンバスページで、 Cloud Volumes ONTAP インスタンスの名前をダブルクリックします。
+. メニューアイコンをクリックし、 * 容量階層化を有効にする * を選択します。
++
+image:screenshot_enable_capacity_tiering.gif["Cloud Manager がデータ階層化を有効にしようとしたときに問題が発生した場合に、作業環境のメニューから使用できる容量階層化を有効にするオプションのスクリーンショット。"]
+
++
+
+NOTE: このオプションが表示されるのは、 Cloud Manager システムの作成時にデータの階層化を有効にできなかった場合のみです。
+
+. Enable * をクリックします。これにより、この Cloud Volumes ONTAP システムで階層化データに使用するオブジェクトストアが Cloud Manager で作成されます。
+
+
+
+
+== アグリゲートで階層化が有効になっていることを確認してください
+
+ボリュームでデータ階層化を有効にするには、アグリゲートでデータ階層化が有効になっている必要があります。新しいボリュームと既存のボリュームの要件を確認しておく必要があります。
+
+* * 新しいボリューム *
++
+新しいボリュームでデータ階層化を有効にする場合、アグリゲートでデータ階層化を有効にする必要はありません。Cloud Manager では、階層化が有効になっている既存のアグリゲートにボリュームが作成されます。データ階層化が有効になっているアグリゲートがない場合は、ボリューム用の新しいアグリゲートが作成されます。
+
+* * 既存のボリューム *
++
+既存のボリュームでデータ階層化を有効にする場合は、基盤となるアグリゲートでデータ階層化を有効にする必要があります。既存のアグリゲートでデータ階層化が有効になっていない場合は、 System Manager を使用して、既存のアグリゲートをオブジェクトストアに接続する必要があります。
+
+
+
+.アグリゲートで階層化が有効になっているかどうかを確認する手順
+. Cloud Manager で作業環境を開きます。
+. メニューアイコンをクリックし、 * 詳細設定 * をクリックして、 * 詳細設定 * をクリックします。
+. アグリゲートで階層化が有効になっているか無効になっているかを確認します。
++
+image:screenshot_aggr_tiering.gif["Cloud Manager のアグリゲートに関する情報を示すスクリーンショットで、階層化のステータスも表示されます。"]
+
+
+
+.アグリゲートで階層化を有効にする手順
+. System Manager で、 * Storage > Tiers * をクリックします。
+. アグリゲートの操作メニューをクリックし、 * クラウド階層の接続 * を選択します。
+. 接続するクラウド階層を選択し、 * 保存 * をクリックします。
+
+
+次のセクションで説明するように、新規および既存のボリュームでデータ階層化を有効にできます。
+
+
+
+== 読み取り / 書き込みボリュームのデータの階層化
+
+Cloud Volumes ONTAP は、読み書き可能なボリューム上にあるアクセス頻度の低いデータを対費用効果の高いオブジェクトストレージに階層化して、ホットデータ用に高パフォーマンス階層を解放できます。
+
+.手順
+. 作業環境で、新しいボリュームを作成するか、既存のボリュームの階層を変更します。
++
+[cols="30,70"]
+|===
+| タスク | アクション 
+
+
+| 新しいボリュームを作成します | [ 新しいボリュームの追加 ] をクリックします。 
+
+
+| 既存のボリュームを変更します | ボリュームを選択し、 * ディスクタイプと階層化ポリシーの変更 * をクリックします。 
+|===
+. 階層化ポリシーを選択します。
++
+これらのポリシーの説明については、を参照してください link:concept_data_tiering.html["データ階層化の概要"]。
+
++
+* 例 *
+
++
+image:screenshot_tiered_storage.gif["オブジェクトストレージへの階層化を有効にするアイコンを示すスクリーンショット。"]
+
++
+データ階層化対応のアグリゲートがまだ存在しない場合、 Cloud Manager はボリュームの新しいアグリゲートを作成します。
+
+
+
+
+
+== データ保護ボリュームのデータを階層化する
+
+Cloud Volumes ONTAP では、データ保護ボリュームから容量階層にデータを階層化できます。デスティネーションボリュームをアクティブにすると、データは読み取られた時点でパフォーマンス階層に徐々に移動します。
+
+.手順
+. キャンバスページで、ソースボリュームを含む作業環境を選択し、ボリュームを複製する作業環境にドラッグします。
+. 画面の指示に従って、階層化ページに移動し、オブジェクトストレージへのデータ階層化を有効にします。
++
+* 例 *
+
++
+image:screenshot_replication_tiering.gif["ボリュームのレプリケーション時の S3 階層化オプションを示すスクリーンショット。"]
+
++
+データの複製については、を参照してください link:task_replicating_data.html["クラウドとの間でデータをレプリケートする"]。
+
+
+
+
+
+== 階層化データのストレージクラスを変更する
+
+Cloud Volumes ONTAP を導入したら、アクセスされていないアクセス頻度の低いデータのストレージクラスを 30 日間変更することで、ストレージコストを削減できます。データにアクセスするとアクセスコストが高くなるため、ストレージクラスを変更する前にこの点を考慮する必要があります。
+
+階層化データのストレージクラスはシステム全体に適用され、ボリュームごとにではないものに限られます。
+
+サポートされているストレージクラスについては、を参照してください link:concept_data_tiering.html["データ階層化の概要"]。
+
+.手順
+. 作業環境で、メニューアイコンをクリックし、 * ストレージクラス * または * BLOB ストレージの階層化 * をクリックします。
+. ストレージクラスを選択して、「 * 保存」をクリックします。
+

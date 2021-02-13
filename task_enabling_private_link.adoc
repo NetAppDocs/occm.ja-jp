@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: task_enabling_private_link.html 
+keywords: azure private link, private link connection, private link to storage 
+summary: デフォルトでは、 Cloud Manager は Cloud Volumes ONTAP とそれに関連付けられたストレージアカウント間の Azure Private Link 接続を有効にします。プライベートリンクは、 Azure のエンドポイント間の接続を保護します。 
+---
+= Cloud Volumes ONTAP で Azure プライベートリンクを使用する
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+デフォルトでは、 Cloud Manager は Cloud Volumes ONTAP とそれに関連付けられたストレージアカウント間の Azure Private Link 接続を有効にします。プライベートリンクは Azure のエンドポイント間の接続を保護し、パフォーマンスを向上させます。 https://docs.microsoft.com/en-us/azure/private-link/private-link-overview["詳細はこちら。"^]。
+
+ほとんどの場合、実行する必要はありません。 Cloud Manager は Azure Private Link を管理します。ただし、 Azure Private DNS を使用する場合は、構成ファイルを編集する必要があります。必要に応じて、プライベートリンク接続を無効にすることもできます。
+
+
+
+== Cloud Manager に Azure プライベート DNS の詳細を指定する
+
+を使用する場合 https://docs.microsoft.com/en-us/azure/dns/private-dns-overview["Azure プライベート DNS"^]では、各コネクタの構成ファイルを変更する必要があります。そうしないと、 Cloud Manager で Cloud Volumes ONTAP とそれに関連付けられたストレージアカウント間の Azure Private Link 接続を有効にできません。
+
+DNS 名は Azure DNS の命名規則と一致している必要があります 要件 https://docs.microsoft.com/en-us/azure/storage/common/storage-private-endpoints#dns-changes-for-private-endpoints["Azure のドキュメントを参照"^]。
+
+.手順
+. コネクタホストに SSH 接続してログインします。
+. 次のディレクトリに移動します。 /opt/application/NetApp/cloudmanager
+. 次のパラメータを図のように変更して app.conf を編集します。
++
+....
+"user-private-dns-zone-settings": {
+   "use-existing": true,
+   "resource-group": "<resource group name of the DNS zone>"
+  }
+....
+. ファイルを保存し、コネクタからログオフします。
++
+再起動は必要ありません。
+
+
+
+
+
+== Azure Private Link 接続を無効にしています
+
+Azure 構成で必要な場合は、 Cloud Volumes ONTAP アカウントとストレージアカウント間の Azure プライベートリンク接続を無効にできます。
+
+.手順
+. Cloud Manager コンソールの右上にある設定アイコンをクリックし、 * Cloud Manager 設定 * を選択します。
+. Azure Cloud Volumes ONTAP 構成で、 Cloud Volumes ONTAP とストレージアカウント間のプライベートリンク接続 * の選択を解除します。
+. [ 保存（ Save ） ] をクリックします。
+

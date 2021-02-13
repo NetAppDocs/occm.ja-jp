@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: task_tiering_onprem_overview.html 
+keywords: overview, tiering overview, tiered clusters, clusters enabled for tiering, data tiering overview, cold data, hot data, tiered data, savings, savings opportunities, saving opportunity, policies, cold snapshots, all dp user data, cold user data & snapshots, cold user data and snapshots, all user data, no policy, marketplace subscriptions, clusters associated 
+summary: Cloud Tiering を使用すると、オンプレミスの各クラスタから集約されたデータ階層化を確認できます。ここでは、環境の概要を明確に示し、適切な操作を実行できるようにします。 
+---
+= クラスタからデータ階層化の概要を取得します
+:toc: macro
+:hardbreaks:
+:toc: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Cloud Tiering を使用すると、オンプレミスの各クラスタから集約されたデータ階層化を確認できます。ここでは、環境の概要を明確に示し、適切な操作を実行できるようにします。
+
+Cloud Tiering には、環境に関する次の詳細が含まれています。
+
+image:screenshot_tiering_onprem_overview.gif["オンプレミスの概要ページのスクリーンショット。"]
+
+アクティブクラスタ:: データをクラウドに階層化しているクラスタの数、データをクラウドに階層化していないクラスタの数、およびデータ階層化をサポートしていないクラスタの数。
+データの概要:: クラウドに階層化されたデータの量と、クラスタ上のホットデータとコールドデータの量。
+総削減量:: データをクラウドに階層化することで削減したコストのほか、クラウドに階層化することで削減できるコストの量。
+ポリシー:: 各階層化ポリシーがボリュームに適用された回数。
+Marketplace サブスクリプション:: 各タイプの Marketplace サブスクリプションに関連付けられているクラスタの数と、サブスクリプションのステータスが表示されます。
+
+
+.手順
+. 「 * 階層化」 > 「オンプレミスの概要」をクリックします。
+

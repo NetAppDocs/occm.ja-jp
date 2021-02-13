@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: task_managing_ontap.html 
+keywords: ontap, cluster, manage, fas, aff, active iq, update firmware 
+summary: Cloud Manager の Active IQ ページには、オンプレミス環境で検出されていない ONTAP クラスタがあれば、新しいファームウェアのインストールが必要かどうか、および料金を支払ったすべてのライセンスを使用しているかどうかが表示されます。この情報は、 Active IQ デジタルアドバイザから Cloud Manager に提供されます。 
+---
+= ONTAP クラスタを監視しています
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Cloud Manager の Active IQ ページには、オンプレミス環境で検出されていない ONTAP クラスタがあれば、新しいファームウェアのインストールが必要かどうか、および料金を支払ったすべてのライセンスを使用しているかどうかが表示されます。この情報は、から Cloud Manager に提供されます link:https://docs.netapp.com/us-en/active-iq/index.html["Active IQ デジタルアドバイザ"^]。
+
+
+
+== に追加されていないオンプレミスクラスタがないかどうかを確認しています Cloud Manager の略
+
+Active IQ ページには、ネットアップサポートサイト（ NSS ）のクレデンシャルに基づいて管理可能なすべてのオンプレミスクラスタのリストが表示されます。また、 Cloud Manager で検出されたクラスタと検出されていないクラスタも表示されます。
+
+.手順
+. Active IQ * タブをクリックし、ネットアップサポートサイトのユーザ名とパスワードを入力して、 * Save * をクリックします。
++
+有効なサポート契約があるクラスタは、 Cloud Manager で検出されたかどうかのステータスとともに表示されます。
+
+
+
+を参照してください link:task_discovering_ontap.html#discovering-clusters-from-the-working-environments-page["クラスタを検出します"]。
+
+
+
+== 新しいディスクおよびシェルフファームウェアを確認しています
+
+検出された ONTAP クラスタのいずれかで、シェルフまたはディスクのファームウェアを更新する必要があるかどうかを確認できます。
+
+.手順
+. Active IQ （ファームウェアアップデート）ページで、 * ファームウェアアップデート * タブをクリックします。
+. 次の手順を参照してください link:https://aiq.netapp.com/assets/docs/Quick_Reference_Guide.pdf["ストレージシステムのファームウェアを更新します"]。
+
+
+
+
+== 未使用の Cloud Volumes ONTAP ライセンスを表示する
+
+使用していないライセンスが Cloud Volumes ONTAP クラスタにあるかどうかを確認できます。
+
+.手順
+. Active IQ （ライセンス）ページで、 * Licenses * （ライセンス）タブをクリックします。
+

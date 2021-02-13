@@ -1,0 +1,435 @@
+---
+sidebar: sidebar 
+permalink: reference_new_occm.html 
+keywords: what's new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes 
+summary: 通常、 Cloud Manager では毎月新しいリリースが導入され、新機能、拡張機能、およびバグ修正が提供されます。 
+---
+= Cloud Manager 3.9 の新機能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+通常、 Cloud Manager では毎月新しいリリースが導入され、新機能、拡張機能、およびバグ修正が提供されます。
+
+
+TIP: 以前のリリースをお探しですか？link:https://docs.netapp.com/us-en/occm38/reference_new_occm.html["3.8 の新機能"^]
+link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機能"^]
+
+
+
+== Cloud Manager 3.9.3 アップデート（ 2021 年 2 月 10 日）
+
+* <<Cloud Tiering enhancements>>
+* <<Cloud Sync enhancements>>
+
+
+
+
+=== Cloud Tiering の機能拡張
+
+* アグリゲートの容量が 90% を超えたとき（ ONTAP 9.6 以前の場合は 70% ）にクラウド階層化によってクラスタのライトバック防止がアクティブになるようになりました。頻繁に使用されるローカル階層でのコールドデータの書き戻しを防止することで、 Cloud Tiering は、アクティブデータのローカル階層を維持します。
++
+この場合、 Manage Aggregates テーブルに情報が表示されます。
+
++
+image:screenshot_tiering_write_back.gif["ライトバック防止が有効になったことを示す通知が表示された、 Manage Aggregates （アグリゲートの管理）テーブルのスクリーンショット。"]
+
+* オンプレミスの ONTAP クラスタをクラウド階層化サービスから簡単に追加できるようになりました。
++
+Cloud Tiering ページで * Add cluster * をクリックすると、 * Add Working Environment * ウィザードに直接送信されるようになりました。
+
+* タイムラインをフィルタして、クラウド階層化サービスに固有のアクションを表示できるようになりました。
++
+image:screenshot_tiering_timeline.gif["クラウドの階層化サービスを選択した場合のタイムラインとフィルタ機能のスクリーンショット。"]
+
+
+
+
+
+=== Cloud Sync の機能拡張
+
+* Cloud Volumes ONTAP との間でデータを同期するプロセスが簡素化されました。Cloud Volumes ONTAP 作業環境を選択し、この作業環境との間でデータを同期するオプションを選択できるようになりました。
++
+image:screenshot_sync_we.gif["作業環境を選択した後の同期メニューで使用可能なアクションを示すスクリーンショット。"]
+
+* 前回のリリースでは、ネットアップの担当者がデータブローカーの設定を調整し、パフォーマンスを向上させるために役立つ情報を提供するレポート機能が新たに導入されています。これらのレポートは、オブジェクトストレージでサポートされるようになりました。
++
+image:screenshot_sync_report_object.gif["パス項目数、オブジェクトサイズ、変更時刻、およびストレージクラスを表示するレポート。"]
+
+
+
+
+
+== Cloud Manager 3.9.3 （ 2021 年 2 月 9 日）
+
+* <<Monitoring enhancements>>
+* <<Support improvements>>
+
+
+
+
+=== 監視機能の拡張
+
+* Cloud Volumes ONTAP for Azure で監視サービスがサポートされるようになりました。
+* 監視サービスは、 AWS および Azure の政府機関のリージョンでもサポートされます。
+
+
+監視サービスを使用すると、 Cloud Volumes ONTAP インフラを完全に可視化できます。サービスを有効にして、 Cloud Volumes ONTAP リソースを監視、トラブルシューティングし、最適化します。
+
+link:concept_monitoring.html["監視サービスの詳細については、こちらをご覧ください"]。
+
+
+
+=== サポートの強化
+
+サポートダッシュボードが更新され、ネットアップサポートサイトのクレデンシャルを追加できるようになりました。このクレデンシャルをサポートに登録してください。ネットアップサポートケースは、ダッシュボードから直接開始することもできます。[ ヘルプ ] アイコンをクリックして、 [*Support*] をクリックします。
+
+image:screenshot_support_dashboard.gif["サポート情報、リンク、ケースの作成機能を示すサポートダッシュボードのスクリーンショット。"]
+
+
+
+== Cloud Manager 3.9.2 アップデート（ 2021 年 1 月 11 日）
+
+* <<Cloud Compliance enhancements>>
+* <<Backup to Cloud enhancements>>
+
+
+
+
+=== Cloud Compliance の機能拡張
+
+* Microsoft OneDrive アカウントのスキャンがサポートされるようになりました。
++
+これで、すべての OneDrive ユーザーからフォルダーとファイルをスキャンするために、会社の OneDrive アカウントを Cloud Compliance に追加できます。を参照してください link:task_scanning_onedrive.html["OneDrive アカウントをスキャンしています"^] を参照してください。
+
+* 「ハイライト」機能では、組織固有の検索結果を提供する独自のカスタムハイライトを作成できるようになりました。
++
+前回のリリースでは、 Cloud Compliance により、すべてのユーザが使用できる一連の定義済みの高輝度表示フィルタが提供されていました。独自のハイライトを作成して、 ［ 調査 ］ ページで特定のスキャン結果を返すことができます。方法を参照してください link:task_managing_highlights.html#creating-custom-highlights["独自の高輝度表示を作成します"^]。
+
+* オンプレミスの ONTAP システムからバックアップファイルを無料でスキャンできます。
++
+Cloud Compliance でオンプレミスの ONTAP システム上のボリュームを直接スキャンしない場合は、今月リリースされた新しいベータ機能を使用して、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルでコンプライアンススキャンを実行できます。オンプレミス ONTAP のバックアップを作成済みの場合も同様です を使用しています link:concept_backup_to_cloud.html["クラウドへのバックアップ"^]この新機能を使用して、これらのバックアップファイルに対して * 無料 * のコンプライアンススキャンを実行できます。
+
++
+方法を参照してください link:task_backup_from_onprem.html["オンプレミスの ONTAP ボリュームをオブジェクトストレージにバックアップ"^] そしていかにできるか link:task_getting_started_compliance.html#scanning-backup-files-from-on-premises-ontap-systems["これらのバックアップファイルをスキャンします"]。
+
+* Cloud Compliance は、個人データ型「 IP アドレス」をファイルで検索できるようになりました。すべてのリストを表示します link:reference_private_data_categories.html#types-of-personal-data["個人データの種類"^] その Cloud Compliance がスキャンで見つかりました。
+
+
+
+
+=== クラウドへのバックアップの機能拡張
+
+個々のファイルを追加のデスティネーション作業環境にリストアできます。
+
+* Azure Blob のバックアップファイルは、 Azure にインストールされた Cloud Volumes ONTAP システムやオンプレミスの ONTAP システムに個々のファイルをリストアするために使用できます。
+* Amazon S3 のバックアップファイルを使用して、個々のファイルをオンプレミスの ONTAP システムにリストアできます（ AWS にインストールされた Cloud Volumes ONTAP システムへのファイルのリストアはすでにサポートされています）。
+
+
+を表示します link:concept_backup_to_cloud.html#supported-working-environments-and-object-storage-providers["バックアップとリストアのマトリックス"^] バックアップの作成、ボリュームのリストア、およびファイルのリストアがサポートされている作業環境を確認します。
+
+
+
+== Cloud Manager 3.9.2 （ 2021 年 1 月 4 日）
+
+* <<Cloud Volumes ONTAP enhancements>>
+* <<Cloud Tiering enhancements>>
+* <<General enhancements>>
+
+
+
+
+=== Cloud Volumes ONTAP の機能拡張
+
+このリリースの Cloud Manager では、 Cloud Volumes ONTAP に関して次の機能拡張が導入されています。
+
+
+
+==== AWS のアウトポストのサポート
+
+数カ月前に、 Cloud Volumes ONTAP が Amazon Web Services （ AWS ）の提供開始を宣言したことを発表しました。本日は、 AWS のアウトポストで Cloud Manager と Cloud Volumes ONTAP を検証しました。
+
+AWS Outpost を使用している場合は、 Working Environment ウィザードで Outpost VPC を選択して、その Outpost に Cloud Volumes ONTAP を導入できます。エクスペリエンスは、 AWS に存在する他の VPC と同じです。最初に、 AWS Outpost にコネクタを導入する必要があります。
+
+指摘すべき制限事項はいくつかあります。
+
+* でサポートされるのはシングルノードの Cloud Volumes ONTAP システムのみです 今回は
+* Cloud Volumes で使用できる EC2 インスタンス ONTAP は、 Outpost で利用できる機能に限定されています
+* 現時点では、汎用 SSD のみがサポートされています
+
+
+
+
+==== サポートされているすべての Azure リージョンで Ultra SSD VNVRAM がサポートされます
+
+Cloud Volumes ONTAP では、 Ultra SSD をとして使用できるようになりました VNVRAM （ E32s_v3 VM タイプをで使用する場合） シングルノードシステム https://docs.microsoft.com/en-us/azure/virtual-machines/disks-enable-ultra-ssd["サポートされる任意の Azure リージョン"^]。
+
+VNVRAM により、書き込みパフォーマンスが向上します。
+
+
+
+==== Azure でアベイラビリティゾーンを選択できます
+
+これで、シングルノードの Cloud Volumes ONTAP システムを導入するアベイラビリティゾーンを選択できます。AZ を選択しない場合は、 Cloud Manager によってその AZ が選択されます。
+
+image:screenshot_azure_az.gif["リージョンを選択したあとに使用可能な Availability Zone ドロップダウンリストのスクリーンショット。"]
+
+
+
+==== GCP での大容量ディスクと新しいインスタンスのサポート
+
+* Cloud Volumes ONTAP は GCP で 64 TB のディスクをサポートするようになりました。
++
+
+NOTE: GCP の制限により、ディスクのみの場合の最大システム容量は 256 TB のままです。
+
+* Cloud Volumes ONTAP では、次のマシンタイプがサポートされるようになりました
++
+** N2 - 標準 -4 （ Explore ライセンスを含む、 BYOL を含む）
+** 標準ライセンスを使用し、 BYOL を使用した N2-standard-8
+** N2 - Standard - 32 （ Premium ライセンスを使用、 BYOL を使用）
+
+
+
+
+
+
+=== Cloud Tiering の機能拡張
+
+* 新しいクラウドパフォーマンステストでは、データ階層化の設定前後に、 ONTAP クラスタからオブジェクトストアにネットワークのレイテンシとスループットのパフォーマンスを測定できます。
++
+image:screenshot_tiering_performance_test.gif["オブジェクトストレージへのレイテンシとスループットを示す、クラウドパフォーマンステストの結果のスクリーンショット。"]
+
+* 階層化セットアップウィザードの設計が見直され、使いやすくなりました。
+
+
+
+
+=== その他の機能強化
+
+* 新しいサポートダッシュボード
++
+新しいサポートダッシュボードのヘルプメニューには、サポートへのリンクや、フィードバックの送信、ネットアップサポートへのお問い合わせなどに利用できるリソースが用意されています。また、 [* Connector AutoSupport * ] タブから AutoSupport メッセージを送信およびダウンロードすることもできます。
+
++
+image:screenshot_support_dashboard.gif["Cloud Manager のサポートダッシュボードのスクリーンショット。"]
+
+* 作業環境間の視覚的な表示
++
+Cloud Manager を使用すると、作業環境で有効になっているサービス間の関係を簡単に確認できます。
+
++
+たとえば、次の図は、 Cloud Volumes ONTAP から Amazon S3 にデータをバックアップし、 Amazon S3 と 2 つの Cloud Volumes ONTAP システム間でデータを同期する 2 つの作業環境の例を示しています。
+
++
+image:screenshot_we_relationships.png["キャンバス（ Canvas ）タブと、線と矢印で示される作業環境間のいくつかの関係を示すスクリーンショット。"]
+
+
+
+
+
+== Cloud Manager 3.9.1 （ 2020 年 12 月 7 日）
+
+* <<General enhancements>>
+* <<Cloud Volumes ONTAP AMI change>>
+* <<Backup to Cloud enhancements>>
+* <<Cloud Compliance enhancements>>
+* <<Cloud Tiering enhancements>>
+* <<Cloud Sync enhancements>>
+
+
+
+
+=== 一般的な機能強化
+
+* 「 * 作業環境 * 」タブの名前を「 * キャンバス * 」に変更しました。
++
+このタブは空白のキャンバスから始まり、ハイブリッドクラウド全体にストレージを導入、割り当て、検出することで作業環境を追加できます。
+
++
+image:screenshot_canvas.gif["いくつかのタイプの作業環境を示す Canvas タブのスクリーンショット。"]
+
+* Cloud Manager と Spot の間の移動が簡単になりました。
++
+Spot の新しい「 * ストレージ運用 * 」セクションでは、 Cloud Manager に直接移動できます。作業が完了したら、 Cloud Manager の * Compute * タブから Spot に戻ることができます。
+
+
+
+
+
+=== Cloud Volumes ONTAP AMI の変更
+
+9.8 リリース以降、 Cloud Volumes ONTAP PAYGO AMI は AWS Marketplace では提供されなくなりました。Cloud Manager API を使用して Cloud Volumes ONTAP 従量課金制を導入する場合は、が必要です https://aws.amazon.com/marketplace/pp/B07QX2QLXX["AWS Marketplace で Cloud Manager のサブスクリプションに登録します"^] 9.8 システムを展開する前に。
+
+
+
+=== クラウドへのバックアップの機能拡張
+
+* バックアップファイルから個々のファイルを復元できるようになりました。
++
+** 特定の時点からいくつかのファイルをリストアする必要がある場合は、ボリューム全体をリストアする代わりに、それらのファイルだけをリストアできるようになりました。
+** 同じ作業環境内のボリューム、または同じクラウドアカウントを使用している別の作業環境内のボリュームにファイルをリストアできます。
+** この単一ファイルのリストアオプションでは、環境に導入されている新しいクラウドリストアインスタンスを使用します。 link:task_restore_backups.html#restoring-files-from-a-backup["この新機能の詳細については、こちらをご覧ください。"]
+
+
+* 新しい Cloud Volumes ONTAP システムを導入する際に、 Google Cloud 環境でクラウドにバックアップを設定できるようになりました。これまでは、既存の Cloud Volumes ONTAP システムでクラウドへのバックアップしか設定できませんでした。
+* オンプレミスの ONTAP システムから、 AWS または Azure に導入された Cloud Volumes ONTAP システムにバックアップしたボリュームをリストアできるようになりました。
+
+
+
+
+=== Cloud Compliance の機能拡張
+
+* オンプレミスの ONTAP クラスタからデータを直接スキャンできます
++
+Cloud Manager でオンプレミスクラスタを検出した場合は、それらのボリュームで直接 Compliance スキャンを実行できるようになりました。Compliance スキャンを実行する前に、それらのボリュームを Cloud Volumes ONTAP システムにコピーする必要がなくなりました。
+
+* オンプレミスの場所に Cloud Compliance をインストールできます
++
+オンプレミスの ONTAP クラスタデータをスキャンする場合は、 Cloud Compliance をオンプレミスにもインストールできるようになりました。Cloud Manager の UI には引き続き統合されており、クラウドベースのボリューム、バケット、データベースなど、他の作業環境のスキャンにも使用できます。
+
++
+link:task_deploy_cloud_compliance.html#deploying-the-cloud-compliance-instance-on-premises["前提条件とインストール手順を参照してください"]。
+
+* CIFS のデータ保護ボリュームを簡単にスキャンできます
++
+これまでは、 NFS DP ボリュームをスキャンすることができました。このリリースでは、 CIFS DP ボリュームを Cloud Compliance 内で直接簡単にスキャンできます。 link:task_getting_started_compliance.html#scanning-data-protection-volumes["詳細をご確認ください"]。
+
+* 新しい「ハイライト」機能では、事前に定義された組み合わせを選択できます [ 調査 ] ページで結果を返すフィルタ
++
+今回のリリースでは、 10 のハイライトをご用意しています。たとえば、「 HIPAA – Stale data over 30 days 」のハイライト表示では、 30 日以上前の Health 情報を含むファイルが特定されます。 link:task_controlling_private_data.html#using-highlights-to-quickly-view-results-in-the-investigation-page["事前定義されたハイライトの一覧を確認します"]。
+
++
+[ 遵守ダッシュボード ] のタブから [ 高輝度表示 ] を選択するか、 [ 調査 ] ページのフィルタとして選択できます。
+
+* Cloud Compliance では、機密性の高い個人データの種類「政治的見解リファレンス」をファイルで見つけることができるようになりました。すべてのリストを表示します link:reference_private_data_categories.html#types-of-sensitive-personal-data["機密性の高い個人データの種類"^] その Cloud Compliance がスキャンで見つかりました。
+* 「 file size 」の新しいフィルタは、で使用できます のファイルの検索結果を絞り込むための調査ページ 一定のサイズです
++
+Cloud Compliance の導入に必要なエンドポイントのリストは、クラウドプロバイダに基づいて改訂されています。 link:task_deploy_cloud_compliance.html#reviewing-prerequisites["このリストで、 AWS 、 Azure 、オンプレミスの要件を確認できます"]。
+
+
+
+
+
+=== Cloud Tiering の機能拡張
+
+* 複数のボリュームの階層化ポリシーと最小クーリング日数を同時に変更できるようになりました。
++
+image:screenshot_tiering_modify_volumes.gif["選択した複数のボリュームと、選択したボリュームの変更ボタンを示すスクリーンショット。"]
+
+* Cloud Tiering で、オンプレミスの各クラスタから集約されたデータ階層化のビューを提供できるようになりました。ここでは、環境の概要を明確に示し、適切な操作を実行できるようにします。 link:task_tiering_onprem_overview.html["このページの詳細を確認してください"]。
++
+image:screenshot_tiering_onprem_overview.gif["オンプレミスの概要ページのスクリーンショット。"]
+
+
+
+
+
+=== Cloud Sync の機能拡張
+
+* データブローカーグループを管理できるようになりました。
++
+データブローカーをグループ化すると、同期関係のパフォーマンスを向上させることができます。新しいデータブローカーをグループに追加し、データブローカーの情報を表示するなどして、グループを管理する。
+
++
+link:task_sync_managing_data_brokers.html["データブローカーの管理方法について説明します"]。
+
+* Cloud Sync で、 ONTAP S3 ストレージから ONTAP S3 ストレージへの同期関係がサポートされるようになりました。
++
+link:reference_sync_requirements.html["サポートされているソースとターゲットの一覧をすべて表示します。"]
+
+
+
+
+
+== Cloud Manager 3.9 の更新（ 2020 年 11 月 18 日）
+
+クラウドへのバックアップは、 Google Cloud の Cloud Volumes ONTAP でサポートされるようになりました。をクリックします link:task_backup_to_gcp.html["こちらをご覧ください"] を参照してください。
+
+* 注：現在サポートされているのはシングルノードシステムのみです。
+
+
+
+== Cloud Volumes ONTAP 9.8 （ 2020 年 11 月 16 日）
+
+Cloud Volumes ONTAP 9.8 は、 AWS 、 Azure 、 Google Cloud Platform で利用できます。このリリースでは、がサポートされます link:concept_ha_google_cloud.html["GCP の HA ペア"]。
+
+
+TIP: コネクタに関連付けられている GCP サービスアカウント link:https://occm-sample-policies.s3.amazonaws.com/Policy_for_Cloud_Manager_3.9.0_GCP.yaml["最新の権限が必要です"^] GCP に HA ペアを導入するには、次の手順を実行します
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_98.html["Cloud Volumes ONTAP 9.8 の新機能について説明します"^]。
+
+
+
+== Cloud Manager 3.9 の更新（ 2020 年 11 月 8 日）
+
+Cloud Manager 3.9 の機能強化をリリースしました。
+
+
+
+=== Cloud Compliance の機能拡張
+
+* これで、データベースからカスタムの個人データ識別子を作成できるようになりました。これにより、機密性の高いデータが保存されているすべての * ファイルの場所を完全に把握できます。
++
+「 Data Fusion 」と呼ばれる機能を使用すると、ファイルをスキャンして、データベースから一意の識別子がこれらのファイルに見つかったかどうかを確認できます。基本的には、クラウドコンプライアンススキャンで識別される「個人データ」のリストを作成します。
+
++
+link:task_controlling_private_data.html#creating-custom-personal-data-identifiers-from-your-databases["データベースからカスタム個人 ID を作成する方法について説明します"]。
+
+* MySQL データベーススキーマのスキャンのサポートが追加されました。
++
+に進みます link:task_scanning_databases.html#quick-start["データベーススキーマをスキャンしています"] を参照してください。
+
+
+
+
+
+== Cloud Manager 3.9 （ 2020 年 11 月 3 日）
+
+* <<Azure Private Link for Cloud Volumes ONTAP>>
+* <<Active IQ cluster insights>>
+* <<Cloud Tiering enhancements>>
+
+
+
+
+=== Azure Private Link for Cloud Volumes ONTAP の略
+
+デフォルトでは、 Cloud Manager が Cloud Volumes ONTAP とそれに関連付けられたストレージアカウント間の Azure Private Link 接続を有効にするようになりました。プライベートリンクは、 Azure のエンドポイント間の接続を保護します。
+
+* https://docs.microsoft.com/en-us/azure/private-link/private-link-overview["Azure プライベートリンクの詳細については、こちらをご覧ください"^]
+* link:task_enabling_private_link.html["Azure プライベートリンクとクラウドの使用の詳細については、こちらをご覧ください Volume ONTAP の略"]
+
+
+
+
+=== Active IQ クラスタ分析情報
+
+Active IQ のクラスタ分析情報が Cloud Manager で使用できるようになりました。この初期リリースには、次の機能があります。
+
+* ネットアップサポートサイト（ NSS ）のクレデンシャルに基づいてオンプレミスクラスタのリストが表示されます。
+* Cloud Manager で検出されたクラスタと検出されていないクラスタを示します。
+* 使用されていない Cloud Volumes ONTAP ライセンスを表示できます。
+* 検出された ONTAP クラスタのいずれかでシェルフまたはディスクファームウェアの更新が必要かどうかを示します。
+
+
+に進みます link:task_managing_ontap.html["ONTAP クラスタを監視しています"] を参照してください。この情報は、から Cloud Manager に提供されます link:https://www.netapp.com/services/support/active-iq/["Active IQ デジタルアドバイザ"^]。
+
+
+
+=== Cloud Tiering の機能拡張
+
+* ボリュームからデータの階層化を設定すると、 Cloud Tiering が、各ボリュームの Snapshot の使用サイズを特定できるようになりました。この情報は、クラウドに階層化するデータのタイプを決定する際に役立ちます。
++
+image:screenshot_volumes_select_snapshot.gif["Tier Volumes （階層ボリューム）ページの Snapshot Used （スナップショットの使用済み）サイズを示すスクリーンショット。"]
+
+* ONTAP 9.6 以降を実行しているクラスタでは、 Cloud Tiering を使用して、 HDD アグリゲートに対する Inactive Data Reporting を有効にできます。
++
+この機能拡張により、 Cloud Tiering では、コールドデータの階層化による削減量を簡単に確認できます。
+
+* アグリゲート内のボリュームでデータ階層化を有効にする必要がある場合は、 Cloud Tiering に、シックプロビジョニングされたボリュームをシンプロビジョニングされたボリュームに変更するよう求められます。
+

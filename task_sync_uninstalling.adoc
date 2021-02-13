@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: task_sync_uninstalling.html 
+keywords: uninstall, uninstall data broker, remove data broker 
+summary: 必要に応じて、アンインストールスクリプトを実行し、データブローカーのインストール時に作成されたデータブローカーとパッケージおよびディレクトリを削除します。 
+---
+= データブローカーのアンインストール
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+必要に応じて、アンインストールスクリプトを実行して、データブローカー、およびデータブローカーのインストール時に作成されたパッケージとディレクトリを削除します。
+
+.手順
+. データブローカーホストにログインします。
+. データ・ブローカー・ディレクトリ（ /opt/NetApp/databroker' ）に変更します
+. 次のコマンドを実行します。
++
+chmod +x アンインストーラ - databroker.sh`./uninstaller - databroker.sh`
+
+. 「 y 」を押してアンインストールを確定します。
+

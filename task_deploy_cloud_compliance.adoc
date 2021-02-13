@@ -1,0 +1,353 @@
+---
+sidebar: sidebar 
+permalink: task_deploy_cloud_compliance.html 
+keywords: cloud compliance, get started, deploy cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises 
+summary: Cloud Manager のワークスペースに Cloud Compliance インスタンスを導入するには、いくつかの手順を実行します。クラウドまたはオンプレミスシステムに Cloud Compliance を導入できます。 
+---
+= Cloud Compliance の導入
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager のワークスペースに Cloud Compliance インスタンスを導入するには、いくつかの手順を実行します。クラウドまたはオンプレミスシステムに Cloud Compliance を導入できます。
+
+オンプレミスの ONTAP 作業環境を、オンプレミスにあるコンプライアンスインスタンスを使用してスキャンする場合は、オンプレミス環境をインストールすることをお勧めします。ただし、これは必須条件ではありません。Compliance ソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。
+
+
+
+== クイックスタート
+
+これらの手順を実行してすぐに作業を開始するか、残りのセクションまでスクロールして詳細を確認してください。
+
+
+
+==== コネクタを作成します
+
+[role="quick-margin-para"]
+コネクタがない場合は、 Azure または AWS でコネクタを作成します。を参照してください link:task_creating_connectors_aws.html["AWS でコネクタを作成する"^] または link:task_creating_connectors_azure.html["Azure でコネクタを作成する"^]。
+
+[role="quick-margin-para"]
+また可能です link:task_installing_linux.html["コネクタをオンプレミスに導入"^] 自社ネットワークまたはクラウド内の既存の Linux ホスト
+
+
+
+==== 前提条件を確認する
+
+[role="quick-margin-para"]
+環境が前提条件を満たしていることを確認します。これには、インスタンスのアウトバウンドインターネットアクセス、コネクタとポート 80 経由の Cloud Compliance の間の接続などが含まれます。 <<Reviewing prerequisites,すべてのリストを参照してください>>。
+
+* クラウドにインストールした場合は、クラウドコンプライアンスインスタンス用の vCPU が 16 個必要です。を参照してください link:concept_cloud_compliance.html#the-cloud-compliance-instance["インスタンスタイプの詳細"^]。
+* オンプレミスにインストールした場合は、を満たす Linux システムが必要です link:task_deploy_cloud_compliance.html#deploying-the-cloud-compliance-instance-on-premises["次の要件があります"^]。
+
+
+
+
+==== Cloud Compliance の導入
+
+[role="quick-margin-para"]
+インストールウィザードを起動して Cloud Compliance インスタンスを導入します。
+
+[role="quick-margin-para"]
+クラウドまたはオンプレミスの場所に Cloud Compliance を導入できます。UI に表示される唯一の違いは「オンプレミス導入」です。
+
+image:screenshot_compliance_onprem_notprem.png["クラウドの導入とクラウドの導入を比較した、オンプレミスのクラウドコンプライアンスを示すスクリーンショット。"]
+
+
+
+==== Cloud Compliance サービスに登録
+
+[role="quick-margin-para"]
+Cloud Compliance が Cloud Manager でスキャンする最初の 1TB のデータは無料です。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。
+
+
+
+== コネクタを作成しています
+
+コネクタがない場合は、 Azure または AWS でコネクタを作成します。を参照してください link:task_creating_connectors_aws.html["AWS でコネクタを作成する"^] または link:task_creating_connectors_azure.html["Azure でコネクタを作成する"^]。ほとんどの場合、コネクタセットがあります Cloud Compliance をアクティブ化するのは、ほとんどの場合です link:concept_connectors.html#when-a-connector-is-required["Cloud Manager の機能にはコネクタが必要です"]ただし、ここで設定する必要がある場合もあります。
+
+AWS または Azure で Cloud Compliance 用のコネクタを使用する必要があるシナリオがいくつかあります。
+
+* AWS または AWS S3 バケット内の Cloud Volumes ONTAP のデータをスキャンするときは、 AWS のコネクタを使用します。
+* Azure または Azure NetApp Files で Cloud Volumes ONTAP 内のデータをスキャンする場合は、 Azure のコネクタを使用します。
+* どちらのコネクタを使用しても、データベースとオンプレミスの ONTAP システムをスキャンできます。
+
+
+また、次のことも可能です link:task_installing_linux.html["コネクタをオンプレミスに導入"^] 自社ネットワークまたはクラウド内の既存の Linux ホストCloud Compliance をオンプレミスにインストールする予定のユーザによっては、 Connector をオンプレミスにインストールすることもできます。
+
+ご覧のように、を使用する必要がある状況もあります link:concept_connectors.html#when-to-use-multiple-connectors["複数のコネクタ"]。
+
+
+NOTE: Azure NetApp Files のスキャンを計画している場合は、スキャンするボリュームと同じ領域に導入していることを確認する必要があります。
+
+
+
+== 前提条件の確認
+
+Cloud Compliance を導入する前に、次の前提条件を確認し、サポートされている構成であることを確認してください。
+
+Cloud Compliance からのアウトバウンドのインターネットアクセスを有効にします::
++
+--
+AWS 、 Azure 、オンプレミスのいずれに Cloud Compliance を導入するかに応じて、次の表を参照してください。
+
+* AWS 環境に必要なエンドポイント： *
+
+[cols="43,57"]
+|===
+| エンドポイント | 目的 
+
+
+| \ https://cloudmanager.cloud.netapp.com | Cloud Central アカウントを含む Cloud Manager サービスとの通信。 
+
+
+| ¥ https://netapp-cloud-account.auth0.com ¥ https://auth0.com | NetApp Cloud Central との通信により、ユーザ認証を一元的に行うことができます。 
+
+
+| https://cloud-compliance-support-netapp.s3.us-west-2.amazonaws.com \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | ソフトウェアイメージ、マニフェスト、およびテンプレートにアクセスできます。 
+
+
+| \ https://kinesis.us-east-1.amazonaws.com | ネットアップが監査レコードからデータをストリーミングできるようにします。 
+
+
+| ¥ https://cognito-idp.us-east-1.amazonaws.com ¥ https://cognito-identity.us-east-1.amazonaws.com ¥ https://user-feedback-store-prod.s3.us-west-2.amazonaws.com ¥ https://customer-data-production.s3.us-west-2.amazonaws.com | Cloud Compliance でマニフェストとテンプレートにアクセスしてダウンロードしたり、ログと指標を送信したりできます。 
+|===
+* Azure およびオンプレミス環境に必要なエンドポイント： *
+
+[cols="43,57"]
+|===
+| エンドポイント | 目的 
+
+
+| \ https://cloudmanager.cloud.netapp.com | Cloud Central アカウントを含む Cloud Manager サービスとの通信。 
+
+
+| ¥ https://netapp-cloud-account.auth0.com ¥ https://auth0.com | NetApp Cloud Central との通信により、ユーザ認証を一元的に行うことができます。 
+
+
+| https://support.compliance.cloudmanager.cloud.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | ソフトウェアイメージ、マニフェスト、およびテンプレートにアクセスできます。 
+
+
+| \ https://support.compliance.cloudmanager.cloud.netapp.com/ | ネットアップが監査レコードからデータをストリーミングできるようにします。 
+
+
+| \ https://support.compliance.cloudmanager.cloud.netapp.com/ | Cloud Compliance でマニフェストとテンプレートにアクセスしてダウンロードしたり、ログと指標を送信したりできます。 
+
+
+| * オンプレミスインストールのみ： * 。 https://github.com/docker ¥ https://download.docker.com ¥ https://rhui3.us-west-2.aws.ce.redhat.com ¥ https://github-production-release-asset-2e65be.s3.amazonaws.com ¥ https://pypi.org ¥ https://pypi.python.org ¥ https://files.pythonhosted.org ¥ https://mirror.centos.org ¥ https://mirrorlist.centos.org ¥ http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.107-3.el7.noarch.rpm | インストールの前提条件パッケージを提供します。 
+|===
+--
+Cloud Manager に必要な権限が割り当てられていることを確認します:: Cloud Manager に、リソースを導入する権限と Cloud Compliance インスタンスのセキュリティグループを作成する権限があることを確認します。最新の Cloud Manager 権限は、で確認できます https://mysupport.netapp.com/site/info/cloud-manager-policies["ネットアップが提供するポリシー"^]。
+vCPU の制限を確認してください::
++
+--
+AWS では、インスタンスファミリーは _On-Demand Standard Instances_ です。Azure では ' インスタンスファミリーは _Standard DSView3 Family _ です
+
+vCPU の制限の詳細については、以下を参照してください。
+
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html["AWS のマニュアル： Amazon EC2 Service Limits"^]
+* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas["Azure のドキュメント：「仮想マシンの vCPU クォータ"^]
+
+
+--
+Cloud Manager から Cloud Compliance にアクセスできることを確認::
++
+--
+この接続により、 Cloud Compliance インスタンスの導入が可能になり、コンプライアンスタブに情報を表示できます。
+
+--
+Cloud Compliance の運用を継続できることを確認します:: データを継続的にスキャンするには、 Cloud Compliance インスタンスをオンのままにする必要があります。
+Web ブラウザから Cloud Compliance への接続を確認します::
++
+--
+Cloud Compliance インスタンスは、プライベート IP アドレスを使用して、インデックス付きデータがインターネットにアクセスできないようにします。そのため、 Cloud Manager へのアクセスに使用する Web ブラウザは、そのプライベート IP アドレスに接続する必要があります。この接続は、 AWS または Azure への直接接続（ VPN など）、または Cloud Compliance インスタンスと同じネットワーク内にあるホストから確立できます。
+
+--
+
+
+
+
+== クラウドへの Cloud Compliance インスタンスの導入
+
+クラウドへの Cloud Compliance インスタンスの導入は、最も一般的な導入モデルです。ただし、を選択することもできます <<Deploying the Cloud Compliance instance on premises,Linux ホストに Compliance ソフトウェアを導入します>> 自社ネットワークまたはクラウドに導入できます。
+
+Compliance ソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。
+
+.手順
+. Cloud Manager で、 * コンプライアンス * をクリックします。
+. クラウドへのコンプライアンスの導入 * をクリックして、導入ウィザードを開始します。
++
+image:screenshot_cloud_compliance_deploy_start.png["クラウドに Cloud Compliance を導入するボタンを選択するスクリーンショット。"]
+
+. 導入手順が完了すると、ウィザードに進捗状況が表示されます。問題が発生すると停止し、入力を求められます。
++
+image:screenshot_cloud_compliance_wizard_start.png["新しいインスタンスを導入するための Cloud Compliance ウィザードのスクリーンショット。"]
+
+. インスタンスが展開されたら、 * 設定に進む * をクリックして _ スキャン設定 _ ページに移動します。
+
+
+Cloud Manager によってクラウドプロバイダに Cloud Compliance インスタンスが導入されます。
+
+スキャン設定ページから、スキャンするデータソースを選択できます。
+
+また可能です <<Subscribing to the Cloud Compliance service,Cloud Compliance サービスに登録>> 現時点では、データ量が 1TB を超えるまでは料金は発生しません。
+
+
+
+== Cloud Compliance インスタンスをオンプレミスに導入する
+
+Cloud Compliance の最も一般的な導入方法は、です <<Deploying the Cloud Compliance instance in the cloud,クラウドに導入できます>>。ただし、ネットワーク上の Linux ホストに Compliance ソフトウェアをダウンロードしてインストールすることもできます。
+
+Compliance ソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。
+
+
+NOTE: 現在、 Cloud Compliance インスタンスがオンプレミスにインストールされていると、 S3 バケットと Azure NetApp Files をスキャンすることはできません。このような場合は、別のコネクタを配置する必要があります クラウドおよびでのコンプライアンスのインスタンスです link:concept_connectors.html#when-to-switch-between-connectors["コネクタを切り替えます"] データソースごとに異なる。
+
+.ホストの要件
+* オペレーティングシステム： Red Hat Enterprise Linux または CentOS バージョン 8.0 または 8.1
++
+** バージョン 7.8 を使用できますが、 Linux カーネルのバージョンは 4.14 以降である必要があります
+** OS が Docker エンジンをインストールできる必要があります（必要に応じて、 _firewalld_service を無効にするなど）。
+
+
+* RAM ： 60 GB 以上
+* CPU ： 8 個以上の CPU コアを搭載。推奨されるコア数は 16 個です
+* 容量： 500GB
+* Red Hat Enterprise Linux システムは、 Red Hat サブスクリプション管理に登録する必要があります。登録されていない場合、システムはインストール中に必要なサードパーティソフトウェアをアップデートするためのリポジトリにアクセスできません。
+* Cloud Manager でインストールの進捗状況を確認できるように、ポート 8080 が開いていることを確認してください。
+* Cloud Compliance をインストールするには root 権限が必要です。
+
+
+を参照してください <<Reviewing prerequisites,前提条件の確認>> Cloud Compliance がインターネット経由でアクセスできる必要がある要件とエンドポイントの一覧については、を参照してください。
+
+.手順
+. から Cloud Compliance ソフトウェアをダウンロードします https://mysupport.netapp.com/site/products/all/details/cloud-compliance/downloads-tab/["ネットアップサポートサイト"^]。
+. 使用する Linux ホストにインストーラファイルをコピーします (`cp またはその他の方法を使用 ) 。
+. Cloud Manager で、 * コンプライアンス * をクリックします。
+. [* コンプライアンスをオンプレミスに展開する * ] をクリックします。
++
+image:screenshot_cloud_compliance_deploy_onprem.png["Cloud Compliance をオンプレミスに導入するボタンを選択するスクリーンショット。"]
+
+. _Deploying Cloud Compliance on Premises _dialog で、提供されたコマンドをコピーし、テキストファイルに貼り付けて、後で使用できるようにします。例：
++
+....
+sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq
+....
+. ホストマシンでインストーラファイルを解凍します。
++
+....
+tar -xzf cc_onprem_installer.tar.gz
+....
+. インストーラからプロンプトが表示されたら、一連のプロンプトで必要な値を入力するか、または最初のプロンプトでコマンド全体を入力できます。
++
+[cols="50a,50"]
+|===
+| プロンプトに従ってパラメータを入力します。 | 完全なコマンドを入力します。 
+
+
+ a| 
+.. 手順 3 からコピーした情報を貼り付けます。 'UDO./install.sh -a <account_id>-c <agent_id>-t<token>`
+.. コネクタインスタンスからアクセスできるように、 Compliance ホストマシンの IP アドレスまたはホスト名を入力します。
+.. プロンプトが表示されたら、プロキシの詳細を入力Cloud Manager ですでにプロキシが使用されている場合は、 Cloud Compliance によって Cloud Manager で使用されるプロキシが自動的に使用されるため、ここでもう一度入力する必要はありません。
+
+| または、コマンド全体を事前に作成して、最初のプロンプトで入力することもできます。 'sudo ./install.sh -a <account_id>-c <agent_id>-t <token> --host <cc_host> --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-password-proxy-p＆ password-password-user-pxy-password> 
+|===
++
+変数値：
+
++
+** _account_id _ = ネットアップアカウント ID
+** _agent_id _ = コネクタ ID
+** _ctoken _ = JWT ユーザートークン
+** _cc_host_= ホスト Linux マシンの IP アドレスまたはホスト名。
+** _proxy_host_ = ホストがプロキシサーバの背後にある場合は、プロキシサーバの IP 名またはホスト名。
+** _proxy_port_= プロキシサーバに接続するポート（デフォルトは 80 ）です。
+** _proxy_scheme_= 接続スキーマ： https または http （デフォルト http ）。
+** _proxy_user_= ベーシック認証が必要な場合、プロキシサーバに接続するための認証されたユーザ。
+** _proxy_password_ = 指定したユーザ名のパスワード。
+
+
+
+
+Cloud Compliance インストーラは、パッケージのインストール、 Docker のインストール、インストールの登録、 Cloud Compliance のインストールを行います。インストールには 10~20 分かかります。
+
+ホストマシンとコネクタインスタンス間のポート 8080 を介した接続がある場合、 Cloud Manager の Compliance タブでインストールの進捗状況を確認できます。
+
+スキャン設定ページから、スキャンするデータソースを選択できます。
+
+また可能です <<Subscribing to the Cloud Compliance service,Cloud Compliance サービスに登録>> 現時点では、データ量が 1TB を超えるまでは料金は発生しません。オンプレミスシステムに Cloud Compliance を導入した場合は、 AWS または Azure Marketplace へのサブスクリプションを使用できます。
+
+
+
+== Cloud Compliance サービスへの登録
+
+Cloud Compliance が Cloud Manager ワークスペースでスキャンする最初の 1TB のデータは無料です。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。
+
+いつでもサブスクライブでき、データ量が 1TB を超えるまでは料金は発生しません。Cloud Compliance Dashboard でスキャンしているデータの総容量を常に確認できます。また、 [ 今すぐサブスクライブ ] ボタンを使用すると、準備が整ったときに簡単にサブスクライブできます。
+
+image:screenshot_compliance_subscribe.png["スキャンされているデータの量を示すスクリーンショットと、サービスにサブスクライブするための [ サブスクライブ（ Subscribe ） ] ボタン。"]
+
+* 注： * Cloud Compliance から登録を求められたものの、すでに Azure サブスクリプションをお持ちの場合は、古い * Cloud Manager * サブスクリプションを使用している可能性があるため、新しい * NetApp Cloud Manager * サブスクリプションに変更する必要があります。を参照してください <<Changing to the new Cloud Manager plan in Azure,Azure で新しい NetApp Cloud Manager プランに変更>> を参照してください。
+
+これらの手順は、 _Account Admin_role 権限を持つユーザが実行する必要があります。
+
+. Cloud Manager コンソールの右上にある設定アイコンをクリックし、 * クレデンシャル * を選択します。
++
+image:screenshot_settings_icon.gif["Cloud Manager の右上のバナーのスクリーンショット。設定アイコンを選択できます。"]
+
+. AWS インスタンスプロファイルまたは Azure Managed Service Identity のクレデンシャルを検索します。
++
+サブスクリプションは、インスタンスプロファイルまたはマネージドサービス ID に追加する必要があります。充電ができない。
+
++
+すでに月額プランをお持ちの場合は、すべて設定されています。他に必要なことはありません。
+
++
+image:screenshot_profile_subscription.gif["アクティブなサブスクリプションを持つインスタンスプロファイルを示す資格情報ページのスクリーンショット。"]
+
+. まだサブスクリプションをお持ちでない場合は、クレデンシャルの上にカーソルを合わせて、操作メニューをクリックします。
+. [ サブスクリプションの追加 ] をクリックします。
++
+image:screenshot_add_subscription.gif["資格情報ページのメニューのスクリーンショット。資格情報にサブスクリプションを追加するボタンが表示されます。"]
+
+. [ サブスクリプションの追加 ] をクリックし、 [* 続行 ] をクリックして、手順に従います。
++
+次のビデオでは、 Marketplace サブスクリプションを AWS サブスクリプションに関連付ける方法を紹介します。
+
++
+video::video_subscribing_aws.mp4[width=848,height=480]
++
+次のビデオでは、 Marketplace サブスクリプションを Azure サブスクリプションに関連付ける方法を紹介します。
+
++
+video::video_subscribing_azure.mp4[width=848,height=480]
+
+
+
+
+== Azure で新しい Cloud Manager プランに変更
+
+2020 年 10 月 7 日より、 Azure Marketplace サブスクリプション「 NetApp Cloud Manager * 」に Cloud Compliance が追加されました。元の Azure * Cloud Manager * サブスクリプションをすでにお持ちの場合、 Cloud Compliance の使用は許可されません。
+
+Cloud Compliance の使用を開始するには、以下の手順に従って、新しい * NetApp Cloud Manager * サブスクリプションに変更する必要があります。
+
+
+NOTE: 既存のサブスクリプションに特別なプライベートオファーが付随して発行された場合、ネットアップに連絡して、コンプライアンスを含む新しい特別なプライベートオファーを発行できるようにする必要があります。
+
+.手順
+. Cloud Manager コンソールの右上にある設定アイコンをクリックし、 * クレデンシャル * を選択します。
+. サブスクリプションを変更する Azure Managed Service Identity のクレデンシャルを検索し、クレデンシャルにカーソルを合わせて、 * Associate Subscription * をクリックします。
++
+現在の Marketplace サブスクリプションの詳細が表示されます。
+
+. にログインします link:https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.SaaS%2Fsaasresources["Azure ポータル"^] 「 * Software as a Service （ SaaS ） * 」を選択します。
+. プランを変更するサブスクリプションを選択し、 * プランの変更 * をクリックします。
++
+image:screenshot_compliance_azure_subscription.png["すべての Azure サブスクリプションのリストと、変更するサブスクリプションの詳細を示すスクリーンショット。"]
+
+. [ 変更プラン ] ページで、 NetApp Cloud Manager * プランを選択し、 [ * 変更プラン * ] ボタンをクリックします。image:screenshot_compliance_azure_change_plan.png["Cloud Compliance をサポートする新しい計画への変更のスクリーンショット。"]
+. Cloud Manager に戻り、サブスクリプションを選択し、クレデンシャルカードで上の「 i 」にカーソルを合わせて、サブスクリプションが変更されたことを確認します。
+

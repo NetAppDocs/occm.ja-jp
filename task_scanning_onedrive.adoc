@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: task_scanning_onedrive.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, onedrive 
+summary: Cloud Compliance を使って OneDrive フォルダ内のファイルのスキャンを開始するには、いくつかの手順を実行します。 
+---
+= OneDrive アカウントをスキャンしています
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Compliance を使って OneDrive フォルダ内のファイルのスキャンを開始するには、いくつかの手順を実行します。
+
+
+
+== クイックスタート
+
+これらの手順を実行してすぐに作業を開始するか、残りのセクションまでスクロールして詳細を確認してください。
+
+
+
+==== OneDrive の前提条件を確認します
+
+[role="quick-margin-para"]
+OneDrive アカウントにログインするための管理者資格情報があることを確認してください。
+
+
+
+==== Cloud Compliance インスタンスを導入します
+
+[role="quick-margin-para"]
+link:task_deploy_cloud_compliance.html["Cloud Compliance の導入"^] インスタンスが展開されていない場合。
+
+
+
+==== OneDrive アカウントを追加します
+
+[role="quick-margin-para"]
+Admin ユーザクレデンシャルを使用して、アクセスする OneDrive アカウントにログインし、新しい作業環境として追加します。
+
+
+
+==== ユーザを追加します
+
+[role="quick-margin-para"]
+スキャンする OneDrive アカウントからユーザーのリストを追加します。一度に最大 100 人のユーザを追加できます。
+
+
+
+== 前提条件の確認
+
+Cloud Compliance を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認してください。
+
+
+
+=== OneDrive の要件
+
+すべてのユーザファイルに読み取りアクセスを提供する OneDrive for Business アカウントの管理者ログインクレデンシャルが必要です。
+
+OneDrive フォルダをスキャンするすべてのユーザーに対して、電子メールアドレスの行区切りリストが必要です。
+
+
+
+== OneDrive アカウントを追加します
+
+が必要です link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Compliance のインスタンスを導入済みである"^]。
+
+ユーザファイルが存在する OneDrive アカウントを追加します。
+
+. [ 作業環境の構成 ] ページで、 [ * データソースの追加 *>] 、 [* OneDrive アカウントの追加 *] の順にクリックします。
++
+image:screenshot_compliance_add_onedrive_button.png["[OneDrive の追加 ] ボタンをクリックできる [ スキャン構成 ] ページのスクリーンショット。"]
+
+. [ OneDrive アカウントの追加 ] ダイアログで、 [* OneDrive にサインイン ] をクリックします。
+. 表示される Microsoft ページで、 OneDrive アカウントを選択し、必要な管理者ユーザーとパスワードを入力してから、 * 同意する * をクリックして、 Cloud Compliance がこのアカウントからデータを読み取ることを許可します。
+
+
+OneDrive アカウントが作業環境の一覧に追加されます。
+
+
+
+== OneDrive ユーザーをコンプライアンススキャンに追加する
+
+個々の OneDrive ユーザまたはすべての OneDrive ユーザを追加して、ファイルを Cloud Compliance でスキャンすることができます。
+
+. [ スキャン構成 ] ページで、 OneDrive アカウントの [ * 構成 * ] ボタンをクリックします。
++
+image:screenshot_compliance_onedrive_add_users.png["設定ボタンを選択できるスキャン設定ページのスクリーンショット。"]
+
+. この OneDrive アカウントに初めてユーザーを追加する場合は、 [ * 最初の OneDrive ユーザーを追加する * ] をクリックします。
++
+image:screenshot_compliance_onedrive_add_initial_users.png[""]
+
++
+ユーザーを追加する場合は、 [* OneDrive ユーザーの追加 * ] をクリックします。
+
++
+image:screenshot_compliance_onedrive_add_more_users.png["アカウントにユーザを追加する [OneDrive ユーザの追加 ] ボタンを示すスクリーンショット。"]
+
+. ファイルをスキャンするユーザーの電子メールアドレスを 1 行に 1 つ追加し（セッションあたり最大 100 件）、 [ ユーザーの追加 ] をクリックします。
++
+image:screenshot_compliance_onedrive_add_email_addresses.png["スキャンするユーザを追加できる [OneDrive ユーザの追加 ] ページのスクリーンショット。"]
+
++
+確認ダイアログに、追加されたユーザの数が表示されます。
+
++
+ダイアログに追加できなかったユーザが表示される場合は、この情報を記録して問題を解決します。修正した E メールアドレスを使用してユーザを再追加できる場合もあります。
+
+
+
+Cloud Compliance によるスキャンが開始され、追加したユーザのファイルがスキャンされます。結果はダッシュボードやその他の場所に表示されます。
+
+
+
+== OneDrive ユーザーをコンプライアンススキャンから削除します
+
+ユーザが会社から退出した場合や、 E メールアドレスが変更された場合、個々の OneDrive ユーザがいつでもファイルをスキャンできないようにすることができます。[ 構成 ] ページで [OneDrive ユーザーの削除 ] をクリックします。
+
+image:screenshot_compliance_onedrive_remove_user.png["単一のユーザをスキャン対象から削除する方法を示すスクリーンショット。"]
+
+
+
+== Cloud Compliance から OneDrive アカウントを削除します
+
+特定の OneDrive アカウントからユーザーファイルをスキャンする必要がなくなった場合は、 Cloud Compliance インターフェイスからアカウントを削除して、すべてのスキャンを停止できます。
+
+.手順
+. _Scan Configuration_page で、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] ボタンをクリックして OneDrive アカウントを選び、 [ * OneDrive アカウントの削除 * ] をクリックします。
++
+image:screenshot_compliance_remove_onedrive.png["[ スキャン構成 ] ページから [OneDrive を削除 ] ボタンのスクリーンショット。"]
+
+. 確認ダイアログで * アカウントの削除 * をクリックします。
+

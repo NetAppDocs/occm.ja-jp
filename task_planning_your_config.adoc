@@ -1,0 +1,201 @@
+---
+sidebar: sidebar 
+permalink: task_planning_your_config.html 
+keywords: license, disk, ebs, storage, size, write speed, volume usage, explore, standard, premium, byol, ec2, capacity, limit, configurations, virtual machine, vm, regions, supported disks, disk types, general purpose, gp2 provisioned IOPS, piops, throughput optimized, cold, SSD, HDD, st1, sc1, use profile, thin provisioning, deduplication, compression, Cloud Volumes ONTAP explore, Cloud Volumes ONTAP standard, Cloud Volumes ONTAP premium, Cloud Volumes ONTAP byol, shared instance, dedicated instance, write speed, high write speed, normal write speed, network information, worksheet, limit, limits, storage limits, volume limit, aggregate limit, maximum volume size, maximum aggregate size, supported instances, instances, instances supported, supported ec2 instances, supported instance, aws outpost, outpost, outposts, deploy in outpost, deploy in aws outpost 
+summary: AWS に Cloud Volumes ONTAP を導入する場合は、ワークロードの要件に応じて事前設定されたシステムを選択するか、または独自の設定を作成できます。独自の設定を選択する場合は、使用可能なオプションを理解しておく必要があります。 
+---
+= AWS での Cloud Volumes ONTAP 構成の計画
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+AWS に Cloud Volumes ONTAP を導入する場合は、ワークロードの要件に応じて事前設定されたシステムを選択するか、または独自の設定を作成できます。独自の設定を選択する場合は、使用可能なオプションを理解しておく必要があります。
+
+
+
+== サポートされているリージョンの表示
+
+Cloud Volumes ONTAP はほとんどの AWS リージョンでサポートされています。 https://cloud.netapp.com/cloud-volumes-global-regions["サポートされているリージョンの完全なリストを表示します"^]。
+
+新しい AWS リージョンは、それらのリージョンでリソースを作成および管理する前に有効にする必要があります。 https://docs.aws.amazon.com/general/latest/gr/rande-manage.html["リージョンを有効にする方法について説明します"^]。
+
+
+
+== ライセンスタイプの選択
+
+Cloud Volumes ONTAP には、従量課金制とお客様所有のライセンスを使用（ BYOL ）の 2 種類の料金プランがあります。従量課金制の場合は、 Explore 、 Standard 、 Premium の 3 つのライセンスから選択できます。ライセンスごとに容量とコンピューティングのオプションが異なります。
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_98.html["Cloud Volumes ONTAP 9.8 で AWS でサポートされる構成"^]
+
+
+
+== サポートされているインスタンスを選択する
+
+Cloud Volumes ONTAP では、選択したライセンスタイプに応じて、複数のインスタンスタイプがサポートされます。
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_98.html["Cloud Volumes ONTAP 9.8 で AWS でサポートされる構成"^]
+
+
+
+== Flash Cache をサポートする構成を選択しています
+
+AWS の一部の Cloud Volumes ONTAP 構成にはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP はパフォーマンスを向上させるために _Flash Cache _ として使用します。 link:concept_flash_cache.html["Flash Cache の詳細については、こちらをご覧ください"]。
+
+
+
+== ストレージの制限を理解する
+
+Cloud Volumes ONTAP システムの未フォーマット時の容量制限は、ライセンスに関連付けられています。追加の制限は、アグリゲートとボリュームのサイズに影響します。設定を計画する際には、これらの制限に注意する必要があります。
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_aws_98.html["Cloud Volumes ONTAP 9.8 での AWS でのストレージの制限"]
+
+
+
+== AWS でのシステムのサイジング
+
+Cloud Volumes ONTAP システムのサイジングを行うことで、パフォーマンスと容量の要件を満たすのに役立ちます。インスタンスタイプ、ディスクタイプ、およびディスクサイズを選択する際には、次の点に注意する必要があります。
+
+インスタンスタイプ::
++
+--
+* ワークロードの要件を、各 EC2 インスタンスタイプの最大スループットと IOPS に合わせます。
+* 複数のユーザが同時にシステムに書き込む場合は、要求を管理するのに十分な CPU を備えたインスタンスタイプを選択します。
+* 読み取りが多いアプリケーションがある場合は、十分な RAM が搭載されたシステムを選択します。
++
+** https://aws.amazon.com/ec2/instance-types/["AWS ドキュメント：「 Amazon EC2 Instance Types"^]
+** https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html["AWS のドキュメント：「 Amazon EBS – Optimized instances"^]
+
+
+
+
+--
+EBS ディスクタイプ:: 汎用 SSD は、 Cloud Volumes ONTAP で最も一般的なディスクタイプです。EBS ディスクのユースケースについては、を参照してください http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS ドキュメント：「 EBS Volume Types"^]。
+EBS ディスクサイズ::
++
+--
+* アグリゲート内のディスクはすべて同じサイズである必要があります。
+* EBS ディスクのパフォーマンスはディスクサイズに依存します。サイズによって、 SSD ディスクのベースライン IOPS と最大バースト期間、および HDD ディスクのベースラインスループットとバーストスループットが決まります。
+* 最終的には、必要なパフォーマンスを継続的に提供するディスクサイズを選択する必要があります。
+* 4 TB のディスクを 6 台使用するなど、大容量のディスクを選択した場合でも、 EC2 インスタンスの帯域幅が制限に達する可能性があるため、すべての IOPS が得られないことがあります。
++
+EBS ディスクのパフォーマンスの詳細については、を参照してください http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS ドキュメント：「 EBS Volume Types"^]。
+
+
+
+--
+
+
+AWS での Cloud Volumes ONTAP システムのサイジングに関する詳細については、次のビデオを参照してください。
+
+video::GELcXmOuYPw[youtube, width=848,height=480]
+
+
+== AWS Outpost に Cloud Volumes ONTAP を導入する準備をしています
+
+AWS Outpost を使用している場合は、 Working Environment ウィザードで Outpost VPC を選択して、その Outpost に Cloud Volumes ONTAP を導入できます。エクスペリエンスは、 AWS に存在する他の VPC と同じです。最初に、 AWS Outpost にコネクタを導入する必要があります。
+
+指摘すべき制限事項はいくつかあります。
+
+* でサポートされるのはシングルノードの Cloud Volumes ONTAP システムのみです 今回は
+* Cloud Volumes で使用できる EC2 インスタンス ONTAP は、 Outpost で利用できる機能に限定されています
+* 現時点では、汎用 SSD のみがサポートされています
+
+
+
+
+== AWS ネットワーク情報ワークシート
+
+AWS で Cloud Volumes ONTAP を起動する場合は、 VPC ネットワークの詳細を指定する必要があります。ワークシートを使用して、管理者から情報を収集できます。
+
+
+
+==== Cloud Volumes ONTAP のネットワーク情報
+
+[cols="30,70"]
+|===
+| AWS 情報 | あなたの価値 
+
+
+| 地域 |  
+
+
+| vPC |  
+
+
+| サブネット |  
+
+
+| セキュリティグループ（独自のグループを使用している場合） |  
+|===
+
+
+==== 複数の AZS 内の HA ペアのネットワーク情報
+
+[cols="30,70"]
+|===
+| AWS 情報 | あなたの価値 
+
+
+| 地域 |  
+
+
+| vPC |  
+
+
+| セキュリティグループ（独自のグループを使用している場合） |  
+
+
+| ノード 1 の可用性ゾーン |  
+
+
+| ノード 1 のサブネット |  
+
+
+| ノード 2 の可用性ゾーン |  
+
+
+| ノード 2 のサブネット |  
+
+
+| メディエータ可用性ゾーン |  
+
+
+| メディエータサブネット |  
+
+
+| メディエータのキーペア |  
+
+
+| クラスタ管理ポートのフローティング IP アドレス |  
+
+
+| ノード 1 のデータの浮動 IP アドレス |  
+
+
+| ノード 2 のデータの浮動 IP アドレス |  
+
+
+| フローティング IP アドレスのルートテーブル |  
+|===
+
+
+== 書き込み速度の選択
+
+Cloud Manager では、 Cloud Volumes ONTAP の書き込み速度を選択できます。書き込み速度を選択する前に、高速書き込みを使用する場合の標準設定と高設定の違い、およびリスクと推奨事項を理解しておく必要があります。 link:concept_write_speed.html["書き込み速度の詳細については、こちらをご覧ください。"]。
+
+
+
+== ボリューム使用プロファイルの選択
+
+ONTAP には、必要なストレージの合計容量を削減できるストレージ効率化機能がいくつか搭載されています。Cloud Manager でボリュームを作成する場合は、これらの機能を有効にするプロファイルを選択するか、無効にするプロファイルを選択できます。これらの機能の詳細については、使用するプロファイルを決定する際に役立ちます。
+
+NetApp Storage Efficiency 機能には、次のようなメリットがあります。
+
+シンプロビジョニング:: 物理ストレージプールよりも多くの論理ストレージをホストまたはユーザに提供します。ストレージスペースは、事前にストレージスペースを割り当てる代わりに、データの書き込み時に各ボリュームに動的に割り当てられます。
+重複排除:: 同一のデータブロックを検索し、単一の共有ブロックへの参照に置き換えることで、効率を向上します。この手法では、同じボリュームに存在するデータの冗長ブロックを排除することで、ストレージ容量の要件を軽減します。
+圧縮:: プライマリ、セカンダリ、アーカイブストレージ上のボリューム内のデータを圧縮することで、データの格納に必要な物理容量を削減します。
+

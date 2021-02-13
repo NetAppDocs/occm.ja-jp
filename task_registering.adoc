@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: task_registering.html 
+keywords: Cloud Volumes ONTAP, register, registering, paygo, pay-as-you-go, registration, instance id, serial number, account id, support 
+summary: ネットアップによるサポートは Cloud Volumes ONTAP Explore 、 Standard 、および Premium システムに含まれていますが、先にシステムをネットアップに登録してサポートを有効にする必要があります。 
+---
+= 従量課金制システムの登録
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ネットアップによるサポートは Cloud Volumes ONTAP Explore 、 Standard 、および Premium システムに含まれていますが、先にシステムをネットアップに登録してサポートを有効にする必要があります。
+
+アップグレードするには、ネットアップに PAYGO システムを登録する必要があります いずれかの方法を使用して ONTAP ソフトウェアをインストールします link:task_updating_ontap_cloud.html["このページで説明します"]。
+
+
+TIP: サポートに登録されていないシステムにも、新しいバージョンが利用可能になったときに Cloud Manager に表示されるソフトウェア更新通知が送信されます。ただし、ソフトウェアをアップグレードする前に、システムを登録する必要があります。
+
+.手順
+. Cloud Manager にネットアップサポートサイトのアカウントをまだ追加していない場合は、「 * Account Settings * 」に移動して追加します。
++
+link:task_adding_nss_accounts.html["ネットアップサポートサイトのアカウントを追加する方法について説明します"]。
+
+. カンバスページで、登録するシステムの名前をダブルクリックします。
+. メニューアイコンをクリックし、 * Support registration registration * （サポート登録 * ）をクリックします。
++
+image:screenshot_menu_registration.gif["スクリーンショット： Cloud Volumes ONTAP システムのメニューアイコンで選択したサポート登録オプションを表示します。"]
+
+. ネットアップサポートサイトのアカウントを選択し、 * 登録 * をクリックします。
+
+
+Cloud Manager によってシステムがネットアップに登録されます。
