@@ -122,17 +122,3 @@ Cloud Compliance によるスキャンが開始され、追加したユーザの
 ユーザが会社から退出した場合や、 E メールアドレスが変更された場合、個々の OneDrive ユーザがいつでもファイルをスキャンできないようにすることができます。[ 構成 ] ページで [OneDrive ユーザーの削除 ] をクリックします。
 
 image:screenshot_compliance_onedrive_remove_user.png["単一のユーザをスキャン対象から削除する方法を示すスクリーンショット。"]
-
-
-
-== Cloud Compliance から OneDrive アカウントを削除します
-
-特定の OneDrive アカウントからユーザーファイルをスキャンする必要がなくなった場合は、 Cloud Compliance インターフェイスからアカウントを削除して、すべてのスキャンを停止できます。
-
-.手順
-. _Scan Configuration_page で、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] ボタンをクリックして OneDrive アカウントを選び、 [ * OneDrive アカウントの削除 * ] をクリックします。
-+
-image:screenshot_compliance_remove_onedrive.png["[ スキャン構成 ] ページから [OneDrive を削除 ] ボタンのスクリーンショット。"]
-
-. 確認ダイアログで * アカウントの削除 * をクリックします。
-

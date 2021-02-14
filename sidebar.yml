@@ -308,7 +308,7 @@ entries:
         url: "/task_scanning_onedrive.html"
   - title: 組織内のプライベートデータの詳細を表示します
     url: "/task_controlling_private_data.html"
-  - title: ハイライトを利用してプライベートデータを管理できます
+  - title: プライベートデータを管理
     url: "/task_managing_highlights.html"
   - title: カスタムの個人データ識別子を追加します
     url: "/task_managing_data_fusion.html"
@@ -316,10 +316,10 @@ entries:
     url: "/task_generating_compliance_reports.html"
   - title: dsar に応答します
     url: "/task_responding_to_dsar.html"
-  - title: クラウドコンプライアンスを無効化
-    url: "/task_managing_compliance.html"
   - title: プライベートデータのカテゴリ
     url: "/reference_private_data_categories.html"
+  - title: Cloud Compliance からデータソースを削除します
+    url: "/task_managing_compliance.html"
   - title: よく寄せられる質問
     url: "/faq_cloud_compliance.html"
 - title: リアルタイムのグローバルファイル共有を有効にします

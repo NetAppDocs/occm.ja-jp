@@ -134,13 +134,3 @@ image:screenshot_compliance_select_schemas.png["スキャンするスキーマ�
 
 
 Cloud Compliance によって、有効にしたデータベーススキーマのスキャンが開始されます。エラーが発生した場合は、エラーを修正するために必要なアクションとともに、 [ ステータス ] 列に表示されます。
-
-
-
-== Cloud Compliance からデータベースを削除しています
-
-特定のデータベースをスキャンする必要がなくなった場合は、そのデータベースを Cloud Compliance インターフェイスから削除して、すべてのスキャンを停止できます。
-
-_Scan Configuration_page で、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] ボタンをクリックし、 * DB サーバの削除 * をクリックします。
-
-image:screenshot_compliance_remove_db.png["Scan Configuration ページの Remove DB Server ボタンのスクリーンショット。"]

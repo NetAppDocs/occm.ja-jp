@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: faq_cloud_compliance.html 
-keywords: faq, frequently asked questions, questions 
+keywords: faq, frequently asked questions, questions, cloud compliance 
 summary: この FAQ は、質問に対する簡単な回答を探している場合に役立ちます。 
 ---
 = Cloud Compliance についての FAQ です
@@ -115,7 +115,7 @@ m5.mcd を使用できない地域では、代わりに m4.mcd インスタン�
 
 
 
-2020 年 12 月より、ネットワーク内またはクラウド内の Linux ホストに Compliance ソフトウェアをダウンロードしてインストールできるようになります。すべてが同じように機能し、 Cloud Manager を使用してスキャンの設定と結果を引き続き管理できます。を参照してください link:task_deploy_cloud_compliance.html#deploying-the-cloud-compliance-instance-on-premises["クラウドへのコンプライアンスをオンプレミスに導入"^] を参照してください。
+ネットワーク内またはクラウド内の Linux ホストに Compliance ソフトウェアをダウンロードしてインストールすることもできます。すべてが同じように機能し、 Cloud Manager を使用してスキャンの設定と結果を引き続き管理できます。を参照してください link:task_deploy_cloud_compliance.html#deploying-the-cloud-compliance-instance-on-premises["クラウドへのコンプライアンスをオンプレミスに導入"^] を参照してください。
 
 
 NOTE: Cloud Compliance は、オンプレミスにインストールされている S3 バケットと ANF ファイルをスキャンすることができません。
@@ -172,7 +172,7 @@ NOTE: Cloud Compliance インスタンスを完全に削除するには、クラ
 
 はい。オンプレミスの ONTAP クラスタを Cloud Manager で作業環境として検出しているかぎり、任意のボリュームデータをスキャンできます。
 
-オンプレミスの NFS または CIFS データを Cloud Volumes ONTAP 作業環境にレプリケートし、データ保護ボリュームのコンプライアンスをアクティブ化することで、オンプレミスの ONTAP データをスキャンすることもできます。
+または、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルに対してコンプライアンススキャンを実行することもできます。オンプレミスからバックアップファイルを作成している場合は を使用しています link:task_backup_from_onprem.html["クラウドバックアップ"^]では、これらのバックアップファイルに対してコンプライアンススキャンを実行できます。
 
 link:task_getting_started_compliance.html["詳細はこちら。"^]。
 
@@ -180,7 +180,9 @@ link:task_getting_started_compliance.html["詳細はこちら。"^]。
 
 == Cloud Compliance から組織に通知を送信できますか？
 
-いいえ。ただし、組織内で共有できるステータスレポートはダウンロードできます。
+はい。ハイライトの結果が返されたら、ハイライト機能と一緒に Cloud Manager ユーザ（日次、週次、または月単位）に E メールアラートを送信して、データを保護するための通知を受け取ることができます。の詳細を確認してください link:task_managing_highlights.html#controlling-your-data-using-highlights["ハイライト"^]。
+
+また、ステータスレポートを .csv 形式でダウンロードして、社内で共有することもできます。
 
 
 
@@ -191,6 +193,14 @@ Cloud Compliance は、設定不要でデータを分析します。これらの
 また、「 * Data Fusion * 」機能を使用すると、スキャンしているデータベース内の特定の列にある条件に基づいてすべてのデータをクラウド・コンプライアンスでスキャンできます。これにより、基本的に独自のカスタム・データ・タイプを作成できます。
 
 link:task_managing_data_fusion.html#creating-custom-personal-data-identifiers-from-your-databases["詳細はこちら。"^]。
+
+
+
+== ファイルに埋め込まれている AIP ラベルを使用して Cloud Compliance を機能させることはできますか。
+
+はい。クラウドファイルで AIP ラベルを管理できます 登録している場合は、コンプライアンスがスキャンされます link:https://azure.microsoft.com/en-us/services/information-protection/["Azure 情報保護（ AIP ）"^]。既にファイルに割り当てられているラベルを表示したり、ファイルにラベルを追加したり、ラベルが既に存在する場合にラベルを変更したりできます。
+
+link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["詳細はこちら。"^]。
 
 
 

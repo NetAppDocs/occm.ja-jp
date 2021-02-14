@@ -21,6 +21,35 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
+== Cloud Manager 3.9.3 アップデート（ 2021 年 2 月 14 日）
+
+
+
+=== Cloud Compliance の機能拡張
+
+* スキャンするファイルの Azure Information Protection （ AIP ）ラベルを表示および管理します。
++
+** AIP ラベル機能を Cloud Compliance に統合すると、ファイルに割り当てられているラベルを表示したり、ファイルにラベルを追加したり、ラベルを変更したりできます。を参照してください link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["AIP ラベルを統合する方法"^] をワークスペースに配置します。
+** ファイルにラベルを個別に割り当てるか、またはのハイライト機能を使用します link:task_managing_highlights.html#assigning-aip-labels-automatically-with-highlights["ハイライト条件に一致するすべてのファイルにラベルを追加します"^]。ハイライトでは、 Cloud Compliance がファイル内で一致する項目を検出すると、ラベルは継続的に更新されます。
+** ラベルに一致するすべてのファイルを表示するには、 ［ 調査 ］ ページのデータを AIP ラベルでフィルタリングします。
+
+
+* Cloud Manager ユーザ（日次、週次、または月単位）に、ハイライト結果が返されたら E メールアラートを送信して、データを保護する通知を受け取ることができます。
++
+このオプションは、で選択します link:task_managing_highlights.html#creating-custom-highlights["任意の高輝度表示を作成または編集します"^]。
+
+* ファイルの所有者と権限の情報を表示するタイミング link:task_controlling_private_data.html#viewing-file-metadata-and-permissions["個々のファイルの詳細を表示します"^]。
++
+この条件を使用して、 [ 調査 ] ページでデータをさらにフィルタリングすることもできます。
+
+* Cloud Compliance からファイルを直接削除します。
++
+可能です link:task_managing_highlights.html#deleting-source-files["ファイルを完全に削除します"^] 安全性が低いか、ストレージシステムに残すのにリスクが高いようです。
+
+
+
+
+
 == Cloud Manager 3.9.3 アップデート（ 2021 年 2 月 10 日）
 
 * <<Cloud Tiering enhancements>>

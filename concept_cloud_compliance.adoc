@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cloud_compliance.html 
-keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, azure netapp files, cloud volumes ontap, Amazon S3, database, onedrive, on-prem ontap, backup files 
+keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, azure netapp files, cloud volumes ontap, Amazon S3, database, onedrive, on-prem ontap, backup files, aip labels 
 summary: Cloud Compliance は、 Cloud Manager 用のデータプライバシーとコンプライアンスのサービスで、ボリューム、 Amazon S3 バケット、およびデータベースをスキャンして、これらのファイルに格納されている個人データと機密データを特定します。人工知能（ AI ）ベースのテクノロジを使用したクラウドコンプライアンスは、データの状況を把握し、機密データを特定するのに役立ちます。 
 ---
 = Cloud Compliance の詳細をご確認ください
@@ -26,6 +26,9 @@ Cloud Compliance には、コンプライアンスの取り組みに役立つツ
 * 個人識別情報（ PII ）の識別
 * GDPR 、 CCPA 、 PCI 、 HIPAA の各プライバシー規制の要件に応じて、さまざまな機密情報の範囲を特定します
 * データサブジェクトアクセス要求への応答（ dsar ）
+* ファイルに特定のが含まれている場合は、 Cloud Manager ユーザに E メールで通知します PII （この基準は、を使用して定義します link:task_managing_highlights.html#controlling-your-data-using-highlights["ハイライト"^])
+* 表示と変更 link:https://azure.microsoft.com/en-us/services/information-protection/["Azure Information Protection （ AIP ）ラベル"^] ファイルに保存できます
+* 個々のファイルを削除します
 
 
 
@@ -44,7 +47,7 @@ Cloud Compliance では、次の種類のデータソースからデータをス
 
 
 
-NOTE: 2021 年 1 月にリリースされた新しいベータ機能により、以下のことが可能になります バックアップファイルに対して Compliance スキャンを実行して空きを確保します オンプレミスの ONTAP ボリューム（を使用して作成）から作成します link:concept_backup_to_cloud.html["クラウドへのバックアップ"^]）。これにより、オンプレミスの ONTAP ボリュームを直接スキャンするか、ボリュームから作成されたバックアップファイルをスキャンするかを選択できます。
+NOTE: 2021 年 1 月にリリースされたベータ版の機能により、次のことが可能になります 作成したバックアップファイルに対して、 Compliance スキャンを実行して空き容量を確保します を使用して作成したオンプレミスの ONTAP ボリュームから link:concept_backup_to_cloud.html["クラウドへのバックアップ"^]）。これにより、オンプレミスの ONTAP ボリュームを Cloud Compliance で直接スキャンするか、またはボリュームから作成されたバックアップファイルをスキャンするかを選択できます。
 
 
 

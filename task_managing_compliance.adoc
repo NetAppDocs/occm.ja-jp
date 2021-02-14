@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_managing_compliance.html 
 keywords: remove, delete, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, delete cloud compliance, terminate, deactivate, deactivating cloud compliance 
-summary: 必要に応じて、 Cloud Compliance のスキャンを停止して、 1 つ以上の作業環境をスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。 
+summary: 必要に応じて、 Cloud Compliance のスキャンを停止して、作業環境、データベース、 OneDrive アカウントをスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。 
 ---
-= Cloud Compliance の無効化
+= Cloud Compliance からのデータソースの削除
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -13,15 +13,16 @@ summary: 必要に応じて、 Cloud Compliance のスキャンを停止して�
 
 
 [role="lead"]
-必要に応じて、 Cloud Compliance のスキャンを停止することで、 1 つ以上の作業環境やデータベースをスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。
+必要に応じて、 Cloud Compliance のスキャンを停止して、作業環境、データベース、 OneDrive アカウントをスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。
 
 
 
 == 作業環境のコンプライアンススキャンを非アクティブにします
 
-スキャンを非アクティブ化すると、 Cloud Compliance はシステム上のデータをスキャンしなくなり、インデックス付けされたコンプライアンス分析情報を Cloud Compliance インスタンスから削除します（作業環境またはデータベース自体のデータは削除されません）。
+スキャンを非アクティブ化すると、 Cloud Compliance は作業環境上のデータをスキャンしなくなり、インデックス付けされたコンプライアンス分析情報を Cloud Compliance インスタンスから削除します（作業環境自体のデータは削除されません）。
 
-_Scan Configuration_page で、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] ボタンをクリックして作業環境を選択し、 * コンプライアンスの非アクティブ化 * をクリックします。
+. _Scan Configuration_page で、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] ボタンをクリックして作業環境を選択し、 * コンプライアンスの非アクティブ化 * をクリックします。
+
 
 image:screenshot_deactivate_compliance_scan.png["アクションアイコンのスクリーンショット。スキャンを非活動化（ Deactivate scan ）を選択できます。このオプションは、キャンバスページから作業環境を選択した後で使用できます。"]
 
@@ -30,11 +31,35 @@ TIP: 作業環境を選択するときに、サービスパネルから作業環
 
 
 
+== Cloud Compliance からデータベースを削除しています
+
+特定のデータベースをスキャンする必要がなくなった場合は、そのデータベースを Cloud Compliance インターフェイスから削除して、すべてのスキャンを停止できます。
+
+. _Scan Configuration_page で、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] ボタンをクリックし、 * DB サーバの削除 * をクリックします。
+
+
+image:screenshot_compliance_remove_db.png["Scan Configuration ページの Remove DB Server ボタンのスクリーンショット。"]
+
+
+
+== Cloud Compliance から OneDrive アカウントを削除します
+
+特定の OneDrive アカウントからユーザーファイルをスキャンする必要がなくなった場合は、 Cloud Compliance インターフェイスからアカウントを削除して、すべてのスキャンを停止できます。
+
+.手順
+. _Scan Configuration_page で、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] ボタンをクリックして OneDrive アカウントを選び、 [ * OneDrive アカウントの削除 * ] をクリックします。
++
+image:screenshot_compliance_remove_onedrive.png["[ スキャン構成 ] ページから [OneDrive を削除 ] ボタンのスクリーンショット。"]
+
+. 確認ダイアログで * アカウントの削除 * をクリックします。
+
+
+
+
 == Cloud Compliance インスタンスを削除しています
 
 Cloud Compliance の使用が不要になった場合は、 Cloud Compliance インスタンスを削除できます。インスタンスを削除すると、インデックス付きデータが存在する関連ディスクも削除されます。
 
-.ステップ
 . クラウドプロバイダのコンソールに移動して、 Cloud Compliance インスタンスを削除します。
 +
 インスタンスの名前は _CloudCompliancy_with で、生成されたハッシュ（ UUID ）を連結しています。例： _CloudCompliion-16bb6564-38ad-40802-9a92-36f5fd2f71c7_

@@ -69,6 +69,7 @@ Cloud Compliance インスタンス用の IAM ロールを設定します::
           "Action": [
               "s3:Get*",
               "s3:List*",
+              "s3:PutObject",
               "s3:HeadBucket"
           ],
           "Resource": "*"
@@ -195,6 +196,7 @@ image:screenshot_iam_create_role.gif[""]
           "Action": [
               "s3:Get*",
               "s3:List*",
+              "s3:PutObject",
               "s3:HeadBucket"
           ],
           "Resource": "*"

@@ -3052,7 +3052,6 @@
   <block id="26bb0a9084750e70b69288b0cd5c8a74" category="paragraph">AWS または Azure で Cloud Compliance 用のコネクタを使用する必要があるシナリオがいくつかあります。</block>
   <block id="8078cb5c8ea40e489bc7a3af96584a02" category="list-text">AWS または AWS S3 バケット内の Cloud Volumes ONTAP のデータをスキャンするときは、 AWS のコネクタを使用します。</block>
   <block id="f19eaef4d9d109ffcf1717f49dd5d48b" category="list-text">Azure または Azure NetApp Files で Cloud Volumes ONTAP 内のデータをスキャンする場合は、 Azure のコネクタを使用します。</block>
-  <block id="04b50523fa3adbe1e1c42462758486dd" category="list-text">どちらのコネクタを使用しても、データベースとオンプレミスの ONTAP システムをスキャンできます。</block>
   <block id="f7a28569ece466e4c02dbed2a36460fb" category="paragraph">また、次のことも可能です <block ref="624c808aa2a56c042c96bce7a27aab63" category="inline-link-macro-rx"></block> 自社ネットワークまたはクラウド内の既存の Linux ホストCloud Compliance をオンプレミスにインストールする予定のユーザによっては、 Connector をオンプレミスにインストールすることもできます。</block>
   <block id="267b476717c1665614f57e91725c67ff" category="inline-link-macro">複数のコネクタ</block>
   <block id="5cbe9f4ee4c4994701e843b6c0a1804a" category="paragraph">ご覧のように、を使用する必要がある状況もあります <block ref="40a44fd9335f6a0844572dfd11b77c07" category="inline-link-macro-rx"></block>。</block>
@@ -3077,7 +3076,6 @@
   <block id="3f98b9bedf81035df77ee52da4c3a882" category="paragraph">* Azure およびオンプレミス環境に必要なエンドポイント： *</block>
   <block id="a8e9825bc4e10e94d0aa2e9a5f6063bb" category="cell">https://support.compliance.cloudmanager.cloud.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/</block>
   <block id="51db659b18130ea2f42d7d3802f59866" category="cell">\ https://support.compliance.cloudmanager.cloud.netapp.com/</block>
-  <block id="724d318e74bd5742d29518bde26fe134" category="cell">* オンプレミスインストールのみ： * 。 https://github.com/docker ¥ https://download.docker.com ¥ https://rhui3.us-west-2.aws.ce.redhat.com ¥ https://github-production-release-asset-2e65be.s3.amazonaws.com ¥ https://pypi.org ¥ https://pypi.python.org ¥ https://files.pythonhosted.org ¥ https://mirror.centos.org ¥ https://mirrorlist.centos.org ¥ http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.107-3.el7.noarch.rpm</block>
   <block id="c82303c6d5888ba9f147a501b8fe7f29" category="cell">インストールの前提条件パッケージを提供します。</block>
   <block id="a32077f03ac34ef87d1b9319f966a992" category="list-text">Cloud Manager に必要な権限が割り当てられていることを確認します</block>
   <block id="53995ee1c3487553bdabfe31dc1b58e0" category="list-text">Cloud Manager に、リソースを導入する権限と Cloud Compliance インスタンスのセキュリティグループを作成する権限があることを確認します。最新の Cloud Manager 権限は、で確認できます<block ref="d2f8d77175d2dd5e5ed1a096c2593510" category="inline-link-rx"></block>。</block>
@@ -3102,9 +3100,7 @@
   <block id="acf48f3072ec432f04b42f0bf5399652" category="paragraph">クラウドへの Cloud Compliance インスタンスの導入は、最も一般的な導入モデルです。ただし、を選択することもできます <block ref="d27b470260f5df8c25e3e59068a35b8d" category="inline-xref-macro-rx"></block> 自社ネットワークまたはクラウドに導入できます。</block>
   <block id="f193202da9a21c9784b6fb3e056a3799" category="paragraph">Compliance ソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。</block>
   <block id="479ee6718ccce9a7e31eface80d6bb61" category="list-text">Cloud Manager で、 * コンプライアンス * をクリックします。</block>
-  <block id="5a173b178acd8fb3693bdf3fe7272185" category="list-text">クラウドへのコンプライアンスの導入 * をクリックして、導入ウィザードを開始します。</block>
   <block id="41e59bf0371b04d2207640dafb5d946b" category="inline-image-macro">クラウドに Cloud Compliance を導入するボタンを選択するスクリーンショット。</block>
-  <block id="318d363bf09108d1d48fbba0e3f3f81e" category="paragraph"><block ref="318d363bf09108d1d48fbba0e3f3f81e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="df809117058eb7bb06c8ed0aff661ac1" category="list-text">導入手順が完了すると、ウィザードに進捗状況が表示されます。問題が発生すると停止し、入力を求められます。</block>
   <block id="33093dc69ce0d0f1807d3359349d18ff" category="inline-image-macro">新しいインスタンスを導入するための Cloud Compliance ウィザードのスクリーンショット。</block>
   <block id="b0cc39afc6705e4b6b8d269f4e5d30ca" category="paragraph"><block ref="b0cc39afc6705e4b6b8d269f4e5d30ca" category="inline-image-macro-rx" type="image"></block></block>
@@ -3118,14 +3114,10 @@
   <block id="003dabf3d7e349d83ff9bf15dcbdad7e" category="paragraph">Cloud Compliance の最も一般的な導入方法は、です <block ref="fdf3dea573e8983366297de7680a634f" category="inline-xref-macro-rx"></block>。ただし、ネットワーク上の Linux ホストに Compliance ソフトウェアをダウンロードしてインストールすることもできます。</block>
   <block id="a0ca9ff7917fbdfb874acac64de4dc99" category="paragraph">Compliance ソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。</block>
   <block id="ae8f9609c5884d9f4db4d05e14862cd4" category="inline-link-macro">コネクタを切り替えます</block>
-  <block id="b48f65dd65b0739fff5864e04c42a79a" category="admonition">現在、 Cloud Compliance インスタンスがオンプレミスにインストールされていると、 S3 バケットと Azure NetApp Files をスキャンすることはできません。このような場合は、別のコネクタを配置する必要があります クラウドおよびでのコンプライアンスのインスタンスです <block ref="ddd1a13b4487b3446931261d8bf1b755" category="inline-link-macro-rx"></block> データソースごとに異なる。</block>
   <block id="fc076765cbc4aef219c970ffdd93f443" category="list-title">ホストの要件</block>
   <block id="0bd5d4f7389518a30e9e80093dacb333" category="list-text">オペレーティングシステム： Red Hat Enterprise Linux または CentOS バージョン 8.0 または 8.1</block>
   <block id="46123563d68443141506bf3d78c3f494" category="list-text">バージョン 7.8 を使用できますが、 Linux カーネルのバージョンは 4.14 以降である必要があります</block>
   <block id="6eca1a824e059bf4f2eb266bd39b58c5" category="list-text">OS が Docker エンジンをインストールできる必要があります（必要に応じて、 _firewalld_service を無効にするなど）。</block>
-  <block id="abcf3c9108a597abb80419e80d6ce032" category="list-text">RAM ： 60 GB 以上</block>
-  <block id="0fe89c2c7eeda82c2288370c43ec611d" category="list-text">CPU ： 8 個以上の CPU コアを搭載。推奨されるコア数は 16 個です</block>
-  <block id="b1eff2002b6097fa69862c1547ca0b2a" category="list-text">容量： 500GB</block>
   <block id="35ec85020897e56acfca830003a03e8c" category="list-text">Red Hat Enterprise Linux システムは、 Red Hat サブスクリプション管理に登録する必要があります。登録されていない場合、システムはインストール中に必要なサードパーティソフトウェアをアップデートするためのリポジトリにアクセスできません。</block>
   <block id="55ecd96b14ce3b5a4c5ee3660004899a" category="list-text">Cloud Manager でインストールの進捗状況を確認できるように、ポート 8080 が開いていることを確認してください。</block>
   <block id="d7be65dc8db5048008197292f0b965c1" category="list-text">Cloud Compliance をインストールするには root 権限が必要です。</block>
@@ -3133,23 +3125,18 @@
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">ネットアップサポートサイト</block>
   <block id="39988fb6532e60acf35d7aaaeb0bee15" category="list-text">から Cloud Compliance ソフトウェアをダウンロードします<block ref="c11821707a75d4202291b064307903ec" category="inline-link-rx"></block>。</block>
   <block id="bbdb5f5f026c712f36de4a68700316f5" category="list-text">使用する Linux ホストにインストーラファイルをコピーします (`cp またはその他の方法を使用 ) 。</block>
-  <block id="99c7968957555ac24ea3a72c992e5857" category="list-text">[* コンプライアンスをオンプレミスに展開する * ] をクリックします。</block>
   <block id="3ff3d473d5af3742f1ab9faf10179618" category="inline-image-macro">Cloud Compliance をオンプレミスに導入するボタンを選択するスクリーンショット。</block>
   <block id="c7e29f2a9d31a48c059703af31007d31" category="paragraph"><block ref="c7e29f2a9d31a48c059703af31007d31" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="188d55ef4441bb911b5631e82924ee7f" category="list-text">_Deploying Cloud Compliance on Premises _dialog で、提供されたコマンドをコピーし、テキストファイルに貼り付けて、後で使用できるようにします。例：</block>
   <block id="20351f0a51821f0c3415b668fa792d58" category="list-text">ホストマシンでインストーラファイルを解凍します。</block>
   <block id="f588e434656f7b49a0d7c9eebcd00f3f" category="list-text">インストーラからプロンプトが表示されたら、一連のプロンプトで必要な値を入力するか、または最初のプロンプトでコマンド全体を入力できます。</block>
   <block id="7811f7ac7277273963aaa041e6dee561" category="cell">プロンプトに従ってパラメータを入力します。</block>
   <block id="92a8de5d873f4ac3a57f4d866c8ed98c" category="cell">完全なコマンドを入力します。</block>
-  <block id="54c681cd6aefbdeaff5442f078f650a3" category="list-text">手順 3 からコピーした情報を貼り付けます。 'UDO./install.sh -a &lt;account_id&gt;-c &lt;agent_id&gt;-t&lt;token&gt;`</block>
   <block id="8b4f8bae26de73f20bff6a44f7d23770" category="list-text">コネクタインスタンスからアクセスできるように、 Compliance ホストマシンの IP アドレスまたはホスト名を入力します。</block>
   <block id="126a996374e9a58a7d3eb3129fadbedd" category="list-text">プロンプトが表示されたら、プロキシの詳細を入力Cloud Manager ですでにプロキシが使用されている場合は、 Cloud Compliance によって Cloud Manager で使用されるプロキシが自動的に使用されるため、ここでもう一度入力する必要はありません。</block>
-  <block id="f47b7e6668a8ad000fdf48910500d374" category="cell">または、コマンド全体を事前に作成して、最初のプロンプトで入力することもできます。 'sudo ./install.sh -a &lt;account_id&gt;-c &lt;agent_id&gt;-t &lt;token&gt; --host &lt;cc_host&gt; --proxy-host &lt;proxy_host&gt; --proxy-port &lt;proxy_port&gt; --proxy-password-proxy-p＆ password-password-user-pxy-password&gt;</block>
   <block id="99a5b8fe9eadd5739e3e760584c579fc" category="paragraph">変数値：</block>
   <block id="82fbba9871c4c69830c0ea5c2c6fa6f8" category="list-text">_account_id _ = ネットアップアカウント ID</block>
   <block id="ce49b2db53a11ca7ddb5f05294345b09" category="list-text">_agent_id _ = コネクタ ID</block>
   <block id="1e182d514fc6063a1b524c471660e230" category="list-text">_ctoken _ = JWT ユーザートークン</block>
-  <block id="cae01b1bebe928d85da51a6ffef93f30" category="list-text">_cc_host_= ホスト Linux マシンの IP アドレスまたはホスト名。</block>
   <block id="f31705a3bb2f2507f4803c1d996c4887" category="list-text">_proxy_host_ = ホストがプロキシサーバの背後にある場合は、プロキシサーバの IP 名またはホスト名。</block>
   <block id="580d63944c0010bfed9db7cc082666bf" category="list-text">_proxy_port_= プロキシサーバに接続するポート（デフォルトは 80 ）です。</block>
   <block id="41e369ab5c279ad1a0d1ae1c297c7de6" category="list-text">_proxy_scheme_= 接続スキーマ： https または http （デフォルト http ）。</block>
@@ -3963,8 +3950,6 @@
   <block id="ea9e0895583ed1ca72200384dc23d6d0" category="list-text">Docker インフラのコンテナコンポーネントのソフトウェアイメージを取得するには、コネクタが次のエンドポイントにアクセスできる必要があります。</block>
   <block id="9dcb0a1d3281e001a6085626a264be49" category="paragraph">\ https://cloudmanagerinfraprod.azurecr.io</block>
   <block id="58abea4bafef89822b62e6c136799bc2" category="paragraph">ファイアウォールがコネクタからこのエンドポイントへのアクセスを有効にしていることを確認してください。</block>
-  <block id="e6caff20ed2abddd7c5fc28875c0f87c" category="summary">ハイライトは、よく要求されるコンプライアンスクエリーの [ 調査 ] ページに検索結果を表示するカスタムフィルタのお気に入りリストのようなものです。Cloud Compliance では、お客様からのよくある質問に基づいて、一連の事前定義されたハイライトを提供します。さらに、独自のカスタムハイライトを作成して、組織固有の検索結果を表示することもできます。</block>
-  <block id="99d7332c2a70da53470727f4e14ca8ad" category="doc">ハイライトを利用してプライベートデータを制御できます</block>
   <block id="744c2eb04d5748873565854b80892622" category="paragraph">コンプライアンスダッシュボードの * ハイライト * タブには、このクラウドコンプライアンスインスタンスで利用可能なすべてのハイライトが表示されます。</block>
   <block id="28cc8d9a1cabd57c4cbd8fc0069647ef" category="inline-image-macro">Cloud Compliance ダッシュボードの Highlights タブのスクリーンショット。</block>
   <block id="8efc3b805d530827468165f09cb4ea93" category="paragraph"><block ref="8efc3b805d530827468165f09cb4ea93" category="inline-image-macro-rx" type="image"></block></block>
@@ -3976,19 +3961,10 @@
   <block id="af2a6dfca58c4ac9cdf32b3e0b57a30b" category="list-text">フィルタの特性をすべて希望どおりに設定したら、 [ * この検索を高輝度表示として保存 * （ Save this search as a highlight * ） ] をクリックします。</block>
   <block id="125cfd53a7096749f097d1649cb4fce5" category="inline-image-macro">フィルタされたクエリをハイライトとして保存する方法を示すスクリーンショット。</block>
   <block id="c0c8b7462c848f6ffdc4b28d5945646d" category="paragraph"><block ref="c0c8b7462c848f6ffdc4b28d5945646d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="76c7d816ae62e8e4f4b9c24cdb811893" category="list-text">ハイライトの一意の名前と説明を入力し、 * ハイライトを保存 * をクリックします。</block>
-  <block id="f9a2458dae81fcf63fef10f6e68eb254" category="inline-image-macro">ハイライトに名前を付けて保存する方法を示すスクリーンショット。</block>
-  <block id="503a0dc48a1a8b535b5bf4354c02ec02" category="paragraph"><block ref="503a0dc48a1a8b535b5bf4354c02ec02" category="inline-image-macro-rx" type="image"></block></block>
   <block id="59143bd8e328869e221db8c9e272b457" category="paragraph">ハイライト (Highlights ) タブに新しいハイライトが表示されます</block>
   <block id="c12585ae6f35222457ea8f2f1fad2651" category="section-title">[ 調査 ] ページでハイライト結果を表示します</block>
   <block id="024205acf9405311336c02bbd2193b70" category="inline-image-macro">[ 詳細 ] ボタン</block>
-  <block id="c8d7ba67251a3654e7b556813f31ee16" category="paragraph">[ 調査 ] ページでハイライトの結果を表示するには、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして特定のハイライトを選択し、 * 調査結果 * をクリックします。</block>
-  <block id="26165651ed39f85710f428e090c64f12" category="inline-image-macro">ハイライト (Highlights) タブで調査結果 (Investigate Results) を選択するスクリーンショット</block>
-  <block id="23b1ca914bdebd09932d51adc8d91bdc" category="paragraph"><block ref="23b1ca914bdebd09932d51adc8d91bdc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cd4a44650df934d1a494b1da2daa850c" category="section-title">ハイライトの編集</block>
-  <block id="012b2e7fbec102ae06af938a4bc761a7" category="paragraph">作成した任意のカスタム高輝度表示を修正できます。事前定義されたハイライトは変更できません。</block>
-  <block id="c2390d95b3319553eab212a88dc42f9b" category="admonition">この時点では、カスタム高輝度表示の _ 名前 _ と _ 説明 _ のみを変更できます。フィルタパラメータを変更する必要がある場合は、目的のパラメータを使用して新しい高輝度表示を作成し、古い高輝度表示を削除する必要があります。</block>
-  <block id="d633b215f43c6d1c4fb5b228a0bcaf5b" category="paragraph">ハイライトを変更するには、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして特定のハイライトを編集します。ハイライトを編集 * をクリックし、 _Edit highlight_page に変更を入力して、 * ハイライトを保存 * をクリックします。</block>
   <block id="529693b033b9aff8c686a5a79e92ed10" category="section-title">ハイライトを削除しています</block>
   <block id="ac12ffdd05e417a9b269e7b1461bd9e1" category="paragraph">不要になったカスタムハイライトは削除できます。事前定義されたハイライトは削除できません。</block>
   <block id="73bf61e9320be469d65ff24719133a20" category="paragraph">ハイライトを削除するには、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして特定のハイライトを選択し、 * ハイライトの削除 * をクリックしてから、確認ダイアログで再度 * ハイライトの削除 * をクリックします。</block>
@@ -4172,7 +4148,6 @@
   <block id="a08ba3aef92fd1fdf269183c51c01cbd" category="list-text">AWS では、 Cloud Compliance は m5.Medin インスタンスで 500GB の gp2 ディスクを使用して実行されます。</block>
   <block id="d4e890da1366de6d806b8a98e1b97c50" category="paragraph">m5.mcd を使用できない地域では、代わりに m4.mcd インスタンスに対して Cloud Compliance を実行します。</block>
   <block id="11aee29ac248379a7a76e571d99945c1" category="inline-link-macro">クラウドへのコンプライアンスをオンプレミスに導入</block>
-  <block id="3f9fd6c6430eff8a9b0fabbb432db86d" category="paragraph">2020 年 12 月より、ネットワーク内またはクラウド内の Linux ホストに Compliance ソフトウェアをダウンロードしてインストールできるようになります。すべてが同じように機能し、 Cloud Manager を使用してスキャンの設定と結果を引き続き管理できます。を参照してください <block ref="4d9cbc7d553e264229092aed20a63bc3" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="8a05602ce8335fcd3465fb2e34a5d3ce" category="admonition">Cloud Compliance は、オンプレミスにインストールされている S3 バケットと ANF ファイルをスキャンすることができません。</block>
   <block id="c50a6cbc569afa1deaa247aaeb038787" category="section-title">スキャンのパフォーマンスは変化しますか？</block>
   <block id="fb86bab51ac2b63756f4fe2dc75c6477" category="paragraph">スキャンパフォーマンスは、クラウド環境のネットワーク帯域幅と平均ファイルサイズによって異なります。</block>
@@ -4193,11 +4168,8 @@
   <block id="7245782d4f1eb0db394d9f1f8ae02b2c" category="paragraph">コンプライアンススキャンはコールドデータを加熱しません -- コールドデータを保存し ' オブジェクトストレージに階層化します</block>
   <block id="602be797bce4a59f92a0398c6a30b26f" category="section-title">Cloud Compliance を使用してオンプレミスの ONTAP ストレージをスキャンできますか。</block>
   <block id="d0bd64fb0dbf8e18e047306cf0c13e50" category="paragraph">はい。オンプレミスの ONTAP クラスタを Cloud Manager で作業環境として検出しているかぎり、任意のボリュームデータをスキャンできます。</block>
-  <block id="40b67371713849b39eebef8823fe2726" category="paragraph">オンプレミスの NFS または CIFS データを Cloud Volumes ONTAP 作業環境にレプリケートし、データ保護ボリュームのコンプライアンスをアクティブ化することで、オンプレミスの ONTAP データをスキャンすることもできます。</block>
   <block id="af666ce294de8a2bd375a9d3397bc99b" category="paragraph"><block ref="8400cb4cea29b6461a468c283f488367" category="inline-link-macro-rx"></block>。</block>
   <block id="f6851adbe9296c60373fb578a0e4d82e" category="section-title">Cloud Compliance から組織に通知を送信できますか？</block>
-  <block id="8e1420bbd3fe59b4ed3447fe1bf60aa3" category="paragraph">いいえ。ただし、組織内で共有できるステータスレポートはダウンロードできます。</block>
-  <block id="4fd20c2f44c40a0acbb64f87a03e75e9" category="section-title">組織のニーズに合わせてサービスをカスタマイズできますか。</block>
   <block id="7d148e494bbfd56a9adff6f5c8fc14cd" category="paragraph">Cloud Compliance は、設定不要でデータを分析します。これらの分析情報を抽出して、組織のニーズに活用できます。</block>
   <block id="5f97d9d53c80c2bafcb3dd92a677d694" category="paragraph">また、「 * Data Fusion * 」機能を使用すると、スキャンしているデータベース内の特定の列にある条件に基づいてすべてのデータをクラウド・コンプライアンスでスキャンできます。これにより、基本的に独自のカスタム・データ・タイプを作成できます。</block>
   <block id="fa8492b7f787e18700d8f24c8a6e8aad" category="paragraph"><block ref="a7974732d47b7abb3b22b85c386076c3" category="inline-link-macro-rx"></block>。</block>
@@ -5126,7 +5098,6 @@
   <block id="18da76768df6d64c4b369df8f8134230" category="cell">[ すべてのボリュームのコンプライアンスを有効にする * ] スライダをに移動します 権利</block>
   <block id="9d7dd5fce3f26b1970bbccc8522ce7a6" category="admonition">作業環境に追加した新しいボリュームは、すべてのボリュームのコンプライアンスのアクティブ化 * 設定が有効になっている場合にのみ自動的にスキャンされます。この設定を無効にすると、作業環境で作成する新しいボリュームごとにスキャンを有効にする必要があります。</block>
   <block id="6a47239288ad0fea293e2cb6440c30a5" category="paragraph">Cloud Compliance でオンプレミスの ONTAP システム上のボリュームを直接スキャンしない場合は、 2021 年 1 月にリリースされる新しいベータ機能によって、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルに対してコンプライアンススキャンを実行できます。したがって、を使用してバックアップファイルを既に作成している場合にも同様です <block ref="ce9f8e11a54437266924ebf465f8d4f3" category="inline-link-macro-rx"></block>この新機能を使用して、バックアップファイルに対してコンプライアンススキャンを実行できます。</block>
-  <block id="655bcac115089514eb546d5115f0ca7e" category="admonition">バックアップファイルで実行したコンプライアンススキャンは無料です。 Cloud Compliance サブスクリプションやライセンスは必要ありません。</block>
   <block id="b6e0dd7a912e052d6b94dd552f713f98" category="paragraph">オンプレミスの ONTAP システムからバックアップファイルをスキャンする場合は、次の手順を実行します。</block>
   <block id="5191e196a64dbd65a75c4dd9dbc4ac41" category="list-text">作業環境のリストで、フィルタのリストから * backup * ボタンをクリックします。</block>
   <block id="0571d0f0b95b569eeb07e4441679276d" category="paragraph">バックアップファイルがあるオンプレミスの ONTAP 作業環境がすべて表示されます。オンプレミスシステムにバックアップファイルがない場合、作業環境は表示されません。</block>
@@ -5138,7 +5109,6 @@
   <block id="3a0d5893960d312dde2f87e49e3cada5" category="paragraph">作業環境のリスト全体を表示すると、ファイルをバックアップしている場合は、オンプレミスクラスタごとに 2 つのリストが表示されます。</block>
   <block id="83488e153c1e0e6bd671df586f180875" category="inline-image-macro">バックアップファイルがある場合は、オンプレミスクラスタが作業環境のリストに 2 回表示される仕組みを示すスクリーンショット</block>
   <block id="c25e03025e188450f70b0aac80fe305d" category="paragraph"><block ref="c25e03025e188450f70b0aac80fe305d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8d07ef44b1d1d11ce0cd5d6170084cdc" category="paragraph">最初の項目はオンプレミスクラスタと実際のボリュームです。2 つ目は、同じオンプレミスクラスタのバックアップファイルです。オンプレミスシステム上のボリュームをスキャンする最初のオプションを選択します。2 番目のオプションを選択して、対象のボリュームからバックアップファイルをスキャンします。同じクラスタのオンプレミスボリュームとバックアップファイルの両方をスキャンしないでください。</block>
   <block id="09a33e27026656462be6bc592a4ed808" category="section-title">データ保護ボリュームをスキャンしています</block>
   <block id="ee3435de71531fb1c13c7c8433b94897" category="paragraph">デフォルトでは、データ保護（ DP ）ボリュームは外部から公開されておらず、 Cloud Compliance はアクセスできないため、スキャンされません。オンプレミスの ONTAP システムまたは Cloud Volumes ONTAP システムからの SnapMirror 処理のデスティネーションボリュームです。</block>
   <block id="cc2aceb1237f12696c6da3c671aebf3a" category="paragraph">最初は、ボリュームリストでこれらのボリュームを _Type_* DP * でスキャンしていないステータス * および必要なアクション _ * DP ボリュームへのアクセスを有効にします * 。</block>
@@ -6152,7 +6122,6 @@
   <block id="4851a87ab9f927ea68831e5a8176c471" category="paragraph">Cloud Compliance では、次の種類のデータソースからデータをスキャンできます。</block>
   <block id="6c13bdb1f1bdde1fbf0ab83899798cf4" category="list-text">データベースはどこにあってもかまいません （データベースがに存在する必要はありません サクキヨウカンキヨウ</block>
   <block id="807a3c50d901b21b3f3b8e077bc903f8" category="list-text">OneDrive アカウント</block>
-  <block id="12821e4401c6261a074dd2f3bbb31b88" category="admonition">2021 年 1 月にリリースされた新しいベータ機能により、以下のことが可能になります バックアップファイルに対して Compliance スキャンを実行して空きを確保します オンプレミスの ONTAP ボリューム（を使用して作成）から作成します <block ref="ce9f8e11a54437266924ebf465f8d4f3" category="inline-link-macro-rx"></block>）。これにより、オンプレミスの ONTAP ボリュームを直接スキャンするか、ボリュームから作成されたバックアップファイルをスキャンするかを選択できます。</block>
   <block id="82cf805dd41236590189e4842bb94904" category="list-text">Cloud Compliance の使用コストは、スキャンするデータの量によって異なります。Cloud Compliance が Cloud Manager ワークスペースでスキャンする最初の 1TB のデータは無料です。これには、すべての作業環境とデータソースのすべてのデータが含まれます。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。を参照してください<block ref="3c1b53bec1b7cb8a4a4d6b6aa9f27379" category="inline-link-rx"></block> を参照してください。</block>
   <block id="141ee03e23ebf4bc45b048006d102207" category="inline-link-macro">登録方法については、こちらをご覧ください</block>
   <block id="0bf1f41e5fac3d18e11a81eba0562f52" category="paragraph"><block ref="474120e37299a1d6b58efc82bcca18f4" category="inline-link-macro-rx"></block>。</block>
@@ -8144,9 +8113,7 @@
   <block id="74993bbafe4b984432b5e67863ee7f44" category="list-text">トップレベルのタブでは、ファイル（非構造化データ）またはデータベース（構造化データ）のデータを表示できます。</block>
   <block id="812ce4d3a07734d12cdaa3ed2010e22f" category="list-text">各列の上部にあるコントロールを使用して、結果を数値またはアルファベット順にソートできます。</block>
   <block id="c9dfb9dffc3a9799899fc3b98dda421c" category="list-text">左側のペインフィルタを使用すると、作業環境、ストレージリポジトリ、カテゴリ、プライベートデータ、ファイルタイプ、ファイルサイズ、最終変更日、 S3 オブジェクトの権限がパブリックアクセスに対して許可されているかどうかなどを指定して、結果を絞り込むことができます。</block>
-  <block id="03f77d0077764592423406b6a130fda0" category="list-text">[ フィルタ ] ペインの上部にある _Highlights_filter には、保存されたデータベースクエリや [ お気に入り ] リストなど、よく要求されるフィルタの組み合わせを提供するカスタムフィルタが一覧表示されます。実行します <block ref="cfb9b292a71c7ed88f68cafdf19278bf" category="inline-link-macro-rx"></block> 事前定義されたハイライトのリストを表示したり、独自のハイライトを作成する方法を確認したりできます。</block>
   <block id="b6b354a759e6ea4d86bdf3ac9228dc29" category="section-title">各ファイルリストレポート（ CSV ファイル）に含まれる内容</block>
-  <block id="713cd87fc985e61eb04a64236a7b46aa" category="paragraph">各調査ページから、特定されたファイルの詳細を含むファイルリスト（ CSV 形式）をダウンロードできます。10 、 000 件を超える結果がある場合は、上位 10 、 000 件のみがリストに表示されます。</block>
   <block id="6e590b1d36306c16bdf7eae62d983a08" category="paragraph">各ファイルリストには、次の情報が含まれています。</block>
   <block id="34082694d21dbdcfc31e6e32d9fb2b9f" category="list-text">ファイル名</block>
   <block id="8c16f0464e311229da94de789324309e" category="list-text">場所のタイプ</block>
@@ -8706,11 +8673,7 @@
   <block id="c58c67877e90861ec92c90c10b7ad7f4" category="paragraph">次の図は、コストページの例を示しています。</block>
   <block id="37423695a33e814084966c17d451584a" category="inline-image-macro">スクリーンショット： Cloud Volumes ONTAP インスタンスのコストを月単位で表示します。</block>
   <block id="c3d678c4df92877db53bd1f6e44ec524" category="paragraph"><block ref="c3d678c4df92877db53bd1f6e44ec524" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f0752c49640176ce9f1a0428fc7003a0" category="summary">必要に応じて、 Cloud Compliance のスキャンを停止して、 1 つ以上の作業環境をスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。</block>
-  <block id="419b17d782eac235ba75f0aeed1f461f" category="doc">Cloud Compliance の無効化</block>
-  <block id="e902c2acb285cba928fe1a2d7b63a6f2" category="paragraph">必要に応じて、 Cloud Compliance のスキャンを停止することで、 1 つ以上の作業環境やデータベースをスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。</block>
   <block id="8f34757b26c51100dd5a08a099969517" category="section-title">作業環境のコンプライアンススキャンを非アクティブにします</block>
-  <block id="45f97177a1981579cf653d31a21fe097" category="paragraph">スキャンを非アクティブ化すると、 Cloud Compliance はシステム上のデータをスキャンしなくなり、インデックス付けされたコンプライアンス分析情報を Cloud Compliance インスタンスから削除します（作業環境またはデータベース自体のデータは削除されません）。</block>
   <block id="0948a760753800e0b7e960497c43bccc" category="paragraph">_Scan Configuration_page で、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして作業環境を選択し、 * コンプライアンスの非アクティブ化 * をクリックします。</block>
   <block id="dba203d7b9cc6a68d7c335a7f3f015f3" category="inline-image-macro">アクションアイコンのスクリーンショット。スキャンを非活動化（ Deactivate scan ）を選択できます。このオプションは、キャンバスページから作業環境を選択した後で使用できます。</block>
   <block id="eb988d6acac9e3b0ac68d26087021f35" category="paragraph"><block ref="eb988d6acac9e3b0ac68d26087021f35" category="inline-image-macro-rx" type="image"></block></block>
@@ -8879,11 +8842,9 @@
   <block id="6b7cef11406f2fff58dcc619a2b7e482" category="sidebar">Amazon S3 バケット</block>
   <block id="ae9d17dd7732dafc7b97f62ac9094cf7" category="sidebar">データベーススキーマ</block>
   <block id="a65d1515e6e4c2b06764fe2b0e27b56a" category="sidebar">組織内のプライベートデータの詳細を表示します</block>
-  <block id="11218da2973aa464529a2402744716bf" category="sidebar">ハイライトを利用してプライベートデータを管理できます</block>
   <block id="b243b08794c870ea91d13357c677102f" category="sidebar">カスタムの個人データ識別子を追加します</block>
   <block id="7ecd0726b721e17d74d280fdd93e49f8" category="sidebar">レポートを生成します</block>
   <block id="940f7fa149e5c7150bed31bd5a2f9785" category="sidebar">dsar に応答します</block>
-  <block id="ad243b5093f08f9d5101d8fb8439876b" category="sidebar">クラウドコンプライアンスを無効化</block>
   <block id="6d28a2d2ecc6bf36b0c0dfeeeeaa665d" category="sidebar">リアルタイムのグローバルファイル共有を有効にします</block>
   <block id="d5419b6203278076b2d563675a9383f4" category="sidebar">グローバルファイルキャッシュエッジの導入を開始する前に</block>
   <block id="9d94c3aa32a0b32a0fa46fa0de0e1e81" category="sidebar">グローバルファイルキャッシュエッジを導入します</block>
@@ -8922,4 +8883,189 @@
   <block id="93f9dd3f52ae9e28ee069715e7a214b4" category="sidebar">IAC ツールを使用して自動化します</block>
   <block id="7a4e5e5bc542eae2d10e3506f839f2ae" category="sidebar">の問題のトラブルシューティング</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">以前のバージョン</block>
+  <block id="d522afaa83e9618416e5390bdd8f4aad" category="list-text">どちらのコネクタでも、データベース、 OneDrive フォルダ、オンプレミス ONTAP システムをスキャンできます。</block>
+  <block id="f28046291e04e23404be7729814b196a" category="cell">* オンプレミスインストールのみ： * 。 https://github.com/docker ¥ https://download.docker.com ¥ https://rhui3.us-west-2.aws.ce.redhat.com ¥ https://github-production-release-asset-2e65be.s3.amazonaws.com ¥ https://pypi.org ¥ https://pypi.python.org ¥ https://files.pythonhosted.org ¥ http://mirror.centos.org ¥ http://mirrorlist.centos.org ¥ http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.107-3.el7.noarch.rpm</block>
+  <block id="341761f226b6beff49851cdf6882a09b" category="list-text">[Activate Cloud Compliance] をクリックします。</block>
+  <block id="69c5f9debfab5d9dacf2b0bd5245807a" category="inline-image-macro">Cloud Compliance をアクティブ化するボタンを選択するスクリーンショット。</block>
+  <block id="103826ebff4b2abed768b89305bedf4a" category="paragraph"><block ref="103826ebff4b2abed768b89305bedf4a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ff1b1351829aa4d98ad02b64623c6bc4" category="list-text">コンプライアンスのアクティブ化 * をクリックして、導入ウィザードを開始します。</block>
+  <block id="00d0cbb70695c15c98074b15c87a0963" category="paragraph"><block ref="00d0cbb70695c15c98074b15c87a0963" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5bba306f8c2bd752a2bae0dc33b43800" category="admonition">現在、 Cloud Compliance インスタンスがオンプレミスにインストールされていると、 S3 バケットと Azure NetApp Files をスキャンすることはできません。このような場合は、別のコネクタを配置する必要があります クラウドおよびでのコンプライアンスのインスタンスです <block ref="84b6f330ec14bbec9ef9f7be9905c1e1" category="inline-link-macro-rx"></block> データソースごとに異なる。</block>
+  <block id="a5c179e2fdd6f5e7316bce2d986b6a88" category="list-text">RAM ： 64GB （ホストでスワップメモリを無効にする必要があります）</block>
+  <block id="08e13bbbf0255b955820ad8ae3cc8c53" category="list-text">CPU ： 16 コア</block>
+  <block id="de37083eb3c6414c070e7e753d5e4bf3" category="list-text">ディスク： 500GB SSD</block>
+  <block id="0d2327b3ae93fe76f7b9a50ad8482d80" category="list-text">[ コンプライアンスの有効化 * ] をクリックします。</block>
+  <block id="08ea8128367dbb1eba9b1775a36405fc" category="list-text">_Deploy Cloud Compliance on Premises _ Dialog で、提供されたコマンドをコピーしてテキストファイルに貼り付け、後で使用できるようにします。例：</block>
+  <block id="a402a6c8a10b4c24d7596599c6dfb7db" category="paragraph">sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq</block>
+  <block id="37351340579d472ed80bae06661a21a0" category="paragraph">tar -xzf cc_onpm_installer.tar.gz</block>
+  <block id="0c3e94a9670a26d481343fe02b9df002" category="list-text">手順 6 からコピーした情報を貼り付けます。 'UDO./install.sh -a &lt;account_id&gt;-c &lt;agent_id&gt;-t&lt;token&gt;`</block>
+  <block id="a9b8bbf9a38fd425e662fe6487f60067" category="list-text">Cloud Compliance インスタンスからアクセスできるように、 Cloud Manager Connector ホストマシンの IP アドレスまたはホスト名を入力します。</block>
+  <block id="b03cfa8b6e74c64635a427b4e83b4047" category="cell">または、コマンド全体を事前に作成して、最初のプロンプトに「 sudo ./install.sh -a &lt;account_id&gt;-c &lt;agent_id&gt;-t &lt;token&gt; --host &lt;cc_host&gt;--cm-host&lt;proxy_host&gt;--proxy-host &lt;proxy_host&gt;--proxy-port-proxy-password&lt;/password&gt; 」と入力することもできます</block>
+  <block id="ea07dc1966ca251be0fa9a5532d60253" category="list-text">_cc_host_ = Cloud Compliance Linux システムの IP アドレスまたはホスト名。</block>
+  <block id="04b2066c6bdc5380233f68c0d96b8d9a" category="list-text">_cm_host_= Cloud Manager Connector システムの IP アドレスまたはホスト名。</block>
+  <block id="68ef594688f291dfcce6dbbe5ad1fd8f" category="summary">Cloud Compliance では、さまざまな方法でプライベートデータを管理できます。一部の機能では、最も重要なデータを簡単に確認できます。その他の機能を使用すると、データに変更を加えることができます。</block>
+  <block id="4264ca6efffa4cf6fdf127440dfdd525" category="doc">プライベートデータの管理</block>
+  <block id="8b28b3a2c459446e325335cf9e905ae0" category="list-text">「高輝度表示」機能を使用すると、 1 つのボタンをクリックして簡単に結果を表示できるように、独自のカスタム検索クエリを作成できます。</block>
+  <block id="54e9fec9d3bcac66636bc0537b57c235" category="list-text">特定の重要度が高い項目が返されたときに、 Cloud Manager ユーザに E メールアラートを送信できます。</block>
+  <block id="2a03ec9e7d9aaa65371a523434cb5fb5" category="inline-link">Azure 情報保護（ AIP ）</block>
+  <block id="ce9918593196acf08ab6290a44693bc1" category="list-text">に登録している場合は <block ref="2366c206354427dcda3be6923339236d" category="inline-link-rx"></block> ファイルを分類して保護するには、 Cloud Compliance を使用して AIP ラベルを管理します。</block>
+  <block id="56b24cad8ac0dcb1b26ace88ba7d0f90" category="list-text">ストレージシステムに残すのに安全でないファイルやリスクが高いファイルは削除することができます。</block>
+  <block id="59e4f2f6f6d69130bf0a32dc47ae1579" category="paragraph">強調表示機能と AIP 機能の両方に付属する機能については、以下を参照してください。</block>
+  <block id="c77f67df73da325c0e73f301e70e9be2" category="section-title">高輝度表示を使用したデータの制御</block>
+  <block id="8cc521516565b0947fbf06f2188a2c62" category="paragraph">ハイライトは、よく要求されるコンプライアンスクエリーの [ 調査 ] ページに検索結果を表示するカスタムフィルタのお気に入りリストのようなものです。Cloud Compliance では、お客様からのよくある質問に基づいて、一連の事前定義されたハイライトを提供します。また、組織固有の検索結果を提供するカスタムハイライトを作成することもできます。</block>
+  <block id="18d7ed402f63816ecb56a328cd6573c5" category="paragraph">強調表示されている機能は次のとおりです。</block>
+  <block id="d7bae9d9621d92ad39d09f634885fac9" category="inline-xref">事前定義されたハイライト</block>
+  <block id="dd57a82065fbb96eb5bb9ecaed23a01f" category="list-text"><block ref="74b109367e592abe66090c98dfcaecd4" category="inline-xref-macro-rx"></block> ユーザの要求に基づいて作成されます</block>
+  <block id="b070c6680def3c0bd0a597f69cdba11d" category="list-text">独自の高輝度表示を作成できます</block>
+  <block id="0cd11a3aafe3e7fdcf38f5c14f2f405f" category="list-text">ハイライトの結果を含む [ 調査 ] ページを起動します ワンクリックで</block>
+  <block id="6311554807552639c26288a3a384de32" category="list-text">Cloud Manager ユーザに特定の重大度の E メールアラートを送信する 保護する通知を受信できるように、戻り値を強調表示します データを</block>
+  <block id="d327cdbb4ac6a6f3051af4925fdb0b17" category="list-text">AIP の割り当て（ Azure 情報保護） 定義された条件に一致するすべてのファイルに自動的にラベルを付けます をクリックします</block>
+  <block id="1dd9cd9ae6db3685f8baade7e93c9132" category="paragraph">[ 調査 ] ページでハイライトの結果を表示するには、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして特定のハイライトを選択し、 * 調査結果 * を選択します。</block>
+  <block id="3f15c949616caaeb1a60b7f0967cc7f7" category="inline-image-macro">ハイライト (Highlights) タブで特定のハイライトについて調査結果 (Investigate Results) を選択するスクリーンショット</block>
+  <block id="f2341d2d3c03318e2f4338f9e72d49c9" category="paragraph"><block ref="f2341d2d3c03318e2f4338f9e72d49c9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="569a7aec73b4b6faf47a660144944f2b" category="list-text">ハイライトに名前を付け、ハイライトで実行できるその他のアクションを選択します。</block>
+  <block id="f3102e7bc4ead5e39dec820b8144d2f9" category="list-text">一意の名前と説明を入力します。</block>
+  <block id="f688660e5bcf41a34b4b0d3c4e9da866" category="list-text">必要に応じて、 Cloud Manager ユーザに通知 E メールを送信する場合はチェックボックスをオンにし、 E メールの送信間隔を選択します。</block>
+  <block id="9d85612840e00794629f6dce90aa22fa" category="inline-xref">AIP ラベル</block>
+  <block id="73db19137e575c47f36f557542f968d6" category="list-text">必要に応じて、強調表示パラメータに一致するファイルに AIP ラベルを自動的に割り当てるには、このチェックボックスをオンにしてラベルを選択します。の詳細を確認してください <block ref="20abfc1c868de7b5602f412dbc4c43b4" category="inline-xref-macro-rx"></block>. ）</block>
+  <block id="548d7a28759fd112ba9422a11db60c59" category="list-text">[ * ハイライトの作成 * ] をクリックします。</block>
+  <block id="b2ac6657af1789f5560b4d8b4dc4a32c" category="inline-image-macro">ハイライト表示と保存の方法を示すスクリーンショット。</block>
+  <block id="6687e40ea2ad83040a96c83a91128df5" category="paragraph"><block ref="6687e40ea2ad83040a96c83a91128df5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8d1d33850199cf5fb74f403eaac735e1" category="paragraph">高輝度表示のタイプに応じて、高輝度表示の特定のパーツを修正できます。</block>
+  <block id="89b26d8730ccf2f40a189d48654a0a71" category="list-text">カスタムハイライト - _ 名 _ 、 _ 説明 _ 、電子メール通知が送信されるかどうか、および AIP ラベルが追加されるかどうかを変更できます。</block>
+  <block id="fc173211ddc25230d13640a73a8cce27" category="list-text">定義済みハイライト - 電子メール通知が送信されるかどうか、および AIP ラベルが追加されるかどうかだけを変更できます。</block>
+  <block id="d8b633bc751dafeb14dee5706dd3735a" category="admonition">カスタム高輝度表示のフィルタパラメーターを変更する必要がある場合は、必要なパラメーターを使用して新しい高輝度表示を作成し、古い高輝度表示を削除する必要があります。</block>
+  <block id="dbd58c75658611ff31aa5351b10aa2fd" category="paragraph">ハイライトを変更するには、 * 編集 * ボタンをクリックし、 _Edit highlight_page に変更を入力して * ハイライトを保存 * をクリックします。</block>
+  <block id="2b275eaee13cb00a92bf6cca3d87498e" category="section-title">AIP ラベルを使用してデータを分類する</block>
+  <block id="a390a30d9dc2fc9547b6b2306819fb8c" category="paragraph">クラウドファイルで AIP ラベルを管理できます 登録している場合は、コンプライアンスがスキャンされます <block ref="2366c206354427dcda3be6923339236d" category="inline-link-rx"></block>。AIP を使用すると、コンテンツにラベルを適用することで、ドキュメントやファイルを分類して保護できます。Cloud Compliance では、すでにファイルに割り当てられているラベルを表示したり、ファイルにラベルを追加したり、すでにラベルが存在する場合にラベルを変更したりできます。</block>
+  <block id="8f18338b9091452d307eab833bc8b06e" category="paragraph">Cloud Compliance は、 .pdf 、 .DOCX 、 .DOC 、 .PPTX 、 .XLS 、 .xlsx の各ファイルタイプで AIP ラベルをサポートします。</block>
+  <block id="2e237059912ca45a4f9ff1754fad3196" category="paragraph">現在、 30MB を超えるファイルのラベルは変更できません。OneDrive アカウントの場合、最大ファイルサイズは 4MB です。</block>
+  <block id="992053bc91a5d4fc801b1be3daeba2a4" category="admonition">AIP に存在しないラベルがファイルにある場合、 Cloud Compliance はラベルのないファイルと見なします。</block>
+  <block id="96238d4f93a120c69c563c428e826a69" category="section-title">ワークスペースへの AIP ラベルの統合</block>
+  <block id="1cf1610064af8e4e2f1e19dd3c88e17e" category="inline-link-macro">作業環境とデータソース</block>
+  <block id="5aa1f9a9287987080bed9175294b3ab2" category="paragraph">AIP ラベルを管理するには、既存の Azure アカウントにサインインして AIP ラベル機能をクラウド準拠に統合する必要があります。有効にすると、すべてのファイルの AIP ラベルを管理できます <block ref="027ffd84896a9dec18a9d4e2ded0d22d" category="inline-link-macro-rx"></block> をクリックします。</block>
+  <block id="134b8f00ffb7e15169d315180cdd63ef" category="list-text">アカウントと Azure Information Protection のライセンスが必要です。</block>
+  <block id="adcc63024cda5a3b0a7e68f1bbd11d61" category="list-text">Azure アカウントのログインクレデンシャルが必要です。</block>
+  <block id="67016d3d67150a003062bcb94edb6765" category="inline-link-macro">IAM ロールを設定します</block>
+  <block id="0b6405ac75b942c207806925b104b421" category="list-text">Amazon S3 バケット内のファイルのラベルを変更する場合は、権限「 3 ： PutObject 」が IAM ロールに含まれていることを確認します。を参照してください <block ref="06f735d4c5e0035af37843de060e78eb" category="inline-link-macro-rx"></block>。</block>
+  <block id="bddc9e691ddf6d1cfb01d82836b29212" category="list-text">Cloud Compliance Configuration ページで、 * Integrate AIP Labels* をクリックします。</block>
+  <block id="187f59a351c9094ec5b3007dea9832f8" category="inline-image-macro">ボタンをクリックして AIP ラベル機能を Cloud Compliance に統合することを示すスクリーンショット。</block>
+  <block id="9d22be699a62ac8978943faa3869bbc4" category="paragraph"><block ref="9d22be699a62ac8978943faa3869bbc4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="12ccd3b878dac759e16d3d3faefd0b60" category="list-text">[Integrate AIP Labels （ AIP ラベルの統合） ] ダイアログで、 [* Sign in to Azure* （ Azure にサインイン） ]</block>
+  <block id="e56e6edc4ac6ca06e9c2cf45b05724df" category="list-text">表示される Microsoft ページで、アカウントを選択し、必要なクレデンシャルを入力します。</block>
+  <block id="ad534db684679bbfa1a7c4377ed59d28" category="list-text">Cloud Compliance タブに戻り、「 _AIP Labels were successfully integrated with the account &lt;account_name&gt;_ 」というメッセージが表示されます。</block>
+  <block id="4b9ff578492bb7f3ed9de2d3a3eef483" category="list-text">[* 閉じる ] をクリックすると、ページの上部に「 _AIP ラベル integrated__ 」というテキストが表示されます。</block>
+  <block id="1a7c4f9b547d006d3e3e176f2ab1602c" category="inline-image-macro">AIP ラベルが正常に統合されたことを示すスクリーンショット。</block>
+  <block id="05c8cfaea812d7833aa0ed821f517692" category="paragraph"><block ref="05c8cfaea812d7833aa0ed821f517692" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="586db93c7db5ffc7ed4bae0b85ed190e" category="paragraph">AIP ラベルは、 ［ 調査 ］ ページの結果ペインで表示および割り当てることができます。ハイライトを使用してファイルに AIP ラベルを割り当てることもできます。</block>
+  <block id="120c58f97b65a96a0a80e32dc681ff0f" category="section-title">AIP ラベルを手動で割り当てる</block>
+  <block id="a2c63ca7d85dbcb6cdaf5d42a9fcd462" category="paragraph">Cloud Compliance を使用して、ファイルに AIP ラベルを追加、変更、および削除できます。</block>
+  <block id="16ead4994cdcb4ac20f8e5b2f1a73f57" category="paragraph">AIP ラベルを 1 つのファイルに割り当てる手順は、次のとおりです。</block>
+  <block id="3da30912421446a0114957e89a496a22" category="inline-image-macro">右キャレット</block>
+  <block id="231b8f460199b7010fe15556a155bb2a" category="list-text">[ データ調査結果 ] ペインで、をクリックします <block ref="3403ed76e6cda7bc80d95054b13a785c" category="inline-image-macro-rx" type="image"></block> をクリックします。</block>
+  <block id="04a8c17bf0b1e2cd69db6fba82b59dc0" category="inline-image-macro">[ データ調査 ] ページのファイルのメタデータの詳細を示すスクリーンショット。</block>
+  <block id="f761b4a4393e1a53850ec9f4dd420f50" category="paragraph"><block ref="f761b4a4393e1a53850ec9f4dd420f50" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="11dfa7f8030ea34c4933fff6eaa19333" category="list-text">[* このファイルにラベルを割り当て * ] をクリックして、ラベルを選択します。</block>
+  <block id="5108557521189397e1f9be01f92633b0" category="paragraph">ラベルがファイルメタデータに表示されます。</block>
+  <block id="befaf526f7696c6245eec23158e2aaf8" category="section-title">ハイライト付き AIP ラベルを自動的に割り当てる</block>
+  <block id="e0c8b1dc553771953923e552ed5d8165" category="paragraph">AIP ラベルは、強調表示の条件を満たすすべてのファイルに割り当てることができます。強調表示を作成するときに AIP ラベルを指定することも、強調表示を編集するときにラベルを追加することもできます。</block>
+  <block id="79999bf8876bff16c03592708fc29ef9" category="paragraph">Cloud Compliance がファイルをスキャンすると、ファイルにラベルが追加または更新されます。</block>
+  <block id="1541ec8982839d11a2c7b6d49e832c32" category="paragraph">ラベルがすでにファイルに適用されているかどうか、およびラベルの分類レベルによって、ラベルを変更するときに次のアクションが実行されます。</block>
+  <block id="eea4419659684ba18fac003140a4a8b4" category="cell">ファイルの内容</block>
+  <block id="c1325f6903ebb5ebb2bb519a73ddb1b0" category="cell">作業</block>
+  <block id="5003c2325247361d2f23b09328322fa1" category="cell">にはラベルがありません</block>
+  <block id="d8d01785580ae0c262ba67330b6f8c50" category="cell">ラベルが追加されます</block>
+  <block id="6a938eec818d1389d814ebae57854bea" category="cell">下位レベルの分類の既存のラベルがあります</block>
+  <block id="dd64a78344a0e268f9d1146b2d470f29" category="cell">上位レベルのラベルが追加されます</block>
+  <block id="cf5fc960e69e2e409888aacaac4c5efd" category="cell">より高いレベルの分類の既存のラベルがあります</block>
+  <block id="9581f55d3332105ac3e3bf6b60632a3b" category="cell">上位レベルのラベルが保持されます</block>
+  <block id="cffc407dc5ce70ce9c4707f660e88a1c" category="cell">は、手動と高輝度表示の両方でラベルを割り当てられます</block>
+  <block id="90a571d1e68bf5d91e6fb904e5c02bf9" category="cell">2 つのハイライトによって 2 つの異なるラベルが割り当てられています</block>
+  <block id="68793ce8816eba0509916779193b3610" category="paragraph">AIP ラベルを既存の強調表示に追加する手順は、次のとおりです。</block>
+  <block id="cf5e6d3f6c0b930881f1ad371705462a" category="list-text">ハイライトリストページで、 AIP ラベルを追加（または変更）するハイライトの * 編集 * をクリックします。</block>
+  <block id="84de6ed442845dbc8bec5c0190585ddc" category="inline-image-macro">既存のハイライトを編集する方法を示すスクリーンショット。</block>
+  <block id="4504db85d031ae9beebc258c14bae2e6" category="paragraph"><block ref="4504db85d031ae9beebc258c14bae2e6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="63455929f92a6c7c34757931bea9f3b3" category="list-text">[ ハイライトの編集 ] ページで、チェックボックスをオンにして、高輝度表示パラメーターに一致するファイルの自動ラベルを有効にし、ラベル（ * 一般 * など）を選択します。</block>
+  <block id="6a860930877974337bdb2e9c5ea36c5c" category="inline-image-macro">ハイライトに一致するファイルに割り当てるラベルを選択する方法を示すスクリーンショット。</block>
+  <block id="e27534f5fc718fa76fc23725dab71c2a" category="paragraph"><block ref="e27534f5fc718fa76fc23725dab71c2a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a91b2cca2da040dd304882f51168860b" category="list-text">[ * ハイライトを保存（ Save highlight ） ] をクリックすると、ハイライトの説明にラベルが表示されます。</block>
+  <block id="6fbbe20aef0e23da46624d622fbfb8df" category="admonition">強調表示にラベルが設定されていても、ラベルが AIP から削除されている場合、ラベル名はオフになり、ラベルは割り当てられなくなります。</block>
+  <block id="5803f352e5dd56b3494a56eabe17fd51" category="section-title">AIP 連動の削除</block>
+  <block id="d88f373195bd5fa5847a4b017268fe66" category="paragraph">ファイルの AIP ラベルを管理できないようにするには、クラウドコンプライアンスインターフェイスから AIP アカウントを削除します。</block>
+  <block id="2b89550620c7b16019bd56bd772535a9" category="paragraph">Cloud Compliance で追加したラベルは変更されません。ファイルに存在するラベルは、現在存在しているラベルのままになります。</block>
+  <block id="25de854046132fa59009cc865e82b9ce" category="list-text">_Scan Configuration_page で、 *AIP ラベル統合 &gt; 統合の削除 * をクリックします。</block>
+  <block id="ca26bd6d013e01a8dc2465382b659404" category="inline-image-macro">クラウドコンプライアンスとの AIP 統合を削除する方法を示すスクリーンショット。</block>
+  <block id="fb7fcb6fa178ea1f30d25487ac0250d0" category="paragraph"><block ref="fb7fcb6fa178ea1f30d25487ac0250d0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1adb70ded77a9f087a1361758e3bb6ba" category="list-text">確認ダイアログで、 [ 統合の削除（ Remove Integration ） ] をクリックします。</block>
+  <block id="44b09c7ed11f8b8bc1b6c565396ae51f" category="section-title">準拠していないデータが見つかった場合に E メールアラートを送信する</block>
+  <block id="14b52483e4b0fcbc4fa9eb328ec60252" category="paragraph">Cloud Compliance では、特定の重要なハイライト結果が返されたときに Cloud Manager ユーザに E メールアラートを送信することで、通知を受け取ってデータを保護できます。E メール通知は、日単位、週単位、または月単位で送信することができます。</block>
+  <block id="81ea0efc3f4022a782cc6f4eb721fe45" category="paragraph">この設定は、高輝度表示を作成するとき、または任意の高輝度表示を編集するときに設定できます。</block>
+  <block id="d0c1f41f075ee126df0913e0f502b3a7" category="paragraph">既存のハイライトにメールの更新を追加するには、次の手順を実行します。</block>
+  <block id="194b44bb63cbbd5693eaf781e6746211" category="list-text">ハイライトリストページで、電子メール設定を追加（または変更）するハイライトの * 編集 * をクリックします。</block>
+  <block id="8c1ceb6ddd50b3b19ac77bb492674b3e" category="paragraph"><block ref="8c1ceb6ddd50b3b19ac77bb492674b3e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bf4525ebaee689fc057ff6052465595b" category="list-text">Edit Highlight ページで、 Cloud Manager ユーザに通知 E メールを送信する場合はチェックボックスをオンにし、 E メールの送信間隔（ * Week * など）を選択します。</block>
+  <block id="7d4792530065a8f3982151641d5aef18" category="inline-image-macro">ハイライト表示する E メール基準を選択する方法を示すスクリーンショット。</block>
+  <block id="7326534ca655d4885b8857db4c61de98" category="paragraph"><block ref="7326534ca655d4885b8857db4c61de98" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d31b306cb69f2c5bf7e8feba7048fa4f" category="list-text">［ * ハイライトを保存 ］ をクリックすると、メールの送信間隔がハイライトの説明に表示されます。</block>
+  <block id="5c9c6159b0800c68986669d032212bc0" category="paragraph">最初の電子メールは、ハイライトの結果がある場合に送信されます。ただし、ファイルがハイライトの条件を満たしている場合にのみ送信されます。通知メールに個人情報は送信されません。強調表示条件に一致するファイルがあることが電子メールに示され、強調表示された結果へのリンクが提供されます。</block>
+  <block id="476fd7b98b47a6616a0344d3cb8148e6" category="section-title">ソースファイルを削除しています</block>
+  <block id="73146f72c3fd01594b06f611a7b8c536" category="paragraph">ストレージシステムに残すソースファイルは、安全でないように見えたり危険すぎるソースファイルを完全に削除することができます。このアクションは永続的であり、元に戻すことはできません。</block>
+  <block id="2c331a11767b06b1592bc003a52b94e3" category="admonition">ボリュームバックアップファイル内のデータベースまたはファイルに格納されているファイルは削除できません。</block>
+  <block id="78933a7726c13f608f7d7da25c47d184" category="inline-image-macro">[ データ調査 ] ページのファイルのメタデータ詳細から [ ファイルの削除 ] ボタンを選択したことを示すスクリーンショット。</block>
+  <block id="1ae48305acc0dd19cfd8f7461fcc887a" category="paragraph"><block ref="1ae48305acc0dd19cfd8f7461fcc887a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4cf1e4f69d20ac5668fa1fa4b18f8759" category="list-text">[ このファイルを削除する *] をクリックします。</block>
+  <block id="1db5d13f843879dd255fa015b1199eb9" category="list-text">削除操作は永続的であるため ' 後続の _Delete File_Dialog に「 * permanently delete * 」と入力し ' * ファイルの削除 * をクリックする必要があります</block>
+  <block id="a6a87d96fc2ee4f7115483bdf84ec4b7" category="paragraph">ネットワーク内またはクラウド内の Linux ホストに Compliance ソフトウェアをダウンロードしてインストールすることもできます。すべてが同じように機能し、 Cloud Manager を使用してスキャンの設定と結果を引き続き管理できます。を参照してください <block ref="4d9cbc7d553e264229092aed20a63bc3" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="dad57e95fc9a5390302ad830888cbdb9" category="inline-link-macro">クラウドバックアップ</block>
+  <block id="c16d335a2dfb473b5746658259937eac" category="paragraph">または、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルに対してコンプライアンススキャンを実行することもできます。オンプレミスからバックアップファイルを作成している場合は を使用しています <block ref="4a3bd84391000d7171e8abcc27c72b87" category="inline-link-macro-rx"></block>では、これらのバックアップファイルに対してコンプライアンススキャンを実行できます。</block>
+  <block id="f19f9cf709c8385cd6c3595b87c892bd" category="inline-link-macro">ハイライト</block>
+  <block id="f61bb87fc7fb52124e7a929d9819def5" category="paragraph">はい。ハイライトの結果が返されたら、ハイライト機能と一緒に Cloud Manager ユーザ（日次、週次、または月単位）に E メールアラートを送信して、データを保護するための通知を受け取ることができます。の詳細を確認してください <block ref="8a5e6bd91328be289c5b3d82ff983517" category="inline-link-macro-rx"></block>。</block>
+  <block id="5c369487351e25c8e23c41ed93ab61cb" category="paragraph">また、ステータスレポートを .csv 形式でダウンロードして、社内で共有することもできます。</block>
+  <block id="dd742fd59ea51a52070d76e5deb35cf8" category="section-title">組織のニーズに合わせてサービスをカスタマイズできますか。</block>
+  <block id="9a6a13bd72015d77c3bd6aa610fd34ca" category="section-title">ファイルに埋め込まれている AIP ラベルを使用して Cloud Compliance を機能させることはできますか。</block>
+  <block id="a4b3162f0019767ae198ae382537764d" category="paragraph">はい。クラウドファイルで AIP ラベルを管理できます 登録している場合は、コンプライアンスがスキャンされます <block ref="2366c206354427dcda3be6923339236d" category="inline-link-rx"></block>。既にファイルに割り当てられているラベルを表示したり、ファイルにラベルを追加したり、ラベルが既に存在する場合にラベルを変更したりできます。</block>
+  <block id="5594fef9bab96178573d18ca4a44e155" category="paragraph"><block ref="8c0cf3f05627519bc41a732b0ad724ac" category="inline-link-macro-rx"></block>。</block>
+  <block id="3b63599ad48a35d1e870f0c230bed001" category="section-title">Cloud Manager 3.9.3 アップデート（ 2021 年 2 月 14 日）</block>
+  <block id="a0ed33ad70d56436b5e8a5e2781480a0" category="list-text">スキャンするファイルの Azure Information Protection （ AIP ）ラベルを表示および管理します。</block>
+  <block id="8f75456e0946957d312adc73b1da2494" category="inline-link-macro">AIP ラベルを統合する方法</block>
+  <block id="f6b84e4ea29422fba2be8f493c80ddcf" category="list-text">AIP ラベル機能を Cloud Compliance に統合すると、ファイルに割り当てられているラベルを表示したり、ファイルにラベルを追加したり、ラベルを変更したりできます。を参照してください <block ref="52e6822f4c485ccc652b672eb61d34df" category="inline-link-macro-rx"></block> をワークスペースに配置します。</block>
+  <block id="2047cb4bc0222893dd8d3c9833277765" category="inline-link-macro">ハイライト条件に一致するすべてのファイルにラベルを追加します</block>
+  <block id="61f7cb70b4d8396fec56bd99756b49f9" category="list-text">ファイルにラベルを個別に割り当てるか、またはのハイライト機能を使用します <block ref="cb52d6ef8e4c3086cb172a69515243de" category="inline-link-macro-rx"></block>。ハイライトでは、 Cloud Compliance がファイル内で一致する項目を検出すると、ラベルは継続的に更新されます。</block>
+  <block id="3272981eb26d1c2f9acef8cfa6bf193c" category="list-text">ラベルに一致するすべてのファイルを表示するには、 ［ 調査 ］ ページのデータを AIP ラベルでフィルタリングします。</block>
+  <block id="6d6058cd7179ae87f2d5e93aaf38606c" category="list-text">Cloud Manager ユーザ（日次、週次、または月単位）に、ハイライト結果が返されたら E メールアラートを送信して、データを保護する通知を受け取ることができます。</block>
+  <block id="a2e60408e75564025bf9f42837ccffc8" category="inline-link-macro">任意の高輝度表示を作成または編集します</block>
+  <block id="3ee30a2145dd7e2eecb09375ffe93290" category="paragraph">このオプションは、で選択します <block ref="01fedca4b17b48518dfd5abe9af52096" category="inline-link-macro-rx"></block>。</block>
+  <block id="2c9e5cd6865d5294efd9520ce0169a39" category="inline-link-macro">個々のファイルの詳細を表示します</block>
+  <block id="69372be005fac7073b21a8093c803d85" category="list-text">ファイルの所有者と権限の情報を表示するタイミング <block ref="1f6ded347d490c0b199741d84b65678a" category="inline-link-macro-rx"></block>。</block>
+  <block id="1d60c21d4dc20c9119f1474fdf14fc32" category="paragraph">この条件を使用して、 [ 調査 ] ページでデータをさらにフィルタリングすることもできます。</block>
+  <block id="a51c263d2aaaabe1938f9b16c456022d" category="list-text">Cloud Compliance からファイルを直接削除します。</block>
+  <block id="951e3eba28df5c7b81c42a22f0e5bbbc" category="inline-link-macro">ファイルを完全に削除します</block>
+  <block id="8964c3bf559cae25d98550f511c49a0e" category="paragraph">可能です <block ref="46bf2565ac5e76a49816447e381e63c1" category="inline-link-macro-rx"></block> 安全性が低いか、ストレージシステムに残すのにリスクが高いようです。</block>
+  <block id="c72c4a68092aef012218e50ef91a1cb3" category="paragraph">バックアップファイルで実行したコンプライアンススキャンは * 無料 * - Cloud Compliance サブスクリプションやライセンスは不要です。</block>
+  <block id="38e758862e4bef7e7abf7f45cc8525c7" category="inline-link-macro">Restore インスタンスに関する詳細情報</block>
+  <block id="1330d6a0d60735ee18364fbd68947d32" category="paragraph">* 注：コンプライアンスがバックアップファイルをスキャンする場合、バックアップファイルへのアクセスには、リストアインスタンスから付与された権限が使用されます。通常、ファイルをアクティブにリストアしていない場合はリストアインスタンスの電源がオフになりますが、バックアップファイルをスキャンするときはオンのままになります。を参照してください <block ref="82fb185e6c096d07830a2c65a534bab1" category="inline-link-macro-rx"></block>。</block>
+  <block id="86423486bb5dd1ee58cb8539185ce391" category="paragraph">最初の項目はオンプレミスクラスタと実際のボリュームです。2 つ目は、同じオンプレミスクラスタのバックアップファイルです。</block>
+  <block id="0a89019955ecd590f0586c2f29789f12" category="paragraph">オンプレミスシステム上のボリュームをスキャンする最初のオプションを選択します。2 番目のオプションを選択して、対象のボリュームからバックアップファイルをスキャンします。同じクラスタのオンプレミスボリュームとバックアップファイルの両方をスキャンしないでください。</block>
+  <block id="b9a1b6b51e65d1dabadba71485122eb2" category="list-text">ファイルに特定のが含まれている場合は、 Cloud Manager ユーザに E メールで通知します PII （この基準は、を使用して定義します <block ref="8a5e6bd91328be289c5b3d82ff983517" category="inline-link-macro-rx"></block>)</block>
+  <block id="30085eb68cdb8a51af49b0a08058bacd" category="inline-link">Azure Information Protection （ AIP ）ラベル</block>
+  <block id="797c9546d4f366091861852dfe4c83fb" category="list-text">表示と変更 <block ref="d0f9730625a218e637a0d6df3df12f2b" category="inline-link-rx"></block> ファイルに保存できます</block>
+  <block id="8c58ba4181165eed7a001aa6366e244b" category="list-text">個々のファイルを削除します</block>
+  <block id="88ec53172322656c47890ad64547e36c" category="admonition">2021 年 1 月にリリースされたベータ版の機能により、次のことが可能になります 作成したバックアップファイルに対して、 Compliance スキャンを実行して空き容量を確保します を使用して作成したオンプレミスの ONTAP ボリュームから <block ref="ce9f8e11a54437266924ebf465f8d4f3" category="inline-link-macro-rx"></block>）。これにより、オンプレミスの ONTAP ボリュームを Cloud Compliance で直接スキャンするか、またはボリュームから作成されたバックアップファイルをスキャンするかを選択できます。</block>
+  <block id="ebccf63c5cf7a187f8fa1a9de3385610" category="section-title">ファイルのメタデータと権限の表示</block>
+  <block id="a4eecdb2df95b93cfe5355dade3dbba0" category="paragraph">[ データ調査結果 ] ペインで、をクリックできます <block ref="3403ed76e6cda7bc80d95054b13a785c" category="inline-image-macro-rx" type="image"></block> をクリックすると、単一のファイルについてファイルのメタデータが表示されます。</block>
+  <block id="c545ce144b1f4d763f30d9b729c1590c" category="paragraph"><block ref="c545ce144b1f4d763f30d9b729c1590c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1326f071822c8e564cec621d5b9063da" category="inline-link-macro">クラウドコンプライアンスにおける AIP の統合</block>
+  <block id="61698aac7304cb7ed9e48b66c7ee6f37" category="paragraph">ファイルが存在する作業環境とボリュームを表示するだけでなく、ファイル権限、ファイルの所有者、割り当てられた AIP ラベル（ある場合）などの詳細情報もメタデータに表示されます <block ref="3f713f714f824ac69bc5d056663755f1" category="inline-link-macro-rx"></block>）。この情報は、ハイライトを作成する予定の場合に役立ちます。これは、データのフィルタリングに使用できるすべての情報を確認できるためです。</block>
+  <block id="72ee1b12411847aaeec6b88be13a836b" category="paragraph">すべてのデータソースについて、すべての情報が表示されるわけではなく、そのデータソースに適した情報だけが表示されることに注意してください。たとえば、権限と AIP ラベルはデータベースファイルには関係ありません。</block>
+  <block id="5e868f1a7ebc91a02b26a21dff8d80b7" category="paragraph">このメタデータには、ファイルを変更できる 2 つの項目もあります。</block>
+  <block id="bdc59042cf2c650bc99763c92309c481" category="list-text">AIP ラベルを Cloud Compliance と統合している場合は、このファイルにラベルを割り当てることも、すでに存在する場合は別のラベルに変更することもできます。を参照してください <block ref="baa2dca33e97f105b278a0357d9f2e49" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="e5dabeeb94f38b44957e10a54d2bea0f" category="list-text">ファイルを削除できます。を参照してください <block ref="daf9eb3bc81512887ea3e49c360b560d" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="0f8bc7a5661b80ea8cb345cb930a6e97" category="list-text">[ フィルタ ] ペインの上部にある _Highlights_filter には、保存されたデータベースクエリや [ お気に入り ] リストなど、よく要求されるフィルタの組み合わせを提供するカスタムフィルタが一覧表示されます。実行します <block ref="ab3e5ffb4aaaf3e8a7fc00ad2a7ef9a6" category="inline-link-macro-rx"></block> 事前定義されたハイライトのリストを表示したり、独自のハイライトを作成する方法を確認したりできます。</block>
+  <block id="abf709cda66391561ca91c6dcd6fb8bb" category="paragraph">各 [ 調査 ] ページで、をクリックできます <block ref="6ba48bcb767669a826177023eada095d" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして、特定されたファイルの詳細を含むファイルリスト（ CSV 形式）をダウンロードします。10 、 000 件を超える結果がある場合は、上位 10 、 000 件のみがリストに表示されます。</block>
+  <block id="c64719fdd76eae91a8bf84fdcfb08061" category="list-text">ファイルの所有者</block>
+  <block id="c2a768013cdd5440821411bcebb2034b" category="summary">必要に応じて、 Cloud Compliance のスキャンを停止して、作業環境、データベース、 OneDrive アカウントをスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。</block>
+  <block id="95f5b7c1a68d2a049a868d4c113ba9f1" category="doc">Cloud Compliance からのデータソースの削除</block>
+  <block id="69287733c7cfbdccd8dcfd2e00844a6e" category="paragraph">スキャンを非アクティブ化すると、 Cloud Compliance は作業環境上のデータをスキャンしなくなり、インデックス付けされたコンプライアンス分析情報を Cloud Compliance インスタンスから削除します（作業環境自体のデータは削除されません）。</block>
+  <block id="3e51e074f12d2c873310422bb9c8cb50" category="sidebar">プライベートデータを管理</block>
+  <block id="4821287f06bb2c32780e189dbd180492" category="sidebar">Cloud Compliance からデータソースを削除します</block>
 </blocks>
