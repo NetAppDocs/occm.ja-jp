@@ -71,7 +71,7 @@ Cloud Manager で新しい機能や拡張機能を導入する際に、クラウ
 
 === AWS
 
-3.8.1 リリース以降では、 Cloud Volumes ONTAP でクラウドにバックアップを使用するには、次の権限が必要です。 link:task_backup_to_s3.html["詳細はこちら。"]。
+3.8.1 リリース以降、 Cloud Volumes ONTAP でクラウドバックアップを使用するには、次の権限が必要です。 link:task_backup_to_s3.html["詳細はこちら。"]。
 
 [source, json]
 ----

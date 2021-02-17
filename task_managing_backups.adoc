@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_managing_backups.html 
-keywords: Backup to Cloud, cloud backup service, backup schedule, change schedule, change backup schedule, modify schedule, modify backup schedule, retention, backup retention, delete, delete backups, deleting, deleting backups, disable, disable backups, turn off backups, disable backup to cloud, turn off backup to cloud 
+keywords: cloud backup, cloud backup service, backup schedule, change schedule, change backup schedule, modify schedule, modify backup schedule, retention, backup retention, delete, delete backups, deleting, deleting backups, disable, disable backups, turn off backups, disable cloud backup, turn off cloud backup 
 summary: Cloud Volumes ONTAP システムとオンプレミス ONTAP システムのバックアップの管理では、バックアップスケジュールの変更、ボリュームのバックアップの有効化 / 無効化、バックアップの削除などを行うことができます。 
 ---
 = Cloud Volumes ONTAP システムとオンプレミスの ONTAP システムのバックアップの管理
@@ -36,7 +36,7 @@ image:screenshot_backup_modify_policy.png["作業環境を選択した後に使�
 
 . バックアップポリシーの変更ページで、スケジュールとバックアップの保持期間を変更し、 * 保存 * をクリックします。
 +
-image:screenshot_backup_modify_policy_page.png["クラウドへのバックアップ設定を示すスクリーンショット。バックアップのスケジュールとバックアップの保持設定を変更できます。"]
+image:screenshot_backup_modify_policy_page.png["クラウドバックアップの設定が表示されたスクリーンショット。バックアップのスケジュールとバックアップの保持の設定を変更できます。"]
 
 
 
@@ -68,12 +68,12 @@ image:screenshot_backup_manage_volumes_page.png["ボリュームの管理ペー�
 
 == バックアップを削除する
 
-クラウドにバックアップを使用すると、特定のボリュームのすべてのバックアップを削除できます。individual backups を削除することはできません。この処理は、バックアップが不要になった場合やソースボリュームを削除したあとにすべてのバックアップを削除する場合に実行します。
+Cloud Backup では、特定のボリュームの _all_backups を削除できます。individual backups を削除することはできません。この処理は、バックアップが不要になった場合やソースボリュームを削除したあとにすべてのバックアップを削除する場合に実行します。
 
 すべてのバックアップを削除すると、このボリュームの以降のバックアップも無効になります。あとでそのボリュームのバックアップの作成を開始する場合は、バックアップを再度有効にすることができます <<Starting and stopping backups of volumes,ここで説明するようにします>>。
 
 
-IMPORTANT: バックアップがある Cloud Volumes ONTAP またはオンプレミスの ONTAP システムを削除する場合は、システムを削除する前にバックアップを削除しておく必要があります。システムを削除しても Backup to Cloud はバックアップを自動的に削除しません。また、システムを削除した後でバックアップを削除するための UI で現在サポートされていません。
+IMPORTANT: バックアップがある Cloud Volumes ONTAP またはオンプレミスの ONTAP システムを削除する場合は、システムを削除する前にバックアップを削除しておく必要があります。システムを削除しても、 Cloud Backup はバックアップを自動的に削除しません。また、システムを削除した後でバックアップを削除するための UI で現在サポートされていません。
 
 .手順
 . Cloud Manager の上部で、 * Backup * をクリックします。
@@ -87,9 +87,9 @@ image:screenshot_delete_all_backups.png["ボリュームのすべてのバック
 
 
 
-== クラウドへのバックアップを無効にしてい
+== Cloud Backup を無効にします
 
-作業環境で Backup to Cloud を無効にすると、システム上の各ボリュームのバックアップが無効になり、ボリュームをリストアすることもできなくなります。既存のバックアップは削除されません。
+作業環境で Cloud Backup を無効にすると、システム上の各ボリュームのバックアップが無効になり、ボリュームをリストアすることもできなくなります。既存のバックアップは削除されません。
 
 バックアップを削除しないかぎり、バックアップで使用する容量のオブジェクトストレージのコストは引き続きクラウドプロバイダから請求されます。
 
@@ -99,7 +99,7 @@ image:screenshot_delete_all_backups.png["ボリュームのすべてのバック
 +
 image:screenshot_backup_settings_button.png["作業環境を選択した後に使用できる [ バックアップ設定 ] ボタンを示すスクリーンショット。"]
 
-. _ バックアップ設定ページ _ で、をクリックします image:screenshot_horizontal_more_button.gif["[ 詳細 ] アイコン"] 作業環境では、 * クラウドへのバックアップを非アクティブ化 * を選択します。
+. _ バックアップ設定ページ _ で、をクリックします image:screenshot_horizontal_more_button.gif["[ 詳細 ] アイコン"] 作業環境では、 * クラウド・バックアップを非活動化 * を選択します。
 +
 image:screenshot_disable_backups.png["作業環境のバックアップを非アクティブ化ボタンのスクリーンショット。"]
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_backup_to_azure.html 
-keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, azure, azure blob, back up volumes, Backup to Cloud, cloud backup service 
+keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, azure, azure blob, back up volumes, Cloud Backup, cloud backup service 
 summary: Cloud Volumes ONTAP から Azure Blob Storage へのデータのバックアップを開始するには、いくつかの手順を実行します。 
 ---
 = Azure BLOB ストレージへのデータのバックアップ
@@ -27,17 +27,17 @@ Cloud Volumes ONTAP から Azure Blob Storage へのデータのバックアッ�
 
 * Cloud Volumes ONTAP 9.7 以降を Azure で実行している。
 * バックアップを格納するストレージスペースに対する有効なクラウドプロバイダのサブスクリプションが必要です。
-* に登録しておきます https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Cloud Manager Marketplace のバックアップソリューション"^]またはを購入したことが必要です link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["アクティブ化されます"^] NetApp の Backup to Cloud BYOL ライセンス。
+* に登録しておきます https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Cloud Manager Marketplace のバックアップソリューション"^]またはを購入したことが必要です link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
 
 
 
 
-==== 新規または既存のシステムでクラウドへのバックアップを有効化
+==== 新規または既存のシステムで Cloud Backup を有効にします
 
-* 新しいシステム：クラウドへのバックアップは、作業環境ウィザードではデフォルトで有効になります。このオプションは必ず有効にしておいてください。
-* 既存のシステム：作業環境を選択し、右パネルのクラウドへのバックアップサービスの横にある * アクティブ化 * をクリックして、セットアップウィザードに従います。
+* 新しいシステム： Cloud Backup は、作業環境ウィザードではデフォルトで有効になっています。このオプションは必ず有効にしておいてください。
+* 既存のシステム：作業環境を選択し、右パネルの Cloud Backup Service の横にある * Activate * をクリックして、セットアップ・ウィザードに従います。
 +
-image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに使用できるクラウドへのバックアップのアクティブ化ボタンを示すスクリーンショット。"]
+image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに表示される Cloud Backup Activate ボタンのスクリーンショット"]
 
 
 
@@ -59,7 +59,7 @@ image:screenshot_backup_provider_settings_azure.png["バッキング時にクラ
 デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。週単位または月単位のバックアップに変更するか、システム定義のポリシーの中からいくつかのオプションを選択します。
 
 [role="quick-margin-para"]
-image:screenshot_backup_onprem_policy.png["クラウドへのバックアップ設定を示すスクリーンショット。この機能を有効または無効にして、バックアップの保持期間を選択できます。"]
+image:screenshot_backup_onprem_policy.png["クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"]
 
 
 
@@ -85,11 +85,11 @@ Select Volumes （ボリュームの選択）ページで、バックアップ�
 Azure Blob Storage へのボリュームのバックアップを開始する前に、次の要件を確認し、サポートされている構成であることを確認してください。
 
 サポートされている ONTAP のバージョン:: Cloud Volumes ONTAP 9.7 以降。
-サポートされている Azure リージョン:: クラウドへのバックアップは、すべての Azure リージョンでサポートされています https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。
+サポートされている Azure リージョン:: Cloud Backup はすべての Azure リージョンでサポートされます https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。
 ライセンス要件::
 +
 --
-Backup to Cloud BYOL ライセンスを利用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["バックアップ BYOL ライセンスを追加および更新する"^]。
+Cloud Backup BYOL ライセンスを使用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["バックアップ BYOL ライセンスを追加および更新する"^]。
 
 また、バックアップを格納するストレージスペースには、 Microsoft Azure サブスクリプションが必要です。
 
@@ -98,12 +98,12 @@ Backup to Cloud BYOL ライセンスを利用するには、ライセンスの�
 
 
 
-== 新しいシステムでクラウドへのバックアップを有効にする
+== 新しいシステムでの Cloud Backup の有効化
 
-クラウドへのバックアップは、作業環境ウィザードではデフォルトで有効になっています。このオプションは必ず有効にしておいてください。
+Cloud Backup は、作業環境ウィザードではデフォルトで有効になっています。このオプションは必ず有効にしておいてください。
 
 
-NOTE: リソースグループの名前を選択する場合は、 Cloud Volumes ONTAP の導入時に * disable * Backup to Cloud と入力します。の手順に従います <<enabling-backup-to-cloud-on-an-existing-system,既存のシステムでクラウドへのバックアップを有効化>> Backup to Cloud を有効にして、リソースグループを選択します。
+NOTE: リソースグループの名前を選択する場合は、 Cloud Volumes ONTAP を導入する際に * disable * Cloud Backup と入力します。の手順に従います <<enabling-cloud-backup-on-an-existing-system,既存のシステムでの Cloud Backup の有効化>> Cloud Backup を有効にしてリソースグループを選択します。
 
 .手順
 . [ Cloud Volumes ONTAP の作成 *] をクリックします。
@@ -111,25 +111,25 @@ NOTE: リソースグループの名前を選択する場合は、 Cloud Volumes
 . 詳細とクレデンシャルのページに必要事項を入力し、 Azure Marketplace サブスクリプションが登録されていることを確認します。
 . [ サービス ] ページで、サービスを有効のままにして、 [* 続行 ] をクリックします。
 +
-image:screenshot_backup_to_azure.gif["は、作業環境ウィザードのクラウドにバックアップするオプションを示しています。"]
+image:screenshot_backup_to_azure.gif["に、作業環境ウィザードの Cloud Backup オプションを示します。"]
 
 . ウィザードの各ページを設定し、システムを導入します。
 
 
-クラウドへのバックアップはシステムで有効になり、ボリュームが毎日バックアップされ、最新の 30 個のバックアップコピーが保持されます。
+Cloud Backup はシステムで有効になり、ボリュームを毎日バックアップして、最新の 30 個のバックアップコピーを保持します。
 
 可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です link:task_restore_backups.html["ボリューム全体または個々のファイルをバックアップファイルからリストアする"^]。
 
 
 
-== 既存のシステムでクラウドへのバックアップを有効にする
+== 既存のシステムでの Cloud Backup の有効化
 
-作業環境からクラウドへのバックアップをいつでも直接有効にできます。
+作業環境から Cloud Backup をいつでも直接有効にできます。
 
 .手順
-. 作業環境を選択し、右パネルのクラウドへのバックアップサービスの横にある * アクティブ化 * をクリックします。
+. 作業環境を選択し、右パネルの Cloud Backup Service の横にある * Activate * をクリックします。
 +
-image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに使用できるクラウドにバックアップする設定ボタンを示すスクリーンショット。"]
+image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに使用できるクラウドバックアップ設定ボタンを示すスクリーンショット。"]
 
 . プロバイダの詳細を選択します。
 +
@@ -146,7 +146,7 @@ image:screenshot_backup_provider_settings_azure.png["バッキング時にクラ
 
 . [_Define Policy_] ページで、バックアップスケジュールと保持の値を選択し、 [* Continue * ] をクリックします。
 +
-image:screenshot_backup_onprem_policy.png["クラウドへのバックアップ設定を示すスクリーンショット。この機能を有効または無効にして、バックアップの保持期間を選択できます。"]
+image:screenshot_backup_onprem_policy.png["クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"]
 
 +
 を参照してください link:concept_backup_to_cloud.html#the-schedule-is-daily-weekly-monthly-or-a-combination["既存のポリシーのリスト"^]。
@@ -162,6 +162,6 @@ image:screenshot_backup_select_volumes.png["バックアップするボリュー
 
 
 
-クラウドへのバックアップは、選択した各ボリュームの初期バックアップの作成を開始します。
+Cloud Backup は、選択した各ボリュームの初期バックアップの作成を開始します。
 
 可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です link:task_restore_backups.html["ボリューム全体または個々のファイルをバックアップファイルからリストアする"^]。

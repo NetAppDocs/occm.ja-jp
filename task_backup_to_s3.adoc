@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_backup_to_s3.html 
-keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, aws, aws s3, amazon s3, s3 bucket, back up volumes, Backup to Cloud, cloud backup service 
+keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, aws, aws s3, amazon s3, s3 bucket, back up volumes, Cloud Backup, cloud backup service 
 summary: Cloud Volumes ONTAP から Amazon S3 へのデータのバックアップを開始するには、いくつかの手順を実行します。 
 ---
 = Amazon S3 へのデータのバックアップ
@@ -26,18 +26,18 @@ Cloud Volumes ONTAP から Amazon S3 へのデータのバックアップを開�
 ==== 構成がサポートされていることを確認します
 
 * Cloud Volumes ONTAP 9.6 以降を AWS で実行している。
-* に登録しておきます https://aws.amazon.com/marketplace/pp/B07QX2QLXX["Cloud Manager Marketplace のバックアップソリューション"^]またはを購入したことが必要です link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["アクティブ化されます"^] NetApp の Backup to Cloud BYOL ライセンス。
+* に登録しておきます https://aws.amazon.com/marketplace/pp/B07QX2QLXX["Cloud Manager Marketplace のバックアップソリューション"^]またはを購入したことが必要です link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
 * Cloud Manager に権限を提供する IAM ロールにはが含まれています 最新のものから S3 権限 https://mysupport.netapp.com/site/info/cloud-manager-policies["Cloud Manager ポリシー"^]。
 
 
 
 
-==== 新規または既存のシステムでクラウドへのバックアップを有効化
+==== 新規または既存のシステムで Cloud Backup を有効にします
 
-* 新しいシステム：クラウドへのバックアップは、作業環境ウィザードではデフォルトで有効になります。このオプションは必ず有効にしておいてください。
-* 既存のシステム：作業環境を選択し、右パネルのクラウドへのバックアップサービスの横にある * アクティブ化 * をクリックして、セットアップウィザードに従います。
+* 新しいシステム： Cloud Backup は、作業環境ウィザードではデフォルトで有効になっています。このオプションは必ず有効にしておいてください。
+* 既存のシステム：作業環境を選択し、右パネルの Cloud Backup Service の横にある * Activate * をクリックして、セットアップ・ウィザードに従います。
 +
-image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに使用できるクラウドへのバックアップのアクティブ化ボタンを示すスクリーンショット。"]
+image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに表示される Cloud Backup Activate ボタンのスクリーンショット"]
 
 
 
@@ -49,7 +49,7 @@ image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに使�
 デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。週単位または月単位のバックアップに変更するか、システム定義のポリシーの中からいくつかのオプションを選択します。保持するバックアップコピーの数を変更することもできます。
 
 [role="quick-margin-para"]
-image:screenshot_backup_settings.png["クラウドへのバックアップ設定を示すスクリーンショット。バックアップのスケジュールと保持期間を選択できます。"]
+image:screenshot_backup_settings.png["クラウドバックアップの設定を示すスクリーンショット。バックアップのスケジュールと保持期間を選択できます。"]
 
 
 
@@ -75,11 +75,11 @@ Select Volumes （ボリュームの選択）ページで、バックアップ�
 S3 へのボリュームのバックアップを開始する前に、次の要件を読み、サポートされている構成になっていることを確認してください。
 
 サポートされている ONTAP のバージョン:: Cloud Volumes ONTAP 9.6 以降
-サポートされている AWS リージョン:: クラウドへのバックアップは、すべての AWS リージョンでサポートされます https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。
+サポートされている AWS リージョン:: Cloud Backup はすべての AWS リージョンでサポートされます https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。
 ライセンス要件::
 +
 --
-Backup to Cloud BYOL ライセンスの場合は、 AWS Backup to Cloud サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["バックアップ BYOL ライセンスを追加および更新する"^]。
+Cloud Backup BYOL ライセンスには、 AWS Cloud Backup サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["バックアップ BYOL ライセンスを追加および更新する"^]。
 
 また、バックアップを格納するストレージスペース用の AWS サブスクリプションが必要です。
 
@@ -121,9 +121,9 @@ AWS 権限が必要です::
 
 
 
-== 新しいシステムでクラウドへのバックアップを有効にする
+== 新しいシステムでの Cloud Backup の有効化
 
-クラウドへのバックアップは、作業環境ウィザードではデフォルトで有効になっています。このオプションは必ず有効にしておいてください。
+Cloud Backup は、作業環境ウィザードではデフォルトで有効になっています。このオプションは必ず有効にしておいてください。
 
 .手順
 . [ Cloud Volumes ONTAP の作成 *] をクリックします。
@@ -131,29 +131,29 @@ AWS 権限が必要です::
 . [ 詳細と資格情報 ] ページに入力します。
 . [ サービス ] ページで、サービスを有効のままにして、 [* 続行 ] をクリックします。
 +
-image:screenshot_backup_to_s3.gif["は、作業環境ウィザードのクラウドにバックアップするオプションを示しています。"]
+image:screenshot_backup_to_s3.gif["に、作業環境ウィザードの Cloud Backup オプションを示します。"]
 
 . ウィザードの各ページを設定し、システムを導入します。
 
 
-クラウドへのバックアップはシステムで有効になり、ボリュームが毎日バックアップされ、最新の 30 個のバックアップコピーが保持されます。
+Cloud Backup はシステムで有効になり、ボリュームを毎日バックアップして、最新の 30 個のバックアップコピーを保持します。
 
 可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です link:task_restore_backups.html["ボリューム全体または個々のファイルをバックアップファイルからリストアする"^]。
 
 
 
-== 既存のシステムでクラウドへのバックアップを有効にする
+== 既存のシステムでの Cloud Backup の有効化
 
-作業環境からクラウドへのバックアップをいつでも直接有効にできます。
+作業環境から Cloud Backup をいつでも直接有効にできます。
 
 .手順
-. 作業環境を選択し、右パネルのクラウドへのバックアップサービスの横にある * アクティブ化 * をクリックします。
+. 作業環境を選択し、右パネルの Cloud Backup Service の横にある * Activate * をクリックします。
 +
-image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに使用できるクラウドにバックアップする設定ボタンを示すスクリーンショット。"]
+image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに使用できるクラウドバックアップ設定ボタンを示すスクリーンショット。"]
 
 . バックアップのスケジュールと保持の値を定義し、 * Continue * をクリックします。
 +
-image:screenshot_backup_settings.png["クラウドへのバックアップ設定を示すスクリーンショット。スケジュールとバックアップの保持を選択できます。"]
+image:screenshot_backup_settings.png["クラウドバックアップの設定を示すスクリーンショット。スケジュールとバックアップの保持を選択できます。"]
 
 +
 を参照してください link:concept_backup_to_cloud.html#the-schedule-is-daily-weekly-monthly-or-a-combination["既存のポリシーのリスト"^]。
@@ -169,6 +169,6 @@ image:screenshot_backup_select_volumes.png["バックアップするボリュー
 
 
 
-クラウドへのバックアップは、選択した各ボリュームの初期バックアップの作成を開始します。
+Cloud Backup は、選択した各ボリュームの初期バックアップの作成を開始します。
 
 可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です link:task_restore_backups.html["ボリューム全体または個々のファイルをバックアップファイルからリストアする"^]。

@@ -228,7 +228,7 @@ entries:
     url: "/task_provisioning_ontap.html"
 - title: クラウドへのバックアップ
   entries:
-  - title: クラウドへのバックアップの詳細をご確認ください
+  - title: Cloud Backup の詳細をご確認ください
     url: "/concept_backup_to_cloud.html"
   - title: はじめに
     entries:

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_managing_licenses.html 
 keywords: license, licensing, install, updating license, system license, add system license, adding a system license, byol license, add byol license, update byol license, nlf, license generator, backup license, add backup license, update backup license 
-summary: Cloud Volumes ONTAP BYOL システムライセンスを追加して、容量を追加したり、既存のシステムライセンスを更新したり、クラウドへのバックアップの BYOL ライセンスを管理したりできます。 
+summary: Cloud Volumes ONTAP BYOL システムライセンスを追加して、容量を追加し、既存のシステムライセンスを更新し、クラウドバックアップの BYOL ライセンスを管理します。 
 ---
 = Cloud Volumes ONTAP の BYOL ライセンスの管理
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: Cloud Volumes ONTAP BYOL システムライセンスを追加して、�
 
 
 [role="lead"]
-Cloud Volumes ONTAP BYOL システムライセンスを追加して、容量を追加したり、既存のシステムライセンスを更新したり、クラウドへのバックアップの BYOL ライセンスを管理したりできます。
+Cloud Volumes ONTAP BYOL システムライセンスを追加して、容量を追加し、既存のシステムライセンスを更新し、クラウドバックアップの BYOL ライセンスを管理します。
 
 
 
@@ -111,4 +111,4 @@ image:screenshot_backup_byol_license_add.png["バックアップ BYOL ライセ�
 
 
 
-Cloud Manager によってライセンスが追加または更新され、 Backup to Cloud サービスがアクティブになります。
+Cloud Manager によってライセンスが追加または更新され、 Cloud Backup Service がアクティブになります。

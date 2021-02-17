@@ -57,7 +57,7 @@ NOTE: コネクタを作成するには、アカウント管理者である必�
 | 作業環境名 | Cloud Manager は、作業環境名を使用して、 Cloud Volumes ONTAP システムと GCP VM インスタンスの両方に名前を付けます。また、このオプションを選択した場合は、事前定義されたセキュリティグループのプレフィックスとして名前が使用されます。 
 
 
-| サービスアカウント名 | を使用する場合は link:concept_data_tiering.html["データの階層化"] または link:concept_backup_to_cloud.html["クラウドへのバックアップ"] Cloud Volumes ONTAP では、 * サービスアカウント * を有効にして、事前定義されたストレージ管理者ロールが割り当てられたサービスアカウントを選択する必要があります。 link:task_creating_gcp_service_account.html["サービスアカウントの作成方法について説明します"]。 
+| サービスアカウント名 | を使用する場合は link:concept_data_tiering.html["データの階層化"] または link:concept_backup_to_cloud.html["クラウドバックアップ"] Cloud Volumes ONTAP では、 * サービスアカウント * を有効にして、事前定義されたストレージ管理者ロールが割り当てられたサービスアカウントを選択する必要があります。 link:task_creating_gcp_service_account.html["サービスアカウントの作成方法について説明します"]。 
 
 
 | ラベルを追加します | ラベルは GCP リソースのメタデータです。Cloud Manager によって、システムに関連付けられた Cloud Volumes ONTAP システムと GCP リソースにラベルが追加されます。作業環境の作成時にユーザインターフェイスからラベルを 4 つまで追加し、その後追加することができます。API では、作業環境の作成時にラベルを 4 つに制限することはありません。ラベルの詳細については、を参照してください https://cloud.google.com/compute/docs/labeling-resources["Google Cloud のドキュメント：「 Labeling Resources"^]。 
@@ -84,7 +84,7 @@ NOTE: これは Cloud Manager 用に設定するサービスアカウントで�
 
 +
 video::video_subscribing_gcp.mp4[width=848,height=480]
-. * サービス * ：このシステムで使用するサービスを選択します。クラウドにバックアップまたは階層化を選択するには、手順 3 でサービスアカウントを指定しておく必要があります。
+. * サービス * ：このシステムで使用するサービスを選択します。クラウドバックアップまたは階層化を選択するには、手順 3 でサービスアカウントを指定しておく必要があります。
 . * 場所と接続性 * ：場所を選択し、ファイアウォールポリシーを選択して、データ階層化のための Google Cloud ストレージへのネットワーク接続を確認するチェックボックスを選択します。
 +
 コールドデータを Google Cloud Storage バケットに階層化する場合は、 Cloud Volumes ONTAP が配置されているサブネットをプライベート Google アクセス用に構成する必要があります。手順については、を参照してください https://cloud.google.com/vpc/docs/configure-private-google-access["Google Cloud のドキュメント：「 Configuring Private Google Access"^]。
@@ -279,7 +279,7 @@ NOTE: コネクタを作成するには、アカウント管理者である必�
 | 作業環境名 | Cloud Manager は、作業環境名を使用して、 Cloud Volumes ONTAP システムと GCP VM インスタンスの両方に名前を付けます。また、このオプションを選択した場合は、事前定義されたセキュリティグループのプレフィックスとして名前が使用されます。 
 
 
-| サービスアカウント名 | を使用する場合は link:concept_data_tiering.html["階層化"] または link:concept_backup_to_cloud.html["クラウドへのバックアップ"] サービスを利用するには、 * Service Account * スイッチを有効にし、事前定義された Storage Admin ロールが割り当てられたサービスアカウントを選択する必要があります。 
+| サービスアカウント名 | を使用する場合は link:concept_data_tiering.html["階層化"] または link:concept_backup_to_cloud.html["クラウドバックアップ"] サービスを利用するには、 * Service Account * スイッチを有効にし、事前定義された Storage Admin ロールが割り当てられたサービスアカウントを選択する必要があります。 
 
 
 | ラベルを追加します | ラベルは GCP リソースのメタデータです。Cloud Manager によって、システムに関連付けられた Cloud Volumes ONTAP システムと GCP リソースにラベルが追加されます。作業環境の作成時にユーザインターフェイスからラベルを 4 つまで追加し、その後追加することができます。API では、作業環境の作成時にラベルを 4 つに制限することはありません。ラベルの詳細については、を参照してください https://cloud.google.com/compute/docs/labeling-resources["Google Cloud のドキュメント：「 Labeling Resources"^]。 
@@ -306,7 +306,7 @@ NOTE: これは Cloud Manager 用に設定するサービスアカウントで�
 
 +
 video::video_subscribing_gcp.mp4[width=848,height=480]
-. * サービス * ：このシステムで使用するサービスを選択します。クラウドにバックアップまたは階層化を選択するには、手順 3 でサービスアカウントを指定しておく必要があります。
+. * サービス * ：このシステムで使用するサービスを選択します。クラウドバックアップまたは階層化を選択するには、手順 3 でサービスアカウントを指定しておく必要があります。
 . *HA 配置モデル *: HA 構成用に複数のゾーン ( 推奨 ) または単一ゾーンを選択します。次に、リージョンとゾーンを選択します。
 +
 link:concept_ha_google_cloud.html["HA 導入モデルの詳細については、こちらをご覧ください"]。

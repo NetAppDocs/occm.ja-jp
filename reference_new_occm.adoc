@@ -21,6 +21,22 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
+== Cloud Manager 3.9.3 アップデート（ 2021 年 2 月 16 日）
+
+
+
+=== Cloud Backup Service の機能拡張
+
+* Amazon S3 、 Azure Blob 、 Google Cloud Storage にあるバックアップファイルからオンプレミスの ONTAP システムにボリュームをリストアできるようになりました。
+* リストアしたすべてのボリュームとファイルの詳細が表示される新しいリストアダッシュボードが追加されました。
++
+また、ダッシュボードは、ボリュームとファイルのすべてのリストア処理を実行する際の最初の画面でもあります。を参照してください link:task_restore_backups.html#the-restore-dashboard["リストアダッシュボード"^] を参照してください。以前のリリースでは、リストアボリュームオプションはバックアップダッシュボードに含まれていました。
+
+* Google Cloud の Cloud Volumes ONTAP HA システムで Cloud Backup がサポートされるようになりました。
+
+
+
+
 == Cloud Manager 3.9.3 アップデート（ 2021 年 2 月 14 日）
 
 
@@ -124,7 +140,7 @@ image:screenshot_support_dashboard.gif["サポート情報、リンク、ケー�
 == Cloud Manager 3.9.2 アップデート（ 2021 年 1 月 11 日）
 
 * <<Cloud Compliance enhancements>>
-* <<Backup to Cloud enhancements>>
+* <<Cloud Backup enhancements>>
 
 
 
@@ -141,7 +157,7 @@ image:screenshot_support_dashboard.gif["サポート情報、リンク、ケー�
 
 * オンプレミスの ONTAP システムからバックアップファイルを無料でスキャンできます。
 +
-Cloud Compliance でオンプレミスの ONTAP システム上のボリュームを直接スキャンしない場合は、今月リリースされた新しいベータ機能を使用して、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルでコンプライアンススキャンを実行できます。オンプレミス ONTAP のバックアップを作成済みの場合も同様です を使用しています link:concept_backup_to_cloud.html["クラウドへのバックアップ"^]この新機能を使用して、これらのバックアップファイルに対して * 無料 * のコンプライアンススキャンを実行できます。
+Cloud Compliance でオンプレミスの ONTAP システム上のボリュームを直接スキャンしない場合は、今月リリースされた新しいベータ機能を使用して、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルでコンプライアンススキャンを実行できます。オンプレミス ONTAP のバックアップを作成済みの場合も同様です を使用しています link:concept_backup_to_cloud.html["クラウドバックアップ"^]この新機能を使用して、これらのバックアップファイルに対して * 無料 * のコンプライアンススキャンを実行できます。
 
 +
 方法を参照してください link:task_backup_from_onprem.html["オンプレミスの ONTAP ボリュームをオブジェクトストレージにバックアップ"^] そしていかにできるか link:task_getting_started_compliance.html#scanning-backup-files-from-on-premises-ontap-systems["これらのバックアップファイルをスキャンします"]。
@@ -151,7 +167,7 @@ Cloud Compliance でオンプレミスの ONTAP システム上のボリュー�
 
 
 
-=== クラウドへのバックアップの機能拡張
+=== Cloud Backup の機能拡張
 
 個々のファイルを追加のデスティネーション作業環境にリストアできます。
 
@@ -265,7 +281,7 @@ image:screenshot_we_relationships.png["キャンバス（ Canvas ）タブと、
 
 * <<General enhancements>>
 * <<Cloud Volumes ONTAP AMI change>>
-* <<Backup to Cloud enhancements>>
+* <<Cloud Backup enhancements>>
 * <<Cloud Compliance enhancements>>
 * <<Cloud Tiering enhancements>>
 * <<Cloud Sync enhancements>>
@@ -296,7 +312,7 @@ Spot の新しい「 * ストレージ運用 * 」セクションでは、 Cloud
 
 
 
-=== クラウドへのバックアップの機能拡張
+=== Cloud Backup の機能拡張
 
 * バックアップファイルから個々のファイルを復元できるようになりました。
 +
@@ -305,7 +321,7 @@ Spot の新しい「 * ストレージ運用 * 」セクションでは、 Cloud
 ** この単一ファイルのリストアオプションでは、環境に導入されている新しいクラウドリストアインスタンスを使用します。 link:task_restore_backups.html#restoring-files-from-a-backup["この新機能の詳細については、こちらをご覧ください。"]
 
 
-* 新しい Cloud Volumes ONTAP システムを導入する際に、 Google Cloud 環境でクラウドにバックアップを設定できるようになりました。これまでは、既存の Cloud Volumes ONTAP システムでクラウドへのバックアップしか設定できませんでした。
+* 新しい Cloud Volumes ONTAP システムを導入する際に、 Google Cloud 環境で Cloud Backup を設定できるようになりました。これまでは、既存の Cloud Volumes ONTAP システムでのみクラウドバックアップを設定できました。
 * オンプレミスの ONTAP システムから、 AWS または Azure に導入された Cloud Volumes ONTAP システムにバックアップしたボリュームをリストアできるようになりました。
 
 
@@ -377,7 +393,7 @@ link:reference_sync_requirements.html["サポートされているソースと�
 
 == Cloud Manager 3.9 の更新（ 2020 年 11 月 18 日）
 
-クラウドへのバックアップは、 Google Cloud の Cloud Volumes ONTAP でサポートされるようになりました。をクリックします link:task_backup_to_gcp.html["こちらをご覧ください"] を参照してください。
+Google Cloud の Cloud Volumes ONTAP で Cloud Backup がサポートされるようになりました。をクリックします link:task_backup_to_gcp.html["こちらをご覧ください"] を参照してください。
 
 * 注：現在サポートされているのはシングルノードシステムのみです。
 

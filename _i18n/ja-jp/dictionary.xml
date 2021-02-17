@@ -48,20 +48,12 @@
   <block id="fc054407571c2d4dfcfbb5057d24c238" category="list-text">バックアップを格納するストレージスペースに対する有効なクラウドプロバイダのサブスクリプションが必要です。</block>
   <block id="d8041f5f7cbb5dd5c2cd0da050735190" category="inline-link">Cloud Manager Marketplace のバックアップソリューション</block>
   <block id="e44764e5848db6ece6d5d4bce23a85b7" category="inline-link-macro">アクティブ化されます</block>
-  <block id="7caa7d84d6547188e47ffcb0be6f2373" category="list-text">に登録しておきます<block ref="98d4a0895eea9c88efbf5ab4a5fd7d0d" category="inline-link-rx"></block>またはを購入したことが必要です <block ref="c942a36ea33b164eca0107356f810d5d" category="inline-link-macro-rx"></block> NetApp の Backup to Cloud BYOL ライセンス。</block>
-  <block id="21141a322ad2040a54d2c2957607307b" category="section-title">新規または既存のシステムでクラウドへのバックアップを有効化</block>
-  <block id="67ad4c40f95c49285697342cebd0af58" category="list-text">新しいシステム：クラウドへのバックアップは、作業環境ウィザードではデフォルトで有効になります。このオプションは必ず有効にしておいてください。</block>
-  <block id="ef39f67c43eadad86d27163809a329fc" category="list-text">既存のシステム：作業環境を選択し、右パネルのクラウドへのバックアップサービスの横にある * アクティブ化 * をクリックして、セットアップウィザードに従います。</block>
-  <block id="c7ecc14f8fa26e1d6657e9a01121e29f" category="inline-image-macro">作業環境を選択したあとに使用できるクラウドへのバックアップのアクティブ化ボタンを示すスクリーンショット。</block>
-  <block id="556ce68392a2e140efc2991cd6ddccb1" category="paragraph"><block ref="556ce68392a2e140efc2991cd6ddccb1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fa355815803dc5765178ceb1a5091ac0" category="section-title">プロバイダの詳細を入力します</block>
   <block id="35c50ff2b0fba9cbb66e1c842e12a18b" category="paragraph">プロバイダサブスクリプションを選択し、新しいリソースグループを作成するか、既存のリソースグループを使用するかを選択します。</block>
   <block id="b3687d4bedfe2e9ab363a8d2ef4b5fdc" category="inline-image-macro">バッキング時にクラウドプロバイダの詳細を示すスクリーンショット オンプレミスクラスタから Azure Blob にボリュームをバックアップ 階層</block>
   <block id="fa0d193d29fc897ab8a709518824c7a6" category="paragraph"><block ref="fa0d193d29fc897ab8a709518824c7a6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8c7aea6416cccda4e0738853d382a1a2" category="section-title">バックアップポリシーを定義</block>
   <block id="5d18ed69da47d4e04504b49903b39651" category="paragraph">デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。週単位または月単位のバックアップに変更するか、システム定義のポリシーの中からいくつかのオプションを選択します。</block>
-  <block id="b4f3e4fd8965718a9b0fdc725d353fdd" category="inline-image-macro">クラウドへのバックアップ設定を示すスクリーンショット。この機能を有効または無効にして、バックアップの保持期間を選択できます。</block>
-  <block id="809fab9725736c8c10eeae3c9a8f1692" category="paragraph"><block ref="809fab9725736c8c10eeae3c9a8f1692" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cf91ffe6a0830c1180e10ae661bd5c8f" category="section-title">バックアップするボリュームを選択します</block>
   <block id="5cde40f10c1d60503db5310912101a08" category="paragraph">Select Volumes （ボリュームの選択）ページで、バックアップするボリュームを特定します。</block>
   <block id="813dc01dbd6a87212ea12478d22b116a" category="section-title">必要に応じて、データをリストアします</block>
@@ -74,34 +66,19 @@
   <block id="70f3941e9ebdff0d8e0958324b5fb11a" category="list-text">Cloud Volumes ONTAP 9.7 以降。</block>
   <block id="455aadf3bd22f71973763b3cdc7db550" category="list-text">サポートされている Azure リージョン</block>
   <block id="93aa1523e92b241e9be754ad452f4026" category="inline-link">Cloud Volumes ONTAP がサポートされている場合</block>
-  <block id="ba4147e23aeff8d39022be7035682352" category="list-text">クラウドへのバックアップは、すべての Azure リージョンでサポートされています<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>。</block>
   <block id="7527dcedb498a9e111f7eb26b4f075a6" category="list-text">ライセンス要件</block>
   <block id="b5c9fa9bce15f0de1507e8a190b390e9" category="inline-link-macro">作業環境ウィザードの詳細 &amp;amp; 資格情報ページから購読できます</block>
-  <block id="026a8813623c536e154ead0adfd1dc6a" category="list-text">クラウドへのバックアップライセンスは、クラウドへのバックアップを有効にする前に、 Azure Marketplace でのサブスクリプションが必要です。クラウドへのバックアップの請求は、このサブスクリプションを通じて行われます。 <block ref="e4b8384340fbe21a19731ebac9bdaab0" category="inline-link-macro-rx"></block>。</block>
   <block id="2b0d166fef21b89f80cc3342a0db499a" category="inline-link-macro">バックアップ BYOL ライセンスを追加および更新する</block>
-  <block id="17b39f2366e0df8871c07cff7d13c59b" category="paragraph">Backup to Cloud BYOL ライセンスを利用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください <block ref="ffd1e18b6c0db388a3037c9e54e3ca2d" category="inline-link-macro-rx"></block>。</block>
   <block id="bdaf195e79571aa760a337bc03bd82b0" category="paragraph">また、バックアップを格納するストレージスペースには、 Microsoft Azure サブスクリプションが必要です。</block>
-  <block id="d62de1b1d099aaa6a01882be0fc176cd" category="section-title">新しいシステムでクラウドへのバックアップを有効にする</block>
-  <block id="1315701a6d334579ac9810c7e2d74144" category="paragraph">クラウドへのバックアップは、作業環境ウィザードではデフォルトで有効になっています。このオプションは必ず有効にしておいてください。</block>
-  <block id="5c5e9f9ef7a28df142d55d14ffe5db3e" category="inline-xref">既存のシステムでクラウドへのバックアップを有効化</block>
-  <block id="1c06c49ca329e7b79afc060bc055b006" category="admonition">リソースグループの名前を選択する場合は、 Cloud Volumes ONTAP の導入時に * disable * Backup to Cloud と入力します。の手順に従います <block ref="8bdc55b95d9c5593d3a48b8a090c6479" category="inline-xref-macro-rx"></block> Backup to Cloud を有効にして、リソースグループを選択します。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">手順</block>
   <block id="36233220222760341fc9ff566bc8f320" category="list-text">[ Cloud Volumes ONTAP の作成 *] をクリックします。</block>
   <block id="5387e637e4dec0e9f79e98e81ca789ff" category="list-text">クラウドプロバイダとして Microsoft Azure を選択し、シングルノードまたは HA システムを選択します。</block>
   <block id="f4e67f6cb49d400d261c9a2d5deb6e3e" category="list-text">詳細とクレデンシャルのページに必要事項を入力し、 Azure Marketplace サブスクリプションが登録されていることを確認します。</block>
   <block id="ec59ba11b2902245a94f84db27b94198" category="list-text">[ サービス ] ページで、サービスを有効のままにして、 [* 続行 ] をクリックします。</block>
-  <block id="427c6b7febe126c213a49e5f97fe5c43" category="inline-image-macro">は、作業環境ウィザードのクラウドにバックアップするオプションを示しています。</block>
-  <block id="70020ec180ece8b8dbd625cb94290bf3" category="paragraph"><block ref="70020ec180ece8b8dbd625cb94290bf3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="70bc26cbd40eafb70eb1aa399ddb72bb" category="list-text">ウィザードの各ページを設定し、システムを導入します。</block>
-  <block id="bc9341b20a4042f7ca5c13646b79796c" category="paragraph">クラウドへのバックアップはシステムで有効になり、ボリュームが毎日バックアップされ、最新の 30 個のバックアップコピーが保持されます。</block>
   <block id="0ad648b845988c92aa984e9622fbd14b" category="inline-link-macro">ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール</block>
   <block id="c859e94b7a37024bf80ea2ce9c1bb6b4" category="inline-link-macro">ボリューム全体または個々のファイルをバックアップファイルからリストアする</block>
   <block id="1d98c888110e7e6e65c89c722095e53a" category="paragraph">可能です <block ref="a67b0c3656a46fafdf51c55da84737d5" category="inline-link-macro-rx"></block> また、次のことも可能です <block ref="2539e105f7cd4d8534b44d1585dd8cdd" category="inline-link-macro-rx"></block>。</block>
-  <block id="f35339638a487cbd204642611dc4c4f4" category="section-title">既存のシステムでクラウドへのバックアップを有効にする</block>
-  <block id="bdaca281c16b886f9ad025e7e11d0dec" category="paragraph">作業環境からクラウドへのバックアップをいつでも直接有効にできます。</block>
-  <block id="1b10fc829e584439546e61627cbdffdf" category="list-text">作業環境を選択し、右パネルのクラウドへのバックアップサービスの横にある * アクティブ化 * をクリックします。</block>
-  <block id="8e987dc22f45c1cd0445094c7a0e1998" category="inline-image-macro">作業環境を選択したあとに使用できるクラウドにバックアップする設定ボタンを示すスクリーンショット。</block>
-  <block id="84bf83e5299d37eca1a5d0b4b6f4f38e" category="paragraph"><block ref="84bf83e5299d37eca1a5d0b4b6f4f38e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6a0d716e71f7ec018d3069982ded00df" category="list-text">プロバイダの詳細を選択します。</block>
   <block id="fd2caf37b06287d33e2d8637f15e7458" category="list-text">バックアップの格納に使用する Azure サブスクリプション。</block>
   <block id="6f33a72fbdd041cd1305efe9523995e1" category="list-text">リソースグループ - 新しいリソースグループを作成することも、を選択して既存のリソースグループを選択することもできます。</block>
@@ -116,7 +93,6 @@
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-image-macro"></block>
   <block id="d87a3e208e2210f8107f397021993b8d" category="list-text">すべてのボリュームをバックアップするには、タイトル行（<block ref="2b1190f90c2c717d2aa70aabd2fc4c36" category="inline-image-macro-rx" type="image"></block>）。</block>
   <block id="e52334be5aa9b5bef107fc863692b32f" category="list-text">個々のボリュームをバックアップするには、各ボリュームのボックス（<block ref="f3b0afa317fb06ade03449dd632d08e0" category="inline-image-macro-rx" type="image"></block>）。</block>
-  <block id="d4ae74c043c8f49e26f1b49c53854548" category="paragraph">クラウドへのバックアップは、選択した各ボリュームの初期バックアップの作成を開始します。</block>
   <block id="85ae2688d8975159a00f798aad058b18" category="summary">Cloud Volumes ONTAP システムとオンプレミス ONTAP システムのバックアップの管理では、バックアップスケジュールの変更、ボリュームのバックアップの有効化 / 無効化、バックアップの削除などを行うことができます。</block>
   <block id="0becf0bf08ca1bddb36b3440a91a3390" category="doc">Cloud Volumes ONTAP システムとオンプレミスの ONTAP システムのバックアップの管理</block>
   <block id="17e08e042b23e245b104d408915ad493" category="section-title">スケジュールとバックアップの保持期間を変更する</block>
@@ -130,8 +106,6 @@
   <block id="0d640b25fdffe2cb10fb7f3133774cc7" category="list-text">_ バックアップ設定ページ _ で、をクリックします <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 作業環境では、 * バックアップポリシーの変更 * を選択します。</block>
   <block id="52e6aa0a36eec144b80b82f08a1559c0" category="paragraph"><block ref="52e6aa0a36eec144b80b82f08a1559c0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9ab788b09a451f1d8d462b27657ea80b" category="list-text">バックアップポリシーの変更ページで、スケジュールとバックアップの保持期間を変更し、 * 保存 * をクリックします。</block>
-  <block id="ee4cc6ee502bbc111939facc21903799" category="inline-image-macro">クラウドへのバックアップ設定を示すスクリーンショット。バックアップのスケジュールとバックアップの保持設定を変更できます。</block>
-  <block id="30911b21e43aecac330c2a3f409ff811" category="paragraph"><block ref="30911b21e43aecac330c2a3f409ff811" category="inline-image-macro-rx" type="image"></block></block>
   <block id="03e9d167c4eee9aafadc498e0bb0190a" category="section-title">ボリュームのバックアップの開始と停止</block>
   <block id="8da82d73bd7d63ccd8ed491932ec4f8f" category="paragraph">ボリュームのバックアップコピーが不要で、バックアップの格納コストを抑える必要がない場合は、ボリュームのバックアップを停止できます。新しいボリュームがバックアップ中でない場合は、バックアップリストに追加することもできます。</block>
   <block id="9aace0794d6df869d512f2e096ad11a7" category="list-text">_ バックアップ設定ページ _ で、をクリックします <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 作業環境では、 * ボリュームの管理 * を選択します。</block>
@@ -143,20 +117,15 @@
   <block id="8764d766d622ae40812776b15d742a79" category="inline-xref">バックアップを削除します</block>
   <block id="1cdf12d909faca3295263dc58dc5d4b8" category="paragraph">* 注意： * ボリュームのバックアップを停止すると、バックアップが停止します オブジェクトの料金はクラウドプロバイダが継続的に負担します を除いて、バックアップが使用する容量のストレージコスト あなた <block ref="e2e48247dd6dcee2daca407937463dc9" category="inline-xref-macro-rx"></block>。</block>
   <block id="27966c807d6bf6667ade7b1d6b710a1d" category="section-title">バックアップを削除する</block>
-  <block id="59889424e66085d3cfdc7059fa3487fc" category="paragraph">クラウドにバックアップを使用すると、特定のボリュームのすべてのバックアップを削除できます。individual backups を削除することはできません。この処理は、バックアップが不要になった場合やソースボリュームを削除したあとにすべてのバックアップを削除する場合に実行します。</block>
   <block id="990222def8053839fd07dd4a3c81e9dc" category="inline-xref">ここで説明するようにします</block>
   <block id="f83b2b5c200d9b6bf9b9bda1251e57e0" category="paragraph">すべてのバックアップを削除すると、このボリュームの以降のバックアップも無効になります。あとでそのボリュームのバックアップの作成を開始する場合は、バックアップを再度有効にすることができます <block ref="2b330d2ce1c1b03d15895dd5397cd280" category="inline-xref-macro-rx"></block>。</block>
-  <block id="ade96e65054b470edadb2f36e9847e9e" category="admonition">バックアップがある Cloud Volumes ONTAP またはオンプレミスの ONTAP システムを削除する場合は、システムを削除する前にバックアップを削除しておく必要があります。システムを削除しても Backup to Cloud はバックアップを自動的に削除しません。また、システムを削除した後でバックアップを削除するための UI で現在サポートされていません。</block>
   <block id="5509d9244bf327f590de599ecbd025b0" category="list-text">Cloud Manager の上部で、 * Backup * をクリックします。</block>
   <block id="f75f95744418140d17e3fff25ccfd453" category="list-text">ボリュームリストからボリュームを探し、 * バックアップリストの表示 * をクリックします。</block>
   <block id="d78cfb99d6e906d366b61f99a901625f" category="list-text">をクリックします <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> をクリックし、 * すべてのバックアップを削除 * を選択します。</block>
   <block id="779da0f9ab7cb4e9a7fc990f92b79482" category="inline-image-macro">ボリュームのすべてのバックアップを削除するには、 [Delete All Backups] ボタンを選択したスクリーンショット。</block>
   <block id="0296159eeafaa749891796e9b2bce06a" category="paragraph"><block ref="0296159eeafaa749891796e9b2bce06a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e1899e67aa8aec45bef5dc600fc2ae14" category="list-text">確認ダイアログボックスで、 * 削除 * をクリックします。</block>
-  <block id="ae332f79bb8a1a3d7fd35e5190bed4cb" category="section-title">クラウドへのバックアップを無効にしてい</block>
-  <block id="e2ea4748ead4426e1da7a448e718202c" category="paragraph">作業環境で Backup to Cloud を無効にすると、システム上の各ボリュームのバックアップが無効になり、ボリュームをリストアすることもできなくなります。既存のバックアップは削除されません。</block>
   <block id="0b9595093ab8cd7e4a04bb2e4ce095c6" category="paragraph">バックアップを削除しないかぎり、バックアップで使用する容量のオブジェクトストレージのコストは引き続きクラウドプロバイダから請求されます。</block>
-  <block id="03892928fe2e2a1faa2255451dfe1521" category="list-text">_ バックアップ設定ページ _ で、をクリックします <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 作業環境では、 * クラウドへのバックアップを非アクティブ化 * を選択します。</block>
   <block id="d7f98311e57aa2a4ccfddddac24288ac" category="inline-image-macro">作業環境のバックアップを非アクティブ化ボタンのスクリーンショット。</block>
   <block id="bb2736f3c3db9ab842e20bc45c391086" category="paragraph"><block ref="bb2736f3c3db9ab842e20bc45c391086" category="inline-image-macro-rx" type="image"></block></block>
   <block id="660c0d7e8d09e7b02561111fad36eba2" category="list-text">確認ダイアログボックスで、 * Deactivate * をクリックします。</block>
@@ -356,7 +325,6 @@
   <block id="e646e16bee8b32e6ea29e30d01970a6c" category="floating-title">制限</block>
   <block id="5e6c584d4da4f3c652239f09055b635a" category="list-text">AWS または Azure からディスクを直接削除または移動すると、ボリュームは有効期限前に削除されます。</block>
   <block id="eb57ade58504f4d5c09cb5e8cd78ae55" category="list-text">WORM ストレージをアクティブ化すると、オブジェクトストレージへのデータ階層化を有効にできません。</block>
-  <block id="7c7d8a0a47be4daade41970899d235e8" category="list-text">WORM ストレージを有効にするには、クラウドへのバックアップを無効にする必要があります。</block>
   <block id="4a71353af4c8f4aa69559f83317f00a8" category="summary">Cloud Manager では、ボリューム、アグリゲート、 CIFS サーバを管理できます。また、容量の問題を回避するためにボリュームを移動するように求められます。</block>
   <block id="cec87cfebb7c656b9fbf952dc6483c21" category="doc">既存のストレージの管理</block>
   <block id="fb326b7d306e4c0117303049e48dfc52" category="section-title">既存のボリュームの管理</block>
@@ -1106,13 +1074,8 @@
   <block id="221cebedac65af2855cc9b0f21c55587" category="list-text">* 場所 * ：インスタンスのリージョン、ゾーン、 VPC 、およびサブネットを指定します。</block>
   <block id="39ca94376c3d56de257bd39a110e0c3b" category="list-text">* ネットワーク * ：パブリック IP アドレスを有効にするかどうかを選択し、必要に応じてプロキシ設定を指定します。</block>
   <block id="86f1b50eaa6c71046b42471aa31a534e" category="list-text">* ファイアウォールポリシー * ：新しいファイアウォールポリシーを作成するか、インバウンド HTTP 、 HTTPS 、 SSH アクセスを許可する既存のファイアウォールポリシーを選択するかを選択します。</block>
-  <block id="29215196ee54637fc6f5d538f30cd88a" category="summary">クラウドへのバックアップは、 ONTAP クラスタとオンプレミス Cloud Volumes ONTAP クラスタに対応するアドオンサービスで、保護のためのバックアップとリストア機能を提供し、クラウドデータを長期にわたってアーカイブできる。バックアップは、短期リカバリやクローニングに使用されるボリューム Snapshot コピーとは無関係に、クラウドアカウントのオブジェクトストアに格納されます。</block>
-  <block id="d01b4e9bcdcc6d7f0674ca87812b4540" category="doc">クラウドへのバックアップの詳細をご確認ください</block>
   <block id="67537274cf8abce235ebd3d12d2fad5f" category="paragraph">バックアップとリストアの機能をすべて備えた 2 つのサービスがあります。</block>
-  <block id="57d44fa26b4d0449671f89ebe1cee189" category="list-text">クラウドへのバックアップサービス * を使用すると、バックアップファイルを作成したり、ボリューム全体を同じ作業環境または異なる作業環境にリストアしたりできます。</block>
-  <block id="0c4a225c92279057bcc3f8943b3f7e4f" category="list-text">* Restore service * を使用すると、同じバックアップ・ファイルを使用して、同じ作業環境または異なる作業環境内のボリュームに 1 つ以上の * ファイル * をリストアできます。これは、単一ファイルのリストアとも呼ばれます。</block>
   <block id="8ed3d9f3bd4b246873b2ef5b3af3ce24" category="inline-link">Cloud Backup サービスの略</block>
-  <block id="dfcc0beedaf5b96b27f6c163ae28dbc1" category="paragraph">クラウドへのバックアップには、が採用されています<block ref="a188a9edf935f95fa8368bca03a80bfb" category="inline-link-rx"></block>。</block>
   <block id="82fb657700aacfe4edab1e42acc18fd8" category="admonition">すべてのバックアップ処理とリストア処理には、 Cloud Manager を使用する必要があります。ONTAP から直接、またはクラウドプロバイダから何らかの操作を実行すると、サポートされない構成になります。</block>
   <block id="a7a95902c5ebdd50db51010a2f2de531" category="list-text">データボリュームの独立したコピーをクラウド上の低コストのオブジェクトストレージにバックアップできます。</block>
   <block id="2e266f5c456f5f6206428071c74410a6" category="list-text">バックアップデータは、転送中の AES-256 ビット暗号化と TLS 1.2 HTTPS 接続によって保護されます。</block>
@@ -1122,7 +1085,6 @@
   <block id="0410c53d55128287746daa372a4fbf26" category="list-text">ボリュームまたは個々のファイルをソースシステムまたは別のシステムにリストアする。</block>
   <block id="d9fa6f242a1083da524e416ad74615f8" category="list-text">単一ファイルのリストアに使用できる参照可能なファイルカタログです。</block>
   <block id="cccec4f4cea6e207f49880c166ea0fae" category="section-title">サポートされている作業環境とオブジェクトストレージプロバイダ</block>
-  <block id="68d568b93aec2d86ec7b776468602e0e" category="paragraph">現時点で、 Backup to Cloud を使用すると、次の作業環境からボリュームのバックアップを作成できます。</block>
   <block id="da3ad9d6a0eca9d57ad9063ff8690ab6" category="cell">ソースの作業環境</block>
   <block id="ed56c48eb3d77598d7dd71524f288c12" category="cell">バックアップファイルの保存先</block>
   <block id="bdcb25a0b74cb8c3c6dc4deb7e7dc876" category="cell">AWS の Cloud Volumes ONTAP</block>
@@ -1134,37 +1096,24 @@
   <block id="8e39bc4c438e50d343d9038c9098f1e7" category="cell">Amazon S3 Azure Blob</block>
   <block id="13da242ea256a54f96ee49ab3661d1fe" category="paragraph">ボリュームまたは個々のファイルをバックアップファイルから次の作業環境にリストアできます。</block>
   <block id="85970a97aacb509bbf4ce9364724b494" category="cell">バックアップファイルの場所</block>
-  <block id="499dfdd78eb8acc2695db28c99e4ff8c" category="cell">作業環境を復元します</block>
   <block id="5bf0ec987a44f9a72eb5b422ea39344f" category="cell">* ボリュームの復元 *</block>
-  <block id="95310e392b2c509371b956734e686131" category="cell">* 単一ファイルの復元 *</block>
-  <block id="a2f6341e6f3239033a9ac9f5d9cce975" category="cell">オンプレミスの AWS ONTAP システムに Cloud Volumes ONTAP が導入されている</block>
   <block id="df595a3f2e073c08673c684c3c4dd5da" category="cell">オンプレミスの Azure ONTAP システムに Cloud Volumes ONTAP を導入</block>
-  <block id="81697b7677cb6ba39987bbfcd2ab84ee" category="paragraph">Backup to Cloud の使用に関連するコストには、リソース料金とサービス料金の 2 種類があります。</block>
   <block id="d14d70754e8322b819c6bc86af6beefd" category="paragraph">* リソース料金 *</block>
   <block id="c823d7f808045dcc365f6f585fa27c09" category="paragraph">リソースの料金は、ストレージやクラウドで仮想マシン / インスタンスを実行するためにクラウドプロバイダに支払われます。</block>
-  <block id="7d42bbb55a0a84fa72ab6edcc4fae677" category="list-text">バックアップでは、クラウドプロバイダにオブジェクトストレージのコストを支払います。</block>
-  <block id="2d7d85e1c2fa38e4c1e47e7c3a27c74c" category="paragraph">クラウドにバックアップではソースボリュームの Storage Efficiency が維持されるため、クラウドプロバイダ側で、 data_after_ONTAP 効率化のコストを支払います（重複排除と圧縮が適用されたあとのデータ量が少ないほど）。</block>
-  <block id="0f13324faaac33bf35777efbc2e46166" category="list-text">リストア（単一ファイルのリストア）では、クラウドプロバイダに料金が発生するのはインスタンスの実行中のみです。</block>
-  <block id="56f9e83f08d6cf52a922c1732613c56e" category="paragraph">インスタンスは、個々のファイルのリストア時にバックアップスナップショットを参照するためだけに使用されます。コストを節約するために使用していない場合、インスタンスはオフになります。個々のファイルを復元しようとしなかった場合は、まったく展開されません。</block>
   <block id="075172e34478e4da4c111d6553c60566" category="inline-link-macro">導入されている仮想マシン / インスタンスのタイプ</block>
   <block id="eb147f6a200e17da2127d181a81a70b9" category="paragraph">を参照してください <block ref="d27867b221d520e0d75d3ef0b50a497a" category="inline-link-macro-rx"></block> サポートされているクラウドプロバイダごとに、</block>
   <block id="e1b4a0ddcd3124f71fd5c65649282433" category="paragraph">* サービス料金 *</block>
   <block id="14a5ac220da0562bb94b94b0016ac060" category="paragraph">バックアップサービスの料金はネットアップに支払われ、バックアップの作成時のバックアップとリストア時のボリューム、またはファイルに対する費用の両方が含まれます。お客様は、保護対象のデータについてのみ料金を支払うことになります。この料金は、ターゲットバックアップの容量である _Before_ONTAP の効率性で計算されます。</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="inline-xref">ライセンス</block>
   <block id="9400e639f99089a6967440b13f114030" category="paragraph">バックアップサービスの料金を支払う方法は 2 つあります。1 つ目の方法はサービスプロバイダから登録することです。サービスプロバイダを利用すると、バックアップデータの量に基づいて月単位の料金を支払うことができます。2 つ目の選択肢は、ネットアップから直接ライセンスを購入することです。を参照してください <block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block> 詳細については、を参照してください</block>
-  <block id="01069e9c6e2f1e427c9a9b05dfd7ee2b" category="paragraph">クラウドへのバックアップには、お客様所有のライセンスを使用（ BYOL ）と従量課金制（ PAYGO ）の 2 つのライセンスオプションがあります。ライセンスをお持ちでない場合は、 30 日間の無償トライアルをご利用いただけます。</block>
   <block id="a4db2be5fc9fed95c3b899dc47229d5d" category="section-title">無償トライアルをご利用ください</block>
-  <block id="62beb020588e26df4e4a0864ededff39" category="paragraph">30 日間の無償トライアル版を使用すると、残りの無料試用日数が通知されます。無償トライアルが終了すると、バックアップは作成されなくなります。サービスを引き続き使用するには、サービスに登録するかライセンスを購入する必要があります。</block>
   <block id="f8f05c4c1c64e35996e8854bee32fc65" category="paragraph">サービスが無効になってもバックアップは削除されません。バックアップを削除しないかぎり、バックアップで使用する容量のオブジェクトストレージのコストは引き続きクラウドプロバイダから請求されます。</block>
-  <block id="f6a4d8a57e6a2450dfac802f4c6a4710" category="paragraph">PAYGO の場合は、オブジェクトストレージのコストについてクラウドプロバイダに支払い、バックアップライセンスのコストについてはネットアップに支払う必要があります。ライセンスコストは、（ ONTAP の Storage Efficiency 機能を使用する前の）ターゲットのバックアップ容量に基づいて決まります。</block>
   <block id="b0137435ab1e749e6671cc7b4442746b" category="inline-link">価格の詳細については、 Cloud Manager Marketplace のサービスを参照してください</block>
   <block id="f4275e60529f7d587c8cd0e3d4410f04" category="list-text">AWS<block ref="1bbe5e57ee58435bd48a9f71d0ac4efb" category="inline-link-rx"></block>。</block>
   <block id="669ab104fde662cae95c3d512827defe" category="list-text">Azure<block ref="d72981df84ff531bf20e612d5459f673" category="inline-link-rx"></block>。</block>
   <block id="dac4ea7e24164ea0a1f357634aa57f3a" category="list-text">GCP ：<block ref="4863db4abfd00b3312d9241bbfc20ef5" category="inline-link-rx"></block></block>
   <block id="ae023f18100af2f19eb73f6dd83bf4a5" category="inline-link-macro">Cloud Central アカウント</block>
-  <block id="856e0a2b289202bece5f499ad8f51246" category="paragraph">BYOL は、期間ベース（ 1 年間 / 2 年間 / 3 年間）で容量ベースであり、バックアップされた容量を（ ONTAP Storage Efficiency の前の）論理的なバックアップに基づいて、 1TB 単位で増分されます。ネットアップに料金を支払うことで、このサービスを一定期間（たとえば 1 年）利用でき、最大バックアップ容量である 10TB にした場合、オブジェクトストレージのコストについてクラウドプロバイダの支払いが必要になります。このサービスを有効にするために、 Cloud Manager のライセンスページに入力するシリアル番号が表示されます。いずれかの制限に達すると、ライセンスを更新する必要があります。を参照してください <block ref="ffd1e18b6c0db388a3037c9e54e3ca2d" category="inline-link-macro-rx"></block>。バックアップライセンスはすべての Cloud Volumes ONTAP に適用されます に関連付けられているオンプレミスシステムもサポートします <block ref="fba46008dd361377cad19b348e13bb88" category="inline-link-macro-rx"></block>。</block>
   <block id="7d3786abf2ebb473a5ba70b680734525" category="section-title">BYOL ライセンスに関する考慮事項</block>
-  <block id="0e7d2f9eb640d7e4fd410357953e31e3" category="paragraph">Backup to Cloud BYOL ライセンスを使用している場合、 Cloud Manager は、バックアップが容量の上限に近づいたときやライセンスの有効期限に近づいたときに通知します。次の通知が表示されます。</block>
   <block id="7425d5f89a4e332992c97c91d4ed6317" category="list-text">バックアップがライセンスで許可された容量の 80% に達したとき、および制限に達したときに再度実行されます</block>
   <block id="d8ea74d0bc0e6f3c5be22312a953d7fb" category="list-text">ライセンスの有効期限が切れる 30 日前と、ライセンスの有効期限が切れたあとに再度有効になります</block>
   <block id="9c09066c8e56496b251794a698d4a3f3" category="paragraph">これらの通知を受け取った場合は、 Cloud Manager インターフェイスの右下にあるチャットアイコンを使用してライセンスを更新してください。</block>
@@ -1173,8 +1122,6 @@
   <block id="e46c2969860a3f8d6f28785e1056d243" category="list-text">ONTAP システムに使用しているアカウントに Marketplace アカウントがない場合、バックアップサービスは引き続き実行されますが、有効期限に関するメッセージは引き続き送信されます。</block>
   <block id="01cb4ded15ef624d270abf33edb5bef1" category="paragraph">BYOL サブスクリプションを更新すると、 Cloud Manager は NetApp から新しいライセンスを自動的に取得してインストールします。Cloud Manager がセキュアなインターネット接続経由でライセンスファイルにアクセスできない場合は、ユーザがファイルを取得して、 Cloud Manager に手動でアップロードできます。手順については、を参照してください <block ref="ffd1e18b6c0db388a3037c9e54e3ca2d" category="inline-link-macro-rx"></block>。</block>
   <block id="e794cedc0d935d886bd0c7691565235d" category="paragraph">PAYGO ライセンスに切り替えられたシステムは、自動的に BYOL ライセンスに戻されます。また、ライセンスなしで実行されていたシステムは警告メッセージの受信を停止し、ライセンスの有効期限が切れている間に実行されたバックアップに対して課金されます。</block>
-  <block id="bdde2a828d6fa6b47af7de8d3a317577" category="section-title">クラウドへのバックアップの仕組み</block>
-  <block id="8add24f952ce7dc6114e8e231b7565b8" category="paragraph">Cloud Volumes ONTAP またはオンプレミスの ONTAP システムでクラウドへのバックアップを有効にすると、サービスはデータのフルバックアップを実行します。ボリューム Snapshot はバックアップイメージに含まれません。初期バックアップ後は、追加のバックアップはすべて差分になります。つまり、変更されたブロックと新しいブロックのみがバックアップされます。</block>
   <block id="57739bc049ff58f3d3db6f5281e84b85" category="section-title">バックアップの保管場所バックアップノバショ</block>
   <block id="f0c6ef0d91edeeb5b9597632b583efea" category="paragraph">バックアップコピーは、 Cloud Manager がクラウドアカウントに作成する S3 バケット、 Azure BLOB コンテナ、または Google Cloud Storage バケットに格納されます。Cloud Volumes ONTAP システムの場合、オブジェクトストアは Cloud Volumes ONTAP システムと同じリージョンに作成されます。オンプレミスの ONTAP システムでは、サービスを有効にするときにリージョンを指定します。</block>
   <block id="fd7efa28ebc3c2d9c4b0d30d043a4545" category="paragraph">Cloud Volumes ONTAP システムまたはオンプレミスの ONTAP システムごとに 1 つのオブジェクトストアがあります。Cloud Manager は、次のようにオブジェクトストア名を指定します。 NetApp-backup- _clusteruuid_</block>
@@ -1191,7 +1138,6 @@
   <block id="7672a092783c4348b96b40ea2dcf6681" category="inline-link">ストレージクラス</block>
   <block id="c25b0444f68cb52cd5a430711fcef508" category="paragraph">また、 lower cost_Nearline_storage クラスまたは _Coldline_or_Archive_storage クラスを使用することもできます。Google のトピックを参照してください <block ref="ff20b961093fec8eb39137db849f78c4" category="inline-link-rx"></block> ストレージクラスの変更については、を参照してください。</block>
   <block id="ccd96f32a38db578453faee69cacd9f7" category="section-title">バックアップ設定はシステム全体に適用されます</block>
-  <block id="454f367d1904f3d3b7a8298326c76f78" category="paragraph">クラウドへのバックアップを有効にすると、システムで指定したすべてのボリュームがクラウドにバックアップされます。</block>
   <block id="b621bb1c239540283db550f7ced4b0fc" category="paragraph">保持するバックアップのスケジュールと数はシステムレベルで定義されます。バックアップ設定は、システム上のすべてのボリュームに適用されます。</block>
   <block id="2088506ec38f5f951e9e3b0ba150c0f5" category="section-title">スケジュールは、 daily 、 weekly 、 monthly 、またはその組み合わせです</block>
   <block id="9b1ee8526f0dbd74bd97300816040016" category="paragraph">すべてのボリュームについて、日単位、週単位、または月単位のバックアップを選択できます。また、システム定義のポリシーの中から、 3 カ月、 1 年、 7 年のバックアップと保持を提供するポリシーを選択することもできます。ポリシーは次のとおりです。</block>
@@ -1220,17 +1166,11 @@
   <block id="07704c3b46fd42d29ebe46644d5f6447" category="list-text">日次バックアップは、毎日午前 0 時を過ぎた直後に開始されます。</block>
   <block id="e6810e9f98ecbf425d91e0dc05f65de5" category="list-text">週次バックアップは、日曜日の朝の午前 0 時を過ぎた直後に開始されます</block>
   <block id="d452ed5ffd5443b75b81b537d0583cff" category="list-text">月単位のバックアップは、毎月 1 日の午前 0 時を過ぎた直後に開始されます。</block>
-  <block id="fb85e2cc9c4e3135d22207b437c60ddf" category="paragraph">この時点では、ユーザーが指定した時刻にバックアップ操作をスケジュールすることはできません。</block>
   <block id="571c41b031458b9ab08db5aee131a68d" category="section-title">バックアップコピーは Cloud Central アカウントに関連付けられます</block>
   <block id="da77dd1468b7c80d330c0fcd11532858" category="paragraph">バックアップコピーはに関連付けられます <block ref="fba46008dd361377cad19b348e13bb88" category="inline-link-macro-rx"></block> Cloud Manager が配置されます。</block>
   <block id="19aaa7777727b1228e564ee84e334059" category="paragraph">同じ Cloud Central アカウントに複数の Cloud Manager システムがある場合、各 Cloud Manager システムには同じバックアップのリストが表示されます。これには、他の Cloud Manager システムの Cloud Volumes ONTAP インスタンスとオンプレミス ONTAP インスタンスに関連付けられたバックアップが含まれます。</block>
   <block id="8c9b6b8729507556572552d0d8f472e3" category="section-title">サポートされるボリューム</block>
-  <block id="8490ee941147f37e545fbeec078148bd" category="paragraph">クラウドへのバックアップでは、 FlexVol の読み書き可能ボリュームとデータ保護（ DP ）ボリュームがサポートされます。</block>
   <block id="65955112d9a58afa4e9cfd638259282a" category="paragraph">FlexGroup ボリュームと SnapLock ボリュームは現在サポートされていません。</block>
-  <block id="855c363dbc66c004e067709e30714036" category="list-text">オンプレミスの ONTAP システムからバックアップを作成する場合は、 Cloud Manager をクラウド（ Azure または AWS ）に導入する必要があります。オンプレミスの Cloud Manager 環境はサポートされていません。</block>
-  <block id="b7b7f9ca09ce851d553c1a02a30f9f6e" category="list-text">DP ボリュームをバックアップする場合は、ソースボリュームの SnapMirror ポリシーに定義されたルールで、「毎日」、「毎週」、または「毎月」の「クラウドへのバックアップ」ポリシー名に一致するラベルを使用する必要があります。そうしないと、その DP ボリュームのバックアップは失敗します。</block>
-  <block id="a9f2cba6e86faa90ff03b37f72334b23" category="list-text">Azure では、 Cloud Volumes ONTAP の導入時にクラウドへのバックアップを有効にした場合、 Cloud Manager によってリソースグループが作成されます。このリソースグループは変更できません。クラウドへのバックアップを有効にする際に独自のリソースグループを選択する場合は、 Cloud Volumes ONTAP を導入する際に * クラウドへのバックアップを無効にしてから、クラウドへのバックアップを有効にして、クラウドへのバックアップ設定ページからリソースグループを選択します。</block>
-  <block id="044fef1b92a31f5d829e2eb87493fc06" category="list-text">Cloud Volumes ONTAP システムからボリュームをバックアップする場合、 Cloud Manager 以外で作成したボリュームは自動ではバックアップされません。たとえば、 ONTAP CLI 、 ONTAP API 、または System Manager からボリュームを作成した場合、そのボリュームは自動的にはバックアップされません。これらのボリュームをバックアップするには、クラウドへのバックアップを無効にしてから再度有効にする必要があります。</block>
   <block id="27b28ea37c36ed51377072822016b6c3" category="list-text">オブジェクトストレージからの ILM （階層化）、 AWS Glacier または同等の下位階層のオブジェクトストレージへの直接書き込みはサポートされていません。</block>
   <block id="c7bcd8d676592b182290f5e7eac12ba2" category="list-text">SVM-DR 構成と SM-BC 構成はサポートされません。</block>
   <block id="77065db56c15da2af090c24fba168122" category="list-text">MetroCluster （ MCC ）バックアップは、 ONTAP セカンダリからのみサポートされます。 MCC-&gt; SnapMirror -&gt; ONTAP -&gt; Cloud Backup Service -&gt; オブジェクトストレージ。</block>
@@ -1766,28 +1706,19 @@
   <block id="9608aa854ca5f36a89549c7fae2a8010" category="summary">Cloud Volumes ONTAP から Amazon S3 へのデータのバックアップを開始するには、いくつかの手順を実行します。</block>
   <block id="518982b8faca22a3e3136d2ef597ea55" category="doc">Amazon S3 へのデータのバックアップ</block>
   <block id="6196e6bf14a5f5f3772aa2a3ed1f11b2" category="list-text">Cloud Volumes ONTAP 9.6 以降を AWS で実行している。</block>
-  <block id="f6878d52566b8c08f9fdeb08735fc235" category="list-text">に登録しておきます<block ref="f7de7dff7750dc35721a2d2896f59ed1" category="inline-link-rx"></block>またはを購入したことが必要です <block ref="c942a36ea33b164eca0107356f810d5d" category="inline-link-macro-rx"></block> NetApp の Backup to Cloud BYOL ライセンス。</block>
   <block id="c2d4b61ed28a45b8e06a8d80e83c2a2a" category="list-text">Cloud Manager に権限を提供する IAM ロールにはが含まれています 最新のものから S3 権限<block ref="0dc063d42cd9e31c0e2c7df9df595c9f" category="inline-link-rx"></block>。</block>
   <block id="a897c38dc1bcf68b83ba7ff3ff201306" category="paragraph">デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。週単位または月単位のバックアップに変更するか、システム定義のポリシーの中からいくつかのオプションを選択します。保持するバックアップコピーの数を変更することもできます。</block>
-  <block id="d7a9cd9c36581548ad13acfc9e31c1b5" category="inline-image-macro">クラウドへのバックアップ設定を示すスクリーンショット。バックアップのスケジュールと保持期間を選択できます。</block>
-  <block id="73163db1388ee8109c4f51b477691741" category="paragraph"><block ref="73163db1388ee8109c4f51b477691741" category="inline-image-macro-rx" type="image"></block></block>
   <block id="561a5093ea0d2fdfdd366434a3dc37de" category="paragraph">バックアップ全体を新しいボリュームにリストアするか、またはバックアップから既存のボリュームに個々のファイルをリストアするかを選択します。データは、 AWS 内の Cloud Volumes ONTAP システムやオンプレミスの ONTAP システムにリストアできます。</block>
   <block id="f540dcb6244343752d809a32f46fe48c" category="paragraph">S3 へのボリュームのバックアップを開始する前に、次の要件を読み、サポートされている構成になっていることを確認してください。</block>
   <block id="439fdd1d5cfb4385143b828fda34969b" category="list-text">Cloud Volumes ONTAP 9.6 以降</block>
-  <block id="9c9bb3b4d23103f7229da94ee060ce27" category="list-text">クラウドへのバックアップは、すべての AWS リージョンでサポートされます<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>。</block>
   <block id="59a1d68def4686b42edcad49d61a9502" category="inline-link">この Cloud Manager サブスクリプションに登録してください</block>
-  <block id="8145d386ccb8ee345da0d4ec4dfdc06c" category="list-text">Cloud Backup to Cloud 従量課金制のライセンスの場合は、 AWS Marketplace で Cloud Manager のサブスクリプションを選択できます。このサブスクリプションを使用すると、 Cloud Volumes ONTAP 9.6 以降（ PAYGO ）と Cloud Backup to Cloud を導入できます。必要です<block ref="b57816c9d22cdef6685a3a666a34e39e" category="inline-link-rx"></block> クラウドへのバックアップを有効にする前に、クラウドへのバックアップの請求は、このサブスクリプションを通じて行われます。</block>
-  <block id="2669a3e924dc02e6e9fce4394765e733" category="paragraph">Backup to Cloud BYOL ライセンスの場合は、 AWS Backup to Cloud サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください <block ref="ffd1e18b6c0db388a3037c9e54e3ca2d" category="inline-link-macro-rx"></block>。</block>
   <block id="89466c3aa9576131469e102a652b1c26" category="paragraph">また、バックアップを格納するストレージスペース用の AWS サブスクリプションが必要です。</block>
   <block id="94e8673ef47d436243b258727f9d5a89" category="list-text">AWS 権限が必要です</block>
   <block id="8da8dca97f2535e00b0b47888864b2c1" category="list-text">Cloud Manager に権限を提供する IAM ロールが必要です 最新の S3 権限を含める<block ref="0dc063d42cd9e31c0e2c7df9df595c9f" category="inline-link-rx"></block>。</block>
   <block id="02c17660d0f6b51d0aeadd6bfd390921" category="paragraph">ポリシーの具体的な権限を次に示します。</block>
   <block id="d4aafebf40fcb8d9e66d2e757262f049" category="list-text">クラウドプロバイダとして Amazon Web Services を選択し、シングルノードまたは HA システムを選択します。</block>
   <block id="b44abc3e5e8508124c9a497fba2888b2" category="list-text">[ 詳細と資格情報 ] ページに入力します。</block>
-  <block id="c7e3561ad3fce07b6df9e7f425021420" category="paragraph"><block ref="c7e3561ad3fce07b6df9e7f425021420" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4fcbead36c393741199b2868fcb91ca3" category="list-text">バックアップのスケジュールと保持の値を定義し、 * Continue * をクリックします。</block>
-  <block id="cbadf223caf12443574a734cb101db00" category="inline-image-macro">クラウドへのバックアップ設定を示すスクリーンショット。スケジュールとバックアップの保持を選択できます。</block>
-  <block id="2814745ba8e1fa7645fa45b0922eadf0" category="paragraph"><block ref="2814745ba8e1fa7645fa45b0922eadf0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d0334022c92a57091c99f1f4997a5ffd" category="summary">Cloud Manager と Cloud Volumes ONTAP の詳細については、ビデオ、フォーラム、サポートなどのさまざまなリソースを参照してください。</block>
   <block id="3cd12697cda279c9c99b093a265c1ba8" category="doc">ヘルプを参照したり、詳細情報を参照したりするには</block>
   <block id="942f74c27084730202004727cbb4cc3b" category="inline-link">NetApp Cloud Volumes ONTAP のサポート</block>
@@ -2201,8 +2132,6 @@
   <block id="b1a63d781d26ea45ef47005a3fa6a2fe" category="list-text">* サービス *: サービスを有効にしておくか、 Cloud Volumes ONTAP で使用しない個々のサービスを無効にします。</block>
   <block id="1e7e96bb03976a069ca3f4299882d243" category="inline-link-macro">Cloud Compliance の詳細はこちらをご覧ください</block>
   <block id="5602262a84b8086364c4f24acb18733c" category="list-text"><block ref="aebfecc8ad24a96bef64aee4cacba86d" category="inline-link-macro-rx"></block>。</block>
-  <block id="9981219ce0a6b1d96dbbee8e15d4c70c" category="inline-link-macro">クラウドへのバックアップの詳細については、こちらをご覧ください</block>
-  <block id="cc9cf8504b133adab7a56d3d487303e9" category="list-text"><block ref="a1bb783b0d0752501e007f9a7f721531" category="inline-link-macro-rx"></block>。</block>
   <block id="79c821c1c3b5748fcbb72fa291c8e578" category="inline-link-macro">モニタリングの詳細</block>
   <block id="6eb6e39c91905e09e5cc48cf3e1b11ed" category="list-text"><block ref="1adfc958085a5a1a592ae7541f9f910d" category="inline-link-macro-rx"></block>。</block>
   <block id="013d533e75d0a23fdb0339b3667aa1f4" category="list-text">* Location &amp; Connectivity * ： AWS のワークシートに記録したネットワーク情報を入力します。</block>
@@ -2285,7 +2214,6 @@
   <block id="54092d74685a14050a9f2b1e926a5091" category="paragraph">現時点では、 AWS アウトポストで HA ペアがサポートされていません。</block>
   <block id="fbc17712eaacb6cadd44f6fe5d67a396" category="admonition">複数の IAM ユーザが同じ AWS アカウントで作業する場合は、各ユーザにサブスクライブする必要があります。最初のユーザがサブスクライブすると、次の図に示すように、 AWS Marketplace から後続のユーザに登録済みであることが通知されます。AWS_account_ のサブスクリプションが設定されている間、各 IAM ユーザは、そのサブスクリプションに自分自身を関連付ける必要があります。以下のメッセージが表示された場合は、 * ここをクリック * リンクをクリックして Cloud Central にアクセスし、処理を完了してください。<block ref="f71919ce7755d6b3f73d1a478401ec4c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f99d3ff891644fe10f4d30e423d81b2e" category="list-text">* サービス *: この Cloud Volumes ONTAP システムで使用しない個々のサービスを有効または無効にしておきます。</block>
-  <block id="6eeeab03169148283722820471b386df" category="list-text"><block ref="057214498e475ad6d1057e87aeaac46c" category="inline-link-macro-rx"></block>。</block>
   <block id="3dc0546ee23c197fd25bc3ef988c8a30" category="list-text">*HA 導入モデル *: HA 構成を選択します。</block>
   <block id="9e31e4f9e8f37fa86acefdb611c2e044" category="inline-link-macro">AWS での Cloud Volumes ONTAP HA</block>
   <block id="e850ee2c6b9ebe4124c2a4ba528a2154" category="paragraph">導入モデルの概要については、を参照してください <block ref="1c6232927dbfca7550837abc513af5cd" category="inline-link-macro-rx"></block>。</block>
@@ -2563,7 +2491,6 @@
   <block id="6c253a8aff5dfa835a77545b3006abc8" category="list-text">オンプレミスの ONTAP クラスタ</block>
   <block id="9c13e59c90dcfc44888726b809d03ad5" category="list-text">クラウドコンプライアンス</block>
   <block id="30136395f01879792198317c11831ea4" category="list-text">Kubernetes</block>
-  <block id="95ff990ba307dcd51cece5b49549fb40" category="list-text">クラウドへのバックアップ</block>
   <block id="423e555c5ec3885f2bb5d9d2d6627f63" category="list-text">監視</block>
   <block id="53d3587f3bf456d62552c055e47133b2" category="list-text">オンプレミスでの階層化</block>
   <block id="24e6e2f6171b43a847fe194a9a9b5cd0" category="list-text">グローバルファイルキャッシュ</block>
@@ -2922,7 +2849,6 @@
   <block id="4c006b8c7313249e2a17f0e824205196" category="list-text"><block ref="17c72d83acf9836d154d7847c05e47d9" category="inline-link-macro-rx"></block>。</block>
   <block id="de7c635ab4769ccbb1cd78a79d5e4348" category="list-text">* 場所と接続性 * ：場所とセキュリティグループを選択し、チェックボックスをオンにして、コネクタとターゲットの場所の間のネットワーク接続を確認します。</block>
   <block id="528bcd2ec74d12fe449b36e916b83f02" category="paragraph">シングルノードシステムの場合は、 Cloud Volumes ONTAP を導入するアベイラビリティゾーンを選択できます。AZ を選択しない場合は、 Cloud Manager によってその AZ が選択されます。</block>
-  <block id="de880e8150493dfad41adfe3e55d3d14" category="list-text">* 事前構成されたパッケージ *: パッケージの 1 つをシェル化して Cloud Volumes ONTAP システムを迅速に配備するか、 * 独自の構成を作成 * をクリックします。</block>
   <block id="090041ff6b386423b91a6f359f34c7a2" category="list-text">* ライセンス * ：必要に応じて Cloud Volumes ONTAP のバージョンを変更し、ライセンスを選択して、仮想マシンのタイプを選択します。</block>
   <block id="e96db571c54dbe3307feaa3c1f1dc3a8" category="inline-image-macro">Licensing （ライセンス）ページのスクリーンショット。Cloud Volumes ONTAP のバージョン、ライセンス（ Explore 、 Standard 、または Premium ）、 VM のタイプが表示されます。</block>
   <block id="ff509d7cbf412f69346e5f75b8c839e7" category="paragraph"><block ref="ff509d7cbf412f69346e5f75b8c839e7" category="inline-image-macro-rx" type="image"></block></block>
@@ -3924,7 +3850,6 @@
   <block id="65bef27bb502625d99d6e558676df4bd" category="paragraph">Cloud Manager で新しい機能や拡張機能を導入する際に、クラウドプロバイダの権限が必要になることがあります。このセクションでは、必要になった新しい権限について説明します。</block>
   <block id="eaf263597aafb24c99ce4e16af420ae8" category="inline-link">Cloud Manager のポリシーのページです</block>
   <block id="9de255345c89e4a84f3125ff96e9f3ed" category="paragraph">最新の権限のリストは、で確認できます<block ref="0e92ab1ca454f31f07a6e5fba6519a3a" category="inline-link-rx"></block>。</block>
-  <block id="6664835dd5117955cd21269ec2791515" category="paragraph">3.8.1 リリース以降では、 Cloud Volumes ONTAP でクラウドにバックアップを使用するには、次の権限が必要です。 <block ref="1a4baf2117f6efb2f0967ad64e5d2063" category="inline-link-macro-rx"></block>。</block>
   <block id="3a580f142203677f1f0bc30898f63f53" category="section-title">Azure</block>
   <block id="c14332e14fb5e5f32604d5bd1df18fc1" category="list-text">Azure の導入でエラーが発生しないように、 Azure の Cloud Manager ポリシーに次の権限が含まれていることを確認してください。</block>
   <block id="8dcf1d8b35c90247196562cdc747ca63" category="list-text">3.8.7 リリース以降では、別のアカウントの外部キーを使用して、シングルノード Cloud Volumes ONTAP システム上の Azure 管理対象ディスクを暗号化するには、次の権限が必要です。 <block ref="2ddf91f85a5ae73a3d45d6db76a64e7c" category="inline-link-macro-rx"></block>。</block>
@@ -4264,7 +4189,6 @@
   <block id="f092e102e03f174ebb42d3d55e872c34" category="paragraph"><block ref="f092e102e03f174ebb42d3d55e872c34" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ce1f6b2f05b4a57bc56eddfe4412a2c0" category="section-title">Cloud Manager 3.9.2 アップデート（ 2021 年 1 月 11 日）</block>
   <block id="19cfc7d08658ab123451644694a3735c" category="list-text"><block ref="dcc2863990d5e3e017104ccad713b594" category="inline-xref-macro-rx"></block></block>
-  <block id="b98421d3eb104336c60b53c90e45822e" category="list-text"><block ref="55c1e2c0c1ab9296ee9992562f7d0f9f" category="inline-xref-macro-rx"></block></block>
   <block id="c6afa532c2f5d90fc7684c5e82a0b6ad" category="section-title">Cloud Compliance の機能拡張</block>
   <block id="ee6165dce1ba643382b96d57b607a05f" category="list-text">Microsoft OneDrive アカウントのスキャンがサポートされるようになりました。</block>
   <block id="fa4d80fd65fa67fab716a8e264eb1eb4" category="inline-link-macro">OneDrive アカウントをスキャンしています</block>
@@ -4273,13 +4197,11 @@
   <block id="6a18f784e8cb8e445d4810e610ae7291" category="inline-link-macro">独自の高輝度表示を作成します</block>
   <block id="8d22e80ae1347fff1deafc262f153583" category="paragraph">前回のリリースでは、 Cloud Compliance により、すべてのユーザが使用できる一連の定義済みの高輝度表示フィルタが提供されていました。独自のハイライトを作成して、 ［ 調査 ］ ページで特定のスキャン結果を返すことができます。方法を参照してください <block ref="e1dfb9e93c87da2124b11f87dfd29a70" category="inline-link-macro-rx"></block>。</block>
   <block id="5f0d7a7ff091e4bd2af66e7593166022" category="list-text">オンプレミスの ONTAP システムからバックアップファイルを無料でスキャンできます。</block>
-  <block id="02d63ea658b03681c0cb65ddff4df399" category="paragraph">Cloud Compliance でオンプレミスの ONTAP システム上のボリュームを直接スキャンしない場合は、今月リリースされた新しいベータ機能を使用して、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルでコンプライアンススキャンを実行できます。オンプレミス ONTAP のバックアップを作成済みの場合も同様です を使用しています <block ref="ce9f8e11a54437266924ebf465f8d4f3" category="inline-link-macro-rx"></block>この新機能を使用して、これらのバックアップファイルに対して * 無料 * のコンプライアンススキャンを実行できます。</block>
   <block id="4a471a45e934f5adad5065de8e0d670b" category="inline-link-macro">オンプレミスの ONTAP ボリュームをオブジェクトストレージにバックアップ</block>
   <block id="8f62ebf007a21bd3695b794f43ae9be8" category="inline-link-macro">これらのバックアップファイルをスキャンします</block>
   <block id="2af5221dc780f26b3bbba1f4ee83300e" category="paragraph">方法を参照してください <block ref="3facda9cb328edf0d321d70e509ff716" category="inline-link-macro-rx"></block> そしていかにできるか <block ref="d6eb868c33a2d521ab0f1fe32038ae2f" category="inline-link-macro-rx"></block>。</block>
   <block id="c5a4517df532b34e7a9d889eb74e5f48" category="inline-link-macro">個人データの種類</block>
   <block id="19f4fce8c643bb9a46d49ac425f4ed90" category="list-text">Cloud Compliance は、個人データ型「 IP アドレス」をファイルで検索できるようになりました。すべてのリストを表示します <block ref="f4be8e6d561f167370c6153350e69561" category="inline-link-macro-rx"></block> その Cloud Compliance がスキャンで見つかりました。</block>
-  <block id="23d8c575c7bb2ddaab94b00f9a75942c" category="section-title">クラウドへのバックアップの機能拡張</block>
   <block id="d9943e412ba6d8ff0e54a7bf5d5fc76d" category="paragraph">個々のファイルを追加のデスティネーション作業環境にリストアできます。</block>
   <block id="0125b352d3c437967b5e89c5eee53dc6" category="list-text">Azure Blob のバックアップファイルは、 Azure にインストールされた Cloud Volumes ONTAP システムやオンプレミスの ONTAP システムに個々のファイルをリストアするために使用できます。</block>
   <block id="99d257ded58a994006eae2b9c8deff14" category="list-text">Amazon S3 のバックアップファイルを使用して、個々のファイルをオンプレミスの ONTAP システムにリストアできます（ AWS にインストールされた Cloud Volumes ONTAP システムへのファイルのリストアはすでにサポートされています）。</block>
@@ -4335,7 +4257,6 @@
   <block id="402631358a39ba9ec9f74d033ddd77a4" category="list-text">同じ作業環境内のボリューム、または同じクラウドアカウントを使用している別の作業環境内のボリュームにファイルをリストアできます。</block>
   <block id="4f4a5446996b20841a54874acdae59ea" category="inline-link-macro">この新機能の詳細については、こちらをご覧ください。</block>
   <block id="96de2dc64291e85e4d8bb4cd86b7c19a" category="list-text">この単一ファイルのリストアオプションでは、環境に導入されている新しいクラウドリストアインスタンスを使用します。 <block ref="3dd15204797c2e0565e5191ad1497cb2" category="inline-link-macro-rx"></block></block>
-  <block id="5968119f4a24e5809a865b389633e141" category="list-text">新しい Cloud Volumes ONTAP システムを導入する際に、 Google Cloud 環境でクラウドにバックアップを設定できるようになりました。これまでは、既存の Cloud Volumes ONTAP システムでクラウドへのバックアップしか設定できませんでした。</block>
   <block id="83cf653a2b86e6c73ab82bb55b2c0bc9" category="list-text">オンプレミスの ONTAP システムから、 AWS または Azure に導入された Cloud Volumes ONTAP システムにバックアップしたボリュームをリストアできるようになりました。</block>
   <block id="8936f8377a86e4db3b29c5ff7fb213ec" category="list-text">オンプレミスの ONTAP クラスタからデータを直接スキャンできます</block>
   <block id="5bc99c6f42d82d9886ee7f63f488d51a" category="paragraph">Cloud Manager でオンプレミスクラスタを検出した場合は、それらのボリュームで直接 Compliance スキャンを実行できるようになりました。Compliance スキャンを実行する前に、それらのボリュームを Cloud Volumes ONTAP システムにコピーする必要がなくなりました。</block>
@@ -4367,7 +4288,6 @@
   <block id="cc8c9b0ad3076a8d7984092081c79957" category="inline-link-macro">サポートされているソースとターゲットの一覧をすべて表示します。</block>
   <block id="842e26fd8031b9ddff34b02602d074d9" category="paragraph"><block ref="842e26fd8031b9ddff34b02602d074d9" category="inline-link-macro-rx"></block></block>
   <block id="f0c5231465ffdf8306d71aa5cc03ec86" category="section-title">Cloud Manager 3.9 の更新（ 2020 年 11 月 18 日）</block>
-  <block id="5bb8d68145f8b294db7682ad6496114c" category="paragraph">クラウドへのバックアップは、 Google Cloud の Cloud Volumes ONTAP でサポートされるようになりました。をクリックします <block ref="5d41b1376a758f886f6428b4b1fb1790" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="8c7f275a6202660d68548daef1da1f6f" category="paragraph">* 注：現在サポートされているのはシングルノードシステムのみです。</block>
   <block id="6728f66aa4ab4e1f1660b70292cda29b" category="section-title">Cloud Volumes ONTAP 9.8 （ 2020 年 11 月 16 日）</block>
   <block id="6b393d5adcbd871d063bb15f943c74e6" category="inline-link-macro">GCP の HA ペア</block>
@@ -5048,7 +4968,6 @@
   <block id="a2ee3d69ca5431c2c6eae01551523699" category="section-title">作業環境での Cloud Compliance の有効化</block>
   <block id="920beedd163b7d3b3df92861a86c3e00" category="paragraph">Cloud Volumes ONTAP システム（ AWS および Azure ）、オンプレミスの ONTAP クラスタ、および Azure NetApp Files で Cloud Compliance を有効にすることができます。</block>
   <block id="bf07ccd87c478107963c1a52bd73ba0b" category="inline-xref">オンプレミスの ONTAP システムからバックアップファイルをスキャンする</block>
-  <block id="ff366ad9a2ea2a82d1c4c8ce12b9c819" category="admonition">オンプレミス ONTAP システムで次の手順を実行すると、オンプレミス ONTAP システム上のボリュームが直接スキャンされます。すでにオンプレミスからバックアップファイルを作成している場合 を使用しています <block ref="ce9f8e11a54437266924ebf465f8d4f3" category="inline-link-macro-rx"></block>ではなく、クラウド内のバックアップファイルに対してコンプライアンススキャンを実行できます。に進みます <block ref="d3e84adb9bc9d639fc8b095946e42d7f" category="inline-xref-macro-rx"></block> バックアップファイルをスキャンしてボリュームをスキャンします。</block>
   <block id="66136d688d860db593f75335a2c0d8b3" category="list-text">Cloud Manager の上部で、 * Compliance * をクリックし、 * Configuration * タブを選択します。</block>
   <block id="15e8a0899487816f02a5371964d9c255" category="inline-image-macro">Cloud Compliance インスタンスを導入した直後の Scan Configuration タブのスクリーンショット。</block>
   <block id="3a54b389fee7a1750a3fe4585936950c" category="paragraph"><block ref="3a54b389fee7a1750a3fe4585936950c" category="inline-image-macro-rx" type="image"></block></block>
@@ -5092,7 +5011,6 @@
   <block id="6ed15bcca1ab53d0e270e1544ea485b4" category="cell">すべてのボリュームのスキャンを有効にします</block>
   <block id="18da76768df6d64c4b369df8f8134230" category="cell">[ すべてのボリュームのコンプライアンスを有効にする * ] スライダをに移動します 権利</block>
   <block id="9d7dd5fce3f26b1970bbccc8522ce7a6" category="admonition">作業環境に追加した新しいボリュームは、すべてのボリュームのコンプライアンスのアクティブ化 * 設定が有効になっている場合にのみ自動的にスキャンされます。この設定を無効にすると、作業環境で作成する新しいボリュームごとにスキャンを有効にする必要があります。</block>
-  <block id="6a47239288ad0fea293e2cb6440c30a5" category="paragraph">Cloud Compliance でオンプレミスの ONTAP システム上のボリュームを直接スキャンしない場合は、 2021 年 1 月にリリースされる新しいベータ機能によって、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルに対してコンプライアンススキャンを実行できます。したがって、を使用してバックアップファイルを既に作成している場合にも同様です <block ref="ce9f8e11a54437266924ebf465f8d4f3" category="inline-link-macro-rx"></block>この新機能を使用して、バックアップファイルに対してコンプライアンススキャンを実行できます。</block>
   <block id="b6e0dd7a912e052d6b94dd552f713f98" category="paragraph">オンプレミスの ONTAP システムからバックアップファイルをスキャンする場合は、次の手順を実行します。</block>
   <block id="5191e196a64dbd65a75c4dd9dbc4ac41" category="list-text">作業環境のリストで、フィルタのリストから * backup * ボタンをクリックします。</block>
   <block id="0571d0f0b95b569eeb07e4441679276d" category="paragraph">バックアップファイルがあるオンプレミスの ONTAP 作業環境がすべて表示されます。オンプレミスシステムにバックアップファイルがない場合、作業環境は表示されません。</block>
@@ -5269,7 +5187,6 @@
   <block id="f1dfe4e48f31bbc41d093c9848da5fe0" category="cell">Cloud Manager は、作業環境名を使用して、 Cloud Volumes ONTAP システムと GCP VM インスタンスの両方に名前を付けます。また、このオプションを選択した場合は、事前定義されたセキュリティグループのプレフィックスとして名前が使用されます。</block>
   <block id="1689b34158a0f16fa3aa69baa2307300" category="cell">サービスアカウント名</block>
   <block id="68cc6348671b24995e53975d0fd5d303" category="inline-link-macro">サービスアカウントの作成方法について説明します</block>
-  <block id="3872334157849369ff94c7dcb13f7f6f" category="cell">を使用する場合は <block ref="ea2244f77d45e856ef09f638baf765fa" category="inline-link-macro-rx"></block> または <block ref="de7602af7cb8c8104f6c3121ae3fda05" category="inline-link-macro-rx"></block> Cloud Volumes ONTAP では、 * サービスアカウント * を有効にして、事前定義されたストレージ管理者ロールが割り当てられたサービスアカウントを選択する必要があります。 <block ref="8e117ba05e3c9d0ddb1b2f48cec30220" category="inline-link-macro-rx"></block>。</block>
   <block id="67c7826382663d79f31011111ac7c9b3" category="cell">ラベルを追加します</block>
   <block id="18388c93d73ad2b228dd589c42f4c5e1" category="inline-link">Google Cloud のドキュメント：「 Labeling Resources</block>
   <block id="70afaa47dd5b7200895bc6541acf05f1" category="cell">ラベルは GCP リソースのメタデータです。Cloud Manager によって、システムに関連付けられた Cloud Volumes ONTAP システムと GCP リソースにラベルが追加されます。作業環境の作成時にユーザインターフェイスからラベルを 4 つまで追加し、その後追加することができます。API では、作業環境の作成時にラベルを 4 つに制限することはありません。ラベルの詳細については、を参照してください<block ref="fa397f5b6985fa16ac695ba7d4f7a5a5" category="inline-link-rx"></block>。</block>
@@ -5282,7 +5199,6 @@
   <block id="27d9b3c82bd8da92f73b89a66c20ba04" category="paragraph">[ サブスクリプションの追加 ] をクリックして、選択した資格情報をサブスクリプションに関連付けます。</block>
   <block id="b878d292874b3ab2ea5568d71ba31a73" category="paragraph">従量課金制の Cloud Volumes ONTAP システムを作成するには、 GCP Marketplace から Cloud Volumes ONTAP へのサブスクリプションに関連付けられている GCP プロジェクトを選択する必要があります。</block>
   <block id="2b248eb0b43be57273f644e150a15380" category="paragraph">次のビデオでは、従量課金制の Marketplace サブスクリプションを GCP プロジェクトに関連付ける方法を説明します。</block>
-  <block id="49c47f488cd59d3c706ec48b95831385" category="list-text">* サービス * ：このシステムで使用するサービスを選択します。クラウドにバックアップまたは階層化を選択するには、手順 3 でサービスアカウントを指定しておく必要があります。</block>
   <block id="d97b17805dcf3cf9f4cf72ede32d7451" category="list-text">* 場所と接続性 * ：場所を選択し、ファイアウォールポリシーを選択して、データ階層化のための Google Cloud ストレージへのネットワーク接続を確認するチェックボックスを選択します。</block>
   <block id="2e5f3aa65f18453c5c51b5ffcf2214d5" category="inline-link">Google Cloud のドキュメント：「 Configuring Private Google Access</block>
   <block id="0a95fced5ba38d44285304107ca13819" category="paragraph">コールドデータを Google Cloud Storage バケットに階層化する場合は、 Cloud Volumes ONTAP が配置されているサブネットをプライベート Google アクセス用に構成する必要があります。手順については、を参照してください<block ref="46bdb5a1fb51df5eb32e2147ea91e6d8" category="inline-link-rx"></block>。</block>
@@ -5307,7 +5223,6 @@
   <block id="81a4134b0ddebe3a752e5bcfa786217f" category="list-text">コネクタに関連付けられているサービスアカウント <block ref="d0eb8f5d14b1d67a5be0117573281a84" category="inline-link-rx"></block>。</block>
   <block id="b5a7d19f6788ad4a9fa68128eabe2be1" category="list-text">* 場所を選択 * ：「 * Google Cloud * 」と「 * Cloud Volumes ONTAP HA * 」を選択します。</block>
   <block id="337c62c6b6eb7319bae58701105e889c" category="inline-link-macro">階層化</block>
-  <block id="45cb166a55927f9d6661f483f8268222" category="cell">を使用する場合は <block ref="17b07c647e87417b44d0044058815478" category="inline-link-macro-rx"></block> または <block ref="de7602af7cb8c8104f6c3121ae3fda05" category="inline-link-macro-rx"></block> サービスを利用するには、 * Service Account * スイッチを有効にし、事前定義された Storage Admin ロールが割り当てられたサービスアカウントを選択する必要があります。</block>
   <block id="166a4b640ff9a34dd7447ebf0e16518b" category="list-text">*HA 配置モデル *: HA 構成用に複数のゾーン ( 推奨 ) または単一ゾーンを選択します。次に、リージョンとゾーンを選択します。</block>
   <block id="96c883d1fa1e7ebdc724bb5cec521bbd" category="inline-link-macro">HA 導入モデルの詳細については、こちらをご覧ください</block>
   <block id="32d080886ad7e7901799a83c50e953e2" category="paragraph"><block ref="21a90bef8409f113a68d735654e4cb19" category="inline-link-macro-rx"></block>。</block>
@@ -5353,7 +5268,6 @@
   <block id="00ca767448f82cfb0282b35ee478a793" category="list-text"><block ref="00ca767448f82cfb0282b35ee478a793" category="inline-link-macro-rx"></block></block>
   <block id="5c2e1a772a274f24a6edd09cbe9bd623" category="list-text"><block ref="5c2e1a772a274f24a6edd09cbe9bd623" category="inline-link-macro-rx"></block></block>
   <block id="5099bf45b03cac22a9c91c2525580c1e" category="list-text"><block ref="5099bf45b03cac22a9c91c2525580c1e" category="inline-link-macro-rx"></block></block>
-  <block id="de7602af7cb8c8104f6c3121ae3fda05" category="list-text"><block ref="de7602af7cb8c8104f6c3121ae3fda05" category="inline-link-macro-rx"></block></block>
   <block id="afa6e2139db99d54aa0c9eccea9a8c2a" category="inline-link-macro">Cloud Analyzer</block>
   <block id="10cc01f202cb24bdedd22d88270d6b73" category="list-text"><block ref="10cc01f202cb24bdedd22d88270d6b73" category="inline-link-macro-rx"></block></block>
   <block id="92d2b6aba6afa3f690540cf3dba9b633" category="inline-link-macro">クラウド階層化</block>
@@ -5672,72 +5586,27 @@
   <block id="b0ed905668b5ca4fe39a1e3a130692a9" category="list-text">vol modify -volume &lt;vol-name&gt; -in-nvfailed-state false</block>
   <block id="24a7c56cf2cef553dd5613e059c87b42" category="summary">バックアップは、特定の時点のデータをリストアできるように、クラウドアカウントのオブジェクトストアに格納されます。保存したバックアップファイルからボリューム全体をリストアすることも、いくつかのファイルのみをリストアする必要がある場合は、保存したバックアップファイルから最大 8 つのファイルを（一度に）リストアすることもできます。</block>
   <block id="7120badaa84d50bc27575024ab190f5f" category="inline-xref">バックアップからのボリュームのリストア</block>
-  <block id="e2139f66a096ecb8738823bfeec4da73" category="paragraph">_ ボリューム全体のリストア _ は、バックアップファイルの作成に使用した Backup to Cloud サービスの一部です。作業環境でクラウドへのバックアップサービスをアクティブ化すると、同じ作業環境または同じクラウドアカウントを使用する別の作業環境にボリューム全体をリストアできます。を参照してください <block ref="71d86165eed6b3463dd1bb7e1c0721b0" category="inline-xref-macro-rx"></block>。</block>
   <block id="0c69195eb29d0940b1f0bff85473ee35" category="inline-xref">バックアップからのファイルのリストア</block>
-  <block id="bf865cf2fb622bf0692c45834073716c" category="paragraph">_ 個々のファイルをリストアする _ バックアップファイルから実際には 2 つのサービスを使用します。Backup to Cloud サービスを使用して、前述のようにバックアップファイルを作成します。ただし、単一ファイルのリストアを開始すると、リストアサービスを使用してファイルがリストアされます。同じ作業環境内のボリューム、または同じクラウドアカウントを使用している別の作業環境のボリュームにファイルをリストアできます。オンプレミスの ONTAP システム上のボリュームにファイルをリストアすることもできます。を参照してください <block ref="4964750c31ab2b6ddbb94a24e24c86f3" category="inline-xref-macro-rx"></block>。</block>
-  <block id="a61fd13de1d60a872b097917d1038567" category="paragraph">バックアップファイルからボリュームをリストアすると、 Cloud Manager はバックアップのデータを使用して _new_volume を作成します。データは、同じ作業環境内のボリューム、またはソース作業環境と同じクラウドアカウントにある別の作業環境にリストアできます。</block>
-  <block id="a729297d725f4ca5ecfe5c8d9bc71deb" category="section-title">サポートされている作業環境</block>
-  <block id="b4fca2c33100b8d675cf2a68f911c57d" category="paragraph">次の作業環境にバックアップファイルからボリュームをリストアできます。</block>
-  <block id="69d37907c4420523e8a2547850829501" category="list-text">およびキャンバスで、作業環境を選択します。</block>
-  <block id="800845be260c8854c0356c86915c9b80" category="list-text">[ サービス ] パネルで、をクリックします <block ref="04f0b79a35f0183d8920c03c38f9ec94" category="inline-image-macro-rx" type="image"></block> をクリックし、 * View Backups * を選択します。</block>
-  <block id="4d0966676403eef7be6d2b5f1ac72b62" category="inline-image-macro">作業環境の View Backups ボタンを選択した場合のスクリーンショット</block>
-  <block id="22d29128258bbf0d28eca62bb0235272" category="paragraph"><block ref="22d29128258bbf0d28eca62bb0235272" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c0505f407190b436a75bcffbcf18ae00" category="list-text">リストアするボリュームの行を選択し、 * バックアップリストの表示 * をクリックします。</block>
-  <block id="caeda2aeae676c53b5ae8ace4a59176e" category="inline-image-macro">バックアップと復元タブのスクリーンショット。バックアップがあるボリュームを示しています。</block>
-  <block id="215f4f2b476fad87bbff4fc8b1655e4a" category="paragraph"><block ref="215f4f2b476fad87bbff4fc8b1655e4a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f18b52fc9d611315d4f3bb1463a2e1a1" category="list-text">日付 / 時刻スタンプに基づいてリストアするバックアップを検索し、 * Restore * アイコンをクリックします。</block>
-  <block id="e73b6f86fed29437a1aff0fcd7855fdd" category="inline-image-macro">ボリュームを選択したあとのバックアップのリストアアイコンのスクリーンショット。</block>
-  <block id="64ba49ffeb3c11e2c16eee272880a790" category="paragraph"><block ref="64ba49ffeb3c11e2c16eee272880a790" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d63aa7918b4231a13eddb763f8e998c5" category="list-text">新しい volume_page にリストアバックアップを記入します。</block>
-  <block id="357a35aedd0c37deb3a881df778a9bb4" category="list-text">[* リストア ] をクリックします。</block>
-  <block id="c348aa8033cd4fb3bdb5e48fd435b68f" category="inline-image-macro">リストア先のオプションである作業環境、ボリューム、およびボリューム情報を示すスクリーンショット。</block>
-  <block id="360e16b9a5e4403fa6f2d2f382edc229" category="paragraph"><block ref="360e16b9a5e4403fa6f2d2f382edc229" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4352b3c7c1267c137db7d97548095625" category="inline-link-macro">この新しいボリュームを管理します</block>
-  <block id="acfd98ad5b9359acfa14bd0549ab8228" category="paragraph">Cloud Manager では、選択したバックアップに基づいて新しいボリュームが作成され、その作業環境が表示されます。これにより、リストアの進捗状況を確認できます。可能です <block ref="4affc3a285c9e4fa69ae103b228c79cb" category="inline-link-macro-rx"></block> 必要に応じて。</block>
-  <block id="a77a012bdb12c21b516ce35f1ecc10e3" category="paragraph">ボリュームから数個のファイルのみをリストアする必要がある場合は、ボリューム全体をリストアする代わりに、個々のファイルをリストアすることもできます。バックアップファイルから個々のファイルをリストアするには、 Restore サービスを使用します。同じ作業環境内のボリューム、または同じクラウドアカウントを使用している別の作業環境にファイルをリストアできます。オンプレミスの ONTAP システムにファイルをリストアすることもできます。</block>
-  <block id="654e706d9233e1e7437a9b2da9661a26" category="paragraph">バックアップファイル内のボリュームから一度に最大 8 個のファイルをリストアできます。8 個以上のファイルをリストアする必要がある場合は、リストアプロセスをもう一度実行できます。選択したデスティネーションボリュームにすべてのファイルがリストアされます。</block>
-  <block id="d49939193b5bac9e5e825745b9bcc370" category="paragraph">バックアップファイルから個々のファイルを次の作業環境にリストアできます。</block>
-  <block id="13c49934a909df5727e8f26d99695c22" category="section-title">単一ファイルのリストアプロセス</block>
   <block id="01a85f08913124872d9b17dfdb08959a" category="paragraph">プロセスは次のようになります。</block>
-  <block id="9cf25a05b5339b3cbf603ad282907c8e" category="list-text">[ サービス ] パネルから [ リストア ] サービスを有効にすると、 [ リストア ] タブの [ リストア ] ページに移動します。</block>
-  <block id="49b73aed19f6dbad3822494149da1a2c" category="list-text">ボリュームから 1 つ以上のファイルをリストアする場合は、 Restore （復元）タブを選択し、ファイルが存在するバックアップファイル（スナップショット）を選択します。</block>
   <block id="942d92182b847b8a59b87fc6d6c451d0" category="paragraph">Restore インスタンスが起動し、バックアップファイル内に存在するフォルダとファイルが表示されます。</block>
-  <block id="98257ba755722abc610510b458e36ac9" category="paragraph">リストアインスタンスは、ファイルを初めてリストアしたときにクラウドプロバイダの環境に導入されます。</block>
-  <block id="9e28ebab6ead574ee38cf89db02a96fe" category="list-text">バックアップからファイル（または最大 8 ファイル）を選択し、ファイルを書き込む場所（作業環境、ボリューム、およびフォルダ）を選択して、 [ 復元 ] をクリックします。</block>
-  <block id="966ee3269d10c199560562c3da089e35" category="paragraph">Restore インスタンスはファイルをリストアし、次にインスタンスをシャットダウンして、一定時間非アクティブにしたあとのコストを節約します。</block>
   <block id="3ec365dd533ddb7ef3d1c111186ce872" category="section-title">詳細</block>
   <block id="28ea45a6a14844d33d4b5e45288adfa5" category="inline-link-macro">このトピック</block>
-  <block id="1da3fed48a1e0f8f4ad1ff3194f54487" category="paragraph">を参照してください <block ref="7652fd4830c5452ed246f0063fa7d468" category="inline-link-macro-rx"></block> Backup to Cloud サービスと Restore サービスの両方のコストを負担します。</block>
   <block id="61c85306674ea0662e30c30a451e8bb6" category="inline-link">m5n.xlarge インスタンス</block>
   <block id="ed2329214d65af3a852f2cc4e4999bea" category="list-text">AWS では、 Restore インスタンスはで実行されます<block ref="8efb36ee1f35235cb34f37f01f8da8f8" category="inline-link-rx"></block> CPU × 4 、 16GiB メモリ、 EBS のみのインスタンスストレージ。m5n.xlarge インスタンスを使用できない領域では、代わりに m5.xlarge インスタンスで Restore が実行されます。</block>
   <block id="8d63888e8805c64f266bdd3b3aae561b" category="inline-link">Standard_D4s_v3 VM</block>
   <block id="b2ff38ff61d6d1c66f424d54c65719a5" category="list-text">Azure では、 Restore 仮想マシンがで実行されます<block ref="3981131e21f656c2a3a7a1cc6f16dc5b" category="inline-link-rx"></block> CPU × 4 、 16GiB メモリ、 32GB ディスク × 1</block>
   <block id="1230fbd2c141faf390b13977e903b5f1" category="inline-link-macro">AWS の要件</block>
-  <block id="faf5043645a1c7c8531b50bedf6b7653" category="paragraph">AWS でリストアサービスを使用する場合、 Cloud Manager に権限を提供する IAM ロールに最新のからの S3 権限を含める必要があります<block ref="0dc063d42cd9e31c0e2c7df9df595c9f" category="inline-link-rx"></block> を参照してください <block ref="0e64101f92540a8a8ddbf74b6c841930" category="inline-link-macro-rx"></block>。</block>
-  <block id="78eafab3f63c873f901d4e21780278f4" category="paragraph">また、単一ファイルのリストアのポリシーでは、次の権限が必要です。</block>
-  <block id="b808e31eddae4d7e937b21b6f9fb4a54" category="paragraph">Restore インスタンスでは、パブリッククラウド環境内のリソースとプロセスを管理するためにアウトバウンドのインターネットアクセスが必要になります。</block>
-  <block id="bb33d55f9c492ffba129e68e8415567b" category="section-title">Restore サービスを有効にしています</block>
-  <block id="8dc06d3c160f915c60f3ece9b5016226" category="paragraph">これは、作業環境ごとの 1 回限りの処理です。</block>
-  <block id="ce1ee8123988d5d2cac20c2d37989eac" category="admonition">この作業環境では、クラウドへのバックアップサービスがすでにアクティブ化されている必要があります。</block>
-  <block id="18ba30464144d04ec3b555f428595712" category="list-text">Restore サービスの *Enable* ボタンをクリックします。</block>
-  <block id="ea7c35067bd9044e6bd89734935b0e80" category="inline-image-macro">単一ファイルのリストア機能を有効にするための有効化ボタンのスクリーンショット。</block>
-  <block id="4a8a323de9a4b466e3ef0a7d4bbe2150" category="paragraph"><block ref="4a8a323de9a4b466e3ef0a7d4bbe2150" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b9d04880dde91428174f15d90a44f4fd" category="paragraph">[ リストア ] タブの [ リストア ] ページが表示されます。</block>
   <block id="864427004d40bf137ead6325b594bd88" category="section-title">バックアップファイルからの単一ファイルのリストア</block>
-  <block id="2427ae376f48ea545e7881b416ee4102" category="paragraph">ボリュームバックアップからボリュームに最大 8 つのファイルをリストアする手順は、次のとおりです。ファイルのリストアに使用するバックアップファイルの日付を把握しておく必要があります。この機能では、ライブブラウズを使用して、バックアップファイル内の現在のディレクトリとファイルのリストを表示できます。</block>
   <block id="76983c0b7841fed3119295dd07744642" category="paragraph">バックアップファイルは NetApp Snapshot テクノロジを使用して作成されるため、 UI の中の表現では、各バックアップファイルに「 snapshot 」が呼び出されます。</block>
   <block id="f50bc81f344069aa50965b6a99f47c72" category="paragraph">次のビデオでは、 1 つのファイルをリストアする手順を簡単に紹介します。</block>
   <block id="2ee3e843379317f079d2b7c6e40a9c7f" category="admonition">ソースおよびデスティネーションの ONTAP システムで ONTAP のバージョンが 9.6 以降である必要があります。</block>
   <block id="df204e8416f0cbb8b40861f5ebcf6068" category="list-text">[* リストア *] タブをクリックします。</block>
   <block id="46609cf543a12cd8291003c2e8604702" category="paragraph">リストアダッシュボードが表示されます。</block>
-  <block id="bd93519da4b6d26d207b14aa6531227e" category="inline-image-macro">完了したすべてのリストア処理を示すリストアインベントリページのスクリーンショット。[ ファイルの復元 ] ボタンも表示されます。</block>
-  <block id="8dac770e4a2d19ce67c3b5ec691d6c18" category="paragraph"><block ref="8dac770e4a2d19ce67c3b5ec691d6c18" category="inline-image-macro-rx" type="image"></block></block>
   <block id="70622c2dc6369c0668acfd83d3340c05" category="list-text">[ ファイルの復元 *] ボタンをクリックします。</block>
-  <block id="92e869d5821701ae19d5a57da173d244" category="list-text">[ ソースの選択 ] ページで、ファイルのリストア元の日付 / 時刻スタンプを持つ * 作業環境 * 、 * ボリューム * 、および * スナップショット * を選択します。</block>
   <block id="e3fb056a952abf8614625b7716c65927" category="inline-image-macro">リストアするファイルのボリュームと Snapshot を選択するスクリーンショット。</block>
   <block id="7c765ca621beb5234401b9617eaa54fe" category="paragraph"><block ref="7c765ca621beb5234401b9617eaa54fe" category="inline-image-macro-rx" type="image"></block></block>
   <block id="21343c641417a35cfe2fa64f5c6d18ca" category="list-text">[* Continue （続行） ] をクリックすると、リストアインスタンスが開始されます。数分後、リストアインスタンスによってボリューム Snapshot のフォルダとファイルのリストが表示されます。</block>
-  <block id="6ca3b883eb4ae7cd92a0cb9527568309" category="paragraph">リストアインスタンスは、ファイルの初回リストア時にクラウドプロバイダの環境に導入されます。この処理には、最初のリストアから数分かかることがあります。</block>
   <block id="abd0505d3f4d78afa169d1521e472dbd" category="inline-image-macro">リストアするファイルに移動できるように、ファイルの選択ページのスクリーンショット。</block>
   <block id="0d5da4345b644e5ab72058eaf1cbc7c3" category="paragraph"><block ref="0d5da4345b644e5ab72058eaf1cbc7c3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c550d68a0bf25cae863ea99cf7419687" category="list-text">_ ファイルの選択 _ ページで、復元するファイルを選択し、 * 続行 * をクリックします。</block>
@@ -5745,11 +5614,9 @@
   <block id="9ef420076e5dc7498d8d62ec0d3d46a6" category="list-text">ファイル名が表示されている場合は、そのファイル名をクリックします。</block>
   <block id="e19a52fbaa427fe9561b7366fc0f4146" category="list-text">を使用して、フォルダ内の下位レベルに移動できます <block ref="3ff15a622a2116b6d2d6b57ef7b58fef" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして、ファイルを検索します。</block>
   <block id="3321bd97dda45add7ec0224fec7cbd7c" category="paragraph">ファイルを選択すると、ページの左側に追加され、選択済みのファイルが表示されます。必要に応じて、ファイル名の横にある * x * をクリックすると、このリストからファイルを削除できます。</block>
-  <block id="f453ef2a221468da6a95a3b0b480c0b1" category="list-text">[ 保存先の選択 ] ページで、 * 作業環境 * を選択します。</block>
   <block id="3a9bbb5ec08aae574d40890a478d6d9c" category="inline-image-macro">リストアするファイルのデスティネーション作業環境の選択のスクリーンショット。</block>
   <block id="eea3f021560bca578d232da3f447bf8c" category="paragraph"><block ref="eea3f021560bca578d232da3f447bf8c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="97d9b13e6825d1de34dd915dc7482baf" category="paragraph">オンプレミスクラスタを選択し、オブジェクトストレージへのクラスタ接続をまだ設定していない場合は、追加情報を入力するように求められます。</block>
-  <block id="de7ba9820633208f2fea7dea37133158" category="list-text">Amazon S3 からリストアする場合は、デスティネーションボリュームが配置されている ONTAP クラスタに IPspace と入力し、バックアップファイルにアクセスするために AWS Access Key and Secret Key を指定します。</block>
   <block id="774af48985991ebafa4e3fba4e056a5e" category="list-text">Azure Blob からリストアする場合は、デスティネーションボリュームが配置されている ONTAP クラスタ内の IPspace を入力します。</block>
   <block id="86972325164c83f8342d6a5f4c5d3a1a" category="list-text">次に、ファイルを復元する * Volume * と * Folder * を選択します。</block>
   <block id="526f7745c08ce8bc23691bd82aaed62f" category="inline-image-macro">リストアするファイルのボリュームとフォルダを選択するスクリーンショット。</block>
@@ -5758,9 +5625,6 @@
   <block id="0e1ef98c65a1f9d57f1fbd8e4f3b46da" category="list-text">上の図のように、 [ ターゲットフォルダの選択 ] を選択した場合は、次のようになります。</block>
   <block id="3f25e82b6a6ddd7bce8047cf9c5eb6cf" category="list-text">任意のフォルダを選択できます。</block>
   <block id="f86cddb5af7f6094afd9672eaafed050" category="list-text">フォルダにカーソルを合わせて、をクリックできます <block ref="3ff15a622a2116b6d2d6b57ef7b58fef" category="inline-image-macro-rx" type="image"></block> 行の末尾にあるサブフォルダをドリルダウンし、フォルダを選択します。</block>
-  <block id="f6c3dbada3e082e0bf5b4450fa0b3fc1" category="list-text">同じ作業環境とボリュームを選択した場合 をソースファイルとして指定します <block ref="412d56991031f54a67daef792fde4612" category="inline-image-macro-rx" type="image"></block> アイコン）をクリックすると、「ソースフォルダーパスを保持」を選択して、ソース構造内に存在していたのと同じフォルダーにファイルまたはすべてのファイルを復元できます。同じフォルダとサブフォルダがすべて存在している必要があります。フォルダは作成されません。</block>
-  <block id="2e0e039ecfcacd9d424cc97cf62d7f30" category="list-text">リストア処理の進捗状況を確認できるように、 * リストア * をクリックするとリストアダッシュボードに戻ります。</block>
-  <block id="fe866c4308ba89997ce5137b50bbd946" category="paragraph">Restore インスタンスは、一定の非アクティブ期間が経過するとシャットダウンされるため、コストが節約され、 Restore インスタンスがアクティブなときにのみコストが発生します。</block>
   <block id="4a5457d95cfeedc6a25a0d77c5a33696" category="summary">Connector を AWS にインストールすると、 Cloud Manager は、その Connector がインストールされている AWS アカウントにある Amazon S3 バケットに関する情報を自動的に検出できます。</block>
   <block id="f7099ec977551c0bfc4264472c0bf927" category="doc">Amazon S3 バケットの表示</block>
   <block id="e8a61fa4fd9e8f19b4a3df59fdfaca13" category="paragraph">リージョン、アクセスレベル、ストレージクラス、バケットが Cloud Volumes ONTAP でバックアップに使用されているかデータの階層化に使用されているかなど、 S3 バケットの詳細を確認できます。また、 Cloud Compliance で S3 バケットをスキャンすることもできます。</block>
@@ -6563,22 +6427,15 @@
   <block id="eb2bc552c6fd25d8bcc9a12a6b31313b" category="list-text">データブローカーをリレーションシップに追加して、転送速度を向上させ、高可用性を高めることができます。1 つのデータブローカーに障害が発生した場合、サービスの耐障害性があります</block>
   <block id="996636997dce447cf450a7ab01c3dff2" category="summary">オンプレミスの ONTAP システムからクラウドの低コストのオブジェクトストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。</block>
   <block id="5b7a625a0e8411e1ab6be1e4747af0df" category="doc">オンプレミスの ONTAP システムからへのデータのバックアップ クラウド</block>
-  <block id="df12acb381fe3a4f76fc7196c09d95ed" category="paragraph">2021 年 1 月にリリースされた新しいベータ機能を使用すると、バックアップされたボリュームに対して、オンプレミスシステムからコンプライアンススキャンを実行できます。通常、コンプライアンススキャンでは最大 1TB のデータを解放し、サービスのコストは 1TB を超えるデータに対して適用されます。オンプレミスボリュームにバックアップとコンプライアンスを組み合わせる場合、オンプレミスボリューム上のスキャンのコストは無料です。詳細については、こちらをご覧ください <block ref="7b055a4194048bee99ffa1e23648738e" category="inline-link-macro-rx"></block> ビジネスアプリケーションとクラウド環境のプライバシーを確保できます。</block>
   <block id="6f6a5a1139d8932914706890fc98d832" category="list-text">オンプレミスクラスタを検出し、 Cloud Manager の作業環境に追加しておきます。を参照してください <block ref="06e4d8f0b3ee668a3847b90d3a3a58a0" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="cd7ad775c6b0bdc8bd593887e2e1b7fc" category="list-text">クラスタで ONTAP 9.7P5 以降が実行されています。</block>
   <block id="e79664a8b69611d87044590c9969ed06" category="list-text">クラスタには SnapMirror ライセンスがあり、これは PREM または Data Protection Bundle に含まれています。</block>
-  <block id="2549bd35c33b7ab5c322fb0f737ad377" category="inline-link">Azure NetApp Cloud Manager Marketplace のサービス</block>
-  <block id="22340c7eefb94e5f665f788bc6c331ce" category="inline-link">AWS Cloud Manager Marketplace のサービス</block>
-  <block id="7f64215d21500a55633e63a9612565bd" category="list-text">に登録しておきます<block ref="65bb332f12929bfd358bbe54094d4070" category="inline-link-rx"></block>、<block ref="dac2c8855e37a663d620c9d720f5d41a" category="inline-link-rx"></block>またはを購入したことが必要です <block ref="c942a36ea33b164eca0107356f810d5d" category="inline-link-macro-rx"></block> NetApp の Backup to Cloud BYOL ライセンス。</block>
   <block id="55c3677a39cab6152c19b67c79f323b5" category="list-text">AWS の場合、 ONTAP クラスタが S3 にデータをバックアップできるように、アクセスキーと必要な権限を持つアカウントが必要です。</block>
-  <block id="d215bc4594bc6d7d5d9f0650ad866cc9" category="section-title">システムでクラウドへのバックアップを有効化</block>
   <block id="f79709e353361d842ed917c55c662e49" category="paragraph">作業環境を選択し、右パネルの [ バックアップとコンプライアンス ] サービスの横にある [ 有効化 ] をクリックして、セットアップウィザードに従います。</block>
   <block id="f0e6992f4f7fa28ac3527381bedf712b" category="inline-image-macro">オンプレミスの作業環境を選択した後に使用できる [ バックアップとコンプライアンスのアクティブ化 ] ボタンを示すスクリーンショット。</block>
   <block id="35e0a964674082b2257a623245b62f41" category="paragraph"><block ref="1755c5fb41c11133a49c53a6b952ab82" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d1ae916754af40a1752ffa49097de18d" category="section-title">クラウドプロバイダを選択し、プロバイダの詳細を入力します</block>
   <block id="bef7f3364046b1f2f3165bda95a91cb8" category="paragraph">プロバイダを選択し、プロバイダの詳細を入力します。また、ボリュームが配置されている ONTAP クラスタ内の IPspace を指定する必要があります。</block>
-  <block id="6a6f01cb73a44097eab7942c341b9682" category="inline-image-macro">クラウドへのバックアップ設定を示すスクリーンショット。バックアップのスケジュールと保持期間を選択できます。</block>
-  <block id="d79663f10310097b31f3b8c8a53f3328" category="paragraph"><block ref="d79663f10310097b31f3b8c8a53f3328" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b09caade7b69ad30e88d6606a6a15148" category="paragraph">クラスタからバックアップするボリュームを特定します。</block>
   <block id="e5f5910345b75116622827b5c06609c5" category="section-title">バックアップしたボリュームで Compliance スキャンをアクティブ化（オプション）</block>
   <block id="b9f67c559e3ad559ead102deefeac1b2" category="paragraph">クラウドにバックアップされているボリュームを Cloud Compliance でスキャンするかどうかを選択します。</block>
@@ -6587,42 +6444,27 @@
   <block id="c75fbb46ed66c205ea4af9d253795fee" category="list-text">ONTAP 9.7P5 以降</block>
   <block id="70ce32f54f57afd141b82a5f72a919a8" category="paragraph">SnapMirror ライセンス（ PREM または Data Protection Bundle に含まれます）。</block>
   <block id="6673e05d6823aa53c469d8428dbe8e1a" category="list-text">クラスタ間 LIF は、バックアップ対象のボリュームをホストする各 ONTAP ノードに必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。<block ref="099fdf6e8ad70f15bd41fe67513de18c" category="inline-link-rx"></block>。</block>
-  <block id="5ac6dc9ef898d7248cbde9b68385e2a1" category="paragraph">クラウドへのバックアップをセットアップすると、 IPspace で使用するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。</block>
   <block id="76877e276e41e53e44194ac51ea64f9f" category="list-text">オンプレミスシステムからのバックアップは、すべての地域でサポートされています<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>。</block>
   <block id="d5fa84fea0e56c91da7fbd1badf2d600" category="list-text">Azure では、サービスのセットアップ時にバックアップを格納するリージョンを指定します。</block>
   <block id="8377e7528f2ae8a28ce4655955bf5ea1" category="list-text">AWS の場合、バックアップは Cloud Manager がインストールされているリージョンに格納されます。</block>
-  <block id="5404b26fb8a89aeba8072f92b9c0feea" category="inline-link">Azure Marketplace Cloud Manager のバックアップソリューション</block>
-  <block id="9eaad2fed6a72868eb3b3e232042a485" category="inline-link">AWS Marketplace Cloud Manager のバックアップソリューション</block>
-  <block id="a657b8acacbd17891c3567b32b78bd97" category="list-text">Backup to Cloud PAYGO ライセンスの場合は、へのサブスクリプション<block ref="3fe0650cae14ad418cf2ee93be678ea8" category="inline-link-rx"></block> または<block ref="868ec353b8d79acc790b1b50326c1205" category="inline-link-rx"></block> は、クラウドへのバックアップを有効にする前に必要です。クラウドへのバックアップの請求は、このサブスクリプションを通じて行われます。</block>
-  <block id="4c2b4712aa7ae880908c6f30b4896cb8" category="paragraph">また、バックアップを格納するストレージスペースには、 Microsoft Azure または Amazon AWS サブスクリプションが必要です。</block>
   <block id="188a55edd3c64bb96098b7f41a24407d" category="section-title">Amazon S3 を準備しています</block>
-  <block id="009a80ee369251d7fc5626a6ecf62182" category="paragraph">Amazon S3 を使用している場合、 Cloud Manager が S3 バケットにアクセスするための権限を設定する必要があります。また、オンプレミスの ONTAP クラスタが S3 バケットにアクセスできるように権限を設定する必要があります。</block>
   <block id="63e836b1782eb897a12ae966ca0b87aa" category="list-text">最新のから次の S3 権限を指定します<block ref="0dc063d42cd9e31c0e2c7df9df595c9f" category="inline-link-rx"></block>）を作成して、 Cloud Manager に権限を付与する IAM ロールに付与します。</block>
   <block id="1c97decfcc97b84f5f7d9776571121da" category="list-text">ONTAP クラスタから S3 にデータをバックアップできるように、 IAM ユーザに次の権限を付与します。</block>
   <block id="b539613501183cf10b8570ed60939fea" category="inline-link">AWS ドキュメント：「 Creating a Role to Delegate Permissions to an IAM User</block>
   <block id="5d6d3c39001c5518d516e9053e5363e3" category="paragraph">を参照してください<block ref="eb8d2636cc0b0f2875b50c1561ec0060" category="inline-link-rx"></block> を参照してください。</block>
   <block id="6deb8545f29caee7c286cf981453dc62" category="list-text">アクセスキーを作成または検索します。</block>
-  <block id="e71a70e9653ce8ab404988947adb7fb5" category="paragraph">Backup to Cloud ：アクセスキーを ONTAP クラスタに渡します。クレデンシャルは Backup to Cloud サービスには保存されません。</block>
   <block id="383aab378d15aa426a28f88b0b8d7d71" category="inline-link">AWS ドキュメント：「 Managing Access Keys for IAM Users</block>
   <block id="82441b629a7fe59e21cc82f0989ed6ed" category="paragraph">を参照してください<block ref="2241116d44622aa60b7727d0c651eeb9" category="inline-link-rx"></block> を参照してください。</block>
-  <block id="59d0a5c63041fd56f8ef7fc2dd5805d9" category="section-title">クラウドへのバックアップを有効化してい</block>
-  <block id="62ddb475ea629bbc15396d7a73ab0381" category="paragraph">オンプレミスの作業環境から、クラウドへのバックアップをいつでも直接有効化できます。</block>
   <block id="1a03adbeaa2450c448223ede9ec9ee80" category="list-text">キャンバスから作業環境を選択し、右パネルのバックアップとコンプライアンスサービスの横にある [ アクティブ化 ] をクリックします。</block>
-  <block id="8e3b8fd3d2ddb31e174450ecb2072be2" category="list-text">プロバイダ（ Azure または AWS ）を選択し、プロバイダの詳細を入力します。</block>
   <block id="4eb2960f446943abc0421bc2b126e5c7" category="list-text">Azure の場合は次のように入力します</block>
   <block id="17562ce11955e298b8f53b0cd2666472" category="list-text">バックアップおよびバックアップを格納する Azure リージョンで使用する Azure サブスクリプション。</block>
   <block id="6811f350c99e1d223225016ecba92ad9" category="list-text">バックアップするボリュームが配置されている ONTAP クラスタ内の IPspace 。</block>
-  <block id="2c5e573e396419ad3626bb25942af86c" category="paragraph"><block ref="2c5e573e396419ad3626bb25942af86c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a05a543dae5153bcb4ab462a35b48fbe" category="list-text">AWS の場合は次のように入力します</block>
   <block id="9f8699089f2b756ef0a714673d3fb2a3" category="list-text">バックアップの格納に使用する AWS Access Key および Secret Key 。</block>
-  <block id="dec0a0c826bd1bf50c43679987310f12" category="inline-image-macro">バッキング時にクラウドプロバイダの詳細を示すスクリーンショット オンプレミスクラスタから AWS S3 へ、複数のボリュームをバックアップできます 階層</block>
-  <block id="d1e191edfc4e7dd57e7b3de50f6a53fb" category="paragraph"><block ref="d1e191edfc4e7dd57e7b3de50f6a53fb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bc07f047de131df6d95898da5ea11a02" category="paragraph">この情報は、サービスの開始後は変更できないことに注意してください。</block>
   <block id="3d264a36cc72dab26eff3ecab137cd0a" category="list-text">[* Continue （続行） ] をクリックします。</block>
-  <block id="943fe6b4f03dd52c5f62e9c856377f1c" category="paragraph"><block ref="943fe6b4f03dd52c5f62e9c856377f1c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3d4bead76f4c82200f179541e3adf857" category="list-text">バックアップするボリュームを選択します。</block>
   <block id="57332baefd87548b4a27f5847ff63c72" category="paragraph"><block ref="57332baefd87548b4a27f5847ff63c72" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6ff1db23310ebf1fa31c37c9bbc43117" category="list-text">Activate * をクリックすると、 Backup to Cloud はボリュームの初期バックアップの作成を開始します。</block>
   <block id="c5189b3026155bd78aeaa6f5a297f168" category="inline-link-macro">導入された Cloud Compliance インスタンスのコスト</block>
   <block id="c97033d9271c58e1f5686e00d862391c" category="paragraph">バックアップされたボリュームでコンプライアンススキャンを実行するかどうかを確認するメッセージが表示されます。Cloud Compliance スキャンは、実行時に無料で実行できます バックアップされたボリューム（を除く） <block ref="d0765807633262f603f504f8e73ddebe" category="inline-link-macro-rx"></block>）。</block>
   <block id="05b1da76d81e9102360baa919d22fdda" category="inline-image-macro">バックアップしたボリュームで Cloud Compliance をアクティブ化するように選択できるページのスクリーンショット。</block>
@@ -6635,10 +6477,8 @@
   <block id="f1b950abe3dda210d88e32982d855df2" category="inline-image-macro">Cloud Compliance の導入方法を選択するためのコンプライアンスページのスクリーンショット。</block>
   <block id="cf0fda980f8018c01b65f678ec2f09a2" category="paragraph"><block ref="cf0fda980f8018c01b65f678ec2f09a2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="050a42d41634db3141cd4b0ab629370c" category="paragraph">Compliance の導入が完了したら、上記の手順でスキャンするボリュームを選択できます。</block>
-  <block id="214c833b4260fb2c7fb97e56a9895473" category="paragraph">Backup to Cloud は、オンプレミスの ONTAP システムからボリュームをバックアップします。必要に応じて、 Cloud Compliance はバックアップしたボリュームに対してコンプライアンススキャンを実行します。</block>
   <block id="677672a8bdf2c3dcb5bdf57fa96d83df" category="inline-link-macro">コンプライアンススキャンの結果を表示します</block>
   <block id="3d3dc29cbb42ad0323b6fc272c999356" category="paragraph">また可能です <block ref="d9ce58a65e20bc4f412b11247559f874" category="inline-link-macro-rx"></block> また、データコンテキストを理解し、組織内の機密データを識別するのに役立つ、 Cloud Compliance のその他の機能についても確認できます。</block>
-  <block id="068cc52e603a67f69a1d03d69ee43a57" category="admonition">スキャン結果はすぐには使用できません。 Cloud Compliance がコンプライアンススキャンを開始するには、 Backup to Cloud でバックアップの作成を完了する必要があるためです。</block>
   <block id="3d4a1e312061c2a0e1171d137dc166dd" category="summary">必要に応じて、アンインストールスクリプトを実行し、データブローカーのインストール時に作成されたデータブローカーとパッケージおよびディレクトリを削除します。</block>
   <block id="e6f506127d5f6704ecc31da23c753df9" category="doc">データブローカーのアンインストール</block>
   <block id="dd8a8a39c3cdcebc155728bf563bc1e1" category="paragraph">必要に応じて、アンインストールスクリプトを実行して、データブローカー、およびデータブローカーのインストール時に作成されたパッケージとディレクトリを削除します。</block>
@@ -6659,7 +6499,6 @@
   <block id="c9c1fe399a016eb71ef77b98d9d3908c" category="list-text">削除する Cloud Volumes ONTAP の作業環境を選択します。</block>
   <block id="844581166f3d6c9fef0c12b72220bb3d" category="list-text">[ レビューと承認 ] ページで、 [* 移動 ] をクリックします。</block>
   <block id="640e0b5c90b1757e9061cec9ae9f5fb5" category="paragraph">Cloud Manager は、作業環境を削除します。この作業環境は、 Canvas ページからいつでも再検出できます。</block>
-  <block id="c67a3be7fa3d725fd415784a52747191" category="summary">Cloud Volumes ONTAP BYOL システムライセンスを追加して、容量を追加したり、既存のシステムライセンスを更新したり、クラウドへのバックアップの BYOL ライセンスを管理したりできます。</block>
   <block id="8b17a2465075330f70410889998ffc53" category="doc">Cloud Volumes ONTAP の BYOL ライセンスの管理</block>
   <block id="c08c8d6325783177fbec7204e7734a20" category="section-title">システムライセンスの管理</block>
   <block id="0ea4cec13a7a466968826101ae7f9acc" category="paragraph">Cloud Volumes ONTAP BYOL システムでは、複数のライセンスを購入して、 368 TB を超える容量を割り当てることができます。たとえば、 2 つのライセンスを購入して、 Cloud Volumes ONTAP に最大 736TB の容量を割り当てることができます。また、 4 つのライセンスを購入して、最大 1.4 PB までライセンスを取得することもできます。</block>
@@ -6700,7 +6539,6 @@
   <block id="b557ea1f2a5a7cb5138ffd6e247fa5db" category="list-text">バックアップライセンスファイルがある場合は、 * バックアップライセンスのアップロード * オプションを選択し、プロンプトに従ってファイルを接続します。</block>
   <block id="f8f2040da8e7277508c99e4afef2abb2" category="inline-image-macro">バックアップ BYOL ライセンスを追加するページを示すスクリーンショット。</block>
   <block id="30c3a7b58b35391c661066a1bb65d9ae" category="paragraph"><block ref="30c3a7b58b35391c661066a1bb65d9ae" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="136b9225629ddcb41ca0287acd73c865" category="paragraph">Cloud Manager によってライセンスが追加または更新され、 Backup to Cloud サービスがアクティブになります。</block>
   <block id="337d77a3955619de9a544f1026a547bf" category="summary">データを Amazon S3 に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。</block>
   <block id="eebeeaff2ab28fb4166c53926ad0d0cb" category="doc">オンプレミスの ONTAP クラスタから Amazon S3 へデータを階層化する</block>
   <block id="3b7749dd39ee760804c668772e669bbe" category="section-title">データを Amazon S3 に階層化する準備をします</block>
@@ -7171,7 +7009,6 @@
   <block id="9c4e8356ff1f50418474478350731782" category="paragraph">コネクタには、 Cloud Volumes ONTAP を導入する VPC および VNet へのネットワーク接続が必要です。</block>
   <block id="c3a5da2edea375289d166ef749b9bd1e" category="paragraph">たとえば、企業ネットワークにコネクタを設置する場合は、 Cloud Volumes ONTAP を起動する VPC または VNet への VPN 接続を設定する必要があります。</block>
   <block id="239fb9ec1dbf5824a20ae5d477083f83" category="paragraph">Connector では、パブリッククラウド環境内のリソースとプロセスを管理するためにアウトバウンドインターネットアクセスが必要です。コネクタは、 AWS でリソースを管理する際に次のエンドポイントに接続します。</block>
-  <block id="e2b65f6fa948b61a0d4c02d948415756" category="summary">各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Backup to Cloud でも利用できます。</block>
   <block id="fef06ca11f3dec6f0be51962fd93388c" category="section-title">BYOL システムのライセンス</block>
   <block id="255a885478279e7778252b0fbb8e555b" category="inline-link">ストレージの制限については、『 Cloud Volumes ONTAP リリースノート』を参照してください</block>
   <block id="ba23388576c937a1743b84554bd13c72" category="inline-link-macro">使用頻度の低いデータをオブジェクトストレージに階層化します</block>
@@ -7190,9 +7027,6 @@
   <block id="c4c51374fda12f05a9ee0dab7722011b" category="admonition">Cloud Volumes ONTAP では、 EMS （ Event Management System ）イベント通知を使用して、電子メール、 SNMP トラップホスト、または syslog サーバから通知することもできます。手順については、を参照してください<block ref="962809e6f801fb7dcd1dc71b8b507838" category="inline-link-rx"></block>。</block>
   <block id="318fdc8c42906f86f42afc53f8abf7c1" category="section-title">ライセンスの更新</block>
   <block id="9f2436ac2b76abf588a0062483967798" category="section-title">BYOL バックアップライセンス</block>
-  <block id="0ee18a8cda2b9d3f15a0fc8ee21b08d3" category="paragraph">BYOL バックアップライセンスを使用すると、一定期間、および最大容量のバックアップスペースのために、ネットアップからライセンスを購入して Backup to Cloud を使用できます。いずれかの制限に達すると、ライセンスを更新する必要があります。</block>
-  <block id="0c74e21a6e93d115632dd497b0fff3f8" category="inline-link-macro">Backup to Cloud BYOL ライセンスの詳細については、こちらをご覧ください</block>
-  <block id="70dc5d69688036e0f44120c69ce20cec" category="paragraph"><block ref="cc031490d2d0c364c3359295b0657ba8" category="inline-link-macro-rx"></block>。</block>
   <block id="0319f293dd0e5b1d2694066499385585" category="summary">Cloud Manager では、 Cloud Volumes ONTAP の導入時に使用する AWS クレデンシャルを選択できます。すべての Cloud Volumes ONTAP システムは、初期の AWS クレデンシャルを使用して導入することも、クレデンシャルを追加することもできます。</block>
   <block id="97911b3c54a4e826b34c1f79026316c5" category="doc">AWS のクレデンシャルと権限</block>
   <block id="9ef43b020d41cab5808d78fdf855c429" category="section-title">AWS の初期クレデンシャル</block>
@@ -8390,22 +8224,16 @@
   <block id="ed67205a4d86653559f5c0f0973afc52" category="list-text">GCP で Cloud Volumes ONTAP 9.7P5 以降を実行しています。</block>
   <block id="1bb2c0187913772397ee94ba85aff22c" category="list-text">バックアップを保存するストレージスペースの有効な GCP サブスクリプションがあります。</block>
   <block id="721df1cfc096c8fe936071e3747d828d" category="list-text">Google Cloud Project に、事前定義された Storage Admin ロールを持つサービスアカウントがあります。</block>
-  <block id="a2881cac50d529a1f90e9ba04f150969" category="list-text">に登録しておきます<block ref="ae8f064f2fed74765b33e522bc6c41fc" category="inline-link-rx"></block>またはを購入したことが必要です <block ref="c942a36ea33b164eca0107356f810d5d" category="inline-link-macro-rx"></block> NetApp の Backup to Cloud BYOL ライセンス。</block>
-  <block id="0664e4e92277f09f4fa5b3f9e6b51cf2" category="list-text">新しいシステム：新しい作業環境ウィザードが完了したら、クラウドへのバックアップを有効にできます。</block>
   <block id="bd1bf42f3eb311ef9f00c80352b4b141" category="paragraph">バックアップ用に Google Cloud Storage バケットを作成する Google Cloud Project を選択します。</block>
   <block id="2acb00623fcbca99b27f6a3cc5991634" category="inline-image-macro">GCP にインストールされた Cloud Volumes ONTAP システムから Google Cloud Storage バケットにボリュームをバックアップする際のクラウドプロバイダの詳細を示すスクリーンショット。</block>
   <block id="74b5c421e6be8160680f2254bcd6b202" category="paragraph"><block ref="74b5c421e6be8160680f2254bcd6b202" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1b4e51a398b98e25a8eab4fa35757322" category="paragraph"><block ref="1b4e51a398b98e25a8eab4fa35757322" category="inline-image-macro-rx" type="image"></block></block>
   <block id="09b38491696cf808d512139f42a60264" category="paragraph">新しいボリュームにバックアップをリストアします。Google で Cloud Volumes ONTAP システムにデータをリストアできます。サービスアカウントは、リストアを実行する Cloud Volumes ONTAP システムに必要です。</block>
   <block id="bbfd04d8e6a3c2a5725f40d25616d30d" category="paragraph">Google Cloud ストレージへのボリュームのバックアップを開始する前に、次の要件を参照して、サポートされる構成になっていることを確認してください。</block>
   <block id="d24c555e1f23ee33277066be1c47d5d0" category="list-text">Cloud Volumes ONTAP 9.7P5 以降</block>
-  <block id="f5d92e85742f09c0f02a6ef20ead383a" category="list-text">クラウドへのバックアップは、すべての GCP リージョンでサポートされています<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>。</block>
   <block id="12a896df7cf6cd5b5e5dcf4a46c0cebc" category="inline-link">GCP Marketplace</block>
-  <block id="9c3d642f92932f4e0f833475a4526688" category="list-text">Backup to Cloud PAYGO ライセンスの場合は、を使用したサブスクリプション<block ref="c921b6958183cffae0deb8e86a63c6cc" category="inline-link-rx"></block> は、クラウドへのバックアップを有効にする前に必要です。クラウドへのバックアップの請求は、このサブスクリプションを通じて行われます。 <block ref="10f6b1d03ee38410a6c00515b4c72267" category="inline-link-macro-rx"></block>。</block>
   <block id="f8064badfe5eb591467c838191401d7c" category="paragraph">また、バックアップを保存するストレージスペースの Google サブスクリプションが必要です。</block>
   <block id="4ce60442c0b2156c43c785528827a3ab" category="list-text">GCP サービスアカウント</block>
   <block id="9e607bc52a18346e8c56c1b0fe0d492e" category="list-text">事前定義された Storage Admin ロールを持つサービスアカウントが Google Cloud Project に必要です。 <block ref="8e117ba05e3c9d0ddb1b2f48cec30220" category="inline-link-macro-rx"></block>。</block>
-  <block id="9150f4a80ef2200ebe3bcebb27bd825b" category="paragraph">クラウドへのバックアップは、作業環境ウィザードの完了時に有効にして、新しい Cloud Volumes ONTAP システムを作成することができます。</block>
   <block id="0670796a72da41cb0e7fb48717e70688" category="paragraph">サービスアカウントがすでに設定されている必要があります。Cloud Volumes ONTAP システムの作成時にサービスアカウントを選択しなかった場合は、システムをオフにして、 GCP コンソールから Cloud Volumes ONTAP にサービスアカウントを追加する必要があります。</block>
   <block id="c052e03f6e53b6e01b185937b09b86fd" category="paragraph">を参照してください <block ref="9a6b89edd542fcc105e354063295e883" category="inline-link-macro-rx"></block> を Cloud Volumes ONTAP 参照してください。</block>
   <block id="7760e8c768deeb43f1f031963f43945f" category="list-text">[ 作業環境 ] ページで、 [ * 作業環境の追加 * ] をクリックし、画面の指示に従います。</block>
@@ -8419,14 +8247,10 @@
   <block id="d518f67b757ee71fbfa12db2394ebdcb" category="paragraph">GCP Marketplace のサブスクリプションが登録されていることを確認します。</block>
   <block id="a8b374b360b288a9c2785928aa666185" category="inline-image-macro">作業環境ウィザードでサービスアカウントを有効にする方法を示すスクリーンショット。</block>
   <block id="8d3684722736546ab245b4b0da04627e" category="paragraph"><block ref="8d3684722736546ab245b4b0da04627e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a4b2c7ef5c52cb94ade32e1bb997d1a8" category="list-text">* サービス * ：クラウドへのバックアップサービスは有効のままにして、 * 続行 * をクリックします。</block>
-  <block id="aca9d18d9c1c9635efb119c0c8ef87d4" category="paragraph"><block ref="aca9d18d9c1c9635efb119c0c8ef87d4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a97e98d81ccbce91c535fae13c89dd9b" category="list-text">ウィザードの各ページを設定し、システムを導入します を参照してください <block ref="9a6b89edd542fcc105e354063295e883" category="inline-link-macro-rx"></block>。</block>
-  <block id="8c5244b6bdadfcbf5bec5b343e6a831f" category="paragraph">クラウドへのバックアップはシステムで有効になり、毎日作成したボリュームがバックアップされ、最新の 30 個のバックアップコピーが保持されます。</block>
   <block id="936db5f68d74f331e1408e6968d94a8a" category="inline-link-macro">追加ボリュームのバックアップを開始および停止するか、を変更します バックアップスケジュール</block>
   <block id="c1517582a429538e0dd5adc774e4d5a5" category="inline-link-macro">バックアップファイルからボリューム全体をリストアする</block>
   <block id="f9e694a1fc4fe23eb4c0acb0a9c79d5f" category="paragraph">可能です <block ref="50666bf746d87502c22827db3fbff854" category="inline-link-macro-rx"></block> また、次のことも可能です <block ref="ede02d22d8d3bda5bbd3ec622f38e48f" category="inline-link-macro-rx"></block>。</block>
-  <block id="68e7cafc696649fbb96065a08eb06191" category="paragraph">クラウドへのバックアップは、作業環境からいつでも直接有効にすることができます。</block>
   <block id="7aebb4cab044f0641d0944f7152780e6" category="list-text">Google Cloud Storage バケットをバックアップ用に作成する Google Cloud Project を選択し、 * Continue * をクリックします。これは、 Cloud Volumes ONTAP システムが配置されているプロジェクトとは異なる場合があります。</block>
   <block id="f4c07b72911539b77cd18a359cd30549" category="paragraph">プロジェクトには、事前定義されたストレージ管理者ロールを持つサービスアカウントが必要です。また、サービスの開始後にプロジェクトを変更することはできません。</block>
   <block id="9fba9122c49c75ce2c347a34b6490d32" category="paragraph">可能です <block ref="a67b0c3656a46fafdf51c55da84737d5" category="inline-link-macro-rx"></block> また、次のことも可能です <block ref="ede02d22d8d3bda5bbd3ec622f38e48f" category="inline-link-macro-rx"></block>。</block>
@@ -8506,7 +8330,6 @@
   <block id="4bfd6df89ae3683de5e81c0d2d601355" category="inline-link-macro">詳細については、ここをクリックしてください</block>
   <block id="21ce215b2cca991eeb8c0b5dad0b808d" category="paragraph"><block ref="b499fc523d570935bd214fc9fed47422" category="inline-link-macro-rx"></block>。</block>
   <block id="69d7d8f5eb94524f8d67bd4810ecd3b4" category="section-title">データをバックアップしています</block>
-  <block id="bfc95ff622d21aa0c177ef79bde0fa4f" category="paragraph">Cloud Manager Backup to Cloud サービスを使用して、オンプレミスの ONTAP システムからクラウドの低コストのオブジェクトストレージにデータをバックアップできます。このサービスは、クラウドデータの保護と長期アーカイブのためのバックアップとリストアの機能を提供します。</block>
   <block id="c568359e30ad78803ec13d734c750dca" category="paragraph"><block ref="2da9f5a577e4dd18d3ec6a4e78d27a93" category="inline-link-macro-rx"></block>。</block>
   <block id="8eb970559649a4b00ff570ac7b611b1a" category="section-title">データをクラウドに階層化する</block>
   <block id="bdaba8e114e06250b64623fa35d279e2" category="paragraph">ONTAP クラスタからオブジェクトストレージにアクセス頻度の低いデータを自動的に階層化することで、データセンターをクラウドに拡張します。</block>
@@ -9026,7 +8849,6 @@
   <block id="30085eb68cdb8a51af49b0a08058bacd" category="inline-link">Azure Information Protection （ AIP ）ラベル</block>
   <block id="797c9546d4f366091861852dfe4c83fb" category="list-text">表示と変更 <block ref="d0f9730625a218e637a0d6df3df12f2b" category="inline-link-rx"></block> ファイルに保存できます</block>
   <block id="8c58ba4181165eed7a001aa6366e244b" category="list-text">個々のファイルを削除します</block>
-  <block id="88ec53172322656c47890ad64547e36c" category="admonition">2021 年 1 月にリリースされたベータ版の機能により、次のことが可能になります 作成したバックアップファイルに対して、 Compliance スキャンを実行して空き容量を確保します を使用して作成したオンプレミスの ONTAP ボリュームから <block ref="ce9f8e11a54437266924ebf465f8d4f3" category="inline-link-macro-rx"></block>）。これにより、オンプレミスの ONTAP ボリュームを Cloud Compliance で直接スキャンするか、またはボリュームから作成されたバックアップファイルをスキャンするかを選択できます。</block>
   <block id="ebccf63c5cf7a187f8fa1a9de3385610" category="section-title">ファイルのメタデータと権限の表示</block>
   <block id="a4eecdb2df95b93cfe5355dade3dbba0" category="paragraph">[ データ調査結果 ] ペインで、をクリックできます <block ref="3403ed76e6cda7bc80d95054b13a785c" category="inline-image-macro-rx" type="image"></block> をクリックすると、単一のファイルについてファイルのメタデータが表示されます。</block>
   <block id="c545ce144b1f4d763f30d9b729c1590c" category="paragraph"><block ref="c545ce144b1f4d763f30d9b729c1590c" category="inline-image-macro-rx" type="image"></block></block>
@@ -9109,4 +8931,211 @@
   <block id="5414bcb74ffdbf70d2afb028e1eb0d0b" category="list-text">ノード 2 に iSCSI LIF を作成</block>
   <block id="0a2292629d42074cb011142b9cd8f433" category="list-text">_private_IP_は 、 CVO-node2 の eth0 （ e0a ）上の未使用のセカンダリプライベート IP アドレスです。</block>
   <block id="eb47971e346ef76aab3c839fd1b8c204" category="section-title">ディザスタリカバリ用に Storage VM を管理する</block>
+  <block id="bd9249e6bdf70ff22a83bfc81c310cfd" category="list-text">に登録しておきます<block ref="98d4a0895eea9c88efbf5ab4a5fd7d0d" category="inline-link-rx"></block>またはを購入したことが必要です <block ref="c942a36ea33b164eca0107356f810d5d" category="inline-link-macro-rx"></block> NetApp の Cloud Backup BYOL ライセンス。</block>
+  <block id="8b6f979d41ffa885cd21d5607d04338f" category="section-title">新規または既存のシステムで Cloud Backup を有効にします</block>
+  <block id="23dbb22134961553d5b555f78c0d3634" category="list-text">新しいシステム： Cloud Backup は、作業環境ウィザードではデフォルトで有効になっています。このオプションは必ず有効にしておいてください。</block>
+  <block id="a80d1cfddc34e12329a25cac9df9761e" category="list-text">既存のシステム：作業環境を選択し、右パネルの Cloud Backup Service の横にある * Activate * をクリックして、セットアップ・ウィザードに従います。</block>
+  <block id="a9d113cdba1b5a152bc19482f426bfae" category="inline-image-macro">作業環境を選択したあとに表示される Cloud Backup Activate ボタンのスクリーンショット</block>
+  <block id="d7bb46c4fd4dc034df5b922fc5eb5ada" category="paragraph"><block ref="d7bb46c4fd4dc034df5b922fc5eb5ada" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f54a03aecc1dc9523a69db4bc5fd9bf5" category="inline-image-macro">クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。</block>
+  <block id="2a5b9b1316cb11920c5b28782b31f9b6" category="paragraph"><block ref="2a5b9b1316cb11920c5b28782b31f9b6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4216f1ed77e39a831eabf2f65c0d56d8" category="list-text">Cloud Backup はすべての Azure リージョンでサポートされます<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>。</block>
+  <block id="ed0f79977b358312ae2ddd7d029dca0a" category="list-text">Cloud Backup 従量課金制のライセンスの場合は、 Cloud Backup を有効にする前に Azure Marketplace でサブスクリプションを購入する必要があります。Cloud Backup の請求は、このサブスクリプションを通じて行われます。 <block ref="e4b8384340fbe21a19731ebac9bdaab0" category="inline-link-macro-rx"></block>。</block>
+  <block id="e85ccddd6402864f774307bc3632cc52" category="paragraph">Cloud Backup BYOL ライセンスを使用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください <block ref="ffd1e18b6c0db388a3037c9e54e3ca2d" category="inline-link-macro-rx"></block>。</block>
+  <block id="ea0d10c48d86f89a9ca08529f69a37ce" category="section-title">新しいシステムでの Cloud Backup の有効化</block>
+  <block id="ea566cde7465e4ccf2df5cbdab272697" category="paragraph">Cloud Backup は、作業環境ウィザードではデフォルトで有効になっています。このオプションは必ず有効にしておいてください。</block>
+  <block id="5a356acba956eb49f49463a47b07dbdf" category="inline-xref">既存のシステムでの Cloud Backup の有効化</block>
+  <block id="53ebd529678afade9a8cc550535c4832" category="admonition">リソースグループの名前を選択する場合は、 Cloud Volumes ONTAP を導入する際に * disable * Cloud Backup と入力します。の手順に従います <block ref="518f1876d7249067cbf504987e6e7dc3" category="inline-xref-macro-rx"></block> Cloud Backup を有効にしてリソースグループを選択します。</block>
+  <block id="f39570e523f3e9eb149e60a31920f75f" category="inline-image-macro">に、作業環境ウィザードの Cloud Backup オプションを示します。</block>
+  <block id="8471b34778ea3dc258d320500f78e6a9" category="paragraph"><block ref="8471b34778ea3dc258d320500f78e6a9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9aff5640d34c572b8d027282423e14ad" category="paragraph">Cloud Backup はシステムで有効になり、ボリュームを毎日バックアップして、最新の 30 個のバックアップコピーを保持します。</block>
+  <block id="01834a746a71480e802ae7d289130f5f" category="section-title">既存のシステムでの Cloud Backup の有効化</block>
+  <block id="fce772fe3b335af9256c38cbd82a5b4f" category="paragraph">作業環境から Cloud Backup をいつでも直接有効にできます。</block>
+  <block id="d87d6aa8ee89bf8258642e671d970e7b" category="list-text">作業環境を選択し、右パネルの Cloud Backup Service の横にある * Activate * をクリックします。</block>
+  <block id="ab86b1cad22bd1380ddb3b57261bd301" category="inline-image-macro">作業環境を選択したあとに使用できるクラウドバックアップ設定ボタンを示すスクリーンショット。</block>
+  <block id="3cffe4c4d5d6423112146f44856bafac" category="paragraph"><block ref="3cffe4c4d5d6423112146f44856bafac" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="198f2aaeeb3a88b8348df4c8695a270b" category="paragraph">Cloud Backup は、選択した各ボリュームの初期バックアップの作成を開始します。</block>
+  <block id="d222c828e33fe976dc190b7607c67af0" category="inline-image-macro">クラウドバックアップの設定が表示されたスクリーンショット。バックアップのスケジュールとバックアップの保持の設定を変更できます。</block>
+  <block id="2eaab0c00df7a00ed4a79f466cb9aa98" category="paragraph"><block ref="2eaab0c00df7a00ed4a79f466cb9aa98" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="89861f1e52b3a07a3f6ed46c733dadd4" category="paragraph">Cloud Backup では、特定のボリュームの _all_backups を削除できます。individual backups を削除することはできません。この処理は、バックアップが不要になった場合やソースボリュームを削除したあとにすべてのバックアップを削除する場合に実行します。</block>
+  <block id="07999bba01b2dc27bc8e552285207eb7" category="admonition">バックアップがある Cloud Volumes ONTAP またはオンプレミスの ONTAP システムを削除する場合は、システムを削除する前にバックアップを削除しておく必要があります。システムを削除しても、 Cloud Backup はバックアップを自動的に削除しません。また、システムを削除した後でバックアップを削除するための UI で現在サポートされていません。</block>
+  <block id="39f0a431a26f2edf7358e65f20191008" category="section-title">Cloud Backup を無効にします</block>
+  <block id="e79cfa6ee73b23acce6857bc35ce84f9" category="paragraph">作業環境で Cloud Backup を無効にすると、システム上の各ボリュームのバックアップが無効になり、ボリュームをリストアすることもできなくなります。既存のバックアップは削除されません。</block>
+  <block id="8e9a05ac31cb31dd9a776593ce2aeeeb" category="list-text">_ バックアップ設定ページ _ で、をクリックします <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 作業環境では、 * クラウド・バックアップを非活動化 * を選択します。</block>
+  <block id="d593ed35d58d746e4da5eff1acef3f7b" category="list-text">WORM ストレージを有効にするには、 Cloud Backup を無効にする必要があります。</block>
+  <block id="6532c8c66f59b1457badbcf648f433bf" category="summary">Cloud Backup は、 ONTAP クラスタとオンプレミスの Cloud Volumes ONTAP クラスタに対応するアドオンサービスで、保護のためのバックアップとリストア機能を提供し、クラウドデータを長期にわたってアーカイブできます。バックアップは、短期リカバリやクローニングに使用されるボリューム Snapshot コピーとは無関係に、クラウドアカウントのオブジェクトストアに格納されます。</block>
+  <block id="e386c51e8b46e9dad6f19dc36fbfc831" category="doc">Cloud Backup の詳細をご確認ください</block>
+  <block id="13659ad8a4e1bcab565ba8892787293d" category="paragraph">Cloud Backup は、 ONTAP クラスタとオンプレミスの Cloud Volumes ONTAP クラスタに対応するアドオンサービスで、保護のためのバックアップとリストア機能を提供し、クラウドデータを長期にわたってアーカイブできます。バックアップは、ほぼ期間のリカバリやクローニングに使用されるボリューム Snapshot コピーとは関係なく、自動的に生成されてクラウドアカウントのオブジェクトストアに格納されます。</block>
+  <block id="1eb1b4685c2fe9d285454ee7c6b9b4d4" category="paragraph">スナップショットとは、元のファイルと同様にストレージ内の特定の時点におけるシステムメタデータのインスタントレコードです。一方、データバックアップはデータのスタンドアロンレプリカであり、別のシステムに保存されます。</block>
+  <block id="c8e5b3b06ab9c442ece5b33bfa4aeddd" category="list-text">* Cloud Volumes ONTAP * を使用すると、 ONTAP およびオンプレミスの Cloud Backup Service クラスタ上のボリュームからバックアップファイルを作成できます。</block>
+  <block id="be0bcc0f74be7ce5c107e92b58e4b4bf" category="list-text">リストアサービス * を使用すると、バックアップファイルから同じまたは異なる Cloud Volumes ONTAP またはオンプレミスの ONTAP クラスタに、 _volume_全体 または 1 つ以上の _files_ をリストアできます。</block>
+  <block id="c750157a3326c8c47b0dd5574b7b923c" category="inline-link">Cloud Backup Service の詳細については、こちらをご覧ください</block>
+  <block id="a73d492ed809b4e95621b5766ec1c0e6" category="paragraph"><block ref="9c48f7da20b71591fb251b589b6f3f7b" category="inline-link-rx"></block>。</block>
+  <block id="68fe02b7c89e0a68b062221666456518" category="paragraph">Cloud Backup では、次の作業環境から次のクラウドプロバイダのオブジェクトストレージにボリュームをバックアップできます。</block>
+  <block id="ba56bd930b8f7264f8739c344120414b" category="cell">デスティネーションの作業環境</block>
+  <block id="1a76327eda0e870f05bb5a97b7328298" category="cell">* ファイルの復元 *</block>
+  <block id="2d93497a3ea1b209cbf5982eb2d40323" category="cell">オンプレミスの AWS ONTAP システムに Cloud Volumes ONTAP が導入されている</block>
+  <block id="9ecea76e21268445d7d03aec4130ba29" category="cell">Google オンプレミス ONTAP システムの Cloud Volumes ONTAP</block>
+  <block id="2e4f3ca239f521712ae7145d4dd9c7ae" category="paragraph">Cloud Backup の使用に関連するコストには、リソース料金とサービス料金の 2 種類があります。</block>
+  <block id="a01f24bee9539942f7e84114df663d90" category="list-text">バックアップでは、クラウドプロバイダにオブジェクトストレージのコストを支払います。</block>
+  <block id="0de9b3cec1ef6cadb404383ceab17afa" category="paragraph">クラウドバックアップではソースボリュームの Storage Efficiency が保持されるため、クラウドプロバイダ側で、 data_after_ONTAP 効率化のコストを支払います（重複排除と圧縮が適用されたあとのデータ量が少ないほど）。</block>
+  <block id="363b52f59f5eb77ab56be0d830ca7d4a" category="list-text">ファイルのリストアの場合、クラウドプロバイダに料金を支払うのは、リストアインスタンスの実行中のみです。</block>
+  <block id="af4a8bd3d907188581e5bcc51c0d250c" category="paragraph">インスタンスは、バックアップファイルを参照してリストアする個々のファイルを探すときにのみ実行されます。コストを節約するために使用していない場合、インスタンスはオフになります。個々のファイルを復元しようとしなかった場合は、まったく展開されません。</block>
+  <block id="38b35ee8bbfd0d6062ff8f01618dd024" category="list-text">ボリュームリストアの場合、個別のインスタンスが不要なためコストは発生しません。</block>
+  <block id="f73de054e25bfcc7775ec3ac5103b4d9" category="paragraph">Cloud Backup には、お客様所有のライセンスを使用（ BYOL ）と従量課金制（ PAYGO ）の 2 つのライセンスオプションがあります。ライセンスをお持ちでない場合は、 30 日間の無償トライアルをご利用いただけます。</block>
+  <block id="150d0b73810898f0438b1126fa9d43d2" category="paragraph">30 日間の無償トライアルを使用すると、残りの無料試用日数が通知されます。無償トライアルが終了すると、バックアップは作成されなくなります。サービスを引き続き使用するには、サービスに登録するかライセンスを購入する必要があります。</block>
+  <block id="b84cc74d10ff69ffebf0cd86adfcb685" category="paragraph">PAYGO の場合は、（前述のとおり）オブジェクトストレージのコストについてクラウドプロバイダに支払い、バックアップライセンスのコストについてはネットアップに支払う必要があります。ライセンスコストは、（ ONTAP の Storage Efficiency 機能を使用する前の）ターゲットのバックアップ容量に基づいて決まります。</block>
+  <block id="4f7307b358c4b6d450aaf97581f83b75" category="paragraph">BYOL は、期間ベース（ 1 年間 / 2 年間 / 3 年間）で容量ベースであり、バックアップされた容量を（ ONTAP Storage Efficiency の前の）論理的なバックアップに基づいて、 1TB 単位で増分されます。ネットアップに料金を支払うことで、このサービスを一定期間（たとえば 1 年）利用でき、最大バックアップ容量である 10TB にしたとします。その場合、オブジェクトストレージのコストについてクラウドプロバイダの支払いが必要になります（前述した金額をクラウドプロバイダに支払う必要があります）。</block>
+  <block id="c42146479c7831fdd89d5d2b6f553151" category="paragraph">このサービスを有効にするために、 Cloud Manager のライセンスページに入力するシリアル番号が表示されます。いずれかの制限に達すると、ライセンスを更新する必要があります。を参照してください <block ref="ffd1e18b6c0db388a3037c9e54e3ca2d" category="inline-link-macro-rx"></block>。バックアップライセンスはすべての Cloud Volumes ONTAP に適用されます に関連付けられているオンプレミスシステムもサポートします <block ref="fba46008dd361377cad19b348e13bb88" category="inline-link-macro-rx"></block>。</block>
+  <block id="bac880709657cfbc1f5bc367fa3b31d4" category="paragraph">Cloud Backup BYOL ライセンスを使用している場合、 Cloud Manager はバックアップが容量の上限に近づいたときやライセンスの有効期限に近づいたときに通知します。次の通知が表示されます。</block>
+  <block id="50b80798372065ac20ad628faaa584d9" category="section-title">Cloud Backup の仕組み</block>
+  <block id="fb9f19aaf1c6e7be4b840e1bec0d8c15" category="paragraph">Cloud Volumes ONTAP またはオンプレミスの ONTAP システムでクラウドバックアップを有効にすると、サービスはデータのフルバックアップを実行します。ボリューム Snapshot はバックアップイメージに含まれません。初期バックアップ後は、追加のバックアップはすべて差分になります。つまり、変更されたブロックと新しいブロックのみがバックアップされます。</block>
+  <block id="c52853b1987e32e91e9d3bb04191312c" category="paragraph">Cloud Backup を有効にすると、システムに指定したすべてのボリュームがクラウドにバックアップされます。</block>
+  <block id="980b8316e421c517db381de491c0cc34" category="paragraph">開始時間は、各ソース ONTAP システムで設定されているタイムゾーンに基づきます。この時点では、ユーザーが指定した時刻にバックアップ操作をスケジュールすることはできません。</block>
+  <block id="fcae27d58dd5579ee96d1418e7e3ccfc" category="paragraph">Cloud Backup は、 FlexVol の読み書き可能ボリュームとデータ保護（ DP ）ボリュームをサポートしています。</block>
+  <block id="ddc789c5369e25049124726fc1e7b889" category="section-title">FabricPool 階層化ポリシーに関する考慮事項</block>
+  <block id="dc3a8adfe99c24395107422dfd5bfd96" category="paragraph">バックアップするボリュームが FabricPool アグリゲートに配置され、「 none 」以外のポリシーが割り当てられている場合に注意する必要がある点があります。</block>
+  <block id="95f7f1c8cd1f864c05a977f4b9c0a039" category="list-text">FabricPool 階層化ボリュームの最初のバックアップでは、（オブジェクトストアからの）ローカルおよびすべての階層化データをすべて取得する必要があります。この処理を実行すると、クラウドプロバイダからデータを読み取るコストが 1 回だけ増加する可能性があります。</block>
+  <block id="3b4f7847e0c80a6665d11cb27ec353f5" category="list-text">2 回目以降のバックアップは増分バックアップとなるため、影響はありません。</block>
+  <block id="418dfdb508c036c09d2c850937665491" category="list-text">ボリュームの作成時に階層化ポリシーが割り当てられていた場合、この問題は表示されません。</block>
+  <block id="6970012bbe95bd9244f695fd98b4cceb" category="list-text">ボリュームに「 all 」階層化ポリシーを割り当てる前に、バックアップの影響を考慮してください。データはすぐに階層化されるため、 Cloud Backup はローカル階層からではなくクラウド階層からデータを読み取ります。バックアップの同時処理は、クラウドオブジェクトストレージへのネットワークリンクを共有するため、ネットワークリソースが最大限まで使用されなくなった場合にパフォーマンスが低下する可能性があります。この場合、複数のネットワークインターフェイス（ LIF ）をプロアクティブに設定して、この種類のネットワークの飽和を軽減することができます。</block>
+  <block id="52e848ac4f99ded8d6355334b85fe84d" category="list-text">バックアップ処理では、オブジェクトストレージに階層化されたコールドデータは「再加熱」されません。</block>
+  <block id="9707ac3c63d1073e634797a6b20aec70" category="list-text">オンプレミスの ONTAP システムからバックアップを作成する場合は、 Cloud Manager をクラウドに導入する必要があります。オンプレミスの Cloud Manager 環境はサポートされていません。</block>
+  <block id="69a27187fcd47a221ae1f3b4125fb332" category="list-text">DP ボリュームをバックアップする場合は、ソースボリュームの SnapMirror ポリシーに定義されたルールで、許可されている Cloud Backup ポリシー名の * daily * 、 * weekly * 、または * monthly * に一致するラベルを使用する必要があります。そうしないと、その DP ボリュームのバックアップは失敗します。</block>
+  <block id="24be09787a92154d308766dc9029edfb" category="list-text">Azure では、 Cloud Volumes ONTAP の導入時に Cloud Backup を有効にすると、 Cloud Manager によってリソースグループが作成されます。このリソースグループは変更できません。Cloud Backup を有効にする際に独自のリソースグループを選択する場合は、 Cloud Volumes ONTAP を導入する際に * Cloud Backup を無効にしてから、 Cloud Backup を有効にして、 Cloud Backup の設定ページからリソースグループを選択します。</block>
+  <block id="51d2b42d10fb9034e6fa76a6a344add5" category="list-text">Cloud Volumes ONTAP システムからボリュームをバックアップする場合、 Cloud Manager 以外で作成したボリュームは自動ではバックアップされません。たとえば、 ONTAP CLI 、 ONTAP API 、または System Manager からボリュームを作成した場合、そのボリュームは自動的にはバックアップされません。これらのボリュームをバックアップするには、 Cloud Backup を無効にしてから再度有効にする必要があります。</block>
+  <block id="8eaf6e7be2358fa8dca26778fa517512" category="list-text">に登録しておきます<block ref="f7de7dff7750dc35721a2d2896f59ed1" category="inline-link-rx"></block>またはを購入したことが必要です <block ref="c942a36ea33b164eca0107356f810d5d" category="inline-link-macro-rx"></block> NetApp の Cloud Backup BYOL ライセンス。</block>
+  <block id="0d82ae6c682f20707bf865b71d8af8de" category="inline-image-macro">クラウドバックアップの設定を示すスクリーンショット。バックアップのスケジュールと保持期間を選択できます。</block>
+  <block id="b89a984d7edefa37ca9c6f6e94b59821" category="paragraph"><block ref="b89a984d7edefa37ca9c6f6e94b59821" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="59c7b4956dc02f5c1e4eac787464a0a2" category="list-text">Cloud Backup はすべての AWS リージョンでサポートされます<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>。</block>
+  <block id="6aac9f52e528decaf205492f87026411" category="list-text">Cloud Backup 従量課金制のライセンスの場合は、 AWS Marketplace で Cloud Manager サブスクリプションを選択できます。このサブスクリプションを使用すると、 Cloud Volumes ONTAP 9.6 以降（ PAYGO ）と Cloud Backup を導入できます。必要です<block ref="b57816c9d22cdef6685a3a666a34e39e" category="inline-link-rx"></block> Cloud Backup を有効にする前に、Cloud Backup の請求は、このサブスクリプションを通じて行われます。</block>
+  <block id="fa87e80450cc111dc8ef79cd0f41a6c7" category="paragraph">Cloud Backup BYOL ライセンスには、 AWS Cloud Backup サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください <block ref="ffd1e18b6c0db388a3037c9e54e3ca2d" category="inline-link-macro-rx"></block>。</block>
+  <block id="d3c08c22f9429b680a48eb245975e5c2" category="paragraph"><block ref="d3c08c22f9429b680a48eb245975e5c2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="98bb5a815c2e9dde8cb13ca898171126" category="inline-image-macro">クラウドバックアップの設定を示すスクリーンショット。スケジュールとバックアップの保持を選択できます。</block>
+  <block id="fdf9136d510f418510032a5b9cab59ab" category="paragraph"><block ref="fdf9136d510f418510032a5b9cab59ab" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b8d82fc8540bcb0b292930e59ebdd4dd" category="inline-link-macro">Cloud Backup の詳細については、こちらをご覧ください</block>
+  <block id="6f8b9d1bd691534992bbd37f132c5d0b" category="list-text"><block ref="1e3407ca0c9d84ccacca7ef06e079131" category="inline-link-macro-rx"></block>。</block>
+  <block id="06bc7b547351d4efd309cf35ef6d3371" category="list-text"><block ref="c44bf6fe937b34e74857fc98879a1af2" category="inline-link-macro-rx"></block>。</block>
+  <block id="77e8aca7c8b30742f328500afc4c4500" category="paragraph">3.8.1 リリース以降、 Cloud Volumes ONTAP でクラウドバックアップを使用するには、次の権限が必要です。 <block ref="1a4baf2117f6efb2f0967ad64e5d2063" category="inline-link-macro-rx"></block>。</block>
+  <block id="cc2e5842df58552f61cceddd0f9316e4" category="section-title">Cloud Manager 3.9.3 アップデート（ 2021 年 2 月 16 日）</block>
+  <block id="8ee683627465749519867d55bfba45bf" category="section-title">Cloud Backup Service の機能拡張</block>
+  <block id="a3f2e0180ee5e0772186cde2a02ee94d" category="list-text">Amazon S3 、 Azure Blob 、 Google Cloud Storage にあるバックアップファイルからオンプレミスの ONTAP システムにボリュームをリストアできるようになりました。</block>
+  <block id="69b746479680e122eb74c14ab33c24ad" category="list-text">リストアしたすべてのボリュームとファイルの詳細が表示される新しいリストアダッシュボードが追加されました。</block>
+  <block id="1e954ca288285ee20a8893f208d98dd1" category="inline-link-macro">リストアダッシュボード</block>
+  <block id="2c2f859d145ac2c7ed5c43efac5873b1" category="paragraph">また、ダッシュボードは、ボリュームとファイルのすべてのリストア処理を実行する際の最初の画面でもあります。を参照してください <block ref="f2e7bfcf2ec86b09329db40bf65a4051" category="inline-link-macro-rx"></block> を参照してください。以前のリリースでは、リストアボリュームオプションはバックアップダッシュボードに含まれていました。</block>
+  <block id="21d7279b93be13fe6c5d999b286365bc" category="list-text">Google Cloud の Cloud Volumes ONTAP HA システムで Cloud Backup がサポートされるようになりました。</block>
+  <block id="fc59d3bcef7917e31682ea0efb3a1f81" category="list-text"><block ref="b6eba07195eb006219de58f43b50389b" category="inline-xref-macro-rx"></block></block>
+  <block id="5dbb1583eb7a23a4ce6c15c283c799c5" category="paragraph">Cloud Compliance でオンプレミスの ONTAP システム上のボリュームを直接スキャンしない場合は、今月リリースされた新しいベータ機能を使用して、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルでコンプライアンススキャンを実行できます。オンプレミス ONTAP のバックアップを作成済みの場合も同様です を使用しています <block ref="b8d0acde88fc9a9f551a2fd4967eefb6" category="inline-link-macro-rx"></block>この新機能を使用して、これらのバックアップファイルに対して * 無料 * のコンプライアンススキャンを実行できます。</block>
+  <block id="e6bed39963de2f8a4d36a842dbfef082" category="section-title">Cloud Backup の機能拡張</block>
+  <block id="c4a41d38e94a31a5ca68c1978a8b81d9" category="list-text">新しい Cloud Volumes ONTAP システムを導入する際に、 Google Cloud 環境で Cloud Backup を設定できるようになりました。これまでは、既存の Cloud Volumes ONTAP システムでのみクラウドバックアップを設定できました。</block>
+  <block id="beab1a6a67898d5727b0235ef0cbbc3b" category="paragraph">Google Cloud の Cloud Volumes ONTAP で Cloud Backup がサポートされるようになりました。をクリックします <block ref="5d41b1376a758f886f6428b4b1fb1790" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="ff0b502b9cfdb41aa34e1ddb241321bd" category="admonition">オンプレミス ONTAP システムで次の手順を実行すると、オンプレミス ONTAP システム上のボリュームが直接スキャンされます。すでにオンプレミスからバックアップファイルを作成している場合 を使用しています <block ref="b8d0acde88fc9a9f551a2fd4967eefb6" category="inline-link-macro-rx"></block>ではなく、クラウド内のバックアップファイルに対してコンプライアンススキャンを実行できます。に進みます <block ref="d3e84adb9bc9d639fc8b095946e42d7f" category="inline-xref-macro-rx"></block> バックアップファイルをスキャンしてボリュームをスキャンします。</block>
+  <block id="f6ab22048c82f21d3a63edc613859363" category="paragraph">Cloud Compliance でオンプレミスの ONTAP システム上のボリュームを直接スキャンしない場合は、 2021 年 1 月にリリースされる新しいベータ機能によって、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルに対してコンプライアンススキャンを実行できます。したがって、を使用してバックアップファイルを既に作成している場合にも同様です <block ref="b8d0acde88fc9a9f551a2fd4967eefb6" category="inline-link-macro-rx"></block>この新機能を使用して、バックアップファイルに対してコンプライアンススキャンを実行できます。</block>
+  <block id="f67f0ebf95cc3d0e9d9218f1c7db690b" category="cell">を使用する場合は <block ref="ea2244f77d45e856ef09f638baf765fa" category="inline-link-macro-rx"></block> または <block ref="b5489e777eb3d19ba7d1a9ea0edf98bb" category="inline-link-macro-rx"></block> Cloud Volumes ONTAP では、 * サービスアカウント * を有効にして、事前定義されたストレージ管理者ロールが割り当てられたサービスアカウントを選択する必要があります。 <block ref="8e117ba05e3c9d0ddb1b2f48cec30220" category="inline-link-macro-rx"></block>。</block>
+  <block id="440dfcc60c7c21a1c797e881b2dd7646" category="list-text">* サービス * ：このシステムで使用するサービスを選択します。クラウドバックアップまたは階層化を選択するには、手順 3 でサービスアカウントを指定しておく必要があります。</block>
+  <block id="8a09a3d3461ae453d967a5bd3e145792" category="cell">を使用する場合は <block ref="17b07c647e87417b44d0044058815478" category="inline-link-macro-rx"></block> または <block ref="b5489e777eb3d19ba7d1a9ea0edf98bb" category="inline-link-macro-rx"></block> サービスを利用するには、 * Service Account * スイッチを有効にし、事前定義された Storage Admin ロールが割り当てられたサービスアカウントを選択する必要があります。</block>
+  <block id="b5489e777eb3d19ba7d1a9ea0edf98bb" category="list-text"><block ref="b5489e777eb3d19ba7d1a9ea0edf98bb" category="inline-link-macro-rx"></block></block>
+  <block id="d1a212c919168cb65e4d55094caa01b6" category="doc">バックアップファイルからのデータのリストア</block>
+  <block id="d3ed3751885c14ef01b5fef7a5b2a752" category="paragraph">ボリューム全体を同じ作業環境、同じクラウドアカウントを使用している別の作業環境、またはオンプレミスの ONTAP システムにリストアできます。を参照してください <block ref="df2256602b7f31c3a6ae9b9062068a33" category="inline-xref-macro-rx"></block>。</block>
+  <block id="c7e09e7ea3508c9a40a4033c23630004" category="paragraph">同じ作業環境内のボリューム、同じクラウドアカウントを使用している別の作業環境内のボリューム、またはオンプレミスの ONTAP システム上のボリュームにファイルをリストアできます。を参照してください <block ref="4964750c31ab2b6ddbb94a24e24c86f3" category="inline-xref-macro-rx"></block>。</block>
+  <block id="65fba989fe7e3d4f06e7b1a4c8b66ff0" category="section-title">リストアダッシュボード</block>
+  <block id="c7219246e7d50fc1acb3d0790783f9cc" category="paragraph">リストアダッシュボードにアクセスするには、 Cloud Manager の上部にある * リストア * タブをクリックするか、サービスパネルからリストアサービスの * アクティブ化 * または * 有効化 * ボタンをクリックします。</block>
+  <block id="be107d390a542113268a768349067151" category="admonition">少なくとも 1 つの作業環境に対して Cloud Backup Service がアクティブ化されている必要があります。</block>
+  <block id="a7ded97655ce72a4e3d6462e43d6c62e" category="inline-image-macro">リストアダッシュボードには、ボリュームとファイルをリストアするためのボタンと、リストアされたすべてのデータの表示方法が表示されます。</block>
+  <block id="252cbdb7308a8672609fcf169bfcc4ad" category="paragraph"><block ref="252cbdb7308a8672609fcf169bfcc4ad" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fce454bcce326060f47b7bfbe4e8cb82" category="paragraph">リストアダッシュボードには、ボリュームとファイルをリストアするためのボタンがあります。[ ボリュームの復元 ] または [ ファイルの復元 ] ボタンをクリックすると、ウィザードが起動され、データを復元する手順が示されます。</block>
+  <block id="cafb65e630f4862641b4ea5e22310610" category="paragraph">ダッシュボードには、以前のリストア操作の履歴が必要な場合に備えて、リストアしたすべてのボリュームとすべてのファイルのリストも表示されます。リストアされた各ボリュームまたはファイルの行を展開すると、ボリュームまたはファイルのソースとデスティネーションの場所に関する詳細を確認できます。</block>
+  <block id="f62775b3b32ffabd94266a5634ac4a04" category="section-title">バックアップファイルからのボリュームのリストア</block>
+  <block id="04aac6f0e05b132d75f8fa93cdb05cb8" category="paragraph">バックアップファイルからボリュームをリストアすると、 Cloud Manager はバックアップのデータを使用して _new_volume を作成します。データは、同じ作業環境内のボリューム、またはソース作業環境と同じクラウドアカウントにある別の作業環境にリストアできます。オンプレミスの ONTAP システムにファイルをリストアすることもできます。</block>
+  <block id="3ef38988ab4af2fbd6e65089f3a0bf1f" category="paragraph">リストアするボリュームの名前と、新規にリストアされたボリュームの作成に使用するバックアップファイルの日付を把握しておく必要があります。</block>
+  <block id="51632d87d6aa63de04c05aa2bae611cc" category="list-text">[ * リストア * ] タブを選択します。</block>
+  <block id="689fe1187ef68daef22b11c4ddd21426" category="list-text">［ * リストアボリューム * ］ をクリックします。</block>
+  <block id="9381dff0dbb7f66b351ff304e7dae8f4" category="inline-image-macro">Restore Dashboard から Restore Volumes （ボリュームの復元）ボタンを選択するスクリーンショット。</block>
+  <block id="0077a889ccca275b521d8fa2e99bc482" category="paragraph"><block ref="0077a889ccca275b521d8fa2e99bc482" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="44db0ff089bd5e4e0e080e037ddac845" category="list-text">[ ソースの選択 ] ページで ' リストアするボリュームのバックアップ・ファイル（スナップショット）に移動しますリストアする日付とタイムスタンプの * Working Environment * 、 * Volume * 、および * Snapshot * を選択します。</block>
+  <block id="63b203673a32edcbc5565a42ddf8f2bf" category="inline-image-macro">リストアする作業環境、ボリューム、およびボリューム Snapshot を選択するスクリーンショット。</block>
+  <block id="9bbfcfb2f07224c049f3c596959917fc" category="paragraph"><block ref="9bbfcfb2f07224c049f3c596959917fc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="23fa18b5a99eb2f784751356513f7961" category="list-text">[ リストア先の選択 ] ページで、ボリュームをリストアする * 作業環境 * を選択します。</block>
+  <block id="aaf0dd17390ced43eaa354f3660fd328" category="inline-image-macro">リストアするボリュームのデスティネーション作業環境の選択のスクリーンショット。</block>
+  <block id="dbbed6352fa8a25df439a79f12dff6ff" category="paragraph"><block ref="dbbed6352fa8a25df439a79f12dff6ff" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="428717688bc831d4b76987ab81a8cda9" category="list-text">オンプレミスの ONTAP システムを選択し、オブジェクトストレージへのクラスタ接続をまだ設定していない場合は、追加情報を入力するように求められます。</block>
+  <block id="5e50a54e937f16ef14294a0064135227" category="list-text">Amazon S3 からリストアする場合は、デスティネーションボリュームが配置されている ONTAP クラスタの IPspace と、オブジェクトストレージへのアクセスに必要な AWS Access Key および Secret Key を入力します。</block>
+  <block id="1d6668f1da3f3283d445855e6b6b3ded" category="list-text">Google Cloud Storage からリストアする場合は、デスティネーションボリュームが配置されている ONTAP クラスタの IPspace と、オブジェクトストレージへのアクセスに必要なアクセスキーとシークレットキーを入力します。</block>
+  <block id="1843302c008bff630aa8997ab5a6d2b8" category="list-text">ボリュームを配置する Storage VM を選択し、リストアするボリュームに使用する名前を入力します。デフォルトでは、 * &lt;source_volume_name&gt; _ Restore * がボリューム名として使用されます。</block>
+  <block id="6f3fa042b9873aa40b44f19c1a8a5f35" category="paragraph"><block ref="6f3fa042b9873aa40b44f19c1a8a5f35" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad313830f2de0ade1eb595514b56a3b2" category="paragraph">オンプレミスの ONTAP システムにボリュームをリストアする際に、ボリュームの容量に使用するアグリゲートを選択できます。</block>
+  <block id="331e823e611c54b97405788cbceb2421" category="list-text">リストアの進行状況を確認できるように、 * リストア * をクリックするとリストアダッシュボードに戻ります。</block>
+  <block id="814233a40dee036bb49ac4a1a01e109d" category="paragraph">Cloud Manager は、選択したバックアップに基づいて新しいボリュームを作成します。可能です <block ref="4affc3a285c9e4fa69ae103b228c79cb" category="inline-link-macro-rx"></block> 必要に応じて。</block>
+  <block id="2ddb5f4e035026aad1f26b7913815ace" category="paragraph">ボリュームから数個のファイルのみをリストアする必要がある場合は、ボリューム全体をリストアする代わりに、個々のファイルをリストアすることもできます。同じ作業環境内のボリューム、または同じクラウドアカウントを使用している別の作業環境にファイルをリストアできます。オンプレミスの ONTAP システムにファイルをリストアすることもできます。</block>
+  <block id="fa99e1befdce4df04f0828d5c6bd8c00" category="paragraph">バックアップファイル内のボリュームから一度に最大 8 個のファイルをリストアできます。選択したデスティネーションボリュームにすべてのファイルがリストアされます。8 個以上のファイルをリストアする必要がある場合は、リストアプロセスをもう一度実行できます。</block>
+  <block id="92bf9f8343e1b91f1b0af3db3545c80a" category="admonition">バックアップファイルから個々のファイルをリストアする場合は、別のリストアインスタンス / 仮想マシンを使用します。</block>
+  <block id="c7c8552e901417195541087cc58cacbc" category="section-title">ファイルのリストアプロセス</block>
+  <block id="3f755e2a0ffc5e258ecddca56b0a8ffd" category="list-text">ボリュームから 1 つ以上のファイルを復元する場合は、 [ 復元 ] タブをクリックし、 [* ファイルの復元 *] をクリックして、ファイルが存在するバックアップファイル（またはファイル）を選択します。</block>
+  <block id="9c963e83113a07eeaf1d82065f433a42" category="paragraph">* 注：リストアインスタンスは、ファイルを初めてリストアするときにクラウドプロバイダの環境に導入されます。</block>
+  <block id="6676184bc154f348d5794457f2ad2f6d" category="list-text">バックアップからリストアするファイル（複数可）を選択します。</block>
+  <block id="dfa6a50b10edbdf8a3ed1ba311814487" category="list-text">ファイル（作業環境、ボリューム、およびフォルダ）をリストアする場所を選択し、 * リストア * をクリックします。</block>
+  <block id="f080b4cea39ca650313b423134071bb7" category="list-text">ファイルがリストアされ、リストアインスタンスがシャットダウンされて、一定時間非アクティブになったあとのコストが削減されます。</block>
+  <block id="fd9576613fd200fb7c2f3068b12cac22" category="paragraph">を参照してください <block ref="7652fd4830c5452ed246f0063fa7d468" category="inline-link-macro-rx"></block> Cloud Backup Service と Restore インスタンスのコストを計算します。</block>
+  <block id="ffc6e434091ae2664cbbe027fc45747f" category="paragraph">インスタンスの名前は _Cloud-Restore-Instance_with Your Account ID Concatenated です。例： _Cloud-Restore-Instance-MyAccount_ 。</block>
+  <block id="0f1d2b878133c729458fa7865bb61688" category="paragraph">Cloud Restore を導入する前に、次の前提条件を確認し、サポートされている構成であることを確認してください。</block>
+  <block id="d982cac54b4d036ebdff8d7e42f8255e" category="paragraph">AWS でファイルリストアを使用する場合、 Cloud Manager に権限を提供する IAM ロールに最新の S3 権限を含める必要があります<block ref="0dc063d42cd9e31c0e2c7df9df595c9f" category="inline-link-rx"></block> を参照してください <block ref="0e64101f92540a8a8ddbf74b6c841930" category="inline-link-macro-rx"></block>。</block>
+  <block id="2596c79f9414dd6942c849e943b0ba8f" category="paragraph">また、ファイルをリストアするには、ポリシーで次の権限が必要です。</block>
+  <block id="e96390c419fb8edb7ec65eaddf677039" category="section-title">アウトバウンドインターネットアクセスを有効にします</block>
+  <block id="620eeb24a292455cb9e08ab257db28c1" category="paragraph">Cloud Restore にはアウトバウンドのインターネットアクセスが必要です。仮想ネットワークまたは物理ネットワークでインターネットアクセスにプロキシサーバを使用している場合は、インスタンスがアウトバウンドのインターネットアクセスを使用して次のエンドポイントに接続していることを確認してください。クラウドに Cloud Restore を導入する場合、 Connector と同じサブネットに配置されます。</block>
+  <block id="9b41743569451589ff1919ce5c17c719" category="paragraph">AWS と Azure のどちらに Cloud Restore を導入するかに応じて、該当する表を確認します。</block>
+  <block id="abd528273c052b18efee9184372ad0c4" category="cell">\ http://amazonlinux.us-east-1.amazonaws.com/2/extras/docker/stable/x86_64/4bf88ee77c395ffe1e0c3ca68530dfb3a683ec65a4a1ce9c0ff394be50e922b2/</block>
+  <block id="9a9a0a0bd8201ce1a6abd4ab55997994" category="cell">クラウドリストアインスタンス AMI 用の CentOS パッケージ。</block>
+  <block id="b514e4afd879933858e6a38ee697d64e" category="cell">¥ http://cloudmanagerinfraprod.azurecr.io ¥ https://cloudmanagerinfraprod.azurecr.io</block>
+  <block id="848e213aeb7ca5e9d922c3b2643accef" category="cell">Cloud Restore Instance のイメージリポジトリ。</block>
+  <block id="a73bcfe8435885a62c0548dfb715f787" category="paragraph">* Azure 導入に必要なエンドポイント： *</block>
+  <block id="ca83bae8f9f49c6390873ec116b8186f" category="cell">¥ http://olcentgbl.trafficmanager.net ¥ https://olcentgbl.trafficmanager.net</block>
+  <block id="b024a96f5e5c6b52b7a7a1c12ac5dd25" category="cell">Cloud Restore 仮想マシン用の CentOS パッケージが用意されています。</block>
+  <block id="b56b6d868d598a9ea5cbe083305213da" category="paragraph">ボリュームバックアップからボリュームに最大 8 つのファイルをリストアする手順は、次のとおりです。ボリュームの名前と、ファイルのリストアに使用するバックアップファイルの日付を確認しておく必要があります。この機能では、ライブブラウズを使用して、バックアップファイル内のディレクトリとファイルのリストを表示できます。</block>
+  <block id="7e95d0bfd6c2ff3fe76ead734eb7f051" category="paragraph"><block ref="7e95d0bfd6c2ff3fe76ead734eb7f051" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e11337b319ee3ee105b7886c68558d05" category="list-text">[ ソースの選択 ] ページで ' リストアするファイルを含むボリュームのバックアップ・ファイル（スナップショット）に移動しますファイルのリストア元の日付とタイムスタンプが指定された * Working Environment * 、 * Volume * 、および * Snapshot * を選択します。</block>
+  <block id="fd0d479ff0135e407a463fe915b4a8d0" category="paragraph">* 注：リストアインスタンスは、ファイルを初めてリストアするときにクラウドプロバイダの環境に導入されるため、初回のリストアには数分かかることがあります。</block>
+  <block id="36de99bbac073ad5488238f11556122d" category="list-text">保存先の選択ページで、ファイルを復元する * 作業環境 * を選択します。</block>
+  <block id="06a2e6dd5ed52afcde875bbdcd1bfa62" category="list-text">同じ宛先作業環境とを選択した場合 ソースファイルが置かれていたボリューム （によって識別されます <block ref="412d56991031f54a67daef792fde4612" category="inline-image-macro-rx" type="image"></block> アイコン）をクリックすると、「ソースフォルダーパスを保持」を選択して、ソース構造内に存在していたのと同じフォルダーにファイルまたはすべてのファイルを復元できます。同じフォルダとサブフォルダがすべて存在している必要があります。フォルダは作成されません。</block>
+  <block id="156338817692a044f95ba61acd72b727" category="paragraph">リストア・インスタンスは、アクティブなときにのみコストが発生するように、一定の非アクティブ期間後にシャットダウンされます。</block>
+  <block id="76cc643fe4b15093dc364b8dfa0e6b0c" category="admonition">2021 年 1 月にリリースされたベータ版の機能により、次のことが可能になります 作成したバックアップファイルに対して、 Compliance スキャンを実行して空き容量を確保します を使用して作成したオンプレミスの ONTAP ボリュームから <block ref="b8d0acde88fc9a9f551a2fd4967eefb6" category="inline-link-macro-rx"></block>）。これにより、オンプレミスの ONTAP ボリュームを Cloud Compliance で直接スキャンするか、またはボリュームから作成されたバックアップファイルをスキャンするかを選択できます。</block>
+  <block id="9b23d101b07998a78adb9c900793e8aa" category="paragraph">2021 年 1 月にリリースされたベータ機能を使用すると、バックアップされたボリュームに対して、オンプレミスシステムからコンプライアンススキャンを実行できます。通常、コンプライアンススキャンでは最大 1TB のデータを解放し、サービスのコストは 1TB を超えるデータに対して適用されます。オンプレミスボリュームにバックアップとコンプライアンスを組み合わせる場合、オンプレミスボリューム上のスキャンのコストは無料です。詳細については、こちらをご覧ください <block ref="7b055a4194048bee99ffa1e23648738e" category="inline-link-macro-rx"></block> ビジネスアプリケーションとクラウド環境のプライバシーを確保できます。</block>
+  <block id="dbb8a55678a56ccf8f35af977f63daac" category="list-text">に登録しておきます<block ref="ed2bd103cf11c0e7ce10fc7d6ceb1849" category="inline-link-rx"></block> または<block ref="6852aad328076799d62e6f2ad06efc0f" category="inline-link-rx"></block> Cloud Manager Marketplace のバックアップ製品またはを購入済みである <block ref="c942a36ea33b164eca0107356f810d5d" category="inline-link-macro-rx"></block> NetApp の Cloud Backup BYOL ライセンス。</block>
+  <block id="daacb0c34736bf5d55dd5e416b901407" category="list-text">バックアップを格納するオブジェクトストレージスペース用の有効なクラウドプロバイダサブスクリプションが必要です。</block>
+  <block id="40115cccee68e1aceb7655cd25454ef0" category="section-title">システムで Cloud Backup を有効にします</block>
+  <block id="dff65874c0306278a6e03f5e60b8eb05" category="paragraph">* 注： * オンプレミス ONTAP システムから Google Cloud Storage へのバックアップは、現在 UI ではサポートされていません。</block>
+  <block id="0776216c82a06a05105796b2a10375ae" category="inline-image-macro">クラウドバックアップの設定を示すスクリーンショット。バックアップのスケジュールと保持期間を選択できます。</block>
+  <block id="a6267aa9363ea23a39e2827d0d338a8f" category="paragraph"><block ref="a6267aa9363ea23a39e2827d0d338a8f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0c695f74572e269efbc1314f5826980e" category="paragraph">Cloud Backup をセットアップすると、 IPspace で使用するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。</block>
+  <block id="36db61467942d9ce25e3a39078f0567d" category="list-text">Cloud Backup PAYGO ライセンスの場合は、へのサブスクリプションが必要です<block ref="ed2bd103cf11c0e7ce10fc7d6ceb1849" category="inline-link-rx"></block> または<block ref="6852aad328076799d62e6f2ad06efc0f" category="inline-link-rx"></block> Cloud Backup を有効にする前に、 Cloud Manager Marketplace のバックアップサービスを利用できます。Cloud Backup の請求は、このサブスクリプションを通じて行われます。</block>
+  <block id="3336f22154f544c35e39768ba2365ad1" category="paragraph">また、バックアップを格納するオブジェクトストレージスペースについて、クラウドプロバイダからのサブスクリプションが必要になります。</block>
+  <block id="f893e0ec043f583806862ce90932d5e4" category="paragraph">Amazon S3 を使用している場合は、 Cloud Manager が S3 バケットにアクセスするための権限を設定する必要があります。また、オンプレミスの ONTAP クラスタが S3 バケットにアクセスできるように権限を設定する必要があります。</block>
+  <block id="76b97950c5655ff7ebda9826d4ed6d82" category="paragraph">Cloud Backup が ONTAP クラスタにアクセスキーを渡します。クレデンシャルは Cloud Backup Service には保存されません。</block>
+  <block id="89096417437822e0dc275ea833d99200" category="section-title">Cloud Backup を有効にしています</block>
+  <block id="0903ab68c41a6bc55309dd47297a38bb" category="paragraph">Cloud Backup は、オンプレミスの作業環境からいつでも直接有効にできます。</block>
+  <block id="aba8ff0018e388052c4b0866fa0895f2" category="list-text">プロバイダを選択し、プロバイダの詳細を入力します。</block>
+  <block id="6d2433d4411ee7dc48f27746dd507d8b" category="inline-image-macro">バッキング時にクラウドプロバイダの詳細を示すスクリーンショット オンプレミスクラスタから Azure Blob にボリュームをバックアップ 階層</block>
+  <block id="61cc855499278226a5e387fcea04c5e9" category="paragraph"><block ref="61cc855499278226a5e387fcea04c5e9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="28e3282a932250a05feb9a0398ac2d38" category="inline-image-macro">バッキング時にクラウドプロバイダの詳細を示すスクリーンショット オンプレミスクラスタから AWS S3 へ、複数のボリュームをバックアップできます 階層</block>
+  <block id="181adab1adfe0d8f682490df6492e05f" category="paragraph"><block ref="181adab1adfe0d8f682490df6492e05f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e1bba09cbe5efe3bebe61f9c17015ce4" category="paragraph"><block ref="e1bba09cbe5efe3bebe61f9c17015ce4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e536efba2bf6d69c1ce10ac1e4b54bb4" category="list-text">Activate * をクリックすると、 Cloud Backup はボリュームの初期バックアップの作成を開始します。</block>
+  <block id="5b9405dc8ba491c7808839e138c5d6f8" category="paragraph">Cloud Backup は、オンプレミスの ONTAP システムからボリュームをバックアップします。必要に応じて、 Cloud Compliance はバックアップしたボリュームに対してコンプライアンススキャンを実行します。</block>
+  <block id="19592537bd50c63100e725f5747acd5b" category="admonition">Cloud Compliance で準拠スキャンを開始するにはバックアップの作成を完了する必要があるため、スキャン結果はすぐには使用できません。</block>
+  <block id="58732fe14c5a5f41379d15948f238d5b" category="summary">Cloud Volumes ONTAP BYOL システムライセンスを追加して、容量を追加し、既存のシステムライセンスを更新し、クラウドバックアップの BYOL ライセンスを管理します。</block>
+  <block id="1b9c804e51ed46be07c65d2c1e4fa799" category="paragraph">Cloud Manager によってライセンスが追加または更新され、 Cloud Backup Service がアクティブになります。</block>
+  <block id="aff6def6123d0e8f26461c52363dc459" category="summary">各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Cloud Backup でも利用できます。</block>
+  <block id="ac985ea9c4d878384361c6105a375a9d" category="paragraph">BYOL バックアップライセンスを使用すると、一定期間、および最大容量のバックアップスペースの間、 Cloud Backup を使用するライセンスをネットアップから購入できます。いずれかの制限に達すると、ライセンスを更新する必要があります。</block>
+  <block id="681f1084166f20d74471209f7ae3801c" category="inline-link-macro">Cloud Backup BYOL ライセンスの詳細については、こちらをご覧ください</block>
+  <block id="026eaad4af2341087f3379f38245f2d3" category="paragraph"><block ref="35d7c3c904ba1c00e82974a26d8119ce" category="inline-link-macro-rx"></block>。</block>
+  <block id="72a44ad6662d99c1bfe38460cc304548" category="list-text">に登録しておきます<block ref="ae8f064f2fed74765b33e522bc6c41fc" category="inline-link-rx"></block>またはを購入したことが必要です <block ref="c942a36ea33b164eca0107356f810d5d" category="inline-link-macro-rx"></block> NetApp の Cloud Backup BYOL ライセンス。</block>
+  <block id="534e7b1b233af6dcaf3fe6265a36586b" category="list-text">新しいシステム： Cloud Backup は、新しい作業環境ウィザードを完了すると有効にできます。</block>
+  <block id="0a0a678be4028579aac1f022ed126971" category="paragraph"><block ref="0a0a678be4028579aac1f022ed126971" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="922af6003a9417d54e4d884c157c528a" category="list-text">Cloud Backup はすべての GCP リージョンでサポートされます<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>。</block>
+  <block id="84b8729446a0cfffe4c907caff75e52e" category="list-text">クラウドバックアップは従量課金制のライセンスで、を使用したサブスクリプション<block ref="c921b6958183cffae0deb8e86a63c6cc" category="inline-link-rx"></block> は、 Cloud Backup を有効にする前に必要です。Cloud Backup の請求は、このサブスクリプションを通じて行われます。 <block ref="10f6b1d03ee38410a6c00515b4c72267" category="inline-link-macro-rx"></block>。</block>
+  <block id="ea74a3e551477f4c724b4b557921b56f" category="paragraph">Cloud Backup は、作業環境ウィザードで Cloud Volumes ONTAP システムを新規に作成したときに有効にすることができます。</block>
+  <block id="276578d3dfe58397aa5e9814f7b5af44" category="list-text">* サービス *: Cloud Backup Service は有効のままにして、 [* 続行 ] をクリックします。</block>
+  <block id="94474979103e4af7a9b3b578a338878e" category="paragraph"><block ref="94474979103e4af7a9b3b578a338878e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="44f7ee201aadf50852f08554367ab6cf" category="paragraph">Cloud Backup はシステム上で有効になり、毎日作成したボリュームをバックアップし、最新の 30 個のバックアップコピーを保持します。</block>
+  <block id="fd45898f75263130be297845518a221f" category="paragraph">Cloud Backup は、作業環境からいつでも直接有効にすることができます。</block>
+  <block id="bcaf895faad537c162733ea631ba6ea4" category="paragraph">Cloud Manager Cloud Backup Service を使用して、オンプレミスの ONTAP システムからクラウドの低コストのオブジェクトストレージにデータをバックアップできます。このサービスは、クラウドデータの保護と長期アーカイブのためのバックアップとリストアの機能を提供します。</block>
 </blocks>

@@ -36,7 +36,7 @@ Cloud Manager を使用すると、 IT エキスパートとクラウドアー�
 * link:task_manage_cvs_gcp.html["Cloud Volumes Service for Google Cloud"]
 * link:task_getting_started_compliance.html["クラウドコンプライアンス"]
 * link:task_gfc_getting_started.html["グローバルファイルキャッシュ"]
-* link:concept_backup_to_cloud.html["クラウドへのバックアップ"]
+* link:concept_backup_to_cloud.html["クラウドバックアップ"]
 * link:concept_compute.html["Cloud Analyzer"]
 * link:concept_cloud_tiering.html["クラウド階層化"]
 * link:task_getting_started_monitoring.html["Cloud Insights の機能です"]

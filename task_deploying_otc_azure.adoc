@@ -71,7 +71,7 @@ video::video_subscribing_azure.mp4[width=848,height=480]
 . * サービス *: サービスを有効にしておくか、 Cloud Volumes ONTAP で使用しない個々のサービスを無効にします。
 +
 ** link:concept_cloud_compliance.html["Cloud Compliance の詳細はこちらをご覧ください"]。
-** link:concept_backup_to_cloud.html["クラウドへのバックアップの詳細については、こちらをご覧ください"]。
+** link:concept_backup_to_cloud.html["Cloud Backup の詳細については、こちらをご覧ください"]。
 ** link:concept_monitoring.html["監視サービスの詳細については、こちらをご覧ください"]。
 
 
@@ -86,7 +86,7 @@ video::video_subscribing_azure.mp4[width=848,height=480]
 +
 NetApp Support Site のアカウントは、従量課金制の場合は任意ですが、 BYOL システムの場合は必須です。 link:task_adding_nss_accounts.html["ネットアップサポートサイトのアカウントを追加する方法について説明します"]。
 
-. * 事前構成されたパッケージ *: パッケージの 1 つをシェル化して Cloud Volumes ONTAP システムを迅速に配備するか、 * 独自の構成を作成 * をクリックします。
+. * 構成済みパッケージ * ： Cloud Volumes ONTAP システムを迅速に導入するパッケージを 1 つ選択するか、 * 独自の構成を作成 * をクリックします。
 +
 いずれかのパッケージを選択した場合は、ボリュームを指定してから、設定を確認して承認するだけで済みます。
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_backup_to_gcp.html 
-keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, gcp, google cloud, back up volumes, Backup to Cloud, cloud backup service 
+keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, gcp, google cloud, back up volumes, Cloud Backup, cloud backup service 
 summary: Cloud Volumes ONTAP から Google Cloud ストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。 
 ---
 = Google Cloud Storage へのデータのバックアップ
@@ -28,17 +28,17 @@ Cloud Volumes ONTAP から Google Cloud Storage へのデータのバックア�
 * GCP で Cloud Volumes ONTAP 9.7P5 以降を実行しています。
 * バックアップを保存するストレージスペースの有効な GCP サブスクリプションがあります。
 * Google Cloud Project に、事前定義された Storage Admin ロールを持つサービスアカウントがあります。
-* に登録しておきます https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["Cloud Manager Marketplace のバックアップソリューション"^]またはを購入したことが必要です link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["アクティブ化されます"^] NetApp の Backup to Cloud BYOL ライセンス。
+* に登録しておきます https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["Cloud Manager Marketplace のバックアップソリューション"^]またはを購入したことが必要です link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
 
 
 
 
-==== 新規または既存のシステムでクラウドへのバックアップを有効化
+==== 新規または既存のシステムで Cloud Backup を有効にします
 
-* 新しいシステム：新しい作業環境ウィザードが完了したら、クラウドへのバックアップを有効にできます。
-* 既存のシステム：作業環境を選択し、右パネルのクラウドへのバックアップサービスの横にある * アクティブ化 * をクリックして、セットアップウィザードに従います。
+* 新しいシステム： Cloud Backup は、新しい作業環境ウィザードを完了すると有効にできます。
+* 既存のシステム：作業環境を選択し、右パネルの Cloud Backup Service の横にある * Activate * をクリックして、セットアップ・ウィザードに従います。
 +
-image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに使用できるクラウドへのバックアップのアクティブ化ボタンを示すスクリーンショット。"]
+image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに表示される Cloud Backup Activate ボタンのスクリーンショット"]
 
 
 
@@ -60,7 +60,7 @@ image:screenshot_backup_provider_settings_gcp.png["GCP にインストールさ�
 デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。週単位または月単位のバックアップに変更するか、システム定義のポリシーの中からいくつかのオプションを選択します。
 
 [role="quick-margin-para"]
-image:screenshot_backup_policy_gcp.png["クラウドへのバックアップ設定を示すスクリーンショット。この機能を有効または無効にして、バックアップの保持期間を選択できます。"]
+image:screenshot_backup_policy_gcp.png["クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"]
 
 
 
@@ -86,11 +86,11 @@ Select Volumes （ボリュームの選択）ページで、バックアップ�
 Google Cloud ストレージへのボリュームのバックアップを開始する前に、次の要件を参照して、サポートされる構成になっていることを確認してください。
 
 サポートされている ONTAP のバージョン:: Cloud Volumes ONTAP 9.7P5 以降
-サポートされる GCP リージョン:: クラウドへのバックアップは、すべての GCP リージョンでサポートされています https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。
+サポートされる GCP リージョン:: Cloud Backup はすべての GCP リージョンでサポートされます https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。
 ライセンス要件::
 +
 --
-Backup to Cloud BYOL ライセンスを利用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["バックアップ BYOL ライセンスを追加および更新する"^]。
+Cloud Backup BYOL ライセンスを使用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["バックアップ BYOL ライセンスを追加および更新する"^]。
 
 また、バックアップを保存するストレージスペースの Google サブスクリプションが必要です。
 
@@ -100,9 +100,9 @@ GCP サービスアカウント:: 事前定義された Storage Admin ロール�
 
 
 
-== 新しいシステムでクラウドへのバックアップを有効にする
+== 新しいシステムでの Cloud Backup の有効化
 
-クラウドへのバックアップは、作業環境ウィザードの完了時に有効にして、新しい Cloud Volumes ONTAP システムを作成することができます。
+Cloud Backup は、作業環境ウィザードで Cloud Volumes ONTAP システムを新規に作成したときに有効にすることができます。
 
 サービスアカウントがすでに設定されている必要があります。Cloud Volumes ONTAP システムの作成時にサービスアカウントを選択しなかった場合は、システムをオフにして、 GCP コンソールから Cloud Volumes ONTAP にサービスアカウントを追加する必要があります。
 
@@ -126,27 +126,27 @@ image:screenshot_backup_to_gcp_new_env.png["作業環境ウィザードでサー
 
 
 
-. * サービス * ：クラウドへのバックアップサービスは有効のままにして、 * 続行 * をクリックします。
+. * サービス *: Cloud Backup Service は有効のままにして、 [* 続行 ] をクリックします。
 +
-image:screenshot_backup_to_gcp.png["は、作業環境ウィザードのクラウドにバックアップするオプションを示しています。"]
+image:screenshot_backup_to_gcp.png["に、作業環境ウィザードの Cloud Backup オプションを示します。"]
 
 . ウィザードの各ページを設定し、システムを導入します を参照してください link:task_deploying_gcp.html["GCP での Cloud Volumes ONTAP の起動"]。
 
 
-クラウドへのバックアップはシステムで有効になり、毎日作成したボリュームがバックアップされ、最新の 30 個のバックアップコピーが保持されます。
+Cloud Backup はシステム上で有効になり、毎日作成したボリュームをバックアップし、最新の 30 個のバックアップコピーを保持します。
 
 可能です link:task_managing_backups.html["追加ボリュームのバックアップを開始および停止するか、を変更します バックアップスケジュール"^] また、次のことも可能です link:task_restore_backups.html["バックアップファイルからボリューム全体をリストアする"^]。
 
 
 
-== 既存のシステムでクラウドへのバックアップを有効にする
+== 既存のシステムでの Cloud Backup の有効化
 
-クラウドへのバックアップは、作業環境からいつでも直接有効にすることができます。
+Cloud Backup は、作業環境からいつでも直接有効にすることができます。
 
 .手順
-. 作業環境を選択し、右パネルのクラウドへのバックアップサービスの横にある * アクティブ化 * をクリックします。
+. 作業環境を選択し、右パネルの Cloud Backup Service の横にある * Activate * をクリックします。
 +
-image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに使用できるクラウドにバックアップする設定ボタンを示すスクリーンショット。"]
+image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに使用できるクラウドバックアップ設定ボタンを示すスクリーンショット。"]
 
 . Google Cloud Storage バケットをバックアップ用に作成する Google Cloud Project を選択し、 * Continue * をクリックします。これは、 Cloud Volumes ONTAP システムが配置されているプロジェクトとは異なる場合があります。
 +
@@ -157,7 +157,7 @@ image:screenshot_backup_provider_settings_gcp.png["GCP にインストールさ�
 
 . [_Define Policy_] ページで、バックアップスケジュールと保持の値を選択し、 [* Continue * ] をクリックします。
 +
-image:screenshot_backup_policy_gcp.png["クラウドへのバックアップ設定を示すスクリーンショット。この機能を有効または無効にして、バックアップの保持期間を選択できます。"]
+image:screenshot_backup_policy_gcp.png["クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"]
 
 +
 を参照してください link:concept_backup_to_cloud.html#the-schedule-is-daily-weekly-monthly-or-a-combination["既存のポリシーのリスト"^]。
@@ -173,6 +173,6 @@ image:screenshot_backup_select_volumes.png["バックアップするボリュー
 
 
 
-クラウドへのバックアップは、選択した各ボリュームの初期バックアップの作成を開始します。
+Cloud Backup は、選択した各ボリュームの初期バックアップの作成を開始します。
 
 可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です link:task_restore_backups.html["バックアップファイルからボリューム全体をリストアする"^]。

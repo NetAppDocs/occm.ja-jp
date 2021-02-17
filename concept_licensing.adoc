@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept_licensing.html 
-keywords: licenses, licensing, byol, license, subscription, renewal, expire, netapp support site, account, credentials, file, license file, upload, nlf, backup to cloud license, byol backup, license for backup to cloud 
-summary: 各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Backup to Cloud でも利用できます。 
+keywords: licenses, licensing, byol, license, subscription, renewal, expire, netapp support site, account, credentials, file, license file, upload, nlf, cloud backup license, byol backup, license for cloud backup 
+summary: 各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Cloud Backup でも利用できます。 
 ---
 = ライセンス
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: 各 Cloud Volumes ONTAP BYOL システムには、アクティブなサ
 
 
 [role="lead"]
-各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Backup to Cloud でも利用できます。
+各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Cloud Backup でも利用できます。
 
 
 
@@ -62,6 +62,6 @@ Cloud Manager がセキュアなインターネット接続経由でライセン
 
 == BYOL バックアップライセンス
 
-BYOL バックアップライセンスを使用すると、一定期間、および最大容量のバックアップスペースのために、ネットアップからライセンスを購入して Backup to Cloud を使用できます。いずれかの制限に達すると、ライセンスを更新する必要があります。
+BYOL バックアップライセンスを使用すると、一定期間、および最大容量のバックアップスペースの間、 Cloud Backup を使用するライセンスをネットアップから購入できます。いずれかの制限に達すると、ライセンスを更新する必要があります。
 
-link:concept_backup_to_cloud.html#cost["Backup to Cloud BYOL ライセンスの詳細については、こちらをご覧ください"]。
+link:concept_backup_to_cloud.html#cost["Cloud Backup BYOL ライセンスの詳細については、こちらをご覧ください"]。
