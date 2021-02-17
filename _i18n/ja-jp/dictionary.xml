@@ -4013,14 +4013,9 @@
   <block id="b507e744b3feb3a95c8e5ee463f106bc" category="cell">オプション： AutoSupport を設定します</block>
   <block id="dec0306e681fc720cf31bc4851ebcee4" category="inline-link">ONTAP 9 システムアドミニストレーションリファレンス</block>
   <block id="4793f55c9ddc1df3e1bd418ce79dd48d" category="cell">AutoSupport は、システムの状態をプロアクティブに監視し、デフォルトでメッセージをネットアップのテクニカルサポートに自動的に送信します。インスタンスを起動する前にアカウント管理者がプロキシサーバを Cloud Manager に追加していた場合、 Cloud Volumes ONTAP はそのプロキシサーバを AutoSupport メッセージに使用するように設定されます。AutoSupport をテストして、メッセージを送信できることを確認する必要があります。手順については、 System Manager のヘルプまたはを参照してください<block ref="1ed61b0d5cafb647813ed64eeb57bd3f" category="inline-link-rx"></block>。</block>
-  <block id="4322548738d07abb5c71e71e6edf9de6" category="cell">オプション： Cloud Manager を AutoSupport プロキシとして設定</block>
-  <block id="24eb75735ced95cdde78511d41926287" category="paragraph">プロキシサーバで AutoSupport メッセージを送信する必要がある環境では、プロキシとして機能するように Cloud Manager を設定できます。Cloud Manager の設定は、インターネットアクセス以外は必要ありません。Cloud Volumes ONTAP の CLI にアクセスして、次のコマンドを実行するだけです。</block>
   <block id="cdbe8b4211a96288e238eb3686e95942" category="cell">オプション： EMS を設定します</block>
   <block id="a2024a203f9c7fdcae107984d8e4b2f2" category="inline-link">ONTAP 9 EMS 構成エクスプレスガイド</block>
   <block id="afc6633a29b35c9581155404aa5af559" category="cell">イベント管理システム（ EMS ）は、 Cloud Volumes ONTAP システムで発生したイベントに関する情報を収集して表示します。イベント通知を受信するには、イベントの宛先（電子メールアドレス、 SNMP トラップホスト、または syslog サーバ）とイベントのルートを特定のイベントの重大度に設定します。EMS は CLI を使用して設定できます。手順については、を参照してください<block ref="962809e6f801fb7dcd1dc71b8b507838" category="inline-link-rx"></block>。</block>
-  <block id="e91861e04e8f01baa7d5bbbefaaf1c77" category="cell">オプション：複数の AWS アベイラビリティゾーンに HA システムの SVM 管理ネットワークインターフェイス（ LIF ）を作成する</block>
-  <block id="29a5010ff12475b9772dff489bead2ab" category="paragraph">SnapCenter または SnapDrive for Windows を HA ペアで使用する場合は、 Storage Virtual Machine （ SVM ） Management Network Interface （ LIF ）が必要です。複数の AWS アベイラビリティゾーンで HA ペアを使用する場合は、 SVM 管理 LIF で _floating_ip アドレスを使用する必要があります。</block>
-  <block id="3e43d1b45b0b6beda72cc56e66ffa74d" category="paragraph">HA ペアの起動時に、フローティング IP アドレスを指定するように求められます。IP アドレスを指定しなかった場合は、 System Manager または CLI から SVM 管理 LIF を自分で作成できます。次に、 CLI から LIF を作成する例を示します。</block>
   <block id="f5a116a42c8683b78afdf9b55e8eff5a" category="cell">オプション：設定ファイルのバックアップ場所を変更します</block>
   <block id="04aefc4f9c767b8c88328ec963e53cd6" category="cell">Cloud Volumes ONTAP は、適切に動作するために必要な設定可能なオプションに関する情報を含む構成バックアップファイルを自動的に作成します。デフォルトでは、 Cloud Volumes ONTAP は 8 時間ごとにファイルをコネクタホストにバックアップします。バックアップを別の場所に送信する場合は、データセンターまたは AWS 内の FTP または HTTP サーバにバックアップの場所を変更できます。たとえば、 FAS ストレージシステムのバックアップ場所がすでにあるとします。バックアップの場所は、 CLI を使用して変更できます。を参照してください<block ref="1ed61b0d5cafb647813ed64eeb57bd3f" category="inline-link-rx"></block>。</block>
   <block id="0ad0e280d130bf9cc7f95ba50cd5857c" category="summary">ネットアップによるサポートは Cloud Volumes ONTAP Explore 、 Standard 、および Premium システムに含まれていますが、先にシステムをネットアップに登録してサポートを有効にする必要があります。</block>
@@ -8682,25 +8677,9 @@
   <block id="9d6690139b1b38680e06d6097726e81f" category="paragraph">Cloud Compliance の使用が不要になった場合は、 Cloud Compliance インスタンスを削除できます。インスタンスを削除すると、インデックス付きデータが存在する関連ディスクも削除されます。</block>
   <block id="705a057dda30402f4ee1d1e40108b862" category="list-text">クラウドプロバイダのコンソールに移動して、 Cloud Compliance インスタンスを削除します。</block>
   <block id="0ca27a1b4f5a64b823a04f58a204d499" category="summary">Storage VM は ONTAP 内で実行される仮想マシンであり、クライアントにストレージサービスとデータサービスを提供します。これは SVM または SVM として認識されていることがあります。Cloud Volumes ONTAP にはデフォルトで 1 つの Storage VM が設定されますが、一部の設定では追加の Storage VM がサポートされます。</block>
-  <block id="2b1f4ca5c4b71a4e9797c3c4268c388b" category="doc">Storage VM の管理</block>
   <block id="129ebe82fb349647f39c555285fb6251" category="paragraph">Storage VM は ONTAP 内で実行される仮想マシンであり、クライアントにストレージサービスとデータサービスを提供します。これは、 _ SVM _ または _ SVM _ であることがわかります。Cloud Volumes ONTAP にはデフォルトで 1 つの Storage VM が設定されますが、一部の設定では追加の Storage VM がサポートされます。</block>
   <block id="bbf8762fd7719517f7567e338ea9aa0b" category="section-title">サポートされている Storage VM 数</block>
   <block id="a44d032d99b7c1c14f644984e019f4e4" category="inline-link">AWS でサポートされている Storage VM の数を表示します</block>
-  <block id="b25dd2126fa5aca61ad8d8e170156069" category="paragraph">Cloud Volumes ONTAP 9.7 および 9.8 では、一部の構成およびアドオンライセンスで、 AWS 内の複数の Storage VM をサポートしています。<block ref="dec7e040ba6d8499464ce79f5da7377b" category="inline-link-rx"></block>。アカウントチームに連絡して SVM アドオンライセンスを入手してください。</block>
-  <block id="bbad65713ad77ec49821f42090947f4a" category="paragraph">他のすべての Cloud Volumes ONTAP 構成で、ディザスタリカバリに使用する 1 つのデータ提供用 Storage VM と 1 つのデスティネーション Storage VM がサポートされます。ソース Storage VM で障害が発生した場合は、デスティネーション Storage VM をデータアクセス用にアクティブ化できます。</block>
-  <block id="235ecffd3dc97d3a7cd8360119787b73" category="paragraph">Storage VM は Cloud Volumes ONTAP システム全体（ HA ペアまたはシングルノード）にまたがります。</block>
-  <block id="e6b70af61b18ed221bdc10dba4ce707a" category="section-title">追加の Storage VM を作成しています</block>
-  <block id="1de14d7b6f92a3c8f464a16e92f0bae5" category="inline-link-macro">System Manager または CLI のいずれかです</block>
-  <block id="b093f86dd2f805613c834681ec8a9902" category="paragraph">構成でサポートされる場合は、を使用して追加の Storage VM を作成できます <block ref="7f9e83aba005b85051048430d5f2a46b" category="inline-link-macro-rx"></block>。</block>
-  <block id="5ea01dfebea42ebd0ce523ff07221f95" category="inline-link">SMB アクセス用の SVM を作成する</block>
-  <block id="bdfd37414cb194270becaf9b11720654" category="list-text"><block ref="bdfd37414cb194270becaf9b11720654" category="inline-link-rx"></block></block>
-  <block id="f2eb19a38945fbb6ce7d7892da0f0412" category="inline-link">NFS アクセス用の SVM を作成する</block>
-  <block id="f3229fc971006f8292d1fffbddc6c409" category="list-text"><block ref="f3229fc971006f8292d1fffbddc6c409" category="inline-link-rx"></block></block>
-  <block id="175e9449a61327552a24b55990bb6cc0" category="inline-link">iSCSI アクセス用の SVM を作成する</block>
-  <block id="c33d9fc5951e26440b62a8eab5177178" category="list-text"><block ref="c33d9fc5951e26440b62a8eab5177178" category="inline-link-rx"></block></block>
-  <block id="44ee3817caf6e3307a1e71321edbe9a8" category="inline-link">ディザスタリカバリ用のデスティネーション SVM の作成</block>
-  <block id="5bfda5e5552735f716b065b66a690d27" category="list-text"><block ref="5bfda5e5552735f716b065b66a690d27" category="inline-link-rx"></block></block>
-  <block id="2ffd526a633b340964ae6100bea12484" category="section-title">Cloud Manager での複数の Storage VM の使用</block>
   <block id="b37b70cc2038e532c1baf69a91a7b12e" category="paragraph">Cloud Manager では、 System Manager または CLI から追加で作成する Storage VM をサポートします。</block>
   <block id="ff3b711176ea253389bb97ff46d7f05c" category="paragraph">たとえば、次の図は、ボリュームの作成時に Storage VM を選択する方法を示しています。</block>
   <block id="431f928d3860c708d375d7e1ee3c46c6" category="inline-image-macro">ボリュームを作成する Storage VM を選択する機能を示すスクリーンショット。</block>
@@ -8708,14 +8687,11 @@
   <block id="294c42cb16f098782a4e3d714264d9b9" category="paragraph">次の図は、ボリュームを別のシステムにレプリケートするときに Storage VM を選択する方法を示しています。</block>
   <block id="51ade599e97dd58d56c5f3c242449e8f" category="inline-image-macro">ボリュームをレプリケートする Storage VM を選択する機能を示すスクリーンショット。</block>
   <block id="f6fdd9a8422426229035e242b935272e" category="paragraph"><block ref="f6fdd9a8422426229035e242b935272e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d9700739b8e3c800d88bd9fab714b418" category="section-title">Storage VM ディザスタリカバリの管理</block>
   <block id="f8faebd901c002c673c349c3bab82985" category="paragraph">Cloud Manager では、 Storage VM ディザスタリカバリのセットアップやオーケストレーションはサポートされていません。System Manager または CLI を使用する必要があります。</block>
   <block id="412af2a2404a4e920b18be59197204b0" category="inline-link">SVM ディザスタリカバリ設定エクスプレスガイド</block>
   <block id="c15bb50c43eaf0ceb1bc0ce3d7503ebd" category="list-text"><block ref="c15bb50c43eaf0ceb1bc0ce3d7503ebd" category="inline-link-rx"></block></block>
   <block id="a06e9c241b02eb678d35f19c0eec257f" category="inline-link">『 SVM ディザスタリカバリエクスプレスガイド』</block>
   <block id="84e6a974fd77c552b4d54c8a9b0727ab" category="list-text"><block ref="84e6a974fd77c552b4d54c8a9b0727ab" category="inline-link-rx"></block></block>
-  <block id="82ca903b6709e55675524bf1c95fb969" category="paragraph">Cloud Manager は、 Cloud Volumes ONTAP 用に作成した単一の Storage VM に自動的に名前を付けます。厳密な命名基準がある場合は、 Storage VM の名前を変更できます。たとえば、 ONTAP クラスタの Storage VM の命名規則に沿った名前に変更できます。</block>
-  <block id="f3b5d0e2b5bb28ee330e38a683c22ddb" category="paragraph">Cloud Volumes ONTAP 用に追加の Storage VM を作成した場合、その Storage VM の名前を Cloud Manager から変更することはできません。Cloud Volumes ONTAP から直接実行する必要があります。そのためには、 System Manager または CLI を使用します。</block>
   <block id="4565c0bd825c32e95e0236c15291479d" category="summary">プロジェクトに Cloud Manager を導入するには、 Google Cloud アカウントを使用します。その後、同じプロジェクトまたは別のプロジェクトに Cloud Volumes ONTAP を導入できます。Cloud Manager に追加した Google Cloud アカウントは、データの階層化に使用されます。</block>
   <block id="0384f4ba39f6a15ffd9b42bfb03b8d83" category="doc">Google Cloud のプロジェクト、権限、アカウント</block>
   <block id="92f037616c97829d85e15fb85b1129a1" category="paragraph">サービスアカウントを使用すると、 Cloud Manager と同じプロジェクトまたは異なるプロジェクトに Cloud Volumes ONTAP システムを導入して管理する権限が Cloud Manager に付与されます。</block>
@@ -9068,4 +9044,69 @@
   <block id="69287733c7cfbdccd8dcfd2e00844a6e" category="paragraph">スキャンを非アクティブ化すると、 Cloud Compliance は作業環境上のデータをスキャンしなくなり、インデックス付けされたコンプライアンス分析情報を Cloud Compliance インスタンスから削除します（作業環境自体のデータは削除されません）。</block>
   <block id="3e51e074f12d2c873310422bb9c8cb50" category="sidebar">プライベートデータを管理</block>
   <block id="4821287f06bb2c32780e189dbd180492" category="sidebar">Cloud Compliance からデータソースを削除します</block>
+  <block id="04f60305243747a625e84ab51c98c007" category="cell">オプション： Cloud Manager Connector を AutoSupport プロキシとして設定</block>
+  <block id="c3288d49b4bd85f0833f742a0578b19d" category="paragraph">プロキシサーバで AutoSupport メッセージを送信する必要がある環境では、プロキシとして機能するようにコネクタを設定できます。インターネットアクセス以外のコネクタの設定は必要ありません。Cloud Volumes ONTAP の CLI にアクセスして、次のコマンドを実行するだけです。</block>
+  <block id="2e14c8ec41a1388f0f0d77e3648fdd7e" category="cell">sts.amazonaws.com:443</block>
+  <block id="89100474e7faee0c34727c4b2b471007" category="cell">データブローカーが AWS に導入されたときや、オンプレミスに導入されて AWS のクレデンシャルが指定されたときに、 AWS のクレデンシャルを確認することができます。データブローカーは、導入時、更新時、および再起動時にこのエンドポイントにアクセスします。</block>
+  <block id="c164f564fe65398c751e983bdd973eab" category="paragraph">Cloud Volumes ONTAP 9.7 および 9.8 では、一部の構成およびアドオンライセンスで、 AWS 内の複数の Storage VM をサポートしています。<block ref="dec7e040ba6d8499464ce79f5da7377b" category="inline-link-rx"></block>。アカウントチームに連絡して SVM アドオンライセンスを入手してください。</block>
+  <block id="61a207d9bd50b686e92d93d0f36e5fd4" category="paragraph">他のすべての Cloud Volumes ONTAP 構成で、ディザスタリカバリに使用する 1 つのデータ提供用 Storage VM と 1 つのデスティネーション Storage VM がサポートされます。ソース Storage VM で停止が発生した場合は、デスティネーション Storage VM をデータアクセス用にアクティブ化できます。</block>
+  <block id="efc8bc38e54613e0ca554e186a5a8628" category="section-title">Cloud Manager で Storage VM を使用できます</block>
+  <block id="0daeee03840a908c7a9d415a97549f99" category="section-title">AWS で Cloud Volumes ONTAP 用のデータ提供用 Storage VM を作成します</block>
+  <block id="e9e83093a78f226fb38f25a41bcf0a8a" category="paragraph">前述したように、 AWS の Cloud Volumes ONTAP では複数の Storage VM がサポートされます。追加の Storage VM を作成するには、 AWS で IP アドレスを割り当ててから、 Cloud Volumes ONTAP の設定に基づいて ONTAP コマンドを実行する必要があります。</block>
+  <block id="de46d59a02fe19ad1b544dca44f92e5f" category="section-title">構成の制限を確認します</block>
+  <block id="88543976e7398b72c1b340809002ebef" category="paragraph">各 EC2 インスタンスでは、ネットワークインターフェイスごとにサポートされるプライベート IPv4 アドレスの最大数が決まっています。新しい Storage VM に AWS で IP アドレスを割り当てる前に、上限を確認する必要があります。</block>
+  <block id="c23b6fdd13d6c39bb0af0f361b0c8003" category="inline-link">ストレージの制限に関するセクションは、 Cloud Volumes ONTAP リリースノートを参照してください</block>
+  <block id="7add785ac47a650c0b54d60da4941232" category="list-text">に移動します<block ref="345a27083509614063cb9bddc8e6543e" category="inline-link-rx"></block>。</block>
+  <block id="df9d132f781b81a5db9ff607b40006ea" category="list-text">インスタンスタイプのインターフェイスごとの IP アドレスの最大数を確認します。</block>
+  <block id="8dd4560f4596618815de91dd18e711e1" category="list-text">AWS で IP アドレスを割り当てるときは次のセクションで必要になるため、この数値をメモしておいてください。</block>
+  <block id="935712c749bf1c78e33ff9015ecebf46" category="section-title">AWS で IP アドレスを割り当てます</block>
+  <block id="87be313262150c685084e6e44ac07990" category="paragraph">新しい Storage VM 用の LIF を作成する前に、 AWS のポート e0a にプライベート IPv4 アドレスを割り当てる必要があります。</block>
+  <block id="9929ecc2c86c1ad1e4c78d1244d3554d" category="paragraph">Storage VM 用のオプションの管理 LIF では、単一のノードシステムおよび単一の AZ 内の HA ペア上にプライベート IP アドレスが必要です。この管理 LIF は、 SnapCenter などの管理ツールへの接続を提供します。</block>
+  <block id="6ae090a4433735cf598985f60d5a68ff" category="list-text">AWS にログインして EC2 サービスを開きます。</block>
+  <block id="da3a869e3a7837d5ff3412e6315aca73" category="list-text">Cloud Volumes ONTAP インスタンスを選択し、 * ネットワーク * をクリックします。</block>
+  <block id="6d5c5ef8a89ed4f5a6c4ad9cae9e8460" category="paragraph">HA ペアで Storage VM を作成する場合は、ノード 1 を選択します。</block>
+  <block id="362dd05517dbbc936083c11cc969f91f" category="list-text">ネットワークインターフェイス * までスクロールし、ポート e0a の * インターフェイス ID * をクリックします。</block>
+  <block id="c2c01428f2ddefe050a85d0584f1dc01" category="inline-image-macro">ネットワークインターフェイスのポート e0a を表示する AWS コンソールのスクリーンショット。</block>
+  <block id="249b8904c2081807ff0f86430e7bf71e" category="paragraph"><block ref="249b8904c2081807ff0f86430e7bf71e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="05450ecf8ef9eaa70b8662e5c48e4d67" category="list-text">ネットワークインターフェイスを選択し、 * Actions &gt; Manage IP Addresses * をクリックします。</block>
+  <block id="b878b97b7aedb8d1a7cd6defc8c04640" category="list-text">e0a の IP アドレスのリストを展開します。</block>
+  <block id="40fe6f2e5d78ffdb97a78ef9deef4723" category="list-text">IP アドレスを確認します。</block>
+  <block id="be46a296c9e690be74ba88eb3f7ce625" category="list-text">割り当てられた IP アドレスの数を数えて、ポートに追加の IP 用のスペースがあることを確認します。</block>
+  <block id="345c7c4256b850b54b193b1998de56e6" category="paragraph">このページの前のセクションで、インターフェイスごとにサポートされる IP アドレスの最大数を確認しておく必要があります。</block>
+  <block id="0a190c64aa18ec2faa44fd6e915aabff" category="list-text">オプション： Cloud Volumes ONTAP の CLI に移動し、 * network interface show * を実行して、各 IP アドレスが使用中であることを確認します。</block>
+  <block id="8a57c7cace7bf01166e984c4aeffc68f" category="paragraph">IP アドレスが使用されていない場合は、新しい Storage VM で使用できます。</block>
+  <block id="ed97acbe270bb0841ef8a242f58309f6" category="list-text">AWS コンソールに戻り、「 * 新しい IP アドレスを割り当て * 」をクリックして、新しい Storage VM に必要な量に基づいて追加の IP アドレスを割り当てます。</block>
+  <block id="c853bdf1bd2777df35bc3b5d4af6b9ea" category="list-text">シングルノードシステム：未使用のセカンダリプライベート IP が 1 つ必要です。</block>
+  <block id="5e50d00d975ec8703bc22324c7265b66" category="paragraph">Storage VM に管理 LIF を作成する場合は、オプションのセカンダリプライベート IP が必要です。</block>
+  <block id="82c4266b10c1848bb195ebfd317a081b" category="list-text">単一の AZ における HA ペア：ノード 1 には、未使用のセカンダリプライベート IP が 1 つ必要です。</block>
+  <block id="34cd8238b52f27b1bb4e98ded05d02b2" category="list-text">複数の AZ にまたがる HA ペア：各ノードには、未使用のセカンダリプライベート IP が 1 つ必要です。</block>
+  <block id="cc16cfddda9904c2894330364425d501" category="list-text">単一の AZ 内の HA ペアに IP アドレスを割り当てる場合は、 * セカンダリプライベート IPv4 アドレスの再割り当てを許可 * を有効にします。</block>
+  <block id="f9b48f58c3e703111f23614cc791b0e9" category="list-text">複数の AZ に HA ペアを作成する場合は、ノード 2 に対して上記の手順を繰り返す必要があります。</block>
+  <block id="6ea52a1fa173ce5420e093b9e27ec284" category="section-title">シングルノードシステムに Storage VM を作成する</block>
+  <block id="cc0a30537e715f13eb8e645bc570985a" category="paragraph">以下の手順では、シングルノードシステムに新しい Storage VM を作成します。NAS LIF を作成するには 1 つのプライベート IP アドレスが必要で、管理 LIF を作成する場合はもう 1 つのプライベート IP アドレスが必要です。</block>
+  <block id="9b08db40ecf3304d34c7dadb34a6d2c2" category="list-text">Storage VM と Storage VM へのルートを作成してください。</block>
+  <block id="efc1b32fd1eda24b66896348ad6fd78d" category="list-text">NAS LIF を作成します。</block>
+  <block id="933829c2bc0d5e884fc83d159a503169" category="paragraph">ここで、 _private_IP_x_は 、 e0a 上の未使用のセカンダリプライベート IP です。</block>
+  <block id="cf9742a528f0c020828f8af26d4a20dc" category="list-text">オプション： Storage VM 管理 LIF を作成する</block>
+  <block id="7d7b1af915109a7b04eb0f693211316a" category="paragraph">ここで、 _private_IP_y_ は e0a 上の別の未使用のセカンダリプライベート IP です。</block>
+  <block id="79a8fc374d8f8d376948b048d2e7372c" category="section-title">の HA ペアに Storage VM を作成します 単一 AZ</block>
+  <block id="5cdfdc48f9ef21c3a746d94361ee7dc6" category="paragraph">以下の手順では、単一の AZ の HA ペアに新しい Storage VM を作成します。NAS LIF を作成するには 1 つのプライベート IP アドレスが必要で、管理 LIF を作成する場合はもう 1 つのプライベート IP アドレスが必要です。</block>
+  <block id="763b5188b05b72944cbef429a47226ec" category="paragraph">これらの両方の LIF はノード 1 に割り当てられます。障害が発生した場合、プライベート IP アドレスをノード間で移動できます。</block>
+  <block id="8459a79b10c4124a3a5afe370eb9cde7" category="list-text">ノード 1 に NAS LIF を作成します。</block>
+  <block id="8f523bc452b5d6d93f0dc162946ca449" category="paragraph">ここで、 _private_IP_x_は 、 CVO-node1 の e0a にある未使用のセカンダリプライベート IP です。テイクオーバーの際には、この IP アドレスを CVO-node2 の e0a に再配置できます。これは、サービスポリシー default-data-files が、 IP をパートナーノードに移行できることを示しているためです。</block>
+  <block id="67694021a675f2be09781b9b9c744e99" category="list-text">オプション：ノード 1 に Storage VM 管理 LIF を作成します。</block>
+  <block id="df40f966151106d34e8d3f5daf364c06" category="section-title">複数の HA ペアに Storage VM を作成する AZS</block>
+  <block id="f1299ba5f98acd3056fc5a9ad3777e90" category="paragraph">以下の手順は、複数の AZ にまたがる HA ペア上に新しい Storage VM を作成します。</block>
+  <block id="37c4f9a3a625fee356d3c678b22a46d2" category="paragraph">NAS LIF には _floated_ip アドレスが必要です。これは管理 LIF のオプションです。これらのフローティング IP アドレスでは、 AWS でプライベート IP を割り当てる必要はありません。代わりに、 AWS ルートテーブルに、同じ VPC 内の特定のノードの ENI を指すようにフローティング IP が自動的に設定されます。</block>
+  <block id="c5e6bada3b6937a819b2b059987721dd" category="paragraph">フローティング IP が ONTAP と連携するためには、各ノードのすべての Storage VM でプライベート IP アドレスを設定する必要があります。以下の手順は、ノード 1 とノード 2 に iSCSI LIF を作成したものです。</block>
+  <block id="94dd4bef555fc94bdf7b4bd8624af841" category="inline-link-macro">フローティング IP アドレスの選択の詳細については、こちらを参照してください</block>
+  <block id="aa53691ad38ff0f90b4e73a839926525" category="list-text">フローティング IP アドレスは、 HA 構成を導入する AWS リージョン内のどの VPC の CIDR ブロックにも属していない必要があります。192.168.209.27 は、フローティング IP アドレスの例です。 <block ref="2263bc17ecacfae109d8e9ed368c1f06" category="inline-link-macro-rx"></block>。</block>
+  <block id="f2feb7d422d422c2517d2196d66d00bc" category="list-text">「 -service-policy default-data-files 」は、 IP をパートナーノードに移行できることを示します。</block>
+  <block id="05bdf9757241650a006a0bd9021d3169" category="list-text">ノード 1 に iSCSI LIF を作成</block>
+  <block id="849dd632a2c28933451bca01b48c3973" category="list-text">この iSCSI LIF は、 Storage VM でフローティング IP の LIF 移行をサポートするために必要です。iSCSI LIF である必要はありませんが、ノード間で移行するように設定することはできません。</block>
+  <block id="d68a88edd93f0fd2099f8bff543a11a3" category="list-text">「 -service-policy default-data-block 」は、 IP アドレスがノード間で移行されないことを示します。</block>
+  <block id="111daac7647573990b5b56876902380e" category="list-text">_private_IP_は 、 CVO-node1 の eth0 （ e0a ）上の未使用のセカンダリプライベート IP アドレスです。</block>
+  <block id="5414bcb74ffdbf70d2afb028e1eb0d0b" category="list-text">ノード 2 に iSCSI LIF を作成</block>
+  <block id="0a2292629d42074cb011142b9cd8f433" category="list-text">_private_IP_は 、 CVO-node2 の eth0 （ e0a ）上の未使用のセカンダリプライベート IP アドレスです。</block>
+  <block id="eb47971e346ef76aab3c839fd1b8c204" category="section-title">ディザスタリカバリ用に Storage VM を管理する</block>
 </blocks>
