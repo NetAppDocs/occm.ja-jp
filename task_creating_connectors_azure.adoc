@@ -44,7 +44,7 @@ TIP: リンクを右クリックし、 [ 名前を付けてリンクを保存 ..
 [source, json]
 ----
 "AssignableScopes": [
-"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz"
 ],
 ----
 .. JSON ファイルを使用して、 Azure でカスタムロールを作成します。

@@ -8475,7 +8475,6 @@
   <block id="8ea5339a59d1a6a15d2ad2629fa9dd33" category="inline-link-macro">コネクタで使用可能なローカルユーザインターフェイス</block>
   <block id="fad7f51625a8c3a9500190a8f946782e" category="paragraph">SaaS プラットフォームを無効にする場合は、からすべてのタスクを実行する必要があります <block ref="79c10d92b6f7a706814f49224832a96c" category="inline-link-macro-rx"></block>。</block>
   <block id="2068ab1b78dd1737c2778d09fccd0cdd" category="admonition">これは元に戻すことができない操作であり、 Cloud Manager SaaS プラットフォームを使用できなくなります。ローカルコネクターからアクションを実行する必要があります。ネットアップの統合クラウドサービスの多くを利用することはできません。また、 SaaS プラットフォームを再度有効にするには、ネットアップのサポートが必要になります。</block>
-  <block id="ce419f4e33da7c0015af4b7ddad55232" category="list-text">[*Overview*] タブで、 [SaaS プラットフォームの使用 ] を有効にするオプションを切り替えます。</block>
   <block id="0a83752faee4775a43f41a1c3b0e10f6" category="summary">Cloud Manager では、 AWS での Cloud Volumes ONTAP の実行に関連するコストを確認できます。また、ネットアップの機能を使用してストレージコストを削減し、どれだけのコストを節約したかを確認することもできます。</block>
   <block id="0131f05be010a429416bcb6f853b54f6" category="doc">AWS のリソースコストを監視する</block>
   <block id="35e4967d2a2e90d7bfa5caff34b2036e" category="paragraph">Cloud Manager では、 AWS での Cloud Volumes ONTAP の実行に関連するリソースコストを確認できます。また、ネットアップの機能を使用してストレージコストを削減し、どれだけのコストを節約したかを確認することもできます。</block>
@@ -9138,4 +9137,5 @@
   <block id="44f7ee201aadf50852f08554367ab6cf" category="paragraph">Cloud Backup はシステム上で有効になり、毎日作成したボリュームをバックアップし、最新の 30 個のバックアップコピーを保持します。</block>
   <block id="fd45898f75263130be297845518a221f" category="paragraph">Cloud Backup は、作業環境からいつでも直接有効にすることができます。</block>
   <block id="bcaf895faad537c162733ea631ba6ea4" category="paragraph">Cloud Manager Cloud Backup Service を使用して、オンプレミスの ONTAP システムからクラウドの低コストのオブジェクトストレージにデータをバックアップできます。このサービスは、クラウドデータの保護と長期アーカイブのためのバックアップとリストアの機能を提供します。</block>
+  <block id="bd24a7e9d8368897df823b65a8960e61" category="list-text">［ 概要 ］ タブで、 SaaS プラットフォームの使用を無効にするオプションを切り替えます。</block>
 </blocks>
