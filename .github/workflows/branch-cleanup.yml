@@ -1,4 +1,4 @@
-name: Zamboni
+name: Branch Cleaner
 
 on:
   push:
