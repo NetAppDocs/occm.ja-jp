@@ -1180,9 +1180,6 @@
   <block id="cd87d59f9d95d20fad2fa1e8554485d5" category="list-text">Cloud Volumes ONTAP システムまたはオンプレミスシステムでは、 ONTAP のバージョンが 9.6 以降である必要があります。</block>
   <block id="b978081c22feaffda24639e4c4c63fa1" category="inline-link">クロスアカウントバケットの権限を付与しています</block>
   <block id="486e6448e58aefcc2e008e1af98a21f9" category="list-text">クロスアカウントリストアを実行するには、クラウドプロバイダコンソールで手動の操作が必要です。AWS のトピックを参照してください<block ref="ac4c75b2db0b6ef32843c3980cc0815d" category="inline-link-rx"></block> を参照してください。</block>
-  <block id="dd91497a19eb2804bdbbc3075ed271ea" category="list-text">サポートされていない構成：</block>
-  <block id="ea5c948d2a687d18be23fa5344a5a524" category="list-text">現在、 Gov Cloud はサポートされていません。</block>
-  <block id="6d977f33b35f1911b04d165dc0ec69cb" category="list-text">異なるサブネット内の異なる Cloud Manager を使用する同じアカウント。</block>
   <block id="0b64d7457b11c7cf9e10f4dc12176a51" category="list-text">リストアでは、最大 30,000 個のフラットファイルを含む 1 つのディレクトリを参照できます。これよりも大きなディレクトリは現在サポートされていません。</block>
   <block id="7ecb27295a94995c3226ee6a00e61dac" category="summary">Cloud Volumes Service for AWS のコストは、選択したサービスレベルと割り当てられた容量に基づいて決まります。適切なサービスレベルと容量を選択することで、ストレージのニーズを最小限のコストで満たすことができます。</block>
   <block id="068b8cb31f226939d310dc3f1bff723c" category="doc">サービスレベルと割り当て容量</block>
@@ -8999,7 +8996,6 @@
   <block id="418dfdb508c036c09d2c850937665491" category="list-text">ボリュームの作成時に階層化ポリシーが割り当てられていた場合、この問題は表示されません。</block>
   <block id="6970012bbe95bd9244f695fd98b4cceb" category="list-text">ボリュームに「 all 」階層化ポリシーを割り当てる前に、バックアップの影響を考慮してください。データはすぐに階層化されるため、 Cloud Backup はローカル階層からではなくクラウド階層からデータを読み取ります。バックアップの同時処理は、クラウドオブジェクトストレージへのネットワークリンクを共有するため、ネットワークリソースが最大限まで使用されなくなった場合にパフォーマンスが低下する可能性があります。この場合、複数のネットワークインターフェイス（ LIF ）をプロアクティブに設定して、この種類のネットワークの飽和を軽減することができます。</block>
   <block id="52e848ac4f99ded8d6355334b85fe84d" category="list-text">バックアップ処理では、オブジェクトストレージに階層化されたコールドデータは「再加熱」されません。</block>
-  <block id="9707ac3c63d1073e634797a6b20aec70" category="list-text">オンプレミスの ONTAP システムからバックアップを作成する場合は、 Cloud Manager をクラウドに導入する必要があります。オンプレミスの Cloud Manager 環境はサポートされていません。</block>
   <block id="69a27187fcd47a221ae1f3b4125fb332" category="list-text">DP ボリュームをバックアップする場合は、ソースボリュームの SnapMirror ポリシーに定義されたルールで、許可されている Cloud Backup ポリシー名の * daily * 、 * weekly * 、または * monthly * に一致するラベルを使用する必要があります。そうしないと、その DP ボリュームのバックアップは失敗します。</block>
   <block id="24be09787a92154d308766dc9029edfb" category="list-text">Azure では、 Cloud Volumes ONTAP の導入時に Cloud Backup を有効にすると、 Cloud Manager によってリソースグループが作成されます。このリソースグループは変更できません。Cloud Backup を有効にする際に独自のリソースグループを選択する場合は、 Cloud Volumes ONTAP を導入する際に * Cloud Backup を無効にしてから、 Cloud Backup を有効にして、 Cloud Backup の設定ページからリソースグループを選択します。</block>
   <block id="51d2b42d10fb9034e6fa76a6a344add5" category="list-text">Cloud Volumes ONTAP システムからボリュームをバックアップする場合、 Cloud Manager 以外で作成したボリュームは自動ではバックアップされません。たとえば、 ONTAP CLI 、 ONTAP API 、または System Manager からボリュームを作成した場合、そのボリュームは自動的にはバックアップされません。これらのボリュームをバックアップするには、 Cloud Backup を無効にしてから再度有効にする必要があります。</block>
@@ -9138,4 +9134,7 @@
   <block id="fd45898f75263130be297845518a221f" category="paragraph">Cloud Backup は、作業環境からいつでも直接有効にすることができます。</block>
   <block id="bcaf895faad537c162733ea631ba6ea4" category="paragraph">Cloud Manager Cloud Backup Service を使用して、オンプレミスの ONTAP システムからクラウドの低コストのオブジェクトストレージにデータをバックアップできます。このサービスは、クラウドデータの保護と長期アーカイブのためのバックアップとリストアの機能を提供します。</block>
   <block id="bd24a7e9d8368897df823b65a8960e61" category="list-text">［ 概要 ］ タブで、 SaaS プラットフォームの使用を無効にするオプションを切り替えます。</block>
+  <block id="5407622af8f7a17bbdd5e90cc420ff83" category="list-text">オンプレミスの ONTAP システムからバックアップを作成する場合、 Connector をクラウドに導入する必要があります。オンプレミスコネクタの導入はサポートされていません。</block>
+  <block id="5f5966e9da5716290dfc2b88ceeb2217" category="list-text">リストアするファイルは、デスティネーションボリュームの言語と同じ言語を使用している必要があります。言語が異なる場合は、エラーメッセージが表示されます。</block>
+  <block id="e30e8ace540a3d9654f8bbbebf541ba8" category="list-text">異なるサブネットにある異なる Cloud Manager で同じアカウントを使用する場合、単一ファイルのリストアはサポートされません。</block>
 </blocks>
