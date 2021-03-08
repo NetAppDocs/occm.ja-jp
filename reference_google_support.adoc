@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: reference_google_support.html 
-keywords: google, gcp, regions, google regions, gcp regions, storage class, standard storage class 
-summary: Cloud Tiering は、 Standard ストレージクラスとほとんどのリージョンをサポートしています。 
+keywords: google, gcp, regions, google regions, gcp regions, storage class, standard, nearline, coldline, archive 
+summary: Cloud Tiering は、複数の Google Cloud ストレージクラスとほとんどのリージョンをサポートしています。 
 ---
 = サポートされている Google Cloud ストレージクラスとリージョン
 :hardbreaks:
@@ -13,13 +13,22 @@ summary: Cloud Tiering は、 Standard ストレージクラスとほとんど�
 
 
 [role="lead"]
-Cloud Tiering は、 Standard ストレージクラスとほとんどの Google Cloud リージョンをサポートしています。
+Cloud Tiering は、複数の Google Cloud ストレージクラスとほとんどのリージョンをサポートしています。
 
 
 
-== サポートされるアクセス階層
+== サポートされているストレージクラス
 
-Cloud Tiering は、アクセス頻度の低いデータに _Standard_access 階層を使用します。
+Cloud Tiering を使用すると、ライフサイクルルールを適用して、データを _Standard_storage クラスから別のストレージクラスに 30 日後に移行できます。次のストレージクラスから選択できます。
+
+* ニアライン
+* コールドライン（ Coldline ）
+* Archive サービスの略
+
+
+Standard を選択した場合、データはそのストレージクラスに残り、ルールは適用されません。
+
+link:https://cloud.google.com/storage/docs/storage-classes["Google Cloud Storage のクラスをご確認ください"^]。
 
 
 

@@ -101,7 +101,7 @@ Cloud Tiering は、アクセス頻度の低いデータにホットアクセス
 
 === Google Cloud Storage ではどのストレージクラスがサポートされていますか。
 
-Cloud Tiering は、アクセス頻度の低いデータに _Standard_storage クラスを使用しています。
+Cloud Tiering は、 _Standard_、 _Nearline _ 、 _Coldline_、 または _Archive_storage クラスへのデータ階層化をサポートしています。を参照してください link:reference_google_support.html["サポートされている Google Cloud ストレージクラス"] 詳細：
 
 
 
@@ -113,7 +113,7 @@ Cloud Tiering は、アクセス頻度の低いデータに _Standard_storage �
 
 === 階層化とは関係なくオブジェクトストアにポリシーを適用してデータを移動できますか。
 
-いいえ。 Cloud Tiering は、オブジェクトストアからデータを移動または削除するオブジェクトライフサイクル管理ルールをサポートしていません。
+はい。Amazon S3 または Google Cloud Storage を使用している場合、 Cloud Tiering を使用すると、 Standard ストレージクラスから別のストレージクラスにデータを 30 日後に移行できます。
 
 
 

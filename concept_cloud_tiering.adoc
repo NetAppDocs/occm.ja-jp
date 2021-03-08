@@ -170,6 +170,7 @@ NOTE: パフォーマンス階層の容量が 70% を超える場合、クラウ
 +
 データはすぐに階層化されるため、 SnapMirror はパフォーマンス階層ではなくクラウド階層からデータを読み取ります。そのため、 SnapMirror 処理が遅くなります。別の階層化ポリシーを使用している場合でも、 SnapMirror 処理の速度が遅くなる可能性があります。
 
+* Cloud Backup も、階層化ポリシーが設定されたボリュームに同様の影響を受けます。 link:concept_backup_to_cloud.html#fabricpool-tiering-policy-considerations["階層化ポリシーに関する考慮事項については、「 Cloud Backup の使用」を参照"]。
 
 
 --
