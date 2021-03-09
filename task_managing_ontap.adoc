@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_managing_ontap.html 
-keywords: ontap, cluster, manage, fas, aff, active iq, update firmware 
-summary: Cloud Manager の Active IQ ページには、オンプレミス環境で検出されていない ONTAP クラスタがあれば、新しいファームウェアのインストールが必要かどうか、および料金を支払ったすべてのライセンスを使用しているかどうかが表示されます。この情報は、 Active IQ デジタルアドバイザから Cloud Manager に提供されます。 
+keywords: ontap, cluster, manage, fas, aff, active iq, shelf firmware, disk firmware, CVO licenses 
+summary: Cloud Manager の Active IQ ページには、オンプレミス環境で検出されていない ONTAP クラスタが表示されます。いずれのクラスタでもディスクファームウェアまたはシェルフファームウェアを更新する必要があるかどうかや、オンプレミスシステムの購入時に付与されたすべての Cloud Volumes ONTAP ライセンスを使用しているかどうかが示されます。この情報は、 Active IQ デジタルアドバイザから Cloud Manager に提供されます。 
 ---
-= ONTAP クラスタを監視しています
+= Active IQ データを使用して ONTAP クラスタを管理する
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -12,40 +12,74 @@ summary: Cloud Manager の Active IQ ページには、オンプレミス環境�
 :imagesdir: ./media/
 
 
-Cloud Manager の Active IQ ページには、オンプレミス環境で検出されていない ONTAP クラスタがあれば、新しいファームウェアのインストールが必要かどうか、および料金を支払ったすべてのライセンスを使用しているかどうかが表示されます。この情報は、から Cloud Manager に提供されます link:https://docs.netapp.com/us-en/active-iq/index.html["Active IQ デジタルアドバイザ"^]。
-
-
-
-== に追加されていないオンプレミスクラスタがないかどうかを確認しています Cloud Manager の略
-
-Active IQ ページには、ネットアップサポートサイト（ NSS ）のクレデンシャルに基づいて管理可能なすべてのオンプレミスクラスタのリストが表示されます。また、 Cloud Manager で検出されたクラスタと検出されていないクラスタも表示されます。
-
-.手順
-. Active IQ * タブをクリックし、ネットアップサポートサイトのユーザ名とパスワードを入力して、 * Save * をクリックします。
-+
-有効なサポート契約があるクラスタは、 Cloud Manager で検出されたかどうかのステータスとともに表示されます。
-
-
-
-を参照してください link:task_discovering_ontap.html#discovering-clusters-from-the-working-environments-page["クラスタを検出します"]。
-
-
-
-== 新しいディスクおよびシェルフファームウェアを確認しています
-
-検出された ONTAP クラスタのいずれかで、シェルフまたはディスクのファームウェアを更新する必要があるかどうかを確認できます。
-
-.手順
-. Active IQ （ファームウェアアップデート）ページで、 * ファームウェアアップデート * タブをクリックします。
-. 次の手順を参照してください link:https://aiq.netapp.com/assets/docs/Quick_Reference_Guide.pdf["ストレージシステムのファームウェアを更新します"]。
-
+Cloud Manager の Active IQ ページには、オンプレミス環境で検出されていない ONTAP クラスタが表示されます。いずれのクラスタでもディスクファームウェアまたはシェルフファームウェアを更新する必要があるかどうかや、オンプレミスシステムの購入時に付与されたすべての Cloud Volumes ONTAP ライセンスを使用しているかどうかが示されます。この情報は、から Cloud Manager に提供されます link:https://docs.netapp.com/us-en/active-iq/index.html["Active IQ デジタルアドバイザ"^]。
 
 
 
 == 未使用の Cloud Volumes ONTAP ライセンスを表示する
 
-使用していないライセンスが Cloud Volumes ONTAP クラスタにあるかどうかを確認できます。
+購入したオンプレミス ONTAP ストレージシステムパッケージの多くには、 Cloud Volumes ONTAP の無償ライセンスが含まれているため、 Cloud Manager でネットアップのクラウドストレージ製品を試用できます。ライセンスを使用して新しい Cloud Volumes ONTAP インスタンスを作成するか、または既存の Cloud Volumes ONTAP インスタンスにライセンスを適用して、容量を 368 TB 拡張できます。
+
+ネットアップサポートサイトのクレデンシャルに基づいて、未使用の Cloud Volumes ONTAP ライセンスがあるかどうかを確認することができます。
 
 .手順
-. Active IQ （ライセンス）ページで、 * Licenses * （ライセンス）タブをクリックします。
+. Cloud Manager で、 * Active IQ * タブをクリックします。
+. ページの下部にある [*Licenses*] タブをクリックします。
++
+image:screenshot_aiq_licenses.png["使用済みおよび未使用の Cloud Volumes ONTAP ライセンスのスクリーンショット。"]
 
++
+_expires_column は、ライセンスが最後にアクティブになった日を示します。新しい Cloud Volumes ONTAP システムを作成すると、ライセンスの有効期限が切れます。既存の Cloud Volumes ONTAP システムを更新する場合は、既存のライセンスが拡張される期間を指定します。
+
++
+_License Type_'_Hyperscaler_'_Model Type_columns は ' その Cloud Volumes ONTAP ライセンスのタイプを表しますたとえば、 * BYOL | Single | Azure * は、「 Microsoft Azure 」に導入された「シングルノード」 Cloud Volumes ONTAP システムのライセンスを「お客様所有」のライセンスとして使用できることを意味します。この列に表示される値を表に示します。
+
++
+[cols="25,25"]
+|===
+| 列（ Column ） | 値 
+
+
+| ライセンスタイプ | 従量課金制 
+
+
+| ハイパースケーラ | Azure AWS GCP すべてのプロバイダ 
+
+
+| モデルタイプ（ Model Type ） | 単一 HA 
+|===
+
+
+
+
+== 新しいディスクおよびシェルフファームウェアをダウンロードしています
+
+検出された ONTAP クラスタのいずれかで、シェルフまたはディスクのファームウェアを更新する必要があるかどうかを確認できます。また、 Ansible プレイブックをダウンロードしてファームウェアをアップグレードできます。
+
+* 注： * 新しいファームウェアを表示およびダウンロードできるのは、特定のサポートプランに登録している場合のみです。
+
+.手順
+. Active IQ （ファームウェアアップデート）ページで、 * ファームウェアアップデート * タブをクリックします。
++
+image:screenshot_aiq_firmware.png["ファームウェアの更新が必要なノードを示す Active IQ ページのスクリーンショット。"]
+
++
+新しいファームウェアを必要とするクラスタがある場合は、「すべてをダウンロード」ボタンが表示されます。
+
+. [ すべてダウンロード ] をクリックし、 zip ファイルを保存します。
+. zip ファイルを解凍し、次の手順を参照してください link:https://aiq.netapp.com/assets/docs/Quick_Reference_Guide.pdf["ストレージシステムのファームウェアを更新します"]。
+
+
+ファームウェアが更新されました。ONTAP システムから次回 Active IQ に AutoSupport メッセージが送信されると、 _Firmware Updates_ ページのステータスが更新され、更新が不要であることが示されます。
+
+
+
+== クラウドの候補となるオンプレミスのワークロードを表示します
+
+特定のワークロードやボリュームを、オンプレミスの ONTAP クラスタから Cloud Volumes ONTAP システムに移行するのに最適です。このようなメリットには、コストの削減、パフォーマンスと耐障害性の向上などがあります。_ クラウド対応ワークロード _ タブには、検出された ONTAP クラスタからのこれらのワークロードのリストが表示されます。
+
+image:screenshot_aiq_workloads.png["クラウドに移動可能なオンプレミスクラスタのワークロードを示すスクリーンショット。"]
+
+このページでは、 SAP 、 SAP HANA 、 Oracle 、ファイル共有、 SharePoint などのサポート対象ワークロードを参照できます。
+
+_ 移行と切り替え _ は、アプリケーションをクラウドに移行するためのアプローチです。つまり、アプリケーションとそれに関連するデータを、アプリケーションの設計を変更することなくクラウドプラットフォームに移動することを意味します。詳細については、を参照してください link:https://www.netapp.com/knowledge-center/what-is-lift-and-shift/["持ち上げてシフトします"^]。

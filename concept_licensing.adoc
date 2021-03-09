@@ -23,6 +23,9 @@ Cloud Volumes ONTAP BYOL システムでは、複数のライセンスを購入�
 
 シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。
 
+
+NOTE: 購入した一部のオンプレミス ONTAP ストレージシステムには、 Cloud Volumes ONTAP のライセンスが無償で付属している場合があります。ライセンスを使用して新しい Cloud Volumes ONTAP システムを作成するか、または既存の Cloud Volumes ONTAP システムにライセンスを適用して容量を拡張できます。 link:task_managing_ontap.html#viewing-unused-cloud-volumes-ontap-licenses["使用できるライセンスがあるかどうかを確認します"^]。
+
 ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます link:concept_data_tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"]。ディスクの制限については、を参照してください https://docs.netapp.com/us-en/cloud-volumes-ontap/["ストレージの制限については、『 Cloud Volumes ONTAP リリースノート』を参照してください"^]。
 
 

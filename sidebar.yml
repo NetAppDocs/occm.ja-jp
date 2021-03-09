@@ -228,7 +228,7 @@ entries:
   entries:
   - title: ONTAP クラスタを検出
     url: "/task_discovering_ontap.html"
-  - title: ONTAP クラスタを監視する
+  - title: Active IQ を使用してクラスタを管理する
     url: "/task_managing_ontap.html"
   - title: ONTAP ボリュームを管理します
     url: "/task_provisioning_ontap.html"
