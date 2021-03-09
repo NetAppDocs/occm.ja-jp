@@ -18,7 +18,7 @@ summary: Storage VM は ONTAP 内で実行される仮想マシンであり、�
 [role="lead"]
 Storage VM は ONTAP 内で実行される仮想マシンであり、クライアントにストレージサービスとデータサービスを提供します。これは、 _ SVM _ または _ SVM _ であることがわかります。Cloud Volumes ONTAP にはデフォルトで 1 つの Storage VM が設定されていますが、 Azure で Cloud Volumes ONTAP を実行している場合は追加の Storage VM がサポートされます。
 
-データを提供する Storage VM を追加で作成するには、 Azure に IP アドレスを割り当て、 HA ペアのロードバランサを設定し、 ONTAP コマンドを実行して Storage VM とデータ LIF を作成する必要があります。
+データを提供する Storage VM を追加で作成するには、 Azure で IP アドレスを割り当ててから、 ONTAP コマンドを実行して Storage VM とデータ LIF を作成する必要があります。
 
 
 
@@ -32,9 +32,15 @@ Azure では、 9.9.0 リリース以降、複数の Storage VM が Cloud Volume
 
 == Azure で IP アドレスを割り当てます
 
+構成に応じて、シングルノードシステム、 iSCSI を使用する HA ペア、 NFS / SMB を使用する HA ペアのいずれかの手順を実行します。
+
+
+
+=== シングルノード
+
 Storage VM を作成して LIF を割り当てる前に、 Azure で IP アドレスを nic0 に割り当てる必要があります。
 
-ノード 1 からのデータ LIF アクセス用の IP アドレス、ノード 2 からのデータ LIF アクセス用の別の IP アドレス（ HA ペアのみ）、および Storage VM （ SVM ）管理 LIF のもう 1 つのオプションの IP アドレスを作成する必要があります。この管理 LIF は、 SnapCenter などの管理ツールへの接続を提供します。
+データ LIF アクセス用の IP アドレスと、 Storage VM （ SVM ）管理 LIF のオプションの IP アドレスを作成する必要があります。この管理 LIF は、 SnapCenter などの管理ツールへの接続を提供します。
 
 .手順
 . Azure ポータルにログインし、 * Virtual Machine * サービスを開きます。
@@ -43,8 +49,8 @@ Storage VM を作成して LIF を割り当てる前に、 Azure で IP アド�
 . nic0 のネットワークインターフェイスの名前をクリックします。
 . [* 設定 ] で、 [* IP 設定 * ] をクリックします。
 . [ 追加（ Add ） ] をクリックします。
-. IP 設定の名前を入力し、 * 静的 * を選択して、 * OK * をクリックします。
-. HA ペアがある場合は、ノード 2 で上記の手順を繰り返します。
+. IP 設定の名前を入力し、 * Dynamic * を選択して、 * OK * をクリックします。
+. 作成した IP 設定の名前をクリックし、 * Assignment * を * Static * に変更して、 * Save * をクリックします。
 . SVM 管理 LIF を作成する場合は、ノード 1 で上記の手順を繰り返します。
 
 
@@ -52,9 +58,32 @@ Storage VM を作成して LIF を割り当てる前に、 Azure で IP アド�
 
 
 
-== HA ペアのロードバランサを変更する
+=== iSCSI を使用した HA ペア
 
-HA ペアがある場合、フェイルオーバーイベントが発生したときに IP アドレスをもう一方のノードに移行できるように、ロードバランサを変更する必要があります。
+Storage VM を作成して LIF を割り当てる前に、 Azure で iSCSI IP アドレスを nic0 に割り当てる必要があります。iSCSI はフェイルオーバーに ALUA を使用するため、 iSCSI の IPS はロードバランサではなく nic0 に割り当てられます。
+
+データ LIF からアクセスするための IP アドレスはノード 1 から、データ LIF からノード 2 のアクセス用の別の IP アドレス、および Storage VM （ SVM ）管理 LIF の別のオプションの IP アドレスで作成する必要があります。この管理 LIF は、 SnapCenter などの管理ツールへの接続を提供します。
+
+.手順
+. Azure ポータルにログインし、 * Virtual Machine * サービスを開きます。
+. ノード 1 の Cloud Volumes ONTAP VM の名前をクリックします。
+. [* ネットワーク ] をクリックします。
+. nic0 のネットワークインターフェイスの名前をクリックします。
+. [* 設定 ] で、 [* IP 設定 * ] をクリックします。
+. [ 追加（ Add ） ] をクリックします。
+. IP 設定の名前を入力し、 * Dynamic * を選択して、 * OK * をクリックします。
+. 作成した IP 設定の名前をクリックし、 * Assignment * を * Static * に変更して、 * Save * をクリックします。
+. ノード 2 で上記の手順を繰り返します。
+. SVM 管理 LIF を作成する場合は、ノード 1 で上記の手順を繰り返します。
+
+
+作成したプライベート IP アドレスをコピーします。新しい Storage VM の LIF を作成するときに、これらの IP アドレスを指定する必要があります。
+
+
+
+=== NFS / SMB を使用した HA ペア
+
+NFS データおよび SMB データに使用する IP アドレスはロードバランサに割り当てられます。これにより、フェイルオーバー時に IP アドレスを別のノードに移行できるようになります。
 
 .手順
 . Azure ポータルで、 * ロードバランサ * サービスを開きます。
@@ -63,10 +92,11 @@ HA ペアがある場合、フェイルオーバーイベントが発生した�
 +
 .. [* 設定 ] で、 [* フロントエンド IP 設定 *] をクリックします。
 .. [ 追加（ Add ） ] をクリックします。
-.. フロントエンド IP の名前を入力し、デフォルトサブネットを選択して、 * Dynamic * を選択したままにします。
+.. フロントエンド IP の名前を入力し、 Cloud Volumes ONTAP HA ペアのサブネットを選択して、 * Dynamic * を選択したままにします。
 +
 image:screenshot_azure_frontend_ip.gif["名前とサブネットが選択されている Azure ポータルにフロントエンド IP アドレスを追加するスクリーンショット。"]
 
+.. 作成したフロントエンド IP 設定の名前をクリックし、 * Assignment * を * Static * に変更して、 * Save * をクリックします。
 
 
 . 作成した各フロントエンド IP のヘルスプローブを追加します。
@@ -92,7 +122,7 @@ image:screenshot_azure_health_probe.gif["名前とポートを入力する Azure
 *** * フロントエンド IP アドレス *: 作成したフロントエンド IP アドレスのいずれかを選択します。
 *** *HA Ports *: このオプションを有効にします。
 *** * バックエンドプール * ：すでに選択されているデフォルトのバックエンドプールをそのまま使用します。
-*** * ヘルスプローブ * ：作成したヘルスプローブのいずれかを選択します。
+*** * ヘルスプローブ * ：選択したフロントエンド IP に対して作成したヘルスプローブを選択します。
 *** * セッション持続性 *: 「なし」を選択します。
 *** * フローティング IP * ： * 有効 * を選択します。
 +
@@ -108,9 +138,11 @@ Cloud Volumes ONTAP のネットワークセキュリティグループルール
 
 
 
-== Storage VM を作成
+== Storage VM と LIF を作成
 
 以下の手順では、シングルノードシステムまたは HA ペアに新しい Storage VM を作成します。ノード 1 からのデータ LIF へのアクセスには、ノード 2 （ HA ペアのみ）からのデータ LIF へのアクセスに使用する別の IP アドレス、および Storage VM （ SVM ）の管理 LIF のオプションの IP アドレスが 1 つ必要です。この管理 LIF は、 SnapCenter などの管理ツールへの接続を提供します。
+
+次のコマンドは、 Storage VM のデータアクセスプロトコルである NAS または iSCSI に一致するものを使用してください。
 
 .手順
 . Storage VM と Storage VM へのルートを作成してください。
@@ -124,18 +156,34 @@ vserver create -vserver <svm-name> -subtype default -rootvolume <root-volume-nam
 ----
 network route create -destination 0.0.0.0/0 -vserver <svm-name> -gateway <ip-of-gateway-server>
 ----
-. ノード 1 に NAS LIF を作成します。
+. データ LIF を作成します。
++
+.. ノード 1 に NAS LIF を作成する場合は、次のコマンドを使用します。
 +
 [source, cli]
 ----
-network interface create -vserver <svm-name> -lif <lif-name> -role data -data-protocol cifs,nfs,fcache -address <nfs-cifs-ip-address> -netmask-length 24 -home-node <name-of-node1> -status-admin up -failover-policy system-defined -firewall-policy data -home-port e0a -auto-revert true -failover-group Default -probe-port <port-number-for-azure-health-probe1>
+network interface create -vserver <svm-name> -lif <lif-name> -role data -data-protocol cifs,nfs,fcache -address <nfs--ip-address> -netmask-length 24 -home-node <name-of-node1> -status-admin up -failover-policy system-defined -firewall-policy data -home-port e0a -auto-revert true -failover-group Default -probe-port <port-number-for-azure-health-probe1>
 ----
-. ノード 2 に NAS LIF を作成します（ HA ペアの場合のみ）。
+.. ノード 2 に NAS LIF を作成する場合は、次のコマンドを使用します（ HA ペアの場合のみ）。
 +
 [source, cli]
 ----
 network interface create -vserver <svm-name> -lif <lif-name> -role data -data-protocol cifs,nfs,fcache -address <nfs-cifs-ip-address> -netmask-length 24 -home-node <name-of-node2> -status-admin up -failover-policy system-defined -firewall-policy data -home-port e0a -auto-revert true -failover-group Default -probe-port <port-number-for-azure-health-probe2>
 ----
+.. ノード 1 に iSCSI LIF を作成する場合は、次のコマンドを使用します。
++
+[source, cli]
+----
+network interface create -vserver <svm-name> -home-port e0a -address <iscsi-ip-address> -lif <lif-name> -home-node <name-of-node1> -data-protocol iscsi
+----
+.. ノード 2 に iSCSI LIF を作成する場合は、次のコマンドを使用します（ HA ペアの場合のみ）。
++
+[source, cli]
+----
+network interface create -vserver <svm-name> -home-port e0a -address <iscsi-ip-address> -lif <lif-name> -home-node <name-of-node2> -data-protocol iscsi
+----
+
+
 . オプション：ノード 1 に Storage VM 管理 LIF を作成します。
 +
 [source, cli]

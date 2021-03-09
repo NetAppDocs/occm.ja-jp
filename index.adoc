@@ -19,7 +19,7 @@ Cloud Manager を使用すると、 IT エキスパートとクラウドアー�
 
 * link:reference_key_changes.html["Cloud Manager の重要な変更点"]
 * link:reference_new_occm.html["Cloud Manager の新機能"]
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_98.html["Cloud Volumes ONTAP の新機能"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_990.html["Cloud Volumes ONTAP の新機能"^]
 
 
 
