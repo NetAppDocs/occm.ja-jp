@@ -142,12 +142,18 @@ entries:
       url: "/task_managing_storage.html"
     - title: アクセス頻度の低いデータをオブジェクトストレージに階層化します
       url: "/task_tiering.html"
-    - title: Storage VM を管理します
-      url: "/task_managing_svms.html"
     - title: ONTAP を永続的ストレージとして使用する
       url: "/task_connecting_kubernetes.html"
     - title: ネットアップの暗号化機能でボリュームを暗号化
       url: "/task_encrypting_volumes.html"
+  - title: Storage VM を管理します
+    entries:
+    - title: Cloud Manager で Storage VM を使用できます
+      url: "/task_managing_svms.html"
+    - title: AWS で Storage VM を作成します
+      url: "/task_managing_svms_aws.html"
+    - title: Azure で Storage VM を作成します
+      url: "/task_managing_svms_azure.html"
   - title: データのレプリケート
     url: "/task_replicating_data.html"
   - title: パフォーマンスを監視

@@ -73,7 +73,7 @@ Cloud Volumes ONTAP システムのサイジングを行うことで、パフォ
 
 
 --
-EBS ディスクタイプ:: 汎用 SSD は、 Cloud Volumes ONTAP で最も一般的なディスクタイプです。EBS ディスクのユースケースについては、を参照してください http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS ドキュメント：「 EBS Volume Types"^]。
+EBS ディスクタイプ:: 汎用 SSD （ gp2 ）は Cloud Volumes ONTAP で最も一般的なディスクタイプです。EBS ディスクのユースケースについては、を参照してください http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS ドキュメント：「 EBS Volume Types"^]。
 EBS ディスクサイズ::
 +
 --
@@ -102,7 +102,7 @@ AWS Outpost を使用している場合は、 Working Environment ウィザー�
 
 * でサポートされるのはシングルノードの Cloud Volumes ONTAP システムのみです 今回は
 * Cloud Volumes で使用できる EC2 インスタンス ONTAP は、 Outpost で利用できる機能に限定されています
-* 現時点では、汎用 SSD のみがサポートされています
+* 現時点では、汎用 SSD （ gp2 ）のみがサポートされます
 
 
 

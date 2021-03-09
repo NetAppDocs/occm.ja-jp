@@ -99,4 +99,14 @@ image:screenshot_cmk_add_accounts_dialog.gif["このスクリーンショット�
 
 
 
+. お客様が管理する CMK を使用している場合は、 Cloud Volumes ONTAP IAM ロールを a_key user_権限 として追加して、 CMK のキーポリシーを変更します。
++
+この手順は、 Cloud Volumes ONTAP でデータの階層化を有効にし、 S3 バケットに格納されているデータを暗号化する場合に必要です。
+
++
+作業環境の作成時に IAM ロールが作成されるため、このステップの _ 導入後 _ Cloud Volumes ONTAP を実行する必要があります。（もちろん、既存の Cloud Volumes ONTAP IAM ロールを使用することもできるため、この手順を前に実行することもできます）。
+
++
+https://docs.aws.amazon.com/kms/latest/developerguide/editing-keys.html["AWS のドキュメント：「キーの編集"^]
+
 

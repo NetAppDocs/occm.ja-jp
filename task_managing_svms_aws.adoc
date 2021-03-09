@@ -1,0 +1,234 @@
+---
+sidebar: sidebar 
+permalink: task_managing_svms_aws.html 
+keywords: storage virtual machine, vserver, svm, storage vm, supported number, number supported 
+summary: Storage VM は ONTAP 内で実行される仮想マシンであり、クライアントにストレージサービスとデータサービスを提供します。これは SVM または SVM として認識されていることがあります。Cloud Volumes ONTAP にはデフォルトで 1 つの Storage VM が設定されますが、一部の設定では追加の Storage VM がサポートされます。 
+---
+= AWS で Cloud Volumes ONTAP 用のデータ提供用 Storage VM を作成します
+:toc: macro
+:hardbreaks:
+:toc: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Storage VM は ONTAP 内で実行される仮想マシンであり、クライアントにストレージサービスとデータサービスを提供します。これは、 _ SVM _ または _ SVM _ であることがわかります。Cloud Volumes ONTAP にはデフォルトで 1 つの Storage VM が設定されますが、一部の設定では追加の Storage VM がサポートされます。
+
+データを提供する Storage VM を追加で作成するには、 AWS で IP アドレスを割り当ててから、 Cloud Volumes ONTAP の設定に基づいて ONTAP コマンドを実行する必要があります。
+
+
+
+== サポートされている Storage VM 数
+
+Cloud Volumes ONTAP の BYOL では、 9.7 リリース以降、複数の Storage VM がアドオンライセンスで AWS でサポートされます。にアクセスします https://docs.netapp.com/us-en/cloud-volumes-ontap/index.html["Cloud Volumes ONTAP リリースノート"^] 使用している Cloud Volumes ONTAP のバージョンでサポートされる Storage VM 数を確認してください。
+
+他のすべての Cloud Volumes ONTAP 構成で、ディザスタリカバリに使用する 1 つのデータ提供用 Storage VM と 1 つのデスティネーション Storage VM がサポートされます。ソース Storage VM で停止が発生した場合は、デスティネーション Storage VM をデータアクセス用にアクティブ化できます。
+
+
+
+== 構成の制限を確認します
+
+各 EC2 インスタンスでは、ネットワークインターフェイスごとにサポートされるプライベート IPv4 アドレスの最大数が決まっています。新しい Storage VM に AWS で IP アドレスを割り当てる前に、上限を確認する必要があります。
+
+.手順
+. に移動します https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_aws_98.html["ストレージの制限に関するセクションは、 Cloud Volumes ONTAP リリースノートを参照してください"^]。
+. インスタンスタイプのインターフェイスごとの IP アドレスの最大数を確認します。
+. AWS で IP アドレスを割り当てるときは次のセクションで必要になるため、この数値をメモしておいてください。
+
+
+
+
+== AWS で IP アドレスを割り当てます
+
+新しい Storage VM 用の LIF を作成する前に、 AWS のポート e0a にプライベート IPv4 アドレスを割り当てる必要があります。
+
+Storage VM 用のオプションの管理 LIF では、単一のノードシステムおよび単一の AZ 内の HA ペア上にプライベート IP アドレスが必要です。この管理 LIF は、 SnapCenter などの管理ツールへの接続を提供します。
+
+.手順
+. AWS にログインして EC2 サービスを開きます。
+. Cloud Volumes ONTAP インスタンスを選択し、 * ネットワーク * をクリックします。
++
+HA ペアで Storage VM を作成する場合は、ノード 1 を選択します。
+
+. ネットワークインターフェイス * までスクロールし、ポート e0a の * インターフェイス ID * をクリックします。
++
+image:screenshot_aws_e0a.gif["ネットワークインターフェイスのポート e0a を表示する AWS コンソールのスクリーンショット。"]
+
+. ネットワークインターフェイスを選択し、 * Actions > Manage IP Addresses * をクリックします。
+. e0a の IP アドレスのリストを展開します。
+. IP アドレスを確認します。
++
+.. 割り当てられた IP アドレスの数を数えて、ポートに追加の IP 用のスペースがあることを確認します。
++
+このページの前のセクションで、インターフェイスごとにサポートされる IP アドレスの最大数を確認しておく必要があります。
+
+.. オプション： Cloud Volumes ONTAP の CLI に移動し、 * network interface show * を実行して、各 IP アドレスが使用中であることを確認します。
++
+IP アドレスが使用されていない場合は、新しい Storage VM で使用できます。
+
+
+
+. AWS コンソールに戻り、「 * 新しい IP アドレスを割り当て * 」をクリックして、新しい Storage VM に必要な量に基づいて追加の IP アドレスを割り当てます。
++
+** シングルノードシステム：未使用のセカンダリプライベート IP が 1 つ必要です。
++
+Storage VM に管理 LIF を作成する場合は、オプションのセカンダリプライベート IP が必要です。
+
+** 単一の AZ における HA ペア：ノード 1 には、未使用のセカンダリプライベート IP が 1 つ必要です。
++
+Storage VM に管理 LIF を作成する場合は、オプションのセカンダリプライベート IP が必要です。
+
+** 複数の AZ にまたがる HA ペア：各ノードには、未使用のセカンダリプライベート IP が 1 つ必要です。
+
+
+. 単一の AZ 内の HA ペアに IP アドレスを割り当てる場合は、 * セカンダリプライベート IPv4 アドレスの再割り当てを許可 * を有効にします。
+. [ 保存（ Save ） ] をクリックします。
+. 複数の AZ に HA ペアを作成する場合は、ノード 2 に対して上記の手順を繰り返す必要があります。
+
+
+
+
+== シングルノードシステムに Storage VM を作成する
+
+以下の手順では、シングルノードシステムに新しい Storage VM を作成します。NAS LIF を作成するには 1 つのプライベート IP アドレスが必要で、管理 LIF を作成する場合はもう 1 つのプライベート IP アドレスが必要です。
+
+.手順
+. Storage VM と Storage VM へのルートを作成してください。
++
+[source, cli]
+----
+vserver create -rootvolume-security-style mixed -rootvolume root_svm_2 -snapshot-policy default -vserver svm_2 -aggregate aggr1
+----
++
+[source, cli]
+----
+network route create -destination 0.0.0.0/0 -vserver svm_2 -gateway subnet_gateway
+----
+. NAS LIF を作成します。
++
+[source, cli]
+----
+network interface create -auto-revert true -vserver svm_2 -service-policy default-data-files -home-port e0a -address private_ip_x -netmask node1Mask -lif ip_nas_2 -home-node cvo-node
+----
++
+ここで、 _private_IP_x_は 、 e0a 上の未使用のセカンダリプライベート IP です。
+
+. オプション： Storage VM 管理 LIF を作成する
++
+[source, cli]
+----
+network interface create -auto-revert true -vserver svm_2 -service-policy default-management -home-port e0a -address private_ip_y -netmask node1Mask -lif ip_svm_mgmt_2 -home-node cvo-node
+----
++
+ここで、 _private_IP_y_ は e0a 上の別の未使用のセカンダリプライベート IP です。
+
+
+
+
+
+== の HA ペアに Storage VM を作成します 単一 AZ
+
+以下の手順では、単一の AZ の HA ペアに新しい Storage VM を作成します。NAS LIF を作成するには 1 つのプライベート IP アドレスが必要で、管理 LIF を作成する場合はもう 1 つのプライベート IP アドレスが必要です。
+
+これらの両方の LIF はノード 1 に割り当てられます。障害が発生した場合、プライベート IP アドレスをノード間で移動できます。
+
+.手順
+. Storage VM と Storage VM へのルートを作成してください。
++
+[source, cli]
+----
+vserver create -rootvolume-security-style mixed -rootvolume root_svm_2 -snapshot-policy default -vserver svm_2 -aggregate aggr1
+----
++
+[source, cli]
+----
+network route create -destination 0.0.0.0/0 -vserver svm_2 -gateway subnet_gateway
+----
+. ノード 1 に NAS LIF を作成します。
++
+[source, cli]
+----
+network interface create -auto-revert true -vserver svm_2 -service-policy default-data-files -home-port e0a -address private_ip_x -netmask node1Mask -lif ip_nas_2 -home-node cvo-node1
+----
++
+ここで、 _private_IP_x_は 、 CVO-node1 の e0a にある未使用のセカンダリプライベート IP です。テイクオーバーの際には、この IP アドレスを CVO-node2 の e0a に再配置できます。これは、サービスポリシー default-data-files が、 IP をパートナーノードに移行できることを示しているためです。
+
+. オプション：ノード 1 に Storage VM 管理 LIF を作成します。
++
+[source, cli]
+----
+network interface create -auto-revert true -vserver svm_2 -service-policy default-management -home-port e0a -address private_ip_y -netmask node1Mask -lif ip_svm_mgmt_2 -home-node cvo-node1
+----
++
+ここで、 _private_IP_y_ は e0a 上の別の未使用のセカンダリプライベート IP です。
+
+
+
+
+
+== 複数の HA ペアに Storage VM を作成する AZS
+
+以下の手順は、複数の AZ にまたがる HA ペア上に新しい Storage VM を作成します。
+
+NAS LIF には _floated_ip アドレスが必要です。これは管理 LIF のオプションです。これらのフローティング IP アドレスでは、 AWS でプライベート IP を割り当てる必要はありません。代わりに、 AWS ルートテーブルに、同じ VPC 内の特定のノードの ENI を指すようにフローティング IP が自動的に設定されます。
+
+フローティング IP が ONTAP と連携するためには、各ノードのすべての Storage VM でプライベート IP アドレスを設定する必要があります。以下の手順は、ノード 1 とノード 2 に iSCSI LIF を作成したものです。
+
+.手順
+. Storage VM と Storage VM へのルートを作成してください。
++
+[source, cli]
+----
+vserver create -rootvolume-security-style mixed -rootvolume root_svm_2 -snapshot-policy default -vserver svm_2 -aggregate aggr1
+----
++
+[source, cli]
+----
+network route create -destination 0.0.0.0/0 -vserver svm_2 -gateway subnet_gateway
+----
+. ノード 1 に NAS LIF を作成します。
++
+[source, cli]
+----
+network interface create -auto-revert true -vserver svm_2 -service-policy default-data-files -home-port e0a -address floating_ip -netmask node1Mask -lif ip_nas_floating_2 -home-node cvo-node1
+----
++
+** フローティング IP アドレスは、 HA 構成を導入する AWS リージョン内のどの VPC の CIDR ブロックにも属していない必要があります。192.168.209.27 は、フローティング IP アドレスの例です。 link:reference_networking_aws.html#requirements-for-ha-pairs-in-multiple-azs["フローティング IP アドレスの選択の詳細については、こちらを参照してください"]。
+** 「 -service-policy default-data-files 」は、 IP をパートナーノードに移行できることを示します。
+
+
+. オプション：ノード 1 に Storage VM 管理 LIF を作成します。
++
+[source, cli]
+----
+network interface create -auto-revert true -vserver svm_2 -service-policy default-management -home-port e0a -address floating_ip -netmask node1Mask -lif ip_svm_mgmt_2 -home-node cvo-node1
+----
+. ノード 1 に iSCSI LIF を作成
++
+[source, cli]
+----
+network interface create -vserver svm_2 -service-policy default-data-blocks -home-port e0a -address private_ip -netmask nodei1Mask -lif ip_node1_iscsi_2 -home-node cvo-node1
+----
++
+** この iSCSI LIF は、 Storage VM でフローティング IP の LIF 移行をサポートするために必要です。iSCSI LIF である必要はありませんが、ノード間で移行するように設定することはできません。
+** 「 -service-policy default-data-block 」は、 IP アドレスがノード間で移行されないことを示します。
+** _private_IP_は 、 CVO-node1 の eth0 （ e0a ）上の未使用のセカンダリプライベート IP アドレスです。
+
+
+. ノード 2 に iSCSI LIF を作成
++
+[source, cli]
+----
+network interface create -vserver svm_2 -service-policy default-data-blocks -home-port e0a -address private_ip -netmaskNode2Mask -lif ip_node2_iscsi_2 -home-node cvo-node2
+----
++
+** この iSCSI LIF は、 Storage VM でフローティング IP の LIF 移行をサポートするために必要です。iSCSI LIF である必要はありませんが、ノード間で移行するように設定することはできません。
+** 「 -service-policy default-data-block 」は、 IP アドレスがノード間で移行されないことを示します。
+** _private_IP_は 、 CVO-node2 の eth0 （ e0a ）上の未使用のセカンダリプライベート IP アドレスです。
+
+
+

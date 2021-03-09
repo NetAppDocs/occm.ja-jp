@@ -81,7 +81,7 @@ NOTE: データ階層化は、 DS3_v2 仮想マシンタイプの Azure では�
 
 
 
-* AWS では、パフォーマンス階層は汎用 SSD 、プロビジョニングされた IOPS SSD 、スループットに最適化された HDD のいずれかになります。
+* AWS では、パフォーマンス階層は汎用 SSD （ gp2 ）、プロビジョニングされた IOPS SSD 、またはスループット最適化 HDD にすることができます。
 * Azure では、 Premium SSD Managed Disks 、 Standard SSD Managed Disks 、 Standard HDD Managed Disks のいずれかです。
 * GCP では、 SSD または HDD （標準ディスク）のどちらかです。
 * データ階層化は暗号化テクノロジでサポートされています。
