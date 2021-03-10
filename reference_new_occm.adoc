@@ -49,11 +49,24 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_990.html["この
 
 ==== AWS で利用できる機能拡張
 
-Cloud Manager では、 AWS Key Management Service （ KMS ）を使用して Cloud Volumes ONTAP データを暗号化できるようになりました。Cloud Volumes ONTAP 9.9.9..0 以降では、お客様が管理する CMK を選択すると、 EBS ディスク上のデータと S3 に階層化されたデータが暗号化されます。これまでは、 EBS データだけが暗号化されていました。
+* クラウドサービス 9.8 を AWS Commercial Cloud Volumes ONTAP （ C2S ）環境に導入できるようになりました。
++
+link:task_getting_started_aws_c2s.html["C2S の使用を開始する方法をご確認ください"]。
 
+* Cloud Manager では、 AWS Key Management Service （ KMS ）を使用して Cloud Volumes ONTAP データを暗号化できるようになりました。Cloud Volumes ONTAP 9.9.9..0 以降では、お客様が管理する CMK を選択すると、 EBS ディスク上のデータと S3 に階層化されたデータが暗号化されます。これまでは、 EBS データだけが暗号化されていました。
++
 Cloud Volumes ONTAP IAM ロールに CMK を使用するためのアクセス権を付与する必要があります。
 
++
 link:task_setting_up_kms.html["Cloud で AWS KMS を設定する方法については、こちらをご覧ください Volume ONTAP の略"]。
+
+
+
+
+
+==== Azure で利用できる機能拡張
+
+Cloud Volumes ONTAP 9.8 を、国防総省（ DoD ）の影響レベル 6 （ IL6 ）に導入できるようになりました。
 
 
 

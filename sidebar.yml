@@ -109,7 +109,7 @@ entries:
     - title: AWS でシステムを起動します
       url: "/task_deploying_otc_aws.html"
     - title: AWS C2S で作業を開始する
-      url: https://docs.netapp.com/us-en/occm/media/c2s.pdf
+      url: "/task_getting_started_aws_c2s.html"
   - title: Azure で始めましょう
     entries:
     - title: クイックスタート

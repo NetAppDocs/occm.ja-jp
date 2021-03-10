@@ -9125,7 +9125,6 @@
   <block id="ab2fea55ae9697fcfeae223bb8d1a161" category="paragraph">Cloud Volumes ONTAP 9.9.9..0 を導入および管理できるようになりました。</block>
   <block id="9f97c3125a701942b4e6e648146819fc" category="inline-link">このリリースのに含まれる新機能について説明します Cloud Volumes ONTAP</block>
   <block id="41671c8c2787c6b4ae4a7430aaed25a5" category="paragraph"><block ref="1d003678f7aeecaa48a9a55ee79dfa0c" category="inline-link-rx"></block>。</block>
-  <block id="8fa3bb36a7ad2ba9a5fb10974a457862" category="section-title">AWS で利用できる機能拡張</block>
   <block id="acaa3f0ba647338374e9aa5717e4b179" category="paragraph">Cloud Manager では、 AWS Key Management Service （ KMS ）を使用して Cloud Volumes ONTAP データを暗号化できるようになりました。Cloud Volumes ONTAP 9.9.9..0 以降では、お客様が管理する CMK を選択すると、 EBS ディスク上のデータと S3 に階層化されたデータが暗号化されます。これまでは、 EBS データだけが暗号化されていました。</block>
   <block id="dcbf930e1a349b31dc68e26e5227c6d0" category="paragraph">Cloud Volumes ONTAP IAM ロールに CMK を使用するためのアクセス権を付与する必要があります。</block>
   <block id="b2eca227b653383cc96f103eeeeaf77a" category="inline-link-macro">Cloud で AWS KMS を設定する方法については、こちらをご覧ください Volume ONTAP の略</block>
@@ -9188,8 +9187,6 @@
   <block id="624bf1221024c93616a16790392b5131" category="paragraph"><block ref="624bf1221024c93616a16790392b5131" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0f21ca89d8c8b745954f3d9e19a0dd80" category="list-text">作成した各フロントエンド IP のヘルスプローブを追加します。</block>
   <block id="1b45149e0b23a41687b2084ae6d33a48" category="list-text">ロードバランサーの * 設定 * で、 * ヘルスプローブ * をクリックします。</block>
-  <block id="ba682e71d09592f647356ddeb83e8883" category="list-text">ヘルスプローブの名前を入力し、 63005 ～ 63500 のポート番号を入力します。他のフィールドはデフォルト値のままにします。</block>
-  <block id="8f0e7dbd5ce610e0d8fcfcd999bba33b" category="paragraph">ポート番号が 63005 ～ 63500 であることが重要です。たとえば、 3 つのヘルスプローブを作成する場合、ポート番号 63005 、 63006 、および 63007 を使用するプローブを入力できます。</block>
   <block id="3f158195d787a76b9930725abf90217b" category="inline-image-macro">名前とポートを入力する Azure ポータルにヘルスプローブを追加するスクリーンショット。</block>
   <block id="7221eeb99a62a5c16a91eaad3abc1af7" category="paragraph"><block ref="7221eeb99a62a5c16a91eaad3abc1af7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0f0494656b267aab37751c30e5a8a07e" category="list-text">フロントエンド IP ごとに新しいロードバランシングルールを作成します。</block>
@@ -9317,10 +9314,6 @@
   <block id="a094ded8d387643804f456ad69ef9c4e" category="section-title">Storage VM と LIF を作成</block>
   <block id="892275a45aef630ce148bbe286a635e7" category="paragraph">次のコマンドは、 Storage VM のデータアクセスプロトコルである NAS または iSCSI に一致するものを使用してください。</block>
   <block id="120f35ca25d8256725ff2b7eb89df365" category="list-text">データ LIF を作成します。</block>
-  <block id="83634a929851f10a39f41a6b91c0d0d4" category="list-text">ノード 1 に NAS LIF を作成する場合は、次のコマンドを使用します。</block>
-  <block id="e874b99bb45f4a9497812113e48e85b8" category="list-text">ノード 2 に NAS LIF を作成する場合は、次のコマンドを使用します（ HA ペアの場合のみ）。</block>
-  <block id="07bccb41d9f2b2977f50ad31b8409038" category="list-text">ノード 1 に iSCSI LIF を作成する場合は、次のコマンドを使用します。</block>
-  <block id="e21ce52213652967b6a386ddf84c7968" category="list-text">ノード 2 に iSCSI LIF を作成する場合は、次のコマンドを使用します（ HA ペアの場合のみ）。</block>
   <block id="3fe36f9a3281f0ec8bd94f8ae51c3c34" category="list-text"><block ref="c48666949edaeb29addd750e026db9a1" category="inline-xref-macro-rx"></block></block>
   <block id="40e7938989b9c693ef9d2535a73efc96" category="paragraph">を参照してください <block ref="e6e341fabb88ca4be499965211728d47" category="inline-link-rx"></block></block>
   <block id="b9c638cc7c6d855558f4d6869cbb1b67" category="section-title">ANF の機能拡張</block>
@@ -9347,4 +9340,122 @@
   <block id="ac5983a9eada1c7d1b2571955cdabebc" category="list-text">* ボリュームをスナップショットに戻す *</block>
   <block id="a6ca89f466d19e87794988d8a1f25d64" category="inline-image-macro">Azure NetApp Files の削除をクリックして、 Cloud Manager インターフェイスからボリュームを削除するスクリーンショット。</block>
   <block id="90ab7d419e5b436936c80f21ee230621" category="paragraph"><block ref="90ab7d419e5b436936c80f21ee230621" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7b73adc87602305d19eea3376846e09c" category="section-title">AWS で利用できる機能拡張</block>
+  <block id="360907953d19dad6cd45833cc14167e2" category="list-text">クラウドサービス 9.8 を AWS Commercial Cloud Volumes ONTAP （ C2S ）環境に導入できるようになりました。</block>
+  <block id="3e45f0a61d57f2e3257d5825fe5a7c94" category="inline-link-macro">C2S の使用を開始する方法をご確認ください</block>
+  <block id="d18fa3eb2b8c7307a90a60cc4f05ecd6" category="paragraph"><block ref="b3b9bb8617bac69b973f92800bf3807b" category="inline-link-macro-rx"></block>。</block>
+  <block id="0ac19842b01b2e595d367d49d3a2f512" category="section-title">Azure で利用できる機能拡張</block>
+  <block id="f4ddf81019b69d6e9ec665b8c011944c" category="paragraph">Cloud Volumes ONTAP 9.8 を、国防総省（ DoD ）の影響レベル 6 （ IL6 ）に導入できるようになりました。</block>
+  <block id="a98676a0aecc96c4144acc4018dba3ca" category="summary">標準の AWS リージョンと同様に、 AWS Commercial クラウドサービス（ C2S ）環境で Cloud Manager を使用して Cloud Volumes ONTAP を導入できます。 C2S はクラウドストレージにエンタープライズクラスの機能を提供します。</block>
+  <block id="ac46f2b5d78e0710ebb1765d7e4ba12a" category="doc">AWS C2S で Cloud Volumes ONTAP を使用する方法を確認します 環境</block>
+  <block id="55ac98eae564c353eeef8edc0d7097c1" category="section-title">C2S でサポートされている機能</block>
+  <block id="953b8019e01e302cfda1407c42757ca9" category="paragraph">C2S 環境の Cloud Manager から使用可能な機能は次のとおりです。</block>
+  <block id="0a9e63106b5735d38d5bf5377346f3ed" category="list-text">データレプリケーション</block>
+  <block id="d4af1c3d6fd6c6f713f1c42aeefe16e0" category="list-text">監査のスケジュール</block>
+  <block id="a3ba8957c5b6da3f0cea5f6a0560a884" category="paragraph">Cloud Volumes ONTAP の場合は、シングルノードシステムまたは HA ペアを作成できます。どちらのライセンスオプションも使用できます。従量課金制とお客様所有のライセンス（ BYOL ）です。</block>
+  <block id="4533efdd4943c354325fa4b9afd6b946" category="paragraph">S3 へのデータ階層化は、 C2S の Cloud Volumes ONTAP でもサポートされています。</block>
+  <block id="92c64f1847bb1326cce66cc7f4bc8454" category="paragraph">ネットアップのどのクラウドサービスも Cloud Manager からは使用できません。</block>
+  <block id="bbac84abd1a970b9c0e8d31ed4aa0906" category="paragraph">C2S 環境ではインターネットにアクセスできないため、次の機能も使用できません。</block>
+  <block id="edaaf5631f81ae2a1296289b005cbbcb" category="list-text">NetApp Cloud Central との統合</block>
+  <block id="a11bc353b91c78f50a85b950845a4b38" category="list-text">Cloud Manager からのソフトウェアの自動アップグレード</block>
+  <block id="a4d4a2ce01f92b20030c0f4e601e1469" category="list-text">NetApp AutoSupport</block>
+  <block id="c0954cac84549fc6e8eaef628e57836c" category="list-text">AWS の Cloud Volumes ONTAP リソースのコスト情報</block>
+  <block id="42f8643eb52a942747937327c72c8361" category="section-title">導入の概要</block>
+  <block id="7dbc114b490b3587afece94d9d3cfb10" category="paragraph">C2S で Cloud Volumes ONTAP を使用するにはいくつかの手順を実行します。</block>
+  <block id="dadad980953d2a143598b983de397916" category="list-text">AWS 環境の準備</block>
+  <block id="48779c5be1cd521ff10b7f3bcc805a25" category="paragraph">これには、ネットワークの設定、 Cloud Volumes ONTAP への登録、権限の設定、および必要に応じて AWS KMS のセットアップが含まれます。</block>
+  <block id="753e9ee5917b3802d90417268cb03124" category="list-text">Connector のインストールと Cloud Manager のセットアップ</block>
+  <block id="2e0e99403b74be7a5455c5f8ff21a2ec" category="paragraph">Cloud Manager を使用して Cloud Volumes ONTAP を導入するには、コネクタを作成する必要があります。Connector を使用すると、 Cloud Manager でパブリッククラウド環境内のリソースとプロセス（ Cloud Volumes ONTAP を含む）を管理できます。</block>
+  <block id="26742afe0446e71796a9332243fb3983" category="paragraph">Connector インスタンスにインストールされているソフトウェアから Cloud Manager にログインします。</block>
+  <block id="e322d40e3285425536b3f519283331be" category="list-text">Cloud Manager から Cloud Volumes ONTAP を起動しています。</block>
+  <block id="f14f364d88ae94a22fecdfb6080b3c8b" category="paragraph">以下に、各手順について説明します。</block>
+  <block id="aa82b0633ff8ba724f265336515caa95" category="section-title">AWS 環境を準備</block>
+  <block id="ab674d97a0dbbc87ca939d68d82e8a08" category="paragraph">AWS 環境はいくつかの要件を満たす必要があります。</block>
+  <block id="7c5d8bf27092bf15632098a9cc75b95e" category="paragraph">Cloud Volumes ONTAP が適切に動作するように AWS ネットワークをセットアップします。</block>
+  <block id="6cc1b87018ec63a72f339fd55542d90f" category="list-text">コネクタインスタンスと Cloud Volumes ONTAP インスタンスを起動する VPC とサブネットを選択します。</block>
+  <block id="cfd6f0ddd1c37132e466969cd29cfd0b" category="section-title">Cloud Volumes ONTAP に登録します</block>
+  <block id="f45971f8804dbe27a85371847149f156" category="paragraph">Cloud Manager から Cloud Volumes ONTAP を導入するには、 Marketplace サブスクリプションが必要です。</block>
+  <block id="d1e73b0111e78833cd168c2cc012483b" category="list-text">AWS Intelligence Community Marketplace にアクセスして、 Cloud Volumes ONTAP を検索します。</block>
+  <block id="93dc1b846256ba5a81d496cecf09af84" category="list-text">導入を計画しているサービスを選択します。</block>
+  <block id="50b78843131cd5e7a6b90126141037f5" category="list-text">条件を確認し、 [*Accept*]( 同意する ) をクリックします。</block>
+  <block id="bd81a861a9a90abd1e965fde29330091" category="list-text">導入を計画している場合は、他のサービスについても同じ手順を繰り返します。</block>
+  <block id="b7a04099516f8430d91ecc6b9df3f486" category="paragraph">Cloud Volumes ONTAP インスタンスを起動するには、 Cloud Manager を使用する必要があります。Cloud Volumes ONTAP インスタンスを EC2 コンソールから起動しないでください。</block>
+  <block id="9a11eb5da5d06e3593dc6b41553d97e5" category="section-title">権限を設定します</block>
+  <block id="87f42ea4c34ea0f99008b7b3b51af405" category="paragraph">AWS Commercial クラウドサービス環境でアクションを実行するために必要な権限を Cloud Manager と Cloud Volumes ONTAP に提供する IAM ポリシーとロールを設定する。</block>
+  <block id="0dc3bc40ef64f54364ea349a4715e7ef" category="paragraph">次の項目について、 IAM ポリシーと IAM ロールを 1 つずつ用意する必要があります。</block>
+  <block id="c2f8321ff3a236ed24f9e8e5cabfae55" category="list-text">コネクタインスタンス</block>
+  <block id="66dbefe706035688123645657da5ccc3" category="list-text">Cloud Volumes ONTAP インスタンス</block>
+  <block id="617e7edf7b8c2ab7627f64ba5996d390" category="list-text">Cloud Volumes ONTAP HA メディエーターインスタンス （ HA ペアを導入する場合）</block>
+  <block id="054ddf0c6f6bd813102681cc9ef9ee60" category="list-text">AWS IAM コンソールに移動し、 * Policies * をクリックします。</block>
+  <block id="224d061fb82ffb1726da2a61298c6c62" category="list-text">コネクタインスタンスのポリシーを作成します。</block>
+  <block id="084afa7630d7502963537edb4a0a6864" category="list-text">Cloud Volumes ONTAP のポリシーを作成します。</block>
+  <block id="203dbf6d02c5576894caa3a1366d2ca9" category="list-text">Cloud Volumes ONTAP HA ペアを導入する場合は、 HA メディエーターのポリシーを作成します。</block>
+  <block id="6a708c2efcfd3fa9aadb11a053154305" category="list-text">タイプが Amazon EC2 の IAM ロールを作成し、前の手順で作成したポリシーを関連付けます。</block>
+  <block id="ef1be41357c30caefe80a1e372159e5d" category="paragraph">ポリシーと同様に、コネクタ用の IAM ロールが 1 つ、 Cloud Volumes ONTAP ノード用の IAM ロールが 1 つ、 HA メディエーター用の IAM ロールが 1 つ（ HA ペアを導入する場合）必要です。</block>
+  <block id="d8274187bd955095cc8d8a796bc54f28" category="paragraph">コネクタインスタンスを起動するときに、コネクタ IAM ロールを選択する必要があります。</block>
+  <block id="82d76c39afb12299fd89e2b035a2fc70" category="paragraph">Cloud Volumes ONTAP の IAM ロールと HA メディエーターは、 Cloud Manager から Cloud Volumes ONTAP の作業環境を作成するときに選択できます。</block>
+  <block id="d7eb931b5b1d4cfe133e4c07eb2379be" category="paragraph">Cloud Volumes ONTAP で Amazon 暗号化を使用する場合は、 AWS Key Management Service の要件を満たしていることを確認します。</block>
+  <block id="b625f1267fdc411389bea37c6c262eae" category="list-text">アクティブな Customer Master Key （ CMK ；カスタマーマスターキー）がアカウントまたは別の AWS アカウントに存在することを確認します。</block>
+  <block id="3e4f6d7674e40fd3611c1cebec37b725" category="paragraph">CMK は、 AWS 管理の CMK または顧客管理の CMK にすることができます。</block>
+  <block id="3817567f1a0a9d7b3cf35607b29c79dc" category="list-text">Cloud Volumes ONTAP を導入するアカウントとは別の AWS アカウントに CMK を配置する場合は、そのキーの ARN を取得する必要があります。</block>
+  <block id="879e131e6c72b4606e407e1af17a1fb1" category="paragraph">Cloud Volumes ONTAP システムの作成時には、 Cloud Manager への ARN の提供が必要になります。</block>
+  <block id="f84c56625790e277fa76254d6697f91d" category="list-text">Cloud Manager インスタンス用の IAM ロールを CMK のキーユーザのリストに追加します。</block>
+  <block id="ea80d9267d93b8f0dcd057ae999b94ab" category="paragraph">これにより、 Cloud Manager には、 Cloud Volumes ONTAP で CMK を使用する権限が与えられます。</block>
+  <block id="0e1badd66cec8245974724fa2a280b43" category="section-title">Cloud Manager をインストールしてセットアップする</block>
+  <block id="4c06b45d24ad980552c52a9cbf857f23" category="paragraph">AWS で Cloud Volumes ONTAP システムを起動するには、まず AWS Marketplace から Connector インスタンスを起動してから、ログインして Cloud Manager をセットアップする必要があります。</block>
+  <block id="9f41c8e380cf0e56fea478a54ffb3e43" category="list-text">Privacy Enhanced Mail （ PEM ） Base-64 でエンコードされた X.509 形式の認証局（ CA ）が署名したルート証明書を取得する証明書を入手するには、組織のポリシーと手順を参照してください。</block>
+  <block id="0c7a137062facbdd9af5451dcc9caf1c" category="paragraph">セットアッププロセス中に証明書をアップロードする必要があります。Cloud Manager は、 HTTPS 経由で AWS に要求を送信する際に信頼された証明書を使用します。</block>
+  <block id="e01ba74be9f641ee21c8b73053d51160" category="list-text">コネクタインスタンスを起動します。</block>
+  <block id="c419f8d91e9428c13e4b489550591f42" category="list-text">AWS Intelligence Community Marketplace の Cloud Manager のページに移動します。</block>
+  <block id="743e88e44f4ff831837bcda803029d2c" category="list-text">Custom Launch タブで、 EC2 コンソールからインスタンスを起動するオプションを選択します。</block>
+  <block id="af50aa0e0fc211eda762b05437319cc7" category="list-text">プロンプトに従って、インスタンスを設定します。</block>
+  <block id="903f980c6b4328fd29befc5ddd7bed7d" category="paragraph">インスタンスを設定する際には、次の点に注意してください。</block>
+  <block id="9f21f79892abef2384bb79ade073ee7e" category="list-text">t3.xlarge をお勧めします。</block>
+  <block id="2c2063da836fb6a9adbb3a67f0bd1192" category="list-text">AWS 環境の準備の際に作成した IAM ロールを選択する必要があります。</block>
+  <block id="47ef31752bdcdd73b07b1fe8976c82a6" category="list-text">デフォルトのストレージオプションはそのままにしておく必要があります。</block>
+  <block id="b901bc33967dc36bebafa77250edd08b" category="list-text">コネクタに必要な接続方法は、 SSH 、 HTTP 、 HTTPS です。</block>
+  <block id="2a74a4ca6ca91fb8d3c6b38fc9233a4f" category="list-text">コネクタインスタンスに接続されているホストから Cloud Manager をセットアップします。</block>
+  <block id="7ad92db9fd68840a78d3bc935cff8f64" category="list-text">Web ブラウザを開き、次の URL を入力します。<block ref="17a92846c731483b51192cc0d49cf97e" category="inline-link-rx"></block></block>
+  <block id="4c0d84055abd630616fa9b093f337b6f" category="list-text">インターネットアクセス用のプロキシサーバを指定します。</block>
+  <block id="c3e84141ad53b58cc86262388ac9e4a6" category="list-text">手順 1 で取得した証明書をアップロードします。</block>
+  <block id="2d354fadd521725ccc56833965bb4440" category="list-text">セットアップウィザードの手順に従って、 Cloud Manager をセットアップします。</block>
+  <block id="dd6fb2ba019c1dfb48ea66d8189f5b19" category="list-text">* System Details * ： Cloud Manager インスタンスの名前を入力し、会社名を入力します。</block>
+  <block id="f996b51d4b8d0dffa87f16768fa11b0d" category="list-text">* ユーザの作成 * ： Cloud Manager の管理に使用する管理者ユーザを作成します。</block>
+  <block id="38bfdffb2647d7fe06154cb0192f2725" category="list-text">* レビュー * ：詳細を確認し、エンドユーザーライセンス契約を承認します。</block>
+  <block id="ce844b01a8ab7308a739495c52892c79" category="list-text">CA 署名証明書のインストールを完了するには、 EC2 コンソールからコネクタインスタンスを再起動します。</block>
+  <block id="665230f4bd95f60852b6fc1b7f05c103" category="list-text">コネクタが再起動したら、セットアップウィザードで作成した管理者ユーザアカウントを使用してログインします。</block>
+  <block id="0439cfd9ea85ab415d89910478b93050" category="section-title">Cloud Volumes ONTAP を起動します</block>
+  <block id="da7224d72b7c308843ae6ce07ceaa3d0" category="paragraph">Cloud Manager で新しい作業環境を作成することで、 AWS Commercial クラウドサービス環境で Cloud Volumes ONTAP インスタンスを起動できます。</block>
+  <block id="6f177e279944db659b80f0020df93964" category="list-text">ライセンスを購入した場合は、ネットアップから受け取ったライセンスファイルが必要です。ライセンスファイルは JSON 形式の .NLF ファイルです。</block>
+  <block id="4b91157a6d4a5e01b05a5a74492fcdeb" category="list-text">HA メディエーターへのキーベースの SSH 認証を有効にするには、キーペアが必要です。</block>
+  <block id="41c4defb4c9e45cc91ee861e1c4ca018" category="list-text">作業環境ページで、 * 作業環境の追加 * をクリックします。</block>
+  <block id="17e6091fb7a1e44978f0e6368bc2a694" category="list-text">作成（ Create ）で、 Cloud Volumes ONTAP または Cloud Volumes ONTAP HA を選択します。</block>
+  <block id="ece12a0b27d8259b8c5ddd7028b193a3" category="list-text">ウィザードの手順に従って、 Cloud Volumes ONTAP システムを起動します。</block>
+  <block id="2279687b270447a870c961fcb9110b1b" category="paragraph">ウィザードを完了する際には、次の点に注意してください。</block>
+  <block id="3283444cf4a21009d424e037c9609be5" category="list-text">複数のアベイラビリティゾーンに Cloud Volumes ONTAP HA を導入する場合は、公開時点で AWS Commercial クラウドサービス環境で使用可能な AZ は 2 つだけだったため、次のように構成を導入します。</block>
+  <block id="bc3b42490f9e102df5b467500a3a96c9" category="list-text">ノード 1 ：アベイラビリティゾーン A</block>
+  <block id="63d83e29bfaf6c403c2a3a24c54875de" category="list-text">ノード 2 ：アベイラビリティゾーン B</block>
+  <block id="26e7cdb828ffddbb9d243b989175d6dd" category="list-text">メディエーター：アベイラビリティゾーン A または B</block>
+  <block id="0dd93b50c0facba9b2728297b8f8f60b" category="list-text">生成されたセキュリティグループを使用するには、デフォルトのオプションをそのままにしておく必要があります。</block>
+  <block id="7a11e9efcb578a0f4ff4036d935e9aaa" category="paragraph">事前定義されたセキュリティグループには、 Cloud Volumes ONTAP が正常に動作するために必要なルールが含まれています。独自の要件がある場合は、下のセキュリティグループのセクションを参照してください。</block>
+  <block id="0adfbacad1e150bc73b3459d9f312160" category="list-text">基盤となる AWS ディスクタイプは Cloud Volumes ONTAP の初期ボリューム用です。</block>
+  <block id="747c24c16e38549fa15782949ba1d8bd" category="paragraph">以降のボリュームでは、別のディスクタイプを選択できます。</block>
+  <block id="2ef415c4f5f071dda1bb3b13a0ba212a" category="list-text">AWS ディスクのパフォーマンスはディスクサイズに依存します。</block>
+  <block id="23706808bf27f7d9f29d49a2871a9168" category="paragraph">必要なパフォーマンスを継続的に提供するディスクサイズを選択する必要があります。EBS のパフォーマンスの詳細については、 AWS のドキュメントを参照してください。</block>
+  <block id="1510e6c2673239cb91de9ef82cd7e9e4" category="list-text">ディスクサイズは、システム上のすべてのディスクのデフォルトサイズです。</block>
+  <block id="0c1d9d3db8eeeb7a62c2e39cb2683df5" category="admonition">あとでサイズを変更する必要がある場合は、 Advanced allocation オプションを使用して、特定のサイズのディスクを使用するアグリゲートを作成できます。</block>
+  <block id="2ae63b53bd08da82000580623bac6398" category="list-text">Storage Efficiency 機能を使用すると、ストレージ利用率を高めて、必要なストレージの総容量を減らすことができます。</block>
+  <block id="579a953172073c3fe33dc907abd6b3f8" category="paragraph">Cloud Manager で作成されるセキュリティグループには、 Cloud Manager と Cloud Volumes ONTAP がクラウドで正常に動作するために必要なインバウンドとアウトバウンドのルールが含まれています。テスト目的または独自のセキュリティグループを使用する場合は、ポートを参照してください。</block>
+  <block id="ca984063dccc5d90214a5ae0e7e5d3aa" category="section-title">コネクタのセキュリティグループ</block>
+  <block id="3dc508776ae41d76d647e62358d55180" category="section-title">Cloud Volumes ONTAP のセキュリティグループ</block>
+  <block id="d991e60dbce1c74dc50b148edfc8bbba" category="paragraph">Cloud Volumes ONTAP ノードのセキュリティグループには、インバウンドとアウトバウンドの両方のルールが必要です。</block>
+  <block id="0dd51d029ffb5979ffac83190ff3f63e" category="section-title">HA メディエーターの外部セキュリティグループ</block>
+  <block id="5cfc8e4f1942d56277d59f7dc3d51166" category="section-title">HA メディエーターの内部セキュリティグループ</block>
+  <block id="f4b34b24cc464b0154bd81cd6d906233" category="paragraph">Cloud Volumes ONTAP HA Mediator 用に事前定義された内部セキュリティグループには、次のルールが含まれています。Cloud Manager は常にこのセキュリティグループを作成します。独自のオプションはありません。</block>
+  <block id="dc5af89bd23317abec464d2c75aeaac1" category="list-text">ヘルスプローブの名前を入力し、 63005 ～ 65000. のポート番号を入力します。他のフィールドはデフォルト値のままにします。</block>
+  <block id="8d5ccc6064bf24d956199fe629c8a705" category="paragraph">ポート番号が 63005 ～ 65000. であることが重要です。たとえば、 3 つのヘルスプローブを作成する場合、ポート番号 63005 、 63006 、および 63007 を使用するプローブを入力できます。</block>
+  <block id="622931dd0b6724a34dfe5a4f99b9a820" category="list-text">次のコマンドを使用して、ノード 1 に NAS LIF を作成します。</block>
+  <block id="a12208fb6f089d35aa483240e3ff8cfa" category="list-text">次のコマンドを使用して、ノード 2 に NAS LIF を作成します（ HA ペアの場合のみ）。</block>
+  <block id="604199268b7709a557c60a09df0624bf" category="list-text">次のコマンドを使用して、ノード 1 に iSCSI LIF を作成します。</block>
+  <block id="4f8662666e7a1ea48a0773b6ce030409" category="list-text">次のコマンドを使用して、ノード 2 に iSCSI LIF を作成します（ HA ペアの場合のみ）。</block>
 </blocks>
