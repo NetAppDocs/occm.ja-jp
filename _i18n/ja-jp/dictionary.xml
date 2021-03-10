@@ -4449,7 +4449,6 @@
   <block id="8b53faee27870b72e0be69261d54a7ee" category="doc">Azure NetApp Files の詳細をご覧ください</block>
   <block id="b4afab774d5aae036a66f2e95c63406b" category="list-text">複数のプロトコルをサポートしているため、 Linux と Windows 両方のアプリケーションを Azure でシームレスに移行してスムーズに実行できます。</block>
   <block id="86431e70f2e01436434235b95f27507f" category="list-text">複数のパフォーマンス階層を使用することで、ワークロードのパフォーマンス要件に緊密に合わせることができます。</block>
-  <block id="95b0edb12b48aff15711bce68959e1d0" category="list-text">SAP HANA 、 GDPR 、 HIPPA を含む業界をリードする認定資格を取得することで、最も要件の厳しいワークロードを Azure に移行できます。</block>
   <block id="4b892d08b42aafcd301b83ab05b6e993" category="section-title">Cloud Manager のその他の機能</block>
   <block id="808aad2d4362b6e94ddea8e0c179a05e" category="list-text">NFS または SMB データを Azure NetApp Files に Cloud Manager から直接移行する。データ移行には、ネットアップの Cloud Sync サービスが採用されています。 <block ref="5d6e639d376b0a732b72a422618ce218" category="inline-link-macro-rx"></block>。</block>
   <block id="d218dbfc19bf64cd1d00af2b34dec184" category="list-text">人工知能（ AI ）ベースのテクノロジを使用して、クラウドコンプライアンスはデータコンテキストを把握し、 Azure NetApp Files アカウントに存在する機密データを特定するのに役立ちます。 <block ref="1e1ad7f4119cf7cd06b9ad64f7cb251a" category="inline-link-macro-rx"></block>。</block>
@@ -5015,9 +5014,7 @@
   <block id="3bf992a109f2a93d6d964ab2c501e805" category="list-text">Azure NetApp Files 作業環境を開きます。</block>
   <block id="e0e02b01eefffa92ef6dd41ca0bfddaa" category="list-text">[ 新しいボリュームの追加 ] をクリックします。</block>
   <block id="8efbe080646813cd33c5297ebb1ef190" category="list-text">各ページで必要な情報を入力します。</block>
-  <block id="e6cf5e009c4f21053b0521569ad85bd0" category="list-text">* Azure NetApp Files アカウント * ：既存の Azure NetApp Files アカウントを選択するか、新しいアカウントを作成します。</block>
   <block id="13ecbacd691c26d682199c2a13ae7ca8" category="inline-image-macro">「 Azure NetApp Files アカウントの作成に必要なフィールドのスクリーンショット。名前、 Azure サブスクリプション、場所、リソースグループが含まれています。」</block>
-  <block id="dd5b83d9bac9e658e2b3af80ca13076a" category="paragraph"><block ref="dd5b83d9bac9e658e2b3af80ca13076a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0dc3251c60a979588ce5f7932e69ba87" category="list-text">* 容量プール * ：既存の容量プールを選択するか、新しい容量プールを作成します。</block>
   <block id="79f05e8f99917560625d1cf3f2d4fc5d" category="inline-link">サービスレベル</block>
   <block id="c35795b8ffe511f480a251678339892b" category="paragraph">新しい容量プールを作成する場合は、サイズを指定してを選択する必要があります<block ref="f998dd47925b345cb96cc9547dcf35dc" category="inline-link-rx"></block>。</block>
@@ -5025,12 +5022,8 @@
   <block id="485ef9124372f546b80f3713ee3e96b4" category="list-text">* 詳細とタグ * ：ボリュームの名前とサイズ、ボリュームを配置する VNet とサブネットを入力し、必要に応じてボリュームのタグを指定します。</block>
   <block id="3b608e06daf087ff8d8ec6c3426b4e86" category="list-text">* プロトコル * ： NFS または SMB プロトコルを選択し、必要な情報を入力します。</block>
   <block id="91080ec993aad166af2bca2fdc134255" category="paragraph">以下に、 NFS の詳細の例を示します。</block>
-  <block id="63277b223e53b447dff873f69111921c" category="paragraph"><block ref="63277b223e53b447dff873f69111921c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="222b25f4eef6190179485b1f6954fc0a" category="paragraph">SMB の詳細の例を次に示します。最初の SMB ボリュームをセットアップするときに、 Active Directory の情報を指定する必要があります。</block>
-  <block id="7d0a78bcf4b151e2e5310bc06f7375dd" category="paragraph"><block ref="7d0a78bcf4b151e2e5310bc06f7375dd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="353f693805839295caedde0842633d11" category="section-title">ボリュームのマウント</block>
   <block id="8298547bbbd227879ca27d72eedeb07a" category="list-text">ボリュームにカーソルを合わせ、 * ボリュームをマウント * を選択します。</block>
-  <block id="14f7ba4cf15060bd06652c615c66c92e" category="paragraph"><block ref="14f7ba4cf15060bd06652c615c66c92e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="38aa5b57f82843fe74bb954a343bf4e0" category="list-text">指示に従ってボリュームをマウントします。</block>
   <block id="93bed5a9ef977c118d1838ee3b9ad3dd" category="section-title">ボリュームのサイズとタグを編集する</block>
   <block id="8cbb6213062bff0f8ae5d9232049a4ae" category="paragraph">ボリュームの作成後、ボリュームのサイズやタグをいつでも変更できます。</block>
@@ -5041,7 +5034,6 @@
   <block id="e8ae2d2b47ef8fe5d9635ba5138d815e" category="paragraph">Snapshot コピーは、ボリュームのポイントインタイムコピーを提供します。Snapshot コピーの作成、新しいボリュームへのデータのリストア、および Snapshot コピーの削除</block>
   <block id="072ce5964f5857c89ec5dc601b703af3" category="list-text">ボリュームにカーソルを合わせ、 Snapshot コピーの管理に使用できるオプションを 1 つ選択します。</block>
   <block id="77920e8d9473162a2167976898eaa180" category="list-text">* Snapshot コピーを作成します *</block>
-  <block id="9a0a4bafcf7cda2b71ac888776773f17" category="list-text">* 新しいボリュームへのリストア *</block>
   <block id="b4d6c5073915bd6ebc84d2c6c45d666f" category="list-text">* Snapshot コピーを削除します。 *</block>
   <block id="df95b2ddbeefe0bd257bae9d1c7d663a" category="list-text">プロンプトに従って、選択した操作を完了します。</block>
   <block id="0cecf0bf4ed73c5c2b6d6907700fae2d" category="section-title">ボリュームの削除</block>
@@ -5051,7 +5043,6 @@
   <block id="24b1d69934097e62c674bd1990060ba3" category="section-title">Azure NetApp Files の削除</block>
   <block id="314401814eaa768c4f6d593c27a2981d" category="paragraph">この操作を実行すると、 Azure NetApp Files が Cloud Manager から削除されます。Azure NetApp Files アカウントやボリュームは削除されません。Azure NetApp Files はいつでも Cloud Manager に追加できます。</block>
   <block id="efe74b5ca066da05f9df0c24eabbf492" category="list-text">ページの右上にあるアクションメニューを選択し、 * Azure NetApp Files の削除 * をクリックします。</block>
-  <block id="41b4db0a81e43bcec46b3212f4c2f1e3" category="paragraph"><block ref="41b4db0a81e43bcec46b3212f4c2f1e3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="40b851aafab82c78484c46169f816fd2" category="list-text">[ 削除（ Remove ） ] をクリックして確定します。</block>
   <block id="6008b7cba147a9bf8fcb7d4e84297060" category="summary">Cloud Central アカウントはマルチテナンシーに対応しており、 Cloud Manager 内から分離されたワークスペース内のユーザやリソースを整理できます。</block>
   <block id="46f7a3d874452e96ced11ba88644494a" category="doc">アカウント設定：ユーザ、ワークスペース、コネクタ、およびサブスクリプション</block>
@@ -9268,7 +9259,6 @@
   <block id="6ab419e28cab05bd181b5548828ce291" category="inline-link-macro">クラウド対応ワークロードタブ</block>
   <block id="5ce2b03c2bf81f57ecc78a501aaad69e" category="list-text">新しい <block ref="cfb47abf92d2fecc76f7d2200e35c281" category="inline-link-macro-rx"></block> オンプレミスの ONTAP クラスタからクラウドに移行するのに最適と特定したワークロードまたはボリュームのリストが表示されます。これらのボリュームの一部を移動すると、コストが削減され、パフォーマンスと耐障害性が向上する可能性があります。</block>
   <block id="9e49141228614f46674f3e99aa052d48" category="inline-link">リフトとシフトとは何ですか？</block>
-  <block id="4d073003506f9e260da882db4cd0d349" category="paragraph">を参照してください <block ref="aadedc558a90c565801e6d4c2f6af32f" category="inline-link-rx"></block></block>
   <block id="c695cd123d8c1b69b12f443c42ad98f9" category="inline-link-macro">使用できるライセンスがあるかどうかを確認します</block>
   <block id="9958ed1c518d5ececb33454216205cfb" category="admonition">購入した一部のオンプレミス ONTAP ストレージシステムには、 Cloud Volumes ONTAP のライセンスが無償で付属している場合があります。ライセンスを使用して新しい Cloud Volumes ONTAP システムを作成するか、または既存の Cloud Volumes ONTAP システムにライセンスを適用して容量を拡張できます。 <block ref="55cbe4c267c2e900a025b4a2b8bc1467" category="inline-link-macro-rx"></block>。</block>
   <block id="179fb8ccb13d33ad837270944969426a" category="summary">Cloud Manager の Active IQ ページには、オンプレミス環境で検出されていない ONTAP クラスタが表示されます。いずれのクラスタでもディスクファームウェアまたはシェルフファームウェアを更新する必要があるかどうかや、オンプレミスシステムの購入時に付与されたすべての Cloud Volumes ONTAP ライセンスを使用しているかどうかが示されます。この情報は、 Active IQ デジタルアドバイザから Cloud Manager に提供されます。</block>
@@ -9331,4 +9321,30 @@
   <block id="e874b99bb45f4a9497812113e48e85b8" category="list-text">ノード 2 に NAS LIF を作成する場合は、次のコマンドを使用します（ HA ペアの場合のみ）。</block>
   <block id="07bccb41d9f2b2977f50ad31b8409038" category="list-text">ノード 1 に iSCSI LIF を作成する場合は、次のコマンドを使用します。</block>
   <block id="e21ce52213652967b6a386ddf84c7968" category="list-text">ノード 2 に iSCSI LIF を作成する場合は、次のコマンドを使用します（ HA ペアの場合のみ）。</block>
+  <block id="3fe36f9a3281f0ec8bd94f8ae51c3c34" category="list-text"><block ref="c48666949edaeb29addd750e026db9a1" category="inline-xref-macro-rx"></block></block>
+  <block id="40e7938989b9c693ef9d2535a73efc96" category="paragraph">を参照してください <block ref="e6e341fabb88ca4be499965211728d47" category="inline-link-rx"></block></block>
+  <block id="b9c638cc7c6d855558f4d6869cbb1b67" category="section-title">ANF の機能拡張</block>
+  <block id="eefa87fcf4528e1ae742a779fbaa8daf" category="list-text">ワークロードのニーズを満たし、コストを最適化するために、ボリュームのサービスレベルを動的に変更できるようになりました。ボリュームは、ボリュームに影響を及ぼすことなく、もう一方の容量プールに移動されます。 <block ref="f702960730c1ce1343866494c6635754" category="inline-link-macro-rx"></block>。</block>
+  <block id="0f5101975c831a1a6350155e818d4cbf" category="list-text">SAP HANA 、 GDPR 、 HIPAA を含む業界をリードする認定資格を取得することで、最も要件の厳しいワークロードを Azure に移行できます。</block>
+  <block id="871a29db0a928b46295d82cee2357c13" category="list-text">SMB を使用する場合は、 DNS と Active Directory を設定しておく必要があります。</block>
+  <block id="943219d5074bb5ad25a6a5caf2ffdd2a" category="list-text">SMB ボリュームを作成する場合は、接続可能な Windows Active Directory サーバが必要です。この情報は、ボリュームの作成時に入力します。</block>
+  <block id="0df0074f5bda9b547c12ff0ac8f4a896" category="list-text">* Azure NetApp Files アカウント * ：既存の Azure NetApp Files アカウントを選択するか、新しいアカウントを作成します。新しいアカウントを作成するときは、使用するリソースグループも選択できます。</block>
+  <block id="be40baf84cfc673a091dfd1b17d7663a" category="paragraph"><block ref="be40baf84cfc673a091dfd1b17d7663a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dea14d87fa3d65df58f3beda6ccb3a30" category="inline-image-macro">NFS ボリュームのセットアップに必要なフィールドのスクリーンショット。</block>
+  <block id="643c51aaf0a263e7e8a915f608bbb548" category="paragraph"><block ref="643c51aaf0a263e7e8a915f608bbb548" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8f470daf6cfa2970c8395cc6be9c7612" category="paragraph">SMB の詳細の例を次に示します。最初の SMB ボリュームを設定するときは、次のページで Active Directory の情報を指定する必要があります。</block>
+  <block id="384442b7c021ea920d5444dad3c474e3" category="inline-image-macro">SMB ボリュームのセットアップに必要なフィールドのスクリーンショット。</block>
+  <block id="f4b5aaab764c0b2d36fafa41b62e1b0d" category="paragraph"><block ref="f4b5aaab764c0b2d36fafa41b62e1b0d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="405c1e241cc1b6685d6c0cc7dbbc8042" category="list-text">既存のボリュームの Snapshot に基づいてこのボリュームを作成する場合は、 Snapshot 名ドロップダウンリストから Snapshot を選択します。</block>
+  <block id="0753d577f87c3ce7385e295a5cc23407" category="paragraph">クラウドボリュームのマウントに進みます。</block>
+  <block id="ed098667e58a3c583c4147e4fd6baaa8" category="inline-image-macro">ボリュームにカーソルを合わせると使用可能な処理のスクリーンショット。</block>
+  <block id="2bfbdc93a5a4003da1039544054d6805" category="paragraph"><block ref="2bfbdc93a5a4003da1039544054d6805" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8989c0583a0a57e982a3984bbb5815a4" category="section-title">ボリュームのサービスレベルを変更する</block>
+  <block id="43e1a577b6b8efef38b66ad99c2617e3" category="paragraph">ボリュームの作成後は、デスティネーション容量プールがすでに存在しているかぎり、いつでもサービスレベルを変更できます。</block>
+  <block id="2b59b840a5b967b90d4d7ab8b92489af" category="list-text">ボリュームにカーソルを合わせ、 * サービスレベルの変更 * を選択します。</block>
+  <block id="83f077d776e69552c4da718ba6cb17ce" category="list-text">必要なサービスレベルを提供する容量プールを選択します。</block>
+  <block id="538a392da8eeab76314db8254ebf544b" category="paragraph">ボリュームは、ボリュームに影響を及ぼすことなく、もう一方の容量プールに移動されます。</block>
+  <block id="ac5983a9eada1c7d1b2571955cdabebc" category="list-text">* ボリュームをスナップショットに戻す *</block>
+  <block id="a6ca89f466d19e87794988d8a1f25d64" category="inline-image-macro">Azure NetApp Files の削除をクリックして、 Cloud Manager インターフェイスからボリュームを削除するスクリーンショット。</block>
+  <block id="90ab7d419e5b436936c80f21ee230621" category="paragraph"><block ref="90ab7d419e5b436936c80f21ee230621" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_manage_anf_volumes.html 
-keywords: azure netapp files, create volumes, delete volumes, create nfs volumes, delete nfs volumes, netapp account, capacity pool, create capacity pool, azure netapp files permissions, azure permissions, mount path, get mount path, find mount path, mount volume 
+keywords: azure netapp files, create volumes, delete volumes, create nfs volumes, delete nfs volumes, netapp account, capacity pool, create capacity pool, azure netapp files permissions, azure permissions, mount path, get mount path, find mount path, mount volume, change service level 
 summary: 作業環境のセットアップが完了したら、 Azure NetApp Files アカウント、容量プール、ボリューム、 Snapshot の作成と管理を開始できます。 
 ---
 = Azure NetApp Files 用のボリュームを作成および管理する
@@ -21,14 +21,19 @@ summary: 作業環境のセットアップが完了したら、 Azure NetApp Fil
 
 NFS または SMB ボリュームは、新規または既存の Azure NetApp Files アカウントで作成できます。
 
+.作業を開始する前に
+* SMB を使用する場合は、 DNS と Active Directory を設定しておく必要があります。
+* SMB ボリュームを作成する場合は、接続可能な Windows Active Directory サーバが必要です。この情報は、ボリュームの作成時に入力します。
+
+
 .手順
 . Azure NetApp Files 作業環境を開きます。
 . [ 新しいボリュームの追加 ] をクリックします。
 . 各ページで必要な情報を入力します。
 +
-** * Azure NetApp Files アカウント * ：既存の Azure NetApp Files アカウントを選択するか、新しいアカウントを作成します。
+** * Azure NetApp Files アカウント * ：既存の Azure NetApp Files アカウントを選択するか、新しいアカウントを作成します。新しいアカウントを作成するときは、使用するリソースグループも選択できます。
 +
-image:screenshot_anf_create_account.gif["「 Azure NetApp Files アカウントの作成に必要なフィールドのスクリーンショット。名前、 Azure サブスクリプション、場所、リソースグループが含まれています。」"]
+image:screenshot_anf_create_account.png["「 Azure NetApp Files アカウントの作成に必要なフィールドのスクリーンショット。名前、 Azure サブスクリプション、場所、リソースグループが含まれています。」"]
 
 ** * 容量プール * ：既存の容量プールを選択するか、新しい容量プールを作成します。
 +
@@ -43,18 +48,23 @@ image:screenshot_anf_create_account.gif["「 Azure NetApp Files アカウント�
 以下に、 NFS の詳細の例を示します。
 
 +
-image:screenshot_anf_nfs.gif[""]
+image:screenshot_anf_nfs.gif["NFS ボリュームのセットアップに必要なフィールドのスクリーンショット。"]
 
 +
-SMB の詳細の例を次に示します。最初の SMB ボリュームをセットアップするときに、 Active Directory の情報を指定する必要があります。
+SMB の詳細の例を次に示します。最初の SMB ボリュームを設定するときは、次のページで Active Directory の情報を指定する必要があります。
 
 +
-image:screenshot_anf_smb.gif[""]
+image:screenshot_anf_smb.gif["SMB ボリュームのセットアップに必要なフィールドのスクリーンショット。"]
 
 
 
+. 既存のボリュームの Snapshot に基づいてこのボリュームを作成する場合は、 Snapshot 名ドロップダウンリストから Snapshot を選択します。
 . [ ボリュームの追加 ] をクリックします。
 
+
+新しいボリュームが作業環境に追加されます。
+
+クラウドボリュームのマウントに進みます。
 
 
 
@@ -66,7 +76,7 @@ Cloud Manager でのマウント手順を参照して、ホストにボリュー
 . 作業環境を開きます。
 . ボリュームにカーソルを合わせ、 * ボリュームをマウント * を選択します。
 +
-image:screenshot_anf_hover.gif[""]
+image:screenshot_anf_hover.png["ボリュームにカーソルを合わせると使用可能な処理のスクリーンショット。"]
 
 . 指示に従ってボリュームをマウントします。
 
@@ -86,6 +96,21 @@ image:screenshot_anf_hover.gif[""]
 
 
 
+== ボリュームのサービスレベルを変更する
+
+ボリュームの作成後は、デスティネーション容量プールがすでに存在しているかぎり、いつでもサービスレベルを変更できます。
+
+.手順
+. 作業環境を開きます。
+. ボリュームにカーソルを合わせ、 * サービスレベルの変更 * を選択します。
+. 必要なサービスレベルを提供する容量プールを選択します。
+. [ 変更（ Change ） ] をクリックします。
+
+
+ボリュームは、ボリュームに影響を及ぼすことなく、もう一方の容量プールに移動されます。
+
+
+
 == Snapshot コピーの管理
 
 Snapshot コピーは、ボリュームのポイントインタイムコピーを提供します。Snapshot コピーの作成、新しいボリュームへのデータのリストア、および Snapshot コピーの削除
@@ -95,7 +120,7 @@ Snapshot コピーは、ボリュームのポイントインタイムコピー�
 . ボリュームにカーソルを合わせ、 Snapshot コピーの管理に使用できるオプションを 1 つ選択します。
 +
 ** * Snapshot コピーを作成します *
-** * 新しいボリュームへのリストア *
+** * ボリュームをスナップショットに戻す *
 ** * Snapshot コピーを削除します。 *
 
 
@@ -124,7 +149,7 @@ Snapshot コピーは、ボリュームのポイントインタイムコピー�
 . Azure NetApp Files 作業環境を開きます。
 . ページの右上にあるアクションメニューを選択し、 * Azure NetApp Files の削除 * をクリックします。
 +
-image:screenshot_anf_remove.gif[""]
+image:screenshot_anf_remove.gif["Azure NetApp Files の削除をクリックして、 Cloud Manager インターフェイスからボリュームを削除するスクリーンショット。"]
 
 . [ 削除（ Remove ） ] をクリックして確定します。
 

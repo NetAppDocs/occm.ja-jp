@@ -28,6 +28,7 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 * <<Cloud Sync enhancements>>
 * <<Cloud Tiering enhancements>>
 * <<Active IQ enhancements>>
+* <<ANF enhancements>>
 
 
 
@@ -123,8 +124,15 @@ link:task_managing_tiering.html#discovering-additional-clusters-from-cloud-tieri
 * 1 つ以上のクラスタでファームウェアの更新が必要であると Active IQ が判断したら、ボタンをクリックして、を選択します link:task_managing_ontap.html#downloading-new-disk-and-shelf-firmware["Ansible プレイブックをダウンロードし、クラスタファームウェアをアップグレードします"^]。
 * 新しい link:task_managing_ontap.html#viewing-on-prem-workloads-that-are-candidates-for-the-cloud["クラウド対応ワークロードタブ"^] オンプレミスの ONTAP クラスタからクラウドに移行するのに最適と特定したワークロードまたはボリュームのリストが表示されます。これらのボリュームの一部を移動すると、コストが削減され、パフォーマンスと耐障害性が向上する可能性があります。
 +
-を参照してください link:https://www.netapp.com/knowledge-center/what-is-lift-and-shift^["リフトとシフトとは何ですか？"]
+を参照してください link:https://www.netapp.com/knowledge-center/what-is-lift-and-shift["リフトとシフトとは何ですか？"]
 
+
+
+
+
+=== ANF の機能拡張
+
+* ワークロードのニーズを満たし、コストを最適化するために、ボリュームのサービスレベルを動的に変更できるようになりました。ボリュームは、ボリュームに影響を及ぼすことなく、もう一方の容量プールに移動されます。 link:task_manage_anf_volumes.html#changing-the-volumes-service-level["詳細はこちら。"^]。
 
 
 
