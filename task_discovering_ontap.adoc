@@ -78,6 +78,7 @@ ONTAP クラスタを検出し、それらを作業環境に追加するには�
 image:screenshot_aiq_clusters.png["NSS アカウントで検出されたすべてのクラスタを示す Active IQ ページのスクリーンショット。"]
 
 . Cloud Manager で管理するクラスタの * Discover * をクリックします。
+. _Choose a Location_page * On-Premises ONTAP * が事前に選択されているので、 * Continue * をクリックします。
 . ONTAP クラスタの詳細ページで、管理者ユーザアカウントのパスワードを入力し、 * 追加 * をクリックします。
 +
 image:screenshot_discover_ontap.png["ONTAP のクラスタ詳細ページの例を示すスクリーンショット：クラスタ管理 IP アドレス、ユーザ名、パスワード"]
@@ -85,6 +86,7 @@ image:screenshot_discover_ontap.png["ONTAP のクラスタ詳細ページの例�
 +
 クラスタ管理 IP アドレスは、 Active IQ の情報に基づいて設定されます。
 
+. [_Details & Credentials_] ページで、クラスタ名が Working Environment Name として追加されるので、 [* Go] をクリックします。
 
 
 Cloud Manager はクラスタを検出し、作業環境名としてクラスタ名を使用してキャンバスの作業環境に追加します。
@@ -109,7 +111,7 @@ ONTAP クラスタを検出し、カンバスページから作業環境に追�
 +
 image:screenshot_discover_ontap.png["ONTAP のクラスタ詳細ページの例を示すスクリーンショット：クラスタ管理 IP アドレス、ユーザ名、パスワード"]
 
-. [ 詳細 ] ページで、作業環境の名前と説明を入力し、 [* 移動 ] をクリックします。
+. [_Details & Credentials_] ページで、作業環境の名前と概要を入力し、 [* Go*] をクリックします。
 
 
 Cloud Manager によってクラスタが検出され、キャンバスの作業環境に追加されます。

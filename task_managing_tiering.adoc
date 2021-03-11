@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_managing_tiering.html 
 keywords: discover, volumes, report, hot, cold, inactive, active, capacity, used capacity, savings, health, failed 
-summary: 最初の ONTAP クラスタでデータを検出して階層化したので、追加ボリュームのデータを階層化したり、追加のクラスタを検出したりできます。 
+summary: オンプレミスの ONTAP クラスタからデータ階層化を設定したので、追加のボリュームからデータを階層化したり、ボリュームの階層化ポリシーを変更したり、クラスタを追加したりできます。 
 ---
 = クラスタからのデータ階層化の管理
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: 最初の ONTAP クラスタでデータを検出して階層化した�
 
 
 [role="lead"]
-これで、 ONTAP クラスタからデータ階層化を設定したので、追加のボリュームからデータを階層化したり、ボリュームの階層化ポリシーを変更したりできます。
+オンプレミスの ONTAP クラスタからデータ階層化を設定したので、追加のボリュームからデータを階層化したり、ボリュームの階層化ポリシーを変更したり、クラスタを追加したりできます。
 
 
 
@@ -64,7 +64,7 @@ link:concept_cloud_tiering.html#volume-tiering-policies["ボリューム階層�
 
 == アグリゲートの階層化設定の管理
 
-各アグリゲートには、階層化の使用率しきい値と、アクセス頻度の低いデータのレポートが有効になっているかどうかという 2 つの設定を調整できます。
+オンプレミスの ONTAP システムの各アグリゲートには、階層化の使用率しきい値と、アクセス頻度の低いデータのレポートが有効かどうかという、調整可能な 2 つの設定があります。
 
 階層化の使用率しきい値::
 +
@@ -139,23 +139,31 @@ image:https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_tiering_healt
 
 階層化とクラスタダッシュボードから、検出されていないオンプレミスの ONTAP クラスタを Cloud Manager に追加して、クラスタの階層化を有効にすることができます。
 
-NSS のクレデンシャルを Cloud Manager に保存すると、 Cloud Manager で検出されていないオンプレミスのクラスタがアカウントにあるかどうかがページの上部に表示されます。
-
-NSS のクレデンシャルがまだ Cloud Manager に保存されていない場合は、検出されていないクラスタがないかどうかを確認する前にクレデンシャルを追加するよう求められます。を参照してください link:task_adding_nss_accounts.html["Cloud Manager へのネットアップサポートサイトのアカウントの追加"^] を参照してください。
-
-階層化オンプレミスの概要ページにはボタンが表示され、追加のクラスタを検出することもできます。
+また、他のクラスタを検出するためのボタンは Tiering_on_Prem Overview_page にも表示されます。
 
 .手順
 . Cloud Tiering から、 * クラスタダッシュボード * タブをクリックします。
-. ページの上部にある概要行で、オンプレミスクラスタが検出されていないことが示されている場合は、ページを下にスクロールしてクラスタを探します。
+. 検出されていないクラスタを表示するには、 * 検出されていないクラスタを表示 * をクリックします。
++
+image:screenshot_tiering_show_undiscovered_cluster.png["階層化ダッシュボードの「未検出のクラスタを表示」ボタンを示すスクリーンショット。"]
+
++
+NSS クレデンシャルが Cloud Manager に保存されている場合、アカウント内のクラスタがリストに表示されます。
+
++
+NSS のクレデンシャルが Cloud Manager に保存されない場合、検出されていないクラスタを表示する前にクレデンシャルを追加するよう求められます。
+
+. ページを下にスクロールしてクラスタを特定します。
 +
 image:screenshot_tiering_discover_cluster.png["Cloud Manager と階層化ダッシュボードに追加する既存のクラスタを検出する方法を示すスクリーンショット"]
 
 . Cloud Manager で管理するクラスタの * クラスタの検出 * をクリックし、データ階層化を実装します。
+. _Choose a Location_page * On-Premises ONTAP * が事前に選択されているので、 * Continue * をクリックします。
 . ONTAP クラスタの詳細ページで、管理者ユーザアカウントのパスワードを入力し、 * 追加 * をクリックします。
 +
 NSS アカウントの情報に基づいてクラスタ管理 IP アドレスが設定されます。
 
+. [_Details & Credentials_] ページで、クラスタ名が Working Environment Name として追加されるので、 [* Go] をクリックします。
 
 
 Cloud Manager はクラスタを検出し、作業環境名としてクラスタ名を使用してキャンバスの作業環境に追加します。
