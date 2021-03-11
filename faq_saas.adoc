@@ -63,6 +63,52 @@ NetApp ONTAP ベースのすべてのストレージソリューションを対�
 
 
 
+== SaaS ベースのサブスクリプションが必要になる状況
+
+SaaS ベースのサブスクリプションは、クラウドプロバイダのマーケットプレイスから入手し、従量課金制で次のサービスを利用できます：
+
+* Cloud Volumes ONTAP （ AWS と GCP ではバージョン 9.6 、 Azure ではバージョン 9.7 以降）
+* クラウドバックアップ
+* クラウドコンプライアンス
+* クラウド階層化
+
+
+Cloud Volumes ONTAP 、クラウドバックアップ、クラウド階層化の場合は、ネットアップからライセンスを直接購入することもできます。このような場合、 SaaS ベースのサブスクリプションは必要ありません。
+
+SaaS ベースのサブスクリプションは、 Cloud Compliance の唯一の支払い方法です。
+
+これらのサービスの利用を開始すると、 Cloud Manager はサブスクリプションが設定されていない場合にサブスクライブするよう求めます。登録が必要になるのは 1 回だけです。 Cloud Manager は、これらのサービスごとに同じサブスクリプションを使用します。
+
+次のリンクから、これらのサービスの価格とサブスクリプションの詳細を確認できます。
+
+* Cloud Volumes ONTAP
++
+** link:task_deploying_gcp.html#subscribe["Cloud Volumes ONTAP for AWS に登録する方法をご確認ください"]
+** link:task_deploying_otc_azure.html#video["Cloud Volumes ONTAP for Azure の配信登録方法をご確認ください"]
+** link:task_deploying_gcp.html#subscribe["Cloud Volumes ONTAP for Google に登録する方法について説明します クラウド"]
+
+
+* クラウドバックアップ
++
+** link:concept_backup_to_cloud.html#cost["Cloud Backup のコストをご確認ください"]
+
+
+* クラウド階層化
++
+** link:concept_cloud_tiering.html#pricing-and-licenses["Cloud Tiering の価格とライセンスについてご確認ください"]
+** link:task_licensing_cloud_tiering.html["Cloud Tiering のライセンスを設定する方法について説明します"]
+
+
+* クラウドコンプライアンス
++
+** link:concept_cloud_compliance.html#cost["クラウドコンプライアンスのコストをご確認ください"]
+** link:task_deploy_cloud_compliance.html#subscribing-to-the-cloud-compliance-service["Cloud Compliance への登録方法をご確認ください"]
+
+
+
+
+
+
 == 以前と同じ方法で Cloud Manager を使用できますか（ VPC に導入されたインスタンスを使用してローカルで実行）？
 
 はい。 * コネクター * メニューをクリックし、 * ローカル UI へ移動 * をクリックするか、コネクターの IP アドレスを Web ブラウザーに直接入力することで、この操作を行うことができます。

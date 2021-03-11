@@ -9407,7 +9407,6 @@
   <block id="b901bc33967dc36bebafa77250edd08b" category="list-text">コネクタに必要な接続方法は、 SSH 、 HTTP 、 HTTPS です。</block>
   <block id="2a74a4ca6ca91fb8d3c6b38fc9233a4f" category="list-text">コネクタインスタンスに接続されているホストから Cloud Manager をセットアップします。</block>
   <block id="7ad92db9fd68840a78d3bc935cff8f64" category="list-text">Web ブラウザを開き、次の URL を入力します。<block ref="17a92846c731483b51192cc0d49cf97e" category="inline-link-rx"></block></block>
-  <block id="4c0d84055abd630616fa9b093f337b6f" category="list-text">インターネットアクセス用のプロキシサーバを指定します。</block>
   <block id="c3e84141ad53b58cc86262388ac9e4a6" category="list-text">手順 1 で取得した証明書をアップロードします。</block>
   <block id="2d354fadd521725ccc56833965bb4440" category="list-text">セットアップウィザードの手順に従って、 Cloud Manager をセットアップします。</block>
   <block id="dd6fb2ba019c1dfb48ea66d8189f5b19" category="list-text">* System Details * ： Cloud Manager インスタンスの名前を入力し、会社名を入力します。</block>
@@ -9464,4 +9463,38 @@
   <block id="d179a129f5710f376070c6383680ac1e" category="paragraph">NSS クレデンシャルが Cloud Manager に保存されている場合、アカウント内のクラスタがリストに表示されます。</block>
   <block id="67f0c619c7afc190e76b843d86432846" category="paragraph">NSS のクレデンシャルが Cloud Manager に保存されない場合、検出されていないクラスタを表示する前にクレデンシャルを追加するよう求められます。</block>
   <block id="ead41bd8c5b56fc59ca4fb2fef9d0b5b" category="list-text">ページを下にスクロールしてクラスタを特定します。</block>
+  <block id="f1497396fc5efdd97875adf20c5711fa" category="cell">[[subscribe] クリデンシャルを編集します</block>
+  <block id="4d0564ff4d1bbd71234a0838722dfc93" category="list-text">AWS サービスに接続するためのプロキシサーバを指定します。</block>
+  <block id="fb9be2e25293465c401ae5b6e13f9a51" category="paragraph">インバウンドルールのソースは、コネクタが存在する VPC からのトラフィックです。</block>
+  <block id="2cca3ca6096bf8fb9c832683c582250c" category="section-title">データ階層化の空きスペース率を変更する</block>
+  <block id="0f25882e78be6d7c0e2d9cd5c7808fb5" category="paragraph">データ階層化の空きスペース率は、オブジェクトストレージへのデータの階層化時に Cloud Volumes ONTAP SSD / HDD で必要な空きスペースの量を定義します。デフォルトの設定は 10% の空きスペースですが、必要に応じて設定を調整できます。</block>
+  <block id="052c69dd70aee3373f4dc8b73400d1e7" category="paragraph">たとえば、購入容量を確実に使用するために、空きスペースを 10% 未満にすることができます。その後、追加の容量が必要になったときに（アグリゲートのディスクの上限に達するまで）、 Cloud Manager で追加のディスクを購入できます。</block>
+  <block id="2aa3b7e505c0c56df0a2f60f7d4f87cc" category="paragraph">この比率はディザスタリカバリシナリオで重要になります。オブジェクトストレージからデータが読み取られると、 Cloud Volumes ONTAP はパフォーマンスを向上させるためにデータを SSD / HDD に移動するためです。十分なスペースがないと、 Cloud Volumes ONTAP はデータを移動できません。この比率を変更する際は、ビジネス要件を満たすためにこの点を考慮してください。</block>
+  <block id="c510d4c89cef3054e8c65ce8fbbca7f2" category="admonition">この設定は環境 Cloud Volumes ONTAP のみです。</block>
+  <block id="bfd4343f515412e7c130635ab791026c" category="list-text">Cloud Manager コンソールの右上にある * Settings * アイコンをクリックし、 * Cloud Manager Settings * を選択します。</block>
+  <block id="49df511fcc061c3ae47e539e6f38127a" category="list-text">[ アグリゲート容量のしきい値 ] で、 [ データ階層化のアグリゲートの空きスペース率 *] をクリックします。</block>
+  <block id="c389556b61d8e54624252a2563fdfc17" category="list-text">必要に応じて空き領域の比率を変更し、 [ 保存（ Save ） ] をクリックします。</block>
+  <block id="15af1addd66877214102a903b23ee566" category="section-title">SaaS ベースのサブスクリプションが必要になる状況</block>
+  <block id="10717e302f36a82effac293e9ab6ad72" category="paragraph">SaaS ベースのサブスクリプションは、クラウドプロバイダのマーケットプレイスから入手し、従量課金制で次のサービスを利用できます：</block>
+  <block id="f530c87786775e9fdd659e6e707f4d75" category="list-text">Cloud Volumes ONTAP （ AWS と GCP ではバージョン 9.6 、 Azure ではバージョン 9.7 以降）</block>
+  <block id="c70fcdc7073dd7f3e4a9c5d0812f7a0c" category="paragraph">Cloud Volumes ONTAP 、クラウドバックアップ、クラウド階層化の場合は、ネットアップからライセンスを直接購入することもできます。このような場合、 SaaS ベースのサブスクリプションは必要ありません。</block>
+  <block id="a888b224e177bf21ad0c4ec08ee21830" category="paragraph">SaaS ベースのサブスクリプションは、 Cloud Compliance の唯一の支払い方法です。</block>
+  <block id="bc3b6e365beda0f9b9767bba381e9dd7" category="paragraph">これらのサービスの利用を開始すると、 Cloud Manager はサブスクリプションが設定されていない場合にサブスクライブするよう求めます。登録が必要になるのは 1 回だけです。 Cloud Manager は、これらのサービスごとに同じサブスクリプションを使用します。</block>
+  <block id="e9c0116448a572434a23a1376f48f859" category="paragraph">次のリンクから、これらのサービスの価格とサブスクリプションの詳細を確認できます。</block>
+  <block id="ddf033322a4f26b06616d1812effdb11" category="inline-link-macro">Cloud Volumes ONTAP for AWS に登録する方法をご確認ください</block>
+  <block id="c1b6b1810eed964cdfbfe87234d5f41c" category="list-text"><block ref="c1b6b1810eed964cdfbfe87234d5f41c" category="inline-link-macro-rx"></block></block>
+  <block id="e7ad03bdf4cd4be3d6e2a0e5b7cc907f" category="inline-link-macro">Cloud Volumes ONTAP for Azure の配信登録方法をご確認ください</block>
+  <block id="0956df78d02cc769fe115754af638ae5" category="list-text"><block ref="0956df78d02cc769fe115754af638ae5" category="inline-link-macro-rx"></block></block>
+  <block id="77dbe34146ad14d2c8be43a3e029c6ca" category="inline-link-macro">Cloud Volumes ONTAP for Google に登録する方法について説明します クラウド</block>
+  <block id="361756f563635fd8686e3a8dd362164b" category="list-text"><block ref="361756f563635fd8686e3a8dd362164b" category="inline-link-macro-rx"></block></block>
+  <block id="a27a87a8c3e587939271023a4919aaa1" category="inline-link-macro">Cloud Backup のコストをご確認ください</block>
+  <block id="587271baeb405666035c04d8218b9553" category="list-text"><block ref="587271baeb405666035c04d8218b9553" category="inline-link-macro-rx"></block></block>
+  <block id="eeae95dc890829a3e40c5f2a212ae08d" category="inline-link-macro">Cloud Tiering の価格とライセンスについてご確認ください</block>
+  <block id="ef3e982094523b82bcf17f72cc1d81ec" category="list-text"><block ref="ef3e982094523b82bcf17f72cc1d81ec" category="inline-link-macro-rx"></block></block>
+  <block id="0566222f58ce8b51a9c93a7355cf6041" category="inline-link-macro">Cloud Tiering のライセンスを設定する方法について説明します</block>
+  <block id="6a87eea9f7d013f2de9206678803e7c2" category="list-text"><block ref="6a87eea9f7d013f2de9206678803e7c2" category="inline-link-macro-rx"></block></block>
+  <block id="9bf8ad95a7b4858c5e3d2d000b189680" category="inline-link-macro">クラウドコンプライアンスのコストをご確認ください</block>
+  <block id="89aba240a41f642ff9cf83f975aa714e" category="list-text"><block ref="89aba240a41f642ff9cf83f975aa714e" category="inline-link-macro-rx"></block></block>
+  <block id="6b0b86583acd8deae93a95671f139039" category="inline-link-macro">Cloud Compliance への登録方法をご確認ください</block>
+  <block id="48d5e59503ba34a724e98d451ee43f7e" category="list-text"><block ref="48d5e59503ba34a724e98d451ee43f7e" category="inline-link-macro-rx"></block></block>
 </blocks>

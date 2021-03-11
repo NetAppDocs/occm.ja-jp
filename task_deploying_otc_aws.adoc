@@ -57,7 +57,7 @@ NOTE: コネクタを作成するには、アカウント管理者である必�
 | ユーザ名とパスワード | これらは、 Cloud Volumes ONTAP クラスタ管理アカウントのクレデンシャルです。これらのクレデンシャルを使用して、 OnCommand System Manager またはその CLI を使用して Cloud Volumes ONTAP に接続できます。 
 
 
-| 資格情報を編集します | この Cloud Volumes ONTAP システムで使用する AWS クレデンシャルと Marketplace サブスクリプションを選択します。[ サブスクリプションの追加 ] をクリックして、選択した資格情報をサブスクリプションに関連付けます。従量課金制の Cloud Volumes ONTAP システムを作成するには、 AWS Marketplace から Cloud Volumes ONTAP へのサブスクリプションに関連付けられている AWS クレデンシャルを選択する必要があります。お客様が作成した Cloud Volumes ONTAP 9.6 以降の PAYGO システムと、有効にしたアドオン機能ごとに、このサブスクリプションから料金が請求されます。link:task_adding_aws_accounts.html["Cloud Manager に AWS クレデンシャルを追加する方法について説明します"]。 
+| [[subscribe] クリデンシャルを編集します | この Cloud Volumes ONTAP システムで使用する AWS クレデンシャルと Marketplace サブスクリプションを選択します。[ サブスクリプションの追加 ] をクリックして、選択した資格情報をサブスクリプションに関連付けます。従量課金制の Cloud Volumes ONTAP システムを作成するには、 AWS Marketplace から Cloud Volumes ONTAP へのサブスクリプションに関連付けられている AWS クレデンシャルを選択する必要があります。お客様が作成した Cloud Volumes ONTAP 9.6 以降の PAYGO システムと、有効にしたアドオン機能ごとに、このサブスクリプションから料金が請求されます。link:task_adding_aws_accounts.html["Cloud Manager に AWS クレデンシャルを追加する方法について説明します"]。 
 |===
 +
 次のビデオでは、従量課金制の Marketplace サブスクリプションを AWS クレデンシャルに関連付ける方法を紹介します。
