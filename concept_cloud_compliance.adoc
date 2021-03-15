@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept_cloud_compliance.html 
-keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, azure netapp files, cloud volumes ontap, Amazon S3, database, onedrive, on-prem ontap, backup files, aip labels 
-summary: Cloud Compliance は、 Cloud Manager 用のデータプライバシーとコンプライアンスのサービスで、ボリューム、 Amazon S3 バケット、およびデータベースをスキャンして、これらのファイルに格納されている個人データと機密データを特定します。人工知能（ AI ）ベースのテクノロジを使用したクラウドコンプライアンスは、データの状況を把握し、機密データを特定するのに役立ちます。 
+keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, azure netapp files, cloud volumes ontap, Amazon S3, database, onedrive, on-prem ontap, file shares, object storage, backup files, aip labels, governance 
+summary: Cloud Compliance は、 Cloud Manager 向けのデータプライバシーとコンプライアンスのサービスで、ボリューム、 Amazon S3 バケット、データベース、 OneDrive アカウントなどのデータソースをスキャンして、これらのファイルに存在する個人データや機密データを特定します。人工知能をベースとするテクノロジを使用したクラウドコンプライアンスは、組織がデータの状況を把握し、機密データを特定するのに役立ちます。 
 ---
 = Cloud Compliance の詳細をご確認ください
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: Cloud Compliance は、 Cloud Manager 用のデータプライバシー
 
 
 [role="lead"]
-Cloud Compliance は、 Cloud Manager 向けのデータプライバシーとコンプライアンスのサービスであり、ボリューム、 Amazon S3 バケット、データベース、 OneDrive アカウントをスキャンして、これらのファイルに格納されている個人データや機密データを特定します。人工知能（ AI ）ベースのテクノロジを使用したクラウドコンプライアンスは、データの状況を把握し、機密データを特定するのに役立ちます。
+Cloud Compliance は、 Cloud Manager 向けのデータプライバシーとコンプライアンスのサービスで、ボリューム、 Amazon S3 バケット、データベース、 OneDrive アカウントなどのデータソースをスキャンして、これらのファイルに存在する個人データや機密データを特定します。人工知能（ AI ）ベースのテクノロジを使用したクラウドコンプライアンスは、データの状況を把握し、機密データを特定するのに役立ちます。
 
 https://cloud.netapp.com/cloud-compliance["Cloud Compliance のユースケースを紹介します"^]。
 
@@ -31,18 +31,30 @@ Cloud Compliance には、コンプライアンスの取り組みに役立つツ
 * 個々のファイルを削除します
 
 
+Cloud Compliance には、ガバナンスの取り組みに役立つツールも用意されています。Cloud Compliance を使用すると、次のことができます。
+
+* システム内の古いデータ、ビジネス以外のデータ、大容量ファイルを特定します。
++
+この情報を使用して、一部のファイルを低コストのオブジェクトストレージに移動、削除、または階層化するかどうかを決定できます。
+
+* データのサイズ、および移動前に機密情報が含まれているデータがないかどうかを確認する。
++
+これは、オンプレミスの場所からクラウドにデータを移行する場合に便利です。
+
+
+
 
 
 == サポートされている作業環境とデータソース
 
-Cloud Compliance では、次の種類のデータソースからデータをスキャンできます。
+Cloud Compliance では、次の種類の作業環境とデータソースからデータをスキャンできます。
 
 * AWS の Cloud Volumes ONTAP
 * Azure の Cloud Volumes ONTAP
 * オンプレミスの ONTAP クラスタ
 * Azure NetApp Files の特長
 * Amazon S3
-* データベースはどこにあってもかまいません （データベースがに存在する必要はありません サクキヨウカンキヨウ
+* データベース
 * OneDrive アカウント
 
 
@@ -81,7 +93,7 @@ link:task_deploy_cloud_compliance.html#subscribing-to-the-cloud-compliance-servi
 Cloud Compliance の仕組みは次のとおりです。
 
 . Cloud Manager に Cloud Compliance のインスタンスを導入します。
-. この機能は、 1 つ以上の作業環境、データベース、 OneDrive アカウントで有効にできます。
+. 1 つ以上の作業環境またはデータソースで有効にします。
 . Cloud Compliance は、 AI のラーニングプロセスを使用してデータをスキャンします。
 . [* コンプライアンス ] をクリックし、表示されたダッシュボードとレポートツールを使用して、コンプライアンスを強化します。
 
@@ -124,11 +136,11 @@ Cloud Compliance を有効にして、スキャンするボリューム、バケ
 
 Cloud Compliance は、 NFS ボリュームと CIFS ボリュームをマウントすることで、他のクライアントと同様にデータに接続します。NFS ボリュームには読み取り専用で自動的にアクセスされますが、 CIFS ボリュームをスキャンするためには Active Directory のクレデンシャルを指定する必要があります。
 
-image:diagram_cloud_compliance_scan.png["クラウドプロバイダで実行されている Cloud Manager インスタンスと Cloud Compliance インスタンスを示す図。Cloud Compliance インスタンスは、 NFS ボリューム、 CIFS ボリューム、 S3 バケット、およびデータベースに接続してスキャンします。"]
+image:diagram_cloud_compliance_scan.png["クラウドプロバイダで実行されている Cloud Manager インスタンスと Cloud Compliance インスタンスを示す図。Cloud Compliance インスタンスは、 NFS ボリュームと CIFS ボリュームの S3 バケット OneDrive アカウントとデータベースに接続してスキャンします。"]
 
 初回のスキャン後、 Cloud Compliance はデータを継続的にスキャンして、差分の変更を検出します（そのため、インスタンスの実行を維持することが重要です）。
 
-でスキャンを有効または無効にできます link:task_getting_started_compliance.html#enabling-and-disabling-compliance-scans-on-volumes["ボリュームレベル"^]、で link:task_scanning_s3.html#enabling-and-disabling-compliance-scans-on-s3-buckets["バケットレベル"^]、 link:task_scanning_databases.html#enabling-and-disabling-compliance-scans-on-database-schemas["データベーススキーマレベル"^]、および link:task_scanning_onedrive.html#adding-onedrive-users-to-compliance-scans["OneDrive ユーザーレベル"^]。
+スキャンは、ボリュームレベル、バケットレベル、データベーススキーマレベル、および OneDrive ユーザレベルで有効または無効にできます。
 
 
 
@@ -165,8 +177,8 @@ Cloud Manager を SaaS モードで使用する場合、 Cloud Manager への接
 各ユーザには、 Cloud Manager 内と Cloud Compliance 内で異なる機能が割り当てられています。
 
 * * アカウント管理者 * は、コンプライアンス設定を管理し、すべての作業環境のコンプライアンス情報を表示できます。
-* * ワークスペース管理者 * は、アクセス権を持つシステムのコンプライアンス設定を管理し、コンプライアンス情報を表示することができます。ワークスペース管理者が Cloud Manager の作業環境にアクセスできない場合、作業環境のコンプライアンス情報は [ コンプライアンス ] タブに表示されません。
-* Cloud Compliance Viewer * ロールを持つユーザーは、コンプライアンス情報を表示し、アクセス権限を持つシステムのレポートを生成することのみができます。これらのユーザは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。
+* * ワークスペース管理者 * は、アクセス権を持つシステムについてのみ、コンプライアンス設定を管理し、コンプライアンス情報を表示できます。ワークスペース管理者が Cloud Manager の作業環境にアクセスできない場合、作業環境のコンプライアンス情報は [ コンプライアンス ] タブに表示されません。
+* コンプライアンスビューア * の役割を持つユーザーは、アクセス権を持つシステムのコンプライアンス情報を表示し、レポートを生成することのみができます。これらのユーザは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。
 
 
 link:reference_user_roles.html["Cloud Manager のロールに関する詳細情報"^] そして方法 link:task_managing_cloud_central_accounts.html#adding-users["特定のロールのユーザを追加します"^]。

@@ -312,7 +312,9 @@ entries:
         url: "/task_scanning_databases.html"
       - title: OneDrive アカウント
         url: "/task_scanning_onedrive.html"
-  - title: 組織内のプライベートデータの詳細を表示します
+  - title: データのガバナンスの詳細を確認できます
+    url: "/task_controlling_governance_data.html"
+  - title: データのコンプライアンスの詳細を表示します
     url: "/task_controlling_private_data.html"
   - title: プライベートデータを管理
     url: "/task_managing_highlights.html"

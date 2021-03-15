@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_controlling_private_data.html 
-keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, filter data, csv file, highlights 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, filter data, permissions, csv file, highlights 
 summary: 組織内の個人データと機密性の高い個人データに関する詳細を表示することで、個人データを管理できます。また、データに含まれる Cloud Compliance のカテゴリとファイルタイプを確認して、情報を可視化することもできます。 
 ---
-= 組織に保存されているプライベートデータの詳細を表示する
+= 組織に保存されているデータのコンプライアンスの詳細を表示する
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -140,7 +140,11 @@ image:screenshot_compliance_file_details.png["[ データ調査 ] ページの�
 
 すべてのデータソースについて、すべての情報が表示されるわけではなく、そのデータソースに適した情報だけが表示されることに注意してください。たとえば、権限と AIP ラベルはデータベースファイルには関係ありません。
 
-このメタデータには、ファイルを変更できる 2 つの項目もあります。
+ファイルへのアクセス権を持つすべてのユーザーまたはグループのリストを表示するには、 * すべてのアクセス権を表示 * をクリックします。このボタンは、 CIFS 共有と OneDrive アカウントのファイルに対してのみ使用できます。
+
+image:screenshot_compliance_permissions.png["詳細なファイル権限を示すスクリーンショット。"]
+
+このファイルに対して実行できる操作は 2 つあります。
 
 * AIP ラベルを Cloud Compliance と統合している場合は、このファイルにラベルを割り当てることも、すでに存在する場合は別のラベルに変更することもできます。を参照してください link:task_managing_highlights.html#assigning-aip-labels-manually["AIP ラベルを手動で割り当てる"^] を参照してください。
 * ファイルを削除できます。を参照してください link:task_managing_highlights.html#deleting-source-files["ソースファイルを削除しています"^] を参照してください。
@@ -157,7 +161,7 @@ Cloud Compliance ダッシュボードの内容をフィルタリングして、
 .手順
 . フィルタドロップダウンをクリックし、データを表示する作業環境を選択して、 * 表示 * をクリックします。
 +
-image:screenshot_cloud_compliance_filter.gif[""]
+image:screenshot_cloud_compliance_filter.gif["特定の作業環境で調査結果をフィルタリングする方法を示すスクリーンショット。"]
 
 
 
@@ -165,7 +169,7 @@ image:screenshot_cloud_compliance_filter.gif[""]
 
 == [ データ調査 ] ページでデータをフィルタリングします
 
-調査ページの内容をフィルタリングして、表示する結果のみを表示できます。CSV バージョンのコンテンツをリファインした後でレポートとして保存する場合は、をクリックします image:button_download.png["[ レポートのダウンロード ] ボタン。"] ボタンを押します。
+調査ページの内容をフィルタリングして、表示する結果のみを表示できます。CSV バージョンのコンテンツをリファインした後でレポートとして保存する場合は、をクリックします image:button_download.png["下矢印ボタン"] ボタンを押します。
 
 image:screenshot_compliance_investigation_filtered.png["調査ページで結果を絞り込むときに使用できるフィルタのスクリーンショット。"]
 

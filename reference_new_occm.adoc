@@ -21,6 +21,22 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
+== Cloud Manager 3.9.4 の更新（ 2021 年 3 月 15 日）
+
+
+
+=== Cloud Compliance の機能拡張
+
+* 新しい link:task_controlling_governance_data.html["ガバナンスダッシュボード"^] を使用できるようになりました。これにより、組織のストレージリソース上のデータに関連する効率性が向上し、コストを制御できます。
++
+たとえば、ダッシュボードは、古いデータ、ビジネス以外のデータ、およびシステム内の大容量ファイルを特定するため、一部のファイルを低コストのオブジェクトストレージに移動、削除、階層化するかどうかを判断できます。
+
+* のリストを表示できます link:task_controlling_private_data.html#viewing-file-metadata-and-permissions["ファイルへのアクセス権を持つすべてのユーザまたはグループ"^]。
+* AWS の政府機関では、 Cloud Compliance がサポートされるようになりました。
+
+
+
+
 == Cloud Manager 3.9.4 （ 2021 年 3 月 8 日）
 
 * <<Cloud Volumes ONTAP enhancements>>
@@ -125,7 +141,7 @@ link:task_sync_managing_data_brokers.html["ユニファイド構成の定義に�
 * Google Cloud Storage に階層化する場合は、ライフサイクルルールを適用して、階層化されたデータを Standard ストレージクラスから 30 日後に低コストの Nearline 、 Coldline 、または Archive ストレージに移行することができます。
 * Cloud Tiering Now は、オンプレミスの ONTAP クラスタで検出されていないものがある場合に表示されます。これにより、クラスタへの階層化やその他のサービスを有効にすることができます。
 +
-link:task_managing_tiering.html#discovering-additional-clusters-from-cloud-tiering["これらのクラスタの詳細については、こちらをご覧ください"]。
+link:task_managing_tiering.html#discovering-additional-clusters-from-cloud-tiering["これらのクラスタの詳細については、こちらをご覧ください"^]。
 
 
 

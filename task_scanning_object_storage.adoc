@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: task_scanning_object_storage.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage 
+summary: Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 MinIO 、 Linode 、 B2 Cloud Storage などです。 
+---
+= S3 プロトコルを使用するオブジェクトストレージをスキャンしています
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Azure Blob （ MinIO を使用）、 Linode 、 B2 Cloud Storage などです。
+
+
+
+== クイックスタート
+
+これらの手順を実行してすぐに作業を開始するか、残りのセクションまでスクロールして詳細を確認してください。
+
+
+
+==== オブジェクトストレージの前提条件を確認する
+
+[role="quick-margin-para"]
+オブジェクトストレージサービスに接続するには、エンドポイント URL が必要です。
+
+[role="quick-margin-para"]
+Cloud Compliance でバケットにアクセスできるようにするには、オブジェクトストレージプロバイダからアクセスキーとシークレットキーを入手する必要があります。
+
+
+
+==== Cloud Compliance インスタンスを導入します
+
+[role="quick-margin-para"]
+link:task_deploy_cloud_compliance.html["Cloud Compliance の導入"^] インスタンスが展開されていない場合。
+
+
+
+==== オブジェクトストレージサービスを追加します
+
+[role="quick-margin-para"]
+オブジェクトストレージサービスを Cloud Compliance に追加します。
+
+
+
+==== スキャンするバケットを選択します
+
+[role="quick-margin-para"]
+スキャンするバケットを選択すると、 Cloud Compliance でスキャンが開始されます。
+
+
+
+== 前提条件の確認
+
+Cloud Compliance を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認してください。
+
+
+
+=== オブジェクトストレージの要件
+
+* オブジェクトストレージサービスに接続するには、エンドポイント URL が必要です。
+* Cloud Compliance でバケットにアクセスできるようにするには、オブジェクトストレージプロバイダからアクセスキーとシークレットキーを入手する必要があります。
+* Azure Blob のサポートにはを使用する必要があります link:https://min.io/["MinIO サービス"^]。
+
+
+
+
+== Cloud Compliance へのオブジェクトストレージサービスの追加
+
+が必要です link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Compliance のインスタンスを導入済みである"^]。
+
+オブジェクトストレージサービスを追加します。
+
+.手順
+. [ 作業環境の構成 ] ページで、 [ * データソースの追加 *>* オブジェクトストレージサービスの追加 *] をクリックします。
++
+image:screenshot_compliance_add_object_storage_button.png["［ スキャン設定 ］ ページのスクリーンショットで、 ［ ファイル共有グループの追加 ］ ボタンをクリックします。"]
+
+. Add Object Storage Service ダイアログで、オブジェクトストレージサービスの詳細を入力し、 * Continue * をクリックします。
++
+.. 作業環境に使用する名前を入力します。
+.. エンドポイントの URL を入力してオブジェクトストレージサービスにアクセスします。
+.. Cloud Compliance がオブジェクトストレージ内のバケットにアクセスできるように、アクセスキーとシークレットキーを入力します。
++
+image:screenshot_compliance_add_object_storage.png["オブジェクトストレージサービスにアクセスするための値を入力するダイアログのスクリーンショット。"]
+
+
+
+
+
+新しいオブジェクトストレージサービスが作業環境のリストに追加されます。
+
+
+
+== オブジェクトストレージバケットでの準拠スキャンの有効化と無効化
+
+オブジェクトストレージサービスで Cloud Compliance を有効にしたら、次はスキャンするバケットを設定します。Cloud Compliance によって、それらのバケットが検出され、作成した作業環境に表示されます。
+
+.手順
+. 設定ページで、 Object Storage Service 作業環境の * 設定 * をクリックします。
++
+image:screenshot_compliance_object_storage_config.png["スキャンするバケットを選択できるように、作業環境の設定をクリックするスクリーンショット。"]
+
+. スキャンするバケットで準拠を有効にします。
++
+image:screenshot_compliance_object_storage_select_buckets.png["スキャンするオブジェクトストレージバケットを選択するスクリーンショット。"]
+
+
+
+Cloud Compliance で、有効にしたバケットのスキャンが開始されます。エラーが発生した場合は、エラーを修正するために必要なアクションとともに、 [ ステータス ] 列に表示されます。

@@ -49,7 +49,7 @@ https://cloud.netapp.com/cloud-compliance["Cloud Compliance のユースケー�
 
 == Cloud Compliance でスキャンできるデータの種類を教えてください。
 
-Cloud Compliance では、 Cloud Volumes ONTAP と Azure NetApp Files で管理されている NFS プロトコルと CIFS プロトコルを介した非構造化データのスキャンがサポートされます。Cloud Compliance では、 Amazon S3 バケットとオンプレミスの ONTAP システムに格納されているデータもスキャンできます。
+Cloud Compliance では、 Cloud Volumes ONTAP 、 Azure NetApp Files 、オンプレミスの ONTAP システムで管理されている NFS プロトコルと CIFS プロトコルを介した非構造化データのスキャンがサポートされます。Cloud Compliance では、 Amazon S3 バケットに格納されているデータもスキャンできます。
 
 さらに、 Cloud Compliance では、任意の場所にあるデータベースやユーザファイルを OneDrive アカウントからスキャンできます。
 
@@ -59,7 +59,7 @@ link:concept_cloud_compliance.html#how-scans-work["スキャンの仕組みを�
 
 == サポートされているクラウドプロバイダを教えてください。
 
-Cloud Compliance は、 Cloud Manager の一部として機能し、現在は AWS と Azure をサポートしています。これにより、異なるクラウドプロバイダ間で統一されたプライバシー可視性を実現できます。Google Cloud Platform （ GCP ）のサポートがまもなく追加されます。
+Cloud Compliance は、 Cloud Manager の一部として機能し、現在は AWS と Azure をサポートしています。これにより、異なるクラウドプロバイダ間で統一されたプライバシー可視性を実現できます。
 
 
 
@@ -71,7 +71,7 @@ Cloud Compliance の運用と管理には Cloud Manager を使用します。Clo
 
 == Cloud Compliance の仕組み
 
-Cloud Compliance では、 Cloud Manager システムやストレージシステムと並行して、もう 1 つの人工知能レイヤを導入します。次に、ボリューム、バケット、データベース、 OneDrive のデータがスキャンされ、見つかったデータのインデックスが作成されます。
+Cloud Compliance では、 Cloud Manager システムやストレージシステムと並行して、もう 1 つの人工知能レイヤを導入します。次に、ボリューム、バケット、データベース、 OneDrive アカウントのデータをスキャンして、見つかったデータ分析のインデックスを作成します。
 
 link:concept_cloud_compliance.html["Cloud Compliance の仕組みをご覧ください"^]。
 
@@ -80,6 +80,24 @@ link:concept_cloud_compliance.html["Cloud Compliance の仕組みをご覧くだ
 == クラウドのコンプライアンスコストはいくらですか？
 
 Cloud Compliance の使用コストは、スキャンするデータの量によって異なります。Cloud Compliance が Cloud Manager ワークスペースでスキャンする最初の 1TB のデータは無料です。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。を参照してください https://cloud.netapp.com/cloud-compliance#pricing["価格設定"^] を参照してください。
+
+
+
+== クラウドコンプライアンスに必要なインスタンスまたは VM のタイプはどれですか？
+
+* Azure では、 Cloud Compliance は 512 GB ディスクの Standard_D16s_v3 VM で実行されます。
+* AWS では、 Cloud Compliance は m5.Medin インスタンスで 500GB の gp2 ディスクを使用して実行されます。
++
+m5.mcd を使用できない地域では、代わりに m4.mcd インスタンスに対して Cloud Compliance を実行します。
+
+
+
+ネットワーク内またはクラウド内の Linux ホストに Compliance ソフトウェアをダウンロードしてインストールすることもできます。すべてが同じように機能し、 Cloud Manager を使用してスキャンの設定と結果を引き続き管理できます。を参照してください link:task_deploy_cloud_compliance.html#deploying-the-cloud-compliance-instance-on-premises["クラウドへのコンプライアンスをオンプレミスに導入"^] を参照してください。
+
+
+NOTE: Cloud Compliance は、オンプレミスにインストールされている S3 バケットと ANF ファイルをスキャンすることができません。
+
+link:concept_cloud_compliance.html["Cloud Compliance の仕組みをご覧ください"^]。
 
 
 
@@ -103,24 +121,6 @@ PCI DSS レポート:: クレジットカード情報のファイルへの配布
 HIPAA レポート:: 健常性情報がファイルにどのように分散されているかを確認できます。 link:task_generating_compliance_reports.html["詳細はこちら。"^]。
 特定の情報タイプに関するレポート:: 個人データや機密性の高い個人データを含む、特定されたファイルの詳細を含むレポートを利用できます。カテゴリおよびファイルタイプ別に分類されたファイルを表示することもできます。 link:task_controlling_private_data.html["詳細はこちら。"^]。
 
-
-
-
-== クラウドコンプライアンスに必要なインスタンスまたは VM のタイプはどれですか？
-
-* Azure では、 Cloud Compliance は 512 GB ディスクの Standard_D16s_v3 VM で実行されます。
-* AWS では、 Cloud Compliance は m5.Medin インスタンスで 500GB の gp2 ディスクを使用して実行されます。
-+
-m5.mcd を使用できない地域では、代わりに m4.mcd インスタンスに対して Cloud Compliance を実行します。
-
-
-
-ネットワーク内またはクラウド内の Linux ホストに Compliance ソフトウェアをダウンロードしてインストールすることもできます。すべてが同じように機能し、 Cloud Manager を使用してスキャンの設定と結果を引き続き管理できます。を参照してください link:task_deploy_cloud_compliance.html#deploying-the-cloud-compliance-instance-on-premises["クラウドへのコンプライアンスをオンプレミスに導入"^] を参照してください。
-
-
-NOTE: Cloud Compliance は、オンプレミスにインストールされている S3 バケットと ANF ファイルをスキャンすることができません。
-
-link:concept_cloud_compliance.html["Cloud Compliance の仕組みをご覧ください"^]。
 
 
 
@@ -151,7 +151,7 @@ NOTE: Cloud Compliance をアクティブにすると、最初のスキャンが
 
 == Cloud Compliance を無効にする方法
 
-個々の作業環境を選択した後、キャンバスページから Cloud Compliance を無効にできます。
+個々の作業環境、データベース、 OneDrive アカウントを選択した後、キャンバスページから Cloud Compliance を無効にできます。
 
 link:task_managing_compliance.html["詳細はこちら。"^]。
 
@@ -182,7 +182,7 @@ link:task_getting_started_compliance.html["詳細はこちら。"^]。
 
 はい。ハイライトの結果が返されたら、ハイライト機能と一緒に Cloud Manager ユーザ（日次、週次、または月単位）に E メールアラートを送信して、データを保護するための通知を受け取ることができます。の詳細を確認してください link:task_managing_highlights.html#controlling-your-data-using-highlights["ハイライト"^]。
 
-また、ステータスレポートを .csv 形式でダウンロードして、社内で共有することもできます。
+ステータスレポートは、組織内で共有できる .csv 形式の [ 調査 ] ページからダウンロードすることもできます。
 
 
 
@@ -198,7 +198,7 @@ link:task_managing_data_fusion.html#creating-custom-personal-data-identifiers-fr
 
 == ファイルに埋め込まれている AIP ラベルを使用して Cloud Compliance を機能させることはできますか。
 
-はい。クラウドファイルで AIP ラベルを管理できます 登録している場合は、コンプライアンスがスキャンされます link:https://azure.microsoft.com/en-us/services/information-protection/["Azure 情報保護（ AIP ）"^]。既にファイルに割り当てられているラベルを表示したり、ファイルにラベルを追加したり、ラベルが既に存在する場合にラベルを変更したりできます。
+はい。クラウドファイルで AIP ラベルを管理できます 登録している場合は、コンプライアンスがスキャンされます link:https://azure.microsoft.com/en-us/services/information-protection/["Azure 情報保護（ AIP ）"^]。既にファイルに割り当てられているラベルを表示したり、ファイルにラベルを追加したり、既存のラベルを変更したりできます。
 
 link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["詳細はこちら。"^]。
 

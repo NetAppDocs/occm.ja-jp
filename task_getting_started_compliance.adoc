@@ -56,6 +56,12 @@ Cloud Compliance が有効になったので、ボリュームにアクセスで
 
 * クラウドコンプライアンスインスタンスには、各 Cloud Volumes ONTAP サブネット、 Azure NetApp Files サブネット、オンプレミスの ONTAP システムへのネットワーク接続が必要です。
 * Cloud Volumes ONTAP のセキュリティグループは、クラウドコンプライアンスインスタンスからのインバウンド接続を許可する必要があります。
+* 次のポートが Cloud Compliance インスタンスに対して開いていることを確認します。
++
+** NFS –ポート 111 および 2049 。
+** CIFS の場合 - ポート 139 および 445
+
+
 * NFS ボリュームのエクスポートポリシーで、 Cloud Compliance インスタンスからのアクセスを許可する必要があります。
 * CIFS ボリュームをスキャンするには、 Cloud Compliance で Active Directory のクレデンシャルが必要です。
 +
@@ -126,6 +132,12 @@ NOTE: Azure NetApp Files の場合、 Cloud Compliance は Cloud Manager と同�
 . Cloud Volumes ONTAP のセキュリティグループがクラウドコンプライアンスインスタンスからのインバウンドトラフィックを許可していることを確認してください。
 +
 Cloud Compliance インスタンスの IP アドレスからのトラフィックのセキュリティグループを開くか、仮想ネットワーク内からのすべてのトラフィックのセキュリティグループを開くことができます。
+
+. 次のポートが Cloud Compliance インスタンスに対して開いていることを確認します。
++
+** NFS –ポート 111 および 2049 。
+** CIFS の場合 - ポート 139 および 445
+
 
 . NFS ボリュームのエクスポートポリシーに Cloud Compliance インスタンスの IP アドレスが含まれていて、各ボリュームのデータにアクセスできることを確認します。
 . CIFS を使用する場合は、 Active Directory クレデンシャルを使用して Cloud Compliance を提供し、 CIFS ボリュームをスキャンできるようにします。

@@ -4007,16 +4007,13 @@
   <block id="2a2e443dec3b433b027934307e4776e7" category="inline-link">Cloud Compliance のユースケースについて詳しくは、こちらをご覧ください</block>
   <block id="464c7f3658491d31ccd5904f53d524dd" category="paragraph"><block ref="74cbf075c5a01cc78dc0866d48aaf42b" category="inline-link-rx"></block>。</block>
   <block id="b0e591319822794a2e8cf68f75c50abd" category="section-title">Cloud Compliance でスキャンできるデータの種類を教えてください。</block>
-  <block id="6693ef34da75312ccd8b7d2eb9d8139f" category="paragraph">Cloud Compliance では、 Cloud Volumes ONTAP と Azure NetApp Files で管理されている NFS プロトコルと CIFS プロトコルを介した非構造化データのスキャンがサポートされます。Cloud Compliance では、 Amazon S3 バケットとオンプレミスの ONTAP システムに格納されているデータもスキャンできます。</block>
   <block id="2e1045e284cdb6e4eaa7c7efcab22818" category="paragraph">さらに、 Cloud Compliance では、任意の場所にあるデータベースやユーザファイルを OneDrive アカウントからスキャンできます。</block>
   <block id="cb1df3001d7e0d737bf8af8bf621fee0" category="inline-link-macro">スキャンの仕組みを説明します</block>
   <block id="d5c30f1979cb40a5dadc9038903567c8" category="paragraph"><block ref="50e5b99a103beb67643380b3ea5be92a" category="inline-link-macro-rx"></block>。</block>
   <block id="37f3de5c9ae041a1644d4b78c54dcf40" category="section-title">サポートされているクラウドプロバイダを教えてください。</block>
-  <block id="a93878ce20e170a3c315fbe3f2226af5" category="paragraph">Cloud Compliance は、 Cloud Manager の一部として機能し、現在は AWS と Azure をサポートしています。これにより、異なるクラウドプロバイダ間で統一されたプライバシー可視性を実現できます。Google Cloud Platform （ GCP ）のサポートがまもなく追加されます。</block>
   <block id="5181347aef6905b8679f71da694f71f6" category="section-title">Cloud Compliance へのアクセス方法</block>
   <block id="4784fe79d9263a540b730e0503eb61b6" category="paragraph">Cloud Compliance の運用と管理には Cloud Manager を使用します。Cloud Compliance 機能には、 Cloud Manager の * Compliance * タブからアクセスできます。</block>
   <block id="1bd577593ed16b252f36e8e28cb96ccc" category="section-title">Cloud Compliance の仕組み</block>
-  <block id="0bbadb7129b2ae3a8d3615675bf7bee6" category="paragraph">Cloud Compliance では、 Cloud Manager システムやストレージシステムと並行して、もう 1 つの人工知能レイヤを導入します。次に、ボリューム、バケット、データベース、 OneDrive のデータがスキャンされ、見つかったデータのインデックスが作成されます。</block>
   <block id="2d65f86e69fc88f24ff5924880281439" category="inline-link-macro">Cloud Compliance の仕組みをご覧ください</block>
   <block id="42995b3e9e08fe4f5d2fa6cde21a3129" category="paragraph"><block ref="12b8baee6bc604bf57392c95e761c7c0" category="inline-link-macro-rx"></block>。</block>
   <block id="be6d08b3267eaf95a64c598bf2ffd65e" category="section-title">クラウドのコンプライアンスコストはいくらですか？</block>
@@ -4054,7 +4051,6 @@
   <block id="1338669efa0335de032e4fc9e4113b1d" category="paragraph"><block ref="13765949d7c7533fc194902d5b682dce" category="inline-link-macro-rx"></block>。</block>
   <block id="cf7a84f1c2370440b5d8b195d3f925cf" category="admonition">Cloud Compliance をアクティブにすると、最初のスキャンがすぐに開始されます。コンプライアンスの結果はすぐ後に表示されます。</block>
   <block id="a8d9354138ad95ab1d1c34014008657c" category="section-title">Cloud Compliance を無効にする方法</block>
-  <block id="343f1c0c3d4d5af0e64ff068cefc11de" category="paragraph">個々の作業環境を選択した後、キャンバスページから Cloud Compliance を無効にできます。</block>
   <block id="0829cc2d70d3656d32286a9066d8ecaa" category="paragraph"><block ref="3d2222559e2b8db6955c4bd078c80d77" category="inline-link-macro-rx"></block>。</block>
   <block id="44b35150b676d1a0b0230f2a03eed07d" category="admonition">Cloud Compliance インスタンスを完全に削除するには、クラウドプロバイダのポータルから Cloud Compliance インスタンスを手動で削除します。</block>
   <block id="e9759a2df9f260922de6754d64491bb6" category="section-title">Cloud Volumes ONTAP でデータ階層化が有効になっている場合はどうなりますか。</block>
@@ -5759,8 +5755,6 @@
   <block id="eeca65dd888a9508e6e72469e53273ff" category="inline-image-macro">設定ボタンを選択できるスキャン設定ページのスクリーンショット。</block>
   <block id="2ccb3dbefd074684b15d6b7be9bffd96" category="paragraph"><block ref="2ccb3dbefd074684b15d6b7be9bffd96" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ae3497d4486ccac37f00f5aa720c0def" category="list-text">この OneDrive アカウントに初めてユーザーを追加する場合は、 [ * 最初の OneDrive ユーザーを追加する * ] をクリックします。</block>
-  <block id="165b94441cd7d00e6cd12f1e4d7f1643" category="paragraph"><block ref="165b94441cd7d00e6cd12f1e4d7f1643" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4ecb5c3dafd9753b66215713b7f7d25d" category="paragraph">ユーザーを追加する場合は、 [* OneDrive ユーザーの追加 * ] をクリックします。</block>
   <block id="f81fe9bbbe23cade9d0484cd4edee427" category="inline-image-macro">アカウントにユーザを追加する [OneDrive ユーザの追加 ] ボタンを示すスクリーンショット。</block>
   <block id="4800cf7c88cad88920ab1b880dd8ad5d" category="paragraph"><block ref="4800cf7c88cad88920ab1b880dd8ad5d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7b01a29e71889d03d15b3ac703722d2f" category="list-text">ファイルをスキャンするユーザーの電子メールアドレスを 1 行に 1 つ追加し（セッションあたり最大 100 件）、 [ ユーザーの追加 ] をクリックします。</block>
@@ -5769,7 +5763,6 @@
   <block id="cb660fc550fc0bc3f1fbd9686ba2c571" category="paragraph">確認ダイアログに、追加されたユーザの数が表示されます。</block>
   <block id="868d6317607c3c28d2d67ee76c5873a2" category="paragraph">ダイアログに追加できなかったユーザが表示される場合は、この情報を記録して問題を解決します。修正した E メールアドレスを使用してユーザを再追加できる場合もあります。</block>
   <block id="f820435d7b10f43ab7f80823d814e029" category="paragraph">Cloud Compliance によるスキャンが開始され、追加したユーザのファイルがスキャンされます。結果はダッシュボードやその他の場所に表示されます。</block>
-  <block id="1a87a9a35eacc7fc7f34f259cba87e4b" category="section-title">OneDrive ユーザーをコンプライアンススキャンから削除します</block>
   <block id="a010805627ab286c5d83a11d886cf170" category="paragraph">ユーザが会社から退出した場合や、 E メールアドレスが変更された場合、個々の OneDrive ユーザがいつでもファイルをスキャンできないようにすることができます。[ 構成 ] ページで [OneDrive ユーザーの削除 ] をクリックします。</block>
   <block id="ed026517be9fe6d05aaa49ea802eff93" category="inline-image-macro">単一のユーザをスキャン対象から削除する方法を示すスクリーンショット。</block>
   <block id="c10114c9189f598289f5615e85beb064" category="paragraph"><block ref="c10114c9189f598289f5615e85beb064" category="inline-image-macro-rx" type="image"></block></block>
@@ -5926,9 +5919,7 @@
   <block id="d890f1c0c8373237d26233aaef1d0fc7" category="paragraph">無償トライアルの終了時に登録する必要があります。登録しないと、 Cloud Insights テナントが最終的に削除されます。Basic 、 Standard 、または Premium のいずれかのエディションに登録すると、 Cloud Manager の監視機能を引き続き使用できます。</block>
   <block id="cd787eb9914f30d028c173de936884d8" category="inline-link">Cloud Insights に登録する方法について説明します</block>
   <block id="ea897b0b99e2fad4f21581f468aafa9c" category="paragraph"><block ref="46bde63c6461fde9a8b1bdd87e23ae20" category="inline-link-rx"></block>。</block>
-  <block id="ae7af1c83d3038f35fac126a603d5f83" category="summary">Cloud Compliance は、 Cloud Manager 用のデータプライバシーとコンプライアンスのサービスで、ボリューム、 Amazon S3 バケット、およびデータベースをスキャンして、これらのファイルに格納されている個人データと機密データを特定します。人工知能（ AI ）ベースのテクノロジを使用したクラウドコンプライアンスは、データの状況を把握し、機密データを特定するのに役立ちます。</block>
   <block id="dcbeb43aa546ed69bfd6ff6f3981e6b9" category="doc">Cloud Compliance の詳細をご確認ください</block>
-  <block id="04f849d489b87203494ad03b6bbb303b" category="paragraph">Cloud Compliance は、 Cloud Manager 向けのデータプライバシーとコンプライアンスのサービスであり、ボリューム、 Amazon S3 バケット、データベース、 OneDrive アカウントをスキャンして、これらのファイルに格納されている個人データや機密データを特定します。人工知能（ AI ）ベースのテクノロジを使用したクラウドコンプライアンスは、データの状況を把握し、機密データを特定するのに役立ちます。</block>
   <block id="111e730502d2c237ec1ea510ca834e06" category="inline-link">Cloud Compliance のユースケースを紹介します</block>
   <block id="4d945f6463286613619f463ac0b2aeff" category="paragraph"><block ref="7e14fe1d71140f7bd22047a1baf4c0ee" category="inline-link-rx"></block>。</block>
   <block id="fcd18a482799ad9e81aac42738b71479" category="paragraph">Cloud Compliance には、コンプライアンスの取り組みに役立つツールがいくつか用意されています。Cloud Compliance を使用すると、次のことができます。</block>
@@ -5936,8 +5927,6 @@
   <block id="c5b63840c4310d7cf96b0e5da6044540" category="list-text">GDPR 、 CCPA 、 PCI 、 HIPAA の各プライバシー規制の要件に応じて、さまざまな機密情報の範囲を特定します</block>
   <block id="29b69a85db4b6122e7a36a94b50bb233" category="list-text">データサブジェクトアクセス要求への応答（ dsar ）</block>
   <block id="53fa8df095671f897c8cbcd13ce182b1" category="section-title">サポートされている作業環境とデータソース</block>
-  <block id="4851a87ab9f927ea68831e5a8176c471" category="paragraph">Cloud Compliance では、次の種類のデータソースからデータをスキャンできます。</block>
-  <block id="6c13bdb1f1bdde1fbf0ab83899798cf4" category="list-text">データベースはどこにあってもかまいません （データベースがに存在する必要はありません サクキヨウカンキヨウ</block>
   <block id="807a3c50d901b21b3f3b8e077bc903f8" category="list-text">OneDrive アカウント</block>
   <block id="82cf805dd41236590189e4842bb94904" category="list-text">Cloud Compliance の使用コストは、スキャンするデータの量によって異なります。Cloud Compliance が Cloud Manager ワークスペースでスキャンする最初の 1TB のデータは無料です。これには、すべての作業環境とデータソースのすべてのデータが含まれます。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。を参照してください<block ref="3c1b53bec1b7cb8a4a4d6b6aa9f27379" category="inline-link-rx"></block> を参照してください。</block>
   <block id="141ee03e23ebf4bc45b048006d102207" category="inline-link-macro">登録方法については、こちらをご覧ください</block>
@@ -5956,7 +5945,6 @@
   <block id="9f31cf6f3372eec5f33fed8bcb43e248" category="section-title">Cloud Compliance の仕組み</block>
   <block id="9e21c9d98c5dfe3d0dafe92449442fd7" category="paragraph">Cloud Compliance の仕組みは次のとおりです。</block>
   <block id="2aaa89db2005490459750f7b0a155935" category="list-text">Cloud Manager に Cloud Compliance のインスタンスを導入します。</block>
-  <block id="85218fdb2e325fd085a40a78b9060e4c" category="list-text">この機能は、 1 つ以上の作業環境、データベース、 OneDrive アカウントで有効にできます。</block>
   <block id="1b5e0a9f749600c7092bd95c11b37ffb" category="list-text">Cloud Compliance は、 AI のラーニングプロセスを使用してデータをスキャンします。</block>
   <block id="732aadba0d6c0057703eb02b60bb42b7" category="list-text">[* コンプライアンス ] をクリックし、表示されたダッシュボードとレポートツールを使用して、コンプライアンスを強化します。</block>
   <block id="024662e5c3f5bc00ff75770dcde07c96" category="section-title">Cloud Compliance インスタンス</block>
@@ -5978,14 +5966,7 @@
   <block id="ea2c817c93e9afe80e6a8d8f74c1692d" category="section-title">スキャンの動作</block>
   <block id="05d5a4ce7d5798853a99c00d72818dcc" category="paragraph">Cloud Compliance を有効にして、スキャンするボリューム、バケット、データベーススキーマ、 OneDrive ユーザを選択すると、データのスキャンが開始され、個人データと機密データが識別されます。組織のデータをマッピングし、各ファイルを分類して、データ内のエンティティと定義済みパターンを特定して抽出します。スキャンの結果は、個人情報、機密性の高い個人情報、データカテゴリ、およびファイルタイプのインデックスです。</block>
   <block id="f16fd187977a4a0b8c6db9e9cca71d4c" category="paragraph">Cloud Compliance は、 NFS ボリュームと CIFS ボリュームをマウントすることで、他のクライアントと同様にデータに接続します。NFS ボリュームには読み取り専用で自動的にアクセスされますが、 CIFS ボリュームをスキャンするためには Active Directory のクレデンシャルを指定する必要があります。</block>
-  <block id="9fdc697812679428046dc56d9e5d3525" category="inline-image-macro">クラウドプロバイダで実行されている Cloud Manager インスタンスと Cloud Compliance インスタンスを示す図。Cloud Compliance インスタンスは、 NFS ボリューム、 CIFS ボリューム、 S3 バケット、およびデータベースに接続してスキャンします。</block>
-  <block id="42cbe79c098656d06033b39d72feb59e" category="paragraph"><block ref="42cbe79c098656d06033b39d72feb59e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="469e13a05b518667fd6c52f5ccc4b05b" category="paragraph">初回のスキャン後、 Cloud Compliance はデータを継続的にスキャンして、差分の変更を検出します（そのため、インスタンスの実行を維持することが重要です）。</block>
-  <block id="46e3431f75b50965267962b5c52a4bce" category="inline-link-macro">ボリュームレベル</block>
-  <block id="327d23210672938223cfeb39dd2929fa" category="inline-link-macro">バケットレベル</block>
-  <block id="4d24c3ac0f0e98a3ab1553e7ab683ea3" category="inline-link-macro">データベーススキーマレベル</block>
-  <block id="cacf403daa403a0cec80f0bd79e990d8" category="inline-link-macro">OneDrive ユーザーレベル</block>
-  <block id="28fa00fa44f2ebad22632c7556519a73" category="paragraph">でスキャンを有効または無効にできます <block ref="03fce0d1ca297ce92b3b9268fedcd983" category="inline-link-macro-rx"></block>、で <block ref="2b739c20dff64e6941f7dd2e156c50a6" category="inline-link-macro-rx"></block>、 <block ref="01653425f986ca15f989e2054e6a0ac6" category="inline-link-macro-rx"></block>、および <block ref="c70c237425c0bb5edb8f2b6282a0104f" category="inline-link-macro-rx"></block>。</block>
   <block id="69e82cf2c42711b8376dcd78e470f379" category="section-title">Cloud Compliance がインデックス化する情報</block>
   <block id="2ea20a8b68b610f88fe87adefff1e6e0" category="paragraph">Cloud Compliance は、データ（ファイル）に対してカテゴリを収集してインデックスを作成し、割り当てます。Cloud Compliance インデックスに含まれるデータは次のとおりです。</block>
   <block id="7723c0a066a249ebd5a6009e28eb007d" category="list-text">標準メタデータ</block>
@@ -6015,9 +5996,6 @@
   <block id="581b728abd99f21f5cab22950a7b33fa" category="paragraph">ネットワーク要件が厳しい場合は、 <block ref="834471ef54cdf4a46f3aec17963545db" category="inline-link-macro-rx"></block>。</block>
   <block id="d359ba9662c22ff5e27bf861300c6bbf" category="section-title">コンプライアンス情報へのユーザアクセス</block>
   <block id="401c51dcb764666cd075824557973b2d" category="paragraph">各ユーザには、 Cloud Manager 内と Cloud Compliance 内で異なる機能が割り当てられています。</block>
-  <block id="ef34984287a267ed0ba300301ce78d2d" category="list-text">* アカウント管理者 * は、コンプライアンス設定を管理し、すべての作業環境のコンプライアンス情報を表示できます。</block>
-  <block id="b51e1ca976b810835587ee87099871ca" category="list-text">* ワークスペース管理者 * は、アクセス権を持つシステムのコンプライアンス設定を管理し、コンプライアンス情報を表示することができます。ワークスペース管理者が Cloud Manager の作業環境にアクセスできない場合、作業環境のコンプライアンス情報は [ コンプライアンス ] タブに表示されません。</block>
-  <block id="63f6d803b4f06da69b2d68b55ceb8a7f" category="list-text">Cloud Compliance Viewer * ロールを持つユーザーは、コンプライアンス情報を表示し、アクセス権限を持つシステムのレポートを生成することのみができます。これらのユーザは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。</block>
   <block id="7001fd90c77b65d22e1a21481db3ddca" category="inline-link-macro">Cloud Manager のロールに関する詳細情報</block>
   <block id="2d4684d2aec68a0b0d987ac449846c38" category="inline-link-macro">特定のロールのユーザを追加します</block>
   <block id="067157677b4272de9d37aefe97398108" category="paragraph"><block ref="5e7146e8a09a0b278bd52f0efdccfb22" category="inline-link-macro-rx"></block> そして方法 <block ref="41d7e7cd7a6d86becbb32e4cb89d0cbf" category="inline-link-macro-rx"></block>。</block>
@@ -7817,7 +7795,6 @@
   <block id="78a0d16b70372e27005759683969aed9" category="inline-link">このサービスアカウントを Connector VM に関連付けます</block>
   <block id="065c40fb33b56030d4bbcc42fcbf0d16" category="list-text"><block ref="1a9447e1a13f89edfdde92dee038b283" category="inline-link-rx"></block>。</block>
   <block id="a0de1cb39471cb85eab0ddfd182d8525" category="summary">組織内の個人データと機密性の高い個人データに関する詳細を表示することで、個人データを管理できます。また、データに含まれる Cloud Compliance のカテゴリとファイルタイプを確認して、情報を可視化することもできます。</block>
-  <block id="841a545df52cb02d05d131b0a88418c2" category="doc">組織に保存されているプライベートデータの詳細を表示する</block>
   <block id="552e06f149025af5182e63f7c8606b99" category="paragraph">デフォルトでは、 Cloud Compliance ダッシュボードには、すべての作業環境とデータベースのコンプライアンスデータが表示されます。</block>
   <block id="ff41ca6d07672f90fec0faf064ebcb0b" category="inline-image-macro">Cloud Compliance ダッシュボードのスクリーンショット</block>
   <block id="9cb7d460448e5fa8acbb95908e7da46e" category="paragraph"><block ref="9cb7d460448e5fa8acbb95908e7da46e" category="inline-image-macro-rx" type="image"></block></block>
@@ -7868,9 +7845,6 @@
   <block id="52cb04713493959b4bbe6583f1b9c4aa" category="inline-image-macro">ファイルタイプダイアログボックスのスクリーンショットで、ファイルタイプの横にある調査結果アイコンをクリックできます。</block>
   <block id="a34177e7f46c4653a4d5f3b70742cf17" category="paragraph"><block ref="a34177e7f46c4653a4d5f3b70742cf17" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c03eb1ff575a67ef8cf7b0cbe6f24dad" category="section-title">特定の作業環境のダッシュボードデータの表示</block>
-  <block id="0c56b8e054ae0ff6d390429d2964b288" category="paragraph"><block ref="0c56b8e054ae0ff6d390429d2964b288" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="06e26e205987985eb1565f3d854353f1" category="inline-image-macro">[ レポートのダウンロード ] ボタン。</block>
-  <block id="a1da47e8d33f8a20f980e5710f118230" category="paragraph">調査ページの内容をフィルタリングして、表示する結果のみを表示できます。CSV バージョンのコンテンツをリファインした後でレポートとして保存する場合は、をクリックします <block ref="9cdf99fe4a7934534e8dfed4b4abe43e" category="inline-image-macro-rx" type="image"></block> ボタンを押します。</block>
   <block id="d3720958611294d50237fe72870e0c02" category="inline-image-macro">調査ページで結果を絞り込むときに使用できるフィルタのスクリーンショット。</block>
   <block id="3fd10935177bff66373986bc384c0307" category="paragraph"><block ref="3fd10935177bff66373986bc384c0307" category="inline-image-macro-rx" type="image"></block></block>
   <block id="74993bbafe4b984432b5e67863ee7f44" category="list-text">トップレベルのタブでは、ファイル（非構造化データ）またはデータベース（構造化データ）のデータを表示できます。</block>
@@ -8570,7 +8544,6 @@
   <block id="3f16576ef118bcee92d9f9a2dbaa758c" category="sidebar">Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します</block>
   <block id="6b7cef11406f2fff58dcc619a2b7e482" category="sidebar">Amazon S3 バケット</block>
   <block id="ae9d17dd7732dafc7b97f62ac9094cf7" category="sidebar">データベーススキーマ</block>
-  <block id="a65d1515e6e4c2b06764fe2b0e27b56a" category="sidebar">組織内のプライベートデータの詳細を表示します</block>
   <block id="b243b08794c870ea91d13357c677102f" category="sidebar">カスタムの個人データ識別子を追加します</block>
   <block id="7ecd0726b721e17d74d280fdd93e49f8" category="sidebar">レポートを生成します</block>
   <block id="940f7fa149e5c7150bed31bd5a2f9785" category="sidebar">dsar に応答します</block>
@@ -8749,10 +8722,8 @@
   <block id="c16d335a2dfb473b5746658259937eac" category="paragraph">または、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルに対してコンプライアンススキャンを実行することもできます。オンプレミスからバックアップファイルを作成している場合は を使用しています <block ref="4a3bd84391000d7171e8abcc27c72b87" category="inline-link-macro-rx"></block>では、これらのバックアップファイルに対してコンプライアンススキャンを実行できます。</block>
   <block id="f19f9cf709c8385cd6c3595b87c892bd" category="inline-link-macro">ハイライト</block>
   <block id="f61bb87fc7fb52124e7a929d9819def5" category="paragraph">はい。ハイライトの結果が返されたら、ハイライト機能と一緒に Cloud Manager ユーザ（日次、週次、または月単位）に E メールアラートを送信して、データを保護するための通知を受け取ることができます。の詳細を確認してください <block ref="8a5e6bd91328be289c5b3d82ff983517" category="inline-link-macro-rx"></block>。</block>
-  <block id="5c369487351e25c8e23c41ed93ab61cb" category="paragraph">また、ステータスレポートを .csv 形式でダウンロードして、社内で共有することもできます。</block>
   <block id="dd742fd59ea51a52070d76e5deb35cf8" category="section-title">組織のニーズに合わせてサービスをカスタマイズできますか。</block>
   <block id="9a6a13bd72015d77c3bd6aa610fd34ca" category="section-title">ファイルに埋め込まれている AIP ラベルを使用して Cloud Compliance を機能させることはできますか。</block>
-  <block id="a4b3162f0019767ae198ae382537764d" category="paragraph">はい。クラウドファイルで AIP ラベルを管理できます 登録している場合は、コンプライアンスがスキャンされます <block ref="2366c206354427dcda3be6923339236d" category="inline-link-rx"></block>。既にファイルに割り当てられているラベルを表示したり、ファイルにラベルを追加したり、ラベルが既に存在する場合にラベルを変更したりできます。</block>
   <block id="5594fef9bab96178573d18ca4a44e155" category="paragraph"><block ref="8c0cf3f05627519bc41a732b0ad724ac" category="inline-link-macro-rx"></block>。</block>
   <block id="3b63599ad48a35d1e870f0c230bed001" category="section-title">Cloud Manager 3.9.3 アップデート（ 2021 年 2 月 14 日）</block>
   <block id="a0ed33ad70d56436b5e8a5e2781480a0" category="list-text">スキャンするファイルの Azure Information Protection （ AIP ）ラベルを表示および管理します。</block>
@@ -8785,7 +8756,6 @@
   <block id="1326f071822c8e564cec621d5b9063da" category="inline-link-macro">クラウドコンプライアンスにおける AIP の統合</block>
   <block id="61698aac7304cb7ed9e48b66c7ee6f37" category="paragraph">ファイルが存在する作業環境とボリュームを表示するだけでなく、ファイル権限、ファイルの所有者、割り当てられた AIP ラベル（ある場合）などの詳細情報もメタデータに表示されます <block ref="3f713f714f824ac69bc5d056663755f1" category="inline-link-macro-rx"></block>）。この情報は、ハイライトを作成する予定の場合に役立ちます。これは、データのフィルタリングに使用できるすべての情報を確認できるためです。</block>
   <block id="72ee1b12411847aaeec6b88be13a836b" category="paragraph">すべてのデータソースについて、すべての情報が表示されるわけではなく、そのデータソースに適した情報だけが表示されることに注意してください。たとえば、権限と AIP ラベルはデータベースファイルには関係ありません。</block>
-  <block id="5e868f1a7ebc91a02b26a21dff8d80b7" category="paragraph">このメタデータには、ファイルを変更できる 2 つの項目もあります。</block>
   <block id="bdc59042cf2c650bc99763c92309c481" category="list-text">AIP ラベルを Cloud Compliance と統合している場合は、このファイルにラベルを割り当てることも、すでに存在する場合は別のラベルに変更することもできます。を参照してください <block ref="baa2dca33e97f105b278a0357d9f2e49" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="e5dabeeb94f38b44957e10a54d2bea0f" category="list-text">ファイルを削除できます。を参照してください <block ref="daf9eb3bc81512887ea3e49c360b560d" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="0f8bc7a5661b80ea8cb345cb930a6e97" category="list-text">[ フィルタ ] ペインの上部にある _Highlights_filter には、保存されたデータベースクエリや [ お気に入り ] リストなど、よく要求されるフィルタの組み合わせを提供するカスタムフィルタが一覧表示されます。実行します <block ref="ab3e5ffb4aaaf3e8a7fc00ad2a7ef9a6" category="inline-link-macro-rx"></block> 事前定義されたハイライトのリストを表示したり、独自のハイライトを作成する方法を確認したりできます。</block>
@@ -9145,7 +9115,6 @@
   <block id="b4baef0a3a494382cb3865753733f031" category="list-text">Google Cloud Storage に階層化する場合は、ライフサイクルルールを適用して、階層化されたデータを Standard ストレージクラスから 30 日後に低コストの Nearline 、 Coldline 、または Archive ストレージに移行することができます。</block>
   <block id="d85e79234e503ba2929218e38d0c7268" category="list-text">Cloud Tiering Now は、オンプレミスの ONTAP クラスタで検出されていないものがある場合に表示されます。これにより、クラスタへの階層化やその他のサービスを有効にすることができます。</block>
   <block id="da79c9a9c81722678ed4139ebb8929d9" category="inline-link-macro">これらのクラスタの詳細については、こちらをご覧ください</block>
-  <block id="6ff17ac4b9f7ee7881470b561d9b0f04" category="paragraph"><block ref="d7bc6293264026f32f9b0ee92b40b46f" category="inline-link-macro-rx"></block>。</block>
   <block id="55020590eb5e4c6d54bd64ab6f4a217e" category="paragraph">これらの VPC 内のサブネットには、個別の CIDR 範囲が必要です。CIDR 範囲を重複させることはできません。</block>
   <block id="cdbd2384a381b012e09f2ae7080e9b7d" category="paragraph">単一ノードシステムと同様に、共有 VPC とスタンドアロン VPC で HA ペアをサポートします。どの VPC でも、共有 VPC または非共有 VPC を使用できます。</block>
   <block id="016a51174c73cbd83b059e2b3bba7ecc" category="list-text">* シングルノード * ： 3 または 4 つの IP アドレス</block>
@@ -9497,4 +9466,163 @@
   <block id="89aba240a41f642ff9cf83f975aa714e" category="list-text"><block ref="89aba240a41f642ff9cf83f975aa714e" category="inline-link-macro-rx"></block></block>
   <block id="6b0b86583acd8deae93a95671f139039" category="inline-link-macro">Cloud Compliance への登録方法をご確認ください</block>
   <block id="48d5e59503ba34a724e98d451ee43f7e" category="list-text"><block ref="48d5e59503ba34a724e98d451ee43f7e" category="inline-link-macro-rx"></block></block>
+  <block id="cc846f6a6f44cfcedd1c0215eb981a3f" category="summary">Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 MinIO 、 Linode 、 B2 Cloud Storage などです。</block>
+  <block id="74585f658544c691c6f6afb583a9dc61" category="doc">S3 プロトコルを使用するオブジェクトストレージをスキャンしています</block>
+  <block id="bb1286b6a5b66c05dd614e2fa1aa00ab" category="paragraph">Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Azure Blob （ MinIO を使用）、 Linode 、 B2 Cloud Storage などです。</block>
+  <block id="7a2276a0db544c88744d7d9816867469" category="section-title">オブジェクトストレージの前提条件を確認する</block>
+  <block id="fd28e251418a49d4390ec8a9b6592efc" category="paragraph">オブジェクトストレージサービスに接続するには、エンドポイント URL が必要です。</block>
+  <block id="2d57414b48dcdcf97b91f9a71efe1cbc" category="paragraph">Cloud Compliance でバケットにアクセスできるようにするには、オブジェクトストレージプロバイダからアクセスキーとシークレットキーを入手する必要があります。</block>
+  <block id="0e75ef2355755ea2ac9727140f8b53ac" category="section-title">オブジェクトストレージサービスを追加します</block>
+  <block id="d2634f57f225d8ca006f9512e77738f8" category="paragraph">オブジェクトストレージサービスを Cloud Compliance に追加します。</block>
+  <block id="8777fc13a5f38a2c0cc1cab57e12320b" category="section-title">オブジェクトストレージの要件</block>
+  <block id="6988ee4ea30eb643c68d53327c6b1220" category="inline-link">MinIO サービス</block>
+  <block id="753043f41e69e8fdeb706dd070e87f37" category="list-text">Azure Blob のサポートにはを使用する必要があります <block ref="bb7c39e5bbb16f5f9e18534c8bb03c91" category="inline-link-rx"></block>。</block>
+  <block id="a2e3af21b7347df0f44d298e83e044c9" category="section-title">Cloud Compliance へのオブジェクトストレージサービスの追加</block>
+  <block id="0065ab04ebf28ab82ddb160d51d486e6" category="paragraph">オブジェクトストレージサービスを追加します。</block>
+  <block id="58dc807771e7cb80307d5179257d8cf5" category="list-text">[ 作業環境の構成 ] ページで、 [ * データソースの追加 *&gt;* オブジェクトストレージサービスの追加 *] をクリックします。</block>
+  <block id="28a37c29073d01b41af962aa45f11615" category="inline-image-macro">［ スキャン設定 ］ ページのスクリーンショットで、 ［ ファイル共有グループの追加 ］ ボタンをクリックします。</block>
+  <block id="2ae3db9ae42d46e9ee88cc1d2d220b4c" category="paragraph"><block ref="2ae3db9ae42d46e9ee88cc1d2d220b4c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="45970d794bdabed40f27d8ae37db5120" category="list-text">Add Object Storage Service ダイアログで、オブジェクトストレージサービスの詳細を入力し、 * Continue * をクリックします。</block>
+  <block id="08b7f56208194d68dbec37a8fdf36c8f" category="list-text">作業環境に使用する名前を入力します。</block>
+  <block id="f390ce5bcd6152fb803d824ad5a60a17" category="list-text">エンドポイントの URL を入力してオブジェクトストレージサービスにアクセスします。</block>
+  <block id="65ddae879982587c3ab0ee57a9059fd8" category="list-text">Cloud Compliance がオブジェクトストレージ内のバケットにアクセスできるように、アクセスキーとシークレットキーを入力します。</block>
+  <block id="0c4f4678d993733c2bd7d96ae60765f7" category="inline-image-macro">オブジェクトストレージサービスにアクセスするための値を入力するダイアログのスクリーンショット。</block>
+  <block id="03f9825aedaceb15d936539d5826b1bc" category="paragraph"><block ref="03f9825aedaceb15d936539d5826b1bc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b759adaed99740d09f74e6100b8e27ba" category="paragraph">新しいオブジェクトストレージサービスが作業環境のリストに追加されます。</block>
+  <block id="eee95a219b81e97bc6cd4730c01adbe3" category="section-title">オブジェクトストレージバケットでの準拠スキャンの有効化と無効化</block>
+  <block id="98f61c87ca83f4ce504bd8b5319ddf4f" category="paragraph">オブジェクトストレージサービスで Cloud Compliance を有効にしたら、次はスキャンするバケットを設定します。Cloud Compliance によって、それらのバケットが検出され、作成した作業環境に表示されます。</block>
+  <block id="dd5853b89ec447e9d731b556d5117bd6" category="list-text">設定ページで、 Object Storage Service 作業環境の * 設定 * をクリックします。</block>
+  <block id="3a1e5c5f142364cc7ce3c01995fb5473" category="inline-image-macro">スキャンするバケットを選択できるように、作業環境の設定をクリックするスクリーンショット。</block>
+  <block id="88102a7bc8cb32cc48cc4aeb56b158b1" category="paragraph"><block ref="88102a7bc8cb32cc48cc4aeb56b158b1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="156fdad76318b191adaf2ca2a40d61e6" category="inline-image-macro">スキャンするオブジェクトストレージバケットを選択するスクリーンショット。</block>
+  <block id="c404fb4b7293d499e4c2e44da6b6f739" category="paragraph"><block ref="c404fb4b7293d499e4c2e44da6b6f739" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a2fb790521a3e7112cefc9515a541c96" category="paragraph">Cloud Compliance で、有効にしたバケットのスキャンが開始されます。エラーが発生した場合は、エラーを修正するために必要なアクションとともに、 [ ステータス ] 列に表示されます。</block>
+  <block id="efc1c120789b0f58eca439d255b02d13" category="section-title">ファイルで AIP ラベルを表示する</block>
+  <block id="6b366eac1f5f26f43c2dac1c767c2f05" category="paragraph">ファイルに割り当てられている現在の AIP ラベルを表示できます。</block>
+  <block id="ec59ea09143e3597edaf3f0996765219" category="inline-image-macro">割り当てられた AIP ラベルを含む、単一ファイルのメタデータの詳細を示すスクリーンショット。</block>
+  <block id="bc776dc772678983f9fa0e88c93f1b31" category="paragraph"><block ref="bc776dc772678983f9fa0e88c93f1b31" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ba973daf0d58a10db08dce42f6922758" category="paragraph">ファイルを削除するには次の権限が必要です。 * for NFS data - エクスポートポリシーは書き込み権限で定義する必要があります。* CIFS データ– CIFS クレデンシャルには書き込み権限が必要です。* S3 データの場合 - IAM ロールに次の権限を含める必要があります：「 3 ： DeleteObject 」</block>
+  <block id="d88038aa52af25fe82a5f3d553071ef8" category="paragraph">Cloud Compliance では、 Cloud Volumes ONTAP 、 Azure NetApp Files 、オンプレミスの ONTAP システムで管理されている NFS プロトコルと CIFS プロトコルを介した非構造化データのスキャンがサポートされます。Cloud Compliance では、 Amazon S3 バケットに格納されているデータもスキャンできます。</block>
+  <block id="baa01a839204742fcad258d9e6a4c9ee" category="paragraph">Cloud Compliance は、 Cloud Manager の一部として機能し、現在は AWS と Azure をサポートしています。これにより、異なるクラウドプロバイダ間で統一されたプライバシー可視性を実現できます。</block>
+  <block id="a6ab79c1367d261c1980077736d31d93" category="paragraph">Cloud Compliance では、 Cloud Manager システムやストレージシステムと並行して、もう 1 つの人工知能レイヤを導入します。次に、ボリューム、バケット、データベース、 OneDrive アカウントのデータをスキャンして、見つかったデータ分析のインデックスを作成します。</block>
+  <block id="0fd12d7d80c697dc39a91631d7db8fa5" category="paragraph">個々の作業環境、データベース、 OneDrive アカウントを選択した後、キャンバスページから Cloud Compliance を無効にできます。</block>
+  <block id="f966b71b9d3ffd663847bfa9469cbae3" category="paragraph">ステータスレポートは、組織内で共有できる .csv 形式の [ 調査 ] ページからダウンロードすることもできます。</block>
+  <block id="446ba186fc37c71d1f1962ff250a440a" category="paragraph">はい。クラウドファイルで AIP ラベルを管理できます 登録している場合は、コンプライアンスがスキャンされます <block ref="2366c206354427dcda3be6923339236d" category="inline-link-rx"></block>。既にファイルに割り当てられているラベルを表示したり、ファイルにラベルを追加したり、既存のラベルを変更したりできます。</block>
+  <block id="9758bb75fcdde4f5e220002cca76aa90" category="section-title">Cloud Manager 3.9.4 の更新（ 2021 年 3 月 15 日）</block>
+  <block id="81e5b92aee0f8f905eee80ff5eb977c0" category="inline-link-macro">ガバナンスダッシュボード</block>
+  <block id="4fda97f592dd6cc7a1f8fb916ae98917" category="list-text">新しい <block ref="65347635b28f622f0ca2ca610a360ae3" category="inline-link-macro-rx"></block> を使用できるようになりました。これにより、組織のストレージリソース上のデータに関連する効率性が向上し、コストを制御できます。</block>
+  <block id="eeadd97f2788c4915da923b5b304b00d" category="paragraph">たとえば、ダッシュボードは、古いデータ、ビジネス以外のデータ、およびシステム内の大容量ファイルを特定するため、一部のファイルを低コストのオブジェクトストレージに移動、削除、階層化するかどうかを判断できます。</block>
+  <block id="d0d3baa23eeee996e3c148fa4ae93b78" category="inline-link-macro">ファイルへのアクセス権を持つすべてのユーザまたはグループ</block>
+  <block id="95704cfdec4b3a3192c477f8cb8c47e8" category="list-text">のリストを表示できます <block ref="31f09c28c85943988b0534c7cf0450ac" category="inline-link-macro-rx"></block>。</block>
+  <block id="5366c04104e613cc1a85dba5f9ab5674" category="list-text">AWS の政府機関では、 Cloud Compliance がサポートされるようになりました。</block>
+  <block id="10278ad8a692ac46b59c59fdca847270" category="paragraph"><block ref="a749f510364818cb971cb9170f41a772" category="inline-link-macro-rx"></block>。</block>
+  <block id="ae746875226579b9954c5361381a0387" category="list-text">次のポートが Cloud Compliance インスタンスに対して開いていることを確認します。</block>
+  <block id="c780a7831238096b62ccda3512612e65" category="list-text">NFS –ポート 111 および 2049 。</block>
+  <block id="cfbd3eaf6a26b5c0c06de5f5b3d138b9" category="list-text">CIFS の場合 - ポート 139 および 445</block>
+  <block id="3b4f6d2bc3b8acc0a3af8f2eb140d8e4" category="list-text">次のポートが Cloud Compliance インスタンスに対して開いていることを確認します。</block>
+  <block id="7fdd497b576569b7ad5fa002692d8866" category="summary">組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Compliance は、古いデータ、ビジネス以外のデータ、および非常に大容量のファイルを特定するため、一部のファイルを削除するか低コストのオブジェクトストレージに階層化するかを決定できます。</block>
+  <block id="16ace13e9030ba8b43b8bf469be3ffff" category="doc">組織に保存されているデータに関するガバナンスの詳細を表示する</block>
+  <block id="8e907bbc7c59c56a9ea9a3660e214fb9" category="paragraph">また、オンプレミスの場所からクラウドにデータを移行する予定の場合は、移動前にデータのサイズと、機密情報が含まれているデータの有無を確認できます。</block>
+  <block id="f7b090ae0361a33be68398c938094aa6" category="section-title">Governance ダッシュボード</block>
+  <block id="e5295f0dcd9974bcca40c2b38f856a76" category="paragraph">Governance ダッシュボードには情報が表示されるため、ストレージリソースに保存されているデータの効率性を高め、コストを管理できます。</block>
+  <block id="bbf5f951f876fbe1527fe6cf47dfbf80" category="inline-image-macro">Cloud Compliance Governance ダッシュボードのスクリーンショット。</block>
+  <block id="de4b246016736db4dcea9dd87857d741" category="paragraph"><block ref="de4b246016736db4dcea9dd87857d741" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="da6f1801aff5df6b4f1a82f0afbb6025" category="section-title">年間節約の機会</block>
+  <block id="bc10d9cdd62d7f0133183d3e4bf19092" category="paragraph">_Saving Opportunities _ 領域内の項目を調査して、削除または階層化するデータが低コストのオブジェクトストレージにないかどうかを確認することができます。各項目をクリックすると、 [ 調査 ] ページに結果が表示されます。</block>
+  <block id="d48915707db88d892f612c6302e324bc" category="paragraph">削減量は、 1 年間の GB あたりのコストを GB あたり 0.30 ドルに基づいてデータを削除、移動、または階層化することで実現できる推定削減量です。</block>
+  <block id="da7e456f74e6e77de59afc145e42d85d" category="list-text">*Stale Data*- 3 年前に最後に変更されたデータ。</block>
+  <block id="c25ad118eb89526500bf75c7b98bc13a" category="list-text">* ビジネス以外のデータ * - カテゴリまたはファイルタイプに基づいて、ビジネスに関連していないと見なされるデータ。これには、次のもの</block>
+  <block id="5c5a3b06af2976e0924bdc55ba1887e4" category="list-text">その他（一般的な「その他」カテゴリ）</block>
+  <block id="642a93915db2d046132c16daa25ed20e" category="list-text">* 大容量ファイル * - 100MB 超のファイル。</block>
+  <block id="811a31bd3f84c6c2d6d789d00b64cb34" category="section-title">最も多くの結果が表示されます</block>
+  <block id="55e781d994b07c08a5123dfe133f7bd2" category="paragraph">[ 調査 ] ページに結果を表示するには、ハイライトの名前をクリックします。[* すべて表示 * （ View All * ） ] をクリックして、利用可能なすべてのハイライトのリストを表示します。</block>
+  <block id="7ed6b1477eccf1ed1128cc58bb3dd926" category="paragraph">をクリックします <block ref="ab3e5ffb4aaaf3e8a7fc00ad2a7ef9a6" category="inline-link-macro-rx"></block> ハイライトの詳細については、を参照してください。</block>
+  <block id="f7610c6f6e541c5a2364ba4e2af4b7b2" category="section-title">データの経過時間とデータのサイズのグラフ</block>
+  <block id="3ec606c48dc49534660f77920d3af604" category="paragraph">_Age および _Size_Graphs の項目を調査して、削除または階層化してコストの低いオブジェクトストレージにする必要のあるデータがないかどうかを確認することができます。</block>
+  <block id="ede4d419502ce502a02eed2521b13f7f" category="paragraph">グラフの特定のポイントにカーソルを合わせると、そのカテゴリのデータの経過時間やサイズの詳細を確認できます。クリックすると、その年齢またはサイズの範囲でフィルタされたすべてのファイルが表示されます。</block>
+  <block id="b93e798bb25332c4394ef892dff88da0" category="list-text">* Age of Data グラフ * - 最終変更日に基づいてデータを分類します。</block>
+  <block id="1c7e3b4981e1a369ab27fd559df0e974" category="list-text">* データサイズグラフ * - サイズに基づいてデータを分類します。</block>
+  <block id="db2dd811f7134c3424539be1ba61b875" category="section-title">最も識別されているデータ分類</block>
+  <block id="02ac28e6aac96ae29edd75daf4e929ad" category="inline-link-macro">AIP ラベル</block>
+  <block id="1375766e411398116ce9103792262210" category="paragraph">この領域には、最も識別されたリストが表示されます <block ref="84315ad97f2d88a8946403cf43e746dd" category="inline-link-macro-rx"></block>、 <block ref="b93f4a98f7253c43e20d126a2b66e685" category="inline-link-macro-rx"></block>および <block ref="b818e07d8a46762db3a85bb929b85694" category="inline-link-macro-rx"></block> をスキャンしたデータに保存します。</block>
+  <block id="effa9c433e531dfecef843ac23f2615f" category="paragraph">カテゴリを使用すると、保有している情報の種類を表示して、データの状況を把握することができます。たとえば、履歴書や従業員契約などのカテゴリには機密データを含めることができます。結果を調査すると、従業員契約が安全でない場所に保存されていることがわかります。その後、その問題を修正できます。</block>
+  <block id="4dec86b2fd6d3bd26023978ae60e594b" category="paragraph">を参照してください <block ref="c230cea595832c5bdd026d08ea2df0fc" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="cb45e879b815142e4e2cd0d22e5c6dd9" category="paragraph">ファイルタイプを確認すると、特定のファイルタイプが正しく保存されない可能性があるため、機密データを制御するのに役立ちます。</block>
+  <block id="b11fe34d838f0e739909f5d313a2a09b" category="paragraph">を参照してください <block ref="5691d6d12c12319b5f69bb64318b18ce" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="fb91597bc7333ab092ccda3e2c38ed9f" category="paragraph">Azure Information Protection （ AIP ）に加入している場合は、コンテンツにラベルを適用することで、ドキュメントとファイルを分類して保護できます。ファイルに割り当てられている最も使用されている AIP ラベルを確認すると、ファイルで最も使用されているラベルを確認できます。</block>
+  <block id="7d854fb2a3ffe4628a1519290441d847" category="paragraph">を参照してください <block ref="b818e07d8a46762db3a85bb929b85694" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="f69dd2b64f4b2039d61c3147d2f60381" category="inline-image-macro">最初の OneDrive ユーザーを追加するボタンを示すスクリーンショット。最初のユーザーをアカウントに追加します。</block>
+  <block id="d880db14ae0ae1b65027665e5c989e0d" category="paragraph"><block ref="d880db14ae0ae1b65027665e5c989e0d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fe651f489eb5a86b074040c5bd261463" category="paragraph">OneDrive アカウントからユーザーを追加する場合は、 [* OneDrive ユーザーの追加 * ] をクリックします。</block>
+  <block id="5f3616e7dff5936abd4885daa2806a90" category="section-title">OneDrive ユーザーをコンプライアンススキャンから削除します</block>
+  <block id="7d1b614fa11d20cc3f4ac463d4a60fd3" category="summary">Cloud Compliance は、 Cloud Manager 向けのデータプライバシーとコンプライアンスのサービスで、ボリューム、 Amazon S3 バケット、データベース、 OneDrive アカウントなどのデータソースをスキャンして、これらのファイルに存在する個人データや機密データを特定します。人工知能をベースとするテクノロジを使用したクラウドコンプライアンスは、組織がデータの状況を把握し、機密データを特定するのに役立ちます。</block>
+  <block id="e3745777073515f3ac129e5c6fdeea44" category="paragraph">Cloud Compliance は、 Cloud Manager 向けのデータプライバシーとコンプライアンスのサービスで、ボリューム、 Amazon S3 バケット、データベース、 OneDrive アカウントなどのデータソースをスキャンして、これらのファイルに存在する個人データや機密データを特定します。人工知能（ AI ）ベースのテクノロジを使用したクラウドコンプライアンスは、データの状況を把握し、機密データを特定するのに役立ちます。</block>
+  <block id="4966e013d692ddcb12c45ddc492d51b6" category="paragraph">Cloud Compliance には、ガバナンスの取り組みに役立つツールも用意されています。Cloud Compliance を使用すると、次のことができます。</block>
+  <block id="66046d23a74c7d1354a53bc90642dfc1" category="list-text">システム内の古いデータ、ビジネス以外のデータ、大容量ファイルを特定します。</block>
+  <block id="7e47a492771472738db538f441f118ce" category="paragraph">この情報を使用して、一部のファイルを低コストのオブジェクトストレージに移動、削除、または階層化するかどうかを決定できます。</block>
+  <block id="802346cffb7edd26cc64835acbf1e825" category="list-text">データのサイズ、および移動前に機密情報が含まれているデータがないかどうかを確認する。</block>
+  <block id="8a4d466108313af1af7ba9b0b81c1e14" category="paragraph">これは、オンプレミスの場所からクラウドにデータを移行する場合に便利です。</block>
+  <block id="1e5a9dca99eeba2ab8dd17c7a125d870" category="paragraph">Cloud Compliance では、次の種類の作業環境とデータソースからデータをスキャンできます。</block>
+  <block id="ea2ef9b0d095bf991f4973633b485340" category="list-text">データベース</block>
+  <block id="6ac8fc7f67303cdae3937ded50eedb93" category="list-text">1 つ以上の作業環境またはデータソースで有効にします。</block>
+  <block id="1f308893129ffe1b5faf1f22795597ab" category="inline-image-macro">クラウドプロバイダで実行されている Cloud Manager インスタンスと Cloud Compliance インスタンスを示す図。Cloud Compliance インスタンスは、 NFS ボリュームと CIFS ボリュームの S3 バケット OneDrive アカウントとデータベースに接続してスキャンします。</block>
+  <block id="2d3946721864da6f9134886e24920822" category="paragraph"><block ref="2d3946721864da6f9134886e24920822" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="601b2f41c7049bea3e861ecf698e72e4" category="paragraph">スキャンは、ボリュームレベル、バケットレベル、データベーススキーマレベル、および OneDrive ユーザレベルで有効または無効にできます。</block>
+  <block id="7e576e4144e56e656ad24bb096e2e6fe" category="list-text">* アカウント管理者 * は、コンプライアンス設定を管理し、すべての作業環境のコンプライアンス情報を表示できます。</block>
+  <block id="1ad7d35bf1526ad34c9d0462c7e57e81" category="list-text">* ワークスペース管理者 * は、アクセス権を持つシステムについてのみ、コンプライアンス設定を管理し、コンプライアンス情報を表示できます。ワークスペース管理者が Cloud Manager の作業環境にアクセスできない場合、作業環境のコンプライアンス情報は [ コンプライアンス ] タブに表示されません。</block>
+  <block id="92b5d31c7573ec4b607f3345517ac2ac" category="list-text">コンプライアンスビューア * の役割を持つユーザーは、アクセス権を持つシステムのコンプライアンス情報を表示し、レポートを生成することのみができます。これらのユーザは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。</block>
+  <block id="d244d9b7396fa074e6a948934df3072c" category="doc">組織に保存されているデータのコンプライアンスの詳細を表示する</block>
+  <block id="7122795cb376735cdae3f76b068515ed" category="paragraph">ファイルへのアクセス権を持つすべてのユーザーまたはグループのリストを表示するには、 * すべてのアクセス権を表示 * をクリックします。このボタンは、 CIFS 共有と OneDrive アカウントのファイルに対してのみ使用できます。</block>
+  <block id="47b3f14316e807b37aaa42895464d283" category="inline-image-macro">詳細なファイル権限を示すスクリーンショット。</block>
+  <block id="33b3bef30743bda1b0909a4417b45583" category="paragraph"><block ref="33b3bef30743bda1b0909a4417b45583" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="80872e4aa8b8eecdc172c71d4da1c682" category="paragraph">このファイルに対して実行できる操作は 2 つあります。</block>
+  <block id="47b574d50f0f0cc7ac6ae3ba6d39951f" category="inline-image-macro">特定の作業環境で調査結果をフィルタリングする方法を示すスクリーンショット。</block>
+  <block id="7675f7474f9e9ad03c6a7bb35d2d9fad" category="paragraph"><block ref="7675f7474f9e9ad03c6a7bb35d2d9fad" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c3968b3e113810d1173a9e3e598610b6" category="inline-image-macro">下矢印ボタン</block>
+  <block id="adb0dda9efb2155e445b76d14f2556ea" category="paragraph">調査ページの内容をフィルタリングして、表示する結果のみを表示できます。CSV バージョンのコンテンツをリファインした後でレポートとして保存する場合は、をクリックします <block ref="14cfaf3d90bd21f0810fef3d343072a5" category="inline-image-macro-rx" type="image"></block> ボタンを押します。</block>
+  <block id="dc87f2e2ebd46af7b7833fc3fe8d099d" category="summary">NFS または CIFS ファイル共有を Cloud Compliance で直接スキャンするには、いくつかの手順を実行します。これらのファイル共有は、オンプレミスでもクラウドでもかまいません。</block>
+  <block id="116345e97c90251e8fb2bfe5041418b4" category="doc">ファイル共有をスキャンしています</block>
+  <block id="40008a4deb7e2d0208cddcb2402b04f7" category="section-title">ファイル共有の前提条件を確認する</block>
+  <block id="8b30b43b2d32f52db456a78f120bec50" category="paragraph">CIFS （ SMB ）共有の場合は、共有にアクセスするためのクレデンシャルがあることを確認しておきます。</block>
+  <block id="c95c54e848ea9f14e2b83fdc68dc6f14" category="section-title">ファイル共有を保持するグループを作成します</block>
+  <block id="d2ea2bf943bb8c943367ebfd6b8aec96" category="paragraph">このグループは、スキャンするファイル共有のコンテナであり、これらのファイル共有の作業環境名として使用されます。</block>
+  <block id="6c4d9060a2b2673afc5d156e0fefde11" category="section-title">ファイル共有を追加します</block>
+  <block id="9c28d4536a91354963aefd5dce504013" category="paragraph">スキャンするファイル共有のリストを追加します。一度に最大 100 個のファイル共有を追加できます。</block>
+  <block id="13a2ce98f7cc3f686aa3b8b11de4dd81" category="section-title">ファイル共有の要件</block>
+  <block id="20c44b483e3f2dd270f807f27b2e84c4" category="list-text">共有は、クラウド内やオンプレミスなど、どこでもホストできます。ネットアップ以外のストレージシステム上のファイル共有です。</block>
+  <block id="cb49b5c375a8b923edabad9e50c72321" category="list-text">Cloud Compliance インスタンスと共有の間にネットワーク接続が必要です。</block>
+  <block id="8e4ba18b85274d135925d3a46f8bbe8f" category="list-text">追加する共有のリストは、「 &lt;host_name&gt; ： /&lt;share_path&gt;` 」の形式で指定する必要があります。共有は個別に入力することも、スキャンするファイル共有の行区切りリストを指定することもできます。</block>
+  <block id="edcb69e1f6592f5a712f7f6bb335d1ad" category="list-text">CIFS （ SMB ）共有の場合は、共有への読み取りアクセスを提供する Active Directory クレデンシャルがあることを確認します。管理者クレデンシャルが推奨されるのは、 Cloud Compliance で高い権限が必要なデータをスキャンする場合です。</block>
+  <block id="d3f633c1be26eecfced739f558d6850a" category="section-title">ファイル共有のグループを作成します</block>
+  <block id="13f240238a8d85c582e8df757711aac5" category="paragraph">ファイル共有を追加する前に、グループを追加する必要があります。グループはスキャンするファイル共有のコンテナであり、グループ名はそれらのファイル共有の作業環境名として使用されます。</block>
+  <block id="14ce47d4e0fee5e69c32287aa7b0e31f" category="paragraph">同じグループ内に NFS 共有と CIFS 共有を混在させることができます。ただし、グループ内のすべての CIFS ファイル共有で同じ Active Directory クレデンシャルを使用している必要があります。異なるクレデンシャルを使用する CIFS 共有を追加する場合は、一意のクレデンシャルセットごとに個別のグループを作成する必要があります。</block>
+  <block id="859b0486d18f528c8edbdaa7f41170d0" category="list-text">[ 作業環境の構成 ] ページで、 [ * データソースの追加 *&gt;* ファイル共有グループの追加 *] をクリックします。</block>
+  <block id="0c3c72a2a46a4dd5c0107a9f0b07c592" category="paragraph"><block ref="0c3c72a2a46a4dd5c0107a9f0b07c592" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b5fa1ae0f2b7152c1235520708fb1af0" category="list-text">[ ファイル共有グループの追加 ] ダイアログで、共有グループの名前を入力し、 [ 続行 ] をクリックします。</block>
+  <block id="69438cb2e4a059b421af50a7d06c8f93" category="paragraph">新しいファイル共有グループが作業環境のリストに追加されます。</block>
+  <block id="22ad4f04c485447770e99ad6c793bc18" category="section-title">グループへのファイル共有の追加</block>
+  <block id="2d57159c128b2bbf9b328847fcc33c5a" category="paragraph">ファイル共有グループにファイル共有を追加すると、それらの共有内のファイルが Cloud Compliance でスキャンされます。共有は、「 &lt;host_name&gt; ： /&lt;share_path&gt;` 」の形式で追加します。</block>
+  <block id="7f36799e4767f2e3733ee3f582eeec9d" category="paragraph">個々のファイル共有を追加することも、スキャンするファイル共有を 1 行で区切って指定することもできます。一度に最大 100 個の共有を追加できます。</block>
+  <block id="c9ce688a21fc0a13e7a592a39d9b66de" category="paragraph">NFS 共有と CIFS 共有を 1 つのグループに追加する場合は、 NFS 共有を追加してから CIFS 共有を再度追加するまで、このプロセスを 2 回実行する必要があります。</block>
+  <block id="c696377eeab0348c7bd52ac7b4a8f54f" category="list-text">作業環境ページで、ファイル共有グループの * 構成 * ボタンをクリックします。</block>
+  <block id="d9a6785fa0ca31901cf49acc5951aefc" category="paragraph"><block ref="d9a6785fa0ca31901cf49acc5951aefc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9535e8d73656c91d40193e1352899f5b" category="list-text">このファイル共有グループのファイル共有を初めて追加する場合は、 * 最初の共有を追加 * をクリックします。</block>
+  <block id="e12f851045a5dd03b63ec08942496b87" category="inline-image-macro">最初の共有をグループに追加するための [ 最初の共有の追加 ] ボタンを示すスクリーンショット。</block>
+  <block id="71802feecdbf246a5878ffd0776c9188" category="paragraph"><block ref="71802feecdbf246a5878ffd0776c9188" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e2fac2c70d1c0b8b442edf54cdc057a1" category="paragraph">既存のグループにファイル共有を追加する場合は、 * 共有の追加 * をクリックします。</block>
+  <block id="320628295265baf9bb69f0998f0f2fff" category="inline-image-macro">グループに共有を追加するための [ 共有の追加 ] ボタンを示すスクリーンショット。</block>
+  <block id="35307f7c2f311ec0462c4df13d4da801" category="paragraph"><block ref="35307f7c2f311ec0462c4df13d4da801" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="47e02e5cc0631b46dd4ddf687f0581fb" category="list-text">追加するファイル共有のプロトコルを選択し、スキャンするファイル共有を 1 行に 1 つ追加して、「 * Continue * 」をクリックします。</block>
+  <block id="eb78bc82dacf7ba8a0b44a1fcffc4ddf" category="paragraph">CIFS （ SMB ）共有を追加する場合は、共有への読み取りアクセスを提供する Active Directory クレデンシャルを入力する必要があります。admin クレデンシャルが優先されます。</block>
+  <block id="ea83a70e9aaa2fe5cdb89ca736c3f60f" category="inline-image-macro">［ ファイル共有の追加 ］ ページのスクリーンショット。スキャンする共有を追加できます。</block>
+  <block id="a9d3544fdaa80db23d985cc9024d392a" category="paragraph"><block ref="a9d3544fdaa80db23d985cc9024d392a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="17ac351ddbea073b035b83b540983f6f" category="paragraph">追加された共有の数が確認ダイアログに表示されます。</block>
+  <block id="87dced2b98ff65890acdcbfd5902920a" category="paragraph">ダイアログに追加できなかった共有が表示された場合は、問題を解決できるようにこの情報を記録しておきます。修正したホスト名または共有名を使用して共有を再追加できる場合があります。</block>
+  <block id="06c853d406c5a1a08ea40a3462bd27ba" category="paragraph">Cloud Compliance によるスキャンが開始され、追加したファイル共有内のファイルがスキャンされ、ダッシュボードやその他の場所に結果が表示されます。</block>
+  <block id="696cbb94224a469268edb5eb36133c83" category="section-title">準拠スキャンからのファイル共有の削除</block>
+  <block id="4de725d331cf276fac026642a5f17603" category="paragraph">特定のファイル共有をスキャンする必要がなくなった場合は、個々のファイル共有を削除して、ファイルがいつでもスキャンされるようにすることができます。[ 構成 ] ページで [ 共有の削除 ] をクリックします。</block>
+  <block id="90777a343fd7f5c83c97f473d59a2af2" category="inline-image-macro">単一のファイル共有をスキャン対象から削除する方法を示すスクリーンショット。</block>
+  <block id="c8716632d7055f530ad579b6f751cf3a" category="paragraph"><block ref="c8716632d7055f530ad579b6f751cf3a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a1b1318193a35f78be2416bedbe04261" category="sidebar">データのガバナンスの詳細を確認できます</block>
+  <block id="056f094fced7be2185f9f1e21b455e6b" category="sidebar">データのコンプライアンスの詳細を表示します</block>
 </blocks>
