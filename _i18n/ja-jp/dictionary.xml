@@ -2441,7 +2441,6 @@
   <block id="eb8acdd1be46ebe0645ab7bfd07fa3f7" category="doc">Cloud Manager システム ID を確認する</block>
   <block id="6bbb2cc740f02cb936245a63255091eb" category="paragraph">作業を開始する際に、ネットアップの担当者から Cloud Manager システム ID の入力を求められることがあります。この ID は通常、ライセンスの取得やトラブルシューティングの目的で使用されます。</block>
   <block id="ae9a2c864810f853fda2fb6bd5cc8d31" category="list-text">Cloud Manager コンソールの右上にあるヘルプアイコンをクリックします。</block>
-  <block id="59d49b97bed75f47d2bf64573fdabe3c" category="list-text">[ サポート（ Support ） ] &gt; [ コネクター AutoSupport （ Connector ） ] をクリック</block>
   <block id="52dcba8ab7eb7fb84ae25f7cf36529e7" category="paragraph">システム ID が一番上に表示されます。</block>
   <block id="fd21898b0fd643f28eb295f227e2e435" category="inline-image-macro">サポートダッシュボードに表示される Cloud Manager のシステム ID を示すスクリーンショット。</block>
   <block id="c4d1d3ab364ac78cd8691b99102c328b" category="paragraph"><block ref="c4d1d3ab364ac78cd8691b99102c328b" category="inline-image-macro-rx" type="image"></block></block>
@@ -9625,4 +9624,5 @@
   <block id="c8716632d7055f530ad579b6f751cf3a" category="paragraph"><block ref="c8716632d7055f530ad579b6f751cf3a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a1b1318193a35f78be2416bedbe04261" category="sidebar">データのガバナンスの詳細を確認できます</block>
   <block id="056f094fced7be2185f9f1e21b455e6b" category="sidebar">データのコンプライアンスの詳細を表示します</block>
+  <block id="f1746d6205cfd03ca7c9926d427cbcc6" category="list-text">[ サポート（ Support ） ] &gt; [ コネクター（ Connector ） ] をクリック</block>
 </blocks>

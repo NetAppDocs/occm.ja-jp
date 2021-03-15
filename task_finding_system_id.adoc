@@ -19,7 +19,7 @@ Cloud Manager の設定を変更する前に、コネクタを作成する必要
 
 .手順
 . Cloud Manager コンソールの右上にあるヘルプアイコンをクリックします。
-. [ サポート（ Support ） ] > [ コネクター AutoSupport （ Connector ） ] をクリック
+. [ サポート（ Support ） ] > [ コネクター（ Connector ） ] をクリック
 +
 システム ID が一番上に表示されます。
 
