@@ -19,6 +19,18 @@ summary: デフォルトでは、 Cloud Manager は Cloud Volumes ONTAP とそ�
 
 
 
+== Cloud Volumes ONTAP でのプライベートリンク接続の動作
+
+Cloud Manager が Azure に Cloud Volumes ONTAP を導入すると、リソースグループにプライベートエンドポイントが作成されます。プライベートエンドポイントは、 Cloud Volumes ONTAP のストレージアカウントに関連付けられます。その結果、 Cloud Volumes ONTAP ストレージへのアクセスは、 Microsoft バックボーンネットワークを経由します。
+
+VNet へのプライベート VPN 接続または ExpressRoute 接続を使用する場合、クライアントが Cloud Volumes ONTAP と同じ VNet 内、ピア VNet 内、またはオンプレミスネットワーク内にある場合、クライアントアクセスはプライベートリンクを経由します。
+
+次の例は、同じ VNet 内およびプライベート VPN 接続または ExpressRoute 接続が確立されたオンプレミスネットワークから、プライベートリンクを介したクライアントアクセスを示しています。
+
+image:diagram_azure_private_link.png["この概念図は、 Cloud Volumes ONTAP へのデータアクセスと、プライベートエンドポイントを介したストレージアカウントへのプライベートリンクを示しています。"]
+
+
+
 == Cloud Manager に Azure プライベート DNS の詳細を指定する
 
 を使用する場合 https://docs.microsoft.com/en-us/azure/dns/private-dns-overview["Azure プライベート DNS"^]では、各コネクタの構成ファイルを変更する必要があります。そうしないと、 Cloud Manager で Cloud Volumes ONTAP とそれに関連付けられたストレージアカウント間の Azure Private Link 接続を有効にできません。

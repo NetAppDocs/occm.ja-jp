@@ -15,6 +15,14 @@ summary: 既知の問題は、このリリースの製品を正常に使用で�
 [role="lead"]
 既知の問題は、このリリースの製品を正常に使用できない可能性のある問題を特定します。
 
-このリリースの Cloud Manager には既知の問題はありません。
-
 Cloud Volumes ONTAP の既知の問題については、を参照してください 。 https://docs.netapp.com/us-en/cloud-volumes-ontap/["Cloud Volumes ONTAP リリースノート"^] および ONTAP ソフトウェアについては、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP リリースノート"^]。
+
+
+
+== 172 の範囲の IP アドレスと競合する可能性があります
+
+Cloud Manager は、 172.17.0.0/16 と 172.18.0.0/16 の範囲に IP アドレスを持つ 2 つのインターフェイスを使用してコネクタを展開します。
+
+これらの範囲のいずれかでネットワークのサブネットが設定されている場合、 Cloud Manager から接続エラーが発生することがあります。たとえば、 Cloud Manager でオンプレミスの ONTAP クラスタを検出すると失敗することがあります。
+
+回避策は、コネクタのインターフェイスの IP アドレスを変更します。ネットアップサポートにお問い合わせください。

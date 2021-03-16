@@ -36,18 +36,16 @@ Cloud Volumes ONTAP とコネクタは、 Google Cloud の共有 VPC とスタ�
 HA ペア用の仮想プライベートクラウド::
 +
 --
+単一ノードシステムと同様に、共有 VPC とスタンドアロン VPC で HA ペアをサポートします。どの VPC でも、共有 VPC または非共有 VPC を使用できます。
+
+共有 VPC を使用する場合の唯一の要件は、です を指定します https://cloud.google.com/compute/docs/access/iam#compute.networkUser["Compute Network User ロール"^] をコネクタサービスアカウントに追加します。Cloud Manager は、ホストプロジェクトのファイアウォール、 VPC 、およびサブネットを照会するためにこれらの権限を必要とします。
+
 HA ペアの作成時に、 Cloud Manager から 4 つの VPC を選択するよう求められます。
 
 * vPC-0 ：データおよびノードへのインバウンド接続
 * vPC-1 、 VPC -2 、および VPC -3 ：ノードと HA メディエーター間の内部通信
 +
 これらの VPC 内のサブネットには、個別の CIDR 範囲が必要です。CIDR 範囲を重複させることはできません。
-
-+
-単一ノードシステムと同様に、共有 VPC とスタンドアロン VPC で HA ペアをサポートします。どの VPC でも、共有 VPC または非共有 VPC を使用できます。
-
-+
-共有 VPC を使用する場合の唯一の要件は、です を指定します https://cloud.google.com/compute/docs/access/iam#compute.networkUser["Compute Network User ロール"^] をコネクタサービスアカウントに追加します。Cloud Manager は、ホストプロジェクトのファイアウォール、 VPC 、およびサブネットを照会するためにこれらの権限を必要とします。
 
 
 

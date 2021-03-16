@@ -34,7 +34,6 @@
   <block id="ea76c0ae9dd817eb448fd1b3db6253bb" category="list-text">サンパウロ</block>
   <block id="34515f1d88b10d0db0a78eba6c533394" category="summary">既知の問題は、このリリースの製品を正常に使用できない可能性のある問題を特定します。</block>
   <block id="95dc0391ce7b396d7dd5622284e8fc3e" category="doc">既知の問題</block>
-  <block id="b4aa3b4d475d4fdf214430675dd160aa" category="paragraph">このリリースの Cloud Manager には既知の問題はありません。</block>
   <block id="bc2d1afe4b7b88784be36363245bd652" category="inline-link">Cloud Volumes ONTAP リリースノート</block>
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link">ONTAP リリースノート</block>
   <block id="cdddc115a909dfada9b41ba2161da770" category="paragraph">Cloud Volumes ONTAP の既知の問題については、を参照してください 。<block ref="883886ff67d5fc5c5c27664b5de8a81e" category="inline-link-rx"></block> および ONTAP ソフトウェアについては、を参照してください<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
@@ -9625,4 +9624,16 @@
   <block id="a1b1318193a35f78be2416bedbe04261" category="sidebar">データのガバナンスの詳細を確認できます</block>
   <block id="056f094fced7be2185f9f1e21b455e6b" category="sidebar">データのコンプライアンスの詳細を表示します</block>
   <block id="f1746d6205cfd03ca7c9926d427cbcc6" category="list-text">[ サポート（ Support ） ] &gt; [ コネクター（ Connector ） ] をクリック</block>
+  <block id="911d15b7ac55478d2b567e8488658687" category="section-title">172 の範囲の IP アドレスと競合する可能性があります</block>
+  <block id="3853b1ba353b50f09828dc0d39b3ed95" category="paragraph">Cloud Manager は、 172.17.0.0/16 と 172.18.0.0/16 の範囲に IP アドレスを持つ 2 つのインターフェイスを使用してコネクタを展開します。</block>
+  <block id="9f608f9c1c8b1ff5590819babfd8d682" category="paragraph">これらの範囲のいずれかでネットワークのサブネットが設定されている場合、 Cloud Manager から接続エラーが発生することがあります。たとえば、 Cloud Manager でオンプレミスの ONTAP クラスタを検出すると失敗することがあります。</block>
+  <block id="9bf0231c4a9bbfcd51ea4f7ad43e1483" category="paragraph">回避策は、コネクタのインターフェイスの IP アドレスを変更します。ネットアップサポートにお問い合わせください。</block>
+  <block id="b12da0384eea760e143d1a41fe2484f9" category="section-title">Cloud Volumes ONTAP でのプライベートリンク接続の動作</block>
+  <block id="188ce8053291c28108253bf30f90ac2e" category="paragraph">Cloud Manager が Azure に Cloud Volumes ONTAP を導入すると、リソースグループにプライベートエンドポイントが作成されます。プライベートエンドポイントは、 Cloud Volumes ONTAP のストレージアカウントに関連付けられます。その結果、 Cloud Volumes ONTAP ストレージへのアクセスは、 Microsoft バックボーンネットワークを経由します。</block>
+  <block id="b2de829903c040e99b02d3d155ca0528" category="paragraph">VNet へのプライベート VPN 接続または ExpressRoute 接続を使用する場合、クライアントが Cloud Volumes ONTAP と同じ VNet 内、ピア VNet 内、またはオンプレミスネットワーク内にある場合、クライアントアクセスはプライベートリンクを経由します。</block>
+  <block id="6b29a9cbfcf35db30ad6d2c78c52db5e" category="paragraph">次の例は、同じ VNet 内およびプライベート VPN 接続または ExpressRoute 接続が確立されたオンプレミスネットワークから、プライベートリンクを介したクライアントアクセスを示しています。</block>
+  <block id="52fbf2576ac1dc00b418ef95b320599d" category="inline-image-macro">この概念図は、 Cloud Volumes ONTAP へのデータアクセスと、プライベートエンドポイントを介したストレージアカウントへのプライベートリンクを示しています。</block>
+  <block id="9d1991f365ae3121bda2428edb322a71" category="paragraph"><block ref="9d1991f365ae3121bda2428edb322a71" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1513823db468e2f26987fa40300e220d" category="inline-link-macro">この問題の詳細については、こちらをご覧ください</block>
+  <block id="7cbdf8f153b711e49bbc1a634bd2f45a" category="paragraph">ネットワークのサブネットが 172 範囲に設定されている場合、 Cloud Manager から接続エラーが発生することがあります。 <block ref="7947329dce52d0c68dfb3154977e2c7a" category="inline-link-macro-rx"></block>。</block>
 </blocks>
