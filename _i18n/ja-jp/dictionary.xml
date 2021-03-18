@@ -4523,7 +4523,6 @@
   <block id="1b9f42efcf7ffef4d1daf55f12ea8909" category="cell">Docker を実行しているインフラのコンテナコンポーネントのソフトウェアイメージにアクセスでき、 Cloud Manager とのサービス統合のためのソリューションを提供します。</block>
   <block id="300f031c227ed1b4448a8bb51abec2bb" category="cell">https://netapp-cloud-account.auth0.com</block>
   <block id="3cc65e1b90abf01fec0eca1abb966e9d" category="cell">support.netapp.com ： 443</block>
-  <block id="09e16c84de2d84cfe996c648810bb86e" category="cell">ネットアップ AutoSupport との通信：</block>
   <block id="075c147adba0008d0b77ac88146a560a" category="cell">¥ https://support.netapp.com/svcgw ¥ https://support.netapp.com/ServiceGW/entitlement ¥ https://eval.lic.netapp.com.s3.us-west-1.amazonaws.com ¥ https://cloud-support-netapp-com.s3.us-west-1.amazonaws.com</block>
   <block id="07c166aca47c65ea90c6b4920d6f5238" category="cell">システムライセンスとサポート登録を行うためのネットアップとの通信</block>
   <block id="6d4f32f631ea20e797b8ed0ed8b3e753" category="cell">¥ https://client.infra.support.netapp.com.s3.us-west-1.amazonaws.com ¥ https://cloud-support-netapp-com-accelerated.s3.us-west-1.amazonaws.com ¥ https://trigger.asup.netapp.com.s3.us-west-1.amazonaws.com</block>
@@ -9647,4 +9646,6 @@
   <block id="f4207fe87568a167ef69807c78623dc3" category="list-text"><block ref="f4207fe87568a167ef69807c78623dc3" category="inline-link-macro-rx"></block></block>
   <block id="c03a0c0df9a0b88fbbd1d953882813ed" category="list-text"><block ref="c03a0c0df9a0b88fbbd1d953882813ed" category="inline-link-macro-rx"></block></block>
   <block id="677b703a482beb8e3da90b6e9b7527d0" category="list-text"><block ref="677b703a482beb8e3da90b6e9b7527d0" category="inline-link-macro-rx"></block></block>
+  <block id="2dc4d97cccbbe2b28b34205adfc982fe" category="cell">support.netapp.com:443 https://mysupport.netapp.com</block>
+  <block id="e96b128a90734a984118f076d76538c7" category="cell">ネットアップ AutoSupport との通信：コネクタは support.netapp.com:443 と通信し、 https://mysupport.netapp.com にリダイレクトされます。</block>
 </blocks>

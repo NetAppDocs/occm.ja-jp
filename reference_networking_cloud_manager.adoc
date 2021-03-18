@@ -86,7 +86,7 @@ AWS サービス（ amazonaws.com ）：
 | https://netapp-cloud-account.auth0.com | NetApp Cloud Central との通信により、ユーザ認証を一元的に行うことができます。 
 
 
-| support.netapp.com ： 443 | ネットアップ AutoSupport との通信： 
+| support.netapp.com:443 https://mysupport.netapp.com | ネットアップ AutoSupport との通信：コネクタは support.netapp.com:443 と通信し、 https://mysupport.netapp.com にリダイレクトされます。 
 
 
 | ¥ https://support.netapp.com/svcgw ¥ https://support.netapp.com/ServiceGW/entitlement ¥ https://eval.lic.netapp.com.s3.us-west-1.amazonaws.com ¥ https://cloud-support-netapp-com.s3.us-west-1.amazonaws.com | システムライセンスとサポート登録を行うためのネットアップとの通信 
@@ -150,7 +150,7 @@ AWS サービス（ amazonaws.com ）：
 | https://netapp-cloud-account.auth0.com | NetApp Cloud Central との通信により、ユーザ認証を一元的に行うことができます。 
 
 
-| support.netapp.com ： 443 | ネットアップ AutoSupport との通信： 
+| support.netapp.com:443 https://mysupport.netapp.com | ネットアップ AutoSupport との通信：コネクタは support.netapp.com:443 と通信し、 https://mysupport.netapp.com にリダイレクトされます。 
 
 
 | ¥ https://support.netapp.com/svcgw ¥ https://support.netapp.com/ServiceGW/entitlement ¥ https://eval.lic.netapp.com.s3.us-west-1.amazonaws.com ¥ https://cloud-support-netapp-com.s3.us-west-1.amazonaws.com | システムライセンスとサポート登録を行うためのネットアップとの通信 
@@ -211,7 +211,7 @@ AWS サービス（ amazonaws.com ）：
 | https://netapp-cloud-account.auth0.com | NetApp Cloud Central との通信により、ユーザ認証を一元的に行うことができます。 
 
 
-| support.netapp.com ： 443 | ネットアップ AutoSupport との通信： 
+| support.netapp.com:443 https://mysupport.netapp.com | ネットアップ AutoSupport との通信：コネクタは support.netapp.com:443 と通信し、 https://mysupport.netapp.com にリダイレクトされます。 
 
 
 | ¥ https://support.netapp.com/svcgw ¥ https://support.netapp.com/ServiceGW/entitlement ¥ https://eval.lic.netapp.com.s3.us-west-1.amazonaws.com ¥ https://cloud-support-netapp-com.s3.us-west-1.amazonaws.com | システムライセンスとサポート登録を行うためのネットアップとの通信 
