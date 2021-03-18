@@ -5206,28 +5206,14 @@
   <block id="dd47c5ffc608943bbe951c1bc249e4a3" category="inline-link">Cloud Volumes ONTAP の新機能</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="section-title">はじめに</block>
   <block id="315474a8ef79b74899073fc979f12da4" category="inline-link-macro">クラウドマネージャ</block>
-  <block id="1b9fbc6ec1c3f80a9c7f473589792f0d" category="list-text"><block ref="1b9fbc6ec1c3f80a9c7f473589792f0d" category="inline-link-macro-rx"></block></block>
   <block id="ee7106b04b491ea6ef7734a884889cf3" category="list-text"><block ref="ee7106b04b491ea6ef7734a884889cf3" category="inline-link-macro-rx"></block></block>
   <block id="096f3522cfa2f31de45d052b740adc65" category="inline-link-macro">Cloud Volumes ONTAP for AWS</block>
-  <block id="f43ee622b9187128ae917afcf9c78097" category="list-text"><block ref="f43ee622b9187128ae917afcf9c78097" category="inline-link-macro-rx"></block></block>
   <block id="2544021bbaa4bc6eadfddbb17edf7811" category="inline-link-macro">Cloud Volumes ONTAP for Azure</block>
-  <block id="f7f4fa6483fd0e37f58f5a1bf883102d" category="list-text"><block ref="f7f4fa6483fd0e37f58f5a1bf883102d" category="inline-link-macro-rx"></block></block>
   <block id="f540a08b090d18fa948ca4ade8ceb7ff" category="inline-link-macro">Cloud Volumes ONTAP for Google Cloud の略</block>
-  <block id="4bfbd882c421477b0c4e48fc91e8f3fa" category="list-text"><block ref="4bfbd882c421477b0c4e48fc91e8f3fa" category="inline-link-macro-rx"></block></block>
-  <block id="29f4240cc42be75b7f423c688bb879d2" category="list-text"><block ref="29f4240cc42be75b7f423c688bb879d2" category="inline-link-macro-rx"></block></block>
   <block id="06021ba1ee96f1a3a57b50001fc7244c" category="inline-link-macro">Cloud Volumes Service for AWS</block>
-  <block id="91fdbd6d5f79854f1576bf0040cc5ab1" category="list-text"><block ref="91fdbd6d5f79854f1576bf0040cc5ab1" category="inline-link-macro-rx"></block></block>
-  <block id="00ca767448f82cfb0282b35ee478a793" category="list-text"><block ref="00ca767448f82cfb0282b35ee478a793" category="inline-link-macro-rx"></block></block>
-  <block id="5c2e1a772a274f24a6edd09cbe9bd623" category="list-text"><block ref="5c2e1a772a274f24a6edd09cbe9bd623" category="inline-link-macro-rx"></block></block>
-  <block id="5099bf45b03cac22a9c91c2525580c1e" category="list-text"><block ref="5099bf45b03cac22a9c91c2525580c1e" category="inline-link-macro-rx"></block></block>
-  <block id="afa6e2139db99d54aa0c9eccea9a8c2a" category="inline-link-macro">Cloud Analyzer</block>
-  <block id="10cc01f202cb24bdedd22d88270d6b73" category="list-text"><block ref="10cc01f202cb24bdedd22d88270d6b73" category="inline-link-macro-rx"></block></block>
   <block id="92d2b6aba6afa3f690540cf3dba9b633" category="inline-link-macro">クラウド階層化</block>
-  <block id="1229da17324a18fed8f18727d33db415" category="list-text"><block ref="1229da17324a18fed8f18727d33db415" category="inline-link-macro-rx"></block></block>
   <block id="b4f83b03956523a39e8bbbd0895f0f29" category="inline-link-macro">Cloud Insights の機能です</block>
-  <block id="d61afd4ae3166530f0a2a36b7b3ce08f" category="list-text"><block ref="d61afd4ae3166530f0a2a36b7b3ce08f" category="inline-link-macro-rx"></block></block>
   <block id="b5fe3a41d32647f20f3b5ec96045d6d6" category="inline-link-macro">Active IQ</block>
-  <block id="48c3c19e32386e83fbd3e5ee7820da0a" category="list-text"><block ref="48c3c19e32386e83fbd3e5ee7820da0a" category="inline-link-macro-rx"></block></block>
   <block id="cb873450583404ada6fdf432d71fa382" category="section-title">API による自動化</block>
   <block id="413b7c63bfe821907a0427d21cb0571e" category="inline-link-macro">API 開発者ガイド</block>
   <block id="7a02a02ba4593c2422fc21cdc5d17321" category="list-text"><block ref="7a02a02ba4593c2422fc21cdc5d17321" category="inline-link-macro-rx"></block></block>
@@ -8928,7 +8914,6 @@
   <block id="f67f0ebf95cc3d0e9d9218f1c7db690b" category="cell">を使用する場合は <block ref="ea2244f77d45e856ef09f638baf765fa" category="inline-link-macro-rx"></block> または <block ref="b5489e777eb3d19ba7d1a9ea0edf98bb" category="inline-link-macro-rx"></block> Cloud Volumes ONTAP では、 * サービスアカウント * を有効にして、事前定義されたストレージ管理者ロールが割り当てられたサービスアカウントを選択する必要があります。 <block ref="8e117ba05e3c9d0ddb1b2f48cec30220" category="inline-link-macro-rx"></block>。</block>
   <block id="440dfcc60c7c21a1c797e881b2dd7646" category="list-text">* サービス * ：このシステムで使用するサービスを選択します。クラウドバックアップまたは階層化を選択するには、手順 3 でサービスアカウントを指定しておく必要があります。</block>
   <block id="8a09a3d3461ae453d967a5bd3e145792" category="cell">を使用する場合は <block ref="17b07c647e87417b44d0044058815478" category="inline-link-macro-rx"></block> または <block ref="b5489e777eb3d19ba7d1a9ea0edf98bb" category="inline-link-macro-rx"></block> サービスを利用するには、 * Service Account * スイッチを有効にし、事前定義された Storage Admin ロールが割り当てられたサービスアカウントを選択する必要があります。</block>
-  <block id="b5489e777eb3d19ba7d1a9ea0edf98bb" category="list-text"><block ref="b5489e777eb3d19ba7d1a9ea0edf98bb" category="inline-link-macro-rx"></block></block>
   <block id="d1a212c919168cb65e4d55094caa01b6" category="doc">バックアップファイルからのデータのリストア</block>
   <block id="d3ed3751885c14ef01b5fef7a5b2a752" category="paragraph">ボリューム全体を同じ作業環境、同じクラウドアカウントを使用している別の作業環境、またはオンプレミスの ONTAP システムにリストアできます。を参照してください <block ref="df2256602b7f31c3a6ae9b9062068a33" category="inline-xref-macro-rx"></block>。</block>
   <block id="c7e09e7ea3508c9a40a4033c23630004" category="paragraph">同じ作業環境内のボリューム、同じクラウドアカウントを使用している別の作業環境内のボリューム、またはオンプレミスの ONTAP システム上のボリュームにファイルをリストアできます。を参照してください <block ref="4964750c31ab2b6ddbb94a24e24c86f3" category="inline-xref-macro-rx"></block>。</block>
@@ -9636,4 +9621,13 @@
   <block id="9d1991f365ae3121bda2428edb322a71" category="paragraph"><block ref="9d1991f365ae3121bda2428edb322a71" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1513823db468e2f26987fa40300e220d" category="inline-link-macro">この問題の詳細については、こちらをご覧ください</block>
   <block id="7cbdf8f153b711e49bbc1a634bd2f45a" category="paragraph">ネットワークのサブネットが 172 範囲に設定されている場合、 Cloud Manager から接続エラーが発生することがあります。 <block ref="7947329dce52d0c68dfb3154977e2c7a" category="inline-link-macro-rx"></block>。</block>
+  <block id="ba9bb601a80b1e50d17037a7ebc3b8c8" category="inline-link-macro">Cloud Manager の概要</block>
+  <block id="0a0a2fa341fd3d4edafc1a7ce1d799fc" category="list-text"><block ref="0a0a2fa341fd3d4edafc1a7ce1d799fc" category="inline-link-macro-rx"></block></block>
+  <block id="65009765df0870e5bcfbf3008b38ed77" category="paragraph">* リソース * <block ref="f43ee622b9187128ae917afcf9c78097" category="inline-link-macro-rx"></block>* <block ref="f7f4fa6483fd0e37f58f5a1bf883102d" category="inline-link-macro-rx"></block>* <block ref="4bfbd882c421477b0c4e48fc91e8f3fa" category="inline-link-macro-rx"></block>* <block ref="29f4240cc42be75b7f423c688bb879d2" category="inline-link-macro-rx"></block>* <block ref="91fdbd6d5f79854f1576bf0040cc5ab1" category="inline-link-macro-rx"></block>* <block ref="00ca767448f82cfb0282b35ee478a793" category="inline-link-macro-rx"></block></block>
+  <block id="a623a8d0366bf079411aa30be45b2d10" category="inline-link-macro">コンピューティング</block>
+  <block id="e367efbc26bd12c0d6ae37dd6a55ef9b" category="inline-link-macro">Cloud Sync</block>
+  <block id="88fd6764b79c7f9a3dd50b5d42cd24a9" category="inline-link-macro">K8s</block>
+  <block id="8c340dc334134096f68b880b42a8692c" category="inline-link-macro">レプリケーション</block>
+  <block id="2bd339d85ee3b33e513359ce781b60cc" category="inline-link-macro">リストア</block>
+  <block id="c0fa984b1dafdcae2c43f4b21a94fb92" category="paragraph">* サービス * <block ref="48c3c19e32386e83fbd3e5ee7820da0a" category="inline-link-macro-rx"></block>* <block ref="466594f7db22f6782e3487484c9ebda2" category="inline-link-macro-rx"></block>* <block ref="b5489e777eb3d19ba7d1a9ea0edf98bb" category="inline-link-macro-rx"></block>* <block ref="5c2e1a772a274f24a6edd09cbe9bd623" category="inline-link-macro-rx"></block>* <block ref="2aa9277ea838b9f3559ddc9589787a85" category="inline-link-macro-rx"></block>* <block ref="1229da17324a18fed8f18727d33db415" category="inline-link-macro-rx"></block>* <block ref="5099bf45b03cac22a9c91c2525580c1e" category="inline-link-macro-rx"></block>* <block ref="a10a2a2c770d2e1018500f18b8c59626" category="inline-link-macro-rx"></block>* <block ref="f4207fe87568a167ef69807c78623dc3" category="inline-link-macro-rx"></block>* <block ref="c03a0c0df9a0b88fbbd1d953882813ed" category="inline-link-macro-rx"></block>* <block ref="677b703a482beb8e3da90b6e9b7527d0" category="inline-link-macro-rx"></block></block>
 </blocks>

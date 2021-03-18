@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cloud_sync.html 
-keywords: cloud sync, overview, conceptual, how, data broker, service 
+keywords: cloud sync, overview, conceptual, how, data broker, service, cloudsync 
 summary: ネットアップのクラウド同期サービスは、データをクラウド内や社内の任意のターゲットに移行するための、シンプルでセキュアな自動化された方法を提供します。 
 ---
 = Cloud Sync の概要
