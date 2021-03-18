@@ -30,9 +30,30 @@ Cloud Manager を使用すると、 IT エキスパートとクラウドアー�
 * link:concept_cloud_central_accounts.html["アカウント設定"]
 
 
-* リソース * link:task_getting_started_aws.html["Cloud Volumes ONTAP for AWS"]* link:task_getting_started_azure.html["Cloud Volumes ONTAP for Azure"]* link:task_getting_started_gcp.html["Cloud Volumes ONTAP for Google Cloud の略"]* link:task_manage_anf.html["Azure NetApp Files の特長"]* link:task_manage_cvs_aws.html["Cloud Volumes Service for AWS"]* link:task_manage_cvs_gcp.html["Cloud Volumes Service for Google Cloud"]
+* リソース *
 
-* サービス * link:task_managing_ontap.html["Active IQ"]* link:concept_compute.html["コンピューティング"]* link:concept_backup_to_cloud.html["クラウドバックアップ"]* link:task_getting_started_compliance.html["クラウドコンプライアンス"]* link:concept_cloud_sync.html["Cloud Sync"]* link:concept_cloud_tiering.html["クラウド階層化"]* link:task_gfc_getting_started.html["グローバルファイルキャッシュ"]* link:task_connecting_kubernetes.html["K8s"]* link:task_getting_started_monitoring.html["監視"]* link:task_replicating_data.html["レプリケーション"]* link:task_restore_backups.html["リストア"]
+* link:task_getting_started_aws.html["Cloud Volumes ONTAP for AWS"]
+* link:task_getting_started_azure.html["Cloud Volumes ONTAP for Azure"]
+* link:task_getting_started_gcp.html["Cloud Volumes ONTAP for Google Cloud の略"]
+* link:task_manage_anf.html["Azure NetApp Files の特長"]
+* link:task_manage_cvs_aws.html["Cloud Volumes Service for AWS"]
+* link:task_manage_cvs_gcp.html["Cloud Volumes Service for Google Cloud"]
+
+
+* サービス *
+
+* link:task_managing_ontap.html["Active IQ"]
+* link:concept_compute.html["コンピューティング"]
+* link:concept_backup_to_cloud.html["クラウドバックアップ"]
+* link:task_getting_started_compliance.html["クラウドコンプライアンス"]
+* link:concept_cloud_sync.html["Cloud Sync"]
+* link:concept_cloud_tiering.html["クラウド階層化"]
+* link:task_gfc_getting_started.html["グローバルファイルキャッシュ"]
+* link:task_connecting_kubernetes.html["K8s"]
+* link:task_getting_started_monitoring.html["監視"]
+* link:task_replicating_data.html["レプリケーション"]
+* link:task_restore_backups.html["リストア"]
+
 
 
 

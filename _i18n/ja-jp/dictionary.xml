@@ -9623,11 +9623,28 @@
   <block id="7cbdf8f153b711e49bbc1a634bd2f45a" category="paragraph">ネットワークのサブネットが 172 範囲に設定されている場合、 Cloud Manager から接続エラーが発生することがあります。 <block ref="7947329dce52d0c68dfb3154977e2c7a" category="inline-link-macro-rx"></block>。</block>
   <block id="ba9bb601a80b1e50d17037a7ebc3b8c8" category="inline-link-macro">Cloud Manager の概要</block>
   <block id="0a0a2fa341fd3d4edafc1a7ce1d799fc" category="list-text"><block ref="0a0a2fa341fd3d4edafc1a7ce1d799fc" category="inline-link-macro-rx"></block></block>
-  <block id="65009765df0870e5bcfbf3008b38ed77" category="paragraph">* リソース * <block ref="f43ee622b9187128ae917afcf9c78097" category="inline-link-macro-rx"></block>* <block ref="f7f4fa6483fd0e37f58f5a1bf883102d" category="inline-link-macro-rx"></block>* <block ref="4bfbd882c421477b0c4e48fc91e8f3fa" category="inline-link-macro-rx"></block>* <block ref="29f4240cc42be75b7f423c688bb879d2" category="inline-link-macro-rx"></block>* <block ref="91fdbd6d5f79854f1576bf0040cc5ab1" category="inline-link-macro-rx"></block>* <block ref="00ca767448f82cfb0282b35ee478a793" category="inline-link-macro-rx"></block></block>
   <block id="a623a8d0366bf079411aa30be45b2d10" category="inline-link-macro">コンピューティング</block>
   <block id="e367efbc26bd12c0d6ae37dd6a55ef9b" category="inline-link-macro">Cloud Sync</block>
   <block id="88fd6764b79c7f9a3dd50b5d42cd24a9" category="inline-link-macro">K8s</block>
   <block id="8c340dc334134096f68b880b42a8692c" category="inline-link-macro">レプリケーション</block>
   <block id="2bd339d85ee3b33e513359ce781b60cc" category="inline-link-macro">リストア</block>
-  <block id="c0fa984b1dafdcae2c43f4b21a94fb92" category="paragraph">* サービス * <block ref="48c3c19e32386e83fbd3e5ee7820da0a" category="inline-link-macro-rx"></block>* <block ref="466594f7db22f6782e3487484c9ebda2" category="inline-link-macro-rx"></block>* <block ref="b5489e777eb3d19ba7d1a9ea0edf98bb" category="inline-link-macro-rx"></block>* <block ref="5c2e1a772a274f24a6edd09cbe9bd623" category="inline-link-macro-rx"></block>* <block ref="2aa9277ea838b9f3559ddc9589787a85" category="inline-link-macro-rx"></block>* <block ref="1229da17324a18fed8f18727d33db415" category="inline-link-macro-rx"></block>* <block ref="5099bf45b03cac22a9c91c2525580c1e" category="inline-link-macro-rx"></block>* <block ref="a10a2a2c770d2e1018500f18b8c59626" category="inline-link-macro-rx"></block>* <block ref="f4207fe87568a167ef69807c78623dc3" category="inline-link-macro-rx"></block>* <block ref="c03a0c0df9a0b88fbbd1d953882813ed" category="inline-link-macro-rx"></block>* <block ref="677b703a482beb8e3da90b6e9b7527d0" category="inline-link-macro-rx"></block></block>
+  <block id="f7c526081094fe672e5be23f02e38b76" category="paragraph">* リソース *</block>
+  <block id="f43ee622b9187128ae917afcf9c78097" category="list-text"><block ref="f43ee622b9187128ae917afcf9c78097" category="inline-link-macro-rx"></block></block>
+  <block id="f7f4fa6483fd0e37f58f5a1bf883102d" category="list-text"><block ref="f7f4fa6483fd0e37f58f5a1bf883102d" category="inline-link-macro-rx"></block></block>
+  <block id="4bfbd882c421477b0c4e48fc91e8f3fa" category="list-text"><block ref="4bfbd882c421477b0c4e48fc91e8f3fa" category="inline-link-macro-rx"></block></block>
+  <block id="29f4240cc42be75b7f423c688bb879d2" category="list-text"><block ref="29f4240cc42be75b7f423c688bb879d2" category="inline-link-macro-rx"></block></block>
+  <block id="91fdbd6d5f79854f1576bf0040cc5ab1" category="list-text"><block ref="91fdbd6d5f79854f1576bf0040cc5ab1" category="inline-link-macro-rx"></block></block>
+  <block id="00ca767448f82cfb0282b35ee478a793" category="list-text"><block ref="00ca767448f82cfb0282b35ee478a793" category="inline-link-macro-rx"></block></block>
+  <block id="1376d64de9953f470f0708fc6e330334" category="paragraph">* サービス *</block>
+  <block id="48c3c19e32386e83fbd3e5ee7820da0a" category="list-text"><block ref="48c3c19e32386e83fbd3e5ee7820da0a" category="inline-link-macro-rx"></block></block>
+  <block id="466594f7db22f6782e3487484c9ebda2" category="list-text"><block ref="466594f7db22f6782e3487484c9ebda2" category="inline-link-macro-rx"></block></block>
+  <block id="b5489e777eb3d19ba7d1a9ea0edf98bb" category="list-text"><block ref="b5489e777eb3d19ba7d1a9ea0edf98bb" category="inline-link-macro-rx"></block></block>
+  <block id="5c2e1a772a274f24a6edd09cbe9bd623" category="list-text"><block ref="5c2e1a772a274f24a6edd09cbe9bd623" category="inline-link-macro-rx"></block></block>
+  <block id="2aa9277ea838b9f3559ddc9589787a85" category="list-text"><block ref="2aa9277ea838b9f3559ddc9589787a85" category="inline-link-macro-rx"></block></block>
+  <block id="1229da17324a18fed8f18727d33db415" category="list-text"><block ref="1229da17324a18fed8f18727d33db415" category="inline-link-macro-rx"></block></block>
+  <block id="5099bf45b03cac22a9c91c2525580c1e" category="list-text"><block ref="5099bf45b03cac22a9c91c2525580c1e" category="inline-link-macro-rx"></block></block>
+  <block id="a10a2a2c770d2e1018500f18b8c59626" category="list-text"><block ref="a10a2a2c770d2e1018500f18b8c59626" category="inline-link-macro-rx"></block></block>
+  <block id="f4207fe87568a167ef69807c78623dc3" category="list-text"><block ref="f4207fe87568a167ef69807c78623dc3" category="inline-link-macro-rx"></block></block>
+  <block id="c03a0c0df9a0b88fbbd1d953882813ed" category="list-text"><block ref="c03a0c0df9a0b88fbbd1d953882813ed" category="inline-link-macro-rx"></block></block>
+  <block id="677b703a482beb8e3da90b6e9b7527d0" category="list-text"><block ref="677b703a482beb8e3da90b6e9b7527d0" category="inline-link-macro-rx"></block></block>
 </blocks>
