@@ -569,19 +569,13 @@
   <block id="17fcbeb5f192793fd41f089a59730538" category="list-text">Windows Server 2016 仮想テンプレート：</block>
   <block id="7cfa172f8a8d357df3a2106ac8c6b398" category="inline-link">NetApp GFC を含む Windows Server * 2016.OVA （ VMware vSphere 6.5 以降）</block>
   <block id="835e49a2c436ab4a585d71025b4cc7fa" category="inline-link">NetApp GFC を含む Windows Server 2016-0x （ Microsoft Hyper-V ）</block>
-  <block id="5913f9cab52729f7ad20d28a65f5380b" category="paragraph"><block ref="299dd13b09c47233a8f95ad240a311eb" category="inline-link-rx"></block>
-<block ref="79108f836312edb925d2a0a33ffdb010" category="inline-link-rx"></block></block>
   <block id="7eeb858e6d60489627b61144a4b897b9" category="list-text">Windows Server 2019 仮想テンプレート：</block>
   <block id="02e6ddd105b75a46cfcba50b442be725" category="inline-link">Windows Server 206.OVA （ NetApp GFC を含む）（ VMware vSphere 6.5 以降）</block>
   <block id="135435a8d8eb3533e52dfec2d082e667" category="inline-link">NetApp GFC （ Microsoft Hyper-V ）を含む Windows Server 19VHDX</block>
-  <block id="e151bd7892d151eec7cd00ccdfc21cfd" category="paragraph"><block ref="191ed778b28d37aa54d68a3d5a076725" category="inline-link-rx"></block>
-<block ref="99b1769bf755ecb1a10ae7ad4d77d091" category="inline-link-rx"></block></block>
   <block id="4bf707356ffc6bfcdc7eaddeb5d9ca6b" category="list-text">グローバルファイルキャッシュエッジソフトウェア：</block>
   <block id="faf7d644098124d7a6915b6cc59a0988" category="inline-link">NetApp GFC ソフトウェアインストールパッケージ（ .EXE ）</block>
-  <block id="5aedb2068e49a35060a91c121bbd78cc" category="paragraph"><block ref="5aedb2068e49a35060a91c121bbd78cc" category="inline-link-rx"></block></block>
   <block id="e2d416ed29232c19a683a619f4500452" category="list-text">グローバルファイルキャッシュのドキュメント：</block>
   <block id="5ce7f81a8ae145f3b72b93e3696353d9" category="inline-link">『 NetApp Global File Cache User Guide 』（ .pdf ）</block>
-  <block id="118c68fc11230a49fa038c0253c3acab" category="paragraph"><block ref="118c68fc11230a49fa038c0253c3acab" category="inline-link-rx"></block></block>
   <block id="d30bfe96d7c62ab706482cb5c2b4a1ec" category="section-title">グローバルファイルキャッシュエッジの設計と導入</block>
   <block id="5698363b5f7247a6f653aa572ae1cb51" category="paragraph">要件によっては、ブランチオフィスでの同時ユーザーセッションに基づいて、 1 つまたは複数のグローバルファイルキャッシュエッジインスタンスを配置する必要があります。Edge インスタンスは、ブランチオフィス内のエンドユーザに仮想ファイル共有を提供します。これは、関連付けられた Global File Cache Core インスタンスから透過的に拡張されています。グローバルファイルキャッシュエッジには、ブランチオフィス内のキャッシュされたファイルを含む「 d:\`NTFS ボリューム」が含まれている必要があります。</block>
   <block id="f545daefd1b990207b6063d1a0d100bb" category="inline-link-macro">サイジングガイドライン</block>
@@ -610,9 +604,7 @@
   <block id="2feaa60c9a258195d110d4b93298ab94" category="paragraph">ハイパーバイザープラットフォームは、ストレージサブシステムの観点からはパフォーマンス低下の影響を受けることがわかっています（レイテンシなど）。グローバルファイルキャッシュを使用してパフォーマンスを最適化するには、 SSD を搭載した物理サーバインスタンスを推奨します。</block>
   <block id="d58b313fe182fc0207ded02961ec8b3e" category="paragraph">仮想環境で最大限のパフォーマンスを実現するには、物理ホストの要件に加えて、次の要件とリソースリザベーションを満たす必要があります。</block>
   <block id="a39c39a13a34c8ae4f43e53b744d7a93" category="paragraph">Microsoft Hyper-V 2012 R2 以降：</block>
-  <block id="159fc9d2c7f1a7ce07d316ef06377470" category="list-text">プロセッサ（ CPU ）： CPU は「 * 静的 * ：最小： 4 vCPU コア」として設定する必要があります。</block>
   <block id="a9c115a547ec0e88e446fac7e1437201" category="list-text">メモリ（ RAM ）：最小： 16 GB を * 静的 * として設定。</block>
-  <block id="4b310c47d0066aef9a5ae6c6775622bc" category="list-text">ハードディスクのプロビジョニング：ハードディスクは * 固定ディスク * として構成する必要があります。</block>
   <block id="193a7828172c581c20b5f99b87f0d8d5" category="paragraph">VMware vSphere 6.x 以降：</block>
   <block id="546eae45bf42f32b489133fe40c615ae" category="list-text">プロセッサ（ CPU ）： CPU サイクルの予約を設定する必要があります。最小構成： 4 個の vCPU コア、 10 、 000 MHz</block>
   <block id="da83ed8f749c1aeee277ef8b1e92e603" category="list-text">メモリ（ RAM ）：最小： 16GB の予約。</block>
@@ -620,16 +612,12 @@
   <block id="aa9003d495921644b8600f3e28ebe636" category="list-text">ディスクプロビジョニングは「 * Thick provisioned Eager Zeroed * 」として設定する必要があります。</block>
   <block id="8254451398fa8d542f44b8faf882706e" category="list-text">ハードディスク共有は「 * 高」に設定する必要があります。</block>
   <block id="a39ed05a063b763436f3dde85d98754e" category="list-text">Microsoft Windows でグローバルファイルキャッシュドライブがリムーバブルとして表示されないようにするには、 vSphere Client を使用して devicing.hotplug を * False * に設定する必要があります。</block>
-  <block id="968b49aa46fa2163353ad5e1c6e03aaa" category="list-text">ネットワーク：ネットワークインターフェイスは *VMXNET3* に設定する必要があります（ VM Tools が必要です）。</block>
   <block id="29d20a0168d9c6e66b5b816098fe5bfe" category="paragraph">グローバルファイルキャッシュは Windows Server 2016 および 2019 で動作するため、仮想化プラットフォームではオペレーティングシステムをサポートする必要があります。また、 VM のゲストオペレーティングシステムのパフォーマンスを向上させ、 VM Tools などの VM の管理を行うユーティリティと統合する必要があります。</block>
   <block id="9e73ed1329315cfef8e2886915af8896" category="section-title">パーティションのサイジング要件</block>
-  <block id="e037e6fc5f22064bb26e2c91ec9a602d" category="list-text">C ： \- 最小 250GB （システム / ブートボリューム）</block>
-  <block id="41856519bdffc78bf47da054630d5290" category="list-text">D ： \ - 最小 1TB （グローバル・ファイル・キャッシュ・インテリジェント・ファイル・キャッシュ用の個別データ・ボリューム * ）</block>
   <block id="e48ab3024cfcf431a14c3003435bfd56" category="paragraph">* 最小サイズは、アクティブデータセットの 2 倍です。キャッシュボリューム（ D ： \ ）は拡張が可能で、 Microsoft Windows NTFS ファイルシステムの制限によってのみ制限されます。</block>
   <block id="c05b754004fbd4130eae9e62448598e2" category="section-title">グローバルファイルキャッシュインテリジェントファイルキャッシュのディスク要件</block>
   <block id="85b5f3c25b56d8971fb15ba1b85c9098" category="paragraph">グローバルファイルキャッシュインテリジェントファイルキャッシュディスク（ D ： \ ）のディスクレイテンシは、同時ユーザーあたり 0.5 ミリ秒未満の平均 I/O ディスクレイテンシと 1 MiBps のスループットを実現する必要があります。</block>
   <block id="15b783a23e5291e1ffb9f638317d4bcb" category="inline-link">『 NetApp Global File Cache User Guide 』を参照してください</block>
-  <block id="fb965ad8c2fd5aea40fa91545b3e89ee" category="paragraph">詳細については、を参照してください <block ref="dfb405ea4db81e36aa6e20616f43e171" category="inline-link-rx"></block>。</block>
   <block id="a5fa5746370b608090b994a97b49e98b" category="section-title">ネットワーキング</block>
   <block id="07b05d86c9937c2ed6c68c1c3c82ba9a" category="list-text">ファイアウォール：グローバルファイルキャッシュエッジと管理サーバとコアインスタンスの間で TCP ポートを許可する必要があります。</block>
   <block id="79329656b58b4f751ab1443743fcbee0" category="paragraph">グローバルファイルキャッシュ TCP ポート： 443 （ HTTPS-LMS ）、 6618 ～ 6630 。</block>
@@ -640,7 +628,6 @@
   <block id="35bd173c5c09760e27239213b562c7a2" category="paragraph">最適なエクスペリエンスとパフォーマンスを確保するには、『グローバルファイルキャッシュユーザーガイド』に記載されている Microsoft Windows クライアントの要件およびベストプラクティスに準拠することが重要です。これは、すべてのバージョンの Microsoft Windows に適用されます。</block>
   <block id="a0d1fd507848b71fc407746a94f31ef3" category="section-title">ファイアウォールとアンチウイルスのベストプラクティス</block>
   <block id="5effefb1057efd2748258b65d97bf200" category="paragraph">グローバルファイルキャッシュは、最も一般的なウィルス対策アプリケーションスイートがグローバルファイルキャッシュと互換性があるかどうかを検証するために相応の努力を払いますが、ネットアップでは、これらのプログラムや関連する更新、サービスパック、変更によって発生する互換性の問題やパフォーマンス上の問題については保証できず、責任も負いません。</block>
-  <block id="8761082c4589b04bac7d1b474673c4e0" category="paragraph">グローバルファイルキャッシュは、グローバルファイルキャッシュが有効なインスタンス（コアまたはエッジ）に監視ソリューションやアンチウイルスソリューションをインストールしたり、適用したりすることは推奨しません。ソリューションをインストールするか、選択したか、またはポリシーに基づいて、次のベストプラクティスと推奨事項を適用する必要があります。一般的なウィルス対策スイートについては、の付録 A を参照してください <block ref="dfb405ea4db81e36aa6e20616f43e171" category="inline-link-rx"></block>。</block>
   <block id="1d8d6b8f9abcab53172954c91e5d8de9" category="section-title">ファイアウォールの設定</block>
   <block id="cd476ae4644da8d9986293ca4ccec11c" category="list-text">Microsoft ファイアウォール：</block>
   <block id="74d0be744832a30201de162b50221ae7" category="list-text">ファイアウォールの設定をデフォルトのままにします。</block>
@@ -654,7 +641,6 @@
   <block id="6f2fd7a86f8cef2a60f22f813d46b917" category="paragraph">このセクションでは、グローバルファイルキャッシュを実行している Windows Server インスタンスでアンチウイルスソフトウェアを実行する場合の要件について説明します。Global File Cache は、 Cylance 、 McAfee 、 Symantec 、 Sophos 、 Trend Micro 、 Kaspersky 、 Windows Defender など、一般的に使用されているウイルス対策製品を、 Global File Cache と組み合わせて使用してテストしています。</block>
   <block id="7fe70d8482fea172d2f27e34dd091935" category="admonition">Edge アプライアンスにウィルス対策を追加すると、ユーザのパフォーマンスが 10~20% 低下する可能性があります。</block>
   <block id="77e4365f0d8727fe3c465fb04f26ce93" category="section-title">除外を設定します</block>
-  <block id="4386588a7439c2374b7968111d74f8e4" category="paragraph">ウイルス対策ソフトウェアまたはその他のサードパーティ製のインデックス付けまたはスキャンユーティリティでは、 Edge インスタンス上のドライブ D ： \ をスキャンしないでください。Edge サーバードライブ D:\ をスキャンすると、キャッシュネームスペース全体に対する多数のファイルオープン要求が発生します。これにより、データセンターで最適化されているすべてのファイルサーバに対して、 WAN 経由でファイルがフェッチされます。WAN 接続フラッディングおよび Edge インスタンス上の不要な負荷が発生すると、パフォーマンスが低下します。</block>
   <block id="2ddd9f927c8456f98d29b59e20cc5f5b" category="paragraph">D:\ ドライブに加えて、一般に、次のグローバルファイルキャッシュディレクトリとプロセスをすべてのアンチウイルスアプリケーションから除外する必要があります。</block>
   <block id="a3c9975e4268a360fec075ea1f6e7e69" category="list-text">C ： \Program Files\TalonFAST\`</block>
   <block id="bf1fb4bfba01f634e06a2d43d2394131" category="list-text">C:\Program Files\TalonFAST\Bin\LMClientService.exe`</block>
@@ -663,12 +649,10 @@
   <block id="d78df95b70cf4c6dee42e8ead722491a" category="list-text">C ： \Program Files\TalonFAST\Bin\tafsexport.exe</block>
   <block id="d754b201e4955b9f605d7add91203958" category="list-text">C:\Program Files\TalonFAST\Bin\tafsutils.exe`</block>
   <block id="bcb15a6175fb4778b590db4ad27396ff" category="list-text">C ： \Program Files\TalonFAST\Bin\Tapp.exe`</block>
-  <block id="e5c8462bff5fb261ad857c4b21979cb2" category="list-text">C ： \Program Files\TalonFAST\Bin\TFS.exe`</block>
   <block id="456f4de04b845c12a47ae32d653b612b" category="list-text">C ： \Program Files\TalonFAST\Bin\TService.exe`</block>
   <block id="3727c2e5b330fcfe7717c6c1bea1f978" category="list-text">C ： \Program Files\TalonFAST\Bin\TUM.exe`</block>
   <block id="7c9983ef3443840ff03eaa2812bd883e" category="list-text">C ： \Program Files\TalonFAST\FastDebugLogs\`</block>
   <block id="74c060f7e3a37b85b5d53c7fe89cf2f8" category="list-text">C:\Windows\System32\drivers\tfast.sys</block>
-  <block id="2d22ac252e756e41c0a8dcb747d60ac7" category="list-text">「 \\?\\TafsMtP:\ 」または「 \\?\tafsMtPt*` 」</block>
   <block id="c58c85a6f844b156a2d47fd79504c643" category="list-text">\\Device\TalonCacheFS\`</block>
   <block id="17937cca8244e81de13eeb7cc6f4d869" category="list-text">\\?\GLOBALROOT\Device\TalonCacheFS\`</block>
   <block id="3b710b0888968f7413d44955601b751d" category="list-text">\\?\GLOBALROOT\Device\TalonCacheFS\*`</block>
@@ -2397,8 +2381,6 @@
   <block id="2ee8d56c90fa6d065ba86f18734c40c0" category="list-text">アグリゲートに 12 時間を超えるボリュームが含まれていない場合は、 Cloud Manager によって削除されます。</block>
   <block id="20610cb7f9c01ec73f383961d032fd84" category="section-title">容量の自動管理による LUN の管理</block>
   <block id="65c5ae165221da8578100e41af72a46e" category="paragraph">Cloud Manager の自動容量管理は、 LUN には適用されません。Cloud Manager で LUN を作成すると自動拡張機能が無効になります。</block>
-  <block id="ce56b7bb5b9d7567cbb842f60cc910ed" category="section-title">容量の自動管理による inode の管理</block>
-  <block id="d6cd4308a729cb267627d26b3e4fc512" category="paragraph">Cloud Manager は、ボリューム上の inode の使用量を監視します。inode の 85% を使用すると、 Cloud Manager はボリュームのサイズを増やして、使用可能な inode の数を増やします。ボリュームに含めることができるファイル数は、ボリューム内の inode の数によって決まります。</block>
   <block id="4a09d3372bdfe35169604b0ed1fbee82" category="section-title">手動による容量管理</block>
   <block id="f41220679a88e6cfa1b80b6dd5c9dfdf" category="paragraph">アカウント管理者が容量管理モードを手動に設定した場合、容量の決定が必要な状況になると、 Cloud Manager に「 Action Required 」メッセージが表示され、自動モードで説明されている例と同じ例が手動モードにも適用されますが、アクションを受け入れる必要があります。</block>
   <block id="1628c1031a21808cfa67920ac3d8f815" category="summary">新しいデータブローカーを作成する場合、 GCP Data Broker オプションを選択して、 VPC 内の新しい仮想マシンインスタンスにデータブローカーソフトウェアを導入します。Cloud Sync ではインストールプロセスがガイドされますが、インストールの準備に役立つように、このページの要件と手順が繰り返されています。</block>
@@ -5188,7 +5170,6 @@
   <block id="8826299bdde67043ef3cc9a0b306ee56" category="paragraph">グローバルファイルキャッシュおよびその他のネットアップ製品の詳細については、次のリンクを参照してください。</block>
   <block id="a5b9ae89457868d250c6634258da66a5" category="list-text">グローバルファイルキャッシュに関する FAQ</block>
   <block id="9da15b0ec3a63afcb01d7f2726c42994" category="list-text">よくある質問とその回答のリストを参照してください <block ref="19a12809be10088b3860ea30b7a5724d" category="inline-link-rx"></block></block>
-  <block id="dfb405ea4db81e36aa6e20616f43e171" category="list-text"><block ref="dfb405ea4db81e36aa6e20616f43e171" category="inline-link-rx"></block></block>
   <block id="1b28ae1c9b0f1461cf0ea5fa195be216" category="list-text">ネットアップのクラウド製品に関するその他のドキュメントを参照してください<block ref="0510c3621321be434699160c80a14647" category="inline-link-rx"></block></block>
   <block id="1acb7294e54390a8c41c4c19b14f4c46" category="list-text">すべてのネットアップ製品の追加ドキュメントを参照<block ref="01463e984d77180cbd9edcf8c8c1f237" category="inline-link-rx"></block></block>
   <block id="e47d1e4074d2e9ecb5a92499549efe85" category="list-text">Cloud Volumes ONTAP を使用したグローバルファイルキャッシュユーザに対するカスタマーサポートは、次のチャネルを介して利用できます。</block>
@@ -7031,7 +7012,6 @@
   <block id="13879d09fb35e1a9c0fd7f6435bfa323" category="paragraph"><block ref="13879d09fb35e1a9c0fd7f6435bfa323" category="inline-link-rx"></block></block>
   <block id="b9c5f151d07a94019ba26f5d3579bcf9" category="inline-link">Word 文書 (.docx)</block>
   <block id="a314a20204b96ce855b4edecf455498b" category="list-text">オンボーディングコミュニケーション<block ref="ec13a4ed87a907c97165059568a0b0f6" category="inline-link-rx"></block></block>
-  <block id="ab71f4e78552e587159884589631d2a1" category="paragraph">の第 12 章を参照してください <block ref="dfb405ea4db81e36aa6e20616f43e171" category="inline-link-rx"></block> を参照してください。</block>
   <block id="b6f2459d07813a329f10d1f5ef7babc2" category="summary">ホットデータ用の SSD または HDD の高パフォーマンス階層と、アクセス頻度の低いデータ用のオブジェクトストレージの大容量階層を組み合わせることで、 Cloud Volumes ONTAP のストレージコストを削減できます。データ階層化は、 FabricPool テクノロジによって実現されます。</block>
   <block id="3a5c346515372a0ed8e1b087edc0fd1f" category="paragraph">ホットデータ用の SSD または HDD の高パフォーマンス階層と、アクセス頻度の低いデータ用のオブジェクトストレージの大容量階層を組み合わせることで、 Cloud Volumes ONTAP のストレージコストを削減できます。データ階層化は、 FabricPool テクノロジによって実現されます。概要については、を参照してください <block ref="c724ee9f84bb0e8fa565112910275d83" category="inline-link-macro-rx"></block>。</block>
   <block id="10647b0244486006c8ce3cf5b113d377" category="paragraph">データの階層化を設定するには、次の操作を実行する必要があります。</block>
@@ -8039,7 +8019,6 @@
   <block id="0f654146c1b65006561ea8e31d5516dc" category="paragraph">この構成では、グローバルファイルキャッシュ管理サーバやグローバルファイルキャッシュコアなど、グローバルファイルキャッシュサーバ側の環境全体を Cloud Manager 内から導入して管理できます。</block>
   <block id="a4bae3b774c4cc05ca00a01a97ff00ca" category="section-title">手動での導入オプション</block>
   <block id="5312de06629c1e6030e614159c58a599" category="paragraph">グローバルファイルキャッシュの構成は、 Microsoft Azure 、 Google Cloud Platform 、または Amazon Web Services パブリッククラウドストレージインフラにインストールされた Cloud Volumes ONTAP 、 Cloud Volumes Service 、または Azure NetApp Files でもサポートされます。オンプレミスソリューションは、ネットアップの AFF プラットフォームと FAS プラットフォームでも利用できます。このインストールでは、 Cloud Manager ではなく、グローバルファイルキャッシュサーバ側のコンポーネントを手動で設定して導入する必要があります。</block>
-  <block id="26c96a9fd3c78e450d2814ee230929db" category="paragraph">を参照してください <block ref="dfb405ea4db81e36aa6e20616f43e171" category="inline-link-rx"></block> を参照してください。</block>
   <block id="18fdbdb3de2540e1f631602b7bc2010f" category="section-title">グローバルファイルキャッシュの仕組み</block>
   <block id="8564f172539c6a5101d48785899b17a0" category="paragraph">グローバルファイルキャッシュは、アクティブなデータセットをグローバルにリモートオフィスにキャッシュするソフトウェアファブリックを作成します。その結果、ビジネスユーザは透過的なデータアクセスを保証し、グローバルな規模で最適なパフォーマンスを実現できます。</block>
   <block id="c124c2afbd0b581682d787d402d2b2cf" category="inline-image-macro">Edge および Core のグローバルファイルキャッシュコンポーネントを示す図。</block>
@@ -8061,18 +8040,13 @@
   <block id="1af35f09e9d5c7c17f00c52e436d8840" category="list-text">すべてのインストール環境で、クラウド（ Cloud Volumes ONTAP 、 Cloud Volumes Service 、または Azure NetApp Files ）に 1 つ以上のボリュームを導入する必要があります。その結果、選択したクラウドプロバイダから料金が発生します。</block>
   <block id="e5624fb8b348be8b0b94ecdc79a3e52a" category="list-text">すべてのインストールで、クラウドに 2 つ以上の仮想マシン（ VM ）を導入する必要もあります。その結果、選択したクラウドプロバイダから料金が発生します。</block>
   <block id="4fd5c85d8db73f12727e2cf94e421f13" category="list-text">グローバルファイルキャッシュ管理サーバ：</block>
-  <block id="e217f5b86054ac86f82278c36a3cd945" category="paragraph">Azure では、これは、 27GB のプレミアム SSD を搭載した D2S_V3 または同等の（ vCPU 2 基 / 8GB の RAM ） VM 上で実行されます</block>
-  <block id="86e7162d870d0efba3db19acb24eaadb" category="paragraph">AWS では、 127GB の汎用 SSD を搭載した m4.large インスタンスまたは同等のインスタンス（ 2 vCPU / 8GB RAM ）で実行されます</block>
   <block id="a93c3bd09e076f0b8fd65dde3e64a3a5" category="list-text">グローバルファイルキャッシュコア：</block>
-  <block id="41bea9831d382139b9521d2b01cac78d" category="paragraph">Azure では、 D4s_V3 または 127GB の Premium SSD を搭載した同等の（ vCPU 4 基 / 16GB RAM ） VM で実行されます</block>
-  <block id="31bf99d8b2a6af566d150c5ec19cd055" category="paragraph">AWS では、 127GB の汎用 SSD を搭載した m4.xlarge インスタンスまたは同等のインスタンス（ 4 vCPU / 16GB RAM ）で実行されます</block>
   <block id="ef0c50754592fa0cbd6118045a98f2b2" category="list-text">Cloud Volumes ONTAP を使用して Azure または AWS （サポート対象の構成を Cloud Manager を通じて完全に導入）にインストールした場合、年間 3 、 000 ドル（ Global File Cache Edge インスタンスあたり）がサイトあたりで発生します。</block>
   <block id="d2893970aa4c57a02af5ca132a872653" category="inline-link">節約の可能性を計算します</block>
   <block id="379066f65266388704788bf175a05aa9" category="list-text">手動導入オプションを使用してインストールした場合、価格は異なります。コストの概要を確認するには、を参照してください<block ref="72836bf520e34a0460d69e57e5e3610d" category="inline-link-rx"></block> または、グローバルファイルキャッシュソリューションエンジニアに相談して、エンタープライズ環境に最適なオプションについて相談してください。</block>
   <block id="30b7dc0ba4cd2cf04c1eda7c3a7b045a" category="paragraph">グローバルファイルキャッシュには、ソフトウェアベースのライセンス管理サーバ（ LMS ）が含まれています。これにより、ライセンス管理を統合し、自動化されたメカニズムを使用してすべてのコアインスタンスとエッジインスタンスにライセンスを導入できます。</block>
   <block id="24b5cd8cad83af73f3fef17c36994df9" category="paragraph">データセンターまたはクラウドに最初のコアインスタンスを導入するときに、そのインスタンスを組織の LMS として指定することができます。この LMS インスタンスは一度設定され、 HTTPS 経由でサブスクリプションサービスに接続し、サブスクリプションの有効化時にサポート / 運用部門から提供されたカスタマー ID を使用してサブスクリプションを検証します。この指定を行ったら、お客様 ID と LMS インスタンスの IP アドレスを入力して、 Edge インスタンスを LMS に関連付けます。</block>
   <block id="3fbdffd6b695a9bc6ac6bcd1e40fd200" category="paragraph">追加の Edge ライセンスを購入するか、サブスクリプションを更新すると、サポート / 運用部門は、サイト数やサブスクリプションの終了日など、ライセンスの詳細を更新します。LMS がサブスクリプションサービスを照会すると、ライセンスの詳細が LMS インスタンスで自動的に更新され、 GFC Core インスタンスおよび Edge インスタンスに適用されます。</block>
-  <block id="8d622e6d21e8d0e670a59569fe408a1b" category="paragraph">を参照してください <block ref="dfb405ea4db81e36aa6e20616f43e171" category="inline-link-rx"></block> ライセンスの詳細については、を参照してください。</block>
   <block id="077a85a83497688c4768eb7e293d344f" category="list-text">Cloud Manager でサポートされているバージョンのグローバルファイルキャッシュでは、中央ストレージとして使用されるバックエンドストレージプラットフォームが、 Azure または AWS に Cloud Volumes ONTAP のシングルノードまたは HA ペアを導入している作業環境である必要があります。</block>
   <block id="99f7abe9affc2a21c16a77c9bb170233" category="paragraph">他のストレージプラットフォームやクラウドプロバイダは、現時点では Cloud Manager を使用してサポートされていませんが、従来の導入手順を使用して導入することもできます。</block>
   <block id="01eb0b4b5071a2cfc0876bc37b144a78" category="inline-link">グローバルファイルキャッシュの概要とオンボーディング</block>
@@ -8198,12 +8172,8 @@
   <block id="3dcb2e1a782d534491a8c818a67ce2ad" category="list-text">「 * 次へ * 」をクリックして続行します。</block>
   <block id="120ede641a2a4f4deb9c2f007fb44d9e" category="list-text">ライセンス契約に同意し、 [ 次へ ] をクリックします。</block>
   <block id="93e4479094af97aa27b4d18ae90d4dd7" category="list-text">目的のインストール先の場所を選択します。</block>
-  <block id="13359bdc2bf1bddf7a0ed4b210c59ce8" category="paragraph">デフォルトのインストール場所を使用することを推奨します。</block>
   <block id="11372cbdd1b9df475379b5812c09cf46" category="list-text">スタートメニューフォルダを選択します。</block>
-  <block id="fa2107251c102c7e86b7a3f34304f6e5" category="list-text">必要なインストールパラメータを確認し、 * Install * をクリックしてインストールを開始します。</block>
-  <block id="4ec232ddcd463139a50a9bb22e70e9fb" category="paragraph">インストールプロセスが実行されます。</block>
   <block id="749c0e89c28cfa8efa0ef88d80e309b9" category="list-text">インストールが完了したら、プロンプトが表示されたらサーバをリブートします。</block>
-  <block id="4e68059cc66b6b50f370a86606d03b08" category="paragraph">グローバルファイルキャッシュエッジの高度な設定の詳細については、を参照してください <block ref="dfb405ea4db81e36aa6e20616f43e171" category="inline-link-rx"></block>。</block>
   <block id="653f8145d76d8ffbc17514dbf6d94b26" category="summary">Cloud Manager からオンプレミスの ONTAP クラスタを検出したら、作業環境を開いてストレージをプロビジョニングできます。</block>
   <block id="80b4e6c2e19df14c674bd9b9b69362fe" category="doc">ONTAP クラスタのストレージの管理</block>
   <block id="95abc6a6bebd234db4ea428600c51333" category="paragraph">Cloud Manager で ONTAP クラスタを検出したら、作業環境を開いてストレージをプロビジョニングおよび管理できます。</block>
@@ -9648,4 +9618,48 @@
   <block id="677b703a482beb8e3da90b6e9b7527d0" category="list-text"><block ref="677b703a482beb8e3da90b6e9b7527d0" category="inline-link-macro-rx"></block></block>
   <block id="2dc4d97cccbbe2b28b34205adfc982fe" category="cell">support.netapp.com:443 https://mysupport.netapp.com</block>
   <block id="e96b128a90734a984118f076d76538c7" category="cell">ネットアップ AutoSupport との通信：コネクタは support.netapp.com:443 と通信し、 https://mysupport.netapp.com にリダイレクトされます。</block>
+  <block id="35864a34ef748a9929163207544aa48d" category="paragraph"><block ref="6782961ca8bb00dc020892795d4e714a" category="inline-link-rx"></block>
+<block ref="bba9d0f10705bbe3d98a315767a8bbef" category="inline-link-rx"></block></block>
+  <block id="59f90935d3dc3364915f570ffed81d1b" category="paragraph"><block ref="e896c2037b75b86e95e1ff5c8579616b" category="inline-link-rx"></block>
+<block ref="0163348b8d2dfd75e3a9fc165b647056" category="inline-link-rx"></block></block>
+  <block id="df35ef33665c3a462d52e44984e784d3" category="paragraph"><block ref="df35ef33665c3a462d52e44984e784d3" category="inline-link-rx"></block></block>
+  <block id="4c9afdb681bd307daf7aeee36f32cc7a" category="paragraph"><block ref="4c9afdb681bd307daf7aeee36f32cc7a" category="inline-link-rx"></block></block>
+  <block id="4b2d1e89406fad567f90d7f405a89a0a" category="list-text">プロセッサ（ CPU ）： CPU は「 * 静的 * ：最小： 4 vCPU コア」として設定する必要があります。</block>
+  <block id="e2dc7db2b7946e399b3526201828d47b" category="list-text">ハードディスクのプロビジョニング：ハードディスクは * 固定ディスク * として構成する必要があります。</block>
+  <block id="486ca25a7b25a59aefc91d70f0803203" category="list-text">ネットワーク：ネットワークインターフェイスは *VMXNET3* に設定する必要があります（ VM Tools が必要な場合があります）。</block>
+  <block id="724a9580f889e10d97820373eb8ca1f3" category="list-text">C ： \- 最小 250GB （システム / ブートボリューム）</block>
+  <block id="31e57f0e2f21035dcd125996fc7910f1" category="list-text">D ： \ - 最小 1TB （グローバル・ファイル・キャッシュ・インテリジェント・ファイル・キャッシュ用の個別データ・ボリューム * ）</block>
+  <block id="c60e84300ddf76dd43a1026637fbce08" category="paragraph">詳細については、を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block>。</block>
+  <block id="dec490d060595f3cf6fdcc4ef3e43555" category="paragraph">グローバルファイルキャッシュは、グローバルファイルキャッシュが有効なインスタンス（コアまたはエッジ）に監視ソリューションやアンチウイルスソリューションをインストールしたり、適用したりすることは推奨しません。ソリューションをインストールするか、選択したか、またはポリシーに基づいて、次のベストプラクティスと推奨事項を適用する必要があります。一般的なウィルス対策スイートについては、の付録 A を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block>。</block>
+  <block id="7e97ed382f6a1568b4024c1aafe5994c" category="paragraph">ウイルス対策ソフトウェアまたはその他のサードパーティ製のインデックス付けまたはスキャンユーティリティでは、 Edge インスタンス上のドライブ D ： \ をスキャンしないでください。Edge サーバードライブ D:\ をスキャンすると、キャッシュネームスペース全体に対する多数のファイルオープン要求が発生します。これにより、データセンターで最適化されているすべてのファイルサーバに対して、 WAN 経由でファイルがフェッチされます。WAN 接続フラッディングおよび Edge インスタンス上の不要な負荷が発生すると、パフォーマンスが低下します。</block>
+  <block id="7f58313a3e0bc8a0479b6f4849ec1e77" category="list-text">C ： \Program Files\TalonFAST\Bin\TappN.exe`</block>
+  <block id="7fa72ec93fc5979b56e163380b01c0b2" category="list-text">C ： \Program Files\TalonFAST\Bin\FTLSummaryGenerator.exe`</block>
+  <block id="dd4c0c600e4347a07e5d30c3bed856d8" category="list-text">C ： \Program Files\TalonFAST\Bin\RFASTSetupWizard.exe`</block>
+  <block id="d6962970cb361bb6d1d7612ae9e106b3" category="list-text">'\\?\tafsMtP:\`or `\\?\tafsMtPt*`</block>
+  <block id="f36d42acab571ec85ce6cc8247ef2ba9" category="section-title">ネットワーク（外部アクセス）</block>
+  <block id="20a8d60a21a9b562a48c146d4ec52a58" category="paragraph">Global File Cache LMS では、次の URL への HTTPS （ TCP ポート 443 ）経由の外部アクセスが必要です。</block>
+  <block id="6422529c869860da493cea06fbd91918" category="list-text">GFC サブスクリプションベースのライセンスを使用している場合：</block>
+  <block id="fec56f9aaa9d989eef75b885dbdd8e10" category="list-text">\ https://rest.zuora.com/v1/subscriptions/&lt;subscription-no&gt;</block>
+  <block id="c8696311709135d3481a11098f1990c8" category="list-text">\ https://rest.zuora.com/oauth/token</block>
+  <block id="8570c6f475d9487aea1b717c73095257" category="list-text">NetApp NSS ベースのライセンスを使用している場合：</block>
+  <block id="761932af381c1c2dde508ecccbc80d98" category="list-text">\ https://login.netapp.com</block>
+  <block id="a5085b0443e5d8b1f1dbe592e35a2b60" category="list-text">\ https://login.netapp.com/ms_oauth/oauth2/endpoints</block>
+  <block id="8af6b191c0a6466d92047c2ff20cacd2" category="list-text">\ https://login.netapp.com/ms_oauth/oauth2/endpoints/oauthservice/tokens</block>
+  <block id="7810d0ca3a66369587e6a56cf4192b2c" category="list-text">ネットアップの従来型ライセンスを使用している場合：</block>
+  <block id="90fa5a5ac66630ff8491eb335e51bdc9" category="list-text">https://talonazuremicroservices.azurewebsites.net</block>
+  <block id="5ed3a104f8850c15acaec08814cbd9b4" category="list-text">https://talonlicensing.table.core.windows.net</block>
+  <block id="3c6412cc62438c01c4a00065ad5c3547" category="list-text"><block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block></block>
+  <block id="75433780f1909e6f2dd8c2eec8189435" category="paragraph">の第 13 章を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block> を参照してください。</block>
+  <block id="7f40effd57385de7a567e0616ba361bf" category="paragraph">を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block> を参照してください。</block>
+  <block id="771dcff1843f23a97fc2a57e936d4a9f" category="paragraph">Azure では、これは、 27GB のプレミアム SSD を搭載した D2S_V3 または同等の（ vCPU 2 基 / 8GB の RAM ） VM 上で実行されます</block>
+  <block id="c6b798b0bebd4b2ec1cf891e6cd66c67" category="paragraph">AWS では、 127GB の汎用 SSD を搭載した m4.large インスタンスまたは同等のインスタンス（ 2 vCPU / 8GB RAM ）で実行されます</block>
+  <block id="817000ba632406cdb4b5a4da3a5c5221" category="paragraph">Azure では、 D4s_V3 または 127GB の Premium SSD を搭載した同等の（ vCPU 4 基 / 16GB RAM ） VM で実行されます</block>
+  <block id="6869983628ce136a6778d9ced07d3b4b" category="paragraph">AWS では、 127GB の汎用 SSD を搭載した m4.xlarge インスタンスまたは同等のインスタンス（ 4 vCPU / 16GB RAM ）で実行されます</block>
+  <block id="a8a7a8a7aa88c77a487bb4b387274cfa" category="paragraph">を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block> ライセンスの詳細については、を参照してください。</block>
+  <block id="dcf0a49958e5c7a70ac6f315e1a17133" category="section-title">バージョン 1.0.3 の新機能</block>
+  <block id="9bc2d0e7499df0da08ac22dbdb1b9a58" category="paragraph">リリース： 2021 年 3 月 21 日</block>
+  <block id="7a471b1e4141c6cec5dcf9437bfb622d" category="paragraph">デフォルトのインストール場所を使用することを推奨します。</block>
+  <block id="366cc1d4ff6cff6676cf51ea1a645ab0" category="list-text">インストールの選択を確認し、 * Install * をクリックしてインストールを開始します。</block>
+  <block id="ca226cca3bd1375b5e9fbcf3bd9cb3be" category="paragraph">インストールプロセスが開始されます。</block>
+  <block id="c253587e8df15090843fe5b43928340e" category="paragraph">グローバルファイルキャッシュエッジの高度な設定の詳細については、を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block>。</block>
 </blocks>

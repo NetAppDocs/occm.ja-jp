@@ -122,11 +122,11 @@ Global File Cache インストールパッケージを更新するために必�
 . 「 * 次へ * 」をクリックして続行します。
 . スタートメニューフォルダを選択します。
 . 「 * 次へ * 」をクリックして続行します。
-. 必要なインストールパラメータを確認し、 * Install * をクリックしてインストールを開始します。
+. インストールの選択を確認し、 * Install * をクリックしてインストールを開始します。
 +
-インストールプロセスが実行されます。
+インストールプロセスが開始されます。
 
 . インストールが完了したら、プロンプトが表示されたらサーバをリブートします。
 
 
-グローバルファイルキャッシュエッジの高度な設定の詳細については、を参照してください link:https://repo.cloudsync.netapp.com/gfc/NetApp%20GFC%20-%20User%20Guide.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^]。
+グローバルファイルキャッシュエッジの高度な設定の詳細については、を参照してください link:https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^]。

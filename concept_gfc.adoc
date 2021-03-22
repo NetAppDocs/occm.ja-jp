@@ -76,7 +76,7 @@ image:diagram_gfc_image2.png["グローバルファイルキャッシュの詳�
 
 グローバルファイルキャッシュの構成は、 Microsoft Azure 、 Google Cloud Platform 、または Amazon Web Services パブリッククラウドストレージインフラにインストールされた Cloud Volumes ONTAP 、 Cloud Volumes Service 、または Azure NetApp Files でもサポートされます。オンプレミスソリューションは、ネットアップの AFF プラットフォームと FAS プラットフォームでも利用できます。このインストールでは、 Cloud Manager ではなく、グローバルファイルキャッシュサーバ側のコンポーネントを手動で設定して導入する必要があります。
 
-を参照してください link:https://repo.cloudsync.netapp.com/gfc/NetApp%20GFC%20-%20User%20Guide.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^] を参照してください。
+を参照してください link:https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^] を参照してください。
 
 
 
@@ -150,7 +150,7 @@ AWS では、 127GB の汎用 SSD を搭載した m4.xlarge インスタンス�
 
 追加の Edge ライセンスを購入するか、サブスクリプションを更新すると、サポート / 運用部門は、サイト数やサブスクリプションの終了日など、ライセンスの詳細を更新します。LMS がサブスクリプションサービスを照会すると、ライセンスの詳細が LMS インスタンスで自動的に更新され、 GFC Core インスタンスおよび Edge インスタンスに適用されます。
 
-を参照してください link:https://repo.cloudsync.netapp.com/gfc/NetApp%20GFC%20-%20User%20Guide.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^] ライセンスの詳細については、を参照してください。
+を参照してください link:https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^] ライセンスの詳細については、を参照してください。
 
 
 
@@ -171,7 +171,13 @@ AWS では、 127GB の汎用 SSD を搭載した m4.xlarge インスタンス�
 
 
 
-=== バージョン 1.0.2 の新機能
+=== バージョン 1.0.3 の新機能
+
+リリース： 2021 年 3 月 21 日
+
+
+
+==== バージョン 1.0.2 の新機能
 
 2021 年 1 月 6 日リリース
 
@@ -182,7 +188,7 @@ AWS では、 127GB の汎用 SSD を搭載した m4.xlarge インスタンス�
 
 
 
-=== バージョン 1.0.2 で解決された問題
+==== バージョン 1.0.2 で解決された問題
 
 * アップグレード中にデスクトップに GFC のアイコンが重複して表示されなくなりました。
 * サービスの再起動時に、 License Manager Client Service （ LMC ）が正しいライセンス情報を保持するようになりました。

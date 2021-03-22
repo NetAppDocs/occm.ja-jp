@@ -168,6 +168,33 @@ NOTE: 1 つの管理サーバで、異なる作業環境に配置された複数
 
 
 
+=== ネットワーク（外部アクセス）
+
+Global File Cache LMS では、次の URL への HTTPS （ TCP ポート 443 ）経由の外部アクセスが必要です。
+
+* GFC サブスクリプションベースのライセンスを使用している場合：
++
+** \ https://rest.zuora.com/v1/subscriptions/<subscription-no>
+** \ https://rest.zuora.com/oauth/token
+
+
+* NetApp NSS ベースのライセンスを使用している場合：
++
+** \ https://login.netapp.com
+** \ https://login.netapp.com/ms_oauth/oauth2/endpoints
+** \ https://login.netapp.com/ms_oauth/oauth2/endpoints/oauthservice/tokens
+
+
+* ネットアップの従来型ライセンスを使用している場合：
++
+** https://talonazuremicroservices.azurewebsites.net
+** https://talonlicensing.table.core.windows.net
+
+
+
+
+
+
 === ネットワーキング
 
 * ファイアウォール：グローバルファイルキャッシュエッジインスタンスとコアインスタンスの間で TCP ポートを許可する必要があります。
