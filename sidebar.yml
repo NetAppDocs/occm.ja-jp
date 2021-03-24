@@ -232,19 +232,19 @@ entries:
     url: "/task_managing_ontap.html"
   - title: ONTAP ボリュームを管理します
     url: "/task_provisioning_ontap.html"
-- title: クラウドへのバックアップ
+- title: データをクラウドにバックアップ
   entries:
   - title: Cloud Backup の詳細をご確認ください
     url: "/concept_backup_to_cloud.html"
   - title: はじめに
     entries:
-    - title: Amazon S3 にバックアップします
+    - title: Cloud Volumes ONTAP データを Amazon S3 にバックアップします
       url: "/task_backup_to_s3.html"
-    - title: Azure BLOB ストレージにバックアップします
+    - title: Cloud Volumes ONTAP データを Azure Blob にバックアップ
       url: "/task_backup_to_azure.html"
-    - title: Google Cloud ストレージにバックアップ
+    - title: Cloud Volumes ONTAP データを Google Cloud にバックアップ
       url: "/task_backup_to_gcp.html"
-    - title: オンプレミスの ONTAP システムからバックアップ
+    - title: オンプレミスの ONTAP データをパブリッククラウドにバックアップ
       url: "/task_backup_from_onprem.html"
   - title: バックアップを管理します
     url: "/task_managing_backups.html"

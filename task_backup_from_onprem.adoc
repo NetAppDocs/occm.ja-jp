@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_backup_from_onprem.html 
 keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, on-prem, on-premises, back up volumes, cloud backup, cloud backup service, backup and compliance 
-summary: オンプレミスの ONTAP システムからクラウドの低コストのオブジェクトストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。 
+summary: オンプレミスの ONTAP システムからパブリッククラウドの低コストのオブジェクトストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。これには、 Amazon S3 と Azure Blob でのバックアップファイルの作成も含まれます。 
 ---
-= オンプレミスの ONTAP システムからへのデータのバックアップ クラウド
+= オンプレミスの ONTAP データをパブリッククラウドにバックアップする
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -13,7 +13,7 @@ summary: オンプレミスの ONTAP システムからクラウドの低コス�
 
 
 [role="lead"]
-オンプレミスの ONTAP システムからクラウドの低コストのオブジェクトストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。
+オンプレミスの ONTAP システムからパブリッククラウドの低コストのオブジェクトストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。これには、 Amazon S3 と Azure Blob でのバックアップファイルの作成も含まれます。
 
 2021 年 1 月にリリースされたベータ機能を使用すると、バックアップされたボリュームに対して、オンプレミスシステムからコンプライアンススキャンを実行できます。通常、コンプライアンススキャンでは最大 1TB のデータを解放し、サービスのコストは 1TB を超えるデータに対して適用されます。オンプレミスボリュームにバックアップとコンプライアンスを組み合わせる場合、オンプレミスボリューム上のスキャンのコストは無料です。詳細については、こちらをご覧ください link:concept_cloud_compliance.html["クラウドコンプライアンス"^] ビジネスアプリケーションとクラウド環境のプライバシーを確保できます。
 
@@ -98,6 +98,20 @@ image:screenshot_backup_onprem_policy.png["クラウドバックアップの設�
 
 オンプレミスボリュームをオブジェクトストレージにバックアップする前に、次の要件を確認し、サポートされている構成であることを確認してください。
 
+次の図は、オンプレミスの ONTAP システムを Amazon S3 にバックアップする場合と、それらの間の接続を準備する必要がある場合の各コンポーネントを示しています。
+
+image:diagram_cloud_backup_onprem_aws.png["Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"]
+
+次の図は、オンプレミスの ONTAP システムを Azure Blob にバックアップする場合の各コンポーネントと、その間の準備に必要な接続を示しています。
+
+image:diagram_cloud_backup_onprem_azure.png["Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"]
+
+
+
+=== ONTAP クラスタの準備
+
+クラウドストレージにデータをバックアップするときは、 ONTAP クラスタが次の要件を満たしている必要があります。
+
 ONTAP の要件::
 +
 --
@@ -107,33 +121,90 @@ SnapMirror ライセンス（ PREM または Data Protection Bundle に含まれ
 クラスタネットワークの要件::
 +
 --
+* ONTAP クラスタが、クラウドオブジェクトストレージへのポート 443 経由の HTTPS 接続を開始します。
++
+ONTAP は、オブジェクトストレージとの間でデータの読み取りと書き込みを行います。オブジェクトストレージが開始されることはなく、応答するだけです。
+
+* コネクタからのインバウンド接続が必要です。この接続は、使用しているオブジェクトストレージプロバイダに応じて AWS VPC または Azure VNet に配置できます。
++
+クラスタと Cloud Backup Service の間の接続は必要ありません。
+
+* クラスタ間 LIF は、バックアップ対象のボリュームをホストする各 ONTAP ノードに必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-69120CF0-F188-434F-913E-33ACB8751A5D.html["IPspace の詳細については、こちらをご覧ください"^]。
++
 Cloud Backup をセットアップすると、 IPspace で使用するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。
 
+
+
 --
-サポートされている地域::
+
+
+
+
+=== ONTAP クラスタを検出しています
+
+ボリュームデータのバックアップを開始する前に、 Cloud Manager でオンプレミスの ONTAP 作業環境を作成する必要があります。
+
+link:task_discovering_ontap.html["クラスタの検出方法について説明します"]。
+
+
+
+=== コネクタの作成または切り替え
+
+コネクタは、データをクラウドにバックアップするために必要です。コネクタは、デスティネーションオブジェクトストレージと同じクラウドプロバイダになければなりません。たとえば、 AWS S3 にデータをバックアップする場合は、 AWS VPC 内のコネクタを使用する必要があります。オンプレミスに導入されているコネクタは使用できません。新しいコネクターを作成するか、現在選択されているコネクターが正しいプロバイダーにあることを確認する必要があります。
+
+* link:concept_connectors.html["コネクタについて説明します"]
+* link:task_creating_connectors_aws.html["AWS でコネクタを作成する"]
+* link:task_creating_connectors_azure.html["Azure でコネクタを作成する"]
+* link:task_managing_connectors.html["コネクタ間の切り替え"]
+
+
+
+
+=== コネクタのネットワークを準備しています
+
+コネクタに必要なネットワーク接続があることを確認します。
+
+.手順
+. コネクタが取り付けられているネットワークで次の接続が有効になっていることを確認します。
 +
---
+** Cloud Backup Service へのアウトバウンドインターネット接続 ポート 443 （ HTTPS ）
+** ポート 443 経由でオブジェクトストレージに HTTPS 接続する （ S3 または Blob ）
+** ONTAP クラスタへのポート 443 経由の HTTPS 接続
+
+
+. オブジェクトストレージのエンドポイントを有効にします。
++
+** for AWS ： S3 に対して VPC エンドポイントを有効にします。ONTAP クラスタから VPC への Direct Connect または VPN 接続が確立されている環境で、コネクタと S3 の間の通信を AWS 内部ネットワークのままにする場合は、この接続が必要です。
+** Azure の場合： Azure ストレージへの VNet サービスエンドポイントを有効にします。これは、 ONTAP クラスタから VNet への ExpressRoute または VPN 接続があり、コネクタと BLOB ストレージ間の通信を仮想プライベートネットワークのままにする場合に必要です。
+
+
+
+
+
+
+=== サポートされている地域
+
+オンプレミスシステムからパブリックシステムへのバックアップを作成できます すべての地域でクラウドを利用できます https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。
+
 * Azure では、サービスのセットアップ時にバックアップを格納するリージョンを指定します。
 * AWS の場合、バックアップは Cloud Manager がインストールされているリージョンに格納されます。
-+
+
+
 * 注： * オンプレミス ONTAP システムから Google Cloud Storage へのバックアップは、現在 UI ではサポートされていません。
 
 
 
---
-ライセンス要件::
-+
---
+=== ライセンス要件
+
+Cloud Backup PAYGO ライセンスの場合は、へのサブスクリプションが必要です https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure"^] または https://aws.amazon.com/marketplace/pp/B07QX2QLXX["AWS"^] Cloud Backup を有効にする前に、 Cloud Manager Marketplace のバックアップサービスを利用できます。Cloud Backup の請求は、このサブスクリプションを通じて行われます。
+
 Cloud Backup BYOL ライセンスを使用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["バックアップ BYOL ライセンスを追加および更新する"^]。
 
 また、バックアップを格納するオブジェクトストレージスペースについて、クラウドプロバイダからのサブスクリプションが必要になります。
 
---
 
 
-
-
-=== Amazon S3 を準備しています
+=== バックアップのための Amazon S3 の準備
 
 Amazon S3 を使用している場合は、 Cloud Manager が S3 バケットにアクセスするための権限を設定する必要があります。また、オンプレミスの ONTAP クラスタが S3 バケットにアクセスできるように権限を設定する必要があります。
 

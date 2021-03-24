@@ -83,7 +83,7 @@ ONTAP は、オブジェクトストレージとの間でデータの読み取�
 +
 Google Cloud Interconnect はパフォーマンスの向上とデータ転送コストの削減を実現しますが、 ONTAP クラスタと Google Cloud Storage の間では必要ありません。Google Cloud Interconnect の使用時はパフォーマンスが大幅に向上するため、これを推奨するベストプラクティスです。
 
-* Google Cloud Platform VPC 内の NetApp Service Connector からのインバウンド接続が必要です。
+* Google Cloud Platform VPC 内のコネクタからのインバウンド接続が必要です。
 +
 クラスタと Cloud Tiering Service の間の接続は必要ありません。
 

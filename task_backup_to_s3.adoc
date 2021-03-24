@@ -4,7 +4,7 @@ permalink: task_backup_to_s3.html
 keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, aws, aws s3, amazon s3, s3 bucket, back up volumes, Cloud Backup, cloud backup service 
 summary: Cloud Volumes ONTAP から Amazon S3 へのデータのバックアップを開始するには、いくつかの手順を実行します。 
 ---
-= Amazon S3 へのデータのバックアップ
+= Amazon S3 への Cloud Volumes ONTAP データのバックアップ
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -73,6 +73,10 @@ Select Volumes （ボリュームの選択）ページで、バックアップ�
 == 要件
 
 S3 へのボリュームのバックアップを開始する前に、次の要件を読み、サポートされている構成になっていることを確認してください。
+
+次の図は、各コンポーネントとその間の準備に必要な接続を示しています。
+
+image:diagram_cloud_backup_cvo_aws.png["Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"]
 
 サポートされている ONTAP のバージョン:: Cloud Volumes ONTAP 9.6 以降
 サポートされている AWS リージョン:: Cloud Backup はすべての AWS リージョンでサポートされます https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。

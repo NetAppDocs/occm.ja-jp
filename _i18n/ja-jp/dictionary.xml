@@ -38,7 +38,6 @@
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link">ONTAP リリースノート</block>
   <block id="cdddc115a909dfada9b41ba2161da770" category="paragraph">Cloud Volumes ONTAP の既知の問題については、を参照してください 。<block ref="883886ff67d5fc5c5c27664b5de8a81e" category="inline-link-rx"></block> および ONTAP ソフトウェアについては、を参照してください<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
   <block id="07c2ea1cc6b7f654f42d3f074f3c13f4" category="summary">Cloud Volumes ONTAP から Azure Blob Storage へのデータのバックアップを開始するには、いくつかの手順を実行します。</block>
-  <block id="a2339cfda7d84d9a5669a786d1bfae4a" category="doc">Azure BLOB ストレージへのデータのバックアップ</block>
   <block id="06ad314b340900d226b1196e1fe289e9" category="section-title">クイックスタート</block>
   <block id="2433628c53fed80ea9d352a1bcd9ce45" category="paragraph">これらの手順を実行してすぐに作業を開始するか、残りのセクションまでスクロールして詳細を確認してください。</block>
   <block id="b70f6a951e89b0cf19d78de39f9fd2ce" category="section-title">構成がサポートされていることを確認します</block>
@@ -476,7 +475,6 @@
   <block id="0d8954008e65f8f6647d559d1376e080" category="list-text">暗号化設定がソースアグリゲートとデスティネーションアグリゲートで一致しないか、キーの変更を実行中です。</block>
   <block id="b71ed75241f297eae2cc9775c726010d" category="list-text">階層化ポリシーを変更するためにボリューム移動で -tiering-policy _ オプションが指定されています。</block>
   <block id="95bfb9cab1e60976b25e277c0ffbcb84" category="list-text">ボリューム移動で、 generate-destination-key_option が指定されました。</block>
-  <block id="ca8a25db161d8a3427cbb43953d75761" category="summary">Cloud Tiering は、アクセス頻度の低いデータをクラウド内のオブジェクトストレージに自動的に階層化することで、オンプレミスのストレージコストを削減するネットアップマネージドサービスです。これにより、アプリケーションレイヤを変更することなく、データセンターをパブリッククラウドに拡張できます。</block>
   <block id="36afa058c74d288178950c27927bdb38" category="doc">Cloud Tiering の詳細をご確認ください</block>
   <block id="44298d9498f9bf788ed31e9888b30787" category="paragraph">ネットアップの Cloud Tiering Service は、アクセス頻度の低いデータをオンプレミスの ONTAP クラスタからオブジェクトストレージに自動的に階層化することで、データセンターをクラウドへと拡張します。これにより、クラスタの貴重なスペースが解放され、アプリケーションレイヤに変更を加えることなく、より多くのワークロードに対応できるようになります。Cloud Tiering を使用すると、データセンターのコストを削減し、 CAPEX モデルから OPEX モデルへの切り替えが可能になります。</block>
   <block id="8219063d84a51d9df9ac9e3ec8088966" category="paragraph">Cloud Tiering サービスには、 FabricPool の機能が活用されています。FabricPool はネットアップデータファブリックのテクノロジで、低コストのオブジェクトストレージへデータを自動で階層化することができます。アクティブなデータはハイパフォーマンスの SSD に保持されますが、非アクティブなデータは低コストのオブジェクトストレージに階層化され、 ONTAP のデータ効率は維持されます。</block>
@@ -1683,7 +1681,6 @@
   <block id="d2c6cfd5802914828d96e32d814067c8" category="cell">-compute.address.listCompute.backendServices. create -compute.networks.updatePolicy -compute.regionBackendServices.create -compute.regionBackendServices.get -compute.regionBackendServices.list</block>
   <block id="f8f6d7002b5f0b250f8f9b5e203c6988" category="cell">をクリックしてください。</block>
   <block id="9608aa854ca5f36a89549c7fae2a8010" category="summary">Cloud Volumes ONTAP から Amazon S3 へのデータのバックアップを開始するには、いくつかの手順を実行します。</block>
-  <block id="518982b8faca22a3e3136d2ef597ea55" category="doc">Amazon S3 へのデータのバックアップ</block>
   <block id="6196e6bf14a5f5f3772aa2a3ed1f11b2" category="list-text">Cloud Volumes ONTAP 9.6 以降を AWS で実行している。</block>
   <block id="c2d4b61ed28a45b8e06a8d80e83c2a2a" category="list-text">Cloud Manager に権限を提供する IAM ロールにはが含まれています 最新のものから S3 権限<block ref="0dc063d42cd9e31c0e2c7df9df595c9f" category="inline-link-rx"></block>。</block>
   <block id="a897c38dc1bcf68b83ba7ff3ff201306" category="paragraph">デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。週単位または月単位のバックアップに変更するか、システム定義のポリシーの中からいくつかのオプションを選択します。保持するバックアップコピーの数を変更することもできます。</block>
@@ -4355,7 +4352,6 @@
   <block id="1b1dccb3b74d8c6afa95c0b3c38c01c5" category="list-text">ONTAP クラスタが、ポート 443 から Google Cloud Storage への HTTPS 接続を開始します。</block>
   <block id="92cc6f012ccda72f0aac6364e38469e9" category="paragraph">ONTAP は、オブジェクトストレージとの間でデータの読み取りと書き込みを行います。オブジェクトストレージが開始されることはなく、応答するだけです。</block>
   <block id="1294f14813ee24574ffd22eff5067ccd" category="paragraph">Google Cloud Interconnect はパフォーマンスの向上とデータ転送コストの削減を実現しますが、 ONTAP クラスタと Google Cloud Storage の間では必要ありません。Google Cloud Interconnect の使用時はパフォーマンスが大幅に向上するため、これを推奨するベストプラクティスです。</block>
-  <block id="2cf302c1b742733d2b99afd7b60a9b69" category="list-text">Google Cloud Platform VPC 内の NetApp Service Connector からのインバウンド接続が必要です。</block>
   <block id="b38a0774c812ca088fc02e75d5a257b6" category="paragraph">クラスタと Cloud Tiering Service の間の接続は必要ありません。</block>
   <block id="c11c35c69f52a72c03891a6bd06ddb07" category="list-text">階層化ボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。</block>
   <block id="15791d531460b4c275e03017399fcd1a" category="inline-link">IPspace の詳細については、こちらをご覧ください</block>
@@ -6325,8 +6321,6 @@
   <block id="56eeabb4a00fbcd2e27e55831df62209" category="list-text">データブローカーソフトウェアは、自動的に最新バージョンにアップグレードします。</block>
   <block id="da5fad1df140da3fbc300e41e0a200d4" category="list-text">データブローカーは、 AWS SQS を信頼性の高い安全な通信チャネルとして使用し、制御と監視を行います。SQS は永続性レイヤも提供します。</block>
   <block id="eb2bc552c6fd25d8bcc9a12a6b31313b" category="list-text">データブローカーをリレーションシップに追加して、転送速度を向上させ、高可用性を高めることができます。1 つのデータブローカーに障害が発生した場合、サービスの耐障害性があります</block>
-  <block id="996636997dce447cf450a7ab01c3dff2" category="summary">オンプレミスの ONTAP システムからクラウドの低コストのオブジェクトストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。</block>
-  <block id="5b7a625a0e8411e1ab6be1e4747af0df" category="doc">オンプレミスの ONTAP システムからへのデータのバックアップ クラウド</block>
   <block id="6f6a5a1139d8932914706890fc98d832" category="list-text">オンプレミスクラスタを検出し、 Cloud Manager の作業環境に追加しておきます。を参照してください <block ref="06e4d8f0b3ee668a3847b90d3a3a58a0" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="cd7ad775c6b0bdc8bd593887e2e1b7fc" category="list-text">クラスタで ONTAP 9.7P5 以降が実行されています。</block>
   <block id="e79664a8b69611d87044590c9969ed06" category="list-text">クラスタには SnapMirror ライセンスがあり、これは PREM または Data Protection Bundle に含まれています。</block>
@@ -6344,7 +6338,6 @@
   <block id="c75fbb46ed66c205ea4af9d253795fee" category="list-text">ONTAP 9.7P5 以降</block>
   <block id="70ce32f54f57afd141b82a5f72a919a8" category="paragraph">SnapMirror ライセンス（ PREM または Data Protection Bundle に含まれます）。</block>
   <block id="6673e05d6823aa53c469d8428dbe8e1a" category="list-text">クラスタ間 LIF は、バックアップ対象のボリュームをホストする各 ONTAP ノードに必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。<block ref="099fdf6e8ad70f15bd41fe67513de18c" category="inline-link-rx"></block>。</block>
-  <block id="76877e276e41e53e44194ac51ea64f9f" category="list-text">オンプレミスシステムからのバックアップは、すべての地域でサポートされています<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>。</block>
   <block id="d5fa84fea0e56c91da7fbd1badf2d600" category="list-text">Azure では、サービスのセットアップ時にバックアップを格納するリージョンを指定します。</block>
   <block id="8377e7528f2ae8a28ce4655955bf5ea1" category="list-text">AWS の場合、バックアップは Cloud Manager がインストールされているリージョンに格納されます。</block>
   <block id="188a55edd3c64bb96098b7f41a24407d" category="section-title">Amazon S3 を準備しています</block>
@@ -6640,7 +6633,6 @@
   <block id="249345af661bafcf4f8bd3a0b9d6e949" category="inline-link-macro">コネクタが必要になる状況とその方法については、こちらをご覧ください 仕事</block>
   <block id="fab8dfdcca7363088096a952be2d2f60" category="paragraph"><block ref="eb70cb76e9bea1fa658f92d753bfac32" category="inline-link-macro-rx"></block>。</block>
   <block id="6942685feef54ab46cbce7f1e6514c53" category="summary">ユーザが Cloud Manager にログインする前に、そのユーザの Web ブラウザが特定のエンドポイントにアクセスできることを確認する必要があります。その後、作成する作業環境および有効にするすべてのサービスについて、ネットワーク要件を確認する必要があります。</block>
-  <block id="7f94d3877b3dacaa5b4b8a9ad8c1c151" category="paragraph">ユーザが Cloud Manager にログインする前に、そのユーザの Web ブラウザが特定のエンドポイントにアクセスできることを確認する必要があります。その後、特定の作業環境および使用するサービスについて、ネットワーク要件を確認する必要があります。</block>
   <block id="8243f00b2332c0e51c9388bcef64892f" category="section-title">Web ブラウザからアクセスするエンドポイント</block>
   <block id="fbe65eddc85f75eaa695eda74dc37e0b" category="paragraph">ユーザは Web ブラウザから Cloud Manager にアクセスする必要があります。Web ブラウザを実行するマシンは、次のエンドポイントに接続する必要があります。</block>
   <block id="750dbb80a11e1daed1cca90fc15b3127" category="cell">をクリックして、 Cloud Manager SaaS インターフェイスに接続してください。</block>
@@ -6654,8 +6646,6 @@
   <block id="5ce592987b33e8d670d0584dc3d63cd1" category="list-text"><block ref="5ce592987b33e8d670d0584dc3d63cd1" category="inline-link-macro-rx"></block></block>
   <block id="e15e447fcce2b91cca79cdc4c1db7ac7" category="inline-link-macro">ONTAP システム間のデータレプリケーション</block>
   <block id="3e74ab7ecf65d8e67835dd1e377038c0" category="list-text"><block ref="3e74ab7ecf65d8e67835dd1e377038c0" category="inline-link-macro-rx"></block></block>
-  <block id="c43279554957fd298645f2423b117bdf" category="inline-link-macro">Cloud Volumes ONTAP または Azure NetApp Files 向けのクラウドコンプライアンス</block>
-  <block id="a83b4fcff3e29730293f22907c95eb3c" category="list-text"><block ref="a83b4fcff3e29730293f22907c95eb3c" category="inline-link-macro-rx"></block></block>
   <block id="3481dbdb1e9d8d4ee820604ea0b22f1c" category="inline-link-macro">Cloud Compliance for Amazon S3</block>
   <block id="e261ae982ae6a3a7e762115d288e437c" category="list-text"><block ref="e261ae982ae6a3a7e762115d288e437c" category="inline-link-macro-rx"></block></block>
   <block id="d0f1687c68ee0f0d9bac765716d18923" category="inline-link-macro">オンプレミスの ONTAP クラスタ</block>
@@ -7982,7 +7972,6 @@
   <block id="1e62bbf0fcb0c66c8289f061c1788e98" category="paragraph">ONTAP クラスタを Azure BLOB ストレージにデータを階層化する場合は、次の要件を満たす必要があります。</block>
   <block id="03d597b22bd9d9fb770e928472c5c22a" category="list-text">ONTAP クラスタが、ポート 443 経由で Azure BLOB ストレージへの HTTPS 接続を開始します。</block>
   <block id="83ad05a715b23bbfd39e3f94304a0930" category="paragraph">ExpressRoute の方がパフォーマンスが向上し、データ転送コストは削減されますが、 ONTAP クラスタと Azure BLOB ストレージ間では必要ありません。ExpressRoute を使用する際はパフォーマンスが大幅に向上するため、推奨されるベストプラクティスです。</block>
-  <block id="fd259fcac9526039f46fa25dbc1fd99f" category="list-text">Azure VNet 内にあるネットアップサービスコネクタからのインバウンド接続が必要です。</block>
   <block id="7a7d3db26ec8e83af449044c79a54c69" category="paragraph">データをクラウドに階層化するにはコネクタが必要です。データを Azure BLOB ストレージに階層化する場合は、 Azure VNet 内にコネクタが必要です。新しいコネクタを作成するか、現在選択されているコネクタが Azure にあることを確認する必要があります。</block>
   <block id="c4b0a183a3bbf141b9eb3e13ea9d56ec" category="list-text"><block ref="c4b0a183a3bbf141b9eb3e13ea9d56ec" category="inline-link-macro-rx"></block></block>
   <block id="0bf434fdcd716127d6d524f74d391fba" category="list-text">コネクタが取り付けられている VNet で次の接続が有効になっていることを確認します。</block>
@@ -8083,7 +8072,6 @@
   <block id="cf0a6f286be266af220bb56bf7b6365c" category="inline-link">Cloud Volumes ONTAP の詳細については、こちらを参照してください</block>
   <block id="5a2555dcf0776f4107419f613e0a9582" category="paragraph"><block ref="5a2555dcf0776f4107419f613e0a9582" category="inline-link-rx"></block></block>
   <block id="020c911dde61e6dcdb0fdc14a39191bc" category="summary">Cloud Volumes ONTAP から Google Cloud ストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。</block>
-  <block id="061febc3b26b69376eede330c20ac4ed" category="doc">Google Cloud Storage へのデータのバックアップ</block>
   <block id="e196accd41672418154158d3bf8e1006" category="paragraph">Cloud Volumes ONTAP から Google Cloud Storage へのデータのバックアップを開始するには、いくつかの手順を実行します。</block>
   <block id="ed67205a4d86653559f5c0f0973afc52" category="list-text">GCP で Cloud Volumes ONTAP 9.7P5 以降を実行しています。</block>
   <block id="1bb2c0187913772397ee94ba85aff22c" category="list-text">バックアップを保存するストレージスペースの有効な GCP サブスクリプションがあります。</block>
@@ -8466,11 +8454,6 @@
   <block id="17cf684e3b788c7e24258f20367849b0" category="sidebar">ONTAP クラスタを管理します</block>
   <block id="a1ebf612d281c8e7fb16bbfa253b9627" category="sidebar">ONTAP クラスタを検出</block>
   <block id="0d74ec8f38c1da1229b0d3c6dbfb94a8" category="sidebar">ONTAP ボリュームを管理します</block>
-  <block id="36acc8af7dba87e68723fb08ae77646b" category="sidebar">クラウドへのバックアップ</block>
-  <block id="99a23b0161b640f1b97ea3af13d03c00" category="sidebar">Amazon S3 にバックアップします</block>
-  <block id="a89b1ad18c2884e021c1a5327d15ffbc" category="sidebar">Azure BLOB ストレージにバックアップします</block>
-  <block id="2651c7039072fe8b4b571376398542c4" category="sidebar">Google Cloud ストレージにバックアップ</block>
-  <block id="2e67eb3599dade53e15659ca7ae6c29b" category="sidebar">オンプレミスの ONTAP システムからバックアップ</block>
   <block id="65d964d49665477bbec39032d9f3ca8a" category="sidebar">バックアップを管理します</block>
   <block id="eab65d0c5e3102595bc672894104a214" category="sidebar">バックアップからリストアします</block>
   <block id="24040c1b0d7c9d233b595bb6d864ce07" category="sidebar">データをコピーして同期</block>
@@ -9662,4 +9645,44 @@
   <block id="366cc1d4ff6cff6676cf51ea1a645ab0" category="list-text">インストールの選択を確認し、 * Install * をクリックしてインストールを開始します。</block>
   <block id="ca226cca3bd1375b5e9fbcf3bd9cb3be" category="paragraph">インストールプロセスが開始されます。</block>
   <block id="c253587e8df15090843fe5b43928340e" category="paragraph">グローバルファイルキャッシュエッジの高度な設定の詳細については、を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block>。</block>
+  <block id="f6c96f9db00475dfd6c371ca50af3d5b" category="doc">Cloud Volumes ONTAP データの Azure BLOB ストレージへのバックアップ</block>
+  <block id="362e1fd025fbc54170675a786630faff" category="inline-image-macro">Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。</block>
+  <block id="6ecfc2b370e7d4995270910a47116471" category="paragraph"><block ref="6ecfc2b370e7d4995270910a47116471" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2ee6a42bcdec5bfaf3753458ee8021cf" category="paragraph"><block ref="2ee6a42bcdec5bfaf3753458ee8021cf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9d811f8ab4335c82eeb7d1477874bc1c" category="doc">Amazon S3 への Cloud Volumes ONTAP データのバックアップ</block>
+  <block id="c3f8e4a996caac8decf7c7e966b95425" category="paragraph"><block ref="c3f8e4a996caac8decf7c7e966b95425" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="31f8a34f475863b5b8f57242c2224a56" category="list-text">Google Cloud Platform VPC 内のコネクタからのインバウンド接続が必要です。</block>
+  <block id="a37c784aaee1ca97f0c28cbcc1b94535" category="summary">オンプレミスの ONTAP システムからパブリッククラウドの低コストのオブジェクトストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。これには、 Amazon S3 と Azure Blob でのバックアップファイルの作成も含まれます。</block>
+  <block id="db541e53da0d96d71e1b4aef15aae624" category="doc">オンプレミスの ONTAP データをパブリッククラウドにバックアップする</block>
+  <block id="c924aa86c58164ba90165c1d53f93499" category="paragraph">次の図は、オンプレミスの ONTAP システムを Amazon S3 にバックアップする場合と、それらの間の接続を準備する必要がある場合の各コンポーネントを示しています。</block>
+  <block id="2a12eb134c1a7bf9323eeb868060f734" category="paragraph"><block ref="2a12eb134c1a7bf9323eeb868060f734" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="36ca1d7622577947a14a4743d60d1640" category="paragraph">次の図は、オンプレミスの ONTAP システムを Azure Blob にバックアップする場合の各コンポーネントと、その間の準備に必要な接続を示しています。</block>
+  <block id="5471ef0d1f59ac12122c1823b52b17e4" category="paragraph"><block ref="5471ef0d1f59ac12122c1823b52b17e4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9a8e0915c30d62853a8200a073a3301b" category="paragraph">クラウドストレージにデータをバックアップするときは、 ONTAP クラスタが次の要件を満たしている必要があります。</block>
+  <block id="b7abcfd09eff23e0b4b8c478bc2229c9" category="list-text">ONTAP クラスタが、クラウドオブジェクトストレージへのポート 443 経由の HTTPS 接続を開始します。</block>
+  <block id="ea4c5ab472e1683ad7ec3e6e4d5ff61f" category="list-text">コネクタからのインバウンド接続が必要です。この接続は、使用しているオブジェクトストレージプロバイダに応じて AWS VPC または Azure VNet に配置できます。</block>
+  <block id="d6ebf702c76246bfb44648394f9adb0e" category="paragraph">クラスタと Cloud Backup Service の間の接続は必要ありません。</block>
+  <block id="198ee72e953555d142eb9c432a5366b2" category="paragraph">ボリュームデータのバックアップを開始する前に、 Cloud Manager でオンプレミスの ONTAP 作業環境を作成する必要があります。</block>
+  <block id="32bc7368ff248e347186219f28a0e944" category="paragraph">コネクタは、データをクラウドにバックアップするために必要です。コネクタは、デスティネーションオブジェクトストレージと同じクラウドプロバイダになければなりません。たとえば、 AWS S3 にデータをバックアップする場合は、 AWS VPC 内のコネクタを使用する必要があります。オンプレミスに導入されているコネクタは使用できません。新しいコネクターを作成するか、現在選択されているコネクターが正しいプロバイダーにあることを確認する必要があります。</block>
+  <block id="98ec81693c17601be27be39c9336f3b4" category="list-text">Cloud Backup Service へのアウトバウンドインターネット接続 ポート 443 （ HTTPS ）</block>
+  <block id="808633f5de9d974ed32f4e7d0abdd905" category="list-text">ポート 443 経由でオブジェクトストレージに HTTPS 接続する （ S3 または Blob ）</block>
+  <block id="6e125a076496d46ae135a7194b596e3c" category="list-text">オブジェクトストレージのエンドポイントを有効にします。</block>
+  <block id="4fa4c453b3224b20364794f189d99d9b" category="list-text">for AWS ： S3 に対して VPC エンドポイントを有効にします。ONTAP クラスタから VPC への Direct Connect または VPN 接続が確立されている環境で、コネクタと S3 の間の通信を AWS 内部ネットワークのままにする場合は、この接続が必要です。</block>
+  <block id="7f3b875709ddc37cee70cd9698c4c9d7" category="list-text">Azure の場合： Azure ストレージへの VNet サービスエンドポイントを有効にします。これは、 ONTAP クラスタから VNet への ExpressRoute または VPN 接続があり、コネクタと BLOB ストレージ間の通信を仮想プライベートネットワークのままにする場合に必要です。</block>
+  <block id="6596932240981f2213ec3713eca8c10f" category="paragraph">オンプレミスシステムからパブリックシステムへのバックアップを作成できます すべての地域でクラウドを利用できます<block ref="6bd619c4d649497ad0b6da421785c6ae" category="inline-link-rx"></block>。</block>
+  <block id="f0f056157e94a487e92f86eae3d2b423" category="section-title">バックアップのための Amazon S3 の準備</block>
+  <block id="205da632012ee5ba65bbe78cbc5c0e37" category="inline-link-macro">Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files 向けクラウドコンプライアンス</block>
+  <block id="5c2d0c8cd95a7345b3c4063243f8c934" category="list-text"><block ref="5c2d0c8cd95a7345b3c4063243f8c934" category="inline-link-macro-rx"></block></block>
+  <block id="7201b6a3978e17e57120b1d448deb66a" category="inline-link-macro">データベース向けのクラウドコンプライアンス</block>
+  <block id="d8ed1533b34329a831dce25e9e7f7989" category="list-text"><block ref="171c061cc36cc4db14a288924b9a5ef4" category="inline-link-macro-rx"></block> または <block ref="519d876f6e561b4eda853cf6fe48f095" category="inline-link-macro-rx"></block></block>
+  <block id="0a6b00e15840a24fd1f833786ae88427" category="inline-link-macro">ONTAP クラスタのデータを Amazon S3 または Azure にバックアップする BLOB ストレージ</block>
+  <block id="969355394df25f8146111058d997ff75" category="list-text"><block ref="969355394df25f8146111058d997ff75" category="inline-link-macro-rx"></block></block>
+  <block id="2a9ebbea492420eb704eaec352460fa2" category="list-text">Azure VNet 内のコネクタからのインバウンド接続が必要です。</block>
+  <block id="16d4cdec56b3c490095eb1c28b330e1f" category="doc">Cloud Volumes ONTAP データの Google Cloud Storage へのバックアップ</block>
+  <block id="4f05dfa2e80ac7a51e16503e4526a006" category="paragraph"><block ref="4f05dfa2e80ac7a51e16503e4526a006" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6dd7a85f86f42eca06e0c67e1973d437" category="sidebar">データをクラウドにバックアップ</block>
+  <block id="be7c136f5c48ebfb72acc7a3f7f76696" category="sidebar">Cloud Volumes ONTAP データを Amazon S3 にバックアップします</block>
+  <block id="2e87d4ef1e0516d893da73de140af706" category="sidebar">Cloud Volumes ONTAP データを Azure Blob にバックアップ</block>
+  <block id="a6102a3b147e0d099222dfd5f8fa1b0b" category="sidebar">Cloud Volumes ONTAP データを Google Cloud にバックアップ</block>
+  <block id="f88afd09c4785dd31f4239d5df7ce8c7" category="sidebar">オンプレミスの ONTAP データをパブリッククラウドにバックアップ</block>
 </blocks>

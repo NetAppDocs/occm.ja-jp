@@ -4,7 +4,7 @@ permalink: task_backup_to_azure.html
 keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, azure, azure blob, back up volumes, Cloud Backup, cloud backup service 
 summary: Cloud Volumes ONTAP から Azure Blob Storage へのデータのバックアップを開始するには、いくつかの手順を実行します。 
 ---
-= Azure BLOB ストレージへのデータのバックアップ
+= Cloud Volumes ONTAP データの Azure BLOB ストレージへのバックアップ
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -83,6 +83,10 @@ Select Volumes （ボリュームの選択）ページで、バックアップ�
 == 要件
 
 Azure Blob Storage へのボリュームのバックアップを開始する前に、次の要件を確認し、サポートされている構成であることを確認してください。
+
+次の図は、各コンポーネントとその間の準備に必要な接続を示しています。
+
+image:diagram_cloud_backup_cvo_azure.png["Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"]
 
 サポートされている ONTAP のバージョン:: Cloud Volumes ONTAP 9.7 以降。
 サポートされている Azure リージョン:: Cloud Backup はすべての Azure リージョンでサポートされます https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。

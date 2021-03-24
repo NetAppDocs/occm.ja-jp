@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_cloud_tiering.html 
 keywords: cloud tiering, overview, conceptual, value, features, cost, charging, service connector 
-summary: Cloud Tiering は、アクセス頻度の低いデータをクラウド内のオブジェクトストレージに自動的に階層化することで、オンプレミスのストレージコストを削減するネットアップマネージドサービスです。これにより、アプリケーションレイヤを変更することなく、データセンターをパブリッククラウドに拡張できます。 
+summary: ネットアップの Cloud Tiering Service は、アクセス頻度の低いデータをオンプレミスの ONTAP クラスタからオブジェクトストレージに自動的に階層化することで、データセンターをクラウドへと拡張します。これにより、クラスタの貴重なスペースが解放され、アプリケーションレイヤに変更を加えることなく、より多くのワークロードに対応できるようになります。Cloud Tiering を使用すると、データセンターのコストを削減し、 CAPEX モデルから OPEX モデルへの切り替えが可能になります。 
 ---
 = Cloud Tiering の詳細をご確認ください
 :hardbreaks:
