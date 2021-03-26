@@ -9603,8 +9603,6 @@
   <block id="e96b128a90734a984118f076d76538c7" category="cell">ネットアップ AutoSupport との通信：コネクタは support.netapp.com:443 と通信し、 https://mysupport.netapp.com にリダイレクトされます。</block>
   <block id="35864a34ef748a9929163207544aa48d" category="paragraph"><block ref="6782961ca8bb00dc020892795d4e714a" category="inline-link-rx"></block>
 <block ref="bba9d0f10705bbe3d98a315767a8bbef" category="inline-link-rx"></block></block>
-  <block id="59f90935d3dc3364915f570ffed81d1b" category="paragraph"><block ref="e896c2037b75b86e95e1ff5c8579616b" category="inline-link-rx"></block>
-<block ref="0163348b8d2dfd75e3a9fc165b647056" category="inline-link-rx"></block></block>
   <block id="df35ef33665c3a462d52e44984e784d3" category="paragraph"><block ref="df35ef33665c3a462d52e44984e784d3" category="inline-link-rx"></block></block>
   <block id="4c9afdb681bd307daf7aeee36f32cc7a" category="paragraph"><block ref="4c9afdb681bd307daf7aeee36f32cc7a" category="inline-link-rx"></block></block>
   <block id="4b2d1e89406fad567f90d7f405a89a0a" category="list-text">プロセッサ（ CPU ）： CPU は「 * 静的 * ：最小： 4 vCPU コア」として設定する必要があります。</block>
@@ -9685,4 +9683,12 @@
   <block id="2e87d4ef1e0516d893da73de140af706" category="sidebar">Cloud Volumes ONTAP データを Azure Blob にバックアップ</block>
   <block id="a6102a3b147e0d099222dfd5f8fa1b0b" category="sidebar">Cloud Volumes ONTAP データを Google Cloud にバックアップ</block>
   <block id="f88afd09c4785dd31f4239d5df7ce8c7" category="sidebar">オンプレミスの ONTAP データをパブリッククラウドにバックアップ</block>
+  <block id="9535c61b798aabbac8338220d5bb8b13" category="paragraph"><block ref="e896c2037b75b86e95e1ff5c8579616b" category="inline-link-rx"></block>
+<block ref="a62c880b64a65d9bff9d3ad944a283da" category="inline-link-rx"></block></block>
+  <block id="0f0e0fd62d9aeb92f473300f6a51c27b" category="list-text">グローバルファイルキャッシュソフトウェアインストーラは、すべての GFC プロセスを Windows Defender ソフトウェアのオンデマンドスキャンから除外するためのプロセス情報を追加しました。</block>
+  <block id="d48e5a1468d1b60f25ba7453f8c7482a" category="list-text">GFC Core から事前入力ジョブを追加するために、 Configuration Console に新しい Policy Configuration タブが追加されました。</block>
+  <block id="bc87696af9c3c5c3a52fd6dc3e2f436e" category="list-text">ソフトウェアで使用するメモリが少なくなり、パフォーマンスと安定性が向上するように、多くの機能が強化されています。</block>
+  <block id="481ffd68053d79d65068d0aa1585b571" category="section-title">バージョン 1.0.3 で解決された問題</block>
+  <block id="dcd5502407a71fde9f12dac1c16a5788" category="list-text">ネットアップライセンスの登録と GFC サブスクリプションベースの登録は、クラウドベースの LMS でのみ許可されます。オンプレミスの LMS では、レガシーライセンスを使用する必要があります。</block>
+  <block id="886207d7fe87ec1a290b438f9f1eb26b" category="list-text">設定時に LMC が LMS の IP アドレスではなくホスト名を使用すると、 Configuration UI に事前取り込みのジョブが追加されるようになりました。</block>
 </blocks>

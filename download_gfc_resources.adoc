@@ -29,7 +29,7 @@ https://repo.cloudsync.netapp.com/gfc/2k16Hyperv.zip["NetApp GFC を含む Windo
 * Windows Server 2019 仮想テンプレート：
 +
 https://repo.cloudsync.netapp.com/gfc/2k19-1.0.3.60.zip["Windows Server 206.OVA （ NetApp GFC を含む）（ VMware vSphere 6.5 以降）"^]
-https://repo.cloudsync.netapp.com/gfc/2k19Hyperv.zip["NetApp GFC （ Microsoft Hyper-V ）を含む Windows Server 19VHDX"^]
+https://repo.cloudsync.netapp.com/gfc/2K19Hyperv.zip["NetApp GFC （ Microsoft Hyper-V ）を含む Windows Server 19VHDX"^]
 
 * グローバルファイルキャッシュエッジソフトウェア：
 +
