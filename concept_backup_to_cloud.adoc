@@ -20,7 +20,7 @@ Cloud Backup は、 ONTAP クラスタとオンプレミスの Cloud Volumes ONT
 バックアップとリストアの機能をすべて備えた 2 つのサービスがあります。
 
 * * Cloud Volumes ONTAP * を使用すると、 ONTAP およびオンプレミスの Cloud Backup Service クラスタ上のボリュームからバックアップファイルを作成できます。
-* リストアサービス * を使用すると、バックアップファイルから同じまたは異なる Cloud Volumes ONTAP またはオンプレミスの ONTAP クラスタに、 _volume_全体 または 1 つ以上の _files_ をリストアできます。
+* リストアサービス * を使用すると、バックアップファイルから同じまたは異なる Cloud Volumes ONTAP またはオンプレミスの ONTAP クラスタに、 _volume_or_files_ 全体または 1 つ以上をリストアできます。
 
 
 link:https://cloud.netapp.com/cloud-backup-service["Cloud Backup Service の詳細については、こちらをご覧ください"^]。
@@ -102,7 +102,7 @@ Cloud Backup の使用に関連するコストには、リソース料金とサ�
 +
 を参照してください link:task_restore_backups.html#details["導入されている仮想マシン / インスタンスのタイプ"^] サポートされているクラウドプロバイダごとに、
 
-* ボリュームリストアの場合、個別のインスタンスが不要なためコストは発生しません。
+* ボリュームリストアを実行する場合、インスタンスや仮想マシンを個別に用意する必要がないため、コストは発生しません。
 
 
 * サービス料金 *

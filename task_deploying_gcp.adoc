@@ -72,7 +72,7 @@ Cloud Volumes ONTAP を配置するプロジェクトを選択します。デフ
 ドロップダウンリストにプロジェクトが表示されない場合は、 Cloud Manager サービスアカウントを他のプロジェクトに関連付けていません。Google Cloud コンソールに移動し、 IAM サービスを開き、プロジェクトを選択します。Cloud Manager ロールが割り当てられたサービスアカウントをそのプロジェクトに追加します。プロジェクトごとにこの手順を繰り返す必要があります。
 
 
-NOTE: これは Cloud Manager 用に設定するサービスアカウントです。 link:task_getting_started_gcp.html#service-account["このページの手順 4b で説明しているように"]。
+NOTE: これは Cloud Manager 用に設定するサービスアカウントです。 link:task_creating_gcp_service_account.html["このページで説明されているように"]。
 
 [ サブスクリプションの追加 ] をクリックして、選択した資格情報をサブスクリプションに関連付けます。
 

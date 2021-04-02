@@ -35,7 +35,7 @@ Cloud Volumes ONTAP の BYOL では、 9.7 リリース以降、複数の Storag
 各 EC2 インスタンスでは、ネットワークインターフェイスごとにサポートされるプライベート IPv4 アドレスの最大数が決まっています。新しい Storage VM に AWS で IP アドレスを割り当てる前に、上限を確認する必要があります。
 
 .手順
-. に移動します https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_aws_98.html["ストレージの制限に関するセクションは、 Cloud Volumes ONTAP リリースノートを参照してください"^]。
+. に移動します https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_aws_990.html["ストレージの制限に関するセクションは、 Cloud Volumes ONTAP リリースノートを参照してください"^]。
 . インスタンスタイプのインターフェイスごとの IP アドレスの最大数を確認します。
 . AWS で IP アドレスを割り当てるときは次のセクションで必要になるため、この数値をメモしておいてください。
 

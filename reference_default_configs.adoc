@@ -39,7 +39,7 @@ Cloud Volumes ONTAP がデフォルトでどのように設定されているか
 ** クラスタ管理 LIF
 ** クラスタ間 LIF
 ** Azure および GCP の HA システム、 AWS のシングルノードシステム、および複数の AWS アベイラビリティゾーンの HA システム上の SVM 管理 LIF （オプション）
-** ノード管理 LIF
+** ノード管理 LIF （ GCP では、この LIF がクラスタ間 LIF と結合されます）
 ** iSCSI データ LIF
 ** CIFS および NFS データ LIF
 +
