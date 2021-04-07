@@ -115,7 +115,16 @@ image:diagram_cloud_backup_onprem_azure.png["Cloud Backup が、ソースシス�
 ONTAP の要件::
 +
 --
-SnapMirror ライセンス（ PREM または Data Protection Bundle に含まれます）。
+* ONTAP 9.7P5 以降
+* SnapMirror ライセンス（ PREM または Data Protection Bundle に含まれます）。
++
+方法を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/GUID-76A429CC-56CF-4DC1-9DC5-A3E222892684.html["クラスタライセンスを管理します"]。
+
+* 時間とタイムゾーンが正しく設定されている。
++
+方法を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/GUID-644CED2B-ABC9-4FC5-BEB2-1BE6A867919E.html["クラスタ時間を設定します"]。
+
+
 
 --
 クラスタネットワークの要件::
@@ -132,6 +141,11 @@ ONTAP は、オブジェクトストレージとの間でデータの読み取�
 * クラスタ間 LIF は、バックアップ対象のボリュームをホストする各 ONTAP ノードに必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-69120CF0-F188-434F-913E-33ACB8751A5D.html["IPspace の詳細については、こちらをご覧ください"^]。
 +
 Cloud Backup をセットアップすると、 IPspace で使用するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。
+
+* ノードとクラスタ間 LIF からインターネットにアクセスできます。
+* ボリュームが配置されている Storage VM に DNS サーバが設定されている。
++
+方法を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-D4A9F825-77F0-407F-BFBD-D94372D6AAC1.html["SVM 用に DNS サービスを設定"]。
 
 
 
@@ -175,7 +189,7 @@ link:task_discovering_ontap.html["クラスタの検出方法について説明�
 . オブジェクトストレージのエンドポイントを有効にします。
 +
 ** for AWS ： S3 に対して VPC エンドポイントを有効にします。ONTAP クラスタから VPC への Direct Connect または VPN 接続が確立されている環境で、コネクタと S3 の間の通信を AWS 内部ネットワークのままにする場合は、この接続が必要です。
-** Azure の場合： Azure ストレージへの VNet サービスエンドポイントを有効にします。これは、 ONTAP クラスタから VNet への ExpressRoute または VPN 接続があり、コネクタと BLOB ストレージ間の通信を仮想プライベートネットワークのままにする場合に必要です。
+** Azure の場合： Azure ストレージへの VNet プライベートエンドポイントを有効化これは、 ONTAP クラスタから VNet への ExpressRoute または VPN 接続があり、コネクタと BLOB ストレージ間の通信を仮想プライベートネットワークのままにする場合に必要です。
 
 
 

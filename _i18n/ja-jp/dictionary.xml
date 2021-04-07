@@ -4074,11 +4074,9 @@
   <block id="211c1a963db0ec4433679bba9d1a1973" category="paragraph">ワークスペース管理者は、これらのコネクタを使用して Cloud Volumes ONTAP システムを作成できるようになりました。</block>
   <block id="3f297ef15cde0668e93b35f2752fd4fd" category="section-title">次の手順</block>
   <block id="d299a01ec99cf98082c28b6218d90b06" category="paragraph">アカウントの設定が完了したので、ユーザーの削除、ワークスペース、コネクタ、およびサブスクリプションの管理によって、いつでもアカウントを管理できます。 <block ref="0db15a5a390b8cb62ea5abfd884f0980" category="inline-link-macro-rx"></block>。</block>
-  <block id="6e870d10dae7f08688e7811df5bd21fe" category="summary">Cloud Volumes ONTAP システムは、 AWS や Azure からではなく、 Cloud Manager から削除することをお勧めします。</block>
   <block id="fa2caa41abfbcb236c5dbbf27fc28912" category="doc">Cloud Volumes ONTAP 作業環境を削除する</block>
   <block id="2e8bd6a046895b48b3eb0409a71b6313" category="paragraph">作業環境を削除すると、 Cloud Manager はインスタンスを終了し、ディスクとスナップショットを削除します。</block>
   <block id="550fb4a99ba5aa7c79de57b58b64cbe5" category="admonition">Cloud Volumes ONTAP インスタンスでは、 AWS からの偶発的な終了を防止するために、終端保護が有効になっています。ただし、 AWS から Cloud Volumes ONTAP インスタンスを終了する場合は、 AWS CloudFormation コンソールに移動して、インスタンスのスタックを削除する必要があります。スタック名は、作業環境の名前です。</block>
-  <block id="3c673620a171b72f0c36e4a66858195c" category="list-text">作業環境で、メニューアイコンをクリックし、 * 削除 * をクリックします。</block>
   <block id="27bf96ea2dd4c98f397498424680c167" category="list-text">作業環境の名前を入力し、 * 削除 * をクリックします。</block>
   <block id="7d73be13421466d5cf5d832329f74c79" category="paragraph">作業環境を削除するには、最大 5 分かかります。</block>
   <block id="f409c45ef3441d0b1d871fe92d39f327" category="summary">通常、 Cloud Manager では毎月新しいリリースが導入され、新機能、拡張機能、およびバグ修正が提供されます。</block>
@@ -9629,7 +9627,6 @@
   <block id="808633f5de9d974ed32f4e7d0abdd905" category="list-text">ポート 443 経由でオブジェクトストレージに HTTPS 接続する （ S3 または Blob ）</block>
   <block id="6e125a076496d46ae135a7194b596e3c" category="list-text">オブジェクトストレージのエンドポイントを有効にします。</block>
   <block id="4fa4c453b3224b20364794f189d99d9b" category="list-text">for AWS ： S3 に対して VPC エンドポイントを有効にします。ONTAP クラスタから VPC への Direct Connect または VPN 接続が確立されている環境で、コネクタと S3 の間の通信を AWS 内部ネットワークのままにする場合は、この接続が必要です。</block>
-  <block id="7f3b875709ddc37cee70cd9698c4c9d7" category="list-text">Azure の場合： Azure ストレージへの VNet サービスエンドポイントを有効にします。これは、 ONTAP クラスタから VNet への ExpressRoute または VPN 接続があり、コネクタと BLOB ストレージ間の通信を仮想プライベートネットワークのままにする場合に必要です。</block>
   <block id="f0f056157e94a487e92f86eae3d2b423" category="section-title">バックアップのための Amazon S3 の準備</block>
   <block id="205da632012ee5ba65bbe78cbc5c0e37" category="inline-link-macro">Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files 向けクラウドコンプライアンス</block>
   <block id="5c2d0c8cd95a7345b3c4063243f8c934" category="list-text"><block ref="5c2d0c8cd95a7345b3c4063243f8c934" category="inline-link-macro-rx"></block></block>
@@ -9671,7 +9668,6 @@
   <block id="159f47ecc9b99817219aa51e1f31d84e" category="paragraph"><block ref="159f47ecc9b99817219aa51e1f31d84e" category="inline-link-rx"></block></block>
   <block id="c9b9d7d0702c57f006e9905a2069fbaf" category="paragraph"><block ref="c9b9d7d0702c57f006e9905a2069fbaf" category="inline-link-rx"></block></block>
   <block id="a33f839390390b572d3c94aff410f01c" category="list-text">ノード管理 LIF （ GCP では、この LIF がクラスタ間 LIF と結合されます）</block>
-  <block id="9ca6c74541d3662cc95f3bcf1bac6f7d" category="paragraph">Cloud Volumes ONTAP システムは、クラウドプロバイダのコンソールからではなく、 Cloud Manager から削除することを推奨します。たとえば、クラウドプロバイダからライセンスが有効な Cloud Volumes ONTAP インスタンスを終了すると、別のインスタンスでこのライセンスキーを使用できなくなります。ライセンスをリリースするには、作業環境を Cloud Manager から削除する必要があります。</block>
   <block id="380bfdc134190af310ad2f9812d7569f" category="inline-link-macro">このページで説明されているように</block>
   <block id="7f3c9346383e5d395697a494f2cbce45" category="admonition">これは Cloud Manager 用に設定するサービスアカウントです。 <block ref="0b5d76834d60a55caca8d6900f97291a" category="inline-link-macro-rx"></block>。</block>
   <block id="1b147c8a9dfb58c321108c0d08ee5f0d" category="list-text"><block ref="1b147c8a9dfb58c321108c0d08ee5f0d" category="inline-link-macro-rx"></block></block>
@@ -9695,4 +9691,63 @@
   <block id="c8019f1ffa1872e83dcb3addf5f94fa6" category="paragraph">たとえば、既存のライセンスが有効なシステムを削除してから、別の VPC / VNet またはクラウドプロバイダ内の新しい BYOL システムでライセンスを使用できます。どのクラウドプロバイダでも使用できるのは、クラウドに依存しないシリアル番号 _ のみです。クラウドに依存しないシリアル番号は、 _908xxxx_prefix で始まります。</block>
   <block id="577b267f9988dbdc61738174a3158ab9" category="paragraph">BYOL ライセンスは、お客様の会社およびネットアップサポートサイトの特定のクレデンシャルセットに関連付けられていることに注意してください。</block>
   <block id="d504081496d5e4d40b68deb3bdecb702" category="list-text">に移動します<block ref="4fe56d3738a5f19775e6284cd4bf00e6" category="inline-link-rx"></block>。</block>
+  <block id="2eebda09e0c481bdce22608fab6de887" category="section-title">同じ作業環境で複数のコネクタを使用する</block>
+  <block id="9702ba80b5da1f1cf46d6eb4c043a20a" category="paragraph">ディザスタリカバリ目的で、複数のコネクタを備えた作業環境を同時に管理できます。一方のコネクタが停止した場合は、もう一方のコネクタに切り替えて、作業環境をただちに管理できます。</block>
+  <block id="1dd9ce9d137f2fa61020574f1082c6d0" category="paragraph">この構成をセットアップするには：</block>
+  <block id="61f2b058abe88a54489dc8da55cb7b80" category="inline-link-macro">別のコネクタに切り替えます</block>
+  <block id="865b5580c93cd89aa71b0edf6d7f0566" category="list-text"><block ref="865b5580c93cd89aa71b0edf6d7f0566" category="inline-link-macro-rx"></block></block>
+  <block id="fc08f20f6fe5ef74616fbc4c310758ef" category="list-text">既存の作業環境を検出</block>
+  <block id="9388b07e38a12ac161762be532cf738d" category="list-text"><block ref="9388b07e38a12ac161762be532cf738d" category="inline-link-macro-rx"></block></block>
+  <block id="68bb09054d8e778d26b1b8e4a0ed435d" category="list-text"><block ref="68bb09054d8e778d26b1b8e4a0ed435d" category="inline-link-macro-rx"></block></block>
+  <block id="35e1526d677f2c5c412538ff39eaacd5" category="inline-link-macro">Capacity Management Mode （容量管理モード）</block>
+  <block id="92a3a2fc8c69e088d14d84168b232193" category="list-text">を設定します <block ref="856c5e0bd0ff6e26cee881a940a1c20e" category="inline-link-macro-rx"></block> 追加のコネクタで * Manual * に接続します。</block>
+  <block id="7e869bece5c75f9fb7d53abbc36e200f" category="paragraph">メインコネクターのみ * オートマチックモード * に設定する必要があります。DR 目的で別のコネクタに切り替える場合は、必要に応じて容量管理モードを変更できます。</block>
+  <block id="90353d92170174b09fe25231e0b82870" category="summary">クラウドプロバイダのコンソールからではなく、 Cloud Volumes ONTAP システムを Cloud Manager から削除することを推奨します。たとえば、クラウドプロバイダからライセンスが有効な Cloud Volumes ONTAP インスタンスを終了すると、別のインスタンスでこのライセンスキーを使用できなくなります。ライセンスをリリースするには、作業環境を Cloud Manager から削除する必要があります。</block>
+  <block id="deacec910b77251dad4f11490aa93221" category="list-text">キャンバスページで、削除する Cloud Volumes ONTAP 作業環境の名前をダブルクリックします。</block>
+  <block id="ce57c223c9772471dcabe8db7fec79ea" category="list-text">メニューアイコンをクリックし、 * 削除 * をクリックします。</block>
+  <block id="4a9ee4aa88ebf38223ea447fe291d222" category="inline-image-macro">削除アクションを含む作業環境で使用可能なメニューを示すスクリーンショット。</block>
+  <block id="67b59933503284b540d89d3f2ae03808" category="paragraph"><block ref="67b59933503284b540d89d3f2ae03808" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ae01d724ba612f4c3231038db0a25d5c" category="inline-link">クラスタライセンスを管理します</block>
+  <block id="90080972a0e7d326c541dacb54384897" category="paragraph">方法を参照してください<block ref="5de3ac5b3440e4d154662bbb94d69696" category="inline-link-rx"></block>。</block>
+  <block id="db84e654e29ee8810f52bf70cdbd7830" category="list-text">時間とタイムゾーンが正しく設定されている。</block>
+  <block id="de2909ab4fc1a949075aa38ec0c0de83" category="inline-link">クラスタ時間を設定します</block>
+  <block id="c918e4ac3d659f7501ba1bf762a9a6ed" category="paragraph">方法を参照してください<block ref="41ab9d1d7a80aa21d5cb03fb2ba23b11" category="inline-link-rx"></block>。</block>
+  <block id="57296ac49f6b461922a0f69b716d265a" category="list-text">ノードとクラスタ間 LIF からインターネットにアクセスできます。</block>
+  <block id="b8bd53640b12787d1e8ec0b1aea7a9e6" category="list-text">ボリュームが配置されている Storage VM に DNS サーバが設定されている。</block>
+  <block id="16b737dd94da3821905b2064f8068f45" category="inline-link">SVM 用に DNS サービスを設定</block>
+  <block id="211f54faf96ddbc90ee494e85c52ba6c" category="paragraph">方法を参照してください<block ref="73be1e0eccac920b30947d77418a5821" category="inline-link-rx"></block>。</block>
+  <block id="6047e709c512648841317fd4c60accfb" category="list-text">Azure の場合： Azure ストレージへの VNet プライベートエンドポイントを有効化これは、 ONTAP クラスタから VNet への ExpressRoute または VPN 接続があり、コネクタと BLOB ストレージ間の通信を仮想プライベートネットワークのままにする場合に必要です。</block>
+  <block id="074d9032b933b69b2be3568382166425" category="paragraph">シングルノードシステムの場合は、 -failover-policy パラメータの値を _disabled_ に変更する必要があります。</block>
+  <block id="e0100df5af797921fc79adf1b8eaad21" category="paragraph">使用されていないライセンスごとに * ライセンスを使用 * ボタンが表示されます。</block>
+  <block id="e8f6ae75b342427a9d51c95e9abc390e" category="list-text">ライセンスをアクティブ化して使用を開始する場合は、 * ライセンスを使用 * をクリックします。</block>
+  <block id="5287c83ddc3dc50aaff735cfe18a95da" category="inline-image-macro">2 つのライセンス使用オプションのスクリーンショット。</block>
+  <block id="3d94be1c5586728c800c45af3978b6d1" category="paragraph"><block ref="3d94be1c5586728c800c45af3978b6d1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d838eea6d6aef3f385a5f70f924f4064" category="paragraph">使用可能なライセンスを使用するためのオプションについては、次のタスクを参照してください。</block>
+  <block id="9010a59dbd1bb55c1d09325b086cf95a" category="section-title">未使用の Cloud Volumes ONTAP ライセンスを使用している</block>
+  <block id="dbb231ffb0d8d650cc88c11c87a4ec5e" category="paragraph">未使用のライセンスを使用して新しい Cloud Volumes ONTAP インスタンスを作成したり、既存の Cloud Volumes ONTAP インスタンスにライセンスの容量を拡張したりできます。ライセンスの容量は 368 TB です。</block>
+  <block id="ff0509e5b57fe9f892ca16c7e43a416f" category="paragraph">_new_Cloud Volumes ONTAP システムを作成する場合は、導入するシステムのタイプを指定します。たとえば、サンプルライセンス（ * BYOL | Single | Azure * ）を使用すると、 Azure で最大 368 TB の使用権を持つシングルノード Cloud Volumes ONTAP システムを作成できます。このライセンスは、 HA システムの作成や AWS へのインスタンスの導入には使用できません。</block>
+  <block id="0dd047bef2bdbbe37da283a248bb038f" category="paragraph">既存の Cloud Volumes ONTAP システムを更新する場合は、既存のライセンスの拡張に対応できるシステムのタイプを示します。サンプルライセンスを再度使用して、 Azure 内の任意のシングルノード Cloud Volumes ONTAP システムのライセンスを拡張できます。このライセンスは、 HA システムまたは AWS に導入されているインスタンスのライセンスの拡張には使用できません。</block>
+  <block id="8317d8b26726204f53143b343d30cd86" category="section-title">未使用の新しい Cloud Volumes ONTAP システムを作成します 使用許諾</block>
+  <block id="316ed297194a01f1ecb2157f422311a3" category="paragraph">未使用のライセンスで新しい Cloud Volumes ONTAP インスタンスを作成する手順は、次のとおりです。</block>
+  <block id="4137ed06a6eedeb10215c62f13cf6a4f" category="list-text">[ ライセンスの使用 ] をクリックし、 [ 新しい Cloud Volumes ONTAP * にライセンスを使用 ] を選択します。</block>
+  <block id="f0e305a2a1a498a40953222c6422fa17" category="list-text">[ ライセンスの使用 ...] ページで、ライセンス情報を確認し、 [ ライセンスの使用 ] をクリックします。</block>
+  <block id="cb64511523e262038bbadb5f570d0f00" category="paragraph">ほとんどの場合、クラウドプロバイダとノード数の両方がライセンスで定義されているため、 Cloud Volumes ONTAP システムの作業環境を作成するための * 詳細とクレデンシャル * ページが表示されます。</block>
+  <block id="bdfda9514b4405352b99463199c4abce" category="paragraph">「すべてのプロバイダ」として定義されているライセンスを使用している場合は、「場所を選択」 * ページが表示されます。そのため、最初にクラウドプロバイダを選択してから、「 * 詳細とクレデンシャル * 」ページに進むことができます。</block>
+  <block id="eb188ed1b50312a411c4193636276963" category="list-text">手順に従って、作業環境と最初のボリュームを作成します。</block>
+  <block id="a91c3ba620bed9543e87449350fcf5f8" category="paragraph">Cloud Volumes ONTAP システムを導入するクラウドプロバイダに応じて、次のセクションを参照してください。</block>
+  <block id="832a60a506926eaf40d71cc932044a5c" category="list-text"><block ref="832a60a506926eaf40d71cc932044a5c" category="inline-link-macro-rx"></block></block>
+  <block id="532bd026da9bcfd63efcb038941245ef" category="list-text"><block ref="532bd026da9bcfd63efcb038941245ef" category="inline-link-macro-rx"></block></block>
+  <block id="e2e36880e0fa33b499c49416e84c836d" category="list-text"><block ref="e2e36880e0fa33b499c49416e84c836d" category="inline-link-macro-rx"></block></block>
+  <block id="fc1b08dc940b99d55538c59350836c4e" category="section-title">既存の Cloud Volumes ONTAP のライセンス容量を拡張する システム</block>
+  <block id="43a637bae5787927ab57c26f6a80ae32" category="paragraph">現在導入されている Cloud Volumes ONTAP システムが、いずれかの空きライセンス（同じクラウドプロバイダ、ノード数など）のライセンス要件に一致する場合は、次の手順に従ってライセンスの容量を 368 TB 拡張できます。</block>
+  <block id="b363019bfe1ca02220f0c0febfd0d7d3" category="list-text">[ ライセンスの使用 ] をクリックし、 [ 既存の Cloud Volumes ONTAP にライセンスを追加 ] を選択します。</block>
+  <block id="8d2b2ad68e66c2954477a0042c18491b" category="inline-image-macro">既存の Cloud Volumes ONTAP システムにライセンスを追加するためのライセンスの追加ダイアログのスクリーンショット。</block>
+  <block id="a16e3557d85b779de3481b9d463231a3" category="paragraph"><block ref="a16e3557d85b779de3481b9d463231a3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2f63e565e78fbc3941f4aeb818d9adc7" category="list-text">[ ライセンスの追加 ...] ページで、ライセンスを拡張する Cloud Volumes ONTAP システムを選択し、 [ ライセンスの追加 ] をクリックします。</block>
+  <block id="01101cf6491f283bbc511b2204660e07" category="paragraph">確認ダイアログが表示されます。</block>
+  <block id="943eaf8e2fe7a686c34b7ea7d07b7e5f" category="inline-image-macro">ライセンスが Cloud Volumes ONTAP システムに追加されたことを示すスクリーンショット。</block>
+  <block id="0920bd8a3d301421a85410319fdd1857" category="paragraph"><block ref="0920bd8a3d301421a85410319fdd1857" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="66dba6862cea04391bc5944894d8ddb1" category="list-text">[*Close*] をクリックすると、ウィンドウを閉じて Active IQ ページに戻ることができます。または、リンクをクリックして Cloud Volumes ONTAP Licensing ページに移動し、そのシステムのライセンスの詳細を表示することもできます。</block>
+  <block id="2d81026f14897c87dcb49f898d05f792" category="list-text">NFS の場合は、 NFS バージョン 4 以降を使用する必要があります。</block>
+  <block id="10a3e9f58ad31290c6f365e5e735f663" category="paragraph">ソースとターゲットのバージョンが同じである必要があります。たとえば、ソースでは 4.0 、ターゲットでは 4.0 がサポートされます。ただし、ソースでは 4.0 、ターゲットでは 4.1 はサポートされていません。これは、バージョンが異なるためです。</block>
 </blocks>

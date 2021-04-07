@@ -122,6 +122,27 @@ https://mysupport.netapp.com/site/info/cloud-manager-policies["各クラウド�
 
 
 
+== 同じ作業環境で複数のコネクタを使用する
+
+ディザスタリカバリ目的で、複数のコネクタを備えた作業環境を同時に管理できます。一方のコネクタが停止した場合は、もう一方のコネクタに切り替えて、作業環境をただちに管理できます。
+
+この構成をセットアップするには：
+
+. link:task_managing_connectors.html["別のコネクタに切り替えます"]
+. 既存の作業環境を検出
++
+** link:task_adding_ontap_cloud.html["Cloud Manager に既存の Cloud Volumes ONTAP システムを追加"]
+** link:task_discovering_ontap.html["ONTAP クラスタの検出"]
+
+
+. を設定します link:concept_storage_management.html#capacity-management["Capacity Management Mode （容量管理モード）"] 追加のコネクタで * Manual * に接続します。
++
+メインコネクターのみ * オートマチックモード * に設定する必要があります。DR 目的で別のコネクタに切り替える場合は、必要に応じて容量管理モードを変更できます。
+
+
+
+
+
 == コネクタを切り替えるタイミング
 
 最初のコネクタを作成すると、新しく作成する作業環境ごとに、そのコネクタが Cloud Manager によって自動的に使用されます。コネクタを追加で作成したら、コネクタを切り替えることで各コネクタに固有の作業環境を確認する必要があります。

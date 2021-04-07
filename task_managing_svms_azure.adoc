@@ -164,6 +164,9 @@ network route create -destination 0.0.0.0/0 -vserver <svm-name> -gateway <ip-of-
 ----
 network interface create -vserver <svm-name> -lif <lif-name> -role data -data-protocol cifs,nfs -address <nfs--ip-address> -netmask-length <length> -home-node <name-of-node1> -status-admin up -failover-policy system-defined -firewall-policy data -home-port e0a -auto-revert true -failover-group Default -probe-port <port-number-for-azure-health-probe1>
 ----
++
+シングルノードシステムの場合は、 -failover-policy パラメータの値を _disabled_ に変更する必要があります。
+
 .. 次のコマンドを使用して、ノード 2 に NAS LIF を作成します（ HA ペアの場合のみ）。
 +
 [source, cli]

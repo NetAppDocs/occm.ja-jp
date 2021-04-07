@@ -29,12 +29,26 @@ Cloud Manager の Active IQ ページには、オンプレミス環境で検出�
 image:screenshot_aiq_licenses.png["使用済みおよび未使用の Cloud Volumes ONTAP ライセンスのスクリーンショット。"]
 
 +
+使用されていないライセンスごとに * ライセンスを使用 * ボタンが表示されます。
+
+. ライセンスをアクティブ化して使用を開始する場合は、 * ライセンスを使用 * をクリックします。
++
+image:screenshot_aiq_use_license.png["2 つのライセンス使用オプションのスクリーンショット。"]
+
+
+
+使用可能なライセンスを使用するためのオプションについては、次のタスクを参照してください。
+
+
+
+== 未使用の Cloud Volumes ONTAP ライセンスを使用している
+
+未使用のライセンスを使用して新しい Cloud Volumes ONTAP インスタンスを作成したり、既存の Cloud Volumes ONTAP インスタンスにライセンスの容量を拡張したりできます。ライセンスの容量は 368 TB です。
+
 _expires_column は、ライセンスが最後にアクティブになった日を示します。新しい Cloud Volumes ONTAP システムを作成すると、ライセンスの有効期限が切れます。既存の Cloud Volumes ONTAP システムを更新する場合は、既存のライセンスが拡張される期間を指定します。
 
-+
 _License Type_'_Hyperscaler_'_Model Type_columns は ' その Cloud Volumes ONTAP ライセンスのタイプを表しますたとえば、 * BYOL | Single | Azure * は、「 Microsoft Azure 」に導入された「シングルノード」 Cloud Volumes ONTAP システムのライセンスを「お客様所有」のライセンスとして使用できることを意味します。この列に表示される値を表に示します。
 
-+
 [cols="25,25"]
 |===
 | 列（ Column ） | 値 
@@ -48,6 +62,56 @@ _License Type_'_Hyperscaler_'_Model Type_columns は ' その Cloud Volumes ONTA
 
 | モデルタイプ（ Model Type ） | 単一 HA 
 |===
+_new_Cloud Volumes ONTAP システムを作成する場合は、導入するシステムのタイプを指定します。たとえば、サンプルライセンス（ * BYOL | Single | Azure * ）を使用すると、 Azure で最大 368 TB の使用権を持つシングルノード Cloud Volumes ONTAP システムを作成できます。このライセンスは、 HA システムの作成や AWS へのインスタンスの導入には使用できません。
+
+既存の Cloud Volumes ONTAP システムを更新する場合は、既存のライセンスの拡張に対応できるシステムのタイプを示します。サンプルライセンスを再度使用して、 Azure 内の任意のシングルノード Cloud Volumes ONTAP システムのライセンスを拡張できます。このライセンスは、 HA システムまたは AWS に導入されているインスタンスのライセンスの拡張には使用できません。
+
+
+
+=== 未使用の新しい Cloud Volumes ONTAP システムを作成します 使用許諾
+
+未使用のライセンスで新しい Cloud Volumes ONTAP インスタンスを作成する手順は、次のとおりです。
+
+.手順
+. [ ライセンスの使用 ] をクリックし、 [ 新しい Cloud Volumes ONTAP * にライセンスを使用 ] を選択します。
+. [ ライセンスの使用 ...] ページで、ライセンス情報を確認し、 [ ライセンスの使用 ] をクリックします。
++
+ほとんどの場合、クラウドプロバイダとノード数の両方がライセンスで定義されているため、 Cloud Volumes ONTAP システムの作業環境を作成するための * 詳細とクレデンシャル * ページが表示されます。
+
++
+「すべてのプロバイダ」として定義されているライセンスを使用している場合は、「場所を選択」 * ページが表示されます。そのため、最初にクラウドプロバイダを選択してから、「 * 詳細とクレデンシャル * 」ページに進むことができます。
+
+. 手順に従って、作業環境と最初のボリュームを作成します。
++
+Cloud Volumes ONTAP システムを導入するクラウドプロバイダに応じて、次のセクションを参照してください。
+
++
+** link:task_deploying_otc_azure.html["Azure で Cloud Volumes ONTAP を起動します"^]
+** link:task_deploying_otc_aws.html["AWS での Cloud Volumes ONTAP の起動"^]
+** link:task_deploying_gcp.html["GCP での Cloud Volumes ONTAP の起動"^]
+
+
+
+
+
+
+=== 既存の Cloud Volumes ONTAP のライセンス容量を拡張する システム
+
+現在導入されている Cloud Volumes ONTAP システムが、いずれかの空きライセンス（同じクラウドプロバイダ、ノード数など）のライセンス要件に一致する場合は、次の手順に従ってライセンスの容量を 368 TB 拡張できます。
+
+.手順
+. [ ライセンスの使用 ] をクリックし、 [ 既存の Cloud Volumes ONTAP にライセンスを追加 ] を選択します。
++
+image:screenshot_aiq_extend_license.png["既存の Cloud Volumes ONTAP システムにライセンスを追加するためのライセンスの追加ダイアログのスクリーンショット。"]
+
+. [ ライセンスの追加 ...] ページで、ライセンスを拡張する Cloud Volumes ONTAP システムを選択し、 [ ライセンスの追加 ] をクリックします。
++
+確認ダイアログが表示されます。
+
++
+image:screenshot_aiq_license_added.png["ライセンスが Cloud Volumes ONTAP システムに追加されたことを示すスクリーンショット。"]
+
+. [*Close*] をクリックすると、ウィンドウを閉じて Active IQ ページに戻ることができます。または、リンクをクリックして Cloud Volumes ONTAP Licensing ページに移動し、そのシステムのライセンスの詳細を表示することもできます。
 
 
 
