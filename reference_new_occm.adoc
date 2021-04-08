@@ -21,6 +21,20 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
+== Cloud Manager 3.9.4 の更新（ 2021 年 4 月 8 日）
+
+
+
+=== Active IQ の機能拡張
+
+* Cloud Volumes ONTAP がアカウント内に使用していない Active IQ ライセンスを検出した場合は、ボタンをクリックして、ライセンスを使用して新しい Cloud Volumes ONTAP システムを作成できます。または、既存の Cloud Volumes ONTAP システムにライセンスを適用して、そのライセンスの容量を 368 TB 拡張できます。
++
+を参照してください link:task_managing_ontap.html#using-unused-cloud-volumes-ontap-licenses["利用可能なライセンスの使用方法"^]。
+
+
+
+
+
 == Cloud Manager 3.9.4 の更新（ 2021 年 3 月 15 日）
 
 

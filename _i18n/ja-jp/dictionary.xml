@@ -8020,10 +8020,8 @@
   <block id="8ab5afcd8d12bacc8557be89a958f410" category="inline-link-macro">グローバルファイルキャッシュのライセンス</block>
   <block id="f3cfd49d352dc120fd07fac4f27e3554" category="list-text">グローバルファイルキャッシュでは、サブスクリプション ID ベースのライセンスがサポートされるようになりました。システムを登録すると、サブスクリプション番号が電子メールで送信されます。を参照してください <block ref="e960780bdf02cd0ab71ef4cd926c2093" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="26f5b0ec330c7a3217fb8f79a04bb7c3" category="list-text">ドメインに参加する GFC コアの要件が緩和されました。これで、 GFC サービスの設定にユーザ名（ Cloud Volumes ONTAP システムの Backup Operators グループの一部）が使用されました。</block>
-  <block id="5b7a7c71c28b6286e6754b298273eb5b" category="list-text">License Manager Server （ LMS ）に、登録を解除するための追加の HTTPS エンドポイントが追加されました。</block>
   <block id="a0a75e41197c3e71ffc20fcf71ea84d3" category="section-title">バージョン 1.0.2 で解決された問題</block>
   <block id="b77ca8574635f297d7bb1fc893e750c9" category="list-text">アップグレード中にデスクトップに GFC のアイコンが重複して表示されなくなりました。</block>
-  <block id="e43fcb923b21a65889db717efcada308" category="list-text">サービスの再起動時に、 License Manager Client Service （ LMC ）が正しいライセンス情報を保持するようになりました。</block>
   <block id="5ca4d0f89ef6c18d7fa7fae7290d98cb" category="summary">Cloud Volumes ONTAP を使用すると、データ保護、セキュリティ、コンプライアンスを強化しながら、クラウドストレージのコストとパフォーマンスを最適化できます。</block>
   <block id="3ddffa447216115135ad7b5a7bdd106d" category="doc">Cloud Volumes ONTAP の詳細をご覧ください</block>
   <block id="f703efebd5f1fe499787635d16bb070c" category="paragraph">Cloud Volumes ONTAP は、クラウドで ONTAP データ管理ソフトウェアを実行するソフトウェア型のストレージアプライアンスです。以下の主要機能を備えたエンタープライズクラスのストレージを提供します。</block>
@@ -9565,7 +9563,6 @@
   <block id="e96b128a90734a984118f076d76538c7" category="cell">ネットアップ AutoSupport との通信：コネクタは support.netapp.com:443 と通信し、 https://mysupport.netapp.com にリダイレクトされます。</block>
   <block id="35864a34ef748a9929163207544aa48d" category="paragraph"><block ref="6782961ca8bb00dc020892795d4e714a" category="inline-link-rx"></block>
 <block ref="bba9d0f10705bbe3d98a315767a8bbef" category="inline-link-rx"></block></block>
-  <block id="df35ef33665c3a462d52e44984e784d3" category="paragraph"><block ref="df35ef33665c3a462d52e44984e784d3" category="inline-link-rx"></block></block>
   <block id="4c9afdb681bd307daf7aeee36f32cc7a" category="paragraph"><block ref="4c9afdb681bd307daf7aeee36f32cc7a" category="inline-link-rx"></block></block>
   <block id="4b2d1e89406fad567f90d7f405a89a0a" category="list-text">プロセッサ（ CPU ）： CPU は「 * 静的 * ：最小： 4 vCPU コア」として設定する必要があります。</block>
   <block id="e2dc7db2b7946e399b3526201828d47b" category="list-text">ハードディスクのプロビジョニング：ハードディスクは * 固定ディスク * として構成する必要があります。</block>
@@ -9600,7 +9597,6 @@
   <block id="6869983628ce136a6778d9ced07d3b4b" category="paragraph">AWS では、 127GB の汎用 SSD を搭載した m4.xlarge インスタンスまたは同等のインスタンス（ 4 vCPU / 16GB RAM ）で実行されます</block>
   <block id="a8a7a8a7aa88c77a487bb4b387274cfa" category="paragraph">を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block> ライセンスの詳細については、を参照してください。</block>
   <block id="dcf0a49958e5c7a70ac6f315e1a17133" category="section-title">バージョン 1.0.3 の新機能</block>
-  <block id="9bc2d0e7499df0da08ac22dbdb1b9a58" category="paragraph">リリース： 2021 年 3 月 21 日</block>
   <block id="7a471b1e4141c6cec5dcf9437bfb622d" category="paragraph">デフォルトのインストール場所を使用することを推奨します。</block>
   <block id="366cc1d4ff6cff6676cf51ea1a645ab0" category="list-text">インストールの選択を確認し、 * Install * をクリックしてインストールを開始します。</block>
   <block id="ca226cca3bd1375b5e9fbcf3bd9cb3be" category="paragraph">インストールプロセスが開始されます。</block>
@@ -9645,11 +9641,8 @@
   <block id="9535c61b798aabbac8338220d5bb8b13" category="paragraph"><block ref="e896c2037b75b86e95e1ff5c8579616b" category="inline-link-rx"></block>
 <block ref="a62c880b64a65d9bff9d3ad944a283da" category="inline-link-rx"></block></block>
   <block id="0f0e0fd62d9aeb92f473300f6a51c27b" category="list-text">グローバルファイルキャッシュソフトウェアインストーラは、すべての GFC プロセスを Windows Defender ソフトウェアのオンデマンドスキャンから除外するためのプロセス情報を追加しました。</block>
-  <block id="d48e5a1468d1b60f25ba7453f8c7482a" category="list-text">GFC Core から事前入力ジョブを追加するために、 Configuration Console に新しい Policy Configuration タブが追加されました。</block>
   <block id="bc87696af9c3c5c3a52fd6dc3e2f436e" category="list-text">ソフトウェアで使用するメモリが少なくなり、パフォーマンスと安定性が向上するように、多くの機能が強化されています。</block>
   <block id="481ffd68053d79d65068d0aa1585b571" category="section-title">バージョン 1.0.3 で解決された問題</block>
-  <block id="dcd5502407a71fde9f12dac1c16a5788" category="list-text">ネットアップライセンスの登録と GFC サブスクリプションベースの登録は、クラウドベースの LMS でのみ許可されます。オンプレミスの LMS では、レガシーライセンスを使用する必要があります。</block>
-  <block id="886207d7fe87ec1a290b438f9f1eb26b" category="list-text">設定時に LMC が LMS の IP アドレスではなくホスト名を使用すると、 Configuration UI に事前取り込みのジョブが追加されるようになりました。</block>
   <block id="6294a96fba20202cd9ffb33f93601bb2" category="inline-link">Cloud Central ヘルプセンター</block>
   <block id="5569b20291c46e5ea715240a969348a0" category="admonition">シングルサインオンを使用して、社内ディレクトリ（フェデレーション ID ）からのクレデンシャルを使用してログインできます。詳細については、を参照してください<block ref="2c92c928be02227d051a5057c2e57fc6" category="inline-link-rx"></block> 次に、 * Cloud Central サインインオプション * をクリックします。</block>
   <block id="bb0f005390d9f5af4753858f57a9bc8e" category="list-text">ディスクをクラウドプロバイダから直接削除または移動した場合は、有効期限が切れる前にボリュームを削除できます。</block>
@@ -9750,4 +9743,24 @@
   <block id="66dba6862cea04391bc5944894d8ddb1" category="list-text">[*Close*] をクリックすると、ウィンドウを閉じて Active IQ ページに戻ることができます。または、リンクをクリックして Cloud Volumes ONTAP Licensing ページに移動し、そのシステムのライセンスの詳細を表示することもできます。</block>
   <block id="2d81026f14897c87dcb49f898d05f792" category="list-text">NFS の場合は、 NFS バージョン 4 以降を使用する必要があります。</block>
   <block id="10a3e9f58ad31290c6f365e5e735f663" category="paragraph">ソースとターゲットのバージョンが同じである必要があります。たとえば、ソースでは 4.0 、ターゲットでは 4.0 がサポートされます。ただし、ソースでは 4.0 、ターゲットでは 4.1 はサポートされていません。これは、バージョンが異なるためです。</block>
+  <block id="26677af4c9ee9ebb05824f61086736f6" category="paragraph"><block ref="26677af4c9ee9ebb05824f61086736f6" category="inline-link-rx"></block></block>
+  <block id="c02f6931ac1cb0d6f6c43728f2c59458" category="list-text">Global File Cache SCOM （ Microsoft Systems Center Operations Manager ）パッケージ：</block>
+  <block id="6cfcd1fac0b2e806d26cc363f98afe52" category="inline-link">NetApp GFC SCOM 管理パッケージ（ ZIP ）</block>
+  <block id="94ab5cbee962c68b827980048c10c188" category="paragraph"><block ref="94ab5cbee962c68b827980048c10c188" category="inline-link-rx"></block></block>
+  <block id="0c0faaf28cc538554b982f141ca3229d" category="section-title">Cloud Manager 3.9.4 の更新（ 2021 年 4 月 8 日）</block>
+  <block id="431ac75f7b25fb62b8145b479e9028da" category="list-text">Cloud Volumes ONTAP がアカウント内に使用していない Active IQ ライセンスを検出した場合は、ボタンをクリックして、ライセンスを使用して新しい Cloud Volumes ONTAP システムを作成できます。または、既存の Cloud Volumes ONTAP システムにライセンスを適用して、そのライセンスの容量を 368 TB 拡張できます。</block>
+  <block id="5bba2485934e1dcd9c781dde5b6b9abc" category="inline-link-macro">利用可能なライセンスの使用方法</block>
+  <block id="a9a5914365a8133184830f68686f0dca" category="paragraph">を参照してください <block ref="f8975dcc9c96e2a5dd35dd7c0ce8260a" category="inline-link-macro-rx"></block>。</block>
+  <block id="82d584d22bd61a04dcb192848747d326" category="section-title">バージョン 1.0.4 で解決された問題</block>
+  <block id="adba7f005d89d20841a7ea6866ea481a" category="paragraph">リリース： 2021 年 4 月 7 日</block>
+  <block id="8745f104024449a4797839f221e192a2" category="list-text">QoS パラメータが、制限を超えたユーザだけでなく _all_users に適用されるように QoS 問題が修正されました。</block>
+  <block id="0eb37d2733eb2ea3eb40f8c24e8c6400" category="list-text">NSS のクレデンシャルは、ライセンスシステムに適用する前に検証されるようになりました。</block>
+  <block id="b41a6700f4ecdc68672c9c11626a93f4" category="list-text">GFC ソフトウェアと特定のウィルス対策ソフトウェアの競合状態が修正されました。</block>
+  <block id="c1b67e4a4c76817df9aca841e83485fe" category="list-text">ドロップリース操作中にロック階層に違反した場合にクラッシュが発生しなくなりました。</block>
+  <block id="9f00ddaf9bf1a46862f6a8d9ab57626d" category="paragraph">リリース： 2021 年 3 月 21 日</block>
+  <block id="3aacfcacf129798d67b68cca8010f2c1" category="list-text">構成コンソールに新しい [ ポリシー構成 ] タブが追加され、 GFC コアから事前入力ジョブが追加されました。</block>
+  <block id="3f4758f7775b468f31a333f97ab2c2d3" category="list-text">ネットアップライセンスの登録と GFC サブスクリプションベースの登録は、クラウドベースの License Management Server （ LMS ）でのみ可能です。オンプレミスの LMS では、レガシーライセンスを使用する必要があります。</block>
+  <block id="2644e4a83d0eedbd704d3e114114e275" category="list-text">構成時に、 License Manager Client Service （ LMC ）が LMS の IP アドレスではなくホスト名を使用する場合、構成 UI では事前入力のジョブが追加されるようになりました。</block>
+  <block id="1ab7561a7f3105954adda40dea5ba675" category="list-text">License Manager Server に、登録を解除するための追加 HTTPS エンドポイントが追加されました。</block>
+  <block id="3cfcee710524b276d949e11b7180ad33" category="list-text">サービスの再起動時に、 License Manager Client Service が正しいライセンス情報を保持するようになりました。</block>
 </blocks>

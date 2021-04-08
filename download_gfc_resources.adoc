@@ -33,7 +33,11 @@ https://repo.cloudsync.netapp.com/gfc/2K19Hyperv.zip["NetApp GFC （ Microsoft H
 
 * グローバルファイルキャッシュエッジソフトウェア：
 +
-https://repo.cloudsync.netapp.com/gfc/GFC-1-0-3-60-Release.exe["NetApp GFC ソフトウェアインストールパッケージ（ .EXE ）"^]
+https://repo.cloudsync.netapp.com/gfc/GFC-1-0-4-63-Release.exe["NetApp GFC ソフトウェアインストールパッケージ（ .EXE ）"^]
+
+* Global File Cache SCOM （ Microsoft Systems Center Operations Manager ）パッケージ：
++
+https://repo.cloudsync.netapp.com/gfc/SCOM-151.zip["NetApp GFC SCOM 管理パッケージ（ ZIP ）"]
 
 * グローバルファイルキャッシュのドキュメント：
 +
