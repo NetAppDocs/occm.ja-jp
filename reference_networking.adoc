@@ -48,14 +48,17 @@ summary: ユーザが Cloud Manager にログインする前に、そのユー�
 * link:task_replicating_data.html["ONTAP システム間のデータレプリケーション"]
 * link:task_getting_started_compliance.html["Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files 向けクラウドコンプライアンス"]
 * link:task_scanning_s3.html["Cloud Compliance for Amazon S3"]
-* link:task_scanning_databases.html["データベース向けのクラウドコンプライアンス"] または link:task_scanning_onedrive.html["OneDrive アカウント"]
+* link:task_scanning_object_storage.html["汎用の S3 オブジェクトストレージ向けの Cloud Compliance"]
+* link:task_scanning_file_shares.html["NetApp 以外の NFS または CIFS ファイル共有向けの Cloud Compliance"]
+* link:task_scanning_databases.html["データベース向けのクラウドコンプライアンス"]
+* link:task_scanning_onedrive.html["Cloud Compliance for OneDrive アカウント"]
 * link:task_discovering_ontap.html["オンプレミスの ONTAP クラスタ"]
 +
 ** link:task_tiering_onprem_aws.html["ONTAP クラスタから Amazon S3 へのデータ階層化"]
 ** link:task_tiering_onprem_azure.html["ONTAP クラスタから Azure BLOB ストレージへのデータ階層化"]
 ** link:task_tiering_onprem_gcp.html["ONTAP クラスタから Google Cloud Storage へのデータ階層化"]
 ** link:task_tiering_onprem_storagegrid.html["ONTAP クラスタから StorageGRID へのデータ階層化"]
-** link:task_backup_from_onprem.html["ONTAP クラスタのデータを Amazon S3 または Azure にバックアップする BLOB ストレージ"]
+** link:task_backup_from_onprem.html["ONTAP クラスタから Amazon S3 または Azure へのデータバックアップ BLOB ストレージ"]
 
 
 

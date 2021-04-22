@@ -25,9 +25,10 @@ IMPORTANT: このプロセスは、 CIFS クライアントの処理を中断す
 Cloud Manager の設定を変更する前に、コネクタを作成する必要があります。 link:concept_connectors.html#how-to-create-a-connector["詳細をご確認ください"]。
 
 .手順
-. Cloud Manager コンソールの右上にある設定アイコンをクリックし、 * Cloud Manager 設定 * を選択します。
+. Cloud Manager コンソールの右上にある設定アイコンをクリックし、 * コネクタ設定 * を選択します。
 +
 image:screenshot_settings_icon.gif["Cloud Manager コンソールの右上にある設定アイコンを示すスクリーンショット。"]
 
-. HA CIFS lock* で、チェックボックスを選択し、 * Save * をクリックします。
+. [* Azure* ] で、 [* Azure CIFS locks for Azure HA working environments * ] をクリックします。
+. チェックボックスをクリックして機能を有効にし、 * 保存 * をクリックします。
 

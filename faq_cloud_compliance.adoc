@@ -19,7 +19,7 @@ summary: この FAQ は、質問に対する簡単な回答を探している場
 
 == クラウドコンプライアンスとは
 
-Cloud Compliance は、人工知能（ AI ）ベースのテクノロジを使用して、組織がデータコンテキストを把握し、ストレージシステム全体で機密データを特定できるようにするクラウドサービスです。システムには、 Azure NetApp Files 構成、 AWS または Azure でホストされる Cloud Volumes ONTAP システム、 Amazon S3 バケット、オンプレミスの ONTAP システム、データベース、 OneDrive アカウントがあります。
+Cloud Compliance は、人工知能（ AI ）ベースのテクノロジを使用して、組織がデータコンテキストを把握し、ストレージシステム全体で機密データを特定できるようにするクラウドサービスです。システムには、 Azure NetApp Files 構成、 AWS または Azure でホストされる Cloud Volumes ONTAP システム、 Amazon S3 バケット、オンプレミス ONTAP システム、ネットアップ以外のファイル共有、汎用の S3 オブジェクトストレージ、データベース、 OneDrive アカウントがあります。
 
 Cloud Compliance では、データプライバシーや機密性に関する新しいデータコンプライアンス規制（ GDPR 、 CCPA 、 HIPAA など）に対処するための事前定義されたパラメータ（機密情報の種類やカテゴリなど）が提供されます。
 
@@ -49,7 +49,7 @@ https://cloud.netapp.com/cloud-compliance["Cloud Compliance のユースケー�
 
 == Cloud Compliance でスキャンできるデータの種類を教えてください。
 
-Cloud Compliance では、 Cloud Volumes ONTAP 、 Azure NetApp Files 、オンプレミスの ONTAP システムで管理されている NFS プロトコルと CIFS プロトコルを介した非構造化データのスキャンがサポートされます。Cloud Compliance では、 Amazon S3 バケットに格納されているデータもスキャンできます。
+Cloud Compliance では、 Cloud Volumes ONTAP 、 Azure NetApp Files 、オンプレミスの ONTAP システムで管理されている NFS プロトコルと CIFS プロトコルを介した非構造化データのスキャンがサポートされます。また、 Amazon S3 バケット、汎用の S3 オブジェクトストレージ、およびネットアップ以外のファイル共有に格納されているデータもスキャンできます。
 
 さらに、 Cloud Compliance では、任意の場所にあるデータベースやユーザファイルを OneDrive アカウントからスキャンできます。
 
@@ -151,7 +151,7 @@ NOTE: Cloud Compliance をアクティブにすると、最初のスキャンが
 
 == Cloud Compliance を無効にする方法
 
-個々の作業環境、データベース、 OneDrive アカウントを選択した後、キャンバスページから Cloud Compliance を無効にできます。
+個々の作業環境、データベース、ファイル共有グループ、または OneDrive アカウントを選択した後、キャンバスページから Cloud Compliance を無効にすることができます。
 
 link:task_managing_compliance.html["詳細はこちら。"^]。
 
@@ -180,7 +180,7 @@ link:task_getting_started_compliance.html["詳細はこちら。"^]。
 
 == Cloud Compliance から組織に通知を送信できますか？
 
-はい。ハイライトの結果が返されたら、ハイライト機能と一緒に Cloud Manager ユーザ（日次、週次、または月単位）に E メールアラートを送信して、データを保護するための通知を受け取ることができます。の詳細を確認してください link:task_managing_highlights.html#controlling-your-data-using-highlights["ハイライト"^]。
+はい。ポリシー機能と一緒に、ポリシーの結果が返されたときに Cloud Manager のユーザ（日単位、週単位、または月単位）に E メールアラートを送信して、データを保護するための通知を受け取ることができます。の詳細を確認してください link:task_managing_highlights.html#controlling-your-data-using-policies["ポリシー"^]。
 
 ステータスレポートは、組織内で共有できる .csv 形式の [ 調査 ] ページからダウンロードすることもできます。
 

@@ -101,7 +101,7 @@ Storage VM に管理 LIF を作成する場合は、オプションのセカン�
 +
 [source, cli]
 ----
-vserver create -rootvolume-security-style mixed -rootvolume root_svm_2 -snapshot-policy default -vserver svm_2 -aggregate aggr1
+vserver create -rootvolume-security-style unix -rootvolume root_svm_2 -snapshot-policy default -vserver svm_2 -aggregate aggr1
 ----
 +
 [source, cli]
@@ -141,7 +141,7 @@ network interface create -auto-revert true -vserver svm_2 -service-policy defaul
 +
 [source, cli]
 ----
-vserver create -rootvolume-security-style mixed -rootvolume root_svm_2 -snapshot-policy default -vserver svm_2 -aggregate aggr1
+vserver create -rootvolume-security-style unix -rootvolume root_svm_2 -snapshot-policy default -vserver svm_2 -aggregate aggr1
 ----
 +
 [source, cli]
@@ -183,7 +183,7 @@ NAS LIF には _floated_ip アドレスが必要です。これは管理 LIF の
 +
 [source, cli]
 ----
-vserver create -rootvolume-security-style mixed -rootvolume root_svm_2 -snapshot-policy default -vserver svm_2 -aggregate aggr1
+vserver create -rootvolume-security-style unix -rootvolume root_svm_2 -snapshot-policy default -vserver svm_2 -aggregate aggr1
 ----
 +
 [source, cli]

@@ -26,14 +26,22 @@ GCP の Cloud Volumes ONTAP HA 構成には、次のコンポーネントが含�
 +
 メディエーターは、 F1 マイクロインスタンス上で Linux オペレーティングシステムを実行し、それぞれ 10 GB の標準永続ディスクを 2 つ使用します。
 
-* HA 構成には 4 つの Virtual Private Cloud （ VPC ；仮想プライベートクラウド）が必要です。
+* 1 つまたは 3 つのゾーン（推奨）。
++
+3 つのゾーンを選択すると、 2 つのノードとメディエーターが別々の Google Cloud ゾーンに配置されます。
+
+* 4 つの Virtual Private Cloud （ VPC ；仮想プライベートクラウド）
 +
 GCP では各ネットワークインターフェイスが別々の VPC ネットワークに存在する必要があるため、構成では 4 つの VPC を使用します。
 
-* Cloud Volumes ONTAP HA ペアへの着信トラフィックを管理する 4 つの Google Cloud 内部ロードバランサ（ TCP / UDP ）。
+* Cloud Volumes ONTAP HA ペアへの着信トラフィックを管理する 3 つの Google Cloud 内部ロードバランサ（ TCP / UDP ）。（ 9.9.9..0 より前のバージョンでは、 4 つのロードバランサが作成されていました）。
 
 
-link:reference_networking_gcp.html["ネットワーク要件について説明します"]。
+link:reference_networking_gcp.html["ネットワーク要件について説明します"]ロードバランサ、 VPC 、内部 IP アドレス、サブネットなどの詳細が含まれます。
+
+次の概念図は、 Cloud Volumes ONTAP HA ペアとそのコンポーネントを示しています。
+
+image:diagram_gcp_ha.png[""]
 
 
 

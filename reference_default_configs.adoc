@@ -21,6 +21,9 @@ Cloud Volumes ONTAP がデフォルトでどのように設定されているか
 
 * Cloud Volumes ONTAP は、シングルノードシステムとして、また AWS 、 Azure 、 GCP の HA ペアとして利用できます。
 * Cloud Manager は、 Cloud Volumes ONTAP の導入時にデータを提供する Storage VM を 1 つ作成します。追加の Storage VM をサポートする構成もあります。 link:task_managing_svms.html["Storage VM の管理に関する詳細情報"]。
++
+Cloud Manager 3.9.5 リリース以降では、最初の Storage VM で論理スペースのレポートが有効になります。スペースが論理的に報告されると、 ONTAP は、 Storage Efficiency 機能で削減されたすべての物理スペースが使用済みと報告するようにボリュームスペースを報告します。
+
 * Cloud Manager は、次の ONTAP 機能ライセンスを Cloud Volumes ONTAP に自動的にインストールします。
 +
 ** CIFS

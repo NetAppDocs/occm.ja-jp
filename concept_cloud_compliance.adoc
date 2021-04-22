@@ -26,14 +26,14 @@ Cloud Compliance には、コンプライアンスの取り組みに役立つツ
 * 個人識別情報（ PII ）の識別
 * GDPR 、 CCPA 、 PCI 、 HIPAA の各プライバシー規制の要件に応じて、さまざまな機密情報の範囲を特定します
 * データサブジェクトアクセス要求への応答（ dsar ）
-* ファイルに特定のが含まれている場合は、 Cloud Manager ユーザに E メールで通知します PII （この基準は、を使用して定義します link:task_managing_highlights.html#controlling-your-data-using-highlights["ハイライト"^])
+* ファイルに特定のが含まれている場合は、 Cloud Manager ユーザに E メールで通知します PII （この基準は、を使用して定義します link:task_managing_highlights.html#controlling-your-data-using-policies["ポリシー"^])
 * 表示と変更 link:https://azure.microsoft.com/en-us/services/information-protection/["Azure Information Protection （ AIP ）ラベル"^] ファイルに保存できます
 * 個々のファイルを削除します
 
 
 Cloud Compliance には、ガバナンスの取り組みに役立つツールも用意されています。Cloud Compliance を使用すると、次のことができます。
 
-* システム内の古いデータ、ビジネス以外のデータ、大容量ファイルを特定します。
+* システム内の古いデータ、ビジネス以外のデータ、重複ファイル、大容量ファイルを特定します。
 +
 この情報を使用して、一部のファイルを低コストのオブジェクトストレージに移動、削除、または階層化するかどうかを決定できます。
 
@@ -54,12 +54,14 @@ Cloud Compliance では、次の種類の作業環境とデータソースから
 * オンプレミスの ONTAP クラスタ
 * Azure NetApp Files の特長
 * Amazon S3
+* ネットアップ以外のファイル共有
+* オブジェクトストレージ（ S3 プロトコルを使用）
 * データベース
 * OneDrive アカウント
 
 
 
-NOTE: 2021 年 1 月にリリースされたベータ版の機能により、次のことが可能になります 作成したバックアップファイルに対して、 Compliance スキャンを実行して空き容量を確保します を使用して作成したオンプレミスの ONTAP ボリュームから link:concept_backup_to_cloud.html["クラウドバックアップ"^]）。これにより、オンプレミスの ONTAP ボリュームを Cloud Compliance で直接スキャンするか、またはボリュームから作成されたバックアップファイルをスキャンするかを選択できます。
+NOTE: 2021 年 1 月にリリースされたベータ版の機能により、次のことが可能になります 作成したバックアップファイルに対して Compliance Scans _ for free_on を実行します を使用して作成したオンプレミスの ONTAP ボリュームから link:concept_backup_to_cloud.html["クラウドバックアップ"^]）。これにより、オンプレミスの ONTAP ボリュームを Cloud Compliance で直接スキャンするか、またはボリュームから作成されたバックアップファイルをスキャンするかを選択できます。
 
 
 
@@ -95,7 +97,7 @@ Cloud Compliance の仕組みは次のとおりです。
 . Cloud Manager に Cloud Compliance のインスタンスを導入します。
 . 1 つ以上の作業環境またはデータソースで有効にします。
 . Cloud Compliance は、 AI のラーニングプロセスを使用してデータをスキャンします。
-. [* コンプライアンス ] をクリックし、表示されたダッシュボードとレポートツールを使用して、コンプライアンスを強化します。
+. [* コンプライアンス ] をクリックし、表示されたダッシュボードとレポートツールを使用して、コンプライアンスの取り組みを支援します。
 
 
 

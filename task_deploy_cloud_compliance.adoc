@@ -15,13 +15,13 @@ summary: Cloud Manager のワークスペースに Cloud Compliance インスタ
 [role="lead"]
 Cloud Manager のワークスペースに Cloud Compliance インスタンスを導入するには、いくつかの手順を実行します。クラウドまたはオンプレミスシステムに Cloud Compliance を導入できます。
 
-オンプレミスの ONTAP 作業環境を、オンプレミスにあるコンプライアンスインスタンスを使用してスキャンする場合は、オンプレミス環境をインストールすることをお勧めします。ただし、これは必須条件ではありません。Compliance ソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。
+オンプレミスにあるコンプライアンスインスタンスを使用してオンプレミスの ONTAP 作業環境をスキャンする場合は、オンプレミスインストールをお勧めします。ただし、これは必須条件ではありません。Compliance ソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。
 
 
 
 == クイックスタート
 
-これらの手順を実行してすぐに作業を開始するか、残りのセクションまでスクロールして詳細を確認してください。
+これらの手順を実行すると、すぐに作業を開始できます。また、残りのセクションまでスクロールして詳細を確認することもできます。
 
 
 
@@ -69,12 +69,13 @@ Cloud Compliance が Cloud Manager でスキャンする最初の 1TB のデー�
 
 コネクタがない場合は、 Azure または AWS でコネクタを作成します。を参照してください link:task_creating_connectors_aws.html["AWS でコネクタを作成する"^] または link:task_creating_connectors_azure.html["Azure でコネクタを作成する"^]。ほとんどの場合、コネクタセットがあります Cloud Compliance をアクティブ化するのは、ほとんどの場合です link:concept_connectors.html#when-a-connector-is-required["Cloud Manager の機能にはコネクタが必要です"]ただし、ここで設定する必要がある場合もあります。
 
-AWS または Azure で Cloud Compliance 用のコネクタを使用する必要があるシナリオがいくつかあります。
+AWS または Azure に導入されているコネクタを使用する必要がある場合は、次のようなシナリオがあります。
 
 * AWS または AWS S3 バケット内の Cloud Volumes ONTAP のデータをスキャンするときは、 AWS のコネクタを使用します。
 * Azure または Azure NetApp Files で Cloud Volumes ONTAP 内のデータをスキャンする場合は、 Azure のコネクタを使用します。
-* どちらのコネクタでも、データベース、 OneDrive フォルダ、オンプレミス ONTAP システムをスキャンできます。
 
+
+オンプレミスの ONTAP システムでは、どちらのコネクタでも、ネットアップ以外のファイル共有、汎用の S3 オブジェクトストレージ、データベース、 OneDrive のフォルダをスキャンできます。
 
 また、次のことも可能です link:task_installing_linux.html["コネクタをオンプレミスに導入"^] 自社ネットワークまたはクラウド内の既存の Linux ホストCloud Compliance をオンプレミスにインストールする予定のユーザによっては、 Connector をオンプレミスにインストールすることもできます。
 
@@ -128,13 +129,10 @@ AWS 、 Azure 、オンプレミスのいずれに Cloud Compliance を導入す
 | ¥ https://netapp-cloud-account.auth0.com ¥ https://auth0.com | NetApp Cloud Central との通信により、ユーザ認証を一元的に行うことができます。 
 
 
-| https://support.compliance.cloudmanager.cloud.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | ソフトウェアイメージ、マニフェスト、およびテンプレートにアクセスできます。 
+| https://support.compliance.cloudmanager.cloud.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | ソフトウェアイメージ、マニフェスト、テンプレートへのアクセス、およびログとメトリックの送信を提供します。 
 
 
 | \ https://support.compliance.cloudmanager.cloud.netapp.com/ | ネットアップが監査レコードからデータをストリーミングできるようにします。 
-
-
-| \ https://support.compliance.cloudmanager.cloud.netapp.com/ | Cloud Compliance でマニフェストとテンプレートにアクセスしてダウンロードしたり、ログと指標を送信したりできます。 
 
 
 | * オンプレミスインストールのみ： * 。 https://github.com/docker ¥ https://download.docker.com ¥ https://rhui3.us-west-2.aws.ce.redhat.com ¥ https://github-production-release-asset-2e65be.s3.amazonaws.com ¥ https://pypi.org ¥ https://pypi.python.org ¥ https://files.pythonhosted.org ¥ http://mirror.centos.org ¥ http://mirrorlist.centos.org ¥ http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.107-3.el7.noarch.rpm | インストールの前提条件パッケージを提供します。 
@@ -146,7 +144,7 @@ vCPU の制限を確認してください::
 --
 AWS では、インスタンスファミリーは _On-Demand Standard Instances_ です。Azure では ' インスタンスファミリーは _Standard DSView3 Family _ です
 
-vCPU の制限の詳細については、以下を参照してください。
+vCPU の制限の詳細については、次のリンクを参照してください。
 
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html["AWS のマニュアル： Amazon EC2 Service Limits"^]
 * https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas["Azure のドキュメント：「仮想マシンの vCPU クォータ"^]
@@ -182,7 +180,7 @@ Compliance ソフトウェアは、どのインストール方法を選択して
 +
 image:screenshot_cloud_compliance_deploy_start.png["Cloud Compliance をアクティブ化するボタンを選択するスクリーンショット。"]
 
-. コンプライアンスのアクティブ化 * をクリックして、導入ウィザードを開始します。
+. コンプライアンスのアクティブ化 * をクリックして、クラウド導入ウィザードを開始します。
 +
 image:screenshot_cloud_compliance_deploy_cloud.png["クラウドに Cloud Compliance を導入するボタンを選択するスクリーンショット。"]
 
@@ -203,7 +201,7 @@ Cloud Manager によってクラウドプロバイダに Cloud Compliance イン
 
 == Cloud Compliance インスタンスをオンプレミスに導入する
 
-Cloud Compliance の最も一般的な導入方法は、です <<Deploying the Cloud Compliance instance in the cloud,クラウドに導入できます>>。ただし、ネットワーク上の Linux ホストに Compliance ソフトウェアをダウンロードしてインストールすることもできます。
+Compliance ソフトウェアは、にダウンロードしてインストールできます ネットワーク内の Linux ホストが不要な場合 からに <<Deploying the Cloud Compliance instance in the cloud,クラウドに導入できます>>。
 
 Compliance ソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。
 
@@ -235,7 +233,7 @@ NOTE: 現在、 Cloud Compliance インスタンスがオンプレミスにイ�
 +
 image:screenshot_cloud_compliance_deploy_start.png["Cloud Compliance をアクティブ化するボタンを選択するスクリーンショット。"]
 
-. [ コンプライアンスの有効化 * ] をクリックします。
+. [Activate Compliance] をクリックして、オンプレミス展開ウィザードを開始します。
 +
 image:screenshot_cloud_compliance_deploy_onprem.png["Cloud Compliance をオンプレミスに導入するボタンを選択するスクリーンショット。"]
 
@@ -273,7 +271,7 @@ tar -xzf cc_onpm_installer.tar.gz
 ** _cm_host_= Cloud Manager Connector システムの IP アドレスまたはホスト名。
 ** _proxy_host_ = ホストがプロキシサーバの背後にある場合は、プロキシサーバの IP 名またはホスト名。
 ** _proxy_port_= プロキシサーバに接続するポート（デフォルトは 80 ）です。
-** _proxy_scheme_= 接続スキーマ： https または http （デフォルト http ）。
+** _proxy_scheme_= 接続方式： https または http （デフォルト http ）。
 ** _proxy_user_= ベーシック認証が必要な場合、プロキシサーバに接続するための認証されたユーザ。
 ** _proxy_password_ = 指定したユーザ名のパスワード。
 

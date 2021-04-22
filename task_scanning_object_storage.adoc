@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_scanning_object_storage.html 
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage 
-summary: Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 MinIO 、 Linode 、 B2 Cloud Storage などです。 
+summary: Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。これには、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Linode 、 B2 Cloud Storage などが含まれます。 
 ---
 = S3 プロトコルを使用するオブジェクトストレージをスキャンしています
 :hardbreaks:
@@ -13,13 +13,13 @@ summary: Cloud Compliance でオブジェクトストレージ内のデータの
 
 
 [role="lead"]
-Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Azure Blob （ MinIO を使用）、 Linode 、 B2 Cloud Storage などです。
+Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。これには、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Linode 、 B2 Cloud Storage などが含まれます。
 
 
 
 == クイックスタート
 
-これらの手順を実行してすぐに作業を開始するか、残りのセクションまでスクロールして詳細を確認してください。
+これらの手順を実行すると、すぐに作業を開始できます。また、残りのセクションまでスクロールして詳細を確認することもできます。
 
 
 
@@ -54,17 +54,12 @@ link:task_deploy_cloud_compliance.html["Cloud Compliance の導入"^] インス�
 
 
 
-== 前提条件の確認
+== オブジェクトストレージ要件の確認
 
 Cloud Compliance を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認してください。
 
-
-
-=== オブジェクトストレージの要件
-
 * オブジェクトストレージサービスに接続するには、エンドポイント URL が必要です。
 * Cloud Compliance でバケットにアクセスできるようにするには、オブジェクトストレージプロバイダからアクセスキーとシークレットキーを入手する必要があります。
-* Azure Blob のサポートにはを使用する必要があります link:https://min.io/["MinIO サービス"^]。
 
 
 
@@ -82,7 +77,7 @@ image:screenshot_compliance_add_object_storage_button.png["［ スキャン設�
 
 . Add Object Storage Service ダイアログで、オブジェクトストレージサービスの詳細を入力し、 * Continue * をクリックします。
 +
-.. 作業環境に使用する名前を入力します。
+.. 作業環境に使用する名前を入力します。この名前には、接続先のオブジェクトストレージサービスの名前を指定する必要があります。
 .. エンドポイントの URL を入力してオブジェクトストレージサービスにアクセスします。
 .. Cloud Compliance がオブジェクトストレージ内のバケットにアクセスできるように、アクセスキーとシークレットキーを入力します。
 +

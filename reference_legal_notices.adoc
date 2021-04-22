@@ -56,4 +56,5 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[""^]
 * link:media/notice_cloud_sync.pdf["クラウドの同期に関する注意事項"^]
 * link:media/notice_cloud_tiering.pdf["Cloud Tiering への通知"^]
 * link:media/notice_cloud_compliance.pdf["Cloud Compliance に関する通知"^]
+* link:media/notice_application_templates.pdf["アプリケーションテンプレートに関する注意事項"^]
 

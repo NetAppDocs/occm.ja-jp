@@ -81,7 +81,11 @@ NOTE: データ階層化は、 DS3_v2 仮想マシンタイプの Azure では�
 
 
 
-* AWS では、パフォーマンス階層は汎用 SSD （ gp2 ）、プロビジョニングされた IOPS SSD 、またはスループット最適化 HDD にすることができます。
+* AWS では、パフォーマンス階層には汎用 SSD （ GP3 または gp2 ）またはプロビジョニングされる IOPS SSD （ io1 ）を使用できます。
++
+
+NOTE: スループット最適化 HDD （ st1 ）を使用している場合、オブジェクトストレージへのデータの階層化は推奨されません。
+
 * Azure では、 Premium SSD Managed Disks 、 Standard SSD Managed Disks 、 Standard HDD Managed Disks のいずれかです。
 * GCP では、 SSD または HDD （標準ディスク）のどちらかです。
 * データ階層化は暗号化テクノロジでサポートされています。
@@ -269,10 +273,10 @@ Cloud Volumes ONTAP を導入したら、アクセスされていないアクセ
 NOTE: この設定は環境 Cloud Volumes ONTAP のみです。
 
 .手順
-. Cloud Manager コンソールの右上にある * Settings * アイコンをクリックし、 * Cloud Manager Settings * を選択します。
+. Cloud Manager コンソールの右上にある * Settings * アイコンをクリックし、 * Connector Settings * を選択します。
 +
 image:screenshot_settings_icon.gif["Cloud Manager コンソールの右上にある設定アイコンを示すスクリーンショット。"]
 
-. [ アグリゲート容量のしきい値 ] で、 [ データ階層化のアグリゲートの空きスペース率 *] をクリックします。
+. 容量 * で、アグリゲート容量しきい値 - データ階層化の空きスペース率 * をクリックします。
 . 必要に応じて空き領域の比率を変更し、 [ 保存（ Save ） ] をクリックします。
 

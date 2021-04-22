@@ -147,6 +147,7 @@ Cloud Backup をセットアップすると、 IPspace で使用するように�
 +
 方法を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-D4A9F825-77F0-407F-BFBD-D94372D6AAC1.html["SVM 用に DNS サービスを設定"]。
 
+* 必要に応じてファイアウォールルールを更新し、 ONTAP からオブジェクトストレージへのポート 443 経由の Cloud Backup Service 接続と、ポート 53 （ TCP / UDP ）経由での Storage VM から DNS サーバへの名前解決トラフィックを許可します。
 
 
 --

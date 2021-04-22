@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_getting_started_compute.html 
-keywords: compute, cloud insights, cloud analyzer, connect cloud analyzer, connect master payer account, connect payer account, aws payer account 
+keywords: compute, cloud insights, cloud analyzer, connect cloud analyzer, connect management account, connect payer account, aws payer account 
 summary: 任意の Cloud Analyzer からクラウドコンピューティングコストを詳細に分析するには、いくつかの手順を実行します。 
 ---
 = クラウドコンピューティングコストの最適化を始めましょう
@@ -26,7 +26,7 @@ AWS アカウントを接続し、分析結果を確認して、クラウドコ�
 . Add AWS Credentials to Start * をクリックします。
 . ページの手順に従って AWS アカウントを接続します。
 +
-.. AWS マスター支払いアカウントにログインします。
+.. AWS 管理アカウントにログインします。
 .. AWS アカウントのコストと使用状況に関するレポートを設定します。
 .. CloudFormation テンプレートを実行します。
 .. スポットロール配線を貼り付けます。
@@ -40,7 +40,7 @@ image:screenshot_compute_add_account.gif["接続ページで使用可能な各�
 
 
 
-Cloud Analyzer が AWS アカウントデータの処理を開始します。複数のアカウントがある場合、 Cloud Analyzer はマスター支払いアカウントの下にあるすべてのリンクされたアカウントの読み取り専用機能で開始します。これらのアカウントの節約の可能性に関する詳細を確認するには、これらのアカウントを接続する必要があります。このプロセスの詳細については、以下のセクションを参照してください。
+Cloud Analyzer が AWS アカウントデータの処理を開始します。複数のアカウントがある場合、 Cloud Analyzer は管理アカウントのすべてのリンクされたアカウントの読み取り専用機能から開始します。これらのアカウントの節約の可能性に関する詳細を確認するには、これらのアカウントを接続する必要があります。このプロセスの詳細については、以下のセクションを参照してください。
 
 
 

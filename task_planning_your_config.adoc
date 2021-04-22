@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_planning_your_config.html 
-keywords: license, disk, ebs, storage, size, write speed, volume usage, explore, standard, premium, byol, ec2, capacity, limit, configurations, virtual machine, vm, regions, supported disks, disk types, general purpose, gp2 provisioned IOPS, piops, throughput optimized, cold, SSD, HDD, st1, sc1, use profile, thin provisioning, deduplication, compression, Cloud Volumes ONTAP explore, Cloud Volumes ONTAP standard, Cloud Volumes ONTAP premium, Cloud Volumes ONTAP byol, shared instance, dedicated instance, write speed, high write speed, normal write speed, network information, worksheet, limit, limits, storage limits, volume limit, aggregate limit, maximum volume size, maximum aggregate size, supported instances, instances, instances supported, supported ec2 instances, supported instance, aws outpost, outpost, outposts, deploy in outpost, deploy in aws outpost 
+keywords: license, disk, ebs, storage, size, write speed, volume usage, explore, standard, premium, byol, ec2, capacity, limit, configurations, virtual machine, vm, regions, supported disks, disk types, general purpose, gp2 provisioned IOPS, piops, throughput optimized, cold, SSD, HDD, st1, use profile, thin provisioning, deduplication, compression, Cloud Volumes ONTAP explore, Cloud Volumes ONTAP standard, Cloud Volumes ONTAP premium, Cloud Volumes ONTAP byol, shared instance, dedicated instance, write speed, high write speed, normal write speed, network information, worksheet, limit, limits, storage limits, volume limit, aggregate limit, maximum volume size, maximum aggregate size, supported instances, instances, instances supported, supported ec2 instances, supported instance, aws outpost, outpost, outposts, deploy in outpost, deploy in aws outpost 
 summary: AWS に Cloud Volumes ONTAP を導入する場合は、ワークロードの要件に応じて事前設定されたシステムを選択するか、または独自の設定を作成できます。独自の設定を選択する場合は、使用可能なオプションを理解しておく必要があります。 
 ---
 = AWS での Cloud Volumes ONTAP 構成の計画
@@ -29,7 +29,7 @@ Cloud Volumes ONTAP はほとんどの AWS リージョンでサポートされ�
 
 Cloud Volumes ONTAP には、従量課金制とお客様所有のライセンスを使用（ BYOL ）の 2 種類の料金プランがあります。従量課金制の場合は、 Explore 、 Standard 、 Premium の 3 つのライセンスから選択できます。ライセンスごとに容量とコンピューティングのオプションが異なります。
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_990.html["Cloud Volumes ONTAP 9.8 で AWS でサポートされる構成"^]
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_990.html["AWS で Cloud Volumes ONTAP 9.9.0 のサポートされる構成"^]
 
 
 
@@ -37,7 +37,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_990.html
 
 Cloud Volumes ONTAP では、選択したライセンスタイプに応じて、複数のインスタンスタイプがサポートされます。
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_990.html["Cloud Volumes ONTAP 9.8 で AWS でサポートされる構成"^]
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_990.html["AWS で Cloud Volumes ONTAP 9.9.0 のサポートされる構成"^]
 
 
 
@@ -51,7 +51,7 @@ AWS の一部の Cloud Volumes ONTAP 構成にはローカルの NVMe ストレ�
 
 Cloud Volumes ONTAP システムの未フォーマット時の容量制限は、ライセンスに関連付けられています。追加の制限は、アグリゲートとボリュームのサイズに影響します。設定を計画する際には、これらの制限に注意する必要があります。
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_aws_990.html["Cloud Volumes ONTAP 9.8 での AWS でのストレージの制限"]
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_aws_990.html["AWS での Cloud Volumes ONTAP 9.9.0 のストレージの制限"^]
 
 
 
@@ -73,7 +73,23 @@ Cloud Volumes ONTAP システムのサイジングを行うことで、パフォ
 
 
 --
-EBS ディスクタイプ:: 汎用 SSD （ gp2 ）は Cloud Volumes ONTAP で最も一般的なディスクタイプです。EBS ディスクのユースケースについては、を参照してください http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS ドキュメント：「 EBS Volume Types"^]。
+EBS ディスクタイプ::
++
+--
+* _General Purpose SSD （ GP3 ） _ ディスクは、幅広いワークロードに対してコストとパフォーマンスのバランスを取る最も低コストの SSD です。パフォーマンスは、 IOPS とスループットを基準に定義されます。GP3 ディスクは Cloud Volumes ONTAP 9.7 以降でサポートされています。
++
+GP3 ディスクを選択すると、 Cloud Manager はデフォルトの IOPS とスループットの値を入力し、選択したディスクサイズに基づいて gp2 ディスクに相当するパフォーマンスを提供します。この値を増やすと、コストを高くしてもパフォーマンスを向上させることができますが、パフォーマンスが低下する可能性があるため、値を小さくすることはできません。つまり、デフォルト値をそのまま使用するか、値を大きくします。低くしないでください。 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html#gp3-ebs-volume-type["GP3 ディスクとそのパフォーマンスについては、こちらをご覧ください"^]。
+
+* _ 汎用 SSD （ gp2 ） _ ディスクは、幅広いワークロードに対してコストとパフォーマンスのバランスを取ります。パフォーマンスは IOPS の観点から定義されます。
+* _Provisioned IOPS SSD （ io1 ） _disks は、コストが高くても最高のパフォーマンスが求められる重要なアプリケーション用です。
+* _Throughput Optimized HDD （ st1 ） _disks は、高速で安定したスループットを必要とする、アクセス頻度の高いワークロード用です。価格は低くなります。
++
+
+NOTE: スループット最適化 HDD （ st1 ）を使用している場合、オブジェクトストレージへのデータの階層化は推奨されません。
+
+
+
+--
 EBS ディスクサイズ::
 +
 --

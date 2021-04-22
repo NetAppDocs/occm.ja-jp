@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task_controlling_governance_data.html 
-keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights 
-summary: 組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Compliance は、古いデータ、ビジネス以外のデータ、および非常に大容量のファイルを特定するため、一部のファイルを削除するか低コストのオブジェクトストレージに階層化するかを決定できます。 
+keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, policies 
+summary: 組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Compliance は、古いデータ、ビジネス以外のデータ、重複ファイル、および非常に大容量のファイルを特定するため、一部のファイルを削除するか低コストのオブジェクトストレージに階層化するかを決定できます。 
 ---
 = 組織に保存されているデータに関するガバナンスの詳細を表示する
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: 組織のストレージリソース上のデータに関連するコ�
 
 
 [role="lead"]
-組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Compliance は、古いデータ、ビジネス以外のデータ、および非常に大容量のファイルを特定するため、一部のファイルを削除するか低コストのオブジェクトストレージに階層化するかを決定できます。
+組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Compliance は、古いデータ、ビジネス以外のデータ、重複ファイル、および非常に大容量のファイルを特定するため、一部のファイルを削除するか低コストのオブジェクトストレージに階層化するかを決定できます。
 
 また、オンプレミスの場所からクラウドにデータを移行する予定の場合は、移動前にデータのサイズと、機密情報が含まれているデータの有無を確認できます。
 
@@ -27,11 +27,9 @@ image:screenshot_compliance_governance_dashboard.png["Cloud Compliance Governanc
 
 
 
-=== 年間節約の機会
+=== 機会の節約
 
-_Saving Opportunities _ 領域内の項目を調査して、削除または階層化するデータが低コストのオブジェクトストレージにないかどうかを確認することができます。各項目をクリックすると、 [ 調査 ] ページに結果が表示されます。
-
-削減量は、 1 年間の GB あたりのコストを GB あたり 0.30 ドルに基づいてデータを削除、移動、または階層化することで実現できる推定削減量です。
+_Saving Opportunities 領域内の項目を調査して、削除または階層化してより安価なオブジェクトストレージにする必要があるデータがないかどうかを確認できます。各項目をクリックすると、 ［ 調査 ］ ページにフィルタリングされた結果が表示されます。
 
 * *Stale Data*- 3 年前に最後に変更されたデータ。
 * * ビジネス以外のデータ * - カテゴリまたはファイルタイプに基づいて、ビジネスに関連していないと見なされるデータ。これには、次のもの
@@ -50,11 +48,41 @@ _Saving Opportunities _ 領域内の項目を調査して、削除または階�
 
 
 
-=== 最も多くの結果が表示されます
+=== 検索結果が最も多いポリシーです
 
-[ 調査 ] ページに結果を表示するには、ハイライトの名前をクリックします。[* すべて表示 * （ View All * ） ] をクリックして、利用可能なすべてのハイライトのリストを表示します。
+_Policy_area でポリシーの名前をクリックすると、その結果が [ 調査 ] ページに表示されます。[ すべて表示 *] をクリックして、使用可能なすべてのポリシーのリストを表示します。
 
-をクリックします link:task_managing_highlights.html#controlling-your-data-using-highlights["こちらをご覧ください"^] ハイライトの詳細については、を参照してください。
+をクリックします link:task_managing_highlights.html#controlling-your-data-using-policies["こちらをご覧ください"^] ポリシーの詳細については、を参照してください。
+
+
+
+=== データの機密性に基づいて上位のデータリポジトリが表示されます
+
+_Top Data Repositories by Sensitivity Level_ 領域には、最も機密性の高い項目を含む上位 4 つのデータリポジトリ（作業環境およびデータソース）が表示されます。各作業環境の棒グラフは、次のように分割されています。
+
+* 非個人データ
+* 個人データ
+* 機密性の高い個人データ
+
+
+各セクションにカーソルを合わせると、各カテゴリの項目の総数を確認できます。
+
+
+
+=== オープンアクセス権のタイプ別に一覧表示されるデータ
+
+_Open Permissions_ 領域には、スキャンされるすべてのファイルに存在する各タイプの権限の割合が表示されます。このチャートには、次の種類の権限が表示されます。
+
+* オープンアクセスがありません
+* 組織に開く（ Open to Organization ）
+* [ パブリック ] に移動します
+* 不明なアクセスです
+
+
+各セクションにカーソルを合わせると、各カテゴリのファイルの総数が表示されます。各領域をクリックすると、 [ 調査 ] ページにフィルタリングされた結果が表示され、詳細を調査できます。
+
+
+TIP: OneDrive アカウントとデータベース内のファイルは、このグラフに表示されません。
 
 
 
@@ -72,13 +100,13 @@ _Age および _Size_Graphs の項目を調査して、削除または階層化�
 
 === 最も識別されているデータ分類
 
-この領域には、最も識別されたリストが表示されます link:task_controlling_private_data.html#categories["カテゴリ"^]、 link:task_controlling_private_data.html#file-types["ファイルの種類"^]および link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["AIP ラベル"^] をスキャンしたデータに保存します。
+_Classification_area には ' 最も識別されたリストが表示されます link:task_controlling_private_data.html#categories["カテゴリ"^]、 link:task_controlling_private_data.html#file-types["ファイルの種類"^]および link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["AIP ラベル"^] をスキャンしたデータに保存します。
 
 
 
 ==== カテゴリ
 
-カテゴリを使用すると、保有している情報の種類を表示して、データの状況を把握することができます。たとえば、履歴書や従業員契約などのカテゴリには機密データを含めることができます。結果を調査すると、従業員契約が安全でない場所に保存されていることがわかります。その後、その問題を修正できます。
+カテゴリを使用すると、保有している情報の種類を表示して、データの状況を把握することができます。たとえば、「履歴書」や「従業員契約書」などのカテゴリには機密データを含めることができます。結果を調査すると、従業員契約が安全でない場所に保存されていることがわかります。その後、その問題を修正できます。
 
 を参照してください link:task_controlling_private_data.html#viewing-files-by-categories["カテゴリ別にファイルを表示します"^] を参照してください。
 

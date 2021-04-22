@@ -232,6 +232,12 @@ entries:
     url: "/task_managing_ontap.html"
   - title: ONTAP ボリュームを管理します
     url: "/task_provisioning_ontap.html"
+- title: リソース作成を標準化するためのテンプレートを作成します
+  entries:
+  - title: アプリケーションテンプレートについては、こちらをご覧ください
+    url: "/concept_resource_templates.html"
+  - title: はじめに
+    url: "/task_define_templates.html"
 - title: データをクラウドにバックアップ
   entries:
   - title: Cloud Backup の詳細をご確認ください
@@ -312,6 +318,10 @@ entries:
         url: "/task_scanning_databases.html"
       - title: OneDrive アカウント
         url: "/task_scanning_onedrive.html"
+      - title: ファイル共有
+        url: "/task_scanning_file_shares.html"
+      - title: オブジェクトストレージ
+        url: "/task_scanning_object_storage.html"
   - title: データのガバナンスの詳細を確認できます
     url: "/task_controlling_governance_data.html"
   - title: データのコンプライアンスの詳細を表示します

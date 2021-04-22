@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_managing_cloud_central_accounts.html 
-keywords: account settings, workspaces, Connector, account admin, workspace admin, users, associate, disassociate, add user, add users, user management, administer, user, management, remove user, remove users, remove, delete, account, user account, user accounts, add workspace, setup workspace, workspace, Connector, manage Connector, manage workspace, associate Connector 
-summary: 初期セットアップの実行後、ユーザー、ワークスペース、コネクタ、およびサブスクリプションの管理が必要になる場合があります。 
+keywords: account settings, workspaces, Connector, account admin, workspace admin, users, associate, disassociate, add user, add users, user management, administer, user, management, remove user, remove users, remove, delete, account, user account, user accounts, add workspace, setup workspace, workspace, Connector, manage Connector, manage workspace, associate Connector, service account 
+summary: 初期セットアップを実行した後、ユーザー、サービスアカウント、ワークスペース、コネクタ、およびサブスクリプションを管理することで、アカウント設定を後から管理できます。 
 ---
-= ユーザ、ワークスペース、コネクタ、およびサブスクリプションの管理
+= アカウントの管理
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -13,13 +13,27 @@ summary: 初期セットアップの実行後、ユーザー、ワークスペ�
 
 
 [role="lead"]
-link:task_setting_up_cloud_central_accounts.html["初期セットアップを実行したあと"]では、後でユーザー、ワークスペース、コネクタ、およびサブスクリプションを管理することによって、アカウント設定の管理が必要になる場合があります。
+link:task_setting_up_cloud_central_accounts.html["初期セットアップを実行したあと"]では、後でユーザー、サービスアカウント、ワークスペース、コネクタ、およびサブスクリプションを管理することで、アカウント設定を管理できます。
 
 link:concept_cloud_central_accounts.html["Cloud Central アカウントの仕組みの詳細については、こちらをご覧ください"]。
 
 
 
-== ユーザを追加する
+== テナンシー API を使用してアカウントを管理します
+
+API 要求を送信してアカウント設定を管理する場合は、 _Tenancy _API を使用する必要があります。この API は、作業環境の作成と管理に使用する Cloud Manager API とは異なります。
+
+https://cloudmanager.cloud.netapp.com/tenancy/api-docs/static/index.html["テナンシー API のエンドポイントを表示します"^]。
+
+
+
+== ユーザの作成と管理
+
+アカウント内のユーザーは、アカウントのワークスペース内のリソースを管理するためにアクセスできます。
+
+
+
+=== ユーザを追加する
 
 Cloud Central ユーザを Cloud Central アカウントに関連付けて、これらのユーザが Cloud Manager で作業環境を作成および管理できるようにします。
 
@@ -52,7 +66,7 @@ image:screenshot_associate_user.gif["ロールと関連するワークスペー�
 
 
 
-== ユーザの削除
+=== ユーザの削除
 
 ユーザの関連付けを解除すると、 Cloud Central アカウント内のリソースにアクセスできなくなります。
 
@@ -72,7 +86,7 @@ image:screenshot_associate_user_workspace.gif["ユーザテーブルでユーザ
 
 
 
-== ワークスペース管理者のワークスペースの管理
+=== ワークスペース管理者のワークスペースの管理
 
 ワークスペース管理者は、いつでもワークスペースに関連付けたり、ワークスペースと関連付けを解除したりできます。ユーザーを関連付けると、ワークスペース内の作業環境を作成して表示できます。
 
@@ -90,6 +104,108 @@ image:screenshot_associate_user_workspace.gif["ユーザテーブルでユーザ
 
 
 コネクタがワークスペースにも関連付けられていれば、ユーザは Cloud Manager からこれらのワークスペースにアクセスできるようになりました。
+
+
+
+== サービスアカウントの作成と管理
+
+サービスアカウントは「ユーザ」の役割を果たし、 Cloud Manager に対して自動化のための許可された API 呼び出しを実行できます。これにより、自動化スクリプトを作成する必要がなくなります。自動化スクリプトは、会社を離れることができる実際のユーザアカウントに基づいて作成する必要がなくなります。フェデレーションを使用している場合は、クラウドから更新トークンを生成することなくトークンを作成できます。
+
+サービスアカウントには、他の Cloud Manager ユーザと同様にロールを割り当てることで権限を付与します。サービスアカウントを特定のワークスペースに関連付けることで、サービスがアクセスできる作業環境（リソース）を制御することもできます。
+
+サービスアカウントを作成すると、 Cloud Manager でサービスアカウントのクライアント ID とクライアントシークレットをコピーまたはダウンロードできます。このキーペアは、 Cloud Manager との認証に使用されます。
+
+
+
+=== サービスアカウントの作成
+
+作業環境でリソースを管理するために必要な数のサービスアカウントを作成します。
+
+.手順
+. Cloud Manager の上部で、 * Account * ドロップダウンをクリックします。
++
+image:screenshot_account_settings_menu.gif["Cloud Manager の上部のバナーにあるアカウント設定オプションを示すスクリーンショット。"]
+
+. 現在選択されているアカウントの横にある ［ * アカウントの管理 * ］ をクリックします。
++
+image:screenshot_manage_account_settings.gif["「アカウント」ドロップダウンから利用できる「アカウント設定の管理」オプションを示すスクリーンショット。"]
+
+. ［ ユーザー ］ タブで、 ［ * サービスアカウントの作成 * ］ をクリックします。
+. 名前を入力し、ロールを選択します。Account Admin 以外のロールを選択した場合は、このサービスアカウントに関連付けるワークスペースを選択します。
+. [ 作成（ Create ） ] をクリックします。
+. クライアント ID とクライアントシークレットをコピーまたはダウンロードします。
++
+クライアントシークレットは 1 回だけ表示され、 Cloud Manager ではどこにも保存されません。シークレットをコピーまたはダウンロードして安全に保管します。
+
+. [* 閉じる * ] をクリックします。
+
+
+
+
+=== サービスアカウントのベアラトークンを取得する
+
+への API 呼び出しを実行するため https://cloudmanager.cloud.netapp.com/tenancy/api-docs/static/index.html["テナンシー API"^]サービスアカウントのベアラートークンを取得する必要があります。
+
+[source, curl]
+----
+curl --location --request POST 'https://netapp-cloud-account.auth0.com/oauth/token' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "grant_type": "client_credentials",
+    "client_secret": "<client secret>",
+    "audience": "https://api.cloud.netapp.com",
+    "client_id": "<client id>"
+}'
+----
+
+
+=== クライアント ID をコピーしています
+
+サービスアカウントのクライアント ID はいつでもコピーできます。
+
+.手順
+. [ ユーザー ] タブで、サービスアカウントに対応する行のアクションメニューをクリックします。
++
+image:screenshot_service_account_actions.gif["ユーザテーブルでユーザの名前にカーソルを合わせたときに使用できる操作メニューを示すスクリーンショット。"]
+
+. [ クライアント ID] をクリックします。
+. ID がクリップボードにコピーされます。
+
+
+
+
+=== キーの再作成中です
+
+キーを再作成すると、このサービスアカウントの既存のキーが削除され、新しいキーが作成されます。前のキーを使用することはできません。
+
+.手順
+. [ ユーザー ] タブで、サービスアカウントに対応する行のアクションメニューをクリックします。
++
+image:screenshot_service_account_actions.gif["ユーザテーブルでユーザの名前にカーソルを合わせたときに使用できる操作メニューを示すスクリーンショット。"]
+
+. [ キーの再作成 *] をクリックします。
+. 再作成 * をクリックして確定します。
+. クライアント ID とクライアントシークレットをコピーまたはダウンロードします。
++
+クライアントシークレットは 1 回だけ表示され、 Cloud Manager ではどこにも保存されません。シークレットをコピーまたはダウンロードして安全に保管します。
+
+. [* 閉じる * ] をクリックします。
+
+
+
+
+=== サービスアカウントを削除する
+
+不要になったサービスアカウントを削除します。
+
+.手順
+. [ ユーザー ] タブで、サービスアカウントに対応する行のアクションメニューをクリックします。
++
+image:screenshot_service_account_actions.gif["ユーザテーブルでユーザの名前にカーソルを合わせたときに使用できる操作メニューを示すスクリーンショット。"]
+
+. [ 削除（ Delete ） ] をクリックします。
+. 再度 * Delete * をクリックして確定します。
+
 
 
 
@@ -159,6 +275,30 @@ image:screenshot_subscription_menu.gif["サブスクリプションのアクシ�
 . Cloud Manager の上部で、 * Account * ドロップダウンをクリックし、 * Manage Account * をクリックします。
 . 「 * 概要 * 」タブで、アカウント名の横にある編集アイコンをクリックします。
 . 新しいアカウント名を入力し、 * 保存 * をクリックします。
+
+
+
+
+== プライベートプレビューを許可します
+
+アカウントでプライベートプレビューを有効にすると、 Cloud Manager でプレビュー版として提供される新しい NetApp クラウドサービスにアクセスできるようになります。
+
+プライベートプレビューのサービスは、期待どおりに動作することが保証されておらず、サービスが停止したり、機能しなくなったりする可能性があります。
+
+.手順
+. Cloud Manager の上部で、 * Account * ドロップダウンをクリックし、 * Manage Account * をクリックします。
+. [ * 概要 * ] タブで、 [ * プライベートプレビューを許可する * ] 設定を有効にします。
+
+
+
+
+== サードパーティサービスを許可しています
+
+アカウント内のサードパーティサービスが、 Cloud Manager で使用可能なサードパーティサービスにアクセスできるようにします。サードパーティのサービスはクラウドサービスとネットアップが提供するサービスに似ていますが、サードパーティが管理とサポートを行っています。
+
+.手順
+. Cloud Manager の上部で、 * Account * ドロップダウンをクリックし、 * Manage Account * をクリックします。
+. [ * 概要 * ] タブで、 [ * サードパーティサービスを許可する * ] 設定を有効にします。
 
 
 

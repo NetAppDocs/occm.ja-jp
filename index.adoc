@@ -3,7 +3,7 @@ sidebar: sidebar
 permalink: index.html 
 summary: Cloud Manager を使用すると、 IT エキスパートとクラウドアーキテクトは、ネットアップのクラウドソリューションを使用してハイブリッドマルチクラウドインフラを一元管理できます。 
 ---
-= Cloud Manager および Cloud Volumes ONTAP のドキュメント
+= Cloud Manager のドキュメント
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -44,7 +44,7 @@ Cloud Manager を使用すると、 IT エキスパートとクラウドアー�
 
 * link:task_managing_ontap.html["Active IQ"]
 * link:concept_compute.html["コンピューティング"]
-* link:concept_backup_to_cloud.html["クラウドバックアップ"]
+* link:concept_backup_to_cloud.html["クラウドへのバックアップとリストア"]
 * link:task_getting_started_compliance.html["クラウドコンプライアンス"]
 * link:concept_cloud_sync.html["Cloud Sync"]
 * link:concept_cloud_tiering.html["クラウド階層化"]
@@ -52,7 +52,7 @@ Cloud Manager を使用すると、 IT エキスパートとクラウドアー�
 * link:task_connecting_kubernetes.html["K8s"]
 * link:task_getting_started_monitoring.html["監視"]
 * link:task_replicating_data.html["レプリケーション"]
-* link:task_restore_backups.html["リストア"]
+* link:concept_resource_templates.html["テンプレート"]
 
 
 

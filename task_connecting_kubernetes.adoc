@@ -73,7 +73,7 @@ Connector と Cloud Volumes ONTAP の両方で Kubernetes API エンドポイン
 
 +
 ** 管理対象クラスタの場合は、クラスタの VPC と、コネクタと Cloud Volumes ONTAP が存在する VPC の間にルートを設定します。
-** 他のクラスタの場合は、マスターノードまたはロードバランサの IP アドレス（ kubeconfig ファイルに一覧表示）にコネクタおよび Cloud Volumes ONTAP から到達可能で、有効な TLS 証明書を提供する必要があります。
+** 他のクラスタの場合は、プライマリノードまたはロードバランサの IP アドレス（ kubeconfig ファイルに一覧表示）にコネクタおよび Cloud Volumes ONTAP から到達可能で、有効な TLS 証明書を提供する必要があります。
 
 
 * Kubernetes クラスタは、上記のネットワーク接続を持つ任意の場所に配置できます。

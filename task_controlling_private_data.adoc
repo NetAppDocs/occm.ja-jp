@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_controlling_private_data.html 
-keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, filter data, permissions, csv file, highlights 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, filter data, permissions, csv file, highlights, policies 
 summary: 組織内の個人データと機密性の高い個人データに関する詳細を表示することで、個人データを管理できます。また、データに含まれる Cloud Compliance のカテゴリとファイルタイプを確認して、情報を可視化することもできます。 
 ---
 = 組織に保存されているデータのコンプライアンスの詳細を表示する
@@ -130,25 +130,48 @@ image:screenshot_file_types.gif["ファイルタイプダイアログボック�
 
 
 
-== ファイルのメタデータと権限の表示
+== ファイルメタデータを表示しています
 
 [ データ調査結果 ] ペインで、をクリックできます image:button_subfolder.png["右キャレット"] をクリックすると、単一のファイルについてファイルのメタデータが表示されます。
 
 image:screenshot_compliance_file_details.png["[ データ調査 ] ページのファイルのメタデータの詳細を示すスクリーンショット。"]
 
-ファイルが存在する作業環境とボリュームを表示するだけでなく、ファイル権限、ファイルの所有者、割り当てられた AIP ラベル（ある場合）などの詳細情報もメタデータに表示されます link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["クラウドコンプライアンスにおける AIP の統合"^]）。この情報は、ハイライトを作成する予定の場合に役立ちます。これは、データのフィルタリングに使用できるすべての情報を確認できるためです。
+ファイルが存在する作業環境とボリュームを表示するだけでなく、メタデータには、ファイル権限、ファイルの所有者、このファイルの重複がないかどうか、および AIP ラベルが割り当てられている場合など、より多くの情報が表示されます link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["クラウドコンプライアンスにおける AIP の統合"^]）。この情報は、を計画している場合に役立ちます link:task_managing_highlights.html#creating-custom-policies["ポリシーを作成します"] データのフィルタリングに使用できるすべての情報が表示されます。
 
-すべてのデータソースについて、すべての情報が表示されるわけではなく、そのデータソースに適した情報だけが表示されることに注意してください。たとえば、権限と AIP ラベルはデータベースファイルには関係ありません。
+すべてのデータソースについて、すべての情報が表示されるわけではなく、そのデータソースに適した情報だけが表示されることに注意してください。たとえば、ボリューム名、権限、および AIP ラベルは、データベースファイルには関係ありません。
 
-ファイルへのアクセス権を持つすべてのユーザーまたはグループのリストを表示するには、 * すべてのアクセス権を表示 * をクリックします。このボタンは、 CIFS 共有と OneDrive アカウントのファイルに対してのみ使用できます。
+単一のファイルの詳細を表示する場合は、そのファイルに対して次の 2 つの操作を実行できます。
+
+* ファイルを削除できます。を参照してください link:task_managing_highlights.html#deleting-source-files["ソースファイルを削除しています"^] を参照してください。
+* AIP ラベルを Cloud Compliance と統合している場合は、このファイルにラベルを割り当てることも、すでに存在する場合は別のラベルに変更することもできます。を参照してください link:task_managing_highlights.html#assigning-aip-labels-manually["AIP ラベルを手動で割り当てる"^] を参照してください。
+
+
+
+
+=== ファイルの権限を表示しています
+
+ファイルへのアクセス権を持つすべてのユーザーまたはグループのリストと、そのファイルに含まれるアクセス権の種類を表示するには、 * すべてのアクセス権を表示 * をクリックします。
 
 image:screenshot_compliance_permissions.png["詳細なファイル権限を示すスクリーンショット。"]
 
-このファイルに対して実行できる操作は 2 つあります。
+このボタンは、 CIFS 共有内のファイルに対してのみ使用できます。
 
-* AIP ラベルを Cloud Compliance と統合している場合は、このファイルにラベルを割り当てることも、すでに存在する場合は別のラベルに変更することもできます。を参照してください link:task_managing_highlights.html#assigning-aip-labels-manually["AIP ラベルを手動で割り当てる"^] を参照してください。
-* ファイルを削除できます。を参照してください link:task_managing_highlights.html#deleting-source-files["ソースファイルを削除しています"^] を参照してください。
 
+
+=== ストレージシステムでファイルが複製されているかどうかを表示する
+
+特定のファイルが重複している場合、この情報は _Duplicats_field の横に表示されます。これは、ストレージスペースを節約できる領域を特定する場合に便利です。また、特定の権限や機密情報を持つファイルが、ストレージシステム内で不必要に重複しないようにすることもできます。
+
+で説明されている形式のファイルのみ link:reference_private_data_categories.html#types-of-files["ファイルのタイプ"] 重複として識別できます。
+
+重複ファイルのリストを表示するには、 * 詳細の表示 * をクリックします。次のページで、 [ 重複の表示 *] をクリックして、 [ 調査 ] ページでファイルを表示します。
+
+image:screenshot_compliance_duplicate_file.png["重複するファイルが配置されている場所を確認する方法を示すスクリーンショット。"]
+
+重複ファイルのリストをダウンロードし、ストレージ管理者に送信して、削除可能なファイルをユーザが判別できるようにします。あなたのできる link:task_managing_highlights.html#deleting-source-files["ファイルを削除します"^] このバージョンのファイルが不要であると確信している場合は、自分自身で実行します。
+
+
+TIP: このページで指定されている「ハッシュ」値を使用して、 ［ 調査 ］ ページに直接入力すると、いつでも特定の重複ファイルを検索したり、ポリシーで使用することができます。
 
 
 
@@ -176,7 +199,7 @@ image:screenshot_compliance_investigation_filtered.png["調査ページで結果
 * トップレベルのタブでは、ファイル（非構造化データ）またはデータベース（構造化データ）のデータを表示できます。
 * 各列の上部にあるコントロールを使用して、結果を数値またはアルファベット順にソートできます。
 * 左側のペインフィルタを使用すると、作業環境、ストレージリポジトリ、カテゴリ、プライベートデータ、ファイルタイプ、ファイルサイズ、最終変更日、 S3 オブジェクトの権限がパブリックアクセスに対して許可されているかどうかなどを指定して、結果を絞り込むことができます。
-* [ フィルタ ] ペインの上部にある _Highlights_filter には、保存されたデータベースクエリや [ お気に入り ] リストなど、よく要求されるフィルタの組み合わせを提供するカスタムフィルタが一覧表示されます。実行します link:task_managing_highlights.html#controlling-your-data-using-highlights["こちらをご覧ください"^] 事前定義されたハイライトのリストを表示したり、独自のハイライトを作成する方法を確認したりできます。
+* [ フィルタ ] ペインの上部にある _Policies_filter には、保存されたデータベースクエリや [ お気に入り ] リストなど、よく要求されるフィルタの組み合わせを提供するカスタムフィルタがリストされます。実行します link:task_managing_highlights.html#controlling-your-data-using-policies["こちらをご覧ください"^] 事前定義されたポリシーのリストを表示し、独自のカスタムポリシーを作成する方法を確認できます。
 
 
 

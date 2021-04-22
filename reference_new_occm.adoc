@@ -21,6 +21,125 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
+== Cloud Manager 3.9.5 （ 2021 年 4 月 11 日）
+
+* <<Cloud Volumes ONTAP enhancements>>
+* <<Cloud Sync enhancements>>
+* <<Cloud Compliance enhancements>>
+* <<New Application Templates feature>>
+* <<Connector enhancement>>
+* <<Account enhancements>>
+
+
+
+
+=== Cloud Volumes ONTAP の機能拡張
+
+このリリースの Cloud Manager では、 Cloud Volumes ONTAP の管理が強化されています。
+
+
+
+==== すべてのクラウドプロバイダで利用できる機能強化
+
+Cloud Manager で、 Cloud Volumes ONTAP 用に作成した最初の Storage VM の論理スペースのレポートを有効にするようになりました。
+
+スペースが論理的に報告されると、 ONTAP は、 Storage Efficiency 機能で削減されたすべての物理スペースが使用済みと報告するようにボリュームスペースを報告します。
+
+
+
+==== AWS で利用できる機能拡張
+
+* Cloud Volumes ONTAP では、 9.7 リリース以降、 _General Purpose SSD （ GP3 ） _disks がサポートされるようになりました。GP3 ディスクは、幅広いワークロードのコストとパフォーマンスのバランスが取れた、最も低コストの SSD です。
++
+link:task_planning_your_config.html#sizing-your-system-in-aws["Cloud Volumes ONTAP で GP3 ディスクを使用する方法については、こちらをご覧ください"]。
+
+* Cloud Volumes ONTAP はコールド HDD （ sc1 ）ディスクをサポートしなくなりました。
+
+
+
+
+==== Azure で利用できる機能拡張
+
+Cloud Manager が Azure for Cloud Volumes ONTAP でストレージアカウントを作成する際に、ストレージアカウントの TLS のバージョンが 1.2 になりました。
+
+
+
+=== Cloud Sync の機能拡張
+
+* スタンドアロンの Cloud Sync サービスは廃止されました。Cloud Sync には Cloud Manager から直接アクセスできるようになりました。同じ機能がすべて利用可能です。
++
+Cloud Manager にログインしたら、上部の Sync タブに切り替えて、以前と同様に関係を表示できます。
+
+* 同期関係を設定する際、データブローカーのサービスアカウントに必要な権限を指定している場合は、異なるプロジェクトの Google Cloud バケットから選択できます。
++
+link:task_sync_installing_gcp.html["サービスアカウントの設定方法について説明します"]。
+
+* Cloud Sync は、 Google Cloud Storage と S3 プロバイダ（ AWS S3 、 StorageGRID 、 IBM Cloud Object Storage ）間でメタデータをコピーするようになりました。
+* Cloud Sync からデータブローカーを再起動できるようになりました。
++
+image:screenshot_sync_restart_data_broker.gif["データブローカーの管理ページからのデータブローカーの再起動アクションを示すスクリーンショット。"]
+
+* Cloud Sync は、データブローカーで最新のソフトウェアリリースが実行されていないことを確認できるようになりました。このメッセージは、最新の機能を確実に利用するために役立ちます。
++
+image:screenshot_sync_warning.gif["ダッシュボードでデータブローカーを表示したときに警告が表示されるスクリーンショット。"]
+
+
+
+
+
+=== Cloud Compliance の機能拡張
+
+* オンプレミスまたはクラウドにある NFS または CIFS ファイル共有のスキャンがサポートされるようになりました。
++
+ネットアップ以外のストレージシステム上のファイル共有をスキャンできるようになりました。を参照してください link:task_scanning_file_shares.html["ファイル共有をスキャンしています"^] を参照してください。
+
+* S3 プロトコルを使用するオブジェクトストレージのスキャンのサポートが追加されました。
++
+Amazon S3 バケットをスキャンするだけでなく、 S3 プロトコルを使用する任意の Object Storage サービスからデータをスキャンできるようになりました。これには、 NetApp StorageGRID 、 IBM Cloud Object Store などが含まれます。を参照してください link:task_scanning_object_storage.html["オブジェクトストレージをスキャンしています"^] を参照してください。
+
+* 「ハイライト」という機能は、「ポリシー」に名称変更されました。を参照してください link:task_managing_highlights.html#controlling-your-data-using-policies["ポリシーの使用方法"] コンプライアンスとガバナンスへの取り組みを支援します。
+* ストレージシステム内に特定のファイルの重複がないかどうかを確認できるようになりました。これは、ストレージスペースを節約できる領域を特定するのに役立ちます。また、機密情報を含むファイルがストレージシステムに不必要に複製されないようにするのにも役立ちます。
++
+方法をご確認ください link:task_controlling_private_data.html#viewing-whether-files-are-duplicated-in-your-storage-systems["重複ファイルを検索します"]。
+
+* 。 link:task_controlling_governance_data.html["ガバナンスダッシュボード"^] に、表示するグラフが追加されました link:task_controlling_governance_data.html#top-data-repositories-listed-by-data-sensitivity["データの機密性に基づいて上位のデータリポジトリが表示されます"] および link:task_controlling_governance_data.html#data-listed-by-types-of-open-permissions["オープンアクセス権のタイプ別に一覧表示されるデータ"]。
+
+
+
+
+=== 新しいアプリケーションテンプレート機能
+
+テンプレートを使用することで、作業環境でのリソース作成を標準化できます。たとえば、「ボリュームテンプレート」に必須パラメータをハードコーディングして、ストレージ管理者がボリュームを作成するときにあとから適用できます。これには、必要なディスクタイプ、サイズ、プロトコル、クラウドプロバイダなどが含まれます。作成したボリュームごとに、 Cloud Backup などの特定のサービスをオンにすることもできます。
+
+これにより、ストレージ管理者は、データベースやストリーミングサービスなど、特殊なワークロード要件に合わせて最適化されたボリュームを簡単に作成できます。また、各ボリュームがアプリケーションごとに最適に作成されていることを確認すれば、ストレージアーキテクトの負担が軽減されます。詳細はこちら link:concept_resource_templates.html["アプリケーションテンプレート"^] また、実際の環境での使用方法も確認できます。
+
+
+
+=== コネクターの拡張
+
+プロキシサーバを設定している場合、プロキシを経由せずに Cloud Manager に API 呼び出しを直接送信するオプションを有効にできるようになりました。このオプションは、 AWS または Google Cloud で実行されているコネクタでサポートされます。
+
+link:task_configuring_proxy.html["この設定の詳細については、こちらをご覧ください"]。
+
+
+
+=== アカウントの機能拡張
+
+* サービスアカウントユーザを作成できるようになりました。
++
+サービスアカウントは「ユーザ」の役割を果たし、 Cloud Manager に対して自動化のための許可された API 呼び出しを実行できます。これにより、自動化スクリプトを作成する必要がなくなります。自動化スクリプトは、会社を離れることができる実際のユーザアカウントに基づいて作成する必要がなくなります。フェデレーションを使用している場合は、クラウドから更新トークンを生成することなくトークンを作成できます。
+
++
+link:task_managing_cloud_central_accounts.html#creating-and-managing-service-accounts["サービスアカウントの使用方法の詳細については、こちらをご覧ください"]。
+
+* アカウントのプライベートプレビューで、新しい NetApp クラウドサービスが Cloud Manager のプレビューとして利用できるようになりました。
+* また、アカウント内のサードパーティサービスが Cloud Manager で使用可能なサードパーティサービスにアクセスできるようにすることもできます。
+
+
+link:task_managing_cloud_central_accounts.html#allowing-private-previews["これらのオプションの詳細については、こちらをご覧ください"]。
+
+
+
 == Cloud Manager 3.9.4 の更新（ 2021 年 4 月 8 日）
 
 
@@ -45,7 +164,7 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 +
 たとえば、ダッシュボードは、古いデータ、ビジネス以外のデータ、およびシステム内の大容量ファイルを特定するため、一部のファイルを低コストのオブジェクトストレージに移動、削除、階層化するかどうかを判断できます。
 
-* のリストを表示できます link:task_controlling_private_data.html#viewing-file-metadata-and-permissions["ファイルへのアクセス権を持つすべてのユーザまたはグループ"^]。
+* のリストを表示できます link:task_controlling_private_data.html#viewing-file-metadata["ファイルへのアクセス権を持つすべてのユーザまたはグループ"^]。
 * AWS の政府機関では、 Cloud Compliance がサポートされるようになりました。
 
 
@@ -205,15 +324,15 @@ link:task_managing_tiering.html#discovering-additional-clusters-from-cloud-tieri
 * スキャンするファイルの Azure Information Protection （ AIP ）ラベルを表示および管理します。
 +
 ** AIP ラベル機能を Cloud Compliance に統合すると、ファイルに割り当てられているラベルを表示したり、ファイルにラベルを追加したり、ラベルを変更したりできます。を参照してください link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["AIP ラベルを統合する方法"^] をワークスペースに配置します。
-** ファイルにラベルを個別に割り当てるか、またはのハイライト機能を使用します link:task_managing_highlights.html#assigning-aip-labels-automatically-with-highlights["ハイライト条件に一致するすべてのファイルにラベルを追加します"^]。ハイライトでは、 Cloud Compliance がファイル内で一致する項目を検出すると、ラベルは継続的に更新されます。
+** ラベルを個別にファイルに割り当てるか、またはポリシー機能を使用してに割り当てます link:task_managing_highlights.html#assigning-aip-labels-automatically-with-policies["ポリシー条件に一致するすべてのファイルにラベルを追加します"^]。ポリシーでは、 Cloud Compliance がファイル内で一致する項目を検出すると、ラベルは継続的に更新されます。
 ** ラベルに一致するすべてのファイルを表示するには、 ［ 調査 ］ ページのデータを AIP ラベルでフィルタリングします。
 
 
-* Cloud Manager ユーザ（日次、週次、または月単位）に、ハイライト結果が返されたら E メールアラートを送信して、データを保護する通知を受け取ることができます。
+* いずれかのポリシーから結果が返されたら、 Cloud Manager ユーザ（日単位、週単位、または月単位）に E メールアラートを送信して、通知を受け取ってデータを保護します。
 +
-このオプションは、で選択します link:task_managing_highlights.html#creating-custom-highlights["任意の高輝度表示を作成または編集します"^]。
+このオプションは、で選択します link:task_managing_highlights.html#creating-custom-policies["ポリシーを作成または編集する"^]。
 
-* ファイルの所有者と権限の情報を表示するタイミング link:task_controlling_private_data.html#viewing-file-metadata-and-permissions["個々のファイルの詳細を表示します"^]。
+* ファイルの所有者と権限の情報を表示するタイミング link:task_controlling_private_data.html#viewing-file-metadata["個々のファイルの詳細を表示します"^]。
 +
 この条件を使用して、 [ 調査 ] ページでデータをさらにフィルタリングすることもできます。
 
@@ -310,9 +429,9 @@ image:screenshot_support_dashboard.gif["サポート情報、リンク、ケー�
 +
 これで、すべての OneDrive ユーザーからフォルダーとファイルをスキャンするために、会社の OneDrive アカウントを Cloud Compliance に追加できます。を参照してください link:task_scanning_onedrive.html["OneDrive アカウントをスキャンしています"^] を参照してください。
 
-* 「ハイライト」機能では、組織固有の検索結果を提供する独自のカスタムハイライトを作成できるようになりました。
+* 「ポリシー」機能では、組織固有の検索結果を提供する独自のカスタムポリシーを作成できるようになりました。
 +
-前回のリリースでは、 Cloud Compliance により、すべてのユーザが使用できる一連の定義済みの高輝度表示フィルタが提供されていました。独自のハイライトを作成して、 ［ 調査 ］ ページで特定のスキャン結果を返すことができます。方法を参照してください link:task_managing_highlights.html#creating-custom-highlights["独自の高輝度表示を作成します"^]。
+前回のリリースでは、 Cloud Compliance に、すべてのユーザが使用できる事前定義されたポリシーフィルタが用意されていました。独自のポリシーを作成して、 [ 調査 ] ページで特定のスキャン結果を返すことができます。方法を参照してください link:task_managing_highlights.html#creating-custom-policies["独自のカスタムポリシーを作成できます"^]。
 
 * オンプレミスの ONTAP システムからバックアップファイルを無料でスキャンできます。
 +
@@ -503,12 +622,12 @@ link:task_deploy_cloud_compliance.html#deploying-the-cloud-compliance-instance-o
 +
 これまでは、 NFS DP ボリュームをスキャンすることができました。このリリースでは、 CIFS DP ボリュームを Cloud Compliance 内で直接簡単にスキャンできます。 link:task_getting_started_compliance.html#scanning-data-protection-volumes["詳細をご確認ください"]。
 
-* 新しい「ハイライト」機能では、事前に定義された組み合わせを選択できます [ 調査 ] ページで結果を返すフィルタ
+* 新しい「ポリシー」機能では、事前に定義された組み合わせが選択できます [ 調査 ] ページで結果を返すフィルタ
 +
-今回のリリースでは、 10 のハイライトをご用意しています。たとえば、「 HIPAA – Stale data over 30 days 」のハイライト表示では、 30 日以上前の Health 情報を含むファイルが特定されます。 link:task_controlling_private_data.html#using-highlights-to-quickly-view-results-in-the-investigation-page["事前定義されたハイライトの一覧を確認します"]。
+このリリースでは、 10 個のポリシーを使用できます。たとえば、「 HIPAA – Stale data over 30 days 」ポリシーは、 30 日以上前の Health 情報を含むファイルを識別します。 link:task_controlling_private_data.html#using-policies-to-quickly-view-results-in-the-investigation-page["事前定義されたポリシーの完全なリストを表示します"]。
 
 +
-[ 遵守ダッシュボード ] のタブから [ 高輝度表示 ] を選択するか、 [ 調査 ] ページのフィルタとして選択できます。
+ポリシーは、 ［ 遵守ダッシュボード ］ のタブから、 ［ 調査 ］ ページのフィルタとして選択できます。
 
 * Cloud Compliance では、機密性の高い個人データの種類「政治的見解リファレンス」をファイルで見つけることができるようになりました。すべてのリストを表示します link:reference_private_data_categories.html#types-of-sensitive-personal-data["機密性の高い個人データの種類"^] その Cloud Compliance がスキャンで見つかりました。
 * 「 file size 」の新しいフィルタは、で使用できます のファイルの検索結果を絞り込むための調査ページ 一定のサイズです

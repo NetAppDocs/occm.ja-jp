@@ -17,9 +17,35 @@ summary: 同期関係を作成すると、 Cloud Sync サービスはソース�
 
 
 
-== 同期関係を作成する
+== Cloud Volumes ONTAP クラスタ、 Azure NetApp Files クラスタ、オンプレミスクラスタの同期関係を作成
 
-サポートされている任意のストレージタイプとの間でデータを同期するには、次の手順を実行します。以下の手順は、 NFS サーバから S3 バケットへの同期関係を設定する方法の例を示しています。
+Cloud Volumes ONTAP 、 Azure NetApp Files 、またはオンプレミスの ONTAP クラスタの同期関係を作成する場合は、最初に作業環境を作成または検出する必要があります。
+
+.手順
+. 作業環境を作成または検出します。
++
+** link:task_deploying_otc_aws.html["AWS での Cloud Volumes ONTAP の起動"]
+** link:task_deploying_otc_azure.html["Azure で Cloud Volumes ONTAP を起動します"]
+** link:task_deploying_gcp.html["GCP での Cloud Volumes ONTAP の起動"]
+** link:task_adding_ontap_cloud.html["既存の Cloud Volumes ONTAP システムの追加"]
+** link:task_manage_anf.html["Azure NetApp Files をセットアップおよび検出しています"]
+** link:task_discovering_ontap.html["ONTAP クラスタの検出"]
+
+
+. 「 * キャンバス * 」をクリックします。
+. 上記のいずれかのタイプに一致する作業環境を選択してください。
+. [ 同期 ] の横のアクションメニューを選択します。
++
+image:screenshot_sync_we.gif["作業環境を選択した後の同期メニューで使用可能なアクションを示すスクリーンショット。"]
+
+. この場所から * データを同期 * または * この場所へのデータの同期 * を選択し、プロンプトに従って同期関係を設定します。
+
+
+
+
+== 他のタイプの同期関係を作成します
+
+Cloud Volumes ONTAP 、 Azure NetApp Files 、オンプレミス ONTAP クラスタ以外のサポートされているストレージタイプとの間でデータを同期するには、次の手順を実行します。以下の手順は、 NFS サーバから S3 バケットへの同期関係を設定する方法の例を示しています。
 
 . Cloud Manager で、 * Sync * をクリックします。
 . [ 同期関係の定義 *] ページで、ソースとターゲットを選択します。
@@ -104,25 +130,3 @@ Cloud Sync サービスは、 S3 バケットに同期する各オブジェク�
 * 結果 *
 
 クラウドの同期は、ソースとターゲットの間でデータの同期を開始します。
-
-
-
-== 既存の作業環境の同期関係を作成しています
-
-次の手順に従って、次のいずれかとの間でデータを同期します。
-
-* Amazon S3
-* Azure NetApp Files の特長
-* Cloud Volumes ONTAP
-* オンプレミスの ONTAP クラスタ
-
-
-.手順
-. Cloud Manager で、 * キャンバス * をクリックします。
-. 上記のいずれかのタイプに一致する作業環境を選択してください。
-. [ 同期 ] の横のアクションメニューを選択します。
-+
-image:screenshot_sync_we.gif["作業環境を選択した後の同期メニューで使用可能なアクションを示すスクリーンショット。"]
-
-. この場所から * データを同期 * または * この場所へのデータの同期 * を選択し、プロンプトに従って同期関係を設定します。
-

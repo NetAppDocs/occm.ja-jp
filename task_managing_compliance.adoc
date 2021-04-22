@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_managing_compliance.html 
 keywords: remove, delete, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, delete cloud compliance, terminate, deactivate, deactivating cloud compliance 
-summary: 必要に応じて、 Cloud Compliance のスキャンを停止して、作業環境、データベース、 OneDrive アカウントをスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。 
+summary: 必要に応じて、 Cloud Compliance のスキャンを停止して、作業環境、データベース、ファイル共有グループ、 OneDrive アカウントをスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。 
 ---
 = Cloud Compliance からのデータソースの削除
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: 必要に応じて、 Cloud Compliance のスキャンを停止して�
 
 
 [role="lead"]
-必要に応じて、 Cloud Compliance のスキャンを停止して、作業環境、データベース、 OneDrive アカウントをスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。
+必要に応じて、 Cloud Compliance のスキャンを停止して、作業環境、データベース、ファイル共有グループ、 OneDrive アカウントをスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。
 
 
 
@@ -52,6 +52,20 @@ image:screenshot_compliance_remove_db.png["Scan Configuration ページの Remov
 image:screenshot_compliance_remove_onedrive.png["[ スキャン構成 ] ページから [OneDrive を削除 ] ボタンのスクリーンショット。"]
 
 . 確認ダイアログで * アカウントの削除 * をクリックします。
+
+
+
+
+== Cloud Compliance からのファイル共有のグループの削除
+
+ファイル共有グループからユーザファイルをスキャンする必要がなくなった場合は、 Cloud Compliance インターフェイスからファイル共有グループを削除して、すべてのスキャンを停止できます。
+
+.手順
+. _Scan Configuration_page で、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] [ ファイル共有グループ ] の行にあるボタンをクリックし、 [ * ファイル共有グループの削除 * ] をクリックします。
++
+image:screenshot_compliance_remove_fileshare_group.png["スキャン設定ページからファイル共有グループを削除ボタンのスクリーンショット。"]
+
+. 確認ダイアログで * 共有のグループを削除 * をクリックします。
 
 
 
