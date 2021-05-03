@@ -1,5 +1,5 @@
 = 
 
 
-サポートされるボリュームとアグリゲート:: クラウド階層化が可能なボリュームの総数は、 ONTAP システムのボリュームの数よりも少なくなる可能性があります。これは、一部のアグリゲートからボリュームを階層化できないためです。たとえば、 SnapLock ボリュームや MetroCluster 構成からはデータを階層化できません。については、 ONTAP のドキュメントを参照してください link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mgng-stor-tier-fp/GUID-8E421CC9-1DE1-492F-A84C-9EB1B0177807.html["FabricPool でサポートされていない機能"^]。
+サポートされるボリュームとアグリゲート:: クラウド階層化が可能なボリュームの総数は、 ONTAP システムのボリュームの数よりも少なくなる可能性があります。これは、一部のアグリゲートからボリュームを階層化できないためです。については、 ONTAP のドキュメントを参照してください link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mgng-stor-tier-fp/GUID-8E421CC9-1DE1-492F-A84C-9EB1B0177807.html["FabricPool でサポートされていない機能"^]。
 

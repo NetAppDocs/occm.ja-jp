@@ -537,16 +537,8 @@
   <block id="e1aefe510a32d9933986406dbc78fc01" category="list-text"><block ref="e1aefe510a32d9933986406dbc78fc01" category="inline-link-macro-rx"></block></block>
   <block id="837170b3ba6314929f53008e61dfc57b" category="section-title">ボリューム階層化ポリシー</block>
   <block id="de16c6002cab30d2b476bb8b41b8a8bc" category="paragraph">階層化するボリュームを選択する場合は、各ボリュームに適用するボリューム階層化ポリシーを選択します。階層化ポリシーは、ボリュームのユーザデータブロックをクラウドに移動するタイミングと、移動するかどうかを決定します。</block>
-  <block id="72b71e2a5fee521b70392ebb2a802548" category="list-text">階層化ポリシーがありません</block>
-  <block id="eb4074167f0e71080511edfb3c175265" category="list-text">パフォーマンス階層内のボリュームのデータを保持し、クラウドに移動されないようにします。</block>
   <block id="572fa022873c534013ec6cb0f4d8fa14" category="list-text">コールドスナップショット（ Snapshot のみ）</block>
   <block id="23893d049cee0a9e9626a8a0663aae39" category="list-text">ONTAP は、アクティブなファイルシステムと共有されていないボリューム内のコールドスナップショットブロックをオブジェクトストレージに階層化します。読み取られると、クラウド階層のコールドデータブロックはホットになり、パフォーマンス階層に移動します。</block>
-  <block id="4ee9ad7f477b3983de2d1db6675bac8f" category="paragraph">データが階層化されるのは、アグリゲートの容量が 50% に達し、データがクーリング期間に達した場合のみです。デフォルトのクーリング日数は 2 ですが、日数は調整できます。</block>
-  <block id="3613b8486912ef4c9a91adff65b3deaa" category="admonition">パフォーマンス階層の容量が 70% を超える場合、クラウド階層からパフォーマンス階層への書き込みは無効になります。この場合、ブロックはクラウド階層から直接アクセスされます。</block>
-  <block id="1284485e000d05bdf40fbfe70bbdf2bd" category="list-text">コールドユーザデータ（自動）</block>
-  <block id="429f56438ffc6b4c0f72d7eb34c2b791" category="list-text">ONTAP は、ボリューム内のすべてのコールドブロックをオブジェクトストレージに階層化します（メタデータは含まれません）。コールドデータには、 Snapshot コピーだけでなく、アクティブなファイルシステムのコールドユーザデータも含まれます。</block>
-  <block id="9e212e8392c7ae3cf57ffa6f7974553b" category="paragraph">ランダムリードで読み取られた場合、クラウド階層のコールドデータブロックはホットになり、パフォーマンス階層に移動されます。インデックススキャンやウィルス対策スキャンに関連するようなシーケンシャルリードで読み取られた場合、クラウド階層のコールドデータブロックはコールドのままで、パフォーマンス階層には書き込まれません。</block>
-  <block id="5f4009e442dc4136cbf674edfe56e528" category="paragraph">データが階層化されるのは、アグリゲートの容量が 50% に達し、データがクーリング期間に達した場合のみです。クーリング期間とは、ボリューム内のユーザデータがアクセス頻度の低い状態とみなされてオブジェクトストアに移動されるまでの期間です。デフォルトのクーリング日数は 31 日ですが、日数は調整できます。</block>
   <block id="93ffc2244ce7305dd264ba18e305b677" category="list-text">すべてのユーザデータ（すべて）</block>
   <block id="c1caab78eea779db999df3a70edcbac7" category="list-text">すべてのデータ（メタデータを除く）はすぐにコールドとしてマークされ、オブジェクトストレージにできるだけ早く階層化されます。ボリューム内の新しいブロックがコールドになるまで、 48 時間待つ必要はありません。「すべて」のポリシーが設定される前のボリュームにあるブロックは、コールドになるまで 48 時間かかります。</block>
   <block id="8b7e6ab9264ce763dfa21e68d7af14de" category="paragraph">読み取られた場合、クラウド階層のコールドデータブロックはコールドのままで、パフォーマンス階層に書き戻されません。このポリシーは ONTAP 9.6 以降で使用できます。</block>
@@ -4256,7 +4248,6 @@
   <block id="e020f6db5f627706b6bc9c4d66d7c52f" category="list-text">Google Cloud Platform VPC にインストールされるコネクタ。</block>
   <block id="01c6106eee9f2585bce4736ffc82f921" category="list-text">データセンター内の ONTAP クラスタ、 Google Cloud Storage 、およびクラウド階層化サービスへのアウトバウンド HTTPS 接続を可能にするコネクタのネットワーク。</block>
   <block id="9a5f1dcfa03032ee140f73e2673dd4ad" category="section-title">階層化をセットアップする</block>
-  <block id="09ea182ec53d591f63fdf78f1f7a84ae" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * 階層化の設定 * をクリックして、プロンプトに従って Google Cloud Storage にデータを階層化します。</block>
   <block id="e907b41f5f3d7332bee5a43fbbf78a08" category="section-title">ライセンスをセットアップする</block>
   <block id="ab2e64321f63b7ea8e6f487c9c08aa1f" category="paragraph">無償トライアルの終了後、従量課金制のサブスクリプション、 ONTAP 階層化ライセンス、またはその両方を組み合わせて使用して、クラウド階層化の料金を支払うことができます。</block>
   <block id="2a9b047e6034c754ebc6f9b3176a29a3" category="list-text">GCP Marketplace からサブスクライブするには、 [ * 階層化（ * Tiering ） ] &gt; [ ライセンス（ Licensing ） ] をクリックし、 [ * サブスクライブ（ * Subscribe ） ] をクリックして、プロンプトに従います。</block>
@@ -4283,7 +4274,6 @@
   <block id="96788f015626d24d63f6f02843be51c3" category="paragraph">データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。</block>
   <block id="ac711435545c1b14c721179de8ab94a0" category="list-text">サポートされるボリュームとアグリゲート</block>
   <block id="cbd3171b775ecc9b275479726c41ccec" category="inline-link">FabricPool でサポートされていない機能</block>
-  <block id="b1a94066ac4c417d2543be01d35b5a81" category="list-text">クラウド階層化が可能なボリュームの総数は、 ONTAP システムのボリュームの数よりも少なくなる可能性があります。これは、一部のアグリゲートからボリュームを階層化できないためです。たとえば、 SnapLock ボリュームや MetroCluster 構成からはデータを階層化できません。については、 ONTAP のドキュメントを参照してください <block ref="0cf543d58248b945e81ebbce14d54851" category="inline-link-rx"></block>。</block>
   <block id="c3fb869301bdf0050425864a1c816fd8" category="admonition">Cloud Tiering は、 FlexGroup ボリュームをサポートしています。セットアップは他のボリュームと同じように機能します。</block>
   <block id="8141ab52bd695a7c4b2c43e785d8bf58" category="section-title">ONTAP クラスタを検出しています</block>
   <block id="3d9108b42583e778e301c7eb55fcb6df" category="paragraph">コールドデータの階層化を開始する前に、 Cloud Manager でオンプレミスの ONTAP 作業環境を作成する必要があります。</block>
@@ -4318,23 +4308,15 @@
   <block id="ffea753b318be6f13013f32de45f41ba" category="list-text"><block ref="c9618f4fe66b7216061fe90f6cc57526" category="inline-link-macro-rx"></block>。</block>
   <block id="79acb6eba535e7721e5fb3655d5ceb55" category="list-text">Storage Admin ロールが割り当てられているサービスアカウントのストレージアクセスキー。</block>
   <block id="bf873eef8ea9c1247876739a70ed365a" category="list-text">オンプレミスクラスタを選択</block>
-  <block id="909d8cdc7c100d1834d4de10094f43ca" category="list-text">[*Enable*] をクリックします。</block>
   <block id="b2a8895a08251e3a0ba8598464e85f4a" category="inline-image-macro">オンプレミス ONTAP 作業環境を選択した後に画面の右側に表示される [ 有効 ] オプションを示すスクリーンショット。</block>
-  <block id="fdece078c7117bfaac50e5aa07b90bb5" category="paragraph"><block ref="fdece078c7117bfaac50e5aa07b90bb5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="85c32c4423681018da39834df6bd312c" category="list-text">「 * Tiering Setup * 」ページに記載された手順を実行します。</block>
   <block id="fc8c5ebf28401d27b54c3e6e00e7652b" category="list-text">* Bucket * ：新しい Google Cloud Storage バケットを追加するか、既存のバケットを選択します。</block>
   <block id="a29ca8aa6cf5a1c81887b82cc0bd9606" category="list-text">* クレデンシャル * ：ストレージ管理者ロールが割り当てられたサービスアカウントのストレージアクセスキーとシークレットキーを入力します。</block>
   <block id="494e659680f3920311106585f89fc251" category="list-text">* クラスタネットワーク * ： ONTAP がオブジェクトストレージへの接続に使用する IPspace を選択します。</block>
   <block id="3da4793f70832a1f06de77ca02441aed" category="paragraph">正しい IPspace を選択すると、 Cloud Tiering を使用して、 ONTAP からクラウドプロバイダのオブジェクトストレージへの接続をセットアップできます。</block>
   <block id="6d954756dedc1d7d245aee367353a05f" category="list-text">「 * Continue * 」をクリックして、階層化するボリュームを選択します。</block>
-  <block id="1252503d96f589b541bbcd242f00dcac" category="list-text">[* Tier Volumes] ページで、各ボリュームの階層化を設定します。</block>
   <block id="c3a343dec05d89cab0e884fffef6fd25" category="inline-link-macro">ボリューム階層化ポリシーの詳細については、こちらをご覧ください</block>
   <block id="9f9742f883f4b565d4a9ae4acaf98c7a" category="paragraph"><block ref="bba6be7e75577329e2362902b0fce016" category="inline-link-macro-rx"></block>。</block>
-  <block id="621f6f17b31c046c0e769d995604f944" category="inline-image-macro">に表示される編集アイコンのスクリーンショット ボリューム階層化のテーブルの各行の末尾です</block>
-  <block id="def89536411fc68fa81dce56fe48321e" category="list-text">1 つのボリュームだけの階層化ポリシーを選択するには、をクリックします <block ref="8a7b4d9eeceba80332a45bd9abdd9ed5" category="inline-image-macro-rx" type="image"></block> アイコンをクリックし、階層化ポリシーを選択します。必要に応じてクーリング日数を調整することもできます。</block>
-  <block id="430107d3f4197ff431943f865cc48d82" category="inline-image-macro">ボリュームの編集アイコンを示すスクリーンショット。</block>
-  <block id="b4852d1db879d6bcf576802e527739be" category="paragraph"><block ref="b4852d1db879d6bcf576802e527739be" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9e2ce43cdad025e8644f679f25c455f4" category="list-text">複数のボリュームの階層化ポリシーを選択するには、複数のボリュームを選択し、 * 選択したボリュームの変更 * をクリックして階層化ポリシーを選択し、必要に応じてクーリング日数を調整します。</block>
   <block id="635253659dacfccaf41ba250260189aa" category="paragraph">クラスタのボリュームから Google Cloud オブジェクトストレージへのデータ階層化の設定が完了しました。</block>
   <block id="d2b703645dbe8ebea7d4acb1cec4c8f7" category="inline-link-macro">Cloud Tiering サービスに登録してください</block>
   <block id="eecb0135346d22b101bfcb4a01e70c54" category="paragraph"><block ref="da28acee08343ddaabe9233075f8b119" category="inline-link-macro-rx"></block>。</block>
@@ -6057,7 +6039,6 @@
   <block id="5fce56af1e1158cc023bf250fa9ab688" category="list-text">StorageGRID 10.3 以降で、 S3 権限を持つ AWS アクセスキーが使用されています。</block>
   <block id="576fdb5dd15e14e6977927216a394612" category="list-text">オンプレミスにインストールされているコネクタ。</block>
   <block id="77d226f03d33c38067535c89c7bb15ab" category="list-text">ONTAP クラスタ、 StorageGRID 、およびクラウド階層化サービスへのアウトバウンド HTTPS 接続を可能にするコネクタのネットワーク。</block>
-  <block id="feb91d5f9aed5f8a42f86aa0619cce67" category="paragraph">オンプレミスの作業環境を選択し、「 * 階層化の設定」をクリックして、プロンプトに従ってデータを StorageGRID に階層化します。</block>
   <block id="f618ca27c84d56d777d599612659744e" category="inline-image-macro">「クラウド階層化サービスと、オンプレミスのサービスコネクタ、 ONTAP クラスタへの接続を含むサービスコネクタ、 ONTAP クラスタとオブジェクトストレージの間の接続を示すアーキテクチャの図。アクティブなデータは ONTAP クラスタに格納され、アクセス頻度の低いデータはオブジェクトストレージに格納されます。」</block>
   <block id="76548dd038a50cb244ad8395a7ac0d9a" category="paragraph"><block ref="76548dd038a50cb244ad8395a7ac0d9a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9cd38a30ef1c3ae6b31cfb50d4f1a25f" category="admonition">コネクタと StorageGRID 間の通信は、オブジェクトストレージのセットアップにのみ使用されます。</block>
@@ -6088,11 +6069,9 @@
   <block id="a71f0f53c9824602e78a79bc5fa52d43" category="paragraph">環境を準備したら、最初のクラスタからアクセス頻度の低いデータの階層化を開始します。</block>
   <block id="1b8a3756b590cb811f9726f247097028" category="list-text">必要な S3 権限を持つ AWS アクセスキー。</block>
   <block id="85cd1fc1600a51fdeb99ebc5121fa64e" category="inline-image-macro">オンプレミスの ONTAP 作業環境を選択したあとに画面の右側に表示される「階層化の設定」オプションを示すスクリーンショット。</block>
-  <block id="a9f17df4cc1038a41d4cbdacffc9bb64" category="paragraph"><block ref="a9f17df4cc1038a41d4cbdacffc9bb64" category="inline-image-macro-rx" type="image"></block></block>
   <block id="be6ff5555c54c57e40af5ec68ace11c7" category="list-text">* プロバイダを選択 * ：「 StorageGRID 」を選択します。</block>
   <block id="926cb8d8f2ac4fe3121f93652fd0cfc9" category="list-text">* サーバ * ： StorageGRID サーバの FQDN を入力し、 StorageGRID が ONTAP との HTTPS 通信に使用するポートを入力して、必要な S3 権限を持つ AWS アカウントのアクセスキーとシークレットキーを入力します。</block>
   <block id="e17266c30d86e37ce9a8ec2431886bc2" category="list-text">* Bucket * ：新しいバケットを追加するか、階層化データ用の既存のバケットを選択します。</block>
-  <block id="f9035d4f9806d574321a91210d9986c7" category="list-text">[* Tier Volumes] ページで、各ボリュームの階層化を設定します。をクリックします <block ref="8a7b4d9eeceba80332a45bd9abdd9ed5" category="inline-image-macro-rx" type="image"></block> アイコンをクリックし、階層化ポリシーを選択します。必要に応じてクーリング日数を調整し、 * 適用 * をクリックします。</block>
   <block id="d211aa9c9b0d32735c22312d6ced0bfb" category="paragraph">これで、クラスタのボリュームから StorageGRID へのデータ階層化が設定されました。</block>
   <block id="94876b50070968f60a9bf852bb734bb3" category="paragraph">クラスタを追加したり、クラスタ上のアクティブなデータとアクセス頻度の低いデータに関する情報を確認したりできます。詳細については、を参照してください <block ref="5bf6726659bde87c5ec02c13454ecd30" category="inline-link-macro-rx"></block>。</block>
   <block id="0f3ab1e6e87b1df0d7ec0b58658fb4dd" category="summary">Cloud Sync のヘルプを表示したり、フォーラム、チャットサービス、ビデオなどのさまざまなリソースを使用して詳細情報を確認したりできます。</block>
@@ -6339,7 +6318,6 @@
   <block id="88874fce87dd9edf63db978923d2d604" category="list-text">アクセスキーとを持つ AWS アカウント <block ref="c2b6a8c656d0c1ec20241b37b67a788f" category="inline-xref-macro-rx"></block> つまり、 ONTAP クラスタはアクセス頻度の低いデータを S3 との間で階層化できます。</block>
   <block id="8a906cdd797b7e3c6078a36f69907caa" category="list-text">AWS VPC またはオンプレミスにインストールされたコネクタ。</block>
   <block id="76dad9926f73f6ff81e2335148643a23" category="list-text">ONTAP クラスタ、 S3 ストレージ、およびクラウド階層化サービスへのアウトバウンド HTTPS 接続を可能にするコネクタのネットワーク。</block>
-  <block id="2f092e1dc002d2651fc015f8340a41ae" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * 階層化の設定 * をクリックして、プロンプトに従って Amazon S3 にデータを階層化します。</block>
   <block id="703daf807f227148f34536e1f3f25963" category="list-text">AWS Marketplace でサブスクライブするには、 * Tiering &gt; Licensing * をクリックし、 * Subscribe * をクリックして指示に従います。</block>
   <block id="fbe7acde6d35d8a34f278b0e8342e39e" category="list-text">階層化ライセンスを使用して費用を支払う場合は、 mailto:ng-cloud-tiering@netapp.com ?subject=Licensing [ 購入が必要な場合は当社にお問い合わせください ] の後 <block ref="9024e9054d91e3b51e6c17a90d4e1fc5" category="inline-link-macro-rx"></block>。</block>
   <block id="ea948bee686d48a6c63b5b43e33502bc" category="inline-image-macro">「クラウドプロバイダのコネクタへの接続、 ONTAP クラスタへの接続を含むクラウド階層化サービス、クラウドプロバイダ内の ONTAP クラスタとオブジェクトストレージの接続を含むアーキテクチャの図。アクティブなデータは ONTAP クラスタに格納され、アクセス頻度の低いデータはオブジェクトストレージに格納されます。」</block>
@@ -6850,10 +6828,7 @@
   <block id="93772529b8117fc8010ab6872129a19c" category="section-title">追加のボリュームのデータを階層化する</block>
   <block id="d911ca369d48811297e1670d6c7a6096" category="paragraph">新しいボリュームの作成後など、追加のボリュームのデータ階層化をいつでも設定できます。</block>
   <block id="6662e49ec46d62cc90731614c388b4f7" category="list-text">クラスタダッシュボード * で、クラスタの * 階層ボリューム * をクリックします。</block>
-  <block id="495bc0e676e5d8cea46f01a061d72f09" category="admonition">オブジェクトストレージはクラスタの階層化の初期設定時にすでに設定されているため、設定する必要はありません。ONTAP はこれらのボリュームから同じオブジェクトストアにアクセス頻度の低いデータを階層化します。</block>
   <block id="6e4c88586fed564c2a533a5be0ddcf91" category="section-title">ボリュームの階層化ポリシーを変更する</block>
-  <block id="ce5f253a7ab4076c754ecee500408697" category="paragraph">ボリュームの階層化ポリシーを変更すると、 ONTAP がコールドデータをオブジェクトストレージに階層化する方法が変更されます。変更はポリシーを変更した時点から始まります。変更されるのはボリュームに対する以降の階層化の動作のみです。</block>
-  <block id="94c1e378d2c595d604fab0fc844d14b8" category="list-text">をクリックします <block ref="8a7b4d9eeceba80332a45bd9abdd9ed5" category="inline-image-macro-rx" type="image"></block> アイコンをクリックし、階層化ポリシーを選択します。必要に応じてクーリング日数を調整し、 * 適用 * をクリックします。</block>
   <block id="176eb530d68328d73cd752bcf53ad2be" category="section-title">アグリゲートの階層化設定の管理</block>
   <block id="03f8152dab88b297bbe0f6b0a956852a" category="list-text">階層化の使用率しきい値</block>
   <block id="4545382871ff22fc5ca3c19ab5a848b1" category="list-text">しきい値を低い値に設定すると、階層化が行われる前にパフォーマンス階層に格納する必要があるデータの量が減ります。これは、アクティブなデータをほとんど含まない大規模アグリゲートに便利です。</block>
@@ -6863,7 +6838,6 @@
   <block id="afc2a246280d9465bcf55cf67326ed45" category="admonition">IDR を有効にしておくと、アクセス頻度の低いデータや削減の機会を特定するのに役立ちます。アグリゲートでデータ階層化が有効になっている場合は、 IDR を有効なままにしておく必要があり</block>
   <block id="88eb6d68f4f619a5a606b78c866fe1ef" category="list-text">Cloud Tiering * ページで、クラスタのメニューアイコンをクリックし、 * アグリゲートの管理 * を選択します。</block>
   <block id="d51a711146648699bd03a0f92c357ff5" category="inline-image-macro">クラスタダッシュボードのスクリーンショットで、クラスタと操作メニューが展開されています。</block>
-  <block id="ce0531d650d17a6604405ec3845a5f2b" category="paragraph"><block ref="ce0531d650d17a6604405ec3845a5f2b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="75578183b0452e918329f74a698c0298" category="inline-image-macro">に表示される編集アイコンのスクリーンショット アグリゲートを管理するためにテーブルの各行の末尾に追加します</block>
   <block id="a3b48b4161c1ea416815567155adb8a7" category="list-text">Manage Aggregates * ページで、をクリックします <block ref="d7e2a7fde50ad4fe515918c829763eb5" category="inline-image-macro-rx" type="image"></block> アイコンをクリックして、テーブル内のアグリゲートを選択します。</block>
   <block id="388792e71baf49fd5c469109a8d6156d" category="list-text">スペース不足しきい値を変更して、アクセス頻度の低いデータのレポートを有効にするか無効にするかを選択します。</block>
@@ -7857,7 +7831,6 @@
   <block id="732a8676055386a6abf9454a2058d64a" category="list-text">ONTAP 9.4 以降を実行し、かつ Azure Blob Storage への HTTPS 接続を備えたオール SSD アグリゲートを含む AFF または FAS システム。 <block ref="6c0ffc5a2aa6056daa5fbab63d63470c" category="inline-link-macro-rx"></block>。</block>
   <block id="971990a0128297e61982fb657642391e" category="list-text">Azure VNet にインストールされるコネクタ。</block>
   <block id="a81db118acfbd6a1141871c99120b570" category="list-text">データセンター内の ONTAP クラスタ、 Azure BLOB ストレージ、およびクラウド階層化サービスへのアウトバウンド HTTPS 接続を可能にするコネクタのネットワーク。</block>
-  <block id="1dcadb8d19fbaff9072b5e9e1d30d1fd" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * 階層化の設定 * をクリックして、プロンプトに従って Azure Blob Storage にデータを階層化します。</block>
   <block id="df15f4bfc3652ad53a98e5e13988c34e" category="list-text">Azure Marketplace からサブスクライブするには、 * Tiering &gt; Licensing * をクリックし、 * Subscribe * をクリックして、プロンプトに従います。</block>
   <block id="f06be3fc255ccf54d782e521e467d520" category="paragraph"><block ref="f06be3fc255ccf54d782e521e467d520" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4051b61d1a173f1e1442c3197f468467" category="admonition">コネクタと BLOB ストレージ間の通信はオブジェクトストレージのセットアップにのみ使用されます。</block>
@@ -10168,4 +10141,47 @@
   <block id="d7f05890785a6be968f73b8eaead7a27" category="paragraph">Azure NetApp Files アクション定義ページでのボリュームの作成（ _Create Volume in Action Definition_page ）が表示されます。</block>
   <block id="659cd3bfbac2b58cde01b6e0d80dad9d" category="list-text">* 詳細： * 新規または既存の Azure NetApp Files アカウントの詳細を入力します。</block>
   <block id="18801e3c62d625d360e2e7ea2b62c1b7" category="list-text">テンプレートに使用する名前を左上に入力します。</block>
+  <block id="984606c7cc03192959742ae575daf739" category="paragraph">冷却期間 _ を調整することもできます。ボリューム内のユーザデータが「コールド」とみなされてオブジェクトストレージに移動されるまでの日数です。階層化ポリシーでクーリング期間を調整できる場合、 ONTAP 9.8 以降では 2 ~ 183 日、 ONTAP の以前のバージョンでは 2 ~ 63 日の有効値を使用することを推奨します。ベストプラクティスは 2 ~ 63 です。</block>
+  <block id="5a7b583ef6277e6013440c8d2b7a3eb0" category="list-text">なし（ポリシーなし）</block>
+  <block id="8bb6337d1f1156b70c31413e7e5c382f" category="list-text">パフォーマンス階層内のボリュームのデータを保持し、クラウド階層に移動されないようにします。</block>
+  <block id="0858038570405a06210cfc28ef3aaab3" category="paragraph">データが階層化されるのは、アグリゲートの容量が 50% に達し、データがクーリング期間に達した場合のみです。デフォルトのクーリング日数は 2 ですが、この数は調整できます。</block>
+  <block id="8addc19d860e305ae5b980d1caee3858" category="admonition">再加熱されたデータは、スペースがある場合にのみパフォーマンス階層に書き戻されます。パフォーマンス階層の容量が 70% を超えている場合、ブロックはクラウド階層から引き続きアクセスされます。</block>
+  <block id="431ff5823f47b97e75aa22037b6ea9e1" category="list-text">コールドユーザデータとスナップショット（自動）</block>
+  <block id="52dd494a4f1265a7ce8acadee8593e9b" category="list-text">ONTAP は、ボリューム内のすべてのコールドブロックをオブジェクトストレージに階層化します（メタデータは含まれません）。コールドデータには、 Snapshot コピーだけでなく、アクティブなファイルシステムのコールドユーザデータも含まれます。</block>
+  <block id="84fe6afd263eb5351d935059eae87a45" category="paragraph">ランダムリードで読み取られた場合、クラウド階層のコールドデータブロックはホットになり、パフォーマンス階層に移動されます。インデックススキャンやウィルス対策スキャンに関連するようなシーケンシャルリードで読み取られた場合、クラウド階層のコールドデータブロックはコールドのままで、パフォーマンス階層には書き込まれません。このポリシーは ONTAP 9.4 以降で使用できます。</block>
+  <block id="fc02881593187f8420ea9b4944941304" category="paragraph">データが階層化されるのは、アグリゲートの容量が 50% に達し、データがクーリング期間に達した場合のみです。デフォルトのクーリング日数は 31 日ですが、この数は調整できます。</block>
+  <block id="a68e56567cbed62551e71ccc3793a0e2" category="section-title">Cloud Manager 3.9.6 （ 2021 年 5 月 2 日）</block>
+  <block id="1d16a6fe5e36a185acba9000db7f5b99" category="list-text"><block ref="e1f9a6975fbd7930ebb29cce2a77390a" category="inline-xref-macro-rx"></block></block>
+  <block id="bf6525c86100838072a02751028c3547" category="inline-link-macro">クラスタ内のすべてのボリュームの選択方法を参照してください</block>
+  <block id="7f49c1f27fa2f9889a1f1d6cd309bfba" category="list-text">ONTAP システムから階層化するボリュームを選択するときに、 [Tier Volumes] ページに [*All *VOLUMES ] チェックボックスが表示され、すべてのボリュームに同じポリシーを簡単に適用できるようになりました。 <block ref="1610d9d98e894266fb40eef027928aea" category="inline-link-macro-rx"></block>。</block>
+  <block id="2296f192167be3972e69fc3d386a3e66" category="list-text">ONTAP 9.8 以降を使用している場合、ボリューム内のデータを非アクティブのままオブジェクトストレージに移動する期間を決定する「クーリング期間」を変更する必要がある場合は、最大 183 日（ 63 日以内）まで指定できるようになりました。</block>
+  <block id="b9a49040f644be90c80120c07751bc2f" category="section-title">アプリケーションテンプレートの機能拡張</block>
+  <block id="691cfafd0d9bb4c94df59b7546c37a6c" category="list-text">AppTemplates サービスでユーザーインターフェイスが強化され、テンプレートデザイナーがアクション間を移動したり、現在定義しているアクションを確認したりするのが容易になりました。</block>
+  <block id="c0ca2782df985b13537507ee525e1df0" category="list-text">Cloud Volumes ONTAP または Azure NetApp Files のボリュームテンプレートを作成する際に、 Cloud Compliance を統合できるようになりました。これにより、新しく作成した各ボリュームに対して Compliance を有効にしたり、新しく作成した各ボリュームに対して Cloud Backup を有効にしたりできます。また、作成したボリュームに対して Backup と Compliance の両方を有効にするテンプレートを作成することもできます。</block>
+  <block id="b8d8152a3cf27a05efec66ef32ce4a8d" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * 有効化 * をクリックして、プロンプトに従って Google Cloud Storage にデータを階層化します。</block>
+  <block id="7c9d1e9b963cefa4de422a2cde4dd4c2" category="list-text">クラウド階層化が可能なボリュームの総数は、 ONTAP システムのボリュームの数よりも少なくなる可能性があります。これは、一部のアグリゲートからボリュームを階層化できないためです。については、 ONTAP のドキュメントを参照してください <block ref="0cf543d58248b945e81ebbce14d54851" category="inline-link-rx"></block>。</block>
+  <block id="6700c45eabe136b9fc9be1be1c2604d7" category="list-text">階層化サービスの * 有効化 * をクリックします。</block>
+  <block id="b7507ffc73507c1071aa3369e64f9b02" category="paragraph"><block ref="b7507ffc73507c1071aa3369e64f9b02" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="97c6279c799edb5b91946106e4bd7ead" category="list-text">_Tier Volume_page で、階層化を設定するボリュームを選択し、階層化ポリシーページを起動します。</block>
+  <block id="a2c3063bd8f8a037bda26950fc2fa130" category="list-text">すべてのボリュームを選択するには、タイトル行（<block ref="2b1190f90c2c717d2aa70aabd2fc4c36" category="inline-image-macro-rx" type="image"></block>）をクリックし、 * ボリュームの設定 * をクリックします。</block>
+  <block id="7ede142e047a9c43e3ec4a50352f53b4" category="list-text">複数のボリュームを選択するには、各ボリュームのボックス（<block ref="f3b0afa317fb06ade03449dd632d08e0" category="inline-image-macro-rx" type="image"></block>）をクリックし、 * ボリュームの設定 * をクリックします。</block>
+  <block id="27d7b10352920ea311d933853a157434" category="inline-image-macro">鉛筆アイコンを編集します</block>
+  <block id="df5e176205e9c59d302111a246c6358e" category="list-text">単一のボリュームを選択するには、行（または）をクリックします <block ref="8e860c5cca0144ac9d126d75205476b6" category="inline-image-macro-rx" type="image"></block> アイコン）をクリックします。</block>
+  <block id="bf1af3fe2b2716f907d63473ff063165" category="inline-image-macro">単一のボリューム、複数のボリューム、またはすべてのボリュームを選択する方法、および選択したボリュームを変更するボタンを示すスクリーンショット。</block>
+  <block id="d39508321e35588547a28b7d354c7374" category="paragraph"><block ref="d39508321e35588547a28b7d354c7374" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8042a9373e3ae1f8fbfa77b3faf46f7d" category="list-text">_Tiering Policy_Dialog で、階層化ポリシーを選択し、必要に応じて選択したボリュームのクーリング日数を調整して、 * 適用 * をクリックします。</block>
+  <block id="42bc2622b3c027e663e52353b754034a" category="inline-image-macro">設定可能な階層化ポリシーの設定を示すスクリーンショット。</block>
+  <block id="769718038d29144637e71bcba6f6845a" category="paragraph"><block ref="769718038d29144637e71bcba6f6845a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e1d174b13457492ea73ac09a6e5cd0d9" category="paragraph">オンプレミスの作業環境を選択し、「 * 有効化」をクリックして、プロンプトに従ってデータを StorageGRID に階層化します。</block>
+  <block id="23d57e0aa543c12cc6f2de0e1d5a38fb" category="paragraph"><block ref="23d57e0aa543c12cc6f2de0e1d5a38fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="aa18ad95a4aa9af53768416cdff09d92" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * Enable * をクリックして、プロンプトに従って Amazon S3 にデータを階層化します。</block>
+  <block id="ae1e3d568dc256d91e65f1141d98faa1" category="admonition">オブジェクトストレージはクラスタの階層化の初期設定時にすでに設定されているため、設定する必要はありません。ONTAP は、アクセス頻度の低いデータを他のボリュームから同じオブジェクトストアに階層化します。</block>
+  <block id="edc1bce516f0e4e5cb6bf57de68ce286" category="inline-image-macro">クラスタの階層のボリュームボタンを選択する方法を示すスクリーンショット。</block>
+  <block id="7d5d486077d112d9f802c64eea1ab893" category="paragraph"><block ref="7d5d486077d112d9f802c64eea1ab893" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b43a266db2aca1fd9d7c018f414038a1" category="paragraph">選択したボリュームのデータがクラウドに階層化されます。</block>
+  <block id="5a40c33f4c0bb7db2e33038404ef04b9" category="paragraph">ボリュームの階層化ポリシーを変更すると、 ONTAP がコールドデータをオブジェクトストレージに階層化する方法が変更されます。変更は、ポリシーを変更した時点から始まります。変更されるのはボリュームに対する以降の階層化の動作のみで、データが変更後からクラウド階層に移動されることはありません。</block>
+  <block id="3deb91ba336d29a173415247e2cfbc36" category="list-text">ボリュームの行をクリックし、階層化ポリシーを選択します。必要に応じてクーリング日数を調整し、 * 適用 * をクリックします。</block>
+  <block id="1af082a9b50d80018185dba3a91d3276" category="paragraph">階層化ポリシーが変更され、新しいポリシーに基づいてデータが階層化されます。</block>
+  <block id="10c6081fa0c96e35db80dd022583a3d9" category="paragraph"><block ref="10c6081fa0c96e35db80dd022583a3d9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="32785291c94dd08fd17a4024a3a78dd4" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * 有効化 * をクリックして、プロンプトに従って Azure Blob Storage にデータを階層化します。</block>
 </blocks>

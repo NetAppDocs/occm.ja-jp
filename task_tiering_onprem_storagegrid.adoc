@@ -39,7 +39,7 @@ summary: データを StorageGRID に階層化することで、オンプレミ�
 ==== 階層化をセットアップする
 
 [role="quick-margin-para"]
-オンプレミスの作業環境を選択し、「 * 階層化の設定」をクリックして、プロンプトに従ってデータを StorageGRID に階層化します。
+オンプレミスの作業環境を選択し、「 * 有効化」をクリックして、プロンプトに従ってデータを StorageGRID に階層化します。
 
 
 
@@ -84,7 +84,7 @@ IPspace を使用すると、ネットワークトラフィックを分離して
 
 
 --
-サポートされるボリュームとアグリゲート:: クラウド階層化が可能なボリュームの総数は、 ONTAP システムのボリュームの数よりも少なくなる可能性があります。これは、一部のアグリゲートからボリュームを階層化できないためです。たとえば、 SnapLock ボリュームや MetroCluster 構成からはデータを階層化できません。については、 ONTAP のドキュメントを参照してください link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mgng-stor-tier-fp/GUID-8E421CC9-1DE1-492F-A84C-9EB1B0177807.html["FabricPool でサポートされていない機能"^]。
+サポートされるボリュームとアグリゲート:: クラウド階層化が可能なボリュームの総数は、 ONTAP システムのボリュームの数よりも少なくなる可能性があります。これは、一部のアグリゲートからボリュームを階層化できないためです。については、 ONTAP のドキュメントを参照してください link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mgng-stor-tier-fp/GUID-8E421CC9-1DE1-492F-A84C-9EB1B0177807.html["FabricPool でサポートされていない機能"^]。
 
 
 
@@ -164,9 +164,9 @@ S3 クレデンシャル::
 
 .手順
 . オンプレミスクラスタを選択
-. [*Enable*] をクリックします。
+. 階層化サービスの * 有効化 * をクリックします。
 +
-image:screenshot_setup_tiering_onprem.gif["オンプレミスの ONTAP 作業環境を選択したあとに画面の右側に表示される「階層化の設定」オプションを示すスクリーンショット。"]
+image:screenshot_setup_tiering_onprem.png["オンプレミスの ONTAP 作業環境を選択したあとに画面の右側に表示される「階層化の設定」オプションを示すスクリーンショット。"]
 
 . 「 * Tiering Setup * 」ページに記載された手順を実行します。
 +
@@ -180,12 +180,22 @@ image:screenshot_setup_tiering_onprem.gif["オンプレミスの ONTAP 作業環
 
 
 . 「 * Continue * 」をクリックして、階層化するボリュームを選択します。
-. [* Tier Volumes] ページで、各ボリュームの階層化を設定します。をクリックします image:screenshot_edit_icon.gif["に表示される編集アイコンのスクリーンショット ボリューム階層化のテーブルの各行の末尾です"] アイコンをクリックし、階層化ポリシーを選択します。必要に応じてクーリング日数を調整し、 * 適用 * をクリックします。
+. _Tier Volume_page で、階層化を設定するボリュームを選択し、階層化ポリシーページを起動します。
++
+** すべてのボリュームを選択するには、タイトル行（image:button_backup_all_volumes.png[""]）をクリックし、 * ボリュームの設定 * をクリックします。
+** 複数のボリュームを選択するには、各ボリュームのボックス（image:button_backup_1_volume.png[""]）をクリックし、 * ボリュームの設定 * をクリックします。
+** 単一のボリュームを選択するには、行（または）をクリックします image:screenshot_edit_icon.gif["鉛筆アイコンを編集します"] アイコン）をクリックします。
++
+image:screenshot_tiering_modify_volumes.gif["単一のボリューム、複数のボリューム、またはすべてのボリュームを選択する方法、および選択したボリュームを変更するボタンを示すスクリーンショット。"]
+
+
+
+. _Tiering Policy_Dialog で、階層化ポリシーを選択し、必要に応じて選択したボリュームのクーリング日数を調整して、 * 適用 * をクリックします。
 +
 link:concept_cloud_tiering.html#volume-tiering-policies["ボリューム階層化ポリシーの詳細については、こちらをご覧ください"]。
 
 +
-image:screenshot_volumes_select_snapshot.gif["Tier Volumes （階層ボリューム）ページの Snapshot Used （スナップショットの使用済み）サイズを示すスクリーンショット。"]
+image:screenshot_tiering_policy_settings.png["設定可能な階層化ポリシーの設定を示すスクリーンショット。"]
 
 
 

@@ -21,6 +21,30 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
+== Cloud Manager 3.9.6 （ 2021 年 5 月 2 日）
+
+* <<Cloud Tiering enhancements>>
+* <<Application Template enhancements>>
+
+
+
+
+=== Cloud Tiering の機能拡張
+
+* ONTAP システムから階層化するボリュームを選択するときに、 [Tier Volumes] ページに [*All *VOLUMES ] チェックボックスが表示され、すべてのボリュームに同じポリシーを簡単に適用できるようになりました。 link:task_managing_tiering.html#tiering-data-from-additional-volumes["クラスタ内のすべてのボリュームの選択方法を参照してください"^]。
+* ONTAP 9.8 以降を使用している場合、ボリューム内のデータを非アクティブのままオブジェクトストレージに移動する期間を決定する「クーリング期間」を変更する必要がある場合は、最大 183 日（ 63 日以内）まで指定できるようになりました。
+
+
+
+
+=== アプリケーションテンプレートの機能拡張
+
+* AppTemplates サービスでユーザーインターフェイスが強化され、テンプレートデザイナーがアクション間を移動したり、現在定義しているアクションを確認したりするのが容易になりました。
+* Cloud Volumes ONTAP または Azure NetApp Files のボリュームテンプレートを作成する際に、 Cloud Compliance を統合できるようになりました。これにより、新しく作成した各ボリュームに対して Compliance を有効にしたり、新しく作成した各ボリュームに対して Cloud Backup を有効にしたりできます。また、作成したボリュームに対して Backup と Compliance の両方を有効にするテンプレートを作成することもできます。
+
+
+
+
 == Cloud Manager 3.9.5 （ 2021 年 4 月 11 日）
 
 * <<Cloud Volumes ONTAP enhancements>>
