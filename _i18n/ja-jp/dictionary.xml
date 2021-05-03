@@ -9832,7 +9832,6 @@
   <block id="31f425aaa6a26f3fc5e635704753602f" category="paragraph">* 注： * 読み取り専用パラメータを表示 * チェックボックスをオンにすると、テンプレートによってロックされているすべてのフィールドを表示できます（これらのパラメータの値を表示する場合）。デフォルトでは、これらの事前定義フィールドは非表示になっており、入力する必要のあるフィールドのみが表示されます。</block>
   <block id="b4798c3f6907cfb67d2e44f900cd8761" category="inline-xref">ボリュームの作成</block>
   <block id="4ffef94b0c1d1e40a08a4bc2f622beb8" category="list-text">テンプレートからハードコーディングされていないすべてのパラメータに値を追加します。を参照してください <block ref="0987d6f2734ae944e1736c1f24a760ec" category="inline-xref-macro-rx"></block> ANF ボリュームを導入するために必要なすべてのパラメータの詳細については、以下を参照してください。</block>
-  <block id="b19fef8bdb6fc59243863f904770b5cf" category="list-text">このボリュームに必要なすべてのパラメータを定義したら、 * 次へ * をクリックし、 * ボリュームの作成 * をクリックします。</block>
   <block id="b185109168e53693f7b6943d7df66166" category="paragraph">Cloud Manager によってボリュームがプロビジョニングされ、進捗状況を確認できるページが表示されます。</block>
   <block id="40136e65ff57723941fc2af2bf21d54a" category="inline-image-macro">テンプレートから新しいボリュームを作成する進行状況を示すスクリーンショット。</block>
   <block id="4ad07dd99a58c5fa556826f4f972a56e" category="paragraph"><block ref="4ad07dd99a58c5fa556826f4f972a56e" category="inline-image-macro-rx" type="image"></block></block>
@@ -9904,8 +9903,6 @@
   <block id="e8ef245792950f46479876f766e2e142" category="inline-link-macro">ボリューム階層化ポリシー</block>
   <block id="b0e17b25c2ac5fdfcde0ef543eb85101" category="inline-link-macro">使用頻度の低いデータをオブジェクトストレージに階層化します</block>
   <block id="3380dac9764ae3629fbfb250e5f601bd" category="paragraph">を参照してください <block ref="d773756a2d327b05ca51b60f7a8bcd54" category="inline-link-macro-rx"></block> 概要については、およびを参照してください <block ref="aff8966f3cc5aa51ac7bd643574d0511" category="inline-link-macro-rx"></block> をクリックして、環境が階層化用に設定されていることを確認してください。</block>
-  <block id="0c991c6e4f57846a34a010458e6d598e" category="list-text">このボリュームに必要なパラメータを定義したら、「 * 次へ * 」をクリックします。</block>
-  <block id="5aae312a8bb021201415fb7d9ea4baaf" category="list-text">必要に応じて ' アクションの定義ページでバックアップを有効にし ' 特定の保持値を持つバックアップを作成するポリシーを設定します</block>
   <block id="0eda2ac7e8c25c619dc1e1b5bb0801fa" category="list-text">[ ボリュームの作成 ] をクリックします。</block>
   <block id="f97c61e27cbf22f850ec5f0412358f0b" category="paragraph">Cloud Volumes ONTAP によってボリュームがプロビジョニングされ、進捗状況を確認するためのページが表示されます。</block>
   <block id="d1ad4ec8d83a0a6b7ef8ac4c5acc2d2f" category="paragraph"><block ref="d1ad4ec8d83a0a6b7ef8ac4c5acc2d2f" category="inline-image-macro-rx" type="image"></block></block>
@@ -9973,7 +9970,6 @@
   <block id="1521fcd4ef1bd7f293c2968ccf8c8162" category="paragraph">テンプレートは、事前に定義された値を持つ「アクション」のチェーンです。次のアクションを含むテンプレートを作成できます。</block>
   <block id="621a55d76df665298d7cfac3a5325abf" category="list-text">Cloud Volumes ONTAP ボリュームを作成します</block>
   <block id="13a5ac55db7d05c915e23a24a2096643" category="list-text">Azure NetApp Files ボリュームを作成します</block>
-  <block id="922e4c5753067aae78fb1eda505896fb" category="list-text">Cloud Backup Service を有効にします</block>
   <block id="3fb67d827d434a38ea3f2b8aca181ada" category="paragraph">ネットアップは、時間の経過とともにアクションを追加します。</block>
   <block id="1374295994ebaaa886b32c9c6c0e7031" category="section-title">アプリケーションテンプレートの仕組み</block>
   <block id="587ef6992d7b60381821e833b1402f19" category="paragraph">アプリケーションテンプレートサービスは、 3 つの部品で構成されています。テンプレートを実行した結果、使用可能なテンプレート「アクション」、カスタマイズされたアプリケーションテンプレート、および展開されたリソース。次の図は、各コンポーネント間の関係を示しています。</block>
@@ -9995,9 +9991,7 @@
   <block id="5502f55b2a77bdf954d3bfaa6bb2e6ea" category="list-text">ユーザがテンプレートを使用して Cloud Volumes ONTAP または Azure NetApp Files ボリュームを作成する前に、ボリュームを導入する Cloud Volumes ONTAP または Azure NetApp Files の作業環境にアクセスできることを確認してください。</block>
   <block id="c3bc2c876ca17f9d815a1c1ef19f2031" category="list-text">クラウドサービス「 action 」をテンプレートに追加する場合（など） <block ref="b8d0acde88fc9a9f551a2fd4967eefb6" category="inline-link-macro-rx"></block>を使用して、ライセンスが付与されたアクティブな Cloud Backup Service が環境内にあることを確認します。</block>
   <block id="2bc67b37308da683bbad8936dc934670" category="section-title">Application Templates サービスを起動します</block>
-  <block id="4a9e1982971c0466cb62ff81cac018fa" category="paragraph">[* AppTemplate] サービスを選択し、テンプレートを追加します。</block>
   <block id="a9ff312e91d710da3b68354d4df9e7d6" category="section-title">「アクション」を選択し、パラメーターを定義して、テンプレートを作成します</block>
-  <block id="804678c2323a5e780b626e223267353c" category="paragraph">作成ウィザードに従って、テンプレートによって実行されるアクションを定義します。</block>
   <block id="23e0e07c56fc07b2d6bc44d30e5187d4" category="inline-link-macro">コネクターの作成方法を参照してください</block>
   <block id="fec06c9db99edab9ef4527dd63250107" category="list-text">コネクタがない場合は、 <block ref="b3e382ff0b16487054ec8223fb257c64" category="inline-link-macro-rx"></block> AWS 、 Azure 、 GCP 向け。</block>
   <block id="d13f782d2094f1ea044387cc5d57c4ac" category="list-text">Cloud Volumes ONTAP ボリュームテンプレートを作成する際には、 Cloud Volumes ONTAP 作業環境がユーザに利用できることを確認してください。で Cloud Volumes ONTAP システムを起動する方法を参照してください <block ref="fd00ab9caadff41671394e79a299aa95" category="inline-link-macro-rx"></block>、 <block ref="d107ca0f1bc5a90c1d4a8d28af7f849f" category="inline-link-macro-rx"></block>または、のいずれかです <block ref="bad68b40705b385ebb129d1acf44de45" category="inline-link-macro-rx"></block>。</block>
@@ -10023,30 +10017,17 @@
   <block id="4611422bf9a4ff570849e7d651f9c0a2" category="paragraph">AWS 環境のボリュームを 100GB のストレージで設定し、 Snapshot ポリシーを「 default 」に設定し、 Storage Efficiency を有効にします。</block>
   <block id="d0285b972453920d44e9bfc537f86825" category="list-text">Cloud Backup を有効にします</block>
   <block id="08bdd28920483216081ae44b22830509" category="paragraph">日次バックアップを作成し、保持数を 30 に設定します。</block>
-  <block id="4ee9f5b453ff3e446339409bcdc1e353" category="list-text">* AppTemplate* サービスを選択し、 * 新規テンプレートの追加 * をクリックします。</block>
-  <block id="0eb13bf9b7d56f112df7f9a8adcd68d4" category="paragraph">Select_Primary Action_page が表示されます</block>
   <block id="ac454ecfe801e40640fcab274d8376c7" category="inline-image-macro">このテンプレートを使用して実行する主なアクションの選択方法を示すスクリーンショット。</block>
   <block id="badf0b64af7e4dbccc924f1b86d16441" category="paragraph"><block ref="badf0b64af7e4dbccc924f1b86d16441" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="29d74286ea76bbd5aa32785e9ff611f6" category="list-text">作成するリソースのタイプとして * Cloud Volumes ONTAP でボリュームを作成 * を選択し、 * 次へ * をクリックします。</block>
-  <block id="78868b6a2521e50e5f4db7f2f093821b" category="paragraph">[ 定義の追加（ _Add Definitions_ ） ] ページが表示されます。</block>
   <block id="99d5fcac810e0357f1ce55dabd9aadfd" category="inline-image-macro">入力が必要な空の CVO テンプレートを示すスクリーンショット。</block>
   <block id="c300df2aa9b635b7e59061b7084d3807" category="paragraph"><block ref="c300df2aa9b635b7e59061b7084d3807" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f879db3df7352042283725422ca3e828" category="list-text">* テンプレートの詳細： * このテンプレートを類似する他のテンプレートと区別できるように、データベース * （この例では）のテンプレート名 * CVO ボリュームと詳細な概要を入力してください。</block>
-  <block id="077054dde45f0b6ab497bdfe47b8bba7" category="cell">5 つのオプションのいずれかを選択します。任意の名前を入力するには、 * Free Text * を選択します。ボリューム名に特定のプレフィックスまたはサフィックスを付けるか、 _contains_certain 文字を指定するか、または入力した正規表現（ regex ）のルールに従うように指定することもできます。たとえば、「 db 」には必須のプレフィックス、サフィックス、またはに次の名前を指定できます。「 db_vol1 」、「 vol1_db 」、「 vol_db_1 」などのボリューム名を追加するようユーザに要求します。</block>
-  <block id="4590e9ae3b8df912e8091b8e451bad94" category="cell">許容値の範囲を指定することも、固定サイズを指定することもできます。この値は GB 単位です。この例では、固定値 *100* を追加できます。</block>
   <block id="14e9a0afe9a24320a6cbef6a736df90e" category="list-text">* 使用プロファイル： * ネットアップの Storage Efficiency 機能をボリュームに適用するかどうかを選択します。これには、シンプロビジョニング、重複排除、圧縮が含まれます。この例では、 Storage Efficiency を有効にしておきます。</block>
-  <block id="edb6ac1b9285d5244a5201d240cd99b0" category="list-text">* ディスクタイプ：クラウドストレージプロバイダ、ディスクのタイプ、およびボリュームがストレージに使用するアグリゲートに使用する大容量階層（オプション）を選択します。この例では、「 * aws * 」を選択し、ディスクタイプとして「 * gp2 * 」を選択します。</block>
   <block id="3ea8e2cba66b4312326f66d39f86d6a6" category="list-text">* プロトコル： * nfs * または * smb * を選択して、ボリュームのプロトコルを設定します。次に、プロトコルの詳細を指定します。</block>
   <block id="565e7c939f0a1769928e7ea0649f804b" category="cell">ボリュームにアクセスできるサブネット内のクライアントを定義するエクスポートポリシーを作成します。</block>
-  <block id="3cbb753dd7c07938aa7e3f1ced194989" category="cell">5 つのオプションのいずれかを選択します。任意の名前（フリーテキスト）を入力するか、共有名に特定のプレフィックスまたはサフィックスを付加する、 _contains_certain 文字を使用する、または入力した正規表現（ regex ）のルールに従うように指定できます。</block>
   <block id="a4fb959cb62cd0e48eddbc92c4b2107b" category="paragraph">を参照してください <block ref="7a1f0695ea9dfb8278742d2ab2f2e164" category="inline-link-macro-rx"></block> 概要については、およびを参照してください <block ref="2233d281bba6bdfd810941ca3b467f08" category="inline-link-macro-rx"></block> をクリックして、環境が階層化用に設定されていることを確認してください。</block>
   <block id="ee22f49339240fbe8534ecfbb079b8fd" category="list-text">このアクションに必要なパラメータを定義したら、 * 次へ * をクリックします。</block>
-  <block id="ab3c884e8cb92ac7112cd4c61e328422" category="paragraph">追加アクション _ ページが表示されます</block>
   <block id="e7b2940e4c4ae2261e85a3d7a22c8cb5" category="inline-image-macro">作成したボリュームに追加できるその他の操作を示すスクリーンショット。</block>
   <block id="1d52e1ed02fe4b810c04939e74af1f18" category="paragraph"><block ref="1d52e1ed02fe4b810c04939e74af1f18" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="fd92107020b59200a9eeca64149c4047" category="list-text">スイッチを使用してバックアップを有効にし（必要な場合）、 30 日間の保持期間を設定した日次バックアップを作成するようにポリシーを設定します。</block>
-  <block id="da1e7d523527566e64297c56c618fcf1" category="list-text">読み取り専用ボリューム名フィールドに、値「 $input.[0].name 」が表示されます。つまり、管理者が「ボリューム名」フィールドに入力した値がここにも入力されるので、バックアップ機能がボリュームに追加されます。</block>
-  <block id="174409595c9d265657fd7d97f7a1fd02" category="list-text">[ 次へ（ * Next ） ] をクリックすると、 _ ドリフトの構成 _ ページが表示されます。今後このページでは、ドリフト機能をテンプレートに適用するかどうかを選択できます。これにより、 Cloud Manager はこのテンプレートの作成時に入力したパラメータのハードコーディング値を監視できます。</block>
   <block id="aead3db7aeeb3765b8c0dcd9bc3b692d" category="list-text">[ テンプレートの作成 *] をクリックします。</block>
   <block id="679e23d213be6214a99d26fb979d6001" category="paragraph">テンプレートが作成され、新しいテンプレートが表示されるテンプレートダッシュボードに戻ります。</block>
   <block id="5e0cbbeb0c7fbcd015cc8264aa380cf6" category="inline-xref">テンプレートについてユーザに説明する必要がある内容</block>
@@ -10056,10 +10037,8 @@
   <block id="98165316f4a6a7eb3b2eea00a7c71656" category="inline-link-macro">Azure NetApp Files ボリュームをプロビジョニングする方法</block>
   <block id="d6411e7600ba8506bcdaeda4fa84d293" category="paragraph">を参照してください <block ref="dde180b1df99e6550b58af7b16258290" category="inline-link-macro-rx"></block> ANF ボリュームテンプレートで実行する必要があるすべてのパラメータの詳細については、を参照してください。</block>
   <block id="c4cbe79d8f0e0abea62843392a50edfe" category="paragraph"><block ref="c4cbe79d8f0e0abea62843392a50edfe" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="040b5b7af899b3558fca580a422b9992" category="list-text">作成するリソースのタイプとして * Azure NetApp Files でボリュームを作成 * を選択し、 * 次へ * をクリックします。</block>
   <block id="d64e3f9a180b7c834241b44a88d16f4d" category="inline-image-macro">入力する必要がある空の ANF テンプレートを示すスクリーンショット。</block>
   <block id="bea9505dd83d12b3dd7397d8682eb37b" category="paragraph"><block ref="bea9505dd83d12b3dd7397d8682eb37b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4a3019f98864772276ce8fbcc9e0cfbe" category="list-text">* Azure NetApp Files の詳細： * 新規または既存の Azure NetApp Files アカウントの詳細を追加します。</block>
   <block id="baac6f97c8e7e8e6270cc894e6bdbe8c" category="cell">ネットアップアカウント名</block>
   <block id="32fe392abad2a40de341773cc015c9ed" category="cell">アカウントに使用する名前を入力します。</block>
   <block id="5094b7a12b4988ad4d43027cff543c44" category="cell">Azure サブスクリプション ID</block>
@@ -10146,4 +10125,47 @@
   <block id="4eeea4d2c00cd83e33db552c5d9445b2" category="list-text">確認ダイアログで * 共有のグループを削除 * をクリックします。</block>
   <block id="531d43ee8054b81c3ea2b7a3bebb3230" category="sidebar">リソース作成を標準化するためのテンプレートを作成します</block>
   <block id="c2d47b6bc95c845ff73e9809734fad1a" category="sidebar">ファイル共有</block>
+  <block id="4d15e800c9b20f5e568052d17678cbd9" category="list-text">このボリュームに必要なすべてのパラメータを定義したら、 * Create Volume * （ボリュームの作成）をクリックします。</block>
+  <block id="d271b7862c9649e25af4900638cbfd52" category="list-text">定義する必要がある他のアクションがない場合は、 * ボリュームの作成 * をクリックします。</block>
+  <block id="db382d688e4cb3e09b6e7a743ce00edb" category="paragraph">他のアクションがある場合は、左ペインのアクションをクリックして、完了する必要のあるパラメータを表示します。</block>
+  <block id="a31e4f2aa7f454321015e4c5b02bae97" category="inline-image-macro">完了する必要のある追加の操作を選択する方法を示すスクリーンショット。</block>
+  <block id="0fdf861b8e72c9acd6caea0924545667" category="paragraph"><block ref="0fdf861b8e72c9acd6caea0924545667" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="805efa3cb5ac86159dc412d73e3ea0ee" category="paragraph">たとえば、クラウドバックアップを有効にする処理でバックアップポリシーを選択する必要がある場合は、ここで選択できます。</block>
+  <block id="53ae25e1b550a1868e8f51ca3b560064" category="list-text">作成したボリュームで Cloud Backup を有効にします</block>
+  <block id="833c41b22b778444a52db79a91916e3c" category="list-text">作成したボリュームで Cloud Compliance を有効にします （ Cloud Volumes ONTAP ボリュームのみ）</block>
+  <block id="540d474ee5566b6e79211c0f34197ec7" category="paragraph">[* AppTemplate] サービスを選択し、テンプレートを選択します。</block>
+  <block id="ba13d007a4f76ded358c0280157f648b" category="paragraph">作成手順に従い、テンプレートによって実行されるアクションを定義します。</block>
+  <block id="52c5935495d3dc7b021b207b9f31b4bb" category="list-text">Cloud Volumes ONTAP ボリュームでクラウドバックアップを有効にする場合は、ライセンスが設定されたアクティブな Cloud Backup Service を環境内で使用していることを確認してください。</block>
+  <block id="7e1833b7e9f44cf842c607aae5c2397a" category="list-text">Cloud Volumes ONTAP または Azure NetApp Files ボリュームで Cloud Compliance を有効にする場合は、アクティブな、ライセンスが設定された Cloud Compliance サービスが環境にあることを確認してください。</block>
+  <block id="36e08741d90b422572e8e79e4328f9f6" category="section-title">テンプレートアクション間で値を渡す</block>
+  <block id="49c2ea485e68d2177e58bb2d451473c8" category="paragraph">テンプレートには、前のアクションの情報を使用して、将来のアクションでフィールドにデータを入力する機能があります。たとえば、クラウドバックアップ機能を有効にするボリュームの名前を定義する際に、 Create Cloud Volumes ONTAP アクションで、ボリューム名として入力したストレージ管理者の値を使用するようにバックアップアクションを設定できます。</block>
+  <block id="5991f230e2b855afc448176d7cdeea6b" category="paragraph">AppTemplate サービスが以前のアクションから使用できる情報には、次の 2 種類があります。</block>
+  <block id="79bc4a04a5f308a67f608558bf0e314a" category="list-text">入力値 - 以前のテンプレートアクションでストレージ管理者がフィールドに入力した実際の値です。</block>
+  <block id="86d263367d069f32b10ed5bb15d5876b" category="list-text">出力値 - これは、前のテンプレートアクションからリソースを作成したあとに Cloud Manager によって生成される値です。</block>
+  <block id="8108053dbbf1dee5eaf2c1dc3bcd5ba4" category="paragraph">たとえば、ボリュームに対して Compliance を有効にするには、ストレージ管理者が入力するボリューム名（入力値）と、 Cloud Manager がボリュームを作成するときに生成する「ボリューム UUID 」（出力値）の両方が必要です。</block>
+  <block id="651f4ac54513ec8abb669d480b1b2a70" category="paragraph">次の図は、テンプレートの Cloud Compliance アクションセクションでこの情報を入力する方法を示しています。</block>
+  <block id="a4d99746ded90308d15ecf5dc8850229" category="inline-image-macro">前のアクションで入力した値を使用して別のアクションのフィールドに入力する方法を示す図。</block>
+  <block id="eefa405d25c68122a3d10c7be99b3fed" category="paragraph"><block ref="eefa405d25c68122a3d10c7be99b3fed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3bf0b7bcae6bfbf23e3b7f4dc368b1cf" category="list-text">* AppTemplate* サービスを選択し、 * 新規テンプレートの追加 * をクリックします。</block>
+  <block id="12800accdcea8213a17428d96d3f650b" category="paragraph">Select_a Template_page が表示されます。</block>
+  <block id="e9d6286a0d87815f2dfb97a9d19be924" category="list-text">作成するリソースのタイプとして * Cloud Volumes ONTAP + Backup * のボリュームを選択し、 * Get Started * をクリックします。</block>
+  <block id="2e40b56b7fa804a6923caf652b7c25aa" category="paragraph">Cloud Volumes ONTAP アクション定義ページでのボリュームの作成（ _Create Volume in Action Definition_page ）が表示されます。</block>
+  <block id="2883dfc230f7a5fee0fceab3e724eed1" category="cell">フィールド内をクリックし、 5 つのオプションのいずれかを選択します。任意の名前を入力するには、 * Free Text * を選択します。ボリューム名に特定のプレフィックスまたはサフィックスを付けるか、 _contains_certain 文字を指定するか、または入力した正規表現（ regex ）のルールに従うように指定することもできます。たとえば、「 db 」には必須のプレフィックス、サフィックス、またはに次の名前を指定できます。「 db_vol1 」、「 vol1_db 」、「 vol_db_1 」などのボリューム名を追加するようユーザに要求できます。</block>
+  <block id="00c8763f564b8663e70d7c5282bfb116" category="cell">許容値の範囲を指定することも、固定サイズを指定することもできます。この値は GB 単位です。この例では、固定値 *100* を追加できます。</block>
+  <block id="9a58906a5890a61a2ba00a2bc5f6a847" category="list-text">* ディスクタイプ：クラウドストレージプロバイダとディスクタイプを選択ディスクの選択によっては、最小および最大の IOPS またはスループット（ MB/ 秒）値を選択することもできます。基本的には、特定の Quality of Service （ QoS ；サービス品質）を定義します。</block>
+  <block id="6e94b2e72c0376574fc6b13ca0384876" category="cell">フィールド内をクリックし、 5 つのオプションのいずれかを選択します。任意の名前（フリーテキスト）を入力するか、共有名に特定のプレフィックスまたはサフィックスを付加する、 _contains_certain 文字を使用する、または入力した正規表現（ regex ）のルールに従うように指定できます。</block>
+  <block id="dcbae1cdee8a3f08d129ff3de6884125" category="list-text">このアクションに必要なパラメーターを定義したら、 * 適用 * をクリックする。</block>
+  <block id="7ce9c73630e6b28a36fc14989ec6ff58" category="paragraph">テンプレートの値が正しく入力されている場合は、 [ ボリュームを Cloud Volumes ONTAP に作成 ] ボックスの周りに緑のボックスが表示されます。</block>
+  <block id="cf04ce15a8ec1eca4c90ccf826a83c40" category="list-text">クラウドバックアップを有効にする * ボックスをクリックすると、クラウドバックアップアクション定義を有効にする _ ダイアログが表示され、クラウドバックアップの詳細を入力できます。</block>
+  <block id="b9e5b7e730e5da4ccf3cdf03b339452e" category="list-text">日次バックアップを作成するバックアップポリシーを定義し、 30 日間の保持期間を設定します。</block>
+  <block id="ee90c4ccb63dcb129be28139926904d8" category="inline-xref">これらのフィールドの入力方法</block>
+  <block id="50c2e0cb4228373a76d6854dad7a4f3b" category="list-text">ボリューム名フィールドの下には、バックアップを有効にするボリュームを示す 3 つのフィールドがあります。を参照してください <block ref="3ab1f37742a60ea20e1cb8fdc133e9a2" category="inline-xref-macro-rx"></block>。</block>
+  <block id="0728b4f74021dc704fab300222094c8b" category="list-text">[ 適用 ] をクリックすると、 [ クラウドバックアップ ] ダイアログが保存されます。</block>
+  <block id="46725495896c458f104f504d53b4b320" category="list-text">左上に、データベース * （この例では）のテンプレート名 * CVO ボリュームを入力してください。</block>
+  <block id="dbb76d014d45f10ab6e73651f9aa586f" category="list-text">このテンプレートを他の同様のテンプレートと区別できるように詳細な概要を指定する場合は、 [ * テンプレート設定 * ] をクリックして、 [ * 適用 * ] をクリックします。</block>
+  <block id="069cf34ab6ca64e85728193a5aab0a4e" category="list-text">[ テンプレートの保存 *] をクリックします。</block>
+  <block id="6fdaae8c95145408efb75697548f5ced" category="list-text">作成するリソースのタイプとして * Volume for Azure NetApp Files * を選択し、 * Get Started * をクリックします。</block>
+  <block id="d7f05890785a6be968f73b8eaead7a27" category="paragraph">Azure NetApp Files アクション定義ページでのボリュームの作成（ _Create Volume in Action Definition_page ）が表示されます。</block>
+  <block id="659cd3bfbac2b58cde01b6e0d80dad9d" category="list-text">* 詳細： * 新規または既存の Azure NetApp Files アカウントの詳細を入力します。</block>
+  <block id="18801e3c62d625d360e2e7ea2b62c1b7" category="list-text">テンプレートに使用する名前を左上に入力します。</block>
 </blocks>

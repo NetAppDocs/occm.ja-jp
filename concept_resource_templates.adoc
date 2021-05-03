@@ -45,7 +45,8 @@ NOTE: テンプレートを使用すると、作成したリソースにクラ�
 
 * Cloud Volumes ONTAP ボリュームを作成します
 * Azure NetApp Files ボリュームを作成します
-* Cloud Backup Service を有効にします
+* 作成したボリュームで Cloud Backup を有効にします
+* 作成したボリュームで Cloud Compliance を有効にします （ Cloud Volumes ONTAP ボリュームのみ）
 
 
 ネットアップは、時間の経過とともにアクションを追加します。
