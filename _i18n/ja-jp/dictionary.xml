@@ -833,13 +833,9 @@
   <block id="d7038ad702649496a984bf8b13189e57" category="list-text">ソースの SMB 共有とターゲットの SMB 共有の間でアクセス制御リスト（ ACL ）をコピーするように選択します。このオプションを使用できるのは、 2020 年 2 月 23 日リリース以降に作成された同期関係のみです。</block>
   <block id="14242c99845a0bf338d45c648e061643" category="list-text">[ 設定の保存 *] をクリックします。</block>
   <block id="654bbfde33590b041bdb6621586a9dee" category="paragraph">Cloud Sync は、新しい設定との同期関係を変更します。</block>
-  <block id="db128c0d3e34723743cb540e5925b6f6" category="section-title">パスに関するレポートの作成と表示</block>
   <block id="f68b92ee815675ae3018eca060b553b7" category="paragraph">レポートを作成して表示すると、 NetApp の担当者がデータブローカーの構成を調整し、パフォーマンスを向上させるために役立つ情報を入手できます。</block>
   <block id="d065612e0b27393ca9ed8b8e18bc869f" category="paragraph">各レポートには、同期関係にあるパスに関する詳細情報が表示されます。たとえば、ファイルシステムのレポートには、ディレクトリとファイルの数、ファイルサイズの分布、ディレクトリの深さと幅などが表示されます。</block>
-  <block id="a911f6618c123405cc3fc8cfe65c731f" category="list-text">[*Reports*] をクリックします。</block>
   <block id="26126443d44ba2723fb7a7ede8dda75c" category="paragraph">同期関係のそれぞれのパス（ソースまたはターゲット）が表形式で表示されます。</block>
-  <block id="c4925fab8661afe86807b3e91eabbb45" category="list-text">[*Reports] 列で、パスの [*Create New*] をクリックします。</block>
-  <block id="e9fc156d000a430138de4f5cc6244862" category="list-text">レポートの準備ができたら、 * 表示 * をクリックします。</block>
   <block id="94954fba60bab7206fb4f66c4a7750cb" category="paragraph">ファイルシステムパスのサンプルレポートを次に示します。</block>
   <block id="3cd71212de067629b841a10ceaf4f32f" category="inline-image-macro">同期アイテムの量、ファイルサイズ、最大値、アクセス時間、変更時間、および変更時間を表示するレポート。</block>
   <block id="a95d57514b72e95aeaca84b9f5d7e43a" category="paragraph"><block ref="a95d57514b72e95aeaca84b9f5d7e43a" category="inline-image-macro-rx" type="image"></block></block>
@@ -10184,4 +10180,32 @@
   <block id="1af082a9b50d80018185dba3a91d3276" category="paragraph">階層化ポリシーが変更され、新しいポリシーに基づいてデータが階層化されます。</block>
   <block id="10c6081fa0c96e35db80dd022583a3d9" category="paragraph"><block ref="10c6081fa0c96e35db80dd022583a3d9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="32785291c94dd08fd17a4024a3a78dd4" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * 有効化 * をクリックして、プロンプトに従って Azure Blob Storage にデータを階層化します。</block>
+  <block id="19d4853563c9ed77d05ef542fe4b883f" category="list-text">で比較してください</block>
+  <block id="080641e325f9b374fef7b233d5c33998" category="list-text">ファイルまたはディレクトリが変更され、再度同期する必要があるかどうかを判断するときに、 Cloud Sync で特定の属性を比較するかどうかを選択します。</block>
+  <block id="bf6c2410baf65cd9c33fe767daa2d995" category="paragraph">これらの属性をオフにしても、 Cloud Sync はパス、ファイルサイズ、およびファイル名をチェックしてソースとターゲットを比較します。変更がある場合は、それらのファイルとディレクトリが同期されます。</block>
+  <block id="960717da62f7dd61ed8c908d54ae49af" category="paragraph">Cloud Sync では、次の属性の比較を有効または無効にすることができます。</block>
+  <block id="2e1fe502d1987faae1302741ffc3e3e2" category="list-text">*mtime*: ファイルの最終変更時刻。この属性はディレクトリに対しては無効です。</block>
+  <block id="8737e5c894db64c8d3f66e89106dec75" category="list-text">*uid* 、 *gid * 、および * mode* ： Linux の権限フラグ。</block>
+  <block id="66a57cf55e06ad77b01c27e38766b83a" category="doc">レポートを作成および表示して、設定を調整します</block>
+  <block id="428c9ca45dc8f0b8e1eda231aef5b08f" category="paragraph">レポートを作成して表示すると、ネットアップの担当者が支援する情報を入手して、データブローカーの設定を調整し、パフォーマンスを向上させることができます。</block>
+  <block id="0389649d1c6e65625a57cd6c84149999" category="section-title">レポートの作成</block>
+  <block id="475f89b9d3aace2ed4232c3db7231e26" category="paragraph">レポートを作成するたびに、 Cloud Sync はパスをスキャンし、レポートに詳細をコンパイルします。</block>
+  <block id="f538684aa236fdad4b93e1b71f94526f" category="list-text">[ * 同期 &gt; レポート * ] をクリックします。</block>
+  <block id="1c64df2a4dcd75c3fa3f6d99a5843437" category="list-text">[ * レポートアクション * （ * Reports Actions * ） ] 列で、特定のパスに移動して [ * 作成 * （ * Create * ） ] をクリックするか、アクションメニューをクリックして [ * 新規作成 * （ * Create New * ） ] を選択します。</block>
+  <block id="6fefa37bb59e17db20ebbd8fce47f34a" category="list-text">レポートの準備ができたら、アクションメニューをクリックして * 表示 * を選択します。</block>
+  <block id="90e1319509db72baceccb5d8f4c2c472" category="section-title">レポートエラーの表示</block>
+  <block id="c7c1e65692845e74726f70aef9e15699" category="paragraph">Paths テーブルは、最新のレポートにエラーがあるかどうかを示します。エラーは、 Cloud Sync がパスのスキャン時に直面した問題を示します。</block>
+  <block id="60f1113b3a7c334a4ee293a5c193162a" category="paragraph">たとえば、レポートに権限拒否エラーが含まれている場合があります。このようなエラーは、 Cloud Sync が一連のファイルおよびディレクトリ全体をスキャンする機能に影響を及ぼす可能性があります。</block>
+  <block id="d86cb2fe66402168c1c894043151d228" category="paragraph">エラーのリストを確認したら、問題に対処してからレポートを再実行できます。</block>
+  <block id="57ba4added426d6aea423b1e70f1b94c" category="list-text">[ エラー *] 列で、レポートにエラーがあるかどうかを確認します。</block>
+  <block id="10a0d9a4ad96880fef72d02fd9dcd2c5" category="list-text">エラーがある場合は、エラーの数の横にある矢印をクリックします。</block>
+  <block id="d029ebc8f7b2e2aa789dc0e27797846f" category="inline-image-macro">エラーの数を示す [Paths] テーブルのスクリーンショット。 [Errors] 列にはクリック可能な小さな矢印が表示されています。</block>
+  <block id="e01f862fe61f1c44179e61c69a18938d" category="paragraph"><block ref="e01f862fe61f1c44179e61c69a18938d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="591d860278697b4e6dbce26639961630" category="list-text">エラーの情報を使用して、問題を修正します。</block>
+  <block id="aa8765cc437da97ac36fcf5b9e8bd67c" category="paragraph">問題を解決すると、次回レポートを実行したときにエラーが表示されなくなります。</block>
+  <block id="1b3463b3026822e4c8d6ad54c16a507a" category="section-title">レポートの削除</block>
+  <block id="37100a26242d4deb28feac7db8d366de" category="paragraph">修正したエラーが含まれているレポートや、削除した同期関係に関連するレポートを削除することができます。</block>
+  <block id="6d084eaa09a94fecc5582a104b0053da" category="list-text">[ * レポートアクション * （ * Reports Actions * ） ] 列で、パスのアクションメニューをクリックし、 [ * 最後のレポートを削除（ * Delete last report ） ] または [ * すべてのレポートを削除（ * Delete all reports ） ] を選択します。</block>
+  <block id="4051a60e091a5882a67c28985f8c22c7" category="list-text">レポートを削除することを確認します。</block>
+  <block id="b447b3f9113cbc8786f31082c1014d2b" category="sidebar">レポートを表示して、設定を調整します</block>
 </blocks>

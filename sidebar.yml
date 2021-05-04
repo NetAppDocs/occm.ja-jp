@@ -294,6 +294,8 @@ entries:
     url: "/task_sync_managing_relationships.html"
   - title: データブローカーの管理
     url: "/task_sync_managing_data_brokers.html"
+  - title: レポートを表示して、設定を調整します
+    url: "/task_sync_managing_reports.html"
   - title: データブローカーをアンインストール
     url: "/task_sync_uninstalling.html"
   - title: API
