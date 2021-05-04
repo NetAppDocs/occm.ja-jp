@@ -25,6 +25,7 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 * <<Cloud Tiering enhancements>>
 * <<Application Template enhancements>>
+* <<Cloud Sync enhancements>>
 
 
 
@@ -41,6 +42,23 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 * AppTemplates サービスでユーザーインターフェイスが強化され、テンプレートデザイナーがアクション間を移動したり、現在定義しているアクションを確認したりするのが容易になりました。
 * Cloud Volumes ONTAP または Azure NetApp Files のボリュームテンプレートを作成する際に、 Cloud Compliance を統合できるようになりました。これにより、新しく作成した各ボリュームに対して Compliance を有効にしたり、新しく作成した各ボリュームに対して Cloud Backup を有効にしたりできます。また、作成したボリュームに対して Backup と Compliance の両方を有効にするテンプレートを作成することもできます。
+
+
+
+
+=== Cloud Sync の機能拡張
+
+* レポートで見つかったエラーを表示し、最後のレポートまたはすべてのレポートを削除できるようになりました。
++
+link:task_sync_managing_reports.html["レポートを作成して表示する方法の詳細については、を参照してください 設定"]。
+
+* 同期関係ごとに新しい * Compare by * 設定を使用できるようになりました。
++
+この詳細設定では、ファイルまたはディレクトリが変更されたために再度同期する必要があるかどうかを判断するときに、 Cloud Sync で特定の属性を比較するかどうかを選択できます。
+
++
+link:task_sync_managing_relationships.html#changing-the-settings-for-a-sync-relationship["同期関係の設定の変更の詳細については、こちらをご覧ください"]。
+
 
 
 

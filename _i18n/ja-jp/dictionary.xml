@@ -10208,4 +10208,11 @@
   <block id="6d084eaa09a94fecc5582a104b0053da" category="list-text">[ * レポートアクション * （ * Reports Actions * ） ] 列で、パスのアクションメニューをクリックし、 [ * 最後のレポートを削除（ * Delete last report ） ] または [ * すべてのレポートを削除（ * Delete all reports ） ] を選択します。</block>
   <block id="4051a60e091a5882a67c28985f8c22c7" category="list-text">レポートを削除することを確認します。</block>
   <block id="b447b3f9113cbc8786f31082c1014d2b" category="sidebar">レポートを表示して、設定を調整します</block>
+  <block id="9b4bbcf0970a413ed02cbeb6d95b2199" category="list-text">レポートで見つかったエラーを表示し、最後のレポートまたはすべてのレポートを削除できるようになりました。</block>
+  <block id="c3242f3c1f06c404c7b019a4b882d935" category="inline-link-macro">レポートを作成して表示する方法の詳細については、を参照してください 設定</block>
+  <block id="2be2b8b2febac87f0a33f2eccc39b59b" category="paragraph"><block ref="295446e160797b86fdb8443f9b86353d" category="inline-link-macro-rx"></block>。</block>
+  <block id="3f31cdfbb217ec6fa9a858a46cfd3290" category="list-text">同期関係ごとに新しい * Compare by * 設定を使用できるようになりました。</block>
+  <block id="dabc7e1b7880be887fd2898786c6c925" category="paragraph">この詳細設定では、ファイルまたはディレクトリが変更されたために再度同期する必要があるかどうかを判断するときに、 Cloud Sync で特定の属性を比較するかどうかを選択できます。</block>
+  <block id="21a5968447686d2d79ece94fc6ab0653" category="inline-link-macro">同期関係の設定の変更の詳細については、こちらをご覧ください</block>
+  <block id="8034a4c6f2ca47104ecceab199a4462b" category="paragraph"><block ref="235ba8b89e7bd9f8dc92a37d15bd9465" category="inline-link-macro-rx"></block>。</block>
 </blocks>
