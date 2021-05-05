@@ -48,7 +48,13 @@ Cloud Insights と Cloud Manager の統合の概要は次のようになりま�
 . Cloud Manager によって環境が設定されます。次の処理を行います。
 +
 .. Cloud Insights テナント（ _environment_ ）を作成し、 Cloud Central アカウントのすべてのユーザをテナントに関連付けます。
-.. Cloud Insights の 30 日間無償トライアルをご利用いただけます。
++
+テナントがすでに存在する場合、 Cloud Manager はその既存のテナントを使用します。
+
+.. Cloud Insights の無償トライアルを有効にします。
++
+29 日目に、計画は自動的に試用版からに移行します https://docs.netapp.com/us-en/cloudinsights/concept_subscribing_to_cloud_insights.html#editions["Basic エディション"^]。
+
 .. Acquisition Unit と呼ばれる VPC / VNet に仮想マシンを導入します。Acquisition Unit では、ボリュームを監視できます（上記の「コスト」セクションに記載されている VM です）。
 .. Acquisition Unit を Cloud Volumes ONTAP および Cloud Insights テナントに接続します。
 
@@ -81,7 +87,7 @@ Acquisition Unit インスタンスについては、次の点に注意してく
 
 === Cloud Insights テナント
 
-監視を有効にすると、 Cloud Manager によって _tenant_ がセットアップされます。Cloud Insights テナントを使用して、 Acquisition Unit で収集されたパフォーマンスデータにアクセスできます。テナントは、 NetApp Cloud Insights サービス内のセキュアなデータパーティションです。
+テナントがまだない場合は、 Cloud Manager で監視を有効にすると自動的に設定されます。Cloud Insights テナントを使用して、 Acquisition Unit で収集されたパフォーマンスデータにアクセスできます。テナントは、 NetApp Cloud Insights サービス内のセキュアなデータパーティションです。
 
 
 
@@ -93,8 +99,10 @@ Cloud Manager の Monitoring （監視）タブには、ボリュームの基本
 
 === 無料トライアルとサブスクリプション
 
-Cloud Manager を使用すると、 Cloud Insights の 30 日間無償トライアルで、 Cloud Manager 内にパフォーマンスデータを提供したり、 Cloud Insights Standard Edition が提供する機能を確認したりできます。
+Cloud Manager を使用すると、 Cloud Insights の無償トライアルで Cloud Manager 内のパフォーマンスデータを提供し、 Cloud Insights Standard Edition の機能を試すことができます。
 
-無償トライアルの終了時に登録する必要があります。登録しないと、 Cloud Insights テナントが最終的に削除されます。Basic 、 Standard 、または Premium のいずれかのエディションに登録すると、 Cloud Manager の監視機能を引き続き使用できます。
+29 日目に、計画は自動的に試用版からに移行します https://docs.netapp.com/us-en/cloudinsights/concept_subscribing_to_cloud_insights.html#editions["Basic エディション"^]。
+
+Cloud Insights Web インターフェイスから追加機能にアクセスするには、 Standard Edition または Premium Edition に登録することもできます。
 
 https://docs.netapp.com/us-en/cloudinsights/concept_subscribing_to_cloud_insights.html["Cloud Insights に登録する方法について説明します"^]。

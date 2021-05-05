@@ -25,7 +25,6 @@ Cloud Volumes ONTAP のパフォーマンスの監視を開始するには、い
 
 ==== 構成がサポートされていることを確認します
 
-* Cloud Insights の新規のお客様である必要があります。
 * AWS または Azure で実行されている Cloud Volumes ONTAP システムが必要です。
 * AWS の場合、バージョン 3.8.4 以降を実行しているコネクタが必要です。
 * Azure では、バージョン 3.9.3 以降を実行するコネクタが必要です。
@@ -48,13 +47,6 @@ Cloud Volumes ONTAP のパフォーマンスの監視を開始するには、い
 
 
 
-==== Cloud Insights に登録します
-
-[role="quick-margin-para"]
-30 日間の無償トライアルの終了前にサブスクライブすると、 Cloud Manager と Cloud Insights で引き続きパフォーマンスデータを確認できます。 https://docs.netapp.com/us-en/cloudinsights/concept_subscribing_to_cloud_insights.html["登録方法については、こちらをご覧ください"^]。
-
-
-
 == 要件
 
 以下の要件を読み、サポートされている構成になっていることを確認してください。
@@ -73,7 +65,6 @@ Cloud Volumes ONTAP のパフォーマンスの監視を開始するには、い
 
 TIP: をクリックすると、コネクタのバージョンを表示できます image:screenshot_help_icon.gif["右上のヘルプアイコンのスクリーンショット のサポートされています"] アイコンをクリックして、 [ サポート（ Support ） ] > [ コネクター（ Connector ） ]
 
-Cloud Insights の要件:: Cloud Insights の新規のお客様である必要があります。Cloud Insights テナントがすでにある場合は、監視はサポートされません。
 Cloud Central の E メールアドレス:: Cloud Central ユーザアカウントの E メールアドレスは、業務用 E メールアドレスである必要があります。Cloud Insights テナントの作成時には、 Gmail や Hotmail などの無料電子メールドメインはサポートされていません。
 Acquisition Unit のネットワーク::
 +

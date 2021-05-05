@@ -155,7 +155,15 @@ entries:
     - title: Azure で Storage VM を作成します
       url: "/task_managing_svms_azure.html"
   - title: データのレプリケート
-    url: "/task_replicating_data.html"
+    entries:
+    - title: レプリケーションについて説明します
+      url: "/concept_replication.html"
+    - title: はじめに
+      url: "/task_replicating_data.html"
+    - title: スケジュールと関係の管理
+      url: "/task_managing_replication.html"
+    - title: レプリケーションポリシーについて説明します
+      url: "/concept_replication_policies.html"
   - title: パフォーマンスを監視
     entries:
     - title: モニタリングについて説明します

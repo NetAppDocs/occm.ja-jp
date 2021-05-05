@@ -23,6 +23,12 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 == Cloud Manager 3.9.6 の更新（ 2021 年 5 月 5 日）
 
+* <<Cloud Backup enhancements>>
+* <<Monitoring enhancements>>
+* <<Replication enhancement>>
+* <<Account enhancement>>
+
+
 
 
 === Cloud Backup の機能拡張
@@ -43,6 +49,32 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
+
+
+
+=== 監視機能の拡張
+
+* 既存の Cloud Insights テナントがある場合でも、 Cloud Volumes ONTAP 作業環境で監視サービスを有効にできるようになりました。
+* 監視サービスを有効にすると、 Cloud Manager は Cloud Insights の無償トライアルをセットアップします。29 日目に、計画は自動的に試用版からに移行します https://docs.netapp.com/us-en/cloudinsights/concept_subscribing_to_cloud_insights.html#editions["Basic エディション"^]。
+
+
+link:concept_monitoring.html["Cloud Volume での監視サービスの使用の詳細については、こちらをご覧ください ONTAP"]。
+
+
+
+=== レプリケーションの機能拡張
+
+使いやすく、 Cloud Manager のユーザインターフェイスの最新のルックアンドフィールに合わせて、 Replication タブが再設計されました。
+
+image:replication.gif["Cloud Manager の再設計された Replication タブのスクリーンショット。ボリューム関係のリストを示しています。"]
+
+
+
+=== アカウントの強化
+
+Cloud Manager のタイムラインに、アカウント管理に関連する操作とイベントが表示されるようになりました。アクションには、ユーザーの関連付け、ワークスペースの作成、コネクタの作成などがあります。タイムラインのチェックは、特定のアクションを実行したユーザーを特定する必要がある場合や、アクションのステータスを特定する必要がある場合に役立ちます。
+
+link:task_managing_cloud_central_accounts.html["タイムラインをテナンシーサービスにフィルタリングする方法について説明します"]。
 
 
 

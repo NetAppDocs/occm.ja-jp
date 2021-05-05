@@ -84,6 +84,9 @@ image:diagram_networking_onprem.png["「 Cloud Sync サービス、オンプレ�
 | s3._region_.amazonaws.com:443 の例： s3.us-east-2.amazonaws.com:443https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region["S3 エンドポイントの一覧については、 AWS のドキュメントを参照してください"^] | 同期関係に S3 バケットが含まれている場合に Amazon S3 に連絡する。 
 
 
+| s3.us-east-1.amazonaws.com:443 | Cloud Sync からデータブローカーログをダウンロードすると、データブローカーは、ログディレクトリを zip で保存し、 us-east-1 リージョン内の事前定義された S3 バケットにログをアップロードします。 
+
+
 | cf.cloudsync.netapp.com:443 repo.cloudsync.netapp.com:443 | Cloud Sync サービスに連絡します。 
 
 

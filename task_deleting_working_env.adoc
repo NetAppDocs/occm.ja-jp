@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task_deleting_working_env.html 
-keywords: terminate, delete, working environment, remove, cloudformation 
-summary: クラウドプロバイダのコンソールからではなく、 Cloud Volumes ONTAP システムを Cloud Manager から削除することを推奨します。たとえば、クラウドプロバイダからライセンスが有効な Cloud Volumes ONTAP インスタンスを終了すると、別のインスタンスでこのライセンスキーを使用できなくなります。ライセンスをリリースするには、作業環境を Cloud Manager から削除する必要があります。 
+keywords: terminate, delete, working environment, remove, cloudformation, terminate working environment, terminate instance, delete cloud volumes ontap, delete instance, delete working environment, delete backups 
+summary: Cloud Volumes ONTAP システムは、クラウドプロバイダのコンソールからではなく、必ず Cloud Manager から削除してください。たとえば、クラウドプロバイダからライセンスが有効な Cloud Volumes ONTAP インスタンスを終了すると、別のインスタンスでこのライセンスキーを使用できなくなります。ライセンスをリリースするには、作業環境を Cloud Manager から削除する必要があります。 
 ---
 = Cloud Volumes ONTAP 作業環境を削除する
 :hardbreaks:
@@ -13,21 +13,37 @@ summary: クラウドプロバイダのコンソールからではなく、 Clou
 
 
 [role="lead"]
-クラウドプロバイダのコンソールからではなく、 Cloud Volumes ONTAP システムを Cloud Manager から削除することを推奨します。たとえば、クラウドプロバイダからライセンスが有効な Cloud Volumes ONTAP インスタンスを終了すると、別のインスタンスでこのライセンスキーを使用できなくなります。ライセンスをリリースするには、作業環境を Cloud Manager から削除する必要があります。
+Cloud Volumes ONTAP システムは、クラウドプロバイダのコンソールからではなく、必ず Cloud Manager から削除してください。たとえば、クラウドプロバイダからライセンスが有効な Cloud Volumes ONTAP インスタンスを終了すると、別のインスタンスでこのライセンスキーを使用できなくなります。ライセンスをリリースするには、作業環境を Cloud Manager から削除する必要があります。
 
-作業環境を削除すると、 Cloud Manager はインスタンスを終了し、ディスクとスナップショットを削除します。
+作業環境を削除すると、 Cloud Volumes ONTAP インスタンスが終了し、ディスクと Snapshot が削除されます。
+
+作業環境を削除しても、 Cloud Backup のバックアップや Cloud Compliance と Monitoring のインスタンスなど、他のサービスによって管理されているリソースは削除されません。手動で削除する必要があります。そうしないと、これらのリソースの料金が引き続き請求されます。
 
 
-IMPORTANT: Cloud Volumes ONTAP インスタンスでは、 AWS からの偶発的な終了を防止するために、終端保護が有効になっています。ただし、 AWS から Cloud Volumes ONTAP インスタンスを終了する場合は、 AWS CloudFormation コンソールに移動して、インスタンスのスタックを削除する必要があります。スタック名は、作業環境の名前です。
+WARNING: Cloud Volumes ONTAP インスタンスでは、 AWS からの偶発的な終了を防止するために、終端保護が有効になっています。ただし、 AWS から Cloud Volumes ONTAP インスタンスを終了する場合は、 AWS CloudFormation コンソールに移動して、インスタンスのスタックを削除する必要があります。スタック名は、作業環境の名前です。
 
 .手順
-. キャンバスページで、削除する Cloud Volumes ONTAP 作業環境の名前をダブルクリックします。
-. メニューアイコンをクリックし、 * 削除 * をクリックします。
+. 作業環境で Cloud Backup を有効にした場合は、バックアップしたデータが引き続き必要かどうかを確認してから link:task_managing_backups.html#deleting-backups["必要に応じて、バックアップを削除します"]。
++
+クラウドバックアップは、設計上 Cloud Volumes ONTAP から独立しています。Cloud Volumes ONTAP システムを削除しても、 Cloud Backup はバックアップを自動的に削除しません。また、システムを削除した後でバックアップを削除するための UI で現在サポートされていません。
+
+. 作業環境で Cloud Compliance または Monitoring を有効にし、他の作業環境でこれらのサービスを使用していない場合は、それらのサービスのインスタンスを削除する必要があります。
++
+** link:concept_cloud_compliance.html#the-cloud-compliance-instance["Cloud Compliance インスタンスの詳細については、こちらをご覧ください"]。
+** link:concept_monitoring.html#the-acquisition-unit["Monitoring Acquisition Unit の詳細については、こちらを参照してください"]。
+
+
+. Cloud Volumes ONTAP 作業環境を削除します。
++
+.. キャンバスページで、削除する Cloud Volumes ONTAP 作業環境の名前をダブルクリックします。
+.. メニューアイコンをクリックし、 * 削除 * をクリックします。
 +
 image:screenshot_delete_cloud_volumes_ontap.gif["削除アクションを含む作業環境で使用可能なメニューを示すスクリーンショット。"]
 
-. 作業環境の名前を入力し、 * 削除 * をクリックします。
+.. 作業環境の名前を入力し、 * 削除 * をクリックします。
 +
 作業環境を削除するには、最大 5 分かかります。
+
+
 
 
