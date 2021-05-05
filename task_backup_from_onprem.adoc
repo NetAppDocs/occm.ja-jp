@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task_backup_from_onprem.html 
-keywords: backing up, back up, backup, backup cloud volumes ontap, back up cloud volumes ontap, cloud volumes ontap, on-prem, on-premises, back up volumes, cloud backup, cloud backup service, backup and compliance 
-summary: オンプレミスの ONTAP システムからパブリッククラウドの低コストのオブジェクトストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。これには、 Amazon S3 と Azure Blob でのバックアップファイルの作成も含まれます。 
+keywords: backing up, back up, backup, backup on-prem ontap, on-premises, back up volumes, cloud backup, cloud backup service, backup and compliance 
+summary: オンプレミスの ONTAP システムからパブリッククラウドの低コストのオブジェクトストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。これには、 Amazon S3 、 Azure Blob 、 Google Cloud Storage 上でのバックアップファイルの作成が含まれます。 
 ---
 = オンプレミスの ONTAP データをパブリッククラウドにバックアップする
 :hardbreaks:
@@ -13,9 +13,14 @@ summary: オンプレミスの ONTAP システムからパブリッククラウ�
 
 
 [role="lead"]
-オンプレミスの ONTAP システムからパブリッククラウドの低コストのオブジェクトストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。これには、 Amazon S3 と Azure Blob でのバックアップファイルの作成も含まれます。
+オンプレミスの ONTAP システムからパブリッククラウドの低コストのオブジェクトストレージへのデータのバックアップを開始するには、いくつかの手順を実行します。これには、 Amazon S3 、 Azure Blob 、 Google Cloud Storage 上でのバックアップファイルの作成が含まれます。
 
-2021 年 1 月にリリースされたベータ版の機能により、バックアップされたボリュームに対して、オンプレミスシステムからコンプライアンススキャンを実行できます。通常、コンプライアンススキャンでは最大 1TB のデータを解放し、サービスのコストは 1TB を超えるデータに対して適用されます。オンプレミスボリュームにバックアップとコンプライアンスを組み合わせる場合、オンプレミスボリューム上のスキャンのコストは無料です。詳細については、こちらをご覧ください link:concept_cloud_compliance.html["クラウドコンプライアンス"^] ビジネスアプリケーションとクラウド環境のプライバシーを確保できます。
+NetApp StorageGRID システムを使用しており、バックアップを作成する場合は、「方法」を参照してください link:task_backup_onprem_private_cloud.html["オンプレミスの ONTAP データをプライベートクラウドにバックアップ"^]。
+
+ヒント:: ほとんどの場合、 Cloud Manager を使用してすべてのバックアップおよびリストア処理を実行します。ただし、 ONTAP 9.9.1 以降では、 ONTAP System Manager を使用して、オンプレミスの ONTAP クラスタのボリュームバックアップ処理を開始できます。 https://docs.netapp.com/us-en/ontap/task_cloud_backup_data_using_cbs.html["Cloud Backup を使用してボリュームをクラウドにバックアップする方法については、 System Manager の説明を参照してください。"^]
+
+
+2021 年 1 月にリリースされたベータ版の機能により、バックアップされたボリュームに対して、オンプレミスシステムからコンプライアンススキャンを実行できます。通常、コンプライアンススキャンでは最大 1TB のデータを解放し、サービスのコストは 1TB を超えるデータに対して適用されます。オンプレミスのボリュームにバックアップとコンプライアンスを組み合わせることで、オンプレミスのボリューム上のスキャンコストを抑えることができます。詳細については、こちらをご覧ください link:concept_cloud_compliance.html["クラウドコンプライアンス"^] ビジネスアプリケーションとクラウド環境のプライバシーを確保できます。
 
 
 
@@ -30,12 +35,12 @@ summary: オンプレミスの ONTAP システムからパブリッククラウ�
 * オンプレミスクラスタを検出し、 Cloud Manager の作業環境に追加しておきます。を参照してください link:task_discovering_ontap.html["ONTAP クラスタの検出"^] を参照してください。
 +
 ** クラスタで ONTAP 9.7P5 以降が実行されています。
-** クラスタには SnapMirror ライセンスがあり、これは PREM または Data Protection Bundle に含まれています。
+** クラスタには SnapMirror ライセンスがあり、 PREM または Data Protection Bundle に含まれています。
 
 
-* に登録しておきます https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure"^] または https://aws.amazon.com/marketplace/pp/B07QX2QLXX["AWS"^] Cloud Manager Marketplace のバックアップ製品またはを購入済みである link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
+* に登録しておきます https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure"^]、 https://aws.amazon.com/marketplace/pp/B07QX2QLXX["AWS"^]または https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["Google"^] Cloud Manager Marketplace のバックアップ製品またはを購入済みである link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
 * バックアップを格納するオブジェクトストレージスペース用の有効なクラウドプロバイダサブスクリプションが必要です。
-* AWS の場合、 ONTAP クラスタが S3 にデータをバックアップできるように、アクセスキーと必要な権限を持つアカウントが必要です。
+* AWS と GCP については、 ONTAP クラスタがデータをバックアップできるように、アクセスキーと必要な権限を持つアカウントが必要です。
 
 
 
@@ -43,10 +48,10 @@ summary: オンプレミスの ONTAP システムからパブリッククラウ�
 ==== システムで Cloud Backup を有効にします
 
 [role="quick-margin-para"]
-作業環境を選択し、右パネルの [ バックアップとコンプライアンス ] サービスの横にある [ 有効化 ] をクリックして、セットアップウィザードに従います。
+作業環境を選択し、右パネルの [ バックアップとコンプライアンス ] サービスの横にある [*Enable] をクリックして、セットアップ・ウィザードに従います。
 
 [role="quick-margin-para"]
-image:screenshot_backup_from_onprem_activate.png["オンプレミスの作業環境を選択した後に使用できる [ バックアップとコンプライアンスのアクティブ化 ] ボタンを示すスクリーンショット。"]
+image:screenshot_backup_from_onprem_activate.png["オンプレミスの作業環境を選択した後で使用できる [ バックアップとコンプライアンスを有効にする ] ボタンを示すスクリーンショット。"]
 
 
 
@@ -55,15 +60,12 @@ image:screenshot_backup_from_onprem_activate.png["オンプレミスの作業環
 [role="quick-margin-para"]
 プロバイダを選択し、プロバイダの詳細を入力します。また、ボリュームが配置されている ONTAP クラスタ内の IPspace を指定する必要があります。
 
-[role="quick-margin-para"]
-* 注： * オンプレミス ONTAP システムから Google Cloud Storage へのバックアップは、現在 UI ではサポートされていません。
-
 
 
 ==== バックアップポリシーを定義
 
 [role="quick-margin-para"]
-デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。週単位または月単位のバックアップに変更するか、システム定義のポリシーの中からいくつかのオプションを選択します。
+デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。日単位、週単位、または月単位のバックアップに変更するか、システム定義のポリシーの中からオプションを追加するものを 1 つ選択します。
 
 [role="quick-margin-para"]
 image:screenshot_backup_onprem_policy.png["クラウドバックアップの設定を示すスクリーンショット。バックアップのスケジュールと保持期間を選択できます。"]
@@ -106,6 +108,10 @@ image:diagram_cloud_backup_onprem_aws.png["Cloud Backup が、ソースシステ
 
 image:diagram_cloud_backup_onprem_azure.png["Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"]
 
+次の図は、オンプレミスの ONTAP システムを Google Cloud Storage にバックアップする場合の各コンポーネントと、それらの間の準備に必要な接続を示しています。
+
+image:diagram_cloud_backup_onprem_google.png["Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"]
+
 
 
 === ONTAP クラスタの準備
@@ -134,10 +140,7 @@ ONTAP の要件::
 +
 ONTAP は、オブジェクトストレージとの間でデータの読み取りと書き込みを行います。オブジェクトストレージが開始されることはなく、応答するだけです。
 
-* コネクタからのインバウンド接続が必要です。この接続は、使用しているオブジェクトストレージプロバイダに応じて AWS VPC または Azure VNet に配置できます。
-+
-クラスタと Cloud Backup Service の間の接続は必要ありません。
-
+* コネクタからのインバウンド接続が必要です。この接続は、使用するオブジェクトストレージプロバイダに応じて、 AWS VPC 、 Azure VNet 、または Google Cloud Platform VPC に配置できます。
 * クラスタ間 LIF は、バックアップ対象のボリュームをホストする各 ONTAP ノードに必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-69120CF0-F188-434F-913E-33ACB8751A5D.html["IPspace の詳細については、こちらをご覧ください"^]。
 +
 Cloud Backup をセットアップすると、 IPspace で使用するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。
@@ -170,6 +173,7 @@ link:task_discovering_ontap.html["クラスタの検出方法について説明�
 * link:concept_connectors.html["コネクタについて説明します"]
 * link:task_creating_connectors_aws.html["AWS でコネクタを作成する"]
 * link:task_creating_connectors_azure.html["Azure でコネクタを作成する"]
+* link:task_creating_connectors_gcp.html["GCP でコネクタを作成する"]
 * link:task_managing_connectors.html["コネクタ間の切り替え"]
 
 
@@ -183,7 +187,7 @@ link:task_discovering_ontap.html["クラスタの検出方法について説明�
 . コネクタが取り付けられているネットワークで次の接続が有効になっていることを確認します。
 +
 ** Cloud Backup Service へのアウトバウンドインターネット接続 ポート 443 （ HTTPS ）
-** ポート 443 経由でオブジェクトストレージに HTTPS 接続する （ S3 または Blob ）
+** ポート 443 経由でのオブジェクトストレージ（ S3 、 Blob 、 Google ）への HTTPS 接続
 ** ONTAP クラスタへのポート 443 経由の HTTPS 接続
 
 
@@ -191,6 +195,10 @@ link:task_discovering_ontap.html["クラスタの検出方法について説明�
 +
 ** for AWS ： S3 に対して VPC エンドポイントを有効にします。ONTAP クラスタから VPC への Direct Connect または VPN 接続が確立されている環境で、コネクタと S3 の間の通信を AWS 内部ネットワークのままにする場合は、この接続が必要です。
 ** Azure の場合： Azure ストレージへの VNet プライベートエンドポイントを有効化これは、 ONTAP クラスタから VNet への ExpressRoute または VPN 接続があり、コネクタと BLOB ストレージ間の通信を仮想プライベートネットワークのままにする場合に必要です。
+** Google の場合：サービスコネクタを配置するサブネットで Google プライベートアクセスを有効にします。 https://cloud.google.com/vpc/docs/configure-private-google-access["プライベート Google アクセス"^] ONTAP クラスタから VPC への直接接続が確立されており、 Connector と Google Cloud Storage 間の通信を仮想プライベートネットワークのままにする場合は、が必要です。
++
+プライベート Google アクセスは、内部（プライベート） IP アドレスのみ（外部 IP アドレスは使用しない）を持つ VM インスタンスで機能します。
+
 
 
 
@@ -199,19 +207,13 @@ link:task_discovering_ontap.html["クラスタの検出方法について説明�
 
 === サポートされている地域
 
-オンプレミスシステムからパブリックシステムへのバックアップを作成できます すべての地域でクラウドを利用できます https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。
-
-* Azure では、サービスのセットアップ時にバックアップを格納するリージョンを指定します。
-* AWS の場合、バックアップは Cloud Manager がインストールされているリージョンに格納されます。
-
-
-* 注： * オンプレミス ONTAP システムから Google Cloud Storage へのバックアップは、現在 UI ではサポートされていません。
+オンプレミスシステムからパブリックシステムへのバックアップを作成できます すべての地域でクラウドを利用できます https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。サービスのセットアップ時にバックアップを保存するリージョンを指定します。
 
 
 
 === ライセンス要件
 
-Cloud Backup PAYGO ライセンスの場合は、へのサブスクリプションが必要です https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure"^] または https://aws.amazon.com/marketplace/pp/B07QX2QLXX["AWS"^] Cloud Backup を有効にする前に、 Cloud Manager Marketplace のバックアップサービスを利用できます。Cloud Backup の請求は、このサブスクリプションを通じて行われます。
+Cloud Backup PAYGO ライセンスの場合は、へのサブスクリプションが必要です https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure"^]、 https://aws.amazon.com/marketplace/pp/B07QX2QLXX["AWS"^]または https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["Google"^] Cloud Backup を有効にする前に、 Cloud Manager Marketplace のバックアップサービスを利用できます。Cloud Backup の請求は、このサブスクリプションを通じて行われます。
 
 Cloud Backup BYOL ライセンスを使用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["バックアップ BYOL ライセンスを追加および更新する"^]。
 
@@ -278,16 +280,35 @@ Cloud Backup が ONTAP クラスタにアクセスキーを渡します。クレ
 
 
 
+=== Google Cloud Storage でバックアップを準備しています
+
+バックアップを設定するときは、 Storage Admin の権限があるサービスアカウントにストレージアクセスキーを指定する必要があります。サービスアカウントを使用すると、 Cloud Backup でバックアップの格納に使用する Cloud Storage バケットを認証してアクセスできます。キーは、 Google Cloud Storage がリクエストを発行しているユーザーを認識できるようにするために必要です。
+
+.手順
+. https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["事前定義されたストレージ管理者を含むサービスアカウントを作成します ロール"^]。
+. に進みます https://console.cloud.google.com/storage/settings["GCP Storage Settings （ GCP ストレージ設定）"^] サービスアカウントのアクセスキーを作成します。
++
+.. プロジェクトを選択し、 * 互換性 * をクリックします。まだ有効にしていない場合は、 [ 相互運用アクセスを有効にする *] をクリックします。
+.. [ サービスアカウントのアクセスキー *] で、 [ サービスアカウントのキーの作成 *] をクリックし、作成したサービスアカウントを選択して、 [ キーの作成 *] をクリックします。
++
+Cloud Backup でキーを入力する必要があるのは、あとでバックアップサービスを設定するときです。
+
+
+
+
+
+
+
 == Cloud Backup を有効にしています
 
 Cloud Backup は、オンプレミスの作業環境からいつでも直接有効にできます。
 
 .手順
-. キャンバスから作業環境を選択し、右パネルのバックアップとコンプライアンスサービスの横にある [ アクティブ化 ] をクリックします。
+. キャンバスから作業環境を選択し、右パネルのバックアップとコンプライアンスサービスの横にある * 有効化 * をクリックします。
 +
-image:screenshot_backup_from_onprem_activate.png["オンプレミスの作業環境を選択した後に使用できる [ バックアップとコンプライアンスのアクティブ化 ] ボタンを示すスクリーンショット。"]
+image:screenshot_backup_from_onprem_activate.png["オンプレミスの作業環境を選択した後で使用できる [ バックアップとコンプライアンスを有効にする ] ボタンを示すスクリーンショット。"]
 
-. プロバイダを選択し、プロバイダの詳細を入力します。
+. プロバイダを選択し、 * 次へ * をクリックして、プロバイダの詳細を入力します。
 +
 ** Azure の場合は次のように入力します
 +
@@ -301,20 +322,33 @@ image:screenshot_backup_onprem_to_azure.png["オンプレミスクラスタか�
 
 ** AWS の場合は次のように入力します
 +
-... バックアップの格納に使用する AWS Access Key および Secret Key 。
+... バックアップの格納に使用する AWS アカウント、 AWS Access Key 、および Secret Key 。
+... バックアップを格納する AWS リージョン。
 ... バックアップするボリュームが配置されている ONTAP クラスタ内の IPspace 。
 +
 image:screenshot_backup_onprem_to_aws.png["オンプレミスのクラスタから AWS S3 ストレージにボリュームをバックアップする際のクラウドプロバイダの詳細を示すスクリーンショット。"]
 
+
+
+** Google の場合、次のように入力します
++
+... バックアップ用に Google Cloud Storage バケットを作成する Google Cloud Project 。これは、 Cloud Manager が配置されているプロジェクトとは異なる場合があります。（プロジェクトには、事前定義された Storage Admin ロールを持つサービスアカウントが必要です）。
+... バックアップの保存に使用する Google Access Key および Secret Key 。
+... バックアップが保存される Google リージョン。これは、 Cloud Manager が配置されているリージョンとは異なるリージョンにすることもできます。
+... バックアップするボリュームが配置されている ONTAP クラスタ内の IPspace 。
++
+image:screenshot_backup_onprem_to_google.png["オンプレミスのクラスタから Google Cloud Storage にボリュームをバックアップする際のクラウドプロバイダの詳細を示すスクリーンショット。"]
+
+
+
+** StorageGRID については、「方法」を参照してください link:task_backup_onprem_private_cloud.html["オンプレミスの ONTAP データをプライベートクラウドにバックアップ"]。
 +
 この情報は、サービスの開始後は変更できないことに注意してください。
 
 
 
-
-
-. [* Continue （続行） ] をクリックします。
-. [_Define Policy_] ページで、バックアップスケジュールと保持の値を選択し、 [* Continue * ] をクリックします。
+. プロバイダの詳細を入力したら、「 * 次へ * 」をクリックします。
+. [_Define Policy_] ページで、既存のバックアップスケジュールと保持期間の値を選択するか、新しいバックアップポリシーを定義して、 [ * 次へ * ] をクリックします。
 +
 image:screenshot_backup_onprem_policy.png["クラウドバックアップの設定を示すスクリーンショット。バックアップのスケジュールと保持期間を選択できます。"]
 
@@ -326,13 +360,13 @@ image:screenshot_backup_onprem_policy.png["クラウドバックアップの設�
 ** すべてのボリュームをバックアップするには、タイトル行（image:button_backup_all_volumes.png[""]）。
 ** 個々のボリュームをバックアップするには、各ボリュームのボックス（image:button_backup_1_volume.png[""]）。
 +
-image:screenshot_backup_select_onprem_volumes.png["バックアップするボリュームを選択するスクリーンショット。"]
+image:screenshot_backup_select_volumes.png["バックアップするボリュームを選択するスクリーンショット。"]
 
 
 
-. Activate * をクリックすると、 Cloud Backup はボリュームの初期バックアップの作成を開始します。
+. Activate Backup * をクリックすると、ボリュームの初期バックアップの作成が開始されます。
 +
-バックアップされたボリュームでコンプライアンススキャンを実行するかどうかを確認するメッセージが表示されます。Cloud Compliance スキャンは、実行時に無料で実行できます バックアップされたボリューム（を除く） link:concept_cloud_compliance.html#cost["導入された Cloud Compliance インスタンスのコスト"^]）。
+AWS または Azure でバックアップファイルを作成する場合、バックアップされたボリュームで準拠スキャンを実行するかどうかの確認を求められます。Cloud Compliance スキャンは、実行時に無料で実行できます バックアップされたボリューム（を除く） link:concept_cloud_compliance.html#cost["導入された Cloud Compliance インスタンスのコスト"^]）。
 
 +
 image:screenshot_compliance_on_backups.png["バックアップしたボリュームで Cloud Compliance をアクティブ化するように選択できるページのスクリーンショット。"]

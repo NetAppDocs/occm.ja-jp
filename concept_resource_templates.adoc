@@ -45,8 +45,8 @@ NOTE: テンプレートを使用すると、作成したリソースにクラ�
 
 * Cloud Volumes ONTAP ボリュームを作成します
 * Azure NetApp Files ボリュームを作成します
-* 作成したボリュームで Cloud Backup を有効にします
-* 作成したボリュームで Cloud Compliance を有効にします （ Cloud Volumes ONTAP ボリュームのみ）
+* 作成したボリュームで Cloud Backup を有効にします （ Cloud Volumes ONTAP ボリュームのみ）
+* 作成したボリュームで Cloud Compliance を有効にします
 
 
 ネットアップは、時間の経過とともにアクションを追加します。
@@ -80,6 +80,6 @@ image:diagram_template_flow1.png["アプリケーションテンプレートの�
 == 制限
 
 * アプリケーションテンプレートサービスは、 Gov Cloud リージョンや「ダーク」サイトではサポートされていません。
-* テンプレートを使用して既存のアグリゲートにボリュームを作成することはできません。新しいアグリゲートに新しいボリュームが作成されます。
+* テンプレートを使用して既存のアグリゲートに Cloud Volumes ONTAP ボリュームを作成することはできません。新しいアグリゲートに新しいボリュームが作成されます。
 * 複数の Storage VM （ SVM ）を含む Cloud Volumes ONTAP システム上にボリュームを作成する場合は、テンプレートを使用することはできません。
 

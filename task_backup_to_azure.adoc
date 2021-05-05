@@ -35,9 +35,9 @@ Cloud Volumes ONTAP から Azure Blob Storage へのデータのバックアッ�
 ==== 新規または既存のシステムで Cloud Backup を有効にします
 
 * 新しいシステム： Cloud Backup は、作業環境ウィザードではデフォルトで有効になっています。このオプションは必ず有効にしておいてください。
-* 既存のシステム：作業環境を選択し、右パネルの Cloud Backup Service の横にある * Activate * をクリックして、セットアップ・ウィザードに従います。
+* 既存のシステム：作業環境を選択し、右パネルのバックアップと復元サービスの横にある * 有効化 * をクリックして、セットアップウィザードに従います。
 +
-image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに表示される Cloud Backup Activate ボタンのスクリーンショット"]
+image:screenshot_backup_cvo_enable.png["作業環境を選択したあとに使用できる Cloud Backup Enable ボタンを示すスクリーンショット。"]
 
 
 
@@ -46,20 +46,20 @@ image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに表�
 ==== プロバイダの詳細を入力します
 
 [role="quick-margin-para"]
-プロバイダサブスクリプションを選択し、新しいリソースグループを作成するか、既存のリソースグループを使用するかを選択します。
+プロバイダのサブスクリプションとリージョンを選択し、新しいリソースグループを作成するか、既存のリソースグループを使用するかを選択します。
 
 [role="quick-margin-para"]
-image:screenshot_backup_provider_settings_azure.png["バッキング時にクラウドプロバイダの詳細を示すスクリーンショット オンプレミスクラスタから Azure Blob にボリュームをバックアップ 階層"]
+image:screenshot_backup_provider_settings_azure.png["ONTAP クラスタから Azure Blob Tier にボリュームをバックアップする場合のクラウドプロバイダの詳細を示すスクリーンショット。"]
 
 
 
 ==== バックアップポリシーを定義
 
 [role="quick-margin-para"]
-デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。週単位または月単位のバックアップに変更するか、システム定義のポリシーの中からいくつかのオプションを選択します。
+デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。日単位、週単位、または月単位のバックアップに変更するか、システム定義のポリシーの中からオプションを追加するものを 1 つ選択します。
 
 [role="quick-margin-para"]
-image:screenshot_backup_onprem_policy.png["クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"]
+image:screenshot_backup_policy_azure.png["クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"]
 
 
 
@@ -106,13 +106,16 @@ Cloud Backup BYOL ライセンスを使用するには、ライセンスの期�
 
 Cloud Backup は、作業環境ウィザードではデフォルトで有効になっています。このオプションは必ず有効にしておいてください。
 
+を参照してください link:task_deploying_otc_azure.html["Azure で Cloud Volumes ONTAP を起動します"] を Cloud Volumes ONTAP 参照してください。
+
 
 NOTE: リソースグループの名前を選択する場合は、 Cloud Volumes ONTAP を導入する際に * disable * Cloud Backup と入力します。の手順に従います <<enabling-cloud-backup-on-an-existing-system,既存のシステムでの Cloud Backup の有効化>> Cloud Backup を有効にしてリソースグループを選択します。
 
 .手順
 . [ Cloud Volumes ONTAP の作成 *] をクリックします。
 . クラウドプロバイダとして Microsoft Azure を選択し、シングルノードまたは HA システムを選択します。
-. 詳細とクレデンシャルのページに必要事項を入力し、 Azure Marketplace サブスクリプションが登録されていることを確認します。
+. Azure クレデンシャルの定義ページで、クレデンシャル名、クライアント ID 、クライアントシークレット、およびディレクトリ ID を入力し、 * 続行 * をクリックします。
+. 詳細とクレデンシャルページに必要事項を入力し、 Azure Marketplace サブスクリプションが登録されていることを確認して、「 * Continue * 」をクリックします。
 . [ サービス ] ページで、サービスを有効のままにして、 [* 続行 ] をクリックします。
 +
 image:screenshot_backup_to_azure.gif["に、作業環境ウィザードの Cloud Backup オプションを示します。"]
@@ -131,15 +134,15 @@ Cloud Backup はシステムで有効になり、ボリュームを毎日バッ�
 作業環境から Cloud Backup をいつでも直接有効にできます。
 
 .手順
-. 作業環境を選択し、右パネルの Cloud Backup Service の横にある * Activate * をクリックします。
+. 作業環境を選択し、右パネルの [ バックアップと復元 ] サービスの横にある [*Enable] をクリックします。
 +
-image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに使用できるクラウドバックアップ設定ボタンを示すスクリーンショット。"]
+image:screenshot_backup_cvo_enable.png["作業環境を選択したあとに使用できるクラウドバックアップ設定ボタンを示すスクリーンショット。"]
 
-. プロバイダの詳細を選択します。
+. プロバイダの詳細を選択し、 * 次へ * ：
 +
 .. バックアップの格納に使用する Azure サブスクリプション。
+.. バックアップを保存するリージョン。
 .. リソースグループ - 新しいリソースグループを作成することも、を選択して既存のリソースグループを選択することもできます。
-.. [* Continue （続行） ] をクリックします。
 +
 image:screenshot_backup_provider_settings_azure.png["バッキング時にクラウドプロバイダの詳細を示すスクリーンショット オンプレミスクラスタから Azure Blob にボリュームをバックアップ 階層"]
 
@@ -148,14 +151,14 @@ image:screenshot_backup_provider_settings_azure.png["バッキング時にクラ
 
 
 
-. [_Define Policy_] ページで、バックアップスケジュールと保持の値を選択し、 [* Continue * ] をクリックします。
+. [_Define Policy_] ページで、バックアップスケジュールと保持の値を選択し、 [* Next] をクリックします。
 +
-image:screenshot_backup_onprem_policy.png["クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"]
+image:screenshot_backup_policy_azure.png["クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"]
 
 +
 を参照してください link:concept_backup_to_cloud.html#the-schedule-is-daily-weekly-monthly-or-a-combination["既存のポリシーのリスト"^]。
 
-. バックアップするボリュームを選択し、 * Activate * をクリックします。
+. バックアップするボリュームを選択し、 * バックアップのアクティブ化 * をクリックします。
 +
 image:screenshot_backup_select_volumes.png["バックアップするボリュームを選択するスクリーンショット。"]
 
@@ -166,6 +169,6 @@ image:screenshot_backup_select_volumes.png["バックアップするボリュー
 
 
 
-Cloud Backup は、選択した各ボリュームの初期バックアップの作成を開始します。
+Cloud Backup が起動し、選択した各ボリュームの初期バックアップの作成が開始されます。 Backup Dashboard が表示され、バックアップの状態を監視できます。
 
 可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です link:task_restore_backups.html["ボリューム全体または個々のファイルをバックアップファイルからリストアする"^]。

@@ -36,9 +36,9 @@ Cloud Volumes ONTAP から Google Cloud Storage へのデータのバックア�
 ==== 新規または既存のシステムで Cloud Backup を有効にします
 
 * 新しいシステム： Cloud Backup は、新しい作業環境ウィザードを完了すると有効にできます。
-* 既存のシステム：作業環境を選択し、右パネルの Cloud Backup Service の横にある * Activate * をクリックして、セットアップ・ウィザードに従います。
+* 既存のシステム：作業環境を選択し、右パネルのバックアップと復元サービスの横にある * 有効化 * をクリックして、セットアップウィザードに従います。
 +
-image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに表示される Cloud Backup Activate ボタンのスクリーンショット"]
+image:screenshot_backup_cvo_enable.png["作業環境を選択したあとに使用できる Cloud Backup Enable ボタンを示すスクリーンショット。"]
 
 
 
@@ -57,7 +57,7 @@ image:screenshot_backup_provider_settings_gcp.png["GCP にインストールさ�
 ==== バックアップポリシーを定義
 
 [role="quick-margin-para"]
-デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。週単位または月単位のバックアップに変更するか、システム定義のポリシーの中からいくつかのオプションを選択します。
+デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。日単位、週単位、または月単位のバックアップに変更するか、システム定義のポリシーの中からオプションを追加するものを 1 つ選択します。
 
 [role="quick-margin-para"]
 image:screenshot_backup_policy_gcp.png["クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"]
@@ -139,7 +139,7 @@ image:screenshot_backup_to_gcp.png["に、作業環境ウィザードの Cloud B
 
 Cloud Backup はシステム上で有効になり、毎日作成したボリュームをバックアップし、最新の 30 個のバックアップコピーを保持します。
 
-可能です link:task_managing_backups.html["追加ボリュームのバックアップを開始および停止するか、を変更します バックアップスケジュール"^] また、次のことも可能です link:task_restore_backups.html["バックアップファイルからボリューム全体をリストアする"^]。
+可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です link:task_restore_backups.html["ボリューム全体または個々のファイルをバックアップファイルからリストアする"^]。
 
 
 
@@ -148,25 +148,25 @@ Cloud Backup はシステム上で有効になり、毎日作成したボリュ�
 Cloud Backup は、作業環境からいつでも直接有効にすることができます。
 
 .手順
-. 作業環境を選択し、右パネルの Cloud Backup Service の横にある * Activate * をクリックします。
+. 作業環境を選択し、右パネルの [ バックアップと復元 ] サービスの横にある [*Enable] をクリックします。
 +
-image:screenshot_backup_to_s3_icon.gif["作業環境を選択したあとに使用できるクラウドバックアップ設定ボタンを示すスクリーンショット。"]
+image:screenshot_backup_cvo_enable.png["作業環境を選択したあとに使用できるクラウドバックアップ設定ボタンを示すスクリーンショット。"]
 
-. Google Cloud Storage バケットをバックアップ用に作成する Google Cloud Project を選択し、 * Continue * をクリックします。これは、 Cloud Volumes ONTAP システムが配置されているプロジェクトとは異なる場合があります。
+. Google Cloud Storage バケットをバックアップ用に作成する Google Cloud Project とリージョンを選択し、 * Next * をクリックします。これは、 Cloud Volumes ONTAP システムが配置されているプロジェクトとは異なる場合があります。
 +
 image:screenshot_backup_provider_settings_gcp.png["GCP にインストールされた Cloud Volumes ONTAP システムから Google Cloud Storage バケットにボリュームをバックアップする際のクラウドプロバイダの詳細を示すスクリーンショット。"]
 
 +
 プロジェクトには、事前定義されたストレージ管理者ロールを持つサービスアカウントが必要です。また、サービスの開始後にプロジェクトを変更することはできません。
 
-. [_Define Policy_] ページで、バックアップスケジュールと保持の値を選択し、 [* Continue * ] をクリックします。
+. [_Define Policy_] ページで、バックアップスケジュールと保持の値を選択し、 [* Next] をクリックします。
 +
 image:screenshot_backup_policy_gcp.png["クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"]
 
 +
 を参照してください link:concept_backup_to_cloud.html#the-schedule-is-daily-weekly-monthly-or-a-combination["既存のポリシーのリスト"^]。
 
-. バックアップするボリュームを選択し、 * Activate * をクリックします。
+. バックアップするボリュームを選択し、 * バックアップのアクティブ化 * をクリックします。
 +
 image:screenshot_backup_select_volumes.png["バックアップするボリュームを選択するスクリーンショット。"]
 
@@ -177,6 +177,6 @@ image:screenshot_backup_select_volumes.png["バックアップするボリュー
 
 
 
-Cloud Backup は、選択した各ボリュームの初期バックアップの作成を開始します。
+Cloud Backup が起動し、選択した各ボリュームの初期バックアップの作成が開始されます。 Backup Dashboard が表示され、バックアップの状態を監視できます。
 
-可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です link:task_restore_backups.html["バックアップファイルからボリューム全体をリストアする"^]。
+可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です link:task_restore_backups.html["ボリューム全体または個々のファイルをバックアップファイルからリストアする"^]。

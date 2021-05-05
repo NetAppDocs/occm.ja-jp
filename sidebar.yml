@@ -252,6 +252,8 @@ entries:
       url: "/task_backup_to_gcp.html"
     - title: オンプレミスの ONTAP データをパブリッククラウドにバックアップ
       url: "/task_backup_from_onprem.html"
+    - title: オンプレミスの ONTAP データをプライベートクラウドにバックアップ
+      url: "/task_backup_onprem_private_cloud.html"
   - title: バックアップを管理します
     url: "/task_managing_backups.html"
   - title: バックアップからリストアします
