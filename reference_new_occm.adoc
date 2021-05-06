@@ -27,6 +27,7 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 * <<Monitoring enhancements>>
 * <<Replication enhancement>>
 * <<Account enhancement>>
+* <<Cloud Compliance enhancements>>
 
 
 
@@ -75,6 +76,15 @@ image:replication.gif["Cloud Manager の再設計された Replication タブの
 Cloud Manager のタイムラインに、アカウント管理に関連する操作とイベントが表示されるようになりました。アクションには、ユーザーの関連付け、ワークスペースの作成、コネクタの作成などがあります。タイムラインのチェックは、特定のアクションを実行したユーザーを特定する必要がある場合や、アクションのステータスを特定する必要がある場合に役立ちます。
 
 link:task_managing_cloud_central_accounts.html["タイムラインをテナンシーサービスにフィルタリングする方法について説明します"]。
+
+
+
+=== Cloud Compliance の機能拡張
+
+* クラウドコンプライアンスは「ガバナンスとコンプライアンス」に名称変更されました。Cloud Manager には、「ガバナンス」と「コンプライアンス」という 2 つのタブがあります。[Governance （ガバナンス） ] タブをクリックすると、が表示されます link:task_controlling_governance_data.html#the-governance-dashboard["ガバナンスダッシュボード"] 「ガバナンスとコンプライアンス」サービスと「コンプライアンス」タブでは、が表示されます link:task_controlling_private_data.html["コンプライアンスダッシュボード"]。
+* Azure Blob に格納されたデータのスキャンがサポートされるようになりました を使用する場合 https://min.io/["MinIO サービス"]。を参照してください link:task_scanning_object_storage.html["S3 プロトコルを使用するオブジェクトストレージをスキャンしています"^] を参照してください。
+* 新しい個人データ型。Cloud Compliance で、オーストリアの SSN をファイルで検索できるようになりました。
+
 
 
 

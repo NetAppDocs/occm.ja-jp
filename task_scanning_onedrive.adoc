@@ -85,7 +85,7 @@ OneDrive アカウントが作業環境の一覧に追加されます。
 個々の OneDrive ユーザまたはすべての OneDrive ユーザを追加して、ファイルを Cloud Compliance でスキャンすることができます。
 
 .手順
-. [ スキャン構成 ] ページで、 OneDrive アカウントの [ * 構成 * ] ボタンをクリックします。
+. [_Configuration_] ページで、 OneDrive アカウントの [* 構成 *] ボタンをクリックします。
 +
 image:screenshot_compliance_onedrive_add_users.png["設定ボタンを選択できるスキャン設定ページのスクリーンショット。"]
 

@@ -139,7 +139,7 @@ image:screenshot_s3_compliance_iam_role.gif["クラウド用の AWS IAM ロー�
 
 
 
-TIP: また、作業環境のコンプライアンススキャンを有効にすることもできます をクリックして、 [ スキャン設定 ] ページからアクセスします image:screenshot_gallery_options.gif[""] ボタンを押して、 * コンプライアンスを有効にする * を選択します。
+TIP: また、作業環境のコンプライアンススキャンを有効にすることもできます Configuration ページでをクリックします image:screenshot_gallery_options.gif[""] ボタンを押して、 * コンプライアンスを有効にする * を選択します。
 
 Cloud Manager によって、インスタンスに IAM ロールが割り当てられます。
 
@@ -242,7 +242,7 @@ Cloud Compliance インスタンスのプロファイルアカウントで追加
 
 
 
-. Amazon S3 Scan Configuration * ページに移動し、新しい AWS アカウントが表示されます。Cloud Compliance が新しいアカウントの作業環境を同期し、この情報を表示するまでに数分かかることがあります。
+. Amazon S3 Configuration * ページに移動し、新しい AWS アカウントが表示されます。Cloud Compliance が新しいアカウントの作業環境を同期し、この情報を表示するまでに数分かかることがあります。
 +
 image:screenshot_activate_and_select_buckets.png[""]
 

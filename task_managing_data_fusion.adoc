@@ -27,7 +27,7 @@ image:diagram_compliance_data_fusion.png["データベースのコンテンツ�
 
 が必要です link:task_scanning_databases.html#adding-the-database-server["データベースサーバを少なくとも 1 つ追加しました"^] データ Fusion ソースを追加する前に、を Cloud Compliance に追加します。
 
-. [ スキャン設定 ] ページで、ソースデータが存在するデータベースの [ データ Fusion の管理 ] をクリックします。
+. [ 構成 ] ページで、ソースデータが存在するデータベースの [ データ Fusion の管理 ] をクリックします。
 +
 image:screenshot_compliance_manage_data_fusion.png["ソース列を追加する [ データの管理（ Manage Data Fusion ） ] ボタンを選択するスクリーンショット。"]
 

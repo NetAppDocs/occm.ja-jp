@@ -2602,20 +2602,12 @@
   <block id="650fcf6688b77acd2c46fd3270ff8134" category="cell">サポートされるターゲットロケーション</block>
   <block id="90d3c86fdac6bf81185007cf0476c595" category="cell">AWS EFS を使用して</block>
   <block id="128edc3ff8c2d69c9c76b866643314ec" category="list-text">AWS S3</block>
-  <block id="9285b6d1dcdd17936de5754a06ea2d58" category="list-text">Azure NetApp ファイル（ NFS ）</block>
-  <block id="758f4b68bcadb7de913cbf96a6968555" category="list-text">Cloud Volumes ONTAP （ NFS ）</block>
-  <block id="619854cfb9006175ed4a1382242094c1" category="list-text">クラウドボリュームサービス（ NFS ）</block>
   <block id="5446a6bee3301e1f52824fc0affa6299" category="list-text">IBM クラウドオブジェクトストレージ</block>
   <block id="e83e5674ab295a6613b60f5e12d1bfe3" category="list-text">NFS サーバ</block>
   <block id="0ef90fde5440e5fbd859cb4d59f76f2c" category="list-text">オンプレミスの ONTAP クラスタ</block>
   <block id="392d70ca39f31f10bd637936769788df" category="list-text">StorageGRID</block>
   <block id="200b74de2e12f861dad63aa0de84ec6c" category="list-text">Cloud Volumes Service</block>
   <block id="f83bcb8e69c5f1d1eb29cddacb8374b0" category="list-text">SMB サーバ</block>
-  <block id="efbd7a9e417058f786c0fdeab5c21e1f" category="cell">Azure NetApp ファイル（ SMB ）</block>
-  <block id="4388131d34da6d5a73489bc12418ef22" category="list-text">Cloud Volumes ONTAP （ SMB ）</block>
-  <block id="af7776baf6b62c5a650fc9f866041903" category="list-text">クラウドボリュームサービス（ SMB ）</block>
-  <block id="6a1c4f364e01f5a333511b40002bf14f" category="cell">オンプレミスの ONTAP クラスタ（ NFS ）</block>
-  <block id="082fbdcb9c7d0087729ea85e7d33340d" category="cell">オンプレミスの ONTAP クラスタ（ SMB ）</block>
   <block id="a68d8b6ae92fdf98aa74ce8cfe41a27f" category="cell">ONTAP S3 ストレージ</block>
   <block id="55d5b6dbf906d2bf27a6569938b053e5" category="cell">SFTP^1</block>
   <block id="e2ab7c65b21ed8cc1c3b642b5e36429e" category="cell">S3</block>
@@ -2630,7 +2622,6 @@
   <block id="e2b0c2a0a664cef2184b3d17808db4ce" category="list-text">1 回のアクセスではほとんど発生しません</block>
   <block id="4def2a084469f97f6372bfaf0823941b" category="list-text">氷河</block>
   <block id="d2f79b4db321be04fd1439394fb99d3c" category="list-text">Glacier Deep Archive</block>
-  <block id="f561452d8e3a8b042851c846945dea54" category="section-title">ソースとターゲットのネットワーク</block>
   <block id="11d5ccc5314c12a2c5d719f072173436" category="list-text">ソースとターゲットは、データブローカーにネットワーク接続されている必要があります。</block>
   <block id="61bf906af45af325c7dfcb3a82074169" category="paragraph">たとえば、 NFS サーバがデータセンターにあり、データブローカーが AWS にある場合、ネットワークから VPC へのネットワーク接続（ VPN または直接接続）が必要です。</block>
   <block id="39bb21e67daf5fcfbc9e0955f8a7891a" category="section-title">移行元と移行先の要件</block>
@@ -2909,9 +2900,7 @@
   <block id="df809117058eb7bb06c8ed0aff661ac1" category="list-text">導入手順が完了すると、ウィザードに進捗状況が表示されます。問題が発生すると停止し、入力を求められます。</block>
   <block id="33093dc69ce0d0f1807d3359349d18ff" category="inline-image-macro">新しいインスタンスを導入するための Cloud Compliance ウィザードのスクリーンショット。</block>
   <block id="b0cc39afc6705e4b6b8d269f4e5d30ca" category="paragraph"><block ref="b0cc39afc6705e4b6b8d269f4e5d30ca" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="af4cdd376bd1188852b931f5dfc51ac2" category="list-text">インスタンスが展開されたら、 * 設定に進む * をクリックして _ スキャン設定 _ ページに移動します。</block>
   <block id="c79d23f9ea7073de80841a12e5069b75" category="paragraph">Cloud Manager によってクラウドプロバイダに Cloud Compliance インスタンスが導入されます。</block>
-  <block id="ed2a430317fde7f007d32391b71f0735" category="paragraph">スキャン設定ページから、スキャンするデータソースを選択できます。</block>
   <block id="2e541addf01e5021c9a76b45dd18ee20" category="inline-xref">Cloud Compliance サービスに登録</block>
   <block id="36d272bb5249db290adca27ab0647115" category="paragraph">また可能です <block ref="057a774f1591e9e1e8785f23cce17f9b" category="inline-xref-macro-rx"></block> 現時点では、データ量が 1TB を超えるまでは料金は発生しません。</block>
   <block id="62d9d1a294a71f6d8ad453b8a4897806" category="section-title">Cloud Compliance インスタンスをオンプレミスに導入する</block>
@@ -3159,7 +3148,6 @@
   <block id="d1051ae5e957e6115a285928f82aa068" category="inline-image-macro">クラウド用の AWS IAM ロールを入力するスクリーンショット コンプライアンス</block>
   <block id="283a3201dd33adbc18b94c60658c9966" category="paragraph"><block ref="283a3201dd33adbc18b94c60658c9966" category="inline-image-macro-rx" type="image"></block></block>
   <block id="808f82f428ecd48b9ab8cfc911a6bf28" category="list-text">[ コンプライアンスを有効にする ] をクリックします。</block>
-  <block id="f2c2d0367a80ae528928c978cca6811a" category="admonition">また、作業環境のコンプライアンススキャンを有効にすることもできます をクリックして、 [ スキャン設定 ] ページからアクセスします <block ref="a5c9b85c9e509567688aed8106bc419c" category="inline-image-macro-rx" type="image"></block> ボタンを押して、 * コンプライアンスを有効にする * を選択します。</block>
   <block id="e1dfcbaa5e8f3411d5b67049eea563a5" category="paragraph">Cloud Manager によって、インスタンスに IAM ロールが割り当てられます。</block>
   <block id="e18a75263bcb68f3fcffe930704c1b61" category="section-title">S3 バケットでの準拠スキャンの有効化と無効化</block>
   <block id="1f7fce96aae3eda3b62816f69f0280f7" category="paragraph">Cloud Manager で Amazon S3 の Cloud Compliance が有効になったら、次の手順でスキャンするバケットを設定します。</block>
@@ -3182,7 +3170,6 @@
   <block id="b21de1cc1aa71c299fe0a0bd9c93cec8" category="list-text">Cloud Compliance IAM ポリシーを関連付けます。必要な権限があることを確認します。</block>
   <block id="2d71d66332791ba3aa2fd6606997c078" category="list-text">Cloud Compliance インスタンスが存在するソース AWS アカウントに移動し、インスタンスに関連付けられている IAM ロールを選択します。</block>
   <block id="df44bbee8b7efd1821add1d58259ab8a" category="paragraph">Cloud Compliance インスタンスのプロファイルアカウントで追加の AWS アカウントにアクセスできるようになりました。</block>
-  <block id="02e24db809e98d4fb50a10a15e578bf4" category="list-text">Amazon S3 Scan Configuration * ページに移動し、新しい AWS アカウントが表示されます。Cloud Compliance が新しいアカウントの作業環境を同期し、この情報を表示するまでに数分かかることがあります。</block>
   <block id="0ca84bf2b5295a1162997822bafd83bd" category="paragraph"><block ref="0ca84bf2b5295a1162997822bafd83bd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="77d290955464de3e437e53671d63d09c" category="list-text">[Activate Compliance &amp; Select Buckets] をクリックして、スキャンするバケットを選択します。</block>
   <block id="c37230be50655f7035a5b1b49f32ce48" category="paragraph">Cloud Compliance によって、有効にした新しい S3 バケットのスキャンが開始されます。</block>
@@ -4745,7 +4732,6 @@
   <block id="7c7226e9a80bf0a4032888ef63440547" category="list-text">Cloud Volumes ONTAP のセキュリティグループは、クラウドコンプライアンスインスタンスからのインバウンド接続を許可する必要があります。</block>
   <block id="34be4e847de3dc44a23f3545d879c123" category="list-text">NFS ボリュームのエクスポートポリシーで、 Cloud Compliance インスタンスからのアクセスを許可する必要があります。</block>
   <block id="b1c46e2accf63f430648a32bfa04dfe5" category="list-text">CIFS ボリュームをスキャンするには、 Cloud Compliance で Active Directory のクレデンシャルが必要です。</block>
-  <block id="63c47f37428cfa174d76d2459448c093" category="paragraph">コンプライアンス * &gt; * スキャン設定 * &gt; * CIFS クレデンシャルの編集 * をクリックし、クレデンシャルを入力します。</block>
   <block id="92f0486d51f1e9b1cf8f41b75ec65984" category="section-title">スキャンするボリュームを管理します</block>
   <block id="45edadb050f120ea38b17d5a488150c4" category="paragraph">スキャンするボリュームを選択または選択解除すると、 Cloud Compliance によるスキャンが開始または停止します。</block>
   <block id="9ad43a991a6562a94520e8bb53577c56" category="section-title">スキャンするデータソースを検出しています</block>
@@ -4759,7 +4745,6 @@
   <block id="bf07ccd87c478107963c1a52bd73ba0b" category="inline-xref">オンプレミスの ONTAP システムからバックアップファイルをスキャンする</block>
   <block id="66136d688d860db593f75335a2c0d8b3" category="list-text">Cloud Manager の上部で、 * Compliance * をクリックし、 * Configuration * タブを選択します。</block>
   <block id="15e8a0899487816f02a5371964d9c255" category="inline-image-macro">Cloud Compliance インスタンスを導入した直後の Scan Configuration タブのスクリーンショット。</block>
-  <block id="3a54b389fee7a1750a3fe4585936950c" category="paragraph"><block ref="3a54b389fee7a1750a3fe4585936950c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c753dacac2735d6daf8277f2a8d0a555" category="list-text">作業環境内のすべてのボリュームをスキャンするには、 * すべてのボリュームのコンプライアンスをアクティブ化 * をクリックします。</block>
   <block id="dc551f098a0fcd85cd4548e1e1004ce8" category="paragraph">作業環境内の特定のボリュームのみをスキャンするには、 * をクリックするか、 Volumes （ボリューム） * を選択して、スキャンするボリュームを選択します。</block>
   <block id="9fa58f0e5c00772b9262b1da0ff9f2cb" category="inline-xref">ボリュームのコンプライアンススキャンの有効化と無効化</block>
@@ -4782,13 +4767,9 @@
   <block id="b401c479fc7a1b8aa216a7173ee8782f" category="paragraph">クレデンシャルを入力すると、すべての CIFS ボリュームが認証されたことを示すメッセージが表示されます。</block>
   <block id="5a247834f86d8723d5c2f7a440b90bea" category="inline-image-macro">スキャン設定ページと、 CIFS クレデンシャルが正常に入力された 1 つの Cloud Volumes ONTAP システムを示すスクリーンショット。</block>
   <block id="f899f5f8a218b96217e934aef77f03d3" category="paragraph"><block ref="f899f5f8a218b96217e934aef77f03d3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5466351dc5979e5e69c8eed1d4ceb9ae" category="list-text">_Scan Configuration_page で、 * View Details * をクリックして、各 CIFS および NFS ボリュームのステータスを確認し、エラーを修正します。</block>
   <block id="098f3f755bd9ca507944508de152820e" category="paragraph">たとえば、次の図は 3 つのボリュームを示しています。 1 つは Cloud Compliance インスタンスとボリュームの間のネットワーク接続の問題が原因で Cloud Compliance がスキャンできないボリュームです。</block>
   <block id="0d7e7e2ee54f2a544740c28de9f1bfdf" category="inline-image-macro">スキャン設定の View Details ページのスクリーンショット。 3 つのボリュームが表示されます。そのうちの 1 つは、 Cloud Compliance とボリュームの間のネットワーク接続が原因でスキャンされていません。</block>
   <block id="2b5cc1e96fbe5dee660dc6ac46a71860" category="paragraph"><block ref="2b5cc1e96fbe5dee660dc6ac46a71860" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9db42ec37994bec73a936a179d641332" category="paragraph">作業環境内のボリュームのスキャンは、 Scan Configuration ページからいつでも停止または開始できます。すべてのボリュームをスキャンすることを推奨します。</block>
-  <block id="9ea680258981419b99e79e1a1fbc76cf" category="inline-image-macro">個々のボリュームのスキャンを有効または無効にできるスキャン設定ページのスクリーンショット。</block>
-  <block id="9c8d3ddbc9f4dd6295e85b330de9175a" category="paragraph"><block ref="9c8d3ddbc9f4dd6295e85b330de9175a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="33caa076f23f453dd4061726f3706325" category="cell">終了：</block>
   <block id="5a2a9933405c81b69e2cbdd9151f9197" category="cell">手順：</block>
   <block id="6bc6c5dc1666650b8e2bc0d8d78479d8" category="cell">ボリュームのスキャンを無効にします</block>
@@ -4824,7 +4805,6 @@
   <block id="c47a93a4db0f3326b39699f2c268ed84" category="inline-xref">他のボリュームも有効にした場合と同じです</block>
   <block id="52f2d634675a5308954904a0c76cbf27" category="list-text">スキャンする各 DP ボリュームをアクティブ化します <block ref="86192a8c12894873fcc3d879f4018d85" category="inline-xref-macro-rx"></block>をクリックするか、すべてのボリュームでコンプライアンスのアクティブ化 * コントロールを使用して、すべての DP ボリュームを含むすべてのボリュームを有効にします。</block>
   <block id="417471afa13ebe305476050ade101c68" category="paragraph">有効にすると、コンプライアンスのためにアクティブ化された各 DP ボリュームから NFS 共有が作成され、スキャンすることができます。共有のエクスポートポリシーでは、 Cloud Compliance インスタンスからのアクセスのみが許可されます。</block>
-  <block id="0bea6a6c6f0c7132fd4f5c52acc550c1" category="paragraph">* 注： DP ボリュームへのアクセスを最初に有効にしたときに CIFS データ保護ボリュームがなかった場合は、一部のボリュームを追加すると、 CIFS DP へのアクセスを有効にするボタン * がスキャン設定ページの上部に表示されます。このボタンをクリックして、 CIFS DP ボリュームへのアクセスを有効にする CIFS クレデンシャルを追加します。</block>
   <block id="a32ee87f322cbe94f96176a6b00e6297" category="summary">作業環境のセットアップが完了したら、 Azure NetApp Files アカウント、容量プール、ボリューム、 Snapshot の作成と管理を開始できます。</block>
   <block id="c74b71adf713d8d990ae4a012610df22" category="doc">Azure NetApp Files 用のボリュームを作成および管理する</block>
   <block id="917ea12e9842678afd4577f4f11b2f49" category="paragraph">作業環境をセットアップしたら、 Azure NetApp Files アカウント、容量プール、ボリューム、 Snapshot を作成して管理できます。</block>
@@ -5431,7 +5411,6 @@
   <block id="78fa1816da2a529e7d40c4ac34ec65c8" category="list-text">SnapMirror データを含む作業環境を選択し、 * コンプライアンスを有効にする * をクリックします。</block>
   <block id="fac2ef385612fb3e1558caeec386696c" category="inline-link-macro">Cloud Compliance の有効化に関するサポートが必要な場合は、ここをクリックしてください Cloud Volumes ONTAP システム</block>
   <block id="aa02dcf673852ef7ca3867d485ec2759" category="paragraph"><block ref="239862d58709f19d85527ef080e2c8b5" category="inline-link-macro-rx"></block>。</block>
-  <block id="635ecbe7addc4767f588650cd773f9fd" category="list-text">_Scan Configuration_page の上部にある * DP ボリュームへのアクセスを有効にする * ボタンをクリックして、 Cloud Compliance が DP ボリュームにアクセスできるようにします。</block>
   <block id="69ecff6eea68f8f16c856927499bc7e9" category="paragraph">NFS ボリュームが有効になっているが、 CIFS ボリュームには Active Directory 管理者クレデンシャルの入力が必要である。</block>
   <block id="4a1afcab1f479cb8b9f52611675cac25" category="list-text">スキャンする各 DP ボリュームをアクティブ化するか、 * すべてのボリュームのコンプライアンスのアクティブ化 * コントロールを使用して、すべての DP ボリュームを含むすべてのボリュームを有効にします。</block>
   <block id="c6bbb0fe3aa60e5d397041f8e2078bb2" category="paragraph">を参照してください <block ref="59516db3d1ce71878889b5a9910be8bc" category="inline-link-macro-rx"></block> を参照してください。</block>
@@ -5551,7 +5530,6 @@
   <block id="41298b3a78e354912ed8bf6451722db8" category="paragraph">OneDrive アカウントが作業環境の一覧に追加されます。</block>
   <block id="07e884044b535eb87b20ee9da9bb0de7" category="section-title">OneDrive ユーザーをコンプライアンススキャンに追加する</block>
   <block id="ef601a93e8c5b96ddd2fc3f0e9e49f45" category="paragraph">個々の OneDrive ユーザまたはすべての OneDrive ユーザを追加して、ファイルを Cloud Compliance でスキャンすることができます。</block>
-  <block id="5ba8d8073a2050811f133de4d98e88fb" category="list-text">[ スキャン構成 ] ページで、 OneDrive アカウントの [ * 構成 * ] ボタンをクリックします。</block>
   <block id="eeca65dd888a9508e6e72469e53273ff" category="inline-image-macro">設定ボタンを選択できるスキャン設定ページのスクリーンショット。</block>
   <block id="2ccb3dbefd074684b15d6b7be9bffd96" category="paragraph"><block ref="2ccb3dbefd074684b15d6b7be9bffd96" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ae3497d4486ccac37f00f5aa720c0def" category="list-text">この OneDrive アカウントに初めてユーザーを追加する場合は、 [ * 最初の OneDrive ユーザーを追加する * ] をクリックします。</block>
@@ -5568,7 +5546,6 @@
   <block id="c10114c9189f598289f5615e85beb064" category="paragraph"><block ref="c10114c9189f598289f5615e85beb064" category="inline-image-macro-rx" type="image"></block></block>
   <block id="23c31b4cc84b5297f829e7b0de465c3c" category="section-title">Cloud Compliance から OneDrive アカウントを削除します</block>
   <block id="ca913fc96634bf21819a6010467b140f" category="paragraph">特定の OneDrive アカウントからユーザーファイルをスキャンする必要がなくなった場合は、 Cloud Compliance インターフェイスからアカウントを削除して、すべてのスキャンを停止できます。</block>
-  <block id="4feb0210dadc2f4ad3ee56bd24478513" category="list-text">_Scan Configuration_page で、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして OneDrive アカウントを選び、 [ * OneDrive アカウントの削除 * ] をクリックします。</block>
   <block id="9a7ec6e6b57682d3f33ce7ea4bef0f5a" category="inline-image-macro">[ スキャン構成 ] ページから [OneDrive を削除 ] ボタンのスクリーンショット。</block>
   <block id="1bd56f7fb7715259e9afebe5fa03e87f" category="paragraph"><block ref="1bd56f7fb7715259e9afebe5fa03e87f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="94c6852fcc39c16d9167a10bb916b459" category="list-text">確認ダイアログで * アカウントの削除 * をクリックします。</block>
@@ -6888,7 +6865,6 @@
   <block id="9e069456015ebd506621d5c53645d136" category="paragraph">このように、 2 つのボリュームと 1 つの S3 バケットにそれぞれ一意の顧客 ID が見つかりました。データベーステーブル内の一致も識別されます。</block>
   <block id="8818463c2c4de2a61c4ea7325d870cc5" category="inline-link-macro">データベースサーバを少なくとも 1 つ追加しました</block>
   <block id="7e644e81ae92e81f6d738aacf26395f2" category="paragraph">が必要です <block ref="6dc4320fa99d5481e0cf23825d8160fd" category="inline-link-macro-rx"></block> データ Fusion ソースを追加する前に、を Cloud Compliance に追加します。</block>
-  <block id="8a776f7947443b60e878f97500b4c343" category="list-text">[ スキャン設定 ] ページで、ソースデータが存在するデータベースの [ データ Fusion の管理 ] をクリックします。</block>
   <block id="992ec9ca2bd36716163b216808c50d96" category="inline-image-macro">ソース列を追加する [ データの管理（ Manage Data Fusion ） ] ボタンを選択するスクリーンショット。</block>
   <block id="c6d506455215e48dc0395821cd52ccc5" category="paragraph"><block ref="c6d506455215e48dc0395821cd52ccc5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ce947a0b5636ca3964e596f4595ccd8c" category="list-text">次のページで [Add Data Fusion source*] をクリックします。</block>
@@ -7976,7 +7952,6 @@
   <block id="fc992e494348eb4ec6a8872b8dde59da" category="paragraph">データベースが作業環境のリストに追加されます。</block>
   <block id="296c70d3038449465934d85d8968a541" category="section-title">データベーススキーマでの準拠スキャンの有効化と無効化</block>
   <block id="df14dc08a03eb73db441dabda4700a58" category="paragraph">スキーマのスキャンは、いつでも停止または開始できます。</block>
-  <block id="71fd30a3357ed57a008bf3b1aa5c0d14" category="list-text">_Scan Configuration_page から、設定するデータベースの *Configuration* ボタンをクリックします。</block>
   <block id="501ae739773eaa9fbbe222d59498ef96" category="paragraph"><block ref="501ae739773eaa9fbbe222d59498ef96" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b1f7c7e36d5ee01af131dd25c658e41f" category="list-text">スライダを右に移動して、スキャンするスキーマを選択します。</block>
   <block id="cc939570e2fbb3d7e526d9e3e757a5f0" category="inline-image-macro">スキャンするスキーマを選択できる [Scan Configuration] ページのスクリーンショット。</block>
@@ -7984,7 +7959,6 @@
   <block id="02693d404304aa0a1b7cbc6ce61027d6" category="paragraph">Cloud Compliance によって、有効にしたデータベーススキーマのスキャンが開始されます。エラーが発生した場合は、エラーを修正するために必要なアクションとともに、 [ ステータス ] 列に表示されます。</block>
   <block id="227b2a2abd79ff84909ecb55023fc04b" category="section-title">Cloud Compliance からデータベースを削除しています</block>
   <block id="8e7f80c104265afa87a2496f4a372cee" category="paragraph">特定のデータベースをスキャンする必要がなくなった場合は、そのデータベースを Cloud Compliance インターフェイスから削除して、すべてのスキャンを停止できます。</block>
-  <block id="333003410b3b6b949a2602c58c2bef6d" category="paragraph">_Scan Configuration_page で、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックし、 * DB サーバの削除 * をクリックします。</block>
   <block id="3d04e82ecfc4b95e7eb8eaf404dffadc" category="inline-image-macro">Scan Configuration ページの Remove DB Server ボタンのスクリーンショット。</block>
   <block id="b695958db24ae26377f1c2e3a62b14eb" category="paragraph"><block ref="b695958db24ae26377f1c2e3a62b14eb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1f1f850efa98e498783a03f31030e23a" category="summary">パフォーマンスの結果を確認して、 Cloud Volumes ONTAP に適したワークロードを決定できます。</block>
@@ -8090,7 +8064,6 @@
   <block id="37423695a33e814084966c17d451584a" category="inline-image-macro">スクリーンショット： Cloud Volumes ONTAP インスタンスのコストを月単位で表示します。</block>
   <block id="c3d678c4df92877db53bd1f6e44ec524" category="paragraph"><block ref="c3d678c4df92877db53bd1f6e44ec524" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8f34757b26c51100dd5a08a099969517" category="section-title">作業環境のコンプライアンススキャンを非アクティブにします</block>
-  <block id="0948a760753800e0b7e960497c43bccc" category="paragraph">_Scan Configuration_page で、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして作業環境を選択し、 * コンプライアンスの非アクティブ化 * をクリックします。</block>
   <block id="dba203d7b9cc6a68d7c335a7f3f015f3" category="inline-image-macro">アクションアイコンのスクリーンショット。スキャンを非活動化（ Deactivate scan ）を選択できます。このオプションは、キャンバスページから作業環境を選択した後で使用できます。</block>
   <block id="eb988d6acac9e3b0ac68d26087021f35" category="paragraph"><block ref="eb988d6acac9e3b0ac68d26087021f35" category="inline-image-macro-rx" type="image"></block></block>
   <block id="849e144b677eb32e7e98186935864d3b" category="admonition">作業環境を選択するときに、サービスパネルから作業環境のコンプライアンススキャンを無効にすることもできます。</block>
@@ -8338,7 +8311,6 @@
   <block id="5803f352e5dd56b3494a56eabe17fd51" category="section-title">AIP 連動の削除</block>
   <block id="d88f373195bd5fa5847a4b017268fe66" category="paragraph">ファイルの AIP ラベルを管理できないようにするには、クラウドコンプライアンスインターフェイスから AIP アカウントを削除します。</block>
   <block id="2b89550620c7b16019bd56bd772535a9" category="paragraph">Cloud Compliance で追加したラベルは変更されません。ファイルに存在するラベルは、現在存在しているラベルのままになります。</block>
-  <block id="25de854046132fa59009cc865e82b9ce" category="list-text">_Scan Configuration_page で、 *AIP ラベル統合 &gt; 統合の削除 * をクリックします。</block>
   <block id="ca26bd6d013e01a8dc2465382b659404" category="inline-image-macro">クラウドコンプライアンスとの AIP 統合を削除する方法を示すスクリーンショット。</block>
   <block id="fb7fcb6fa178ea1f30d25487ac0250d0" category="paragraph"><block ref="fb7fcb6fa178ea1f30d25487ac0250d0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1adb70ded77a9f087a1361758e3bb6ba" category="list-text">確認ダイアログで、 [ 統合の削除（ Remove Integration ） ] をクリックします。</block>
@@ -8724,7 +8696,6 @@
   <block id="4dfb9365c6db058f009ea80d9ad1d88a" category="paragraph"><block ref="4dfb9365c6db058f009ea80d9ad1d88a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5031fdddd713681aa180d7bfa60b1f72" category="paragraph">Cloud Volumes ONTAP のネットワークセキュリティグループルールで、ロードバランサが上記の手順 4 で作成したヘルスプローブの TCP プローブを送信できることを確認します。これはデフォルトで許可されています。</block>
   <block id="559b2da2c29b62b98df683781dd648f8" category="paragraph">以下の手順では、シングルノードシステムまたは HA ペアに新しい Storage VM を作成します。ノード 1 からのデータ LIF へのアクセスには、ノード 2 （ HA ペアのみ）からのデータ LIF へのアクセスに使用する別の IP アドレス、および Storage VM （ SVM ）の管理 LIF のオプションの IP アドレスが 1 つ必要です。この管理 LIF は、 SnapCenter などの管理ツールへの接続を提供します。</block>
-  <block id="399c7355c55ce574ad83f04f2fa60c78" category="section-title">データブローカーグループのユニファイド構成の定義</block>
   <block id="b913043c4767c72e8bbb3ed88c33dd15" category="paragraph">同期プロセス中に同期関係でエラーが発生した場合は、データブローカーグループの同時実行を統合すると、同期エラーの数を減らすことができます。グループの設定を変更すると、転送速度が遅くなるため、パフォーマンスに影響する可能性があります。</block>
   <block id="6fea4f8d81c041ddb786f1edf604f6b0" category="list-text">［ * データブローカーの管理 * ］ をクリックします。</block>
   <block id="947dda123a9676ba06895d96ee598405" category="list-text">データブローカーグループの [ 設定 ] アイコンをクリックします。</block>
@@ -9383,7 +9354,6 @@
   <block id="4d1a8f720b49e81dd38a0221aefef653" category="list-text"><block ref="4d1a8f720b49e81dd38a0221aefef653" category="inline-link-macro-rx"></block></block>
   <block id="42fb01b3b779aa7e6922ba7286f27d90" category="section-title">他のタイプの同期関係を作成します</block>
   <block id="43d08ddc5bb154fdaa0d28c9d47869d1" category="paragraph">Cloud Volumes ONTAP 、 Azure NetApp Files 、オンプレミス ONTAP クラスタ以外のサポートされているストレージタイプとの間でデータを同期するには、次の手順を実行します。以下の手順は、 NFS サーバから S3 バケットへの同期関係を設定する方法の例を示しています。</block>
-  <block id="3e6b3e7f75a0913072409cc2e56ffcb7" category="summary">Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。これには、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Linode 、 B2 Cloud Storage などが含まれます。</block>
   <block id="763a21e3ec238bca68eb25847cf75843" category="section-title">オブジェクトストレージ要件の確認</block>
   <block id="51910622d439334d361153261d507152" category="list-text">作業環境に使用する名前を入力します。この名前には、接続先のオブジェクトストレージサービスの名前を指定する必要があります。</block>
   <block id="fb60cc8b1c07b3747a72dcf7ce2f2f58" category="list-text">1 つまたは 3 つのゾーン（推奨）。</block>
@@ -9773,7 +9743,6 @@
   <block id="0f99d62a1abe978790e8f838260b76ef" category="paragraph">このボタンは、 CIFS 共有内のファイルに対してのみ使用できます。</block>
   <block id="2fbe3df41e9f47eee07c1ec1a9b82229" category="section-title">ストレージシステムでファイルが複製されているかどうかを表示する</block>
   <block id="31854645d93214d7c603d17ec1286296" category="paragraph">特定のファイルが重複している場合、この情報は _Duplicats_field の横に表示されます。これは、ストレージスペースを節約できる領域を特定する場合に便利です。また、特定の権限や機密情報を持つファイルが、ストレージシステム内で不必要に重複しないようにすることもできます。</block>
-  <block id="64e6c3bb33bf3db8cf381e79d2ca0986" category="paragraph">で説明されている形式のファイルのみ <block ref="4a37cd63b58e20cf422e0303e2c4dab8" category="inline-link-macro-rx"></block> 重複として識別できます。</block>
   <block id="b9f04017dd00e5eacb65bc6e65c5cd51" category="paragraph">重複ファイルのリストを表示するには、 * 詳細の表示 * をクリックします。次のページで、 [ 重複の表示 *] をクリックして、 [ 調査 ] ページでファイルを表示します。</block>
   <block id="68309bcfd455803ffbae49714037b789" category="inline-image-macro">重複するファイルが配置されている場所を確認する方法を示すスクリーンショット。</block>
   <block id="0dc6d718adece3621c4a40fa3b4b2a82" category="paragraph"><block ref="0dc6d718adece3621c4a40fa3b4b2a82" category="inline-image-macro-rx" type="image"></block></block>
@@ -9942,7 +9911,6 @@
   <block id="ea494c4a430200fcdf357211687a9785" category="summary">必要に応じて、 Cloud Compliance のスキャンを停止して、作業環境、データベース、ファイル共有グループ、 OneDrive アカウントをスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。</block>
   <block id="019fbfaf17101a87d025fbfc1202e159" category="section-title">Cloud Compliance からのファイル共有のグループの削除</block>
   <block id="042f40d9b0b953578f033aa853c83274" category="paragraph">ファイル共有グループからユーザファイルをスキャンする必要がなくなった場合は、 Cloud Compliance インターフェイスからファイル共有グループを削除して、すべてのスキャンを停止できます。</block>
-  <block id="b0e616673e0b6b2fd03403e1e9511638" category="list-text">_Scan Configuration_page で、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> [ ファイル共有グループ ] の行にあるボタンをクリックし、 [ * ファイル共有グループの削除 * ] をクリックします。</block>
   <block id="899aa3cff4cde9f48d2fbceab4329349" category="inline-image-macro">スキャン設定ページからファイル共有グループを削除ボタンのスクリーンショット。</block>
   <block id="23785f6732c3c514916bbd8928a06972" category="paragraph"><block ref="23785f6732c3c514916bbd8928a06972" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4eeea4d2c00cd83e33db552c5d9445b2" category="list-text">確認ダイアログで * 共有のグループを削除 * をクリックします。</block>
@@ -10272,7 +10240,6 @@
   <block id="5853165343224a78fee94389519a9b28" category="list-text">テンプレートを使用して既存のアグリゲートに Cloud Volumes ONTAP ボリュームを作成することはできません。新しいアグリゲートに新しいボリュームが作成されます。</block>
   <block id="a98a7cb81de1ecc1b5b4e17eb22252d8" category="list-text">Google Cloud Storage バケットをバックアップ用に作成する Google Cloud Project とリージョンを選択し、 * Next * をクリックします。これは、 Cloud Volumes ONTAP システムが配置されているプロジェクトとは異なる場合があります。</block>
   <block id="c971742a6d0202d2d127e01aef1d9cf5" category="sidebar">オンプレミスの ONTAP データをプライベートクラウドにバックアップ</block>
-  <block id="d7c0c1956a63c726215280a276f74dc2" category="list-text">Cloud Volumes ONTAP の WORM ストレージは、「信頼されたストレージ管理者」モデルで機能します。WORM ファイルおよび Snapshot は書き換えから保護されますが、ボリュームに期限切れ前の WORM データが含まれていても、クラスタ管理者はボリュームを削除できます。</block>
   <block id="3ab030725cf2fa531c64f33807a91977" category="paragraph">たとえば、ディスクをクラウドプロバイダから直接削除または移動した場合、ボリュームは有効期限が切れる前に削除できます。</block>
   <block id="aeeec0576922eb4490b5fabadc6c4e36" category="summary">NetApp SnapMirror は、 LAN または WAN 経由でデータを高速でレプリケートするため、仮想環境と従来の環境の両方で、高いデータ可用性と高速なデータレプリケーションを実現できます。ネットアップストレージシステムにデータをレプリケートし、セカンダリデータを継続的に更新することで、データを最新の状態に保ちながら、必要なときにいつでもデータを利用できるようになります。外部レプリケーションサーバは必要ありません。</block>
   <block id="e60519215887d589e148f68a2f5d2a06" category="doc">レプリケーションサービスについて説明します</block>
@@ -10286,7 +10253,6 @@
   <block id="cc20b848be9552c96e9f46ed40db533d" category="section-title">サポートされるデータ保護構成</block>
   <block id="87531525c3b816a3a29dbbcbcd9e58b1" category="doc">レプリケーションポリシーについて説明します</block>
   <block id="48803a619ce06c74ae2204113ce8b389" category="section-title">ターゲットディレクトリ</block>
-  <block id="6b02b9cbac6cc752b26fcfc7b5138b8f" category="paragraph">同期関係を作成するときに、 Cloud Sync で既存のターゲットディレクトリを選択し、必要に応じてそのディレクトリ内に新しいフォルダを作成できます。そのため、優先ターゲットディレクトリはすでに存在していることを確認してください。</block>
   <block id="cb11319a6aac10698937e0bc23986201" category="summary">アカウント管理者、ワークスペース管理者、コンプライアンスビューア、および SnapCenter 管理者の各ロールは、ユーザーに特定の権限を提供します。</block>
   <block id="17b46331a35bd9a61bb349fcf9e0e04f" category="cell">SnapCenter 管理者</block>
   <block id="6ac66d3fc8afb4a186735b2a9a1fa134" category="cell">SnapCenter サービスを使用します</block>
@@ -10364,4 +10330,77 @@
   <block id="7aa6a4ffdbdc6eccd7f131257c7de6a8" category="paragraph">タイムラインが更新され、アカウント管理アクションが表示されます。</block>
   <block id="25fc76beff0eca528426924af195e648" category="sidebar">レプリケーションについて説明します</block>
   <block id="2e4ca84ff13f65389599985c5d2a9f08" category="sidebar">スケジュールと関係の管理</block>
+  <block id="e2d4a517cbcae1c0966d5e478d743531" category="list-text">Cloud Volumes ONTAP の WORM ストレージは、「信頼されたストレージ管理者」モデルで機能します。WORM ファイルは書き換えから保護されますが、期限切れ前の WORM データがボリュームに含まれていた場合でも、クラスタ管理者はボリュームを削除できます。</block>
+  <block id="bb1286b6a5b66c05dd614e2fa1aa00ab" category="summary">Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Azure Blob （ MinIO を使用）、 Linode 、 B2 Cloud Storage などです。</block>
+  <block id="6988ee4ea30eb643c68d53327c6b1220" category="inline-link">MinIO サービス</block>
+  <block id="753043f41e69e8fdeb706dd070e87f37" category="list-text">Azure Blob のサポートにはを使用する必要があります <block ref="bb7c39e5bbb16f5f9e18534c8bb03c91" category="inline-link-rx"></block>。</block>
+  <block id="c17ce6a7cdcb97581c6d5603ec7d447a" category="cell">オンプレミスの ONTAP クラスタ</block>
+  <block id="b02c6de2906d15e3ef40415f6043a826" category="paragraph">同期関係を作成するときに、 Cloud Sync で既存のターゲットディレクトリを選択し、必要に応じてそのディレクトリ内に新しいフォルダを作成できます。そのため、優先ターゲットディレクトリがすでに存在していることを確認してください。</block>
+  <block id="58851d32c98ba7c70e9af78cf1766019" category="section-title">ディレクトリを読み取るための権限</block>
+  <block id="bd83e2d94f5db7a0d8509ea23da3d53c" category="paragraph">ソースまたはターゲット内のすべてのディレクトリまたはフォルダを表示するには、 Cloud Sync でディレクトリまたはフォルダの読み取り権限が必要です。</block>
+  <block id="a804bf8c1eee89c2ef8ed6f8f60fbb55" category="list-text">ファイルおよびディレクトリに対して、ソース / ターゲットに uid / gid を指定して権限を定義しておく必要があります。</block>
+  <block id="c5ca68d4d61602e9fd9b8c857c6b1968" category="list-text">AWS と Google Cloud の場合、データブローカーにはリストオブジェクトの権限が必要です（データブローカーのインストール手順を実行する場合、これらの権限はデフォルトで提供されます）。</block>
+  <block id="73771d91cd67909c3f065657d215f1cb" category="list-text">Azure 、 StorageGRID 、 IBM の場合は、同期関係のセットアップ時に入力するクレデンシャルに、リストオブジェクトの権限が必要です。</block>
+  <block id="b4fdd997b1f33e0d4c6964444c2bf399" category="list-text">SMB</block>
+  <block id="95387edff7a8c3170c954eeffcccac3b" category="list-text">同期関係のセットアップ時に入力する SMB クレデンシャルには、リストフォルダの権限が必要です。</block>
+  <block id="3f160e89fc203d49d262346e29d1f342" category="admonition">データブローカーでは、デフォルトで、 .snapshot 、 ~snapshot 、 .copy-Offload の各ディレクトリが無視されます</block>
+  <block id="b6537529e2ca7a01f194a6653cce5a42" category="list-text">インスタンスが配備されたら、 * 設定に進む * をクリックして _Configuration_page に移動します。</block>
+  <block id="9b305ee4bd352f956f4cb24478769e42" category="paragraph">設定ページで、スキャンするデータソースを選択できます。</block>
+  <block id="95fd542e62e34330665495ee15942a5d" category="admonition">また、作業環境のコンプライアンススキャンを有効にすることもできます Configuration ページでをクリックします <block ref="a5c9b85c9e509567688aed8106bc419c" category="inline-image-macro-rx" type="image"></block> ボタンを押して、 * コンプライアンスを有効にする * を選択します。</block>
+  <block id="e2fff6669785298223eeb07e1186dfe0" category="list-text">Amazon S3 Configuration * ページに移動し、新しい AWS アカウントが表示されます。Cloud Compliance が新しいアカウントの作業環境を同期し、この情報を表示するまでに数分かかることがあります。</block>
+  <block id="640064394e27c9f380f0df378ba639e9" category="list-text">_Configuration_page で、 *AIP ラベル統合 &gt; 統合の削除 * をクリックします。</block>
+  <block id="4d32192221647db5de0318e20973f1f6" category="inline-link-macro">ガバナンスダッシュボード</block>
+  <block id="f40f809a5d08e170e0703dc7b2960a5e" category="inline-link-macro">コンプライアンスダッシュボード</block>
+  <block id="5ca55104f67010c099c1f3932a59364c" category="list-text">クラウドコンプライアンスは「ガバナンスとコンプライアンス」に名称変更されました。Cloud Manager には、「ガバナンス」と「コンプライアンス」という 2 つのタブがあります。[Governance （ガバナンス） ] タブをクリックすると、が表示されます <block ref="0b8e0d1338317d2137982bc263eef968" category="inline-link-macro-rx"></block> 「ガバナンスとコンプライアンス」サービスと「コンプライアンス」タブでは、が表示されます <block ref="53aa1f07b87f01288d0f6b0a0225a16c" category="inline-link-macro-rx"></block>。</block>
+  <block id="3fde8c220627d79da821dae2f69a3bde" category="list-text">Azure Blob に格納されたデータのスキャンがサポートされるようになりました を使用する場合<block ref="3b9fdaa52fc76f23fd47364e47f68590" category="inline-link-rx"></block>。を参照してください <block ref="d2390184bdae17775eb6447278b4516d" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="c01fbbc892e2a9459dace13a3391e6f3" category="list-text">新しい個人データ型。Cloud Compliance で、オーストリアの SSN をファイルで検索できるようになりました。</block>
+  <block id="d98982ed425bb70925dcb326c8228f2b" category="paragraph">コンプライアンス * &gt; * 構成 * &gt; * CIFS クレデンシャルの編集 * をクリックし、クレデンシャルを入力します。</block>
+  <block id="ab50d00e56e290af0296a32689dd1e8d" category="inline-image-macro">Cloud Compliance インスタンスの導入直後の Configuration タブのスクリーンショット。</block>
+  <block id="2cb2643edd20422acf7faf3bd2a3e566" category="paragraph"><block ref="2cb2643edd20422acf7faf3bd2a3e566" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="87c4bf333272894340d4edac3e344ef9" category="inline-image-macro">設定ページと Cloud Volumes ONTAP クレデンシャルが正しく指定された 1 つのシステムを示すスクリーンショット</block>
+  <block id="f7a83214cccc2107033915c49ad94424" category="paragraph"><block ref="f7a83214cccc2107033915c49ad94424" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3b3fdf77c5795749c544638b9ce207c2" category="list-text">_Configuration_page で、 *View Details * をクリックして、各 CIFS および NFS ボリュームのステータスを確認し、エラーを修正します。</block>
+  <block id="2eaa6111380e3848e5372331498a653c" category="paragraph">作業環境内のボリュームのスキャンは、設定ページからいつでも停止または開始できます。すべてのボリュームをスキャンすることを推奨します。</block>
+  <block id="7cac696e69d17c5d85711c514e2a9a5a" category="inline-image-macro">個々のボリュームのスキャンを有効または無効にできる設定ページのスクリーンショット。</block>
+  <block id="a981acc4f50e3ee8e07a0e56bb5a7350" category="paragraph"><block ref="a981acc4f50e3ee8e07a0e56bb5a7350" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="abcdab0f1cbbe968798a52245b476c30" category="paragraph">* 注： DP ボリュームへのアクセスを最初に有効にしたときに CIFS データ保護ボリュームがない場合は、あとで追加しても、 CIFS DP の有効化ボタン * が設定ページの上部に表示されます。このボタンをクリックして、 CIFS DP ボリュームへのアクセスを有効にする CIFS クレデンシャルを追加します。</block>
+  <block id="61c40a9173c7247f802a8ae1e6767ff0" category="list-text">_Configuration_page の上部にある * DP ボリュームへのアクセスを有効にする * ボタンをクリックして、 Cloud Compliance が DP ボリュームにアクセスできるようにします。</block>
+  <block id="418578af676211a660862004ebdd5ed4" category="list-text">[_Configuration_] ページで、 OneDrive アカウントの [* 構成 *] ボタンをクリックします。</block>
+  <block id="e22cc91dc3170fbcb0b9ab0ce5cbfa50" category="section-title">オブジェクトストレージのメタデータ</block>
+  <block id="b9b177c8edd7eb2c6ba657a9855f7aa0" category="paragraph">Cloud Sync は、次のタイプの同期関係について、オブジェクトストレージのメタデータをソースからターゲットにコピーします。</block>
+  <block id="19227829194d09ab15a10015437ef02a" category="list-text">Amazon S3 -&gt; Amazon S3 ^1</block>
+  <block id="d85bfe1b588472d6beeaa23dff1c1294" category="list-text">Amazon S3 -&gt; StorageGRID</block>
+  <block id="4b6c9d89551036d9e49bf2a8e7026343" category="list-text">StorageGRID -&gt; Amazon S3</block>
+  <block id="590d02024b7f1c2ed71545f3e89bebd4" category="list-text">StorageGRID -&gt; StorageGRID の順にクリックします</block>
+  <block id="0c22b827a98153c6816dea4e6d72f8e8" category="list-text">StorageGRID -&gt; Google Cloud Storage</block>
+  <block id="1c097248e66f26e62b5f8f95e7ae9b85" category="list-text">Google Cloud Storage -&gt; StorageGRID ^1</block>
+  <block id="d8f08b3919ac0da1b6baf914f964b8b7" category="list-text">Google Cloud Storage -&gt; IBM Cloud Object Storage ^1</block>
+  <block id="cf500e644795543ac10b4f486ea21ce6" category="list-text">Google Cloud Storage -&gt; Amazon S3 ^1</block>
+  <block id="175310ede3810a1d38f4079aba5bd31a" category="list-text">Amazon S3 -&gt; Google Cloud Storage</block>
+  <block id="13b80657656937d8105997bfcc0671cd" category="list-text">IBM Cloud Object Storage -&gt; Google Cloud Storage</block>
+  <block id="e9d1cd1913b22fd9324ade51470e79fb" category="list-text">StorageGRID -&gt; IBM クラウドオブジェクトストレージ</block>
+  <block id="d5467cdf0f31f137fc693f242bb4f9ed" category="list-text">IBM Cloud Object Storage -&gt; StorageGRID の順にクリックします</block>
+  <block id="4ead6076cd3ac3f5021ec4c7be28c427" category="list-text">IBM Cloud Object Storage -&gt; IBM Cloud Object Storage</block>
+  <block id="2e488ace4cb51ea6c11255ccb87879fa" category="inline-link-macro">メタデータをコピーするには、データブローカーの設定を変更してください</block>
+  <block id="16d2fa36b84b1cc5fa201edc579700c5" category="paragraph">^1 この同期関係には、以下が必要です <block ref="e5080977b4faa541d119959ee5b5ca7d" category="inline-link-macro-rx"></block>。</block>
+  <block id="85191d4618061c6df61888ae81a1fb5d" category="list-text">[ 構成 ] ページで、ソースデータが存在するデータベースの [ データ Fusion の管理 ] をクリックします。</block>
+  <block id="a5ac06cc7292326b3b7f482e54b446be" category="cell">オーストリア SSN</block>
+  <block id="637cba6455e9f6fc12a3c205c16f44fc" category="section-title">データブローカーグループのユニファイド構成を定義する</block>
+  <block id="96e5976d62fcbfee042de745619796c8" category="section-title">オブジェクトストレージのメタデータをコピーするようにデータブローカーを設定</block>
+  <block id="631d8385c5d57aef1ef46757b176dd96" category="inline-link-macro">同期関係にはいくつかのタイプがあります</block>
+  <block id="9f1d5cc7c1f85b16584691354f440f41" category="paragraph">デフォルトでは、 Cloud Sync はのオブジェクトストレージメタデータをコピーします <block ref="ac880900821db536d69af9c0ec7e0f80" category="inline-link-macro-rx"></block>。ただし、次のタイプの同期関係間でオブジェクトストレージのメタデータをコピーする場合は、データブローカーを設定する必要があります。</block>
+  <block id="57c930b2f15a4948f4f35d7d6467d0b3" category="list-text">Amazon S3 -&gt; Amazon S3</block>
+  <block id="ef0a75027779ba7430bd38e6bc056c7f" category="list-text">Google Cloud Storage -&gt; StorageGRID</block>
+  <block id="287714537e27509e50ac6f08c4a05e7d" category="list-text">Google Cloud Storage -&gt; IBM Cloud Object Storage</block>
+  <block id="e51dbf2396168e424011573461cae126" category="list-text">Google Cloud Storage -&gt; Amazon S3</block>
+  <block id="562dd79e99e7225878498c6534d4205c" category="list-title">Amazon S3 から Amazon S3 へのステップ</block>
+  <block id="260a2cf729100282d5f1ddde68b5784d" category="list-text">local.json を次のように変更します。</block>
+  <block id="040e28b853034d630a94c4c3cf3e5795" category="list-text">データブローカーを再起動</block>
+  <block id="37f058d76e216e9a4bacfc2c5e54f159" category="paragraph">PM2 stop all `PM2 start all`</block>
+  <block id="9145593468324e8e8423dc801f9a8733" category="list-title">Google Cloud から StorageGRID 、 IBM 、 Amazon S3 への移行の手順</block>
+  <block id="66a2cf8e7e33f076420fc7afe01ab7b3" category="list-text">_Configuration_page で、設定するデータベースの *Configuration* ボタンをクリックします。</block>
+  <block id="1aa9cc5a6f42746ee7f1f47ea457e970" category="list-text">[_Configuration_] ページで、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして作業環境を選択し、 * コンプライアンスの非アクティブ化 * をクリックします。</block>
+  <block id="c129bc0408ce8224fad586d944537ce4" category="list-text">[_Configuration_] ページで、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックし、 * DB サーバの削除 * をクリックします。</block>
+  <block id="a8c36f9da8d4fe334f7a4ca362ceee77" category="list-text">[_Configuration_] ページで、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして OneDrive アカウントを選び、 [ * OneDrive アカウントの削除 * ] をクリックします。</block>
+  <block id="49fae8728abc8ffde6080b69c8a80552" category="list-text">[_Configuration_] ページで、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> [ ファイル共有グループ ] の行にあるボタンをクリックし、 [ * ファイル共有グループの削除 * ] をクリックします。</block>
 </blocks>

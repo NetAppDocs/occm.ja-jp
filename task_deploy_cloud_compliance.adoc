@@ -188,12 +188,12 @@ image:screenshot_cloud_compliance_deploy_cloud.png["クラウドに Cloud Compli
 +
 image:screenshot_cloud_compliance_wizard_start.png["新しいインスタンスを導入するための Cloud Compliance ウィザードのスクリーンショット。"]
 
-. インスタンスが展開されたら、 * 設定に進む * をクリックして _ スキャン設定 _ ページに移動します。
+. インスタンスが配備されたら、 * 設定に進む * をクリックして _Configuration_page に移動します。
 
 
 Cloud Manager によってクラウドプロバイダに Cloud Compliance インスタンスが導入されます。
 
-スキャン設定ページから、スキャンするデータソースを選択できます。
+設定ページで、スキャンするデータソースを選択できます。
 
 また可能です <<Subscribing to the Cloud Compliance service,Cloud Compliance サービスに登録>> 現時点では、データ量が 1TB を超えるまでは料金は発生しません。
 
@@ -282,7 +282,7 @@ Cloud Compliance インストーラは、パッケージのインストール、
 
 ホストマシンとコネクタインスタンス間のポート 8080 を介した接続がある場合、 Cloud Manager の Compliance タブでインストールの進捗状況を確認できます。
 
-スキャン設定ページから、スキャンするデータソースを選択できます。
+設定ページで、スキャンするデータソースを選択できます。
 
 また可能です <<Subscribing to the Cloud Compliance service,Cloud Compliance サービスに登録>> 現時点では、データ量が 1TB を超えるまでは料金は発生しません。オンプレミスシステムに Cloud Compliance を導入した場合は、 AWS または Azure Marketplace へのサブスクリプションを使用できます。
 

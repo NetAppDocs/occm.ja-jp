@@ -55,7 +55,7 @@ Cloud Compliance が有効になったので、すべてのボリュームにア
 * NFS ボリュームのエクスポートポリシーで、 Cloud Compliance インスタンスからのアクセスを許可する必要があります。
 * CIFS ボリュームをスキャンするには、 Cloud Compliance で Active Directory のクレデンシャルが必要です。
 +
-コンプライアンス * > * スキャン設定 * > * CIFS クレデンシャルの編集 * をクリックし、クレデンシャルを入力します。
+コンプライアンス * > * 構成 * > * CIFS クレデンシャルの編集 * をクリックし、クレデンシャルを入力します。
 
 
 
@@ -125,7 +125,7 @@ image:screenshot_cifs_status.gif["スキャン設定ページと、 CIFS クレ�
 
 
 
-. _Scan Configuration_page で、 * View Details * をクリックして、各 CIFS および NFS ボリュームのステータスを確認し、エラーを修正します。
+. _Configuration_page で、 *View Details * をクリックして、各 CIFS および NFS ボリュームのステータスを確認し、エラーを修正します。
 +
 たとえば、次の図は 3 つのボリュームを示しています。 1 つは Cloud Compliance インスタンスとボリュームの間のネットワーク接続の問題が原因で Cloud Compliance がスキャンできないボリュームです。
 
@@ -161,7 +161,7 @@ link:task_getting_started_compliance.html["Cloud Compliance の有効化に関�
 
 
 
-. _Scan Configuration_page の上部にある * DP ボリュームへのアクセスを有効にする * ボタンをクリックして、 Cloud Compliance が DP ボリュームにアクセスできるようにします。
+. _Configuration_page の上部にある * DP ボリュームへのアクセスを有効にする * ボタンをクリックして、 Cloud Compliance が DP ボリュームにアクセスできるようにします。
 +
 NFS ボリュームが有効になっているが、 CIFS ボリュームには Active Directory 管理者クレデンシャルの入力が必要である。
 

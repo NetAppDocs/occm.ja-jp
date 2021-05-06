@@ -248,6 +248,29 @@ link:task_sync_managing_relationships.html#changing-the-settings-for-a-sync-rela
 
 
 
+== オブジェクトストレージのメタデータ
+
+Cloud Sync は、次のタイプの同期関係について、オブジェクトストレージのメタデータをソースからターゲットにコピーします。
+
+* Amazon S3 -> Amazon S3 ^1
+* Amazon S3 -> StorageGRID
+* StorageGRID -> Amazon S3
+* StorageGRID -> StorageGRID の順にクリックします
+* StorageGRID -> Google Cloud Storage
+* Google Cloud Storage -> StorageGRID ^1
+* Google Cloud Storage -> IBM Cloud Object Storage ^1
+* Google Cloud Storage -> Amazon S3 ^1
+* Amazon S3 -> Google Cloud Storage
+* IBM Cloud Object Storage -> Google Cloud Storage
+* StorageGRID -> IBM クラウドオブジェクトストレージ
+* IBM Cloud Object Storage -> StorageGRID の順にクリックします
+* IBM Cloud Object Storage -> IBM Cloud Object Storage
+
+
+^1 この同期関係には、以下が必要です link:task_sync_managing_data_brokers.html#configure-the-data-broker-to-copy-object-storage-metadata["メタデータをコピーするには、データブローカーの設定を変更してください"]。
+
+
+
 == パフォーマンス
 
 クラウド同期のパフォーマンスに関する質問は次のとおりです。

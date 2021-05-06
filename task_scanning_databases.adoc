@@ -70,7 +70,7 @@ Cloud Compliance では、次のデータベースからスキーマをスキャ
 
 
 
-IMPORTANT: 統計収集機能 * は、データベースで有効にする必要があります * 。
+CAUTION: 統計収集機能 * は、データベースで有効にする必要があります * 。
 
 
 
@@ -123,7 +123,7 @@ image:screenshot_compliance_add_db_server_dialog.png["データベースを識�
 
 スキーマのスキャンは、いつでも停止または開始できます。
 
-. _Scan Configuration_page から、設定するデータベースの *Configuration* ボタンをクリックします。
+. _Configuration_page で、設定するデータベースの *Configuration* ボタンをクリックします。
 +
 image:screenshot_compliance_db_server_config.png["設定ボタンを選択できるスキャン設定ページのスクリーンショット。"]
 

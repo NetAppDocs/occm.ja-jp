@@ -227,7 +227,7 @@ NOTE: ポリシーにラベルが設定されていても、ラベルが AIP か
 Cloud Compliance で追加したラベルは変更されません。ファイルに存在するラベルは、現在存在しているラベルのままになります。
 
 .手順
-. _Scan Configuration_page で、 *AIP ラベル統合 > 統合の削除 * をクリックします。
+. _Configuration_page で、 *AIP ラベル統合 > 統合の削除 * をクリックします。
 +
 image:screenshot_compliance_un_integrate_aip_labels.png["クラウドコンプライアンスとの AIP 統合を削除する方法を示すスクリーンショット。"]
 

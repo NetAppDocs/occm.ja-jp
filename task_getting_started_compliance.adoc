@@ -65,7 +65,7 @@ Cloud Compliance が有効になったので、すべてのボリュームにア
 * NFS ボリュームのエクスポートポリシーで、 Cloud Compliance インスタンスからのアクセスを許可する必要があります。
 * CIFS ボリュームをスキャンするには、 Cloud Compliance で Active Directory のクレデンシャルが必要です。
 +
-コンプライアンス * > * スキャン設定 * > * CIFS クレデンシャルの編集 * をクリックし、クレデンシャルを入力します。
+コンプライアンス * > * 構成 * > * CIFS クレデンシャルの編集 * をクリックし、クレデンシャルを入力します。
 
 
 
@@ -105,7 +105,7 @@ NOTE: オンプレミス ONTAP システムで次の手順を実行すると、�
 
 . Cloud Manager の上部で、 * Compliance * をクリックし、 * Configuration * タブを選択します。
 +
-image:screenshot_cloud_compliance_we_scan_config.png["Cloud Compliance インスタンスを導入した直後の Scan Configuration タブのスクリーンショット。"]
+image:screenshot_cloud_compliance_we_scan_config.png["Cloud Compliance インスタンスの導入直後の Configuration タブのスクリーンショット。"]
 
 . 作業環境内のすべてのボリュームをスキャンするには、 * すべてのボリュームのコンプライアンスをアクティブ化 * をクリックします。
 +
@@ -155,11 +155,11 @@ image:screenshot_cifs_credentials.gif["コンテンツペインの右上にあ�
 クレデンシャルを入力すると、すべての CIFS ボリュームが認証されたことを示すメッセージが表示されます。
 
 +
-image:screenshot_cifs_status.gif["スキャン設定ページと、 CIFS クレデンシャルが正常に入力された 1 つの Cloud Volumes ONTAP システムを示すスクリーンショット。"]
+image:screenshot_cifs_status.gif["設定ページと Cloud Volumes ONTAP クレデンシャルが正しく指定された 1 つのシステムを示すスクリーンショット"]
 
 
 
-. _Scan Configuration_page で、 * View Details * をクリックして、各 CIFS および NFS ボリュームのステータスを確認し、エラーを修正します。
+. _Configuration_page で、 *View Details * をクリックして、各 CIFS および NFS ボリュームのステータスを確認し、エラーを修正します。
 +
 たとえば、次の図は 3 つのボリュームを示しています。 1 つは Cloud Compliance インスタンスとボリュームの間のネットワーク接続の問題が原因で Cloud Compliance がスキャンできないボリュームです。
 
@@ -172,9 +172,9 @@ image:screenshot_compliance_volume_details.gif["スキャン設定の View Detai
 
 == ボリュームのコンプライアンススキャンの有効化と無効化
 
-作業環境内のボリュームのスキャンは、 Scan Configuration ページからいつでも停止または開始できます。すべてのボリュームをスキャンすることを推奨します。
+作業環境内のボリュームのスキャンは、設定ページからいつでも停止または開始できます。すべてのボリュームをスキャンすることを推奨します。
 
-image:screenshot_volume_compliance_selection.png["個々のボリュームのスキャンを有効または無効にできるスキャン設定ページのスクリーンショット。"]
+image:screenshot_volume_compliance_selection.png["個々のボリュームのスキャンを有効または無効にできる設定ページのスクリーンショット。"]
 
 [cols="40,50"]
 |===
@@ -262,4 +262,4 @@ image:screenshot_compliance_dp_cifs_volumes.png["CIFS のデータ保護ボリ�
 
 有効にすると、コンプライアンスのためにアクティブ化された各 DP ボリュームから NFS 共有が作成され、スキャンすることができます。共有のエクスポートポリシーでは、 Cloud Compliance インスタンスからのアクセスのみが許可されます。
 
-* 注： DP ボリュームへのアクセスを最初に有効にしたときに CIFS データ保護ボリュームがなかった場合は、一部のボリュームを追加すると、 CIFS DP へのアクセスを有効にするボタン * がスキャン設定ページの上部に表示されます。このボタンをクリックして、 CIFS DP ボリュームへのアクセスを有効にする CIFS クレデンシャルを追加します。
+* 注： DP ボリュームへのアクセスを最初に有効にしたときに CIFS データ保護ボリュームがない場合は、あとで追加しても、 CIFS DP の有効化ボタン * が設定ページの上部に表示されます。このボタンをクリックして、 CIFS DP ボリュームへのアクセスを有効にする CIFS クレデンシャルを追加します。

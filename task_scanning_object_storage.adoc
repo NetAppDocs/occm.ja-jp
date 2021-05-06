@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_scanning_object_storage.html 
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage 
-summary: Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。これには、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Linode 、 B2 Cloud Storage などが含まれます。 
+summary: Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Azure Blob （ MinIO を使用）、 Linode 、 B2 Cloud Storage などです。 
 ---
 = S3 プロトコルを使用するオブジェクトストレージをスキャンしています
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: Cloud Compliance でオブジェクトストレージ内のデータの
 
 
 [role="lead"]
-Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。これには、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Linode 、 B2 Cloud Storage などが含まれます。
+Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Azure Blob （ MinIO を使用）、 Linode 、 B2 Cloud Storage などです。
 
 
 
@@ -60,6 +60,7 @@ Cloud Compliance を有効にする前に、次の前提条件を確認し、サ
 
 * オブジェクトストレージサービスに接続するには、エンドポイント URL が必要です。
 * Cloud Compliance でバケットにアクセスできるようにするには、オブジェクトストレージプロバイダからアクセスキーとシークレットキーを入手する必要があります。
+* Azure Blob のサポートにはを使用する必要があります link:https://min.io/["MinIO サービス"^]。
 
 
 

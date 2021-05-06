@@ -162,8 +162,6 @@ image:screenshot_compliance_permissions.png["詳細なファイル権限を示�
 
 特定のファイルが重複している場合、この情報は _Duplicats_field の横に表示されます。これは、ストレージスペースを節約できる領域を特定する場合に便利です。また、特定の権限や機密情報を持つファイルが、ストレージシステム内で不必要に重複しないようにすることもできます。
 
-で説明されている形式のファイルのみ link:reference_private_data_categories.html#types-of-files["ファイルのタイプ"] 重複として識別できます。
-
 重複ファイルのリストを表示するには、 * 詳細の表示 * をクリックします。次のページで、 [ 重複の表示 *] をクリックして、 [ 調査 ] ページでファイルを表示します。
 
 image:screenshot_compliance_duplicate_file.png["重複するファイルが配置されている場所を確認する方法を示すスクリーンショット。"]

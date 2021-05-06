@@ -30,13 +30,14 @@ Cloud Sync を使用すると、ソースからターゲットにデータを同
 * AWS EFS を使用して
 * AWS S3
 * Azure Blob の略
-* Azure NetApp ファイル（ NFS ）
-* Cloud Volumes ONTAP （ NFS ）
-* クラウドボリュームサービス（ NFS ）
-* IBM クラウドオブジェクトストレージ
+* Azure NetApp Files の特長
+* Cloud Volumes ONTAP
+* Cloud Volumes Service
 * Google クラウドストレージ
+* IBM クラウドオブジェクトストレージ
 * NFS サーバ
 * オンプレミスの ONTAP クラスタ
+* SMB サーバ
 * StorageGRID
 
 
@@ -49,8 +50,8 @@ Cloud Sync を使用すると、ソースからターゲットにデータを同
 * Azure NetApp Files の特長
 * Cloud Volumes ONTAP
 * Cloud Volumes Service
-* IBM クラウドオブジェクトストレージ
 * Google クラウドストレージ
+* IBM クラウドオブジェクトストレージ
 * NFS サーバ
 * オンプレミスの ONTAP クラスタ
 * SMB サーバ
@@ -76,30 +77,16 @@ Cloud Sync を使用すると、ソースからターゲットにデータを同
 
 
 
-| Azure NetApp ファイル（ NFS ）  a| 
+| Azure NetApp Files の特長  a| 
 * AWS EFS を使用して
 * AWS S3
 * Azure Blob の略
-* Azure NetApp ファイル（ NFS ）
-* Cloud Volumes ONTAP （ NFS ）
-* クラウドボリュームサービス（ NFS ）
-* IBM クラウドオブジェクトストレージ
+* Azure NetApp Files の特長
+* Cloud Volumes ONTAP
+* Cloud Volumes Service
 * Google クラウドストレージ
+* IBM クラウドオブジェクトストレージ
 * NFS サーバ
-* オンプレミスの ONTAP クラスタ
-* StorageGRID
-
-
-
-
-| Azure NetApp ファイル（ SMB ）  a| 
-* AWS S3
-* Azure Blob の略
-* Azure NetApp ファイル（ SMB ）
-* Cloud Volumes ONTAP （ SMB ）
-* クラウドボリュームサービス（ SMB ）
-* Google クラウドストレージ
-* IBM クラウドオブジェクトストレージ
 * オンプレミスの ONTAP クラスタ
 * SMB サーバ
 * StorageGRID
@@ -107,30 +94,16 @@ Cloud Sync を使用すると、ソースからターゲットにデータを同
 
 
 
-| Cloud Volumes ONTAP （ NFS ）  a| 
+| Cloud Volumes ONTAP  a| 
 * AWS EFS を使用して
 * AWS S3
 * Azure Blob の略
-* Azure NetApp ファイル（ NFS ）
-* Cloud Volumes ONTAP （ NFS ）
-* クラウドボリュームサービス（ NFS ）
-* IBM クラウドオブジェクトストレージ
+* Azure NetApp Files の特長
+* Cloud Volumes ONTAP
+* Cloud Volumes Service
 * Google クラウドストレージ
+* IBM クラウドオブジェクトストレージ
 * NFS サーバ
-* オンプレミスの ONTAP クラスタ
-* StorageGRID
-
-
-
-
-| Cloud Volumes ONTAP （ SMB ）  a| 
-* AWS S3
-* Azure Blob の略
-* Azure NetApp ファイル（ SMB ）
-* Cloud Volumes ONTAP （ SMB ）
-* クラウドボリュームサービス（ SMB ）
-* Google クラウドストレージ
-* IBM クラウドオブジェクトストレージ
 * オンプレミスの ONTAP クラスタ
 * SMB サーバ
 * StorageGRID
@@ -138,30 +111,16 @@ Cloud Sync を使用すると、ソースからターゲットにデータを同
 
 
 
-| クラウドボリュームサービス（ NFS ）  a| 
+| Cloud Volumes Service  a| 
 * AWS EFS を使用して
 * AWS S3
 * Azure Blob の略
-* Azure NetApp ファイル（ NFS ）
-* Cloud Volumes ONTAP （ NFS ）
-* クラウドボリュームサービス（ NFS ）
-* IBM クラウドオブジェクトストレージ
+* Azure NetApp Files の特長
+* Cloud Volumes ONTAP
+* Cloud Volumes Service
 * Google クラウドストレージ
+* IBM クラウドオブジェクトストレージ
 * NFS サーバ
-* オンプレミスの ONTAP クラスタ
-* StorageGRID
-
-
-
-
-| クラウドボリュームサービス（ SMB ）  a| 
-* AWS S3
-* Azure Blob の略
-* Azure NetApp ファイル（ SMB ）
-* Cloud Volumes ONTAP （ SMB ）
-* クラウドボリュームサービス（ SMB ）
-* Google クラウドストレージ
-* IBM クラウドオブジェクトストレージ
 * オンプレミスの ONTAP クラスタ
 * SMB サーバ
 * StorageGRID
@@ -207,42 +166,29 @@ Cloud Sync を使用すると、ソースからターゲットにデータを同
 * AWS EFS を使用して
 * AWS S3
 * Azure Blob の略
-* Azure NetApp ファイル（ NFS ）
-* Cloud Volumes ONTAP （ NFS ）
-* クラウドボリュームサービス（ NFS ）
-* IBM クラウドオブジェクトストレージ
+* Azure NetApp Files の特長
+* Cloud Volumes ONTAP
+* Cloud Volumes Service
 * Google クラウドストレージ
+* IBM クラウドオブジェクトストレージ
 * NFS サーバ
 * オンプレミスの ONTAP クラスタ
+* SMB サーバ
 * StorageGRID
 
 
 
 
-| オンプレミスの ONTAP クラスタ（ NFS ）  a| 
+| オンプレミスの ONTAP クラスタ  a| 
 * AWS EFS を使用して
 * AWS S3
 * Azure Blob の略
-* Azure NetApp ファイル（ NFS ）
-* Cloud Volumes ONTAP （ NFS ）
-* クラウドボリュームサービス（ NFS ）
-* IBM クラウドオブジェクトストレージ
+* Azure NetApp Files の特長
+* Cloud Volumes ONTAP
+* Cloud Volumes Service
 * Google クラウドストレージ
+* IBM クラウドオブジェクトストレージ
 * NFS サーバ
-* オンプレミスの ONTAP クラスタ
-* StorageGRID
-
-
-
-
-| オンプレミスの ONTAP クラスタ（ SMB ）  a| 
-* AWS S3
-* Azure Blob の略
-* Azure NetApp ファイル（ SMB ）
-* Cloud Volumes ONTAP （ SMB ）
-* クラウドボリュームサービス（ SMB ）
-* Google クラウドストレージ
-* IBM クラウドオブジェクトストレージ
 * オンプレミスの ONTAP クラスタ
 * SMB サーバ
 * StorageGRID
@@ -262,13 +208,15 @@ Cloud Sync を使用すると、ソースからターゲットにデータを同
 
 
 | SMB サーバ  a| 
+* AWS EFS を使用して
 * AWS S3
 * Azure Blob の略
-* Azure NetApp ファイル（ SMB ）
-* Cloud Volumes ONTAP （ NFS ）
-* クラウドボリュームサービス（ NFS ）
-* IBM クラウドオブジェクトストレージ
+* Azure NetApp Files の特長
+* Cloud Volumes ONTAP
+* Cloud Volumes Service
 * Google クラウドストレージ
+* IBM クラウドオブジェクトストレージ
+* NFS サーバ
 * オンプレミスの ONTAP クラスタ
 * ONTAP S3 ストレージ
 * SMB サーバ
@@ -284,8 +232,8 @@ Cloud Sync を使用すると、ソースからターゲットにデータを同
 * Azure NetApp Files の特長
 * Cloud Volumes ONTAP
 * Cloud Volumes Service
-* IBM クラウドオブジェクトストレージ
 * Google クラウドストレージ
+* IBM クラウドオブジェクトストレージ
 * NFS サーバ
 * オンプレミスの ONTAP クラスタ
 * ONTAP S3 ストレージ
@@ -317,7 +265,13 @@ Cloud Sync を使用すると、ソースからターゲットにデータを同
 
 
 
-== ソースとターゲットのネットワーク
+== 移行元と移行先の要件
+
+ソースとターゲットが次の要件を満たしていることを確認します。
+
+
+
+=== ネットワーキング
 
 * ソースとターゲットは、データブローカーにネットワーク接続されている必要があります。
 +
@@ -328,15 +282,30 @@ Cloud Sync を使用すると、ソースからターゲットにデータを同
 
 
 
-== 移行元と移行先の要件
-
-ソースとターゲットが次の要件を満たしていることを確認します。
-
-
-
 === ターゲットディレクトリ
 
-同期関係を作成するときに、 Cloud Sync で既存のターゲットディレクトリを選択し、必要に応じてそのディレクトリ内に新しいフォルダを作成できます。そのため、優先ターゲットディレクトリはすでに存在していることを確認してください。
+同期関係を作成するときに、 Cloud Sync で既存のターゲットディレクトリを選択し、必要に応じてそのディレクトリ内に新しいフォルダを作成できます。そのため、優先ターゲットディレクトリがすでに存在していることを確認してください。
+
+
+
+=== ディレクトリを読み取るための権限
+
+ソースまたはターゲット内のすべてのディレクトリまたはフォルダを表示するには、 Cloud Sync でディレクトリまたはフォルダの読み取り権限が必要です。
+
+NFS:: ファイルおよびディレクトリに対して、ソース / ターゲットに uid / gid を指定して権限を定義しておく必要があります。
+オブジェクトストレージ::
++
+--
+* AWS と Google Cloud の場合、データブローカーにはリストオブジェクトの権限が必要です（データブローカーのインストール手順を実行する場合、これらの権限はデフォルトで提供されます）。
+* Azure 、 StorageGRID 、 IBM の場合は、同期関係のセットアップ時に入力するクレデンシャルに、リストオブジェクトの権限が必要です。
+
+
+--
+SMB:: 同期関係のセットアップ時に入力する SMB クレデンシャルには、リストフォルダの権限が必要です。
+
+
+
+NOTE: データブローカーでは、デフォルトで、 .snapshot 、 ~snapshot 、 .copy-Offload の各ディレクトリが無視されます
 
 
 
