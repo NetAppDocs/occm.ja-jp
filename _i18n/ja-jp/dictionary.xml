@@ -10403,4 +10403,5 @@
   <block id="c129bc0408ce8224fad586d944537ce4" category="list-text">[_Configuration_] ページで、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックし、 * DB サーバの削除 * をクリックします。</block>
   <block id="a8c36f9da8d4fe334f7a4ca362ceee77" category="list-text">[_Configuration_] ページで、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして OneDrive アカウントを選び、 [ * OneDrive アカウントの削除 * ] をクリックします。</block>
   <block id="49fae8728abc8ffde6080b69c8a80552" category="list-text">[_Configuration_] ページで、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> [ ファイル共有グループ ] の行にあるボタンをクリックし、 [ * ファイル共有グループの削除 * ] をクリックします。</block>
+  <block id="1012c18719a2bd0b8e401c9112d9058a" category="admonition">Cloud Backup は SnapMirror を使用してバックアップファイル（ SnapMirror Cloud ）を作成しますが、システムのアップグレード時にバックアップを一時停止する必要はありません。</block>
 </blocks>

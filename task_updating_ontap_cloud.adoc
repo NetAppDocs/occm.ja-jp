@@ -118,6 +118,9 @@ http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/GUID-3F50DE15-0D
 
 Cloud Volumes ONTAP システムにアクティブな SnapMirror 関係がある場合は、 Cloud Volumes ONTAP ソフトウェアを更新する前に転送を一時停止することを推奨します。転送を一時停止すると、 SnapMirror の障害を防ぐことができます。デスティネーションシステムからの転送を一時停止する必要があります。
 
+
+NOTE: Cloud Backup は SnapMirror を使用してバックアップファイル（ SnapMirror Cloud ）を作成しますが、システムのアップグレード時にバックアップを一時停止する必要はありません。
+
 ここでは、 System Manager for Version 9.3 以降の使用方法について説明します。
 
 .手順
