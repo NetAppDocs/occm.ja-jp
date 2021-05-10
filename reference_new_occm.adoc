@@ -36,6 +36,7 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 * [ バックアップと復元 ] ダッシュボードは、新しい [ バックアップと復元 *] タブに統合されているため、すべてのバックアップ操作と復元操作を 1 か所から簡単に管理できます。を参照してください link:task_managing_backups.html#viewing-the-volumes-that-are-being-backed-up["バックアップと復元のダッシュボード"^] を参照してください。
 * オンプレミスの ONTAP システムから Google Cloud Storage や NetApp StorageGRID システムへのバックアップを作成できるようになりました。を参照してください link:task_backup_from_onprem.html["Google Cloud Storage へのバックアップ"^] および link:task_backup_onprem_private_cloud.html["StorageGRID にバックアップしています"^] を参照してください。
+* ONTAP 9.9.1 の新機能では、 System Manager を使用して、オンプレミスの ONTAP のバックアップを Cloud Backup で設定したオブジェクトストレージに送信できます。 link:https://docs.netapp.com/us-en/ontap/task_cloud_backup_data_using_cbs.html["Cloud Backup を使用してボリュームをクラウドにバックアップする方法については、 System Manager の説明を参照してください。"^]
 * バックアップポリシーが次のように強化されています。
 +
 ** 次に、日単位、週単位、月単位のバックアップを組み合わせたカスタムポリシーを作成します。

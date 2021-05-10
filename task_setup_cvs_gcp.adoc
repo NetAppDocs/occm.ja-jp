@@ -62,9 +62,14 @@ Cloud Manager が Google Cloud プロジェクトにアクセスできるよう�
 
 
 .手順
-. Google Cloud Console で、 ［ * サービスアカウント * ］ ページに移動します。
+. Google Cloud コンソールで、 https://console.cloud.google.com/iam-admin/serviceaccounts["[ サービスアカウント ] ページに移動します"^]。
 . [ * プロジェクトの選択 * ] をクリックし、プロジェクトを選択して [ * 開く * ] をクリックします。
-. [ サービスアカウントの作成 *] をクリックし、サービスアカウント名 ( フレンドリ表示名 ) と説明を入力して、 [ * 作成 *] をクリックします。
+. [ サービスアカウントの作成 *] をクリックします。
+. サービスアカウント名（フレンドリ表示名）と概要を入力します。
++
+Cloud Console は、この名前に基づいてサービスアカウント ID を生成します。必要に応じて ID を編集します。後で ID を変更することはできません。
+
+. 今すぐアクセスコントロールを設定するには、 * Create * をクリックして次の手順に進みます。
 . _iam ページの _Click * Add * をクリックし、 _ Add Members_page のフィールドに入力します。
 +
 .. [ 新しいメンバー ] フィールドに、 user1-service-account-cvs@project1.iam.gserviceaccount.com などの完全なサービスアカウント ID を入力します。
@@ -72,7 +77,6 @@ Cloud Manager が Google Cloud プロジェクトにアクセスできるよう�
 +
 *** NetApp Cloud Volumes Admin _
 *** ネットワークビューアを計算します _
-*** _ フォルダビューア _
 
 
 .. [ 保存（ Save ） ] をクリックします。
@@ -117,7 +121,7 @@ image:screenshot_add_cvs_gcp_working_env.png["Cloud Volumes Service for GCP サ�
 .. 使用する作業環境名を入力します。
 .. 前の手順でダウンロードした JSON 秘密鍵をコピーして貼り付けます。
 .. Google Cloud プロジェクトの名前を選択します。
-.. [ 追加（ Add ） ] をクリックします。
+.. [* Continue （続行） ] をクリックします
 +
 image:screenshot_add_cvs_gcp_credentials.png["Cloud Volumes Service for GCP サブスクリプションのクレデンシャルを追加するスクリーンショット。"]
 
@@ -129,7 +133,7 @@ Cloud Manager に Cloud Volumes Service for Google Cloud の作業環境が表�
 
 image:screenshot_cvs_gcp_cloud.png["Cloud Volumes Service for Google Cloud 作業環境のスクリーンショット。"]
 
-このサブスクリプション用のクラウドボリュームがすでに存在する場合は、新しい作業環境にスクリーンショットに示すようにボリュームが表示されます。Cloud Manager からクラウドボリュームを追加することができます。
+このサブスクリプションに Cloud Volume がすでに存在する場合は、新しい作業環境にボリュームが表示されます。Cloud Manager からクラウドボリュームを追加することができます。
 
 このサブスクリプションにクラウドボリュームが存在しない場合は、ここで作成します。
 

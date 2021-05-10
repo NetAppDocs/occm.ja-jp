@@ -222,7 +222,8 @@ image:screenshot_backup_from_onprem_activate.png["オンプレミスの作業環
 
 . プロバイダとして * StorageGRID * を選択し、 * Next * をクリックして、プロバイダの詳細を入力します。
 +
-.. バックアップを格納するバケットへのアクセスに使用する StorageGRID サーバの FQDN 、アクセスキー、およびシークレットキー。
+.. StorageGRID サーバの FQDN または IP アドレス。
+.. バックアップを格納するバケットへのアクセスに使用するアクセスキーとシークレットキー。
 .. バックアップするボリュームが配置されている ONTAP クラスタ内の IPspace 。
 +
 適切な IPspace を選択すると、 ONTAP から StorageGRID オブジェクトストレージへの接続を Cloud Backup で確実にセットアップできます。

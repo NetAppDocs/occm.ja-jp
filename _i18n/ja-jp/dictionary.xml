@@ -3140,14 +3140,12 @@
   <block id="d65142db38828c0dd5d365061085a9bf" category="list-text">Amazon S3 作業環境を選択します。</block>
   <block id="0935819aba236aea3b813f76e288f13a" category="inline-image-macro">Amazon S3 作業環境アイコンのスクリーンショット</block>
   <block id="a3a4b47224ab5ffd3c2bd00fdf40f4ab" category="paragraph"><block ref="a3a4b47224ab5ffd3c2bd00fdf40f4ab" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c49e8088f628528741be4f8d68b575df" category="list-text">右側のペインで、 * コンプライアンスを有効にする * をクリックします。</block>
   <block id="357d4f70f4d89fc41b9718e6c2a09d6e" category="inline-image-macro">から Cloud Compliance サービスを有効にするためのスクリーンショット サービスパネル</block>
   <block id="b13ee97af55eb1b7ecc57c81d47a3812" category="paragraph"><block ref="b13ee97af55eb1b7ecc57c81d47a3812" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a6100ac4fa5cb7bbb1c49e95165b96b2" category="inline-xref">必要な権限</block>
   <block id="10f377d904bb98811b18f32357fbca40" category="list-text">プロンプトが表示されたら、の Cloud Compliance インスタンスに IAM ロールを割り当てます <block ref="82919c19497f3c3f743a1af90a83424d" category="inline-xref-macro-rx"></block>。</block>
   <block id="d1051ae5e957e6115a285928f82aa068" category="inline-image-macro">クラウド用の AWS IAM ロールを入力するスクリーンショット コンプライアンス</block>
   <block id="283a3201dd33adbc18b94c60658c9966" category="paragraph"><block ref="283a3201dd33adbc18b94c60658c9966" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="808f82f428ecd48b9ab8cfc911a6bf28" category="list-text">[ コンプライアンスを有効にする ] をクリックします。</block>
   <block id="e1dfcbaa5e8f3411d5b67049eea563a5" category="paragraph">Cloud Manager によって、インスタンスに IAM ロールが割り当てられます。</block>
   <block id="e18a75263bcb68f3fcffe930704c1b61" category="section-title">S3 バケットでの準拠スキャンの有効化と無効化</block>
   <block id="1f7fce96aae3eda3b62816f69f0280f7" category="paragraph">Cloud Manager で Amazon S3 の Cloud Compliance が有効になったら、次の手順でスキャンするバケットを設定します。</block>
@@ -3214,15 +3212,12 @@
   <block id="cb939d621f46e6895da8fb3a52fbcf83" category="list-text">新しいサービスアカウントを作成します</block>
   <block id="172cabf35e2da2e485725633d4544c4b" category="list-text">新しいサービスアカウントメンバーをプロジェクトおよびに追加します IT 固有のロール（権限）の割り当て</block>
   <block id="b8da17ea9f82689a4cc87ac02b337328" category="list-text">サービスアカウントのキーペアを作成してダウンロードします Google への認証に使用されます</block>
-  <block id="41c144f4f26e5ca5aa21b3330d66ca49" category="list-text">Google Cloud Console で、 ［ * サービスアカウント * ］ ページに移動します。</block>
   <block id="e4ca5adc5a86c098ce9d6bd2f42dc178" category="list-text">[ * プロジェクトの選択 * ] をクリックし、プロジェクトを選択して [ * 開く * ] をクリックします。</block>
-  <block id="065b3db4763d7886630e850c3d55e441" category="list-text">[ サービスアカウントの作成 *] をクリックし、サービスアカウント名 ( フレンドリ表示名 ) と説明を入力して、 [ * 作成 *] をクリックします。</block>
   <block id="4bd66ea95ac91bc82cdc097c3614f96c" category="list-text">_iam ページの _Click * Add * をクリックし、 _ Add Members_page のフィールドに入力します。</block>
   <block id="91193149b6c0dbfe2760ec8c62b016e7" category="list-text">[ 新しいメンバー ] フィールドに、 user1-service-account-cvs@project1.iam.gserviceaccount.com などの完全なサービスアカウント ID を入力します。</block>
   <block id="e6915ea331526f7f3221d5b019733157" category="list-text">追加するロールは次のとおりです。</block>
   <block id="ea34dd9c3c884049d43a2ee08126a1e2" category="list-text">NetApp Cloud Volumes Admin _</block>
   <block id="a69f1e2412a22a1f3153b3553fb2a1d1" category="list-text">ネットワークビューアを計算します _</block>
-  <block id="5b37c0b581d08db7af0d2891f544f5e3" category="list-text">_ フォルダビューア _</block>
   <block id="ad3366b72e9832f00b4129d4419c46bb" category="list-text">_ サービスアカウントの詳細 _ ページで、 * キーの追加 &gt; 新しいキーの作成 * をクリックします。</block>
   <block id="744132d4bfa3718f3315f6d3187cba60" category="list-text">キーのタイプとして * json * を選択し、 * Create * をクリックします。</block>
   <block id="ef17d662e8cfc44a88102effe9136080" category="paragraph">[*Create] をクリックすると、新しい公開鍵と秘密鍵のペアが生成され、システムにダウンロードされます。秘密鍵の唯一のコピーとして機能します。このファイルは、サービスアカウントとしての認証に使用できるため、安全に保管してください。</block>
@@ -3250,7 +3245,6 @@
   <block id="d1536678830c26f77ea3d432c63adbd6" category="paragraph">Cloud Manager に Cloud Volumes Service for Google Cloud の作業環境が表示されます。</block>
   <block id="9940ae9ac5b6e6e70ab66bca7f76d51f" category="inline-image-macro">Cloud Volumes Service for Google Cloud 作業環境のスクリーンショット。</block>
   <block id="9e4d57614250697869bda0f9844b2597" category="paragraph"><block ref="9e4d57614250697869bda0f9844b2597" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7ab37dd67e049cb820c44d49ecc866b9" category="paragraph">このサブスクリプション用のクラウドボリュームがすでに存在する場合は、新しい作業環境にスクリーンショットに示すようにボリュームが表示されます。Cloud Manager からクラウドボリュームを追加することができます。</block>
   <block id="a1f2a018efc72b6fcf1f805684b3c31a" category="paragraph">このサブスクリプションにクラウドボリュームが存在しない場合は、ここで作成します。</block>
   <block id="593e6f28e28b9ec4b88fdea5fc951e62" category="paragraph"><block ref="672887af1473f79be97bb8e2d1edeb96" category="inline-link-macro-rx"></block>。</block>
   <block id="5876c30cdb96c38d4cc2497feffde111" category="summary">ボリュームごとに Snapshot ポリシーを作成して、ボリュームの内容全体を以前からリカバリまたはリストアできるようにすることができます。必要に応じて、クラウドボリュームのオンデマンド Snapshot を作成することもできます。</block>
@@ -10133,7 +10127,6 @@
   <block id="2e0228f49c1731a891d8cc21dc3a3144" category="list-text">キャンバスで、オンプレミス作業環境を選択し、右パネルのバックアップとコンプライアンスサービスの横にある * 有効化 * をクリックします。</block>
   <block id="5e8c6ea98624a29d9ebc095a1de519e0" category="paragraph"><block ref="11d3279643cd9d3284ef1579029eb559" category="inline-image-macro-rx" type="image"></block></block>
   <block id="293e3556f1041c0ecd0f2d1427b2521d" category="list-text">プロバイダとして * StorageGRID * を選択し、 * Next * をクリックして、プロバイダの詳細を入力します。</block>
-  <block id="9d3d8e5d658c426236255f2f7569e639" category="list-text">バックアップを格納するバケットへのアクセスに使用する StorageGRID サーバの FQDN 、アクセスキー、およびシークレットキー。</block>
   <block id="f2c59c3f0d86e6b8ae01d62708bc7aec" category="paragraph">適切な IPspace を選択すると、 ONTAP から StorageGRID オブジェクトストレージへの接続を Cloud Backup で確実にセットアップできます。</block>
   <block id="c94955d6c55e241370d05212ca09f72b" category="inline-image-macro">オンプレミスのクラスタから StorageGRID ストレージにボリュームをバックアップする際のクラウドプロバイダの詳細を示すスクリーンショット。</block>
   <block id="eb999df4afe36910feb98fec19c74488" category="paragraph"><block ref="eb999df4afe36910feb98fec19c74488" category="inline-image-macro-rx" type="image"></block></block>
@@ -10404,4 +10397,14 @@
   <block id="a8c36f9da8d4fe334f7a4ca362ceee77" category="list-text">[_Configuration_] ページで、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> ボタンをクリックして OneDrive アカウントを選び、 [ * OneDrive アカウントの削除 * ] をクリックします。</block>
   <block id="49fae8728abc8ffde6080b69c8a80552" category="list-text">[_Configuration_] ページで、をクリックします <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> [ ファイル共有グループ ] の行にあるボタンをクリックし、 [ * ファイル共有グループの削除 * ] をクリックします。</block>
   <block id="1012c18719a2bd0b8e401c9112d9058a" category="admonition">Cloud Backup は SnapMirror を使用してバックアップファイル（ SnapMirror Cloud ）を作成しますが、システムのアップグレード時にバックアップを一時停止する必要はありません。</block>
+  <block id="54494dfb9c81a93edb6728a495e4e494" category="list-text">StorageGRID サーバの FQDN または IP アドレス。</block>
+  <block id="483b51851b68c242f5f73afff135794f" category="list-text">バックアップを格納するバケットへのアクセスに使用するアクセスキーとシークレットキー。</block>
+  <block id="1780855b84d22a607ac312da97944edb" category="list-text">右側のペインで、 [*Enable*] をクリックします。</block>
+  <block id="909d8cdc7c100d1834d4de10094f43ca" category="list-text">[*Enable*] をクリックします。</block>
+  <block id="bdac2dc9c1216cbabea4f0c3c6dbd7eb" category="list-text">[ サービスアカウントの作成 *] をクリックします。</block>
+  <block id="81c36eb6a7aa6110855ae09fd80381ab" category="list-text">サービスアカウント名（フレンドリ表示名）と概要を入力します。</block>
+  <block id="66335d9ae4276106da10a758c0c3c8b7" category="paragraph">Cloud Console は、この名前に基づいてサービスアカウント ID を生成します。必要に応じて ID を編集します。後で ID を変更することはできません。</block>
+  <block id="1d5a10c003a3e37e9355e0608857621c" category="list-text">今すぐアクセスコントロールを設定するには、 * Create * をクリックして次の手順に進みます。</block>
+  <block id="1a9e28288f987d2aa7cac4c83ef241dd" category="paragraph">このサブスクリプションに Cloud Volume がすでに存在する場合は、新しい作業環境にボリュームが表示されます。Cloud Manager からクラウドボリュームを追加することができます。</block>
+  <block id="8356a6083e153a46625f7a30671b18fd" category="list-text">ONTAP 9.9.1 の新機能では、 System Manager を使用して、オンプレミスの ONTAP のバックアップを Cloud Backup で設定したオブジェクトストレージに送信できます。 <block ref="b711fca994c74d539e5c5d93052ae149" category="inline-link-rx"></block></block>
 </blocks>
