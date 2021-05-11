@@ -15,8 +15,7 @@ script:
 - mkdir -p /tmp/output && bundle exec jekyll build --trace --destination /tmp/output
 - touch /tmp/output/.nojekyll
 deploy:	
-  edge:
-    branch: v1.8.47
+  edge: true
   provider: pages	
   skip_cleanup: true	
   github_token: $GH_TOKEN	
