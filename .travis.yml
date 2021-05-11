@@ -14,10 +14,11 @@ script:
 - if [[ ! -z "$FEATURE_FLAG" ]]; then bundle exec rake buildAll; fi
 - mkdir -p /tmp/output && bundle exec jekyll build --trace --destination /tmp/output
 - touch /tmp/output/.nojekyll
+- rm -rf /tmp/output/pdfs
 deploy:	
   edge: true
   provider: pages	
-  skip_cleanup: true	
+  cleanup: false
   github_token: $GH_TOKEN	
   keep_history: true
   local_dir: /tmp/output	
