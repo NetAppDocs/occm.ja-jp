@@ -15,7 +15,7 @@ script:
 - mkdir -p /tmp/output && bundle exec jekyll build --trace --destination /tmp/output
 - touch /tmp/output/.nojekyll
 - rm -rf /tmp/output/pdfs/fullsite-sidebar/
-- curl -o "/tmp/output/pdfs/fullsite-sidebar/Cloud_Manager_\の\ド\キ\ュ\メ\ン\ト.pdf" https://docs.netapp.com/us-en/occm/pdfs/fullsite-sidebar/Cloud_Manager_documentation.pdf
+- ruby pdf-download.rb
 - ls -al /tmp/output/pdfs/fullsite-sidebar/
 deploy:	
   edge: true
