@@ -37,6 +37,7 @@ if (document.location.hostname.search("netapp.com") !== -1) {
 <li><a href="#_http_status_codes">HTTP status codes</a></li>
 <li><a href="#_uri_scheme">URI scheme</a></li>
 <li><a href="#_authentication_with_netapp_cloud_central">Authentication with NetApp Cloud Central</a></li>
+<li><a href="#_managing_your_account_with_the_tenancy_api">Managing your account with the Tenancy API</a></li>
 </ul>
 </li>
 <li><a href="#_accessing_the_api_reference_and_running_operations_using_swagger">Accessing the API reference and running operations using Swagger</a></li>
@@ -515,7 +516,6 @@ if (document.location.hostname.search("netapp.com") !== -1) {
 <li><a href="#_setnsskeysrequest">SetNssKeysRequest</a></li>
 <li><a href="#_setproxyrequest">SetProxyRequest</a></li>
 <li><a href="#_setupinfo">SetupInfo</a></li>
-<li><a href="#_setuprequest">SetupRequest</a></li>
 <li><a href="#_sgwscloudbackupsetuprequest">SgwsCloudBackupSetupRequest</a></li>
 <li><a href="#_sgwscredentialsrequest">SgwsCredentialsRequest</a></li>
 <li><a href="#_siteidentifier">SiteIdentifier</a></li>
@@ -591,14 +591,12 @@ if (document.location.hostname.search("netapp.com") !== -1) {
 <li><a href="#_volumemoverequest">VolumeMoveRequest</a></li>
 <li><a href="#_volumequalityofservice">VolumeQualityOfService</a></li>
 <li><a href="#_volumeresponse">VolumeResponse</a></li>
-<li><a href="#_volumeviewsetuprequest">VolumeViewSetupRequest</a></li>
 <li><a href="#_volumeslistforbackup">VolumesListForBackup</a></li>
 <li><a href="#_vpcbasicresponse">VpcBasicResponse</a></li>
 <li><a href="#_vpcextendedresponse">VpcExtendedResponse</a></li>
 <li><a href="#_vpctagresponse">VpcTagResponse</a></li>
 <li><a href="#_vsaaggregatecreaterequest">VsaAggregateCreateRequest</a></li>
 <li><a href="#_vsaandvolumeparams">VsaAndVolumeParams</a></li>
-<li><a href="#_vsacandidateforcbsbackup">VsaCandidateForCbsBackup</a></li>
 <li><a href="#_vsacandidateforcbsrestore">VsaCandidateForCbsRestore</a></li>
 <li><a href="#_vsaclusterproperties">VsaClusterProperties</a></li>
 <li><a href="#_vsalicense">VsaLicense</a></li>
@@ -829,6 +827,18 @@ curl  https://$domain/oauth/token -X POST --header "Content-Type:application/jso
 
 token+=`cat token.txt`</pre>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_managing_your_account_with_the_tenancy_api">Managing your account with the Tenancy API</h3>
+<div class="paragraph">
+<p>Administer your Cloud Central account settings by managing users, service accounts, workspaces, Connectors, and subscriptions.</p>
+</div>
+<div class="paragraph">
+<p>To manage your account settings by sending API requests, you&#8217;ll need to use the <em>Tenancy</em> API. This API is different than the Cloud Manager API, which you use to create and manage working environments.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://cloudmanager.cloud.netapp.com/tenancy/api-docs/static/index.html" target="_blank" rel="noopener">View endpoints for the Tenancy API</a>.</p>
 </div>
 </div>
 </div>
@@ -64863,6 +64873,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">coreDiskExists</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -67801,6 +67818,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">providerDiskThroughput</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -68370,6 +68394,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">iops</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned IOPS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned Throughput</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -69407,6 +69438,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clusterIp</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">admin</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
@@ -69829,6 +69867,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">directApiTraffic</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -69966,6 +70011,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">usePrivateLink</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">directApiTraffic</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -70316,7 +70368,7 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ebsVolumeType</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EBS volume type</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">enum (gp2,  st1,  io1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enum (gp2,  st1,  io1,  gp3)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -70420,6 +70472,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">iops</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned IOPS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned Throughput</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -71774,7 +71833,7 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ebsVolumeType</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EBS volume type</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">enum (gp2,  st1,  sc1,  io1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enum (gp2,  gp3,  st1,  sc1,  io1)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -71829,6 +71888,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">iops</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned IOPS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned Throughput</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -77587,14 +77653,14 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">oCCMInstance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vsaInstance</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">vsaInstance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">oCCMInstance</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -79681,6 +79747,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bootVolumeId</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -80725,14 +80798,14 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">inactiveDataReportingEnabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">objectStoreAttachEligible</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">objectStoreAttachEligible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inactiveDataReportingEnabled</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -81651,6 +81724,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">wormEnabled</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">spaceReportingLogical</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -82654,6 +82734,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">iops</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned IOPS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned Throughput</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -84950,86 +85037,14 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">pendingConnectivitySet</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">setup</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_setuprequest">SetupRequest</h3>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-</colgroup>
-<thead>
 <tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Schema</th>
-<th class="tableblock halign-left valign-top">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tenantRequest</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_addtenantrequest">AddTenantRequest</a></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">userRequest</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_userrequest">UserRequest</a></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">site</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">company</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">proxyUrl</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_proxyuri">ProxyUri</a></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">autoVsaCapacityManagement</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">autoUpgrade</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pendingConnectivitySet</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -86439,6 +86454,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">supportsGp3Disk</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -86492,6 +86514,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">s3CmkEncryptionSupportedVersion</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gp3SupportedVersion</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -88864,57 +88893,6 @@ kmsKey=`cat kmsKey.txt`</pre>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_volumeviewsetuprequest">VolumeViewSetupRequest</h3>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Schema</th>
-<th class="tableblock halign-left valign-top">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">userRequest</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_userrequest">UserRequest</a></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">company</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">proxyUrl</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_proxyuri">ProxyUri</a></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">autoUpgrade</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
 <h3 id="_volumeslistforbackup">VolumesListForBackup</h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -89222,6 +89200,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned Throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -89270,57 +89255,6 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cidr</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_vsacandidateforcbsbackup">VsaCandidateForCbsBackup</h3>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Schema</th>
-<th class="tableblock halign-left valign-top">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">workingEnvironmentName</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">workingEnvironmentId</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">vsaType</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">exclusionReason</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -89864,6 +89798,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned Throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">tieringPolicy</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tiering policy</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
@@ -90106,6 +90047,13 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned Throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">tieringPolicy</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tiering policy</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
@@ -90261,6 +90209,20 @@ kmsKey=`cat kmsKey.txt`</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Destination SVM name</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iops</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned IOPS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provisioned Throughput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (int32)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
@@ -90882,7 +90844,7 @@ kmsKey=`cat kmsKey.txt`</pre>
 <div class="sect2">
 <h3 id="_copyright_information">Copyright information</h3>
 <div class="paragraph">
-<p>Copyright © 2020 NetApp, Inc. All rights reserved. Printed in the U.S.</p>
+<p>Copyright © 2021 NetApp, Inc. All rights reserved. Printed in the U.S.</p>
 </div>
 <div class="paragraph">
 <p>No part of this document covered by copyright may be reproduced in any form or by any means—graphic, electronic, or mechanical, including photocopying, recording, taping, or storage in an electronic retrieval system—without prior written permission of the copyright owner.<br>
@@ -90938,7 +90900,7 @@ Support telephone: +1 (888) 463-8277</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>March 2021</p>
+<p>April 2021</p>
 </div>
 </div>
 </div>

@@ -50,7 +50,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/concept_backup_to_cloud.html</loc>
       
-      <lastmod>2021-04-02T14:32:57+00:00</lastmod>
+      <lastmod>2021-05-05T17:09:49+00:00</lastmod>
       
     </url>
   
@@ -64,14 +64,14 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/concept_cloud_central_accounts.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-05T20:24:35+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/concept_cloud_compliance.html</loc>
       
-      <lastmod>2021-03-15T13:40:22+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -85,14 +85,14 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/concept_cloud_tiering.html</loc>
       
-      <lastmod>2021-03-24T18:16:52+00:00</lastmod>
+      <lastmod>2021-05-03T16:50:29+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/concept_compute.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -120,7 +120,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/concept_data_tiering.html</loc>
       
-      <lastmod>2021-03-09T19:33:41+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -169,7 +169,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/concept_ha_google_cloud.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -183,7 +183,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/concept_monitoring.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-05T20:24:35+00:00</lastmod>
       
     </url>
   
@@ -209,6 +209,27 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/ja-jp/occm/concept_replication.html</loc>
+      
+      <lastmod>2021-05-05T20:24:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ja-jp/occm/concept_replication_policies.html</loc>
+      
+      <lastmod>2021-05-05T20:24:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ja-jp/occm/concept_resource_templates.html</loc>
+      
+      <lastmod>2021-05-05T17:09:49+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/ja-jp/occm/concept_saas.html</loc>
       
       <lastmod>2021-02-14T00:41:21+00:00</lastmod>
@@ -225,7 +246,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/concept_storage.html</loc>
       
-      <lastmod>2021-04-02T14:32:57+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -239,7 +260,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/concept_worm.html</loc>
       
-      <lastmod>2021-04-02T14:32:57+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
@@ -260,7 +281,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/faq_cloud_compliance.html</loc>
       
-      <lastmod>2021-03-15T13:40:22+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -281,14 +302,14 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/faq_sync.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/</loc>
       
-      <lastmod>2021-03-18T15:03:53+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -344,7 +365,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/reference_default_configs.html</loc>
       
-      <lastmod>2021-04-02T14:32:57+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -393,7 +414,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/reference_legal_notices.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -407,7 +428,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/reference_networking.html</loc>
       
-      <lastmod>2021-03-24T18:16:52+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -435,14 +456,14 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/reference_networking_gcp.html</loc>
       
-      <lastmod>2021-03-18T19:05:05+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/reference_new_occm.html</loc>
       
-      <lastmod>2021-04-08T16:19:15+00:00</lastmod>
+      <lastmod>2021-05-10T17:18:34+00:00</lastmod>
       
     </url>
   
@@ -456,7 +477,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/reference_private_data_categories.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
@@ -477,21 +498,21 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/reference_sync_networking.html</loc>
       
-      <lastmod>2021-02-17T13:54:01+00:00</lastmod>
+      <lastmod>2021-05-05T20:24:35+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/reference_sync_requirements.html</loc>
       
-      <lastmod>2021-03-09T19:33:41+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/reference_user_roles.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-05T20:24:35+00:00</lastmod>
       
     </url>
   
@@ -505,7 +526,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm//search.html</loc>
       
-      <lastmod>2021-04-08T16:21:09+00:00</lastmod>
+      <lastmod>2021-05-12T01:33:07+00:00</lastmod>
       
     </url>
   
@@ -547,63 +568,70 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_backup_from_onprem.html</loc>
       
-      <lastmod>2021-04-07T22:21:32+00:00</lastmod>
+      <lastmod>2021-05-05T17:09:49+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ja-jp/occm/task_backup_onprem_private_cloud.html</loc>
+      
+      <lastmod>2021-05-10T17:18:34+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_backup_to_azure.html</loc>
       
-      <lastmod>2021-03-24T18:16:52+00:00</lastmod>
+      <lastmod>2021-05-05T17:09:49+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_backup_to_gcp.html</loc>
       
-      <lastmod>2021-03-24T18:16:52+00:00</lastmod>
+      <lastmod>2021-05-05T17:09:49+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_backup_to_s3.html</loc>
       
-      <lastmod>2021-03-24T18:16:52+00:00</lastmod>
+      <lastmod>2021-05-05T17:09:49+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_configuring_proxy.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_connecting_kubernetes.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_connecting_to_otc.html</loc>
       
-      <lastmod>2021-04-02T14:32:57+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_controlling_governance_data.html</loc>
       
-      <lastmod>2021-03-15T13:40:22+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_controlling_private_data.html</loc>
       
-      <lastmod>2021-03-15T13:40:22+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
@@ -643,16 +671,23 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/ja-jp/occm/task_define_templates.html</loc>
+      
+      <lastmod>2021-05-03T15:28:24+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_deleting_working_env.html</loc>
       
-      <lastmod>2021-04-07T22:21:32+00:00</lastmod>
+      <lastmod>2021-05-05T20:24:35+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_deploy_cloud_compliance.html</loc>
       
-      <lastmod>2021-02-14T16:48:18+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
@@ -694,7 +729,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_enabling_private_link.html</loc>
       
-      <lastmod>2021-03-16T18:33:21+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -743,14 +778,14 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_getting_started_compliance.html</loc>
       
-      <lastmod>2021-03-15T13:40:22+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_getting_started_compute.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -764,7 +799,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_getting_started_monitoring.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-05T20:24:35+00:00</lastmod>
       
     </url>
   
@@ -778,7 +813,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_installing_https_cert.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -827,7 +862,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_manage_anf_volumes.html</loc>
       
-      <lastmod>2021-03-10T14:19:25+00:00</lastmod>
+      <lastmod>2021-05-03T15:28:24+00:00</lastmod>
       
     </url>
   
@@ -862,21 +897,21 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_managing_backups.html</loc>
       
-      <lastmod>2021-02-17T15:29:10+00:00</lastmod>
+      <lastmod>2021-05-05T17:09:49+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_managing_cloud_central_accounts.html</loc>
       
-      <lastmod>2021-02-24T18:54:39+00:00</lastmod>
+      <lastmod>2021-05-05T20:24:35+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_managing_compliance.html</loc>
       
-      <lastmod>2021-02-14T16:48:18+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
@@ -890,14 +925,14 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_managing_data_fusion.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_managing_highlights.html</loc>
       
-      <lastmod>2021-03-15T13:40:22+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
@@ -912,6 +947,13 @@
       <loc>https://docs.netapp.com/ja-jp/occm/task_managing_ontap.html</loc>
       
       <lastmod>2021-04-07T22:21:32+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ja-jp/occm/task_managing_replication.html</loc>
+      
+      <lastmod>2021-05-05T20:24:35+00:00</lastmod>
       
     </url>
   
@@ -939,21 +981,21 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_managing_svms_aws.html</loc>
       
-      <lastmod>2021-04-02T14:32:57+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_managing_svms_azure.html</loc>
       
-      <lastmod>2021-04-07T22:21:32+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_managing_tiering.html</loc>
       
-      <lastmod>2021-03-11T18:15:28+00:00</lastmod>
+      <lastmod>2021-05-03T16:50:29+00:00</lastmod>
       
     </url>
   
@@ -974,28 +1016,28 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_overriding_cifs_locks.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_planning_your_config.html</loc>
       
-      <lastmod>2021-04-02T14:32:57+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_planning_your_config_azure.html</loc>
       
-      <lastmod>2021-04-02T14:32:57+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_planning_your_config_gcp.html</loc>
       
-      <lastmod>2021-04-02T14:32:57+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -1016,7 +1058,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_provisioning_storage.html</loc>
       
-      <lastmod>2021-04-02T14:32:57+00:00</lastmod>
+      <lastmod>2021-05-03T15:28:24+00:00</lastmod>
       
     </url>
   
@@ -1037,7 +1079,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_replicating_data.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-05T20:24:35+00:00</lastmod>
       
     </url>
   
@@ -1051,49 +1093,49 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_restore_backups.html</loc>
       
-      <lastmod>2021-04-02T14:32:57+00:00</lastmod>
+      <lastmod>2021-05-05T17:09:49+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_scanning_databases.html</loc>
       
-      <lastmod>2021-02-14T16:48:18+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_scanning_file_shares.html</loc>
       
-      <lastmod>2021-03-15T13:40:22+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_scanning_object_storage.html</loc>
       
-      <lastmod>2021-03-15T13:40:22+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_scanning_onedrive.html</loc>
       
-      <lastmod>2021-03-15T13:40:22+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_scanning_onprem.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_scanning_s3.html</loc>
       
-      <lastmod>2021-02-14T16:48:18+00:00</lastmod>
+      <lastmod>2021-05-10T17:18:34+00:00</lastmod>
       
     </url>
   
@@ -1135,7 +1177,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_setup_cvs_gcp.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-10T17:18:34+00:00</lastmod>
       
     </url>
   
@@ -1156,7 +1198,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_sync_creating_relationships.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-04T15:21:38+00:00</lastmod>
       
     </url>
   
@@ -1184,7 +1226,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_sync_installing_gcp.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
@@ -1198,21 +1240,28 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_sync_licensing.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-05T20:24:35+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_sync_managing_data_brokers.html</loc>
       
-      <lastmod>2021-03-09T19:33:41+00:00</lastmod>
+      <lastmod>2021-05-06T18:20:26+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_sync_managing_relationships.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-04T15:21:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/ja-jp/occm/task_sync_managing_reports.html</loc>
+      
+      <lastmod>2021-05-04T15:21:38+00:00</lastmod>
       
     </url>
   
@@ -1240,28 +1289,28 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_tiering.html</loc>
       
-      <lastmod>2021-03-11T19:58:12+00:00</lastmod>
+      <lastmod>2021-04-24T02:35:46+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_tiering_onprem_aws.html</loc>
       
-      <lastmod>2021-03-08T16:03:58+00:00</lastmod>
+      <lastmod>2021-05-03T16:50:29+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_tiering_onprem_azure.html</loc>
       
-      <lastmod>2021-03-24T18:16:52+00:00</lastmod>
+      <lastmod>2021-05-03T16:50:29+00:00</lastmod>
       
     </url>
   
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_tiering_onprem_gcp.html</loc>
       
-      <lastmod>2021-03-24T18:16:52+00:00</lastmod>
+      <lastmod>2021-05-03T16:50:29+00:00</lastmod>
       
     </url>
   
@@ -1275,7 +1324,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_tiering_onprem_storagegrid.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-03T16:50:29+00:00</lastmod>
       
     </url>
   
@@ -1289,7 +1338,7 @@
     <url>
       <loc>https://docs.netapp.com/ja-jp/occm/task_updating_ontap_cloud.html</loc>
       
-      <lastmod>2021-02-14T00:41:21+00:00</lastmod>
+      <lastmod>2021-05-07T14:48:35+00:00</lastmod>
       
     </url>
   
