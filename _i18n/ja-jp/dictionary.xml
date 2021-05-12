@@ -10407,4 +10407,7 @@
   <block id="1d5a10c003a3e37e9355e0608857621c" category="list-text">今すぐアクセスコントロールを設定するには、 * Create * をクリックして次の手順に進みます。</block>
   <block id="1a9e28288f987d2aa7cac4c83ef241dd" category="paragraph">このサブスクリプションに Cloud Volume がすでに存在する場合は、新しい作業環境にボリュームが表示されます。Cloud Manager からクラウドボリュームを追加することができます。</block>
   <block id="8356a6083e153a46625f7a30671b18fd" category="list-text">ONTAP 9.9.1 の新機能では、 System Manager を使用して、オンプレミスの ONTAP のバックアップを Cloud Backup で設定したオブジェクトストレージに送信できます。 <block ref="b711fca994c74d539e5c5d93052ae149" category="inline-link-rx"></block></block>
+  <block id="eb0c2afe200f0ff504ff713de64c407b" category="section-title">Cloud Manager 3.9.6 ビルド 2 （ 2021 年 5 月 11 日）</block>
+  <block id="5c57c7c98f6f95b3cc2b6f59f0bd6a74" category="paragraph">Azure で Cloud Volumes ONTAP の作業環境を作成する際にエラーが発生するというバグが修正されました。</block>
+  <block id="ee8b0db8bc82302887e3686d7cbf6b05" category="admonition">VPC がネットワークアクセス制御リスト（ ACL ）を使用してトラフィックをフィルタリングする場合は、アウトバウンドとインバウンドの両方のトラフィックに対してこれらのエンドポイントを有効にしてください。</block>
 </blocks>

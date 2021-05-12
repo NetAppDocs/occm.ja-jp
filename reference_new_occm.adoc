@@ -21,6 +21,12 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
+== Cloud Manager 3.9.6 ビルド 2 （ 2021 年 5 月 11 日）
+
+Azure で Cloud Volumes ONTAP の作業環境を作成する際にエラーが発生するというバグが修正されました。
+
+
+
 == Cloud Manager 3.9.6 の更新（ 2021 年 5 月 5 日）
 
 * <<Cloud Backup enhancements>>
