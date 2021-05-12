@@ -14,7 +14,8 @@ script:
 - if [[ ! -z "$FEATURE_FLAG" ]]; then bundle exec rake buildAll; fi
 - mkdir -p /tmp/output && bundle exec jekyll build --trace --destination /tmp/output
 - touch /tmp/output/.nojekyll
-- rm -rf /tmp/output/pdfs
+- rm -rf /tmp/output/pdfs/fullsite-sidebar/
+- curl -o /tmp/output/pdfs/fullsite-sidebar/Cloud_Manager_のドキュメント.pdf https://docs.netapp.com/us-en/occm/pdfs/fullsite-sidebar/Cloud_Manager_documentation.pdf
 deploy:	
   edge: true
   provider: pages	
