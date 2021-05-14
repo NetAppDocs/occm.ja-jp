@@ -44,6 +44,10 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 
 .. https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["GCP サービスアカウントを作成し、カスタムロールを適用します を作成しました"^]。
 .. Cloud Volumes ONTAP を他のプロジェクトに導入する場合は、 https://cloud.google.com/iam/docs/granting-changing-revoking-access#granting-console["クラウドでサービスアカウントを追加してアクセスを許可します そのプロジェクトに対するマネージャの役割"^]。プロジェクトごとにこの手順を繰り返す必要があります。
++
+
+TIP: 共有 VPC を使用してリソースをサービスプロジェクトに導入する場合は、ホストプロジェクト内で Connector サービスアカウントに _compute.networkUser_ ロールも必要です。 https://cloud.google.com/iam/docs/job-functions/networking["このロールは、 Connector VM にを使用する権限を付与します 共有 VPC"^]。
+
 
 
 

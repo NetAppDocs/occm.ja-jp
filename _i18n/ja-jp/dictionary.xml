@@ -10410,4 +10410,6 @@
   <block id="eb0c2afe200f0ff504ff713de64c407b" category="section-title">Cloud Manager 3.9.6 ビルド 2 （ 2021 年 5 月 11 日）</block>
   <block id="5c57c7c98f6f95b3cc2b6f59f0bd6a74" category="paragraph">Azure で Cloud Volumes ONTAP の作業環境を作成する際にエラーが発生するというバグが修正されました。</block>
   <block id="ee8b0db8bc82302887e3686d7cbf6b05" category="admonition">VPC がネットワークアクセス制御リスト（ ACL ）を使用してトラフィックをフィルタリングする場合は、アウトバウンドとインバウンドの両方のトラフィックに対してこれらのエンドポイントを有効にしてください。</block>
+  <block id="6fa0b25cb52fe34cac8c0dfda4cb6a3b" category="inline-link">このロールは、 Connector VM にを使用する権限を付与します 共有 VPC</block>
+  <block id="04775b90111af55a42db31582904f014" category="admonition">共有 VPC を使用してリソースをサービスプロジェクトに導入する場合は、ホストプロジェクト内で Connector サービスアカウントに _compute.networkUser_ ロールも必要です。<block ref="698960e0df981a72ba051685999f6704" category="inline-link-rx"></block>。</block>
 </blocks>
