@@ -3218,7 +3218,6 @@
   <block id="e6915ea331526f7f3221d5b019733157" category="list-text">追加するロールは次のとおりです。</block>
   <block id="ea34dd9c3c884049d43a2ee08126a1e2" category="list-text">NetApp Cloud Volumes Admin _</block>
   <block id="a69f1e2412a22a1f3153b3553fb2a1d1" category="list-text">ネットワークビューアを計算します _</block>
-  <block id="ad3366b72e9832f00b4129d4419c46bb" category="list-text">_ サービスアカウントの詳細 _ ページで、 * キーの追加 &gt; 新しいキーの作成 * をクリックします。</block>
   <block id="744132d4bfa3718f3315f6d3187cba60" category="list-text">キーのタイプとして * json * を選択し、 * Create * をクリックします。</block>
   <block id="ef17d662e8cfc44a88102effe9136080" category="paragraph">[*Create] をクリックすると、新しい公開鍵と秘密鍵のペアが生成され、システムにダウンロードされます。秘密鍵の唯一のコピーとして機能します。このファイルは、サービスアカウントとしての認証に使用できるため、安全に保管してください。</block>
   <block id="7ef475b3aa654a4c77b576b7b693b979" category="inline-link">サービスアカウントの作成と管理</block>
@@ -10404,7 +10403,6 @@
   <block id="bdac2dc9c1216cbabea4f0c3c6dbd7eb" category="list-text">[ サービスアカウントの作成 *] をクリックします。</block>
   <block id="81c36eb6a7aa6110855ae09fd80381ab" category="list-text">サービスアカウント名（フレンドリ表示名）と概要を入力します。</block>
   <block id="66335d9ae4276106da10a758c0c3c8b7" category="paragraph">Cloud Console は、この名前に基づいてサービスアカウント ID を生成します。必要に応じて ID を編集します。後で ID を変更することはできません。</block>
-  <block id="1d5a10c003a3e37e9355e0608857621c" category="list-text">今すぐアクセスコントロールを設定するには、 * Create * をクリックして次の手順に進みます。</block>
   <block id="1a9e28288f987d2aa7cac4c83ef241dd" category="paragraph">このサブスクリプションに Cloud Volume がすでに存在する場合は、新しい作業環境にボリュームが表示されます。Cloud Manager からクラウドボリュームを追加することができます。</block>
   <block id="8356a6083e153a46625f7a30671b18fd" category="list-text">ONTAP 9.9.1 の新機能では、 System Manager を使用して、オンプレミスの ONTAP のバックアップを Cloud Backup で設定したオブジェクトストレージに送信できます。 <block ref="b711fca994c74d539e5c5d93052ae149" category="inline-link-rx"></block></block>
   <block id="eb0c2afe200f0ff504ff713de64c407b" category="section-title">Cloud Manager 3.9.6 ビルド 2 （ 2021 年 5 月 11 日）</block>
@@ -10412,4 +10410,9 @@
   <block id="ee8b0db8bc82302887e3686d7cbf6b05" category="admonition">VPC がネットワークアクセス制御リスト（ ACL ）を使用してトラフィックをフィルタリングする場合は、アウトバウンドとインバウンドの両方のトラフィックに対してこれらのエンドポイントを有効にしてください。</block>
   <block id="6fa0b25cb52fe34cac8c0dfda4cb6a3b" category="inline-link">このロールは、 Connector VM にを使用する権限を付与します 共有 VPC</block>
   <block id="04775b90111af55a42db31582904f014" category="admonition">共有 VPC を使用してリソースをサービスプロジェクトに導入する場合は、ホストプロジェクト内で Connector サービスアカウントに _compute.networkUser_ ロールも必要です。<block ref="698960e0df981a72ba051685999f6704" category="inline-link-rx"></block>。</block>
+  <block id="8971b16610cb4efa4b6c83e3ad176094" category="list-text">今すぐアクセスコントロールを設定するには、ページの下部にある「 * 作成 * 」、「完了 * 」の順にクリックして、次の手順に進みます。</block>
+  <block id="1baa368f450d37450a1cb47c6b7dd320" category="list-text">[ サービスアカウント名 ] をクリックし、 _Service アカウントの詳細ページで、 [ * キーの追加 &gt; 新しいキーの作成 * ] をクリックします。</block>
+  <block id="de7932149641c2749900942a3606d73c" category="list-text">* Compliance Viewer * ：アクセス権を持つワークスペースについてのみ、ガバナンスとコンプライアンスの情報を表示し、レポートを生成できます。</block>
+  <block id="3e3cf089006fce4a50dff3c1cdf68cea" category="list-text">* SnapCenter Admin* ： SnapCenter サービスを使用して、アプリケーションと整合性のあるバックアップを作成し、それらのバックアップを使用してデータをリストアできます。このサービスは現在ベータ版です。</block>
+  <block id="a8f22b136b25f48d7297a2519c6a7ccd" category="list-text">Account Admin 以外のアカウントを選択した場合は、そのユーザに関連付けるワークスペースを 1 つ以上選択します。</block>
 </blocks>
