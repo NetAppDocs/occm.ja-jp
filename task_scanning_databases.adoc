@@ -61,6 +61,7 @@ Cloud Compliance を有効にする前に、次の前提条件を確認し、サ
 
 Cloud Compliance では、次のデータベースからスキーマをスキャンできます。
 
+* Amazon リレーショナルデータベースサービス（ Amazon RDS ）
 * MongoDB
 * MySQL
 * Oracle の場合

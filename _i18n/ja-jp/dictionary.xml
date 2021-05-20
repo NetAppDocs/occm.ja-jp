@@ -5274,18 +5274,6 @@
   <block id="ffa0b3f1336c5af7f182a50049dd44e1" category="section-title">高速の書き込み速度をサポートする構成</block>
   <block id="45802e8e05d9f48b4caa135041dde30a" category="paragraph">すべての Cloud Volumes ONTAP 構成で高速書き込みがサポートされるわけではありません。デフォルトでは、これらの構成では通常の書き込み速度が使用されます。</block>
   <block id="a8acc7de0893c2c2f8404c6e10839d65" category="paragraph">シングルノードシステムを使用する場合、 Cloud Volumes ONTAP では、すべてのインスタンスタイプで高速な書き込み速度がサポートされます。</block>
-  <block id="81713f7e2541a8f2193ce8c04ce7e582" category="paragraph">HA ペアを使用する場合、 Cloud Volumes ONTAP では 9.8 リリース以降、次の種類のインスタンスで高速の書き込み速度がサポートされます。</block>
-  <block id="bccfea3b653422d5fd8560cff3483d5b" category="list-text">c5.9xlarge のサイズ</block>
-  <block id="c5349a9d783e985390617543cf910af4" category="list-text">c5.18 × ラージ</block>
-  <block id="a59ad4f9735c6c90fea48ef6e88441ac" category="list-text">c5n.9xlarge</block>
-  <block id="8bfc3cdc1d0308d0df3f444e6a54e5c0" category="list-text">c5n.18 × ラージ</block>
-  <block id="fdb9b168c2139e67e282db861cf21967" category="list-text">m5.2xlarge</block>
-  <block id="6124944413e19a98a7cefa988e91f90e" category="list-text">m5.mc</block>
-  <block id="36339cdd29b164bf6617e204878be132" category="list-text">m5.16 x ラージ</block>
-  <block id="3755b8d0a0506aff1de991cab29e9205" category="list-text">m5n.2xlarge</block>
-  <block id="859e8cd8d7a83d36983b0e9860a11e84" category="list-text">r5.2xlarge</block>
-  <block id="240c30af8e0d147ae84043d1fc9d1776" category="list-text">r5.8xlarge</block>
-  <block id="4a6116f629595cfeff4104820f93ab85" category="list-text">r5.12xlarge</block>
   <block id="89347e425902e735637e8fa0c5aaea49" category="paragraph">シングルノードシステムを使用する場合、 Cloud Volumes ONTAP では、すべての種類の VM で高速な書き込み速度がサポートされます。</block>
   <block id="581fa7b9ae1bc5c8e878756d54ded6b6" category="paragraph">HA ペアを使用する場合、 Cloud Volumes ONTAP では 9.8 リリース以降、次の種類の VM で高速の書き込み速度がサポートされます。</block>
   <block id="d5dcfd54bc69651d879cec73cf9d8daa" category="list-text">DS5_v2 の場合</block>
@@ -6014,7 +6002,6 @@
   <block id="16577fe9b5ad3fc74ec2a37327b4f98f" category="inline-link-macro">同期関係の設定を変更する方法について説明します。</block>
   <block id="7646175b771ccfe3e0ba2e11d4f4e429" category="paragraph"><block ref="611e92f5a6ef0cd9cd51cea215fee35f" category="inline-link-macro-rx"></block>。</block>
   <block id="e7fc2a48e6896c10c00e2e0d0f42df0a" category="section-title">非常に大規模なデータセットがある場合はどうすればよいですか。</block>
-  <block id="6cd558a47726f7d5df3593f02670ebf8" category="paragraph">1 つのディレクトリに 60 万以上のファイルが含まれている場合は、 mailto ： ng-cloudsync-support@netapp.com [ お問い合わせ ] をご利用ください。このため、データブローカーでペイロードを処理するように設定できます。データブローカーマシンにメモリを追加する必要がある場合があります。</block>
   <block id="961ac1bba4fae7c023a039958d1c8be6" category="paragraph">セキュリティに関する次の質問</block>
   <block id="39c0da912cbf1f199fdf2faba685c39f" category="section-title">クラウドの同期は安全ですか？</block>
   <block id="64fdb9de34f1179f1b0a667717e6fba3" category="inline-link">Amazon Simple Queue Service （ SQS ）</block>
@@ -7902,7 +7889,6 @@
   <block id="4bfd6df89ae3683de5e81c0d2d601355" category="inline-link-macro">詳細については、ここをクリックしてください</block>
   <block id="21ce215b2cca991eeb8c0b5dad0b808d" category="paragraph"><block ref="b499fc523d570935bd214fc9fed47422" category="inline-link-macro-rx"></block>。</block>
   <block id="69d7d8f5eb94524f8d67bd4810ecd3b4" category="section-title">データをバックアップしています</block>
-  <block id="c568359e30ad78803ec13d734c750dca" category="paragraph"><block ref="2da9f5a577e4dd18d3ec6a4e78d27a93" category="inline-link-macro-rx"></block>。</block>
   <block id="8eb970559649a4b00ff570ac7b611b1a" category="section-title">データをクラウドに階層化する</block>
   <block id="bdaba8e114e06250b64623fa35d279e2" category="paragraph">ONTAP クラスタからオブジェクトストレージにアクセス頻度の低いデータを自動的に階層化することで、データセンターをクラウドに拡張します。</block>
   <block id="90b4dd69e9064f99b3ebe400973d5224" category="paragraph"><block ref="9c9896fd31a93be26bce42c226a95f7e" category="inline-link-macro-rx"></block>。</block>
@@ -10415,4 +10401,16 @@
   <block id="de7932149641c2749900942a3606d73c" category="list-text">* Compliance Viewer * ：アクセス権を持つワークスペースについてのみ、ガバナンスとコンプライアンスの情報を表示し、レポートを生成できます。</block>
   <block id="3e3cf089006fce4a50dff3c1cdf68cea" category="list-text">* SnapCenter Admin* ： SnapCenter サービスを使用して、アプリケーションと整合性のあるバックアップを作成し、それらのバックアップを使用してデータをリストアできます。このサービスは現在ベータ版です。</block>
   <block id="a8f22b136b25f48d7297a2519c6a7ccd" category="list-text">Account Admin 以外のアカウントを選択した場合は、そのユーザに関連付けるワークスペースを 1 つ以上選択します。</block>
+  <block id="4d000cb814de0483d25aa949e7104787" category="paragraph">9.8 リリース以降では、 Cloud Volumes ONTAP でサポートされているほぼすべての EC2 インスタンスタイプを使用する場合、 HA ペアでの高速書き込みがサポートされます。ただし、 m5.xlarge と r5.xlarge は除きます。</block>
+  <block id="d483e21ce7d44495d45b5b10d0a92f33" category="inline-link">Cloud Volume が提供する Amazon EC2 インスタンスの詳細については、こちらをご覧ください ONTAP はをサポートします</block>
+  <block id="5a8ca1600a250f9c572773d2290171f7" category="paragraph"><block ref="a8c5ffe636cedb02e4d2a49934987fb5" category="inline-link-rx"></block>。</block>
+  <block id="aa1cf82517b500e91f431051f2593e87" category="list-text">E8s_v3</block>
+  <block id="7c829b75aa102b314aca7bdb8299dc52" category="inline-link">Cloud Volume が提供する Azure VM の種類について詳しくは、こちらをご覧ください ONTAP はをサポートします</block>
+  <block id="23e640737edc54deed72e9acce9c6cae" category="paragraph"><block ref="29087e6932b0be3e57066b8f37766dff" category="inline-link-rx"></block>。</block>
+  <block id="e4e959caff2c6b1635b2a3bea64b35f7" category="inline-link">Cloud の Google Cloud マシンタイプの詳細をご覧ください Volume ONTAP はをサポートします</block>
+  <block id="257ef6894b3ea4c805b12a747cf8d883" category="paragraph"><block ref="fe8b4988f56157b3e4e4e9d09a8c8b6c" category="inline-link-rx"></block>。</block>
+  <block id="76b0202d317f0f8ecd9c65d6c4bd6117" category="paragraph">1 つのディレクトリに 60 万以上のファイルが含まれている場合は、データブローカーでペイロードを処理するように設定できます。 mailto ： ng-cloudsync-support@netapp.com [ お問い合わせください ]データブローカーマシンにメモリを追加する必要がある場合があります。</block>
+  <block id="5272c1335a923889fee61138f9c644e0" category="paragraph">マウントポイント内のファイルの総数に制限はありません。上位ディレクトリやサブディレクトリの階層のレベルに関係なく、 600 、 000 以上のファイルを含む大規模なディレクトリには、追加のメモリが必要です。</block>
+  <block id="90f3ffbb8ea1212084359b98a039879e" category="paragraph"><block ref="e48c6f2c2e391bd832a45f7246041514" category="inline-link-macro-rx"></block>。</block>
+  <block id="b1f2c92ef58290b56648f1660975efba" category="list-text">Amazon リレーショナルデータベースサービス（ Amazon RDS ）</block>
 </blocks>

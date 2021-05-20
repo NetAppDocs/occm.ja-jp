@@ -57,26 +57,9 @@ Cloud Manager では、 Cloud Volumes ONTAP に対して通常または高速の
 
 シングルノードシステムを使用する場合、 Cloud Volumes ONTAP では、すべてのインスタンスタイプで高速な書き込み速度がサポートされます。
 
-HA ペアを使用する場合、 Cloud Volumes ONTAP では 9.8 リリース以降、次の種類のインスタンスで高速の書き込み速度がサポートされます。
+9.8 リリース以降では、 Cloud Volumes ONTAP でサポートされているほぼすべての EC2 インスタンスタイプを使用する場合、 HA ペアでの高速書き込みがサポートされます。ただし、 m5.xlarge と r5.xlarge は除きます。
 
-* c5.9xlarge のサイズ
-* c5.18 × ラージ
-* c5d.csi
-* c5d.9xlarge
-* c5d.18 x ラージ
-* c5n.9xlarge
-* c5n.18 × ラージ
-* m5.2xlarge
-* m5.mc
-* m5.16 x ラージ
-* m5d.8xlarge
-* m5d.12xlarge
-* m5n.2xlarge
-* r5.2xlarge
-* r5.8xlarge
-* r5.12xlarge
-* r5d.2xlarge
-
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_990.html["Cloud Volume が提供する Amazon EC2 インスタンスの詳細については、こちらをご覧ください ONTAP はをサポートします"^]。
 
 
 
@@ -89,8 +72,11 @@ HA ペアを使用する場合、 Cloud Volumes ONTAP では 9.8 リリース以
 * DS5_v2 の場合
 * DS14_v2
 * DS15_v2 の場合
+* E8s_v3
 * E48s_v3
 
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_azure_990.html["Cloud Volume が提供する Azure VM の種類について詳しくは、こちらをご覧ください ONTAP はをサポートします"^]。
 
 
 
@@ -99,6 +85,8 @@ HA ペアを使用する場合、 Cloud Volumes ONTAP では 9.8 リリース以
 シングルノードシステムを使用する場合、 Cloud Volumes ONTAP では、すべての種類のマシンで高速な書き込み速度がサポートされます。
 
 Cloud Volumes ONTAP では、 Google Cloud の HA ペアでの高速書き込みはサポートされていません。
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_gcp_990.html["Cloud の Google Cloud マシンタイプの詳細をご覧ください Volume ONTAP はをサポートします"^]。
 
 
 
