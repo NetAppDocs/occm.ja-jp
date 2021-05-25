@@ -21,6 +21,20 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
+== Cloud Manager 3.9.6 の更新（ 2021 年 24 月 5 日）
+
+Cloud Manager が更新され、 Cloud Volumes ONTAP の最新バージョンが追加されました。
+
+
+
+=== Cloud Volumes ONTAP 9.9.1
+
+Cloud Volumes ONTAP 9.9.9..1. を導入および管理できるようになりました。
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_991.html["このリリースのに含まれる新機能について説明します Cloud Volumes ONTAP"^]。
+
+
+
 == Cloud Manager 3.9.6 ビルド 2 （ 2021 年 5 月 11 日）
 
 Azure で Cloud Volumes ONTAP の作業環境を作成する際にエラーが発生するというバグが修正されました。
@@ -308,7 +322,7 @@ link:task_managing_cloud_central_accounts.html#allowing-private-previews["これ
 
 Cloud Volumes ONTAP 9.9.9..0 を導入および管理できるようになりました。
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_990.html["このリリースのに含まれる新機能について説明します Cloud Volumes ONTAP"^]。
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_991.html["このリリースのに含まれる新機能について説明します Cloud Volumes ONTAP"^]。
 
 
 

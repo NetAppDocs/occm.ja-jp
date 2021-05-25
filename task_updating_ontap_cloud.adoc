@@ -90,11 +90,7 @@ Cloud Manager には、 PAYGO と BYOL の両方を使用して Cloud Volumes ON
 
 === サポートされるアップグレードパスの概要
 
-Cloud Volumes ONTAP のアップグレードは一度に 1 リリースずつ実行する必要があります。リリースをスキップしてアップグレードすることはできません。
-
-たとえば、現在 Cloud Volumes ONTAP 9.7 を実行していて、 9.9..0 にアップグレードする場合は、まず 9.8 にアップグレードする必要があります。そこから 9.9..0 にアップグレードできます。
-
-https://docs.netapp.com/us-en/cloud-volumes-ontap/["Cloud Volumes ONTAP の「アップグレードに関する注意事項」を参照してください 詳細については、リリースノートを参照してください"]。
+https://docs.netapp.com/us-en/cloud-volumes-ontap/["Cloud Volume の「アップグレードに関する注意事項」ページを参照してください ターゲットバージョンの『 ONTAP リリースノート』"]。
 
 
 

@@ -59,7 +59,7 @@ Cloud Manager では、 Cloud Volumes ONTAP に対して通常または高速の
 
 9.8 リリース以降では、 Cloud Volumes ONTAP でサポートされているほぼすべての EC2 インスタンスタイプを使用する場合、 HA ペアでの高速書き込みがサポートされます。ただし、 m5.xlarge と r5.xlarge は除きます。
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_990.html["Cloud Volume が提供する Amazon EC2 インスタンスの詳細については、こちらをご覧ください ONTAP はをサポートします"^]。
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_991.html["Cloud Volume が提供する Amazon EC2 インスタンスの詳細については、こちらをご覧ください ONTAP はをサポートします"^]。
 
 
 
@@ -76,7 +76,7 @@ HA ペアを使用する場合、 Cloud Volumes ONTAP では 9.8 リリース以
 * E48s_v3
 
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_azure_990.html["Cloud Volume が提供する Azure VM の種類について詳しくは、こちらをご覧ください ONTAP はをサポートします"^]。
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_azure_991.html["Cloud Volume が提供する Azure VM の種類について詳しくは、こちらをご覧ください ONTAP はをサポートします"^]。
 
 
 
@@ -86,7 +86,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_azure_990.ht
 
 Cloud Volumes ONTAP では、 Google Cloud の HA ペアでの高速書き込みはサポートされていません。
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_gcp_990.html["Cloud の Google Cloud マシンタイプの詳細をご覧ください Volume ONTAP はをサポートします"^]。
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_gcp_991.html["Cloud の Google Cloud マシンタイプの詳細をご覧ください Volume ONTAP はをサポートします"^]。
 
 
 

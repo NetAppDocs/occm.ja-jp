@@ -4553,9 +4553,6 @@
   <block id="bfd255feddb5a77c407cd9c82f286f84" category="list-text"><block ref="a2b25f4869b217caa9fef6d36f5d2012" category="inline-xref-macro-rx"></block></block>
   <block id="837dca95bf477e6e150b6329c494c4ee" category="list-text"><block ref="30faaf6c55a7289c82735e325264ed3a" category="inline-xref-macro-rx"></block></block>
   <block id="2c991a645f242374845408ffd2532acd" category="section-title">サポートされるアップグレードパスの概要</block>
-  <block id="644604a8c1a3f87b0975e280e2fb4e10" category="paragraph">Cloud Volumes ONTAP のアップグレードは一度に 1 リリースずつ実行する必要があります。リリースをスキップしてアップグレードすることはできません。</block>
-  <block id="c84ee27a524d90998599d7ef87b99822" category="inline-link">Cloud Volumes ONTAP の「アップグレードに関する注意事項」を参照してください 詳細については、リリースノートを参照してください</block>
-  <block id="a3ad77baa755d6e59b6d9dada71c7cea" category="paragraph"><block ref="e312cebb756c80dc10f213c65cc699b9" category="inline-link-rx"></block>。</block>
   <block id="54cc1bcd283cf24afb353862798bda1e" category="section-title">ダウンタイムの計画</block>
   <block id="13ab03e6ad3ee2215bec95a4c0f024e2" category="paragraph">シングルノードシステムをアップグレードする場合は、アップグレードプロセスによって、 I/O が中断される最長 25 分間システムがオフラインになります。</block>
   <block id="00795e3f043d0bab791590ffc0257204" category="paragraph">HA ペアのアップグレードは無停止で、 I/O が中断されません。無停止アップグレードでは、各ノードが連携してアップグレードされ、クライアントへの I/O の提供が継続されます。</block>
@@ -8603,7 +8600,6 @@
   <block id="cedfa4114a856d26f8fcf723a5b4cb7a" category="section-title">すべてのクラウドプロバイダで利用できる機能強化</block>
   <block id="ab2fea55ae9697fcfeae223bb8d1a161" category="paragraph">Cloud Volumes ONTAP 9.9.9..0 を導入および管理できるようになりました。</block>
   <block id="9f97c3125a701942b4e6e648146819fc" category="inline-link">このリリースのに含まれる新機能について説明します Cloud Volumes ONTAP</block>
-  <block id="41671c8c2787c6b4ae4a7430aaed25a5" category="paragraph"><block ref="1d003678f7aeecaa48a9a55ee79dfa0c" category="inline-link-rx"></block>。</block>
   <block id="acaa3f0ba647338374e9aa5717e4b179" category="paragraph">Cloud Manager では、 AWS Key Management Service （ KMS ）を使用して Cloud Volumes ONTAP データを暗号化できるようになりました。Cloud Volumes ONTAP 9.9.9..0 以降では、お客様が管理する CMK を選択すると、 EBS ディスク上のデータと S3 に階層化されたデータが暗号化されます。これまでは、 EBS データだけが暗号化されていました。</block>
   <block id="dcbf930e1a349b31dc68e26e5227c6d0" category="paragraph">Cloud Volumes ONTAP IAM ロールに CMK を使用するためのアクセス権を付与する必要があります。</block>
   <block id="b2eca227b653383cc96f103eeeeaf77a" category="inline-link-macro">Cloud で AWS KMS を設定する方法については、こちらをご覧ください Volume ONTAP の略</block>
@@ -8765,7 +8761,6 @@
   <block id="0c4ef3dd5858986fd8e07047ff6608cf" category="inline-link">持ち上げてシフトします</block>
   <block id="97df77063884378a1c2d764fdec7597a" category="paragraph">_ 移行と切り替え _ は、アプリケーションをクラウドに移行するためのアプローチです。つまり、アプリケーションとそれに関連するデータを、アプリケーションの設計を変更することなくクラウドプラットフォームに移動することを意味します。詳細については、を参照してください <block ref="5ace72c4dc027f4fe1a0278eeb38322e" category="inline-link-rx"></block>。</block>
   <block id="7e5a37a8029cfb73748cf583a70b3a25" category="sidebar">Active IQ を使用してクラスタを管理する</block>
-  <block id="470dffc8f1b3279655b217370256cdce" category="list-text"><block ref="470dffc8f1b3279655b217370256cdce" category="inline-link-rx"></block></block>
   <block id="a58a1a73a0fc2d46b2c8d3212a81b76b" category="paragraph">データを提供する Storage VM を追加で作成するには、 Azure で IP アドレスを割り当ててから、 ONTAP コマンドを実行して Storage VM とデータ LIF を作成する必要があります。</block>
   <block id="ec1961021d4275205f590654d3717686" category="paragraph">構成に応じて、シングルノードシステム、 iSCSI を使用する HA ペア、 NFS / SMB を使用する HA ペアのいずれかの手順を実行します。</block>
   <block id="5aabc9069557be7e4aeff466605cbc75" category="section-title">シングルノード</block>
@@ -9222,10 +9217,6 @@
   <block id="82cb2697547e5cce68e52aef671eff36" category="paragraph">すでに Azure NetApp Files を Cloud Manager の外部からセットアップしている場合は、 Azure AD アプリケーションをセットアップしてから Azure NetApp Files の作業環境を作成するだけで済みます。</block>
   <block id="18829511b7282b9fc688eeede7b54112" category="list-text">ボリュームリストアを実行する場合、インスタンスや仮想マシンを個別に用意する必要がないため、コストは発生しません。</block>
   <block id="b11c90fa5b1825891f7306cced59a8f6" category="paragraph">Cloud Manager にアクセスするコンピュータは、 Cloud Volumes ONTAP にネットワーク接続している必要があります。たとえば、クラウドプロバイダネットワークにあるジャンプホストから Cloud Manager へのログインが必要になることがあります。</block>
-  <block id="4ffd96017a73cb8e1eae9ac6d2f4ecd7" category="list-text"><block ref="4ffd96017a73cb8e1eae9ac6d2f4ecd7" category="inline-link-rx"></block></block>
-  <block id="2008c1f8ab9b203fa6c3b0f5be0022c6" category="list-text"><block ref="2008c1f8ab9b203fa6c3b0f5be0022c6" category="inline-link-rx"></block></block>
-  <block id="4f474246c58a344ef79a296acf6632f2" category="list-text"><block ref="4f474246c58a344ef79a296acf6632f2" category="inline-link-rx"></block></block>
-  <block id="72a87613c5bddcf033999f2662c878d9" category="list-text"><block ref="72a87613c5bddcf033999f2662c878d9" category="inline-link-rx"></block></block>
   <block id="a33f839390390b572d3c94aff410f01c" category="list-text">ノード管理 LIF （ GCP では、この LIF がクラスタ間 LIF と結合されます）</block>
   <block id="380bfdc134190af310ad2f9812d7569f" category="inline-link-macro">このページで説明されているように</block>
   <block id="7f3c9346383e5d395697a494f2cbce45" category="admonition">これは Cloud Manager 用に設定するサービスアカウントです。 <block ref="0b5d76834d60a55caca8d6900f97291a" category="inline-link-macro-rx"></block>。</block>
@@ -9244,7 +9235,6 @@
   <block id="9754fea65f0ab7e81a4fbacbae93b420" category="paragraph">既存のシステムを削除してから、同じライセンスを使用して新しいシステムを作成する場合、 BYOL ライセンスは Cloud Volumes ONTAP システム間で移転できます。</block>
   <block id="c8019f1ffa1872e83dcb3addf5f94fa6" category="paragraph">たとえば、既存のライセンスが有効なシステムを削除してから、別の VPC / VNet またはクラウドプロバイダ内の新しい BYOL システムでライセンスを使用できます。どのクラウドプロバイダでも使用できるのは、クラウドに依存しないシリアル番号 _ のみです。クラウドに依存しないシリアル番号は、 _908xxxx_prefix で始まります。</block>
   <block id="577b267f9988dbdc61738174a3158ab9" category="paragraph">BYOL ライセンスは、お客様の会社およびネットアップサポートサイトの特定のクレデンシャルセットに関連付けられていることに注意してください。</block>
-  <block id="d504081496d5e4d40b68deb3bdecb702" category="list-text">に移動します<block ref="4fe56d3738a5f19775e6284cd4bf00e6" category="inline-link-rx"></block>。</block>
   <block id="2eebda09e0c481bdce22608fab6de887" category="section-title">同じ作業環境で複数のコネクタを使用する</block>
   <block id="9702ba80b5da1f1cf46d6eb4c043a20a" category="paragraph">ディザスタリカバリ目的で、複数のコネクタを備えた作業環境を同時に管理できます。一方のコネクタが停止した場合は、もう一方のコネクタに切り替えて、作業環境をただちに管理できます。</block>
   <block id="1dd9ce9d137f2fa61020574f1082c6d0" category="paragraph">この構成をセットアップするには：</block>
@@ -9346,10 +9336,6 @@
   <block id="967a3c762720190aa22ef075598669fd" category="list-text">AWS 管理アカウントにログインします。</block>
   <block id="e0247932508d30b4050e56447528cdb6" category="paragraph">Cloud Analyzer が AWS アカウントデータの処理を開始します。複数のアカウントがある場合、 Cloud Analyzer は管理アカウントのすべてのリンクされたアカウントの読み取り専用機能から開始します。これらのアカウントの節約の可能性に関する詳細を確認するには、これらのアカウントを接続する必要があります。このプロセスの詳細については、以下のセクションを参照してください。</block>
   <block id="1fdce7e9a0a4116c0c33b13e949d0e94" category="list-text">[* Compute] をクリックし、 AWS 管理アカウントに接続します。</block>
-  <block id="c85fea08324529bfd220eb56f8f93c85" category="inline-link">AWS で Cloud Volumes ONTAP 9.9.0 のサポートされる構成</block>
-  <block id="cb33d206376b1d0276f010de8153d474" category="paragraph"><block ref="cb33d206376b1d0276f010de8153d474" category="inline-link-rx"></block></block>
-  <block id="6e705b4d72c2cd977e440a0c2f05ffae" category="inline-link">AWS での Cloud Volumes ONTAP 9.9.0 のストレージの制限</block>
-  <block id="767c675b124b14fec85c6aec33bc52d4" category="paragraph"><block ref="767c675b124b14fec85c6aec33bc52d4" category="inline-link-rx"></block></block>
   <block id="581bdd28d4bb550c63e17b66214a79cd" category="list-text">EBS ディスクタイプの違いは次のとおりです。EBS ディスクのユースケースの詳細については、を参照してください<block ref="5f00b7f6405ad1bb7d391aa3c3ef6190" category="inline-link-rx"></block>。</block>
   <block id="c0fab06b29c5ec6deb5e6576db484b1d" category="list-text">_General Purpose SSD （ GP3 ） _ ディスクは、幅広いワークロードに対してコストとパフォーマンスのバランスを取る最も低コストの SSD です。パフォーマンスは、 IOPS とスループットを基準に定義されます。GP3 ディスクは Cloud Volumes ONTAP 9.7 以降でサポートされています。</block>
   <block id="132b864ab2e72e06afdebdb7f860125d" category="inline-link">GP3 ディスクとそのパフォーマンスについては、こちらをご覧ください</block>
@@ -9365,10 +9351,6 @@
   <block id="bee41d170929fb7fc4e79dde87e71a86" category="inline-xref">上記と同じ権限</block>
   <block id="babe42abe7decc70b98a517bfcc466aa" category="list-text">提供するロールを選択します <block ref="bcb4c6e7b3e58289927e5f4cf9be10af" category="inline-xref-macro-rx"></block>。</block>
   <block id="18e32f4b46f7365779a3d1fe9eb08721" category="paragraph">同期関係を設定するときに、そのバケットを同期関係のソースまたはターゲットとして選択できるようになりました。</block>
-  <block id="61d9c831680408052d087967befa49c3" category="inline-link">Azure で Cloud Volumes ONTAP 9.9.0 がサポートされる構成</block>
-  <block id="f7e2668c106ab46f2fecb32009532dbe" category="paragraph"><block ref="f7e2668c106ab46f2fecb32009532dbe" category="inline-link-rx"></block></block>
-  <block id="2ef3c590f1a4e907f37fba123a3cbd00" category="inline-link">Azure での Cloud Volumes ONTAP 9.9.0 のストレージの制限</block>
-  <block id="fb3038aa93f9fe4f5052555ac7e9a7e9" category="paragraph"><block ref="fb3038aa93f9fe4f5052555ac7e9a7e9" category="inline-link-rx"></block></block>
   <block id="4c46e591d74ed9999f89cf065ad61be4" category="section-title">他の Google Cloud プロジェクトのバケットに必要な権限</block>
   <block id="8bee474fd085c11334ab13b9c1a78d9e" category="inline-link-macro">サービスアカウントの設定方法について説明します</block>
   <block id="b2b489d6537d9591f66dbd8219ae5258" category="paragraph">同期関係を設定する際、データブローカーのサービスアカウントに必要な権限を指定している場合は、異なるプロジェクトの Google Cloud バケットから選択できます。 <block ref="0c333069cdf73f90f94e51dd1c99831f" category="inline-link-macro-rx"></block>。</block>
@@ -9579,7 +9561,6 @@
   <block id="1acde187c6f2fd217dac5eaa58444173" category="paragraph">定義済みファイアウォールのインバウンドルールのソースは 0.0.0.0/0 です。</block>
   <block id="1147a9bceab35dc98b14493a462a8f27" category="inline-link">Google Cloud ドキュメント：ロードバランサファイアウォールルール</block>
   <block id="4922e003940e56d05842b6e74ae211fb" category="paragraph">独自のファイアウォールを作成するには、 Cloud Volumes ONTAP と通信する必要のあるすべてのネットワークを追加するとともに、内部の Google ロードバランサが正常に機能するように両方のアドレス範囲を追加する必要があります。これらのアドレスは 130.211.0.0/22 および 35.191.0.0/16 です。詳細については、を参照してください<block ref="ec02114a2c39456710780c7d788390e7" category="inline-link-rx"></block>。</block>
-  <block id="accabbfeddbf7da815a21aa7058102e7" category="paragraph">たとえば、現在 Cloud Volumes ONTAP 9.7 を実行していて、 9.9..0 にアップグレードする場合は、まず 9.8 にアップグレードする必要があります。そこから 9.9..0 にアップグレードできます。</block>
   <block id="cf6c884ca115459d67ab800b882dc138" category="paragraph">ボリュームをスキャンする前に、 Cloud Manager でシステムを作業環境として追加する必要があります。</block>
   <block id="3eb1ab32348c4996e174217eca4213ed" category="section-title">Cloud Compliance を有効にし、スキャンするボリュームを選択します</block>
   <block id="c4908dd4f7414d9ecb67b5b079758f71" category="paragraph">Cloud Compliance でオンプレミスの ONTAP システム上のボリュームを直接スキャンしない場合は、 2021 年 1 月にリリースされる新しいベータ機能によって、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルに対してコンプライアンススキャンを実行できます。を使用してバックアップファイルを既に作成している場合は <block ref="b8d0acde88fc9a9f551a2fd4967eefb6" category="inline-link-macro-rx"></block>この新機能を使用して、バックアップファイルに対してコンプライアンススキャンを実行できます。</block>
@@ -9700,10 +9681,6 @@
   <block id="5cb771346edfe133295481c131d5857b" category="list-text"><block ref="5cb771346edfe133295481c131d5857b" category="inline-link-macro-rx"></block></block>
   <block id="499e7ab4d9cc066635979563a422c367" category="inline-link-macro">ONTAP クラスタから Amazon S3 または Azure へのデータバックアップ BLOB ストレージ</block>
   <block id="a70a84f1a14868e43b86ed8005f0e0ac" category="list-text"><block ref="a70a84f1a14868e43b86ed8005f0e0ac" category="inline-link-macro-rx"></block></block>
-  <block id="304c9227acc8b6f799190465f0558918" category="inline-link">GCP の Cloud Volumes ONTAP 9.9.0 でサポートされている構成</block>
-  <block id="9ea87baa89c2c8e8606725e3c7e5ff0c" category="paragraph"><block ref="9ea87baa89c2c8e8606725e3c7e5ff0c" category="inline-link-rx"></block></block>
-  <block id="f154557322ff33258d7ae8148758f47a" category="inline-link">GCP の Cloud Volumes ONTAP 9.9.0 でのストレージの制限</block>
-  <block id="131f23c8bc47fc8f2db8fd5d3043b8f4" category="paragraph"><block ref="131f23c8bc47fc8f2db8fd5d3043b8f4" category="inline-link-rx"></block></block>
   <block id="9dc8ff50dbb94a0b64f7a0dca97de54b" category="list-text">AWS では、パフォーマンス階層には汎用 SSD （ GP3 または gp2 ）またはプロビジョニングされる IOPS SSD （ io1 ）を使用できます。</block>
   <block id="686a54b28a444f32d618483c17cd6424" category="list-text">Cloud Manager コンソールの右上にある * Settings * アイコンをクリックし、 * Connector Settings * を選択します。</block>
   <block id="804f26a0bc44f8e04d1fb697d33eb4d8" category="list-text">容量 * で、アグリゲート容量しきい値 - データ階層化の空きスペース率 * をクリックします。</block>
@@ -10403,14 +10380,39 @@
   <block id="a8f22b136b25f48d7297a2519c6a7ccd" category="list-text">Account Admin 以外のアカウントを選択した場合は、そのユーザに関連付けるワークスペースを 1 つ以上選択します。</block>
   <block id="4d000cb814de0483d25aa949e7104787" category="paragraph">9.8 リリース以降では、 Cloud Volumes ONTAP でサポートされているほぼすべての EC2 インスタンスタイプを使用する場合、 HA ペアでの高速書き込みがサポートされます。ただし、 m5.xlarge と r5.xlarge は除きます。</block>
   <block id="d483e21ce7d44495d45b5b10d0a92f33" category="inline-link">Cloud Volume が提供する Amazon EC2 インスタンスの詳細については、こちらをご覧ください ONTAP はをサポートします</block>
-  <block id="5a8ca1600a250f9c572773d2290171f7" category="paragraph"><block ref="a8c5ffe636cedb02e4d2a49934987fb5" category="inline-link-rx"></block>。</block>
   <block id="aa1cf82517b500e91f431051f2593e87" category="list-text">E8s_v3</block>
   <block id="7c829b75aa102b314aca7bdb8299dc52" category="inline-link">Cloud Volume が提供する Azure VM の種類について詳しくは、こちらをご覧ください ONTAP はをサポートします</block>
-  <block id="23e640737edc54deed72e9acce9c6cae" category="paragraph"><block ref="29087e6932b0be3e57066b8f37766dff" category="inline-link-rx"></block>。</block>
   <block id="e4e959caff2c6b1635b2a3bea64b35f7" category="inline-link">Cloud の Google Cloud マシンタイプの詳細をご覧ください Volume ONTAP はをサポートします</block>
-  <block id="257ef6894b3ea4c805b12a747cf8d883" category="paragraph"><block ref="fe8b4988f56157b3e4e4e9d09a8c8b6c" category="inline-link-rx"></block>。</block>
   <block id="76b0202d317f0f8ecd9c65d6c4bd6117" category="paragraph">1 つのディレクトリに 60 万以上のファイルが含まれている場合は、データブローカーでペイロードを処理するように設定できます。 mailto ： ng-cloudsync-support@netapp.com [ お問い合わせください ]データブローカーマシンにメモリを追加する必要がある場合があります。</block>
   <block id="5272c1335a923889fee61138f9c644e0" category="paragraph">マウントポイント内のファイルの総数に制限はありません。上位ディレクトリやサブディレクトリの階層のレベルに関係なく、 600 、 000 以上のファイルを含む大規模なディレクトリには、追加のメモリが必要です。</block>
   <block id="90f3ffbb8ea1212084359b98a039879e" category="paragraph"><block ref="e48c6f2c2e391bd832a45f7246041514" category="inline-link-macro-rx"></block>。</block>
   <block id="b1f2c92ef58290b56648f1660975efba" category="list-text">Amazon リレーショナルデータベースサービス（ Amazon RDS ）</block>
+  <block id="29fe57d1ffcf06fdbf216dca2a42e789" category="inline-link">AWS の Cloud Volumes ONTAP 9.9.1 でサポートされている構成</block>
+  <block id="ed3040eed752313faba7a933b38d4862" category="paragraph"><block ref="ed3040eed752313faba7a933b38d4862" category="inline-link-rx"></block></block>
+  <block id="7c70b0b4175c1ba0d3c6a86c9e730912" category="inline-link">AWS での Cloud Volumes ONTAP 9.9.1 のストレージの制限</block>
+  <block id="eb36d5d31a48ab6c39ee303a336564b4" category="paragraph"><block ref="eb36d5d31a48ab6c39ee303a336564b4" category="inline-link-rx"></block></block>
+  <block id="f4408df70ce44fff953e3373d2fa82af" category="list-text"><block ref="f4408df70ce44fff953e3373d2fa82af" category="inline-link-rx"></block></block>
+  <block id="2fc65fd96626d924bd0f2d1ad824f24f" category="list-text"><block ref="2fc65fd96626d924bd0f2d1ad824f24f" category="inline-link-rx"></block></block>
+  <block id="c2b9cacaf0e99946f78aeccd62b6ff62" category="list-text"><block ref="c2b9cacaf0e99946f78aeccd62b6ff62" category="inline-link-rx"></block></block>
+  <block id="7d6b30f94318d0374eba04150a6f8a50" category="list-text"><block ref="7d6b30f94318d0374eba04150a6f8a50" category="inline-link-rx"></block></block>
+  <block id="65b5a9bd8c8f8c26af773f2fbe6eadfe" category="inline-link">Azure で Cloud Volumes ONTAP 9.9.1 がサポートされる構成</block>
+  <block id="04e166cfa15ae550bf21bce853cc027d" category="paragraph"><block ref="04e166cfa15ae550bf21bce853cc027d" category="inline-link-rx"></block></block>
+  <block id="9b79d25ed5d8acca9d31ff501d4bdee2" category="inline-link">Azure での Cloud Volumes ONTAP 9.9.1 のストレージの制限</block>
+  <block id="ea09340e056f43df30723d3bbe980ff3" category="paragraph"><block ref="ea09340e056f43df30723d3bbe980ff3" category="inline-link-rx"></block></block>
+  <block id="95b5ab3b0a12450500539edf7bfcee71" category="section-title">Cloud Manager 3.9.6 の更新（ 2021 年 24 月 5 日）</block>
+  <block id="24d7bd772107e0ff83078649df776e28" category="paragraph">Cloud Manager が更新され、 Cloud Volumes ONTAP の最新バージョンが追加されました。</block>
+  <block id="910d8975bd41857a0103e9a8657ea7d9" category="section-title">Cloud Volumes ONTAP 9.9.1</block>
+  <block id="c863fcd8d7f3278495a83acff7ce4871" category="paragraph">Cloud Volumes ONTAP 9.9.9..1. を導入および管理できるようになりました。</block>
+  <block id="10b67a1b82d3f6e2ab2d82a776daedde" category="paragraph"><block ref="517e8907f1af218677bb25faa7d97ce7" category="inline-link-rx"></block>。</block>
+  <block id="b6babd14cd8115480bfa5c3b67f7fbb8" category="inline-link">Cloud Volume の「アップグレードに関する注意事項」ページを参照してください ターゲットバージョンの『 ONTAP リリースノート』</block>
+  <block id="b24ac1c29984d90b5f11f9ae5ee84426" category="paragraph"><block ref="a1a4f0ffb9725d9b7354e78645a33775" category="inline-link-rx"></block>。</block>
+  <block id="a4be1bdf21399641dceafb8e6eb77b17" category="list-text"><block ref="a4be1bdf21399641dceafb8e6eb77b17" category="inline-link-rx"></block></block>
+  <block id="e2c99f7e669dc1a7df6d2999894c65f8" category="paragraph"><block ref="9f32536200cf031495d17b982213e81d" category="inline-link-rx"></block>。</block>
+  <block id="005e19ef26a48bec9146251fe36501e9" category="paragraph"><block ref="be1d9dd8168b5af509ae6f65fd088c9e" category="inline-link-rx"></block>。</block>
+  <block id="c65895ec1dccd1087434542bc4e19cf0" category="paragraph"><block ref="ea3c9b9296c72be2bf5a4085912b3762" category="inline-link-rx"></block>。</block>
+  <block id="5909cf23a76db75e2e44bb37b62f39e1" category="inline-link">GCP の Cloud Volumes ONTAP 9.9.1 でサポートされている構成</block>
+  <block id="684dbb212b68cae83c3d9e01f5bd2fad" category="paragraph"><block ref="684dbb212b68cae83c3d9e01f5bd2fad" category="inline-link-rx"></block></block>
+  <block id="f408e682b68e18e390a7d513950616ba" category="inline-link">GCP での Cloud Volumes ONTAP 9.9.1 のストレージの制限</block>
+  <block id="8d0f9f22eb5e217fd7664df5a94ab382" category="paragraph"><block ref="8d0f9f22eb5e217fd7664df5a94ab382" category="inline-link-rx"></block></block>
+  <block id="333c5a912fe514f5bb807e9ee5bff804" category="list-text">に移動します<block ref="e77fea77cb7d6bfa9e196ee4ab53324b" category="inline-link-rx"></block>。</block>
 </blocks>

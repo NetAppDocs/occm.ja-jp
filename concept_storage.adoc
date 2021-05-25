@@ -53,8 +53,8 @@ NOTE: スループット最適化 HDD （ st1 ）を使用している場合、�
 
 * http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS のドキュメント： EBS ボリュームのタイプ"^]
 * link:task_planning_your_config.html["でディスクタイプとディスクサイズを選択する方法について説明します AWS のシステムを管理できます"]
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_aws_990.html["AWS での Cloud Volumes ONTAP のストレージの制限を確認します"^]
-* http://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_990.html["AWS で Cloud Volumes ONTAP がサポートされている構成を確認します"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_aws_991.html["AWS での Cloud Volumes ONTAP のストレージの制限を確認します"^]
+* http://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_991.html["AWS で Cloud Volumes ONTAP がサポートされている構成を確認します"^]
 
 
 
@@ -85,7 +85,7 @@ HA ペア:: HA ペアでは、最大ディスクサイズが 8TB の Premium ペ
 
 * https://azure.microsoft.com/documentation/articles/storage-introduction/["Microsoft Azure のドキュメント：「 Introduction to Microsoft Azure Storage"^]
 * link:task_planning_your_config_azure.html["でディスクタイプとディスクサイズを選択する方法について説明します Azure の既存のシステムを"]
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_azure_990.html["Azure での Cloud Volumes ONTAP のストレージの制限を確認します"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_azure_991.html["Azure での Cloud Volumes ONTAP のストレージの制限を確認します"^]
 
 
 
@@ -99,7 +99,7 @@ GCP では、アグリゲートに同じサイズのディスクを 6 本まで�
 * 関連リンク *
 
 * https://cloud.google.com/compute/docs/disks/["Google Cloud Platform のドキュメント：「ストレージオプション"^]
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_gcp_990.html["GCP で Cloud Volumes ONTAP のストレージの制限を確認する"^]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_gcp_991.html["GCP で Cloud Volumes ONTAP のストレージの制限を確認する"^]
 
 
 
