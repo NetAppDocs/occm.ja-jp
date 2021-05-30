@@ -135,7 +135,7 @@ Cloud Manager Azure ポリシーには、 Cloud Manager が Azure で Cloud Volu
 | "microsoft.Resources/Deployments/operations/read" 、 "microsoft.Resources/Deployments/read" 、 "microsoft.Resources/resources/read" 、 "microsoft.resources/resources/operationresults/read" 、 "microsoft.resources/Subscriptions /resourceGroups/delete" 、 "microsoft.resources/Subscriptions /resources/groups/resources/resources/reads/resources/resources/resources/resources/resources/resources/resources/reading" 、 ",",",","resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/groups/ | Cloud Volumes ONTAP のリソースグループを作成および管理します。 
 
 
-| 「 microsoft.compute/snapshots/write 」、「 microsoft.compute/snapshots/read 」、「 microsoft.compute/disks/beginingAccess/action 」 | Azure マネージドスナップショットを作成および管理します。 
+| 「 Microsoft.Compute/snapshots/write" 」、「 Microsoft.Compute/snapshots/read" 」、「 Microsoft.Compute/snapshots/delete" 」、「 Microsoft.Compute/disks/beginGetAccess/action" 」、 | Azure マネージドスナップショットを作成および管理します。 
 
 
 | "microsoft.compute/availabilitySets/write", "microsoft.compute/availabilitySets/read", | Cloud Volumes ONTAP の可用性セットを作成および管理します。 
@@ -211,7 +211,7 @@ GCP の Cloud Manager ポリシーには、 Cloud Volumes ONTAP の導入と管�
 | - compute.instances.setLabels | ラベルを追加します。 
 
 
-| - compute.instances.setMachineType | Cloud Volumes ONTAP のマシンタイプを変更します。 
+| - compute.instances.setMachineType - compute.instances.setMinCpuPlatform | Cloud Volumes ONTAP のマシンタイプを変更します。 
 
 
 | - compute.instances.setMetadata | をクリックしてください。 

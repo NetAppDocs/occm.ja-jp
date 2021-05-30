@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_managing_licenses.html 
 keywords: license, licensing, install, updating license, system license, add system license, adding a system license, byol license, add byol license, update byol license, nlf, license generator, backup license, add backup license, update backup license 
-summary: Cloud Volumes ONTAP BYOL システムライセンスを追加して、容量を追加し、既存のシステムライセンスを更新し、クラウドバックアップの BYOL ライセンスを管理します。 
+summary: デジタルウォレットページでは、 Cloud Volumes ONTAP とクラウドバックアップのライセンスを 1 箇所から管理できます。新しいライセンスを追加したり、既存のライセンスを更新したりできます。 
 ---
-= Cloud Volumes ONTAP の BYOL ライセンスの管理
+= ライセンスを管理します
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -13,22 +13,30 @@ summary: Cloud Volumes ONTAP BYOL システムライセンスを追加して、�
 
 
 [role="lead"]
-Cloud Volumes ONTAP BYOL システムライセンスを追加して、容量を追加し、既存のシステムライセンスを更新し、クラウドバックアップの BYOL ライセンスを管理します。
+デジタルウォレットページでは、 Cloud Volumes ONTAP とクラウドバックアップのライセンスを 1 箇所から管理できます。新しいライセンスを追加したり、既存のライセンスを更新したりできます。
 
 
 
-== システムライセンスの管理
+== Cloud Volumes ONTAP ライセンスを管理します
 
-Cloud Volumes ONTAP BYOL システムでは、複数のライセンスを購入して、 368 TB を超える容量を割り当てることができます。たとえば、 2 つのライセンスを購入して、 Cloud Volumes ONTAP に最大 736TB の容量を割り当てることができます。また、 4 つのライセンスを購入して、最大 1.4 PB までライセンスを取得することもできます。
+Cloud Volumes ONTAP の次のタイプのライセンスを管理できます。
 
-シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。
-
-
-NOTE: 購入した一部のオンプレミス ONTAP ストレージシステムには、 Cloud Volumes ONTAP のライセンスが無償で付属している場合があります。ライセンスを使用して新しい Cloud Volumes ONTAP システムを作成するか、または既存の Cloud Volumes ONTAP システムにライセンスを適用して容量を拡張できます。 link:task_managing_ontap.html#viewing-unused-cloud-volumes-ontap-licenses["使用できるライセンスがあるかどうかを確認します"^]。
-
+* お客様所有のライセンスを使用（ BYOL ）：ネットアップから購入するライセンスです。
+* Marketplace サブスクリプション。クラウドプロバイダのマーケットプレイスから 1 時間ごとまたは 1 年ごとのサブスクリプションです。
+* eval ライセンス。ライセンスを評価するためのライセンスで、あとで BYOL ライセンスモデルに変換できます。
 
 
-=== システムライセンスファイルを取得しています
+link:concept_licensing.html["Cloud Volumes ONTAP ライセンスの詳細については、こちらをご覧ください"]。
+
+
+
+=== BYOL システムのライセンスを管理します
+
+Cloud Volumes ONTAP システムごとにシステムライセンスが必要です。
+
+
+
+==== システムライセンスファイルを取得します
 
 ほとんどの場合、 Cloud Manager はネットアップサポートサイトのアカウントを使用してライセンスファイルを自動的に取得できます。ただし、アップロードできない場合は、ライセンスファイルを手動でアップロードする必要があります。ライセンスファイルがない場合は、 netapp.com から入手できます。
 
@@ -46,42 +54,17 @@ image:screenshot_license_generator.gif["スクリーンショット： NetApp Li
 
 
 
-=== 新しいシステムライセンスの追加
-
-いつでも新しい BYOL システムライセンスを追加して、 Cloud Volumes ONTAP BYOL システムに追加の 368 TB の容量を割り当てられます。
-
-.手順
-. Cloud Manager で、 Cloud Volumes ONTAP BYOL 作業環境を開きます。
-. メニューアイコンをクリックし、 * ライセンス * をクリックします。
-+
-image:screenshot_menu_license.gif["作業環境のメニューアイコンを示すスクリーンショット。ライセンスオプションを使用すると、ライセンスファイルをアップロードできます。"]
-
-. 「 * CVO System License の追加 * 」をクリックします。
-+
-image:screenshot_system_license.gif["Cloud Volumes ONTAP システムライセンスのスクリーンショット。システムライセンスを追加してシステムライセンスを更新するボタンが表示されます。"]
-
-. シリアル番号を入力するか、ライセンスファイルをアップロードするかを選択します。
-. [ ライセンスの追加 ] をクリックします。
-
-
-Cloud Manager は、 Cloud Volumes ONTAP システムに新しいライセンスファイルをインストールします。
-
-
-
-=== システムライセンスの更新
+==== システムライセンスを更新する
 
 ネットアップの担当者に連絡して BYOL サブスクリプションを更新すると、 Cloud Manager は自動的にネットアップから新しいライセンスを取得し、 Cloud Volumes ONTAP システムにインストールします。
 
 Cloud Manager がセキュアなインターネット接続経由でライセンスファイルにアクセスできない場合は、ユーザがファイルを取得して、 Cloud Manager に手動でアップロードできます。
 
 .手順
-. Cloud Manager で、 Cloud Volumes ONTAP BYOL 作業環境を開きます。
-. メニューアイコンをクリックし、 * ライセンス * をクリックします。
-. 「 * CVO System License の更新 * 」をクリックします。
-+
-image:screenshot_system_license.gif["Cloud Volumes ONTAP システムライセンスのスクリーンショット。システムライセンスを追加してシステムライセンスを更新するボタンが表示されます。"]
-
-. [ ファイルのアップロード ] をクリックし、ライセンスファイルを選択します。
+. [ * 設定 ] > [ デジタルウォレット * ] をクリックします。
+. BYOL * タブで、 Cloud Volumes ONTAP システムの詳細を展開します。
+. システムライセンスの横にあるアクションメニューをクリックし、 * ライセンスの更新 * を選択します。
+. ライセンスファイル（ HA ペアがある場合はファイル）をアップロードします。
 . ［ * ライセンスの更新 * ］ をクリックします。
 
 
@@ -89,21 +72,103 @@ Cloud Manager によって、 Cloud Volumes ONTAP システムのライセンス
 
 
 
-== バックアップ BYOL ライセンスを追加および更新する
+=== BYOL の追加容量ライセンスを管理します
 
-BYOL ライセンスを追加または更新するには、 BYOL Licenses ページを使用します。
+Cloud Volumes ONTAP BYOL システムの追加容量ライセンスを購入すると、 BYOL システムライセンスで提供される 368 TB を超える容量を割り当てることができます。たとえば、 1 つのライセンス容量を追加購入して、最大 736TB の容量を Cloud Volumes ONTAP に割り当てることができます。また、容量ライセンスを 3 つ追加購入すれば、最大 1.4 PB まで拡張できます。
+
+シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。
+
+
+
+==== 容量ライセンスを追加
+
+Cloud Manager の右下にあるチャットアイコンからお問い合わせいただき、容量ライセンスを追加購入してください。購入したライセンスは、 Cloud Volumes ONTAP システムに適用できます。
 
 .手順
-. Cloud Manager で、 Cloud Volumes ONTAP BYOL 作業環境を開きます。
-. メニューアイコンをクリックし、 * ライセンス * をクリックします。
-+
-image:screenshot_menu_license.gif["作業環境のメニューアイコンを示すスクリーンショット。ライセンスオプションを使用すると、ライセンスファイルをアップロードできます。"]
+. [ * 設定 ] > [ デジタルウォレット * ] をクリックします。
+. BYOL * タブで、 Cloud Volumes ONTAP システムの詳細を展開します。
+. [Add Capacity License*] をクリックします。
+. シリアル番号を入力するか、ライセンスファイル（ HA ペアを使用している場合はファイル）をアップロードします。
+. [Add Capacity License*] をクリックします。
 
+
+
+
+==== 容量ライセンスを更新
+
+容量を追加するライセンスを延長した場合は、 Cloud Manager でライセンスを更新する必要があります。
+
+.手順
+. [ * 設定 ] > [ デジタルウォレット * ] をクリックします。
+. BYOL * タブで、 Cloud Volumes ONTAP システムの詳細を展開します。
+. 容量ライセンスの横にあるアクションメニューをクリックし、 * ライセンスの更新 * を選択します。
+. ライセンスファイル（ HA ペアがある場合はファイル）をアップロードします。
+. ［ * ライセンスの更新 * ］ をクリックします。
+
+
+
+
+==== 容量ライセンスを削除します
+
+使用されなくなったために期限切れになった容量ライセンスは、いつでも削除できます。
+
+.手順
+. [ * 設定 ] > [ デジタルウォレット * ] をクリックします。
+. BYOL * タブで、 Cloud Volumes ONTAP システムの詳細を展開します。
+. 容量ライセンスの横にあるアクションメニューをクリックし、 * ライセンスの削除 * を選択します。
+. [ 削除（ Remove ） ] をクリックします。
+
+
+
+
+=== 評価ライセンスを BYOL に変換します
+
+評価用ライセンスは 30 日間有効です。インプレースアップグレードの評価ライセンスの上に新しい BYOL ライセンスを適用できます（シングルノードシステムの再起動が必要です）。
+
+link:concept_evaluating.html["評価版ライセンスの詳細については、こちらをご覧ください"]。
+
+.手順
+. [ * 設定 ] > [ デジタルウォレット * ] をクリックします。
+. 「 * 評価 * 」をクリックします。
+. 表で、 Cloud Volumes ONTAP システムの *Convert to BYOL License* をクリックします。
+. シリアル番号を入力するか、ライセンスファイルをアップロードしてください。
+. [ ライセンスの変換 ] をクリックします。
+
+
+
+
+== Cloud Backup ライセンスを管理します
+
+Backup ライセンスでは、 Cloud Backup を一定期間および最大容量のバックアップスペースとして使用できます。Backup BYOL ライセンス環境は、 Cloud Central アカウントに関連付けられたすべての Cloud Volumes ONTAP およびオンプレミスシステムをライセンスします。
+
+
+
+=== Cloud Backup ライセンスファイルを取得します
+
+Cloud Manager にライセンスを追加する際には、シリアル番号を入力するか、 NLF ライセンスファイルをアップロードできます。
+
+.手順
+. にアクセスします https://mysupport.netapp.com["ネットアップサポートサイト"^] [ システム ] 、 [ ソフトウェアライセンス ] の順にクリックします。
+. ライセンスファイルを取得するには、 Cloud Backup のシリアル番号と Cloud Manager System ID （サポートサイトではテナント ID と呼ばれます）を入力します。
++
+link:task_finding_system_id.html["システム ID の確認方法について説明します"]。
+
+
+
+
+
+=== Cloud Backup ライセンスを追加または更新する
+
+Cloud Backup Service をアクティブにするために、 Cloud Backup ライセンスを Cloud Manager に追加または更新します。
+
+link:concept_backup_to_cloud.html#licensing["Cloud Backup のライセンスに関する詳細は、こちらをご覧ください"]。
+
+.手順
+. [ * 設定 ] > [ デジタルウォレット * ] をクリックします。
+. Cloud Backup をクリックします。
+. 既存のライセンスがない場合は、 * バックアップライセンスの追加 * をクリックします。
 . 新しいライセンスを追加するか、既存のライセンスを更新するかに応じて、 * バックアップライセンスの追加 * または * バックアップライセンスの更新 * をクリックします。
-+
-image:screenshot_backup_byol_license.png["ボタンを含む BYOL ライセンスページを示すスクリーンショット を使用してバックアップライセンスを追加および更新してください"]
-
-. ライセンス情報を入力し、 * ライセンスの追加 * をクリックします。
+. ライセンス情報を入力し、 * バックアップライセンスの追加 * または * バックアップライセンスの更新 * をクリックします。
 +
 ** シリアル番号がある場合は、「 * バックアップを使用したシリアル番号の入力 * 」オプションを選択して、シリアル番号を入力します。
 ** バックアップライセンスファイルがある場合は、 * バックアップライセンスのアップロード * オプションを選択し、プロンプトに従ってファイルを接続します。

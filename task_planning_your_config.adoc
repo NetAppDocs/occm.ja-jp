@@ -27,7 +27,7 @@ Cloud Volumes ONTAP はほとんどの AWS リージョンでサポートされ�
 
 == ライセンスタイプの選択
 
-Cloud Volumes ONTAP には、従量課金制とお客様所有のライセンスを使用（ BYOL ）の 2 種類の料金プランがあります。従量課金制の場合は、 Explore 、 Standard 、 Premium の 3 つのライセンスから選択できます。ライセンスごとに容量とコンピューティングのオプションが異なります。
+Cloud Volumes ONTAP には、いくつかのライセンスオプションがあります。これらのライセンスオプションを使用すると、それぞれのニーズに合った構成を選択できます。
 
 https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_991.html["AWS の Cloud Volumes ONTAP 9.9.1 でサポートされている構成"^]
 

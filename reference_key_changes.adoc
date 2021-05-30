@@ -104,6 +104,12 @@ Cloud Manager で新しい機能や拡張機能を導入する際に、クラウ
 
 === Azure
 
+* 3.9.7 リリース以降では、 Cloud Volumes ONTAP システムの導入時およびその電源をオフにするたびに作成されたルートディスクとブートディスクの古いクラウド Snapshot を Cloud Manager で削除できるようになりました。Connector で Azure スナップショットを削除するには、新しい権限が必要です。
++
+[source, json]
+----
+"Microsoft.Compute/snapshots/delete"
+----
 * Azure の導入でエラーが発生しないように、 Azure の Cloud Manager ポリシーに次の権限が含まれていることを確認してください。
 +
 [source, json]
@@ -136,6 +142,16 @@ Cloud Manager で新しい機能や拡張機能を導入する際に、クラウ
 
 === GCP
 
+
+
+==== マシンタイプを変更するための新しい権限
+
+最近、マシンタイプファミリ間で切り替えを行う場合、 Cloud Volumes ONTAP マシンタイプを変更するには、次の権限が必要であることが判明しました。
+
+[source, yaml]
+----
+- compute.instances.setMinCpuPlatform
+----
 
 
 ==== HA ペア用の新しい権限

@@ -115,9 +115,9 @@ image:screenshot_settings_icon.gif["Cloud Manager コンソールの右上にあ
 . Add Credentials * をクリックし、 * AWS * を選択します。
 . 信頼できる IAM ロールの AWS キーまたは ARN を指定します。
 . ポリシーの要件が満たされていることを確認し、 [* Continue （続行） ] をクリックします。
-. クレデンシャルに関連付ける従量課金制サブスクリプションを選択するか、まだサブスクリプションを追加していない場合は「 * 」をクリックします。
+. 資格情報に関連付けるサブスクリプションを選択するか、まだサブスクリプションを追加していない場合は「 * 」をクリックします。
 +
-従量課金制の Cloud Volumes ONTAP システムを作成するには、 AWS クレデンシャルが AWS Marketplace からの Cloud Volumes ONTAP へのサブスクリプションに関連付けられている必要があります。
+Cloud Volumes ONTAP の料金を 1 時間単位で支払う（ PAYGO ）場合や 1 年単位で支払う場合は、 AWS のクレデンシャルを AWS Marketplace から Cloud Volumes ONTAP へのサブスクリプションに関連付ける必要があります。
 
 . [ 追加（ Add ） ] をクリックします。
 
@@ -130,7 +130,7 @@ image:screenshot_accounts_switch_aws.gif["[ 詳細と資格情報 ] ページで
 
 == AWS サブスクリプションをクレデンシャルに関連付ける
 
-Cloud Manager に AWS のクレデンシャルを追加したら、 AWS Marketplace のサブスクリプションをそれらのクレデンシャルに関連付けることができます。サブスクリプションを使用すると、従量課金制の Cloud Volumes ONTAP システムを作成し、他のネットアップクラウドサービスを使用できます。
+Cloud Manager に AWS のクレデンシャルを追加したら、 AWS Marketplace のサブスクリプションをそれらのクレデンシャルに関連付けることができます。サブスクリプションを使用すると、 Cloud Volumes ONTAP の料金を時間単位で支払う（ PAYGO ）と年単位の契約を使用する、および他の NetApp クラウドサービスを使用することができます。
 
 Cloud Manager にクレデンシャルを追加したあとに、 AWS Marketplace サブスクリプションを関連付けるシナリオは 2 つあります。
 

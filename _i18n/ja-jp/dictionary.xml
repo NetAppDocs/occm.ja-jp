@@ -1547,15 +1547,12 @@
   <block id="5ae975b07208128d0fb591bfbef55e41" category="cell">テンプレートから Cloud Volumes ONTAP を導入します。</block>
   <block id="2da684dfb946dbe5450afe79ab13c0f9" category="cell">"microsoft.Resources/Deployments/operations/read" 、 "microsoft.Resources/Deployments/read" 、 "microsoft.Resources/resources/read" 、 "microsoft.resources/resources/operationresults/read" 、 "microsoft.resources/Subscriptions /resourceGroups/delete" 、 "microsoft.resources/Subscriptions /resources/groups/resources/resources/reads/resources/resources/resources/resources/resources/resources/resources/reading" 、 ",",",","resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/resources/groups/</block>
   <block id="85f4accd43cd18cdfebf3cca6d7dc630" category="cell">Cloud Volumes ONTAP のリソースグループを作成および管理します。</block>
-  <block id="6ac4aa36dde6193b4ac805a9e68a41af" category="cell">「 microsoft.compute/snapshots/write 」、「 microsoft.compute/snapshots/read 」、「 microsoft.compute/disks/beginingAccess/action 」</block>
   <block id="4538e7cd86845a2d80406e031773921a" category="cell">Azure マネージドスナップショットを作成および管理します。</block>
   <block id="ce74897c9aa2ec395a2c030d9bcfb687" category="cell">"microsoft.compute/availabilitySets/write", "microsoft.compute/availabilitySets/read",</block>
   <block id="d5200d7c256dcdc83f4eb6ac423b73a5" category="cell">Cloud Volumes ONTAP の可用性セットを作成および管理します。</block>
-  <block id="71ae351c8bd58d59647fcbc617345613" category="cell">"Microsoft.MarketplaceOrdering/Offered Types/publishers/capers/plans/agreements/read" 、 "Microsoft.MarketplaceOrdering / offerTypes/publishers/capes/plans/agreements/write"</block>
   <block id="e12a97500e0466292b969f7f36b34bd5" category="cell">Azure Marketplace からのプログラムによる展開を可能にします。</block>
   <block id="09e9256057a299133f2d9e827d5a19e8" category="cell">「 Microsoft.Network/loadBalancers/read" 」、「 Microsoft.Network/loadBalancers/write" 」、「 Microsoft.Network/loadBalancers/delete" 」、「 Microsoft.Network/loadBalancers/backendAddressPools/read" 」、「 Microsoft.Network/loadBalancers/backendAddressPools/join/action" 」、「 Microsoft.Network/loadBalancers/frontendIPConfigurations/read" 」、「 Microsoft.Network/loadBalancers/loadBalancingRules/read" 」、「 Microsoft.Network/loadBalancers/probes/read" 」、「 Microsoft.Network/loadBalancers/probes/join/action" 」</block>
   <block id="6a9efa369ca78d3ae74096e5a91079b5" category="cell">HA ペアの Azure ロードバランサを管理します。</block>
-  <block id="1790d1ad9352339b8aa6e8667fb01bc7" category="cell">"Microsoft 許可 / ロック /*"</block>
   <block id="e9e0d42f73ca40ed9eaea2770e09e4d7" category="cell">Azure ディスクのロックの管理を有効にします。</block>
   <block id="8c55404ad7d0a3544e084cb7c1c24b9b" category="cell">"Microsoft.Authorization/roleDefinites/write" 、 "Microsoft.Authorization/rolrolわり あて /write" 、 "Microsoft.Web/sites/*"</block>
   <block id="6dad07dbe3c6cb07c7f11f3ec1d17103" category="cell">HA ペアのフェイルオーバーを管理します。</block>
@@ -1593,7 +1590,6 @@
   <block id="2643145b6005230ba0e7706305be7c85" category="cell">インスタンスに削除保護を設定します。</block>
   <block id="f7ded0974e66418d48e74bf4e10985bf" category="cell">- compute.instances.setLabels</block>
   <block id="75aae79ccc1289dac9627c1fd619c700" category="cell">ラベルを追加します。</block>
-  <block id="1c0a67c42731a3f8f4087145620fa751" category="cell">- compute.instances.setMachineType</block>
   <block id="ff2e17343b0e539a1d1035f4c1747eb5" category="cell">Cloud Volumes ONTAP のマシンタイプを変更します。</block>
   <block id="bc3a7314be8156f42da35e526ea46b68" category="cell">- compute.instances.setMetadata</block>
   <block id="798cde79924dcfdf116337331de1abc6" category="cell">をクリックしてください。</block>
@@ -2030,7 +2026,6 @@
   <block id="2102f043ffc84a0c278268b39029b882" category="cell">これらは、 Cloud Volumes ONTAP クラスタ管理アカウントのクレデンシャルです。これらのクレデンシャルを使用して、 OnCommand System Manager またはその CLI を使用して Cloud Volumes ONTAP に接続できます。</block>
   <block id="6fc1b99ffd833c6c5570d86706e4dda3" category="cell">資格情報を編集します</block>
   <block id="1bbd9534623bc9b1cbc36988f76dfdcf" category="inline-link-macro">Cloud Manager に AWS クレデンシャルを追加する方法について説明します</block>
-  <block id="52557717593bbaf5177ef169e12a1229" category="cell">この Cloud Volumes ONTAP システムで使用する AWS クレデンシャルと Marketplace サブスクリプションを選択します。[ サブスクリプションの追加 ] をクリックして、選択した資格情報をサブスクリプションに関連付けます。従量課金制の Cloud Volumes ONTAP システムを作成するには、 AWS Marketplace から Cloud Volumes ONTAP へのサブスクリプションに関連付けられている AWS クレデンシャルを選択する必要があります。お客様が作成した Cloud Volumes ONTAP 9.6 以降の PAYGO システムと、有効にしたアドオン機能ごとに、このサブスクリプションから料金が請求されます。<block ref="e47f6e7d3af2f940a2cf2c935356d872" category="inline-link-macro-rx"></block>。</block>
   <block id="966af22a27db9cf9c8aed1bfaa29bceb" category="paragraph">次のビデオでは、従量課金制の Marketplace サブスクリプションを AWS クレデンシャルに関連付ける方法を紹介します。</block>
   <block id="a190c00fe21602e85acc45df70ca79fd" category="inline-image-macro">AWS アカウントにすでにサブスクリプションが設定されているものの、特定の IAM ユーザがサブスクリプションを設定していない場合に、 Cloud Manager for Cloud Volumes ONTAP のサブスクリプションページを示すスクリーンショット。</block>
   <block id="e245a5399dbd528108bc646c2883a874" category="admonition">複数の IAM ユーザが同じ AWS アカウントで作業する場合は、各ユーザにサブスクライブする必要があります。最初のユーザがサブスクライブすると、次の図に示すように、 AWS Marketplace から後続のユーザに登録済みであることが通知されます。AWS_account_ のサブスクリプションが設定されている間、各 IAM ユーザは、そのサブスクリプションに自分自身を関連付ける必要があります。以下のメッセージが表示された場合は、 * ここをクリック * リンクをクリックして Cloud Central にアクセスし、処理を完了してください。<block ref="f2914763cc0e8950eb79a48d206e5073" category="inline-image-macro-rx" type="image"></block></block>
@@ -2054,9 +2049,7 @@
   <block id="00f2be2235cae246a585554b3d915cf2" category="paragraph">ライセンスの仕組みについては、を参照してください <block ref="a136464e5f9b093e6667a604b15e3605" category="inline-link-macro-rx"></block>。</block>
   <block id="17a487ae56e17c3c175366c070697ba7" category="inline-link-macro">ネットアップサポートサイトのアカウントを追加する方法について説明します</block>
   <block id="3f0092edf66c1dcd1cf938e94eecec23" category="paragraph">NetApp Support Site のアカウントは、従量課金制の場合は任意ですが、 BYOL システムの場合は必須です。 <block ref="f98142e0c5ea80f30a730068b4c56c2a" category="inline-link-macro-rx"></block>。</block>
-  <block id="58686d8c4396c8732c31683c7348906b" category="list-text">* 構成済みパッケージ * ： Cloud Volumes ONTAP をすばやく起動するパッケージを 1 つ選択するか、 * 独自の構成を作成 * をクリックします。</block>
   <block id="07745782b2f663acabec45bb85011c26" category="paragraph">いずれかのパッケージを選択した場合は、ボリュームを指定してから、設定を確認して承認するだけで済みます。</block>
-  <block id="1ad3c02c2cd7417ea6e7c20bef871ec1" category="list-text">* IAM Role * ： Cloud Manager でロールを作成する場合は、デフォルトのオプションを使用してください。</block>
   <block id="bef2f3bc1b5f6b5fc3eaabff818b8b07" category="inline-link">Cloud Volumes ONTAP ノードのポリシーの要件</block>
   <block id="f078caf8a52583e42e77d3b027a4d088" category="paragraph">独自のポリシーを使用する場合は、それが満たされている必要があります<block ref="2797a84517d384e383362d2bdf4eae98" category="inline-link-rx"></block>。</block>
   <block id="f897dd944b67f372edf158d00528750c" category="list-text">* ライセンス * ：必要に応じて Cloud Volumes ONTAP のバージョンを変更し、ライセンス、インスタンスタイプ、インスタンステナンシーを選択します。</block>
@@ -2133,8 +2126,6 @@
   <block id="0d27f0f1131dc607258f48d5dc5dcf14" category="list-text">* ルートテーブル * ：複数の AZ を選択した場合は、フローティング IP アドレスへのルートを含むルーティングテーブルを選択します。</block>
   <block id="a2c930bd534343e87d585c2ee3011f52" category="inline-link">AWS のドキュメント：「 Route Tables</block>
   <block id="5e2b7cebb4bf10923692995c621e2e85" category="paragraph">複数のルートテーブルがある場合は、正しいルートテーブルを選択することが非常に重要です。そうしないと、一部のクライアントが Cloud Volumes ONTAP HA ペアにアクセスできない場合があります。ルーティングテーブルの詳細については、を参照してください<block ref="8ed06851f50fcdbded65cb78f986bfa5" category="inline-link-rx"></block>。</block>
-  <block id="6fa1ea2d1b7d542773b55b6399511838" category="list-text">* 構成済みパッケージ * ： Cloud Volumes ONTAP システムをすばやく起動するには、パッケージを 1 つ選択するか、 * 独自の構成を作成 * をクリックします。</block>
-  <block id="39f22e6c4441b50602ddd87c810eb4d1" category="list-text">* IAM Role * ：デフォルトのオプションをそのまま使用し、 Cloud Manager で役割を作成する必要があります。</block>
   <block id="b2bb3f64fb5b828b17cb684f3c44b684" category="inline-link">Cloud Volumes ONTAP ノードと HA のポリシー要件 メディエーター</block>
   <block id="c28c32a77ee0ea01a848deb779696faa" category="paragraph">独自のポリシーを使用する場合は、それが満たされている必要があります<block ref="6c2e6b1a73e6560a550e8fb9f57d1a51" category="inline-link-rx"></block>。</block>
   <block id="bcb01838b65b85f35ba0eb30aab65df6" category="paragraph">インスタンスの起動後に必要な変更があった場合は、後でライセンスまたはインスタンスタイプを変更できます。</block>
@@ -2232,12 +2223,10 @@
   <block id="acdc327e8b77908976905eb94f3911cb" category="list-text">Add Credentials * をクリックし、 * AWS * を選択します。</block>
   <block id="b13ce6adca1d2229578b3332304d5e7f" category="list-text">信頼できる IAM ロールの AWS キーまたは ARN を指定します。</block>
   <block id="efe1e603a2cc441e298652811dd1e364" category="list-text">ポリシーの要件が満たされていることを確認し、 [* Continue （続行） ] をクリックします。</block>
-  <block id="4e5b82fd68701459ae6d1a233dc134e4" category="paragraph">従量課金制の Cloud Volumes ONTAP システムを作成するには、 AWS クレデンシャルが AWS Marketplace からの Cloud Volumes ONTAP へのサブスクリプションに関連付けられている必要があります。</block>
   <block id="59c42111c120e2a009a663d366f4914f" category="paragraph">新しい作業環境を作成するときに、 [ 詳細と資格情報 ] ページから別の資格情報セットに切り替えることができるようになりました。</block>
   <block id="22b179015545d216826bf3c224079c70" category="inline-image-macro">[ 詳細と資格情報 ] ページで [ アカウントの切り替え ] をクリックした後に、クラウドプロバイダアカウントを選択する方法を示すスクリーンショット。</block>
   <block id="d480d0a7a4b3a6955a7e5f120fa8ceff" category="paragraph"><block ref="05c17259076ab0890d3bf12048d3b281" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a806997beb8af9aee31aa47eed8f26ab" category="section-title">AWS サブスクリプションをクレデンシャルに関連付ける</block>
-  <block id="2e92083342242ca680925e258dfa422b" category="paragraph">Cloud Manager に AWS のクレデンシャルを追加したら、 AWS Marketplace のサブスクリプションをそれらのクレデンシャルに関連付けることができます。サブスクリプションを使用すると、従量課金制の Cloud Volumes ONTAP システムを作成し、他のネットアップクラウドサービスを使用できます。</block>
   <block id="5ad7bc2b388bb236e1686ac8da3a1898" category="paragraph">Cloud Manager にクレデンシャルを追加したあとに、 AWS Marketplace サブスクリプションを関連付けるシナリオは 2 つあります。</block>
   <block id="dbaf1a33cea4faeebcb91c3b7d479cc9" category="list-text">既存の AWS Marketplace サブスクリプションを新しいサブスクリプションに置き換える場合。</block>
   <block id="3fcc9bc1384591322495172b662422d2" category="inline-image-macro">AWS クレデンシャルのサブスクリプションをメニューから追加できるクレデンシャルページのスクリーンショット。</block>
@@ -3002,14 +2991,10 @@
   <block id="7a8a79fe1d6e9319be38184a672d30f6" category="list-text">従量課金制の構成を使用している場合は、オプションで別のライセンスを選択できます。</block>
   <block id="58c8e114afb1dd3ba61f228e568b5204" category="list-text">インスタンスまたはマシンタイプを選択し、チェックボックスを選択して、変更の影響を理解したことを確認し、 * OK * をクリックします。</block>
   <block id="a8e111d8043785d9d556635c64194b73" category="paragraph">Cloud Volumes ONTAP が新しい設定でリブートします。</block>
-  <block id="5bb1ccd4d7f1fac66868b3590c8aa96e" category="section-title">従量課金制の構成を切り替える</block>
-  <block id="d425cbaeccad67aa4fae2a92d48ebb55" category="paragraph">従量課金制の Cloud Volumes ONTAP システムを起動した後は、ライセンスを変更することで、いつでも Explore 、 Standard 、 Premium の構成を変更できます。ライセンスを変更すると、未フォーマット時の容量制限が増減し、別の AWS インスタンスタイプまたは Azure 仮想マシンタイプから選択できます。</block>
-  <block id="7143dbb18025f08741e013c6cf213ac1" category="admonition">GCP では、従量課金制構成ごとに 1 つのマシンタイプを使用できます。異なるマシンタイプの中から選択することはできません。</block>
   <block id="2b9b26a7c89fb753b379973a5eaecc54" category="paragraph">従量課金制ライセンスの切り替えについては、次の点に注意してください。</block>
   <block id="103cd49d5d27cdfe2260aa31f5c2ac8d" category="list-text">ライセンスタイプとインスタンスタイプまたはマシンタイプを選択し、チェックボックスを選択して、変更の影響を理解していることを確認し、 * OK * をクリックします。</block>
   <block id="2fa6dd674599669bf9b4b404c4e3da5a" category="paragraph">Cloud Volumes ONTAP が新しいライセンス、インスタンスタイプまたはマシンタイプ、またはその両方でリブートします。</block>
   <block id="f31acc8fd9ab057551e7f2ac27f7075a" category="section-title">代替クラウドボリューム ONTAP 構成への移行</block>
-  <block id="2d589f485fd8c8107859b476e3800de9" category="paragraph">従量課金制サブスクリプションと BYOL サブスクリプションを切り替える場合、または単一の Cloud Volumes ONTAP システムと HA ペアを切り替える場合は、新しいシステムを導入し、既存のシステムから新しいシステムにデータをレプリケートする必要があります。</block>
   <block id="7f7c7e70efe0e6e29f5d0b207145f30e" category="list-text">新しい Cloud Volumes ONTAP の作業環境を作成します。</block>
   <block id="fdbc311c4dd4bb425160f22f166435fa" category="inline-link-macro">GCP での Cloud Volumes ONTAP の起動</block>
   <block id="1a089d7817f0ca33052bbc62f8df592c" category="paragraph"><block ref="4bbc2ccf5176e96f46715beb7edb26b6" category="inline-link-macro-rx"></block>
@@ -6122,10 +6107,8 @@
   <block id="844581166f3d6c9fef0c12b72220bb3d" category="list-text">[ レビューと承認 ] ページで、 [* 移動 ] をクリックします。</block>
   <block id="640e0b5c90b1757e9061cec9ae9f5fb5" category="paragraph">Cloud Manager は、作業環境を削除します。この作業環境は、 Canvas ページからいつでも再検出できます。</block>
   <block id="8b17a2465075330f70410889998ffc53" category="doc">Cloud Volumes ONTAP の BYOL ライセンスの管理</block>
-  <block id="c08c8d6325783177fbec7204e7734a20" category="section-title">システムライセンスの管理</block>
   <block id="0ea4cec13a7a466968826101ae7f9acc" category="paragraph">Cloud Volumes ONTAP BYOL システムでは、複数のライセンスを購入して、 368 TB を超える容量を割り当てることができます。たとえば、 2 つのライセンスを購入して、 Cloud Volumes ONTAP に最大 736TB の容量を割り当てることができます。また、 4 つのライセンスを購入して、最大 1.4 PB までライセンスを取得することもできます。</block>
   <block id="5e26587c8f074cc4f0455ff005cb744c" category="paragraph">シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。</block>
-  <block id="fe9d229bc11967d5aab314735e7fd421" category="section-title">システムライセンスファイルを取得しています</block>
   <block id="093b031d81b08ff98d73b0727bc8466f" category="paragraph">ほとんどの場合、 Cloud Manager はネットアップサポートサイトのアカウントを使用してライセンスファイルを自動的に取得できます。ただし、アップロードできない場合は、ライセンスファイルを手動でアップロードする必要があります。ライセンスファイルがない場合は、 netapp.com から入手できます。</block>
   <block id="eeb818d6636d7675fb1108e834a0fed1" category="inline-link">ネットアップライセンスファイルジェネレータ</block>
   <block id="3eff90cc077e6c35c01b4fa2ce08352e" category="list-text">にアクセスします<block ref="d4604fbd185a778fcb9e2d4bce6d880d" category="inline-link-rx"></block> をクリックし、ネットアップサポートサイトのクレデンシャルでログインします。</block>
@@ -6133,30 +6116,11 @@
   <block id="a107b24c3340d0e4184edbe0279df9ea" category="inline-image-macro">スクリーンショット： NetApp License File Generator Web ページの例を示しています。このページには、パスワード、製品（ NetApp Cloud Volumes ONTAP BYOL for AWS ）、製品のシリアル番号が表示されています。</block>
   <block id="dddb4a2878a41b33e01843d439e31968" category="paragraph"><block ref="dddb4a2878a41b33e01843d439e31968" category="inline-image-macro-rx" type="image"></block></block>
   <block id="74fd2dac6a51b8a94f6612bae65dcbdf" category="list-text">電子メールまたは直接ダウンロードで serialnumber.nlf JSON ファイルを受信するかどうかを選択します。</block>
-  <block id="94f4a865c61fdffef0ff29638ad6f455" category="section-title">新しいシステムライセンスの追加</block>
-  <block id="e565a430015cfc8bfa0c35ef69fe81bc" category="paragraph">いつでも新しい BYOL システムライセンスを追加して、 Cloud Volumes ONTAP BYOL システムに追加の 368 TB の容量を割り当てられます。</block>
-  <block id="de10da8eb4a5d59556212be34d6509d5" category="list-text">Cloud Manager で、 Cloud Volumes ONTAP BYOL 作業環境を開きます。</block>
-  <block id="deb8185ece321b85465e38900450dd77" category="list-text">メニューアイコンをクリックし、 * ライセンス * をクリックします。</block>
-  <block id="f8ad153e9f851f0d7acb9f3a262fb6eb" category="inline-image-macro">作業環境のメニューアイコンを示すスクリーンショット。ライセンスオプションを使用すると、ライセンスファイルをアップロードできます。</block>
-  <block id="ed7a7b3172cd611cad5a8929a6e2078a" category="paragraph"><block ref="ed7a7b3172cd611cad5a8929a6e2078a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1dee1659a56bab473b1d887ace55ef22" category="list-text">「 * CVO System License の追加 * 」をクリックします。</block>
-  <block id="b5af16c9006a2afa6f75aab4a41ed934" category="inline-image-macro">Cloud Volumes ONTAP システムライセンスのスクリーンショット。システムライセンスを追加してシステムライセンスを更新するボタンが表示されます。</block>
-  <block id="853c9425e7c432b52c4bb8a773bfc88a" category="paragraph"><block ref="853c9425e7c432b52c4bb8a773bfc88a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f3b3d19156b06f9b405ccdca840f17da" category="list-text">シリアル番号を入力するか、ライセンスファイルをアップロードするかを選択します。</block>
-  <block id="ea9a2b9ac34c9aab133f21aa5b67976e" category="list-text">[ ライセンスの追加 ] をクリックします。</block>
-  <block id="003c102c9e96655a1ed1377b57745153" category="paragraph">Cloud Manager は、 Cloud Volumes ONTAP システムに新しいライセンスファイルをインストールします。</block>
-  <block id="f518ef1cb661441068ca83f76705bf70" category="section-title">システムライセンスの更新</block>
   <block id="ee69908face570acacfcb1e95261b07c" category="paragraph">ネットアップの担当者に連絡して BYOL サブスクリプションを更新すると、 Cloud Manager は自動的にネットアップから新しいライセンスを取得し、 Cloud Volumes ONTAP システムにインストールします。</block>
   <block id="19a01f2f8ef18330420dff68d0488540" category="paragraph">Cloud Manager がセキュアなインターネット接続経由でライセンスファイルにアクセスできない場合は、ユーザがファイルを取得して、 Cloud Manager に手動でアップロードできます。</block>
-  <block id="2f42e05fd2dbfaf7fd7b681b78162e99" category="list-text">「 * CVO System License の更新 * 」をクリックします。</block>
-  <block id="3419dc617f1aa990ddbfb1712a8dbc92" category="list-text">[ ファイルのアップロード ] をクリックし、ライセンスファイルを選択します。</block>
   <block id="1c523ff18e24f3b5d4d5fa45c4410b01" category="list-text">［ * ライセンスの更新 * ］ をクリックします。</block>
   <block id="b7c7706001feab0716f94531deac1194" category="paragraph">Cloud Manager によって、 Cloud Volumes ONTAP システムのライセンスが更新されます。</block>
-  <block id="ef5f8239fbf296f44d8cf068da17ccec" category="paragraph">BYOL ライセンスを追加または更新するには、 BYOL Licenses ページを使用します。</block>
   <block id="cb1e4858f1e19c18bd9757bd0450ff82" category="list-text">新しいライセンスを追加するか、既存のライセンスを更新するかに応じて、 * バックアップライセンスの追加 * または * バックアップライセンスの更新 * をクリックします。</block>
-  <block id="f3353f07daac2d607b18ae8b480ec551" category="inline-image-macro">ボタンを含む BYOL ライセンスページを示すスクリーンショット を使用してバックアップライセンスを追加および更新してください</block>
-  <block id="6915b9bb33eecf91fa0e21b9ac524045" category="paragraph"><block ref="6915b9bb33eecf91fa0e21b9ac524045" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2c96bc4212085c829663941e52fdf91d" category="list-text">ライセンス情報を入力し、 * ライセンスの追加 * をクリックします。</block>
   <block id="52e894501afdaec570376a409ae33178" category="list-text">シリアル番号がある場合は、「 * バックアップを使用したシリアル番号の入力 * 」オプションを選択して、シリアル番号を入力します。</block>
   <block id="b557ea1f2a5a7cb5138ffd6e247fa5db" category="list-text">バックアップライセンスファイルがある場合は、 * バックアップライセンスのアップロード * オプションを選択し、プロンプトに従ってファイルを接続します。</block>
   <block id="f8f2040da8e7277508c99e4afef2abb2" category="inline-image-macro">バックアップ BYOL ライセンスを追加するページを示すスクリーンショット。</block>
@@ -8424,7 +8388,6 @@
   <block id="0de9b3cec1ef6cadb404383ceab17afa" category="paragraph">クラウドバックアップではソースボリュームの Storage Efficiency が保持されるため、クラウドプロバイダ側で、 data_after_ONTAP 効率化のコストを支払います（重複排除と圧縮が適用されたあとのデータ量が少ないほど）。</block>
   <block id="363b52f59f5eb77ab56be0d830ca7d4a" category="list-text">ファイルのリストアの場合、クラウドプロバイダに料金を支払うのは、リストアインスタンスの実行中のみです。</block>
   <block id="af4a8bd3d907188581e5bcc51c0d250c" category="paragraph">インスタンスは、バックアップファイルを参照してリストアする個々のファイルを探すときにのみ実行されます。コストを節約するために使用していない場合、インスタンスはオフになります。個々のファイルを復元しようとしなかった場合は、まったく展開されません。</block>
-  <block id="f73de054e25bfcc7775ec3ac5103b4d9" category="paragraph">Cloud Backup には、お客様所有のライセンスを使用（ BYOL ）と従量課金制（ PAYGO ）の 2 つのライセンスオプションがあります。ライセンスをお持ちでない場合は、 30 日間の無償トライアルをご利用いただけます。</block>
   <block id="150d0b73810898f0438b1126fa9d43d2" category="paragraph">30 日間の無償トライアルを使用すると、残りの無料試用日数が通知されます。無償トライアルが終了すると、バックアップは作成されなくなります。サービスを引き続き使用するには、サービスに登録するかライセンスを購入する必要があります。</block>
   <block id="b84cc74d10ff69ffebf0cd86adfcb685" category="paragraph">PAYGO の場合は、（前述のとおり）オブジェクトストレージのコストについてクラウドプロバイダに支払い、バックアップライセンスのコストについてはネットアップに支払う必要があります。ライセンスコストは、（ ONTAP の Storage Efficiency 機能を使用する前の）ターゲットのバックアップ容量に基づいて決まります。</block>
   <block id="4f7307b358c4b6d450aaf97581f83b75" category="paragraph">BYOL は、期間ベース（ 1 年間 / 2 年間 / 3 年間）で容量ベースであり、バックアップされた容量を（ ONTAP Storage Efficiency の前の）論理的なバックアップに基づいて、 1TB 単位で増分されます。ネットアップに料金を支払うことで、このサービスを一定期間（たとえば 1 年）利用でき、最大バックアップ容量である 10TB にしたとします。その場合、オブジェクトストレージのコストについてクラウドプロバイダの支払いが必要になります（前述した金額をクラウドプロバイダに支払う必要があります）。</block>
@@ -8537,7 +8500,6 @@
   <block id="0903ab68c41a6bc55309dd47297a38bb" category="paragraph">Cloud Backup は、オンプレミスの作業環境からいつでも直接有効にできます。</block>
   <block id="e1bba09cbe5efe3bebe61f9c17015ce4" category="paragraph"><block ref="e1bba09cbe5efe3bebe61f9c17015ce4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="19592537bd50c63100e725f5747acd5b" category="admonition">Cloud Compliance で準拠スキャンを開始するにはバックアップの作成を完了する必要があるため、スキャン結果はすぐには使用できません。</block>
-  <block id="58732fe14c5a5f41379d15948f238d5b" category="summary">Cloud Volumes ONTAP BYOL システムライセンスを追加して、容量を追加し、既存のシステムライセンスを更新し、クラウドバックアップの BYOL ライセンスを管理します。</block>
   <block id="1b9c804e51ed46be07c65d2c1e4fa799" category="paragraph">Cloud Manager によってライセンスが追加または更新され、 Cloud Backup Service がアクティブになります。</block>
   <block id="aff6def6123d0e8f26461c52363dc459" category="summary">各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Cloud Backup でも利用できます。</block>
   <block id="ac985ea9c4d878384361c6105a375a9d" category="paragraph">BYOL バックアップライセンスを使用すると、一定期間、および最大容量のバックアップスペースの間、 Cloud Backup を使用するライセンスをネットアップから購入できます。いずれかの制限に達すると、ライセンスを更新する必要があります。</block>
@@ -10415,4 +10377,127 @@
   <block id="f408e682b68e18e390a7d513950616ba" category="inline-link">GCP での Cloud Volumes ONTAP 9.9.1 のストレージの制限</block>
   <block id="8d0f9f22eb5e217fd7664df5a94ab382" category="paragraph"><block ref="8d0f9f22eb5e217fd7664df5a94ab382" category="inline-link-rx"></block></block>
   <block id="333c5a912fe514f5bb807e9ee5bff804" category="list-text">に移動します<block ref="e77fea77cb7d6bfa9e196ee4ab53324b" category="inline-link-rx"></block>。</block>
+  <block id="e8e59a65a13ce7699bf6149b32237410" category="paragraph">Cloud Backup には、従量課金制（ PAYGO ）と、 AWS Marketplace が提供する年間契約、お客様所有のライセンスを使用（ BYOL ）の 3 つのライセンスオプションがあります。ライセンスをお持ちでない場合は、 30 日間の無償トライアルをご利用いただけます。</block>
+  <block id="2697e73e9503f3ae28e1059e98f62bef" category="section-title">年間契約（ AWS のみ）</block>
+  <block id="f944771935068f42db88ca0e64d3d74d" category="paragraph">AWS Marketplace では、次の 2 年間の契約が提供されています。</block>
+  <block id="dd3d43cf48ca2a873fab7de5be5f9fcf" category="list-text">年間契約。 Cloud Volumes ONTAP データとオンプレミスの ONTAP データをバックアップできます。</block>
+  <block id="2351127acb653fd60dafc73c8efcb79d" category="inline-link">AWS Marketplace のページ</block>
+  <block id="a2cb9dd630c17c1483928c4ecf380d8e" category="paragraph">にアクセスします<block ref="7e9391e5068ba3345180f0de3723960c" category="inline-link-rx"></block> をクリックすると、価格設定の詳細が表示</block>
+  <block id="54b98a81c2ba2da3e9c721b03a4585b5" category="inline-link-macro">サブスクリプションを AWS クレデンシャルに関連付けます</block>
+  <block id="e47f20bffa8ae5ced07e492ab06f9069" category="paragraph">このオプションを使用する場合は、 Marketplace のページでサブスクリプションを設定してから、を設定します <block ref="d3990ada5ba92e1efcb5020cee71ff64" category="inline-link-macro-rx"></block>。Cloud Manager で AWS クレデンシャルに割り当てることができるのは 1 つだけなので、この年間契約サブスクリプションを使用して Cloud Volumes ONTAP の料金を支払う必要があります。</block>
+  <block id="0c7592341632988537a76e75a2d7f5c8" category="list-text">12 カ月、 24 カ月、または 36 カ月の年間契約を使用して Cloud Volumes ONTAP と Cloud Backup Service をバンドルできるプロフェッショナルパッケージ。支払いは TiB あたりです。このオプションでは、オンプレミスのデータをバックアップすることはできません。</block>
+  <block id="1b6a828fae54ac29e6e3f56099099045" category="paragraph">にアクセスします<block ref="85c21eb306ec4bcbda7252ca6117fc5c" category="inline-link-rx"></block> 価格の詳細を表示するには、を参照してください<block ref="4206a207f40395f23f9807d9276bfff9" category="inline-link-rx"></block> このライセンスオプションの詳細については、を参照してください。</block>
+  <block id="aa6e381a2e925e1ef4225ff8af689116" category="paragraph">このオプションを使用する場合は、 Cloud Volumes ONTAP の作業環境を作成するときに年間契約を設定し、 Cloud Manager から AWS Marketplace に登録するように求められます。</block>
+  <block id="a3281c57ce5948a8e5ceae169c3756d2" category="cell">「 Microsoft.Compute/snapshots/write" 」、「 Microsoft.Compute/snapshots/read" 」、「 Microsoft.Compute/snapshots/delete" 」、「 Microsoft.Compute/disks/beginGetAccess/action" 」、</block>
+  <block id="bdf2b311dd2ec08b889a9ac912858e8f" category="cell">"Microsoft.MarketplaceOrdering/Offered Types/publishers/capers/plans/agreements/read" 、 "Microsoft.MarketplaceOrdering / offerTypes/publishers/capes/plans/agreements/write"</block>
+  <block id="0406d48f6a8266de7e7cae3a5fa0fafc" category="cell">"Microsoft 許可 / ロック /*"</block>
+  <block id="507599ceb1d23341ac32b6136f669418" category="cell">- compute.instances.setMachineType - compute.instances.setMinCpuPlatform</block>
+  <block id="2177f0bcede374a559458015351ab821" category="paragraph">Cloud Volumes ONTAP データとオンプレミスの ONTAP データの両方をバックアップできる年間契約の場合は、から登録する必要があります<block ref="7e9391e5068ba3345180f0de3723960c" category="inline-link-rx"></block> 次に <block ref="d3990ada5ba92e1efcb5020cee71ff64" category="inline-link-macro-rx"></block>。</block>
+  <block id="20d6b9983638e1053c5ee2ef4d3fad81" category="paragraph">年間契約を使用して Cloud Volumes ONTAP と Cloud Backup Service をバンドルできるようにするには、 Cloud Volumes ONTAP 作業環境の作成時に年間契約を設定する必要があります。このオプションでは、オンプレミスのデータをバックアップすることはできません。</block>
+  <block id="2a630df9bbf9abc91630ae209c845c1d" category="paragraph">Cloud Volumes ONTAP には、いくつかのライセンスオプションがあります。これらのライセンスオプションを使用すると、それぞれのニーズに合った構成を選択できます。</block>
+  <block id="2a633e5908dd17a506e88a0b638dd103" category="cell">この Cloud Volumes ONTAP システムで使用する AWS クレデンシャルと Marketplace サブスクリプションを選択します。Add Subscription * をクリックして、選択したクレデンシャルを新しい AWS Marketplace サブスクリプションに関連付けます。サブスクリプションは、年間契約の場合と、 Cloud Volumes ONTAP の料金を 1 時間ごとに支払う場合があります。NetApp （ BYOL ）からライセンスを直接購入した場合、 AWS サブスクリプションは必要ありません。<block ref="e47f6e7d3af2f940a2cf2c935356d872" category="inline-link-macro-rx"></block>。</block>
+  <block id="d6e3efb7866f8ccc7b05488732614b0d" category="list-text">* License and NSS Account * ：このシステムで使用するライセンスオプションを指定し、ネットアップサポートサイトのアカウントを指定します。</block>
+  <block id="c10a19dd78205dee0f91adfb0f46c2cb" category="paragraph">BYOL ライセンスの仕組みについては、を参照してください <block ref="a136464e5f9b093e6667a604b15e3605" category="inline-link-macro-rx"></block>。</block>
+  <block id="7b78c8c350850b6e3f33f38d1a49d4ea" category="paragraph">BYOL システムには、 NetApp Support Site のアカウントが必要です。 <block ref="f98142e0c5ea80f30a730068b4c56c2a" category="inline-link-macro-rx"></block>。</block>
+  <block id="b474859fcbfcba2d8799a1aadc5931a3" category="list-text">* Cloud Volumes ONTAP 環境設定 * （年間契約のみ）：デフォルト設定を確認して [* 続行 ] をクリックするか、 [* 構成の変更 *] をクリックして独自の構成を選択します。</block>
+  <block id="09234f1d126e4d3c4245bc84e7ada7b0" category="paragraph">デフォルトの設定を使用している場合、ボリュームを指定し、構成を確認および承認するだけで済みます。</block>
+  <block id="f6f2e0892cb62bcd1822af8539848e03" category="list-text">* 構成済みパッケージ * （時間単位または BYOL のみ）： Cloud Volumes ONTAP をすばやく起動するパッケージを 1 つ選択するか、 * 構成の変更 * をクリックして独自の構成を選択します。</block>
+  <block id="aa1a1dda4b1ade9ea7484b8f180091ba" category="paragraph">いずれかのパッケージを選択した場合、ボリュームを指定し、構成を確認および承認するだけで済みます。</block>
+  <block id="c449e34e5848c75cf2ae5048d97482c1" category="list-text">* IAM ロール * ： Cloud Manager にロールを割り当てるには、デフォルトのオプションを使用することを推奨します。</block>
+  <block id="def713e3e825f3afefaa0bbcbca9a3a1" category="list-text">資格情報に関連付けるサブスクリプションを選択するか、まだサブスクリプションを追加していない場合は「 * 」をクリックします。</block>
+  <block id="1e65c796a2058f2e006fb33cdd7e9879" category="paragraph">Cloud Volumes ONTAP の料金を 1 時間単位で支払う（ PAYGO ）場合や 1 年単位で支払う場合は、 AWS のクレデンシャルを AWS Marketplace から Cloud Volumes ONTAP へのサブスクリプションに関連付ける必要があります。</block>
+  <block id="99d8101dd6c55cd4a41adde2e1c707a9" category="paragraph">Cloud Manager に AWS のクレデンシャルを追加したら、 AWS Marketplace のサブスクリプションをそれらのクレデンシャルに関連付けることができます。サブスクリプションを使用すると、 Cloud Volumes ONTAP の料金を時間単位で支払う（ PAYGO ）と年単位の契約を使用する、および他の NetApp クラウドサービスを使用することができます。</block>
+  <block id="95fe81e9248ec6ac88415da2fdadce52" category="section-title">時間単位（従量課金制）の設定を変更する</block>
+  <block id="e3dae5a46ceda6de6c257368020dd09c" category="paragraph">従量課金制の Cloud Volumes ONTAP システムを 1 時間ごとに起動したあと、ライセンスを変更することでいつでも構成を Explore 、 Standard 、または Premium 間で切り替えることができます。ライセンスを変更すると物理容量の上限が増大または減少し、さまざまなインスタンスまたは VM タイプから選択できます。</block>
+  <block id="f56e81ac46eea6b1ac675b4ba5422678" category="paragraph">従量課金制（ PAYGO ）サブスクリプション、年間契約（ AWS のみ）、または BYOL サブスクリプションを切り替える場合は、新しい Cloud Volumes ONTAP 作業環境を作成し、既存の作業環境から新しい作業環境にデータをレプリケートする必要があります。単一の Cloud Volumes ONTAP システムと HA ペアを切り替える場合も同様です。</block>
+  <block id="f528906e11970fc9b2b4cd3dbffd9660" category="admonition">コストを削減するため、 Cloud Manager はルートディスクおよびブートディスクの古い Snapshot を定期的に削除します。ルートディスクとブートディスクの両方に対して、最新の 2 つの Snapshot のみが保持されます。</block>
+  <block id="6ab8426e2948f89bbbe258c186cf2dc7" category="list-text">3.9.7 リリース以降では、 Cloud Volumes ONTAP システムの導入時およびその電源をオフにするたびに作成されたルートディスクとブートディスクの古いクラウド Snapshot を Cloud Manager で削除できるようになりました。Connector で Azure スナップショットを削除するには、新しい権限が必要です。</block>
+  <block id="9a276bfe6cf0e768d48116bf6313f212" category="section-title">マシンタイプを変更するための新しい権限</block>
+  <block id="bace3aa4a519e671aa52bce588e1d152" category="paragraph">最近、マシンタイプファミリ間で切り替えを行う場合、 Cloud Volumes ONTAP マシンタイプを変更するには、次の権限が必要であることが判明しました。</block>
+  <block id="c00014f58b71fd3c482614d1a0d70277" category="section-title">Cloud Manager 3.9.7 （ 2021 年 5 月 30 日）</block>
+  <block id="1644cee72a9f4876218dab45556b293d" category="list-text"><block ref="a11ba0c209a94c82e8c85e5e1a063a42" category="inline-xref-macro-rx"></block></block>
+  <block id="e7ef0d5bcd1ca0f8f5763e59e8a0fd1b" category="list-text">新しいプロフェッショナルパッケージでは、 AWS Marketplace で毎年契約を締結し、 Cloud Volumes ONTAP と Cloud Backup Service をバンドルできます。支払いは TiB あたりです。このサブスクリプションでは、オンプレミスのデータをバックアップすることはできません。</block>
+  <block id="92e15eb1585aafcdb3a3a60abce8ae2f" category="paragraph">この支払いオプションを選択すると、 EBS ディスクを介して Cloud Volumes ONTAP システムあたり最大 2PB をプロビジョニングし、 S3 オブジェクトストレージ（シングルノードまたは HA ）に階層化することができます。</block>
+  <block id="02e56a11d1c80ea51d2bd6c6e0a17c0e" category="paragraph">にアクセスします<block ref="85c21eb306ec4bcbda7252ca6117fc5c" category="inline-link-rx"></block> 価格の詳細を表示するには、を参照してください<block ref="67c4615cef7d3cdedafe08b92efed17f" category="inline-link-rx"></block> このライセンスオプションの詳細については、を参照してください。</block>
+  <block id="1feaff1f6bda3096058107224fb852e8" category="list-text">新しい Cloud Volumes ONTAP 作業環境の作成時に、 Cloud Manager によって EBS ボリュームにタグが追加されるようになりました。タグは、 Cloud Volumes ONTAP の導入後に作成されたものです。</block>
+  <block id="d5188786b4772934fb01acd6ab586e1d" category="paragraph">この変更は、サービス制御ポリシー（ SCP ）を使用して権限を管理する場合に役立ちます。</block>
+  <block id="17a517371c06bca0a5a301eac18f49a7" category="section-title">すべてのクラウドプロバイダで利用できる機能拡張</block>
+  <block id="18e89bf5c6e5d1593425d0e1c1dbaa72" category="list-text">auto 階層化ポリシーを使用してボリュームのデータ階層化を有効にした場合、 API を使用して最小クーリング期間を調整できるようになりました。</block>
+  <block id="de793002b00f12a11048e728a2fba03d" category="inline-link-macro">最小クーリング期間の調整方法について説明します。</block>
+  <block id="d1bbc832a5d875d7dc04793f6d8f7e85" category="paragraph"><block ref="d1bbc832a5d875d7dc04793f6d8f7e85" category="inline-link-macro-rx"></block></block>
+  <block id="ca9cf914161d84d0dd052d3472bdbab5" category="list-text">新しい NFS ボリュームを作成すると、カスタムのエクスポートポリシーが昇順に表示されるようになり、必要なエクスポートポリシーが簡単に見つかります。</block>
+  <block id="63c06d07a1fa7b849380de0fd3b1183b" category="list-text">Cloud Volumes ONTAP システムの導入時および電源をオフにするたびに作成されたルートディスクとブートディスクの古いクラウド Snapshot が Cloud Manager で削除されるようになりました。ルートボリュームとブートボリュームの両方に対して最新の 2 つの Snapshot のみが保持されます。</block>
+  <block id="f39a950236a2ad655637cfc92f42e08a" category="paragraph">この機能拡張により、不要になった Snapshot を削除することでクラウドプロバイダのコストを削減できます。</block>
+  <block id="c6864fba0c63991f673104f8962961a0" category="inline-link">Azure の最新の Cloud Manager ポリシーを表示します</block>
+  <block id="39a27239d032dc234fdb9bf37df2907f" category="paragraph">Azure スナップショットを削除するには、 Connector で新しい権限が必要になることに注意してください。<block ref="a2c3d86df958bba3f2cf61370f533f94" category="inline-link-rx"></block>。</block>
+  <block id="986e1f3279b4d74444bd32d4f833afbd" category="section-title">デジタルウォレット</block>
+  <block id="11faee672c0179a21ee90c99e030a147" category="paragraph">デジタルウォレット * の新機能により、 Cloud Volumes ONTAP ライセンスとクラウドバックアップライセンスを 1 箇所から簡単に表示および管理できます。</block>
+  <block id="12d7eb5c1a94f8d976f4b76f52587625" category="inline-link-macro">デジタルウォレットの詳細については、こちらをご覧ください</block>
+  <block id="27cf09eeb92280108015e72f62718cab" category="paragraph"><block ref="53ee06aacdb8058c47e577a5addc17d7" category="inline-link-macro-rx"></block>。</block>
+  <block id="dafb45ff446854d88c1946a041afaf77" category="inline-image-macro">Cloud Volumes ONTAP ライセンスを示すデジタルウォレットページのスクリーンショット。</block>
+  <block id="ce5de77ee5d68284916060e43d908837" category="paragraph"><block ref="ce5de77ee5d68284916060e43d908837" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="304ccddd843fd65b3d0e4605b870830b" category="summary">デジタルウォレットページでは、 Cloud Volumes ONTAP とクラウドバックアップのライセンスを 1 箇所から管理できます。新しいライセンスを追加したり、既存のライセンスを更新したりできます。</block>
+  <block id="9f0562c731b8981f21e8a7ac75bd947f" category="doc">ライセンスを管理します</block>
+  <block id="9f3fdd3e22dfc16b0751ef3b84efaa1c" category="section-title">Cloud Volumes ONTAP ライセンスを管理します</block>
+  <block id="973f2011dd50d9283ff1888a1c9d84a1" category="paragraph">Cloud Volumes ONTAP の次のタイプのライセンスを管理できます。</block>
+  <block id="6000d471242a060cefa376d224021b16" category="list-text">お客様所有のライセンスを使用（ BYOL ）：ネットアップから購入するライセンスです。</block>
+  <block id="bea910cc801038f81ae9254519d48de5" category="list-text">Marketplace サブスクリプション。クラウドプロバイダのマーケットプレイスから 1 時間ごとまたは 1 年ごとのサブスクリプションです。</block>
+  <block id="ab6b6874c6a045c94b13b84097c34e5c" category="list-text">eval ライセンス。ライセンスを評価するためのライセンスで、あとで BYOL ライセンスモデルに変換できます。</block>
+  <block id="8caaaa4afae93c31b741be21eed669cc" category="inline-link-macro">Cloud Volumes ONTAP ライセンスの詳細については、こちらをご覧ください</block>
+  <block id="f081c07f5102bdd4c16568d369183582" category="paragraph"><block ref="5eb7def02d21383636c97d6d5f072ad0" category="inline-link-macro-rx"></block>。</block>
+  <block id="5033038a7289decbcd1ec064d62688ba" category="section-title">BYOL システムのライセンスを管理します</block>
+  <block id="66fd73ebefeb6931a26545cd0edf2e25" category="paragraph">Cloud Volumes ONTAP システムごとにシステムライセンスが必要です。</block>
+  <block id="bed8ee00b54ae810def15122c80a9dba" category="section-title">システムライセンスファイルを取得します</block>
+  <block id="58f676020d30c00d4b3fb18fc835e7ca" category="section-title">システムライセンスを更新する</block>
+  <block id="0e43ee8b5571c3589473753ca3952aa1" category="list-text">[ * 設定 ] &gt; [ デジタルウォレット * ] をクリックします。</block>
+  <block id="eda4b0f5ee71694deda064c01799f329" category="list-text">BYOL * タブで、 Cloud Volumes ONTAP システムの詳細を展開します。</block>
+  <block id="d91a847294f18b5d31d438a059c2532d" category="list-text">システムライセンスの横にあるアクションメニューをクリックし、 * ライセンスの更新 * を選択します。</block>
+  <block id="98022931ad96bfc8db710666a48e0416" category="list-text">ライセンスファイル（ HA ペアがある場合はファイル）をアップロードします。</block>
+  <block id="25a4f0d27a7f58c1f061e73b44cb67f7" category="section-title">BYOL の追加容量ライセンスを管理します</block>
+  <block id="c8a214721b8749987798538f360350e5" category="paragraph">Cloud Volumes ONTAP BYOL システムの追加容量ライセンスを購入すると、 BYOL システムライセンスで提供される 368 TB を超える容量を割り当てることができます。たとえば、 1 つのライセンス容量を追加購入して、最大 736TB の容量を Cloud Volumes ONTAP に割り当てることができます。また、容量ライセンスを 3 つ追加購入すれば、最大 1.4 PB まで拡張できます。</block>
+  <block id="6e869ff6c9fd5eb76baa394c52e2ef18" category="section-title">容量ライセンスを追加</block>
+  <block id="9fd3d176fcc84330118cbc034a36f88e" category="paragraph">Cloud Manager の右下にあるチャットアイコンからお問い合わせいただき、容量ライセンスを追加購入してください。購入したライセンスは、 Cloud Volumes ONTAP システムに適用できます。</block>
+  <block id="423cdc57679399d47229e2f74dfc102b" category="list-text">[Add Capacity License*] をクリックします。</block>
+  <block id="b0bfc70f0e7f3f10c4334bd53c2c2a27" category="list-text">シリアル番号を入力するか、ライセンスファイル（ HA ペアを使用している場合はファイル）をアップロードします。</block>
+  <block id="c4e9cc48e592b9354b10b9d54e14525c" category="section-title">容量ライセンスを更新</block>
+  <block id="5ab96af90109f081aad9c800d0460fa3" category="paragraph">容量を追加するライセンスを延長した場合は、 Cloud Manager でライセンスを更新する必要があります。</block>
+  <block id="555efdea73381bcd8582646f75b68253" category="list-text">容量ライセンスの横にあるアクションメニューをクリックし、 * ライセンスの更新 * を選択します。</block>
+  <block id="df478b8a8dcb38cfbba69a02ff5cae20" category="section-title">容量ライセンスを削除します</block>
+  <block id="9906134ee224bc081497b19c4269cc34" category="paragraph">使用されなくなったために期限切れになった容量ライセンスは、いつでも削除できます。</block>
+  <block id="c320af21170d1ca43751b7580a1125f4" category="list-text">容量ライセンスの横にあるアクションメニューをクリックし、 * ライセンスの削除 * を選択します。</block>
+  <block id="03b194a23dcb353466fbfb7acff64363" category="list-text">[ 削除（ Remove ） ] をクリックします。</block>
+  <block id="17d6363058e7ea20da33705452705d28" category="section-title">評価ライセンスを BYOL に変換します</block>
+  <block id="e5d9eaef61896cfe33c8e14c69288754" category="paragraph">評価用ライセンスは 30 日間有効です。インプレースアップグレードの評価ライセンスの上に新しい BYOL ライセンスを適用できます（シングルノードシステムの再起動が必要です）。</block>
+  <block id="42acea2a382077164f2cda896f9c960e" category="inline-link-macro">評価版ライセンスの詳細については、こちらをご覧ください</block>
+  <block id="63cffd201671115835d97ff8401d3a47" category="paragraph"><block ref="61368fe62f003968bfc192525d97bb2c" category="inline-link-macro-rx"></block>。</block>
+  <block id="b7c7df7a1f738eeeb402c8feafc80dba" category="list-text">「 * 評価 * 」をクリックします。</block>
+  <block id="fcb9420dfbbc4a57ba1b1a992a71d207" category="list-text">表で、 Cloud Volumes ONTAP システムの *Convert to BYOL License* をクリックします。</block>
+  <block id="e539cbd6aefe9d1fb7bc951680944206" category="list-text">シリアル番号を入力するか、ライセンスファイルをアップロードしてください。</block>
+  <block id="b171537681ac6ab38d6353435252c4f1" category="list-text">[ ライセンスの変換 ] をクリックします。</block>
+  <block id="73512502ed3cb5b3059a7d3ba3929fe7" category="section-title">Cloud Backup ライセンスを管理します</block>
+  <block id="0a02c9e28f62eea961b3c00105266c39" category="paragraph">Backup ライセンスでは、 Cloud Backup を一定期間および最大容量のバックアップスペースとして使用できます。Backup BYOL ライセンス環境は、 Cloud Central アカウントに関連付けられたすべての Cloud Volumes ONTAP およびオンプレミスシステムをライセンスします。</block>
+  <block id="583571647e284c9fed0a15301f155dba" category="section-title">Cloud Backup ライセンスファイルを取得します</block>
+  <block id="26d69ee75480a17160357d140e6e88b1" category="paragraph">Cloud Manager にライセンスを追加する際には、シリアル番号を入力するか、 NLF ライセンスファイルをアップロードできます。</block>
+  <block id="fe2108e5ca97a96400711d61ab05d245" category="list-text">にアクセスします<block ref="fcc52edac3ce57829c48ee35d97a295d" category="inline-link-rx"></block> [ システム ] 、 [ ソフトウェアライセンス ] の順にクリックします。</block>
+  <block id="9f2aebf05073d80bcffdd3338211f992" category="list-text">ライセンスファイルを取得するには、 Cloud Backup のシリアル番号と Cloud Manager System ID （サポートサイトではテナント ID と呼ばれます）を入力します。</block>
+  <block id="06439c1a8a7d76c8738cc05a9c7d261a" category="inline-link-macro">システム ID の確認方法について説明します</block>
+  <block id="868c0fce77eaa7db10627404ab096f55" category="paragraph"><block ref="8522e0bfe607f9cdf38a37b711a67e4a" category="inline-link-macro-rx"></block>。</block>
+  <block id="132ebd95e1229f92e8ab53968783e1bc" category="section-title">Cloud Backup ライセンスを追加または更新する</block>
+  <block id="3e6ed63cf0403cbacdfd715ea0874110" category="paragraph">Cloud Backup Service をアクティブにするために、 Cloud Backup ライセンスを Cloud Manager に追加または更新します。</block>
+  <block id="c07a71714d1c498b3b812c962b059fc1" category="inline-link-macro">Cloud Backup のライセンスに関する詳細は、こちらをご覧ください</block>
+  <block id="575314fc83ec25137bb6939c8869da8c" category="paragraph"><block ref="490987703a6abe453436426a9955d523" category="inline-link-macro-rx"></block>。</block>
+  <block id="1e05d41cec519503f91c48584ed0e100" category="list-text">Cloud Backup をクリックします。</block>
+  <block id="d7141d5cb43713979d2ad5828e5b5af3" category="list-text">既存のライセンスがない場合は、 * バックアップライセンスの追加 * をクリックします。</block>
+  <block id="c817dd42d2aba7f3adc6992013374ecd" category="list-text">ライセンス情報を入力し、 * バックアップライセンスの追加 * または * バックアップライセンスの更新 * をクリックします。</block>
+  <block id="3d70b13cc8147d2605ce9df2e857b776" category="doc">BYOL のライセンスの概要</block>
+  <block id="9b70abd2f51125cadc1127ccb2af27f0" category="inline-link">その他の情報については、『 Cloud Volumes ONTAP リリースノート』を参照してください ライセンスオプション</block>
+  <block id="1f96671943550d22121efdcfde2ea705" category="paragraph"><block ref="902e57591e022a16e6494fedb8c2ef2f" category="inline-link-rx"></block>。</block>
+  <block id="24c979ae168264040ca2c88e59f2902a" category="section-title">auto 階層化ポリシーのクーリング期間を変更します</block>
+  <block id="314e806b4e1a10feefefa7b140062fab" category="paragraph">_auto_tiering ポリシーを使用して Cloud Volumes ONTAP ボリュームのデータ階層化を有効にした場合は、ビジネスニーズに基づいてデフォルトのクーリング期間を調整できます。このアクションは API のみを使用してサポートされます。</block>
+  <block id="77ac5bdafcd5300a46db8d23117433c1" category="paragraph">クーリング期間とは、ボリューム内のユーザデータが「コールド」とみなされてオブジェクトストレージに移動されるまでの期間です。</block>
+  <block id="15d3560479839db873ba3a7d6309b50c" category="paragraph">auto 階層化ポリシーのデフォルトのクーリング期間は 31 日です。冷却期間は次のように変更できます。</block>
+  <block id="07c1e6ebf913a40fd18f3f57f20d6d68" category="list-text">9.8 以降： 2 日 ～ 183 日</block>
+  <block id="a6f44cada6b6ce69a44f85c0c202e270" category="list-text">9.7 以前： 2 日から 63 日</block>
+  <block id="2e1602577b506088aeed8165e506d1e4" category="list-text">ボリュームの作成時や既存のボリュームの変更時に、 API 要求で _minimumCoolingDays_ パラメータを使用します。</block>
+  <block id="ae608892fc80b71b90aa467b2e5a2e0b" category="sidebar">BYOL のライセンス</block>
 </blocks>

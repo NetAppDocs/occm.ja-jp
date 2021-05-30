@@ -78,7 +78,7 @@ entries:
         url: "/concept_ha_google_cloud.html"
     - title: 評価中
       url: "/concept_evaluating.html"
-    - title: ライセンス
+    - title: BYOL のライセンス
       url: "/concept_licensing.html"
     - title: セキュリティ
       url: "/concept_security.html"

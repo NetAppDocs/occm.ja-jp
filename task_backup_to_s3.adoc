@@ -93,6 +93,10 @@ image:diagram_cloud_backup_cvo_aws.png["Cloud Backup が、ソースシステム
 ライセンス要件::
 +
 --
+Cloud Volumes ONTAP データとオンプレミスの ONTAP データの両方をバックアップできる年間契約の場合は、から登録する必要があります https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS Marketplace のページ"^] 次に link:task_adding_aws_accounts.html#associating-an-aws-subscription-to-credentials["サブスクリプションを AWS クレデンシャルに関連付けます"]。
+
+年間契約を使用して Cloud Volumes ONTAP と Cloud Backup Service をバンドルできるようにするには、 Cloud Volumes ONTAP 作業環境の作成時に年間契約を設定する必要があります。このオプションでは、オンプレミスのデータをバックアップすることはできません。
+
 Cloud Backup BYOL ライセンスには、 AWS Cloud Backup サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["バックアップ BYOL ライセンスを追加および更新する"^]。
 
 また、バックアップを格納するストレージスペース用の AWS サブスクリプションが必要です。

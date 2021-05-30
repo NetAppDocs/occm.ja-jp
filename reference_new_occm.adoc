@@ -21,6 +21,70 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
+== Cloud Manager 3.9.7 （ 2021 年 5 月 30 日）
+
+* <<Cloud Volumes ONTAP enhancements>>
+* <<Digital Wallet>>
+
+
+
+
+=== Cloud Volumes ONTAP の機能拡張
+
+このリリースの Cloud Manager では、 Cloud Volumes ONTAP の管理が強化されています。
+
+
+
+==== AWS で利用できる機能拡張
+
+* 新しいプロフェッショナルパッケージでは、 AWS Marketplace で毎年契約を締結し、 Cloud Volumes ONTAP と Cloud Backup Service をバンドルできます。支払いは TiB あたりです。このサブスクリプションでは、オンプレミスのデータをバックアップすることはできません。
++
+この支払いオプションを選択すると、 EBS ディスクを介して Cloud Volumes ONTAP システムあたり最大 2PB をプロビジョニングし、 S3 オブジェクトストレージ（シングルノードまたは HA ）に階層化することができます。
+
++
+にアクセスします https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace のページ"^] 価格の詳細を表示するには、を参照してください https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_991.html["Cloud Volumes ONTAP リリースノート"^] このライセンスオプションの詳細については、を参照してください。
+
+* 新しい Cloud Volumes ONTAP 作業環境の作成時に、 Cloud Manager によって EBS ボリュームにタグが追加されるようになりました。タグは、 Cloud Volumes ONTAP の導入後に作成されたものです。
++
+この変更は、サービス制御ポリシー（ SCP ）を使用して権限を管理する場合に役立ちます。
+
+
+
+
+
+==== すべてのクラウドプロバイダで利用できる機能拡張
+
+* auto 階層化ポリシーを使用してボリュームのデータ階層化を有効にした場合、 API を使用して最小クーリング期間を調整できるようになりました。
++
+link:task_tiering.html#changing-the-cooling-period-for-the-auto-tiering-policy["最小クーリング期間の調整方法について説明します。"]
+
+* 新しい NFS ボリュームを作成すると、カスタムのエクスポートポリシーが昇順に表示されるようになり、必要なエクスポートポリシーが簡単に見つかります。
+* Cloud Volumes ONTAP システムの導入時および電源をオフにするたびに作成されたルートディスクとブートディスクの古いクラウド Snapshot が Cloud Manager で削除されるようになりました。ルートボリュームとブートボリュームの両方に対して最新の 2 つの Snapshot のみが保持されます。
++
+この機能拡張により、不要になった Snapshot を削除することでクラウドプロバイダのコストを削減できます。
+
++
+Azure スナップショットを削除するには、 Connector で新しい権限が必要になることに注意してください。 https://mysupport.netapp.com/site/info/cloud-manager-policies["Azure の最新の Cloud Manager ポリシーを表示します"^]。
+
++
+[source, json]
+----
+"Microsoft.Compute/snapshots/delete"
+----
+
+
+
+
+=== デジタルウォレット
+
+デジタルウォレット * の新機能により、 Cloud Volumes ONTAP ライセンスとクラウドバックアップライセンスを 1 箇所から簡単に表示および管理できます。
+
+link:task_managing_licenses.html["デジタルウォレットの詳細については、こちらをご覧ください"]。
+
+image:screenshot_digital_wallet.gif["Cloud Volumes ONTAP ライセンスを示すデジタルウォレットページのスクリーンショット。"]
+
+
+
 == Cloud Manager 3.9.6 の更新（ 2021 年 24 月 5 日）
 
 Cloud Manager が更新され、 Cloud Volumes ONTAP の最新バージョンが追加されました。

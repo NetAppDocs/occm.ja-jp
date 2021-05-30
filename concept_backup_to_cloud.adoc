@@ -110,7 +110,7 @@ Cloud Backup の使用に関連するコストには、リソース料金とサ�
 
 == ライセンス
 
-Cloud Backup には、お客様所有のライセンスを使用（ BYOL ）と従量課金制（ PAYGO ）の 2 つのライセンスオプションがあります。ライセンスをお持ちでない場合は、 30 日間の無償トライアルをご利用いただけます。
+Cloud Backup には、従量課金制（ PAYGO ）と、 AWS Marketplace が提供する年間契約、お客様所有のライセンスを使用（ BYOL ）の 3 つのライセンスオプションがあります。ライセンスをお持ちでない場合は、 30 日間の無償トライアルをご利用いただけます。
 
 
 
@@ -129,6 +129,28 @@ PAYGO の場合は、（前述のとおり）オブジェクトストレージ�
 * AWS https://aws.amazon.com/marketplace/pp/B07QX2QLXX["価格の詳細については、 Cloud Manager Marketplace のサービスを参照してください"^]。
 * Azure https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["価格の詳細については、 Cloud Manager Marketplace のサービスを参照してください"^]。
 * GCP ： https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["価格の詳細については、 Cloud Manager Marketplace のサービスを参照してください"^]
+
+
+
+
+=== 年間契約（ AWS のみ）
+
+AWS Marketplace では、次の 2 年間の契約が提供されています。
+
+* 年間契約。 Cloud Volumes ONTAP データとオンプレミスの ONTAP データをバックアップできます。
++
+にアクセスします https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS Marketplace のページ"^] をクリックすると、価格設定の詳細が表示
+
++
+このオプションを使用する場合は、 Marketplace のページでサブスクリプションを設定してから、を設定します link:task_adding_aws_accounts.html#associating-an-aws-subscription-to-credentials["サブスクリプションを AWS クレデンシャルに関連付けます"]。Cloud Manager で AWS クレデンシャルに割り当てることができるのは 1 つだけなので、この年間契約サブスクリプションを使用して Cloud Volumes ONTAP の料金を支払う必要があります。
+
+* 12 カ月、 24 カ月、または 36 カ月の年間契約を使用して Cloud Volumes ONTAP と Cloud Backup Service をバンドルできるプロフェッショナルパッケージ。支払いは TiB あたりです。このオプションでは、オンプレミスのデータをバックアップすることはできません。
++
+にアクセスします https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace のページ"^] 価格の詳細を表示するには、を参照してください https://docs.netapp.com/us-en/cloud-volumes-ontap["Cloud Volumes ONTAP リリースノート"^] このライセンスオプションの詳細については、を参照してください。
+
++
+このオプションを使用する場合は、 Cloud Volumes ONTAP の作業環境を作成するときに年間契約を設定し、 Cloud Manager から AWS Marketplace に登録するように求められます。
+
 
 
 
