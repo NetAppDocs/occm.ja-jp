@@ -2008,7 +2008,7 @@
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        ライセンス
+        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-25 21:35:22 +0000">05/25/2021</time>
+    <time datetime="2021-05-31 05:29:06 +0000">05/31/2021</time>
     
   
 
@@ -2521,6 +2521,91 @@
 </td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-manager-3-9-7-2021-年-5-月-30-日">Cloud Manager 3.9.7 （ 2021 年 5 月 30 日）</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Cloud Volumes ONTAP enhancements">[Cloud Volumes ONTAP enhancements]</a></p>
+</li>
+<li>
+<p><a href="#Digital Wallet">[Digital Wallet]</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-の機能拡張">Cloud Volumes ONTAP の機能拡張</h3>
+<div class="paragraph">
+<p>このリリースの Cloud Manager では、 Cloud Volumes ONTAP の管理が強化されています。</p>
+</div>
+<div class="sect3">
+<h4 id="aws-で利用できる機能拡張">AWS で利用できる機能拡張</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>新しいプロフェッショナルパッケージでは、 AWS Marketplace で毎年契約を締結し、 Cloud Volumes ONTAP と Cloud Backup Service をバンドルできます。支払いは TiB あたりです。このサブスクリプションでは、オンプレミスのデータをバックアップすることはできません。</p>
+<div class="paragraph">
+<p>この支払いオプションを選択すると、 EBS ディスクを介して Cloud Volumes ONTAP システムあたり最大 2PB をプロビジョニングし、 S3 オブジェクトストレージ（シングルノードまたは HA ）に階層化することができます。</p>
+</div>
+<div class="paragraph">
+<p>にアクセスします <a href="https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri" target="_blank" rel="noopener">"AWS Marketplace のページ"</a> 価格の詳細を表示するには、を参照してください <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_991.html" target="_blank" rel="noopener">"Cloud Volumes ONTAP リリースノート"</a> このライセンスオプションの詳細については、を参照してください。</p>
+</div>
+</li>
+<li>
+<p>新しい Cloud Volumes ONTAP 作業環境の作成時に、 Cloud Manager によって EBS ボリュームにタグが追加されるようになりました。タグは、 Cloud Volumes ONTAP の導入後に作成されたものです。</p>
+<div class="paragraph">
+<p>この変更は、サービス制御ポリシー（ SCP ）を使用して権限を管理する場合に役立ちます。</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="すべてのクラウドプロバイダで利用できる機能拡張">すべてのクラウドプロバイダで利用できる機能拡張</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>auto 階層化ポリシーを使用してボリュームのデータ階層化を有効にした場合、 API を使用して最小クーリング期間を調整できるようになりました。</p>
+<div class="paragraph">
+<p><a href="task_tiering.html#changing-the-cooling-period-for-the-auto-tiering-policy">"最小クーリング期間の調整方法について説明します。"</a></p>
+</div>
+</li>
+<li>
+<p>新しい NFS ボリュームを作成すると、カスタムのエクスポートポリシーが昇順に表示されるようになり、必要なエクスポートポリシーが簡単に見つかります。</p>
+</li>
+<li>
+<p>Cloud Volumes ONTAP システムの導入時および電源をオフにするたびに作成されたルートディスクとブートディスクの古いクラウド Snapshot が Cloud Manager で削除されるようになりました。ルートボリュームとブートボリュームの両方に対して最新の 2 つの Snapshot のみが保持されます。</p>
+<div class="paragraph">
+<p>この機能拡張により、不要になった Snapshot を削除することでクラウドプロバイダのコストを削減できます。</p>
+</div>
+<div class="paragraph">
+<p>Azure スナップショットを削除するには、 Connector で新しい権限が必要になることに注意してください。 <a href="https://mysupport.netapp.com/site/info/cloud-manager-policies" target="_blank" rel="noopener">"Azure の最新の Cloud Manager ポリシーを表示します"</a>。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"Microsoft.Compute/snapshots/delete"</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="デジタルウォレット">デジタルウォレット</h3>
+<div class="paragraph">
+<p>デジタルウォレット * の新機能により、 Cloud Volumes ONTAP ライセンスとクラウドバックアップライセンスを 1 箇所から簡単に表示および管理できます。</p>
+</div>
+<div class="paragraph">
+<p><a href="task_managing_licenses.html">"デジタルウォレットの詳細については、こちらをご覧ください"</a>。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_digital_wallet.gif" alt="Cloud Volumes ONTAP ライセンスを示すデジタルウォレットページのスクリーンショット。"></span></p>
+</div>
 </div>
 </div>
 </div>
@@ -2760,7 +2845,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-volumes-ontap-の機能拡張">Cloud Volumes ONTAP の機能拡張</h3>
+<h3 id="cloud-volumes-ontap-の機能拡張-2">Cloud Volumes ONTAP の機能拡張</h3>
 <div class="paragraph">
 <p>このリリースの Cloud Manager では、 Cloud Volumes ONTAP の管理が強化されています。</p>
 </div>
@@ -2774,7 +2859,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="aws-で利用できる機能拡張">AWS で利用できる機能拡張</h4>
+<h4 id="aws-で利用できる機能拡張-2">AWS で利用できる機能拡張</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2974,7 +3059,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-volumes-ontap-の機能拡張-2">Cloud Volumes ONTAP の機能拡張</h3>
+<h3 id="cloud-volumes-ontap-の機能拡張-3">Cloud Volumes ONTAP の機能拡張</h3>
 <div class="paragraph">
 <p>このリリースの Cloud Manager では、 Cloud Volumes ONTAP の管理が強化されています。</p>
 </div>
@@ -2988,7 +3073,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="aws-で利用できる機能拡張-2">AWS で利用できる機能拡張</h4>
+<h4 id="aws-で利用できる機能拡張-3">AWS で利用できる機能拡張</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3390,7 +3475,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-volumes-ontap-の機能拡張-3">Cloud Volumes ONTAP の機能拡張</h3>
+<h3 id="cloud-volumes-ontap-の機能拡張-4">Cloud Volumes ONTAP の機能拡張</h3>
 <div class="paragraph">
 <p>このリリースの Cloud Manager では、 Cloud Volumes ONTAP に関して次の機能拡張が導入されています。</p>
 </div>

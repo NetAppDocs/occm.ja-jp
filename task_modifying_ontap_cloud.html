@@ -2008,7 +2008,7 @@
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        ライセンス
+        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-04-02 14:32:57 +0000">04/02/2021</time>
+    <time datetime="2021-05-31 05:29:06 +0000">05/31/2021</time>
     
   
 
@@ -2564,22 +2564,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="従量課金制の構成を切り替える">従量課金制の構成を切り替える</h2>
+<h2 id="時間単位従量課金制の設定を変更する">時間単位（従量課金制）の設定を変更する</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>従量課金制の Cloud Volumes ONTAP システムを起動した後は、ライセンスを変更することで、いつでも Explore 、 Standard 、 Premium の構成を変更できます。ライセンスを変更すると、未フォーマット時の容量制限が増減し、別の AWS インスタンスタイプまたは Azure 仮想マシンタイプから選択できます。</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="注記"></i>
-</td>
-<td class="content">
-GCP では、従量課金制構成ごとに 1 つのマシンタイプを使用できます。異なるマシンタイプの中から選択することはできません。
-</td>
-</tr>
-</table>
+<p>従量課金制の Cloud Volumes ONTAP システムを 1 時間ごとに起動したあと、ライセンスを変更することでいつでも構成を Explore 、 Standard 、または Premium 間で切り替えることができます。ライセンスを変更すると物理容量の上限が増大または減少し、さまざまなインスタンスまたは VM タイプから選択できます。</p>
 </div>
 <div class="paragraph">
 <p>従量課金制ライセンスの切り替えについては、次の点に注意してください。</p>
@@ -2620,7 +2608,7 @@ GCP では、従量課金制構成ごとに 1 つのマシンタイプを使用�
 <h2 id="代替クラウドボリューム-ontap-構成への移行">代替クラウドボリューム ONTAP 構成への移行</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>従量課金制サブスクリプションと BYOL サブスクリプションを切り替える場合、または単一の Cloud Volumes ONTAP システムと HA ペアを切り替える場合は、新しいシステムを導入し、既存のシステムから新しいシステムにデータをレプリケートする必要があります。</p>
+<p>従量課金制（ PAYGO ）サブスクリプション、年間契約（ AWS のみ）、または BYOL サブスクリプションを切り替える場合は、新しい Cloud Volumes ONTAP 作業環境を作成し、既存の作業環境から新しい作業環境にデータをレプリケートする必要があります。単一の Cloud Volumes ONTAP システムと HA ペアを切り替える場合も同様です。</p>
 </div>
 <div class="olist arabic">
 <div class="title">手順</div>

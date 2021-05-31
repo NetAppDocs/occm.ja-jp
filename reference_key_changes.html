@@ -2008,7 +2008,7 @@
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        ライセンス
+        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-03-09 19:33:41 +0000">03/09/2021</time>
+    <time datetime="2021-05-31 05:29:06 +0000">05/31/2021</time>
     
   
 
@@ -2636,6 +2636,14 @@
 <div class="ulist">
 <ul>
 <li>
+<p>3.9.7 リリース以降では、 Cloud Volumes ONTAP システムの導入時およびその電源をオフにするたびに作成されたルートディスクとブートディスクの古いクラウド Snapshot を Cloud Manager で削除できるようになりました。Connector で Azure スナップショットを削除するには、新しい権限が必要です。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"Microsoft.Compute/snapshots/delete"</code></pre>
+</div>
+</div>
+</li>
+<li>
 <p>Azure の導入でエラーが発生しないように、 Azure の Cloud Manager ポリシーに次の権限が含まれていることを確認してください。</p>
 <div class="listingblock">
 <div class="content">
@@ -2672,6 +2680,17 @@
 </div>
 <div class="sect2">
 <h3 id="gcp">GCP</h3>
+<div class="sect3">
+<h4 id="マシンタイプを変更するための新しい権限">マシンタイプを変更するための新しい権限</h4>
+<div class="paragraph">
+<p>最近、マシンタイプファミリ間で切り替えを行う場合、 Cloud Volumes ONTAP マシンタイプを変更するには、次の権限が必要であることが判明しました。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">- compute.instances.setMinCpuPlatform</code></pre>
+</div>
+</div>
+</div>
 <div class="sect3">
 <h4 id="ha-ペア用の新しい権限">HA ペア用の新しい権限</h4>
 <div class="paragraph">

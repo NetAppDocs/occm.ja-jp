@@ -2008,7 +2008,7 @@
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        ライセンス
+        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-03-09 19:33:41 +0000">03/09/2021</time>
+    <time datetime="2021-05-31 05:29:06 +0000">05/31/2021</time>
     
   
 
@@ -2565,6 +2565,18 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>Cloud Volumes ONTAP を停止すると、計算コストの発生を抑えることができ、ルートディスクとブートディスクの Snapshot が作成されます。これはトラブルシューティングに役立ちます。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="注記"></i>
+</td>
+<td class="content">
+コストを削減するため、 Cloud Manager はルートディスクおよびブートディスクの古い Snapshot を定期的に削除します。ルートディスクとブートディスクの両方に対して、最新の 2 つの Snapshot のみが保持されます。
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>HA ペアを停止すると、 Cloud Manager は両方のノードをシャットダウンします。</p>

@@ -2008,7 +2008,7 @@
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        ライセンス
+        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-03-11 19:58:12 +0000">03/11/2021</time>
+    <time datetime="2021-05-31 05:29:06 +0000">05/31/2021</time>
     
   
 
@@ -2600,7 +2600,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[[subscribe] クリデンシャルを編集します</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">この Cloud Volumes ONTAP システムで使用する AWS クレデンシャルと Marketplace サブスクリプションを選択します。[ サブスクリプションの追加 ] をクリックして、選択した資格情報をサブスクリプションに関連付けます。従量課金制の Cloud Volumes ONTAP システムを作成するには、 AWS Marketplace から Cloud Volumes ONTAP へのサブスクリプションに関連付けられている AWS クレデンシャルを選択する必要があります。お客様が作成した Cloud Volumes ONTAP 9.6 以降の PAYGO システムと、有効にしたアドオン機能ごとに、このサブスクリプションから料金が請求されます。<a href="task_adding_aws_accounts.html">"Cloud Manager に AWS クレデンシャルを追加する方法について説明します"</a>。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">この Cloud Volumes ONTAP システムで使用する AWS クレデンシャルと Marketplace サブスクリプションを選択します。Add Subscription * をクリックして、選択したクレデンシャルを新しい AWS Marketplace サブスクリプションに関連付けます。サブスクリプションは、年間契約の場合と、 Cloud Volumes ONTAP の料金を 1 時間ごとに支払う場合があります。NetApp （ BYOL ）からライセンスを直接購入した場合、 AWS サブスクリプションは必要ありません。<a href="task_adding_aws_accounts.html">"Cloud Manager に AWS クレデンシャルを追加する方法について説明します"</a>。</p></td>
 </tr>
 </tbody>
 </table>
@@ -2680,22 +2680,28 @@ Cloud Volumes ONTAP システムの作成後に AWS のデータ暗号化方式�
 </div>
 </li>
 <li>
-<p>* ライセンスとサポートサイトのアカウント * ：従量課金制または BYOL のどちらを使用するかを指定し、 NetApp Support Site のアカウントを指定します。</p>
+<p>* License and NSS Account * ：このシステムで使用するライセンスオプションを指定し、ネットアップサポートサイトのアカウントを指定します。</p>
 <div class="paragraph">
-<p>ライセンスの仕組みについては、を参照してください <a href="concept_licensing.html">"ライセンス"</a>。</p>
+<p>BYOL ライセンスの仕組みについては、を参照してください <a href="concept_licensing.html">"ライセンス"</a>。</p>
 </div>
 <div class="paragraph">
-<p>NetApp Support Site のアカウントは、従量課金制の場合は任意ですが、 BYOL システムの場合は必須です。 <a href="task_adding_nss_accounts.html">"ネットアップサポートサイトのアカウントを追加する方法について説明します"</a>。</p>
-</div>
-</li>
-<li>
-<p>* 構成済みパッケージ * ： Cloud Volumes ONTAP をすばやく起動するパッケージを 1 つ選択するか、 * 独自の構成を作成 * をクリックします。</p>
-<div class="paragraph">
-<p>いずれかのパッケージを選択した場合は、ボリュームを指定してから、設定を確認して承認するだけで済みます。</p>
+<p>BYOL システムには、 NetApp Support Site のアカウントが必要です。 <a href="task_adding_nss_accounts.html">"ネットアップサポートサイトのアカウントを追加する方法について説明します"</a>。</p>
 </div>
 </li>
 <li>
-<p>* IAM Role * ： Cloud Manager でロールを作成する場合は、デフォルトのオプションを使用してください。</p>
+<p>* Cloud Volumes ONTAP 環境設定 * （年間契約のみ）：デフォルト設定を確認して [* 続行 ] をクリックするか、 [* 構成の変更 *] をクリックして独自の構成を選択します。</p>
+<div class="paragraph">
+<p>デフォルトの設定を使用している場合、ボリュームを指定し、構成を確認および承認するだけで済みます。</p>
+</div>
+</li>
+<li>
+<p>* 構成済みパッケージ * （時間単位または BYOL のみ）： Cloud Volumes ONTAP をすばやく起動するパッケージを 1 つ選択するか、 * 構成の変更 * をクリックして独自の構成を選択します。</p>
+<div class="paragraph">
+<p>いずれかのパッケージを選択した場合、ボリュームを指定し、構成を確認および承認するだけで済みます。</p>
+</div>
+</li>
+<li>
+<p>* IAM ロール * ： Cloud Manager にロールを割り当てるには、デフォルトのオプションを使用することを推奨します。</p>
 <div class="paragraph">
 <p>独自のポリシーを使用する場合は、それが満たされている必要があります <a href="http://mysupport.netapp.com/cloudontap/support/iampolicies" target="_blank" rel="noopener">"Cloud Volumes ONTAP ノードのポリシーの要件"</a>。</p>
 </div>
@@ -2992,7 +2998,7 @@ Cloud Volumes ONTAP システムの作成後に AWS のデータ暗号化方式�
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">資格情報を編集します</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">この Cloud Volumes ONTAP システムで使用する AWS クレデンシャルと Marketplace サブスクリプションを選択します。[ サブスクリプションの追加 ] をクリックして、選択した資格情報をサブスクリプションに関連付けます。従量課金制の Cloud Volumes ONTAP システムを作成するには、 AWS Marketplace から Cloud Volumes ONTAP へのサブスクリプションに関連付けられている AWS クレデンシャルを選択する必要があります。お客様が作成した Cloud Volumes ONTAP 9.6 以降の PAYGO システムと、有効にしたアドオン機能ごとに、このサブスクリプションから料金が請求されます。<a href="task_adding_aws_accounts.html">"Cloud Manager に AWS クレデンシャルを追加する方法について説明します"</a>。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">この Cloud Volumes ONTAP システムで使用する AWS クレデンシャルと Marketplace サブスクリプションを選択します。Add Subscription * をクリックして、選択したクレデンシャルを新しい AWS Marketplace サブスクリプションに関連付けます。サブスクリプションは、年間契約の場合と、 Cloud Volumes ONTAP の料金を 1 時間ごとに支払う場合があります。NetApp （ BYOL ）からライセンスを直接購入した場合、 AWS サブスクリプションは必要ありません。<a href="task_adding_aws_accounts.html">"Cloud Manager に AWS クレデンシャルを追加する方法について説明します"</a>。</p></td>
 </tr>
 </tbody>
 </table>
@@ -3090,22 +3096,28 @@ Cloud Volumes ONTAP システムの作成後に AWS のデータ暗号化方式�
 </div>
 </li>
 <li>
-<p>* ライセンスとサポートサイトのアカウント * ：従量課金制または BYOL のどちらを使用するかを指定し、 NetApp Support Site のアカウントを指定します。</p>
+<p>* License and NSS Account * ：このシステムで使用するライセンスオプションを指定し、ネットアップサポートサイトのアカウントを指定します。</p>
 <div class="paragraph">
-<p>ライセンスの仕組みについては、を参照してください <a href="concept_licensing.html">"ライセンス"</a>。</p>
+<p>BYOL ライセンスの仕組みについては、を参照してください <a href="concept_licensing.html">"ライセンス"</a>。</p>
 </div>
 <div class="paragraph">
-<p>NetApp Support Site のアカウントは、従量課金制の場合は任意ですが、 BYOL システムの場合は必須です。 <a href="task_adding_nss_accounts.html">"ネットアップサポートサイトのアカウントを追加する方法について説明します"</a>。</p>
-</div>
-</li>
-<li>
-<p>* 構成済みパッケージ * ： Cloud Volumes ONTAP システムをすばやく起動するには、パッケージを 1 つ選択するか、 * 独自の構成を作成 * をクリックします。</p>
-<div class="paragraph">
-<p>いずれかのパッケージを選択した場合は、ボリュームを指定してから、設定を確認して承認するだけで済みます。</p>
+<p>BYOL システムには、 NetApp Support Site のアカウントが必要です。 <a href="task_adding_nss_accounts.html">"ネットアップサポートサイトのアカウントを追加する方法について説明します"</a>。</p>
 </div>
 </li>
 <li>
-<p>* IAM Role * ：デフォルトのオプションをそのまま使用し、 Cloud Manager で役割を作成する必要があります。</p>
+<p>* Cloud Volumes ONTAP 環境設定 * （年間契約のみ）：デフォルト設定を確認して [* 続行 ] をクリックするか、 [* 構成の変更 *] をクリックして独自の構成を選択します。</p>
+<div class="paragraph">
+<p>デフォルトの設定を使用している場合、ボリュームを指定し、構成を確認および承認するだけで済みます。</p>
+</div>
+</li>
+<li>
+<p>* 構成済みパッケージ * （時間単位または BYOL のみ）： Cloud Volumes ONTAP をすばやく起動するパッケージを 1 つ選択するか、 * 構成の変更 * をクリックして独自の構成を選択します。</p>
+<div class="paragraph">
+<p>いずれかのパッケージを選択した場合、ボリュームを指定し、構成を確認および承認するだけで済みます。</p>
+</div>
+</li>
+<li>
+<p>* IAM ロール * ： Cloud Manager にロールを割り当てるには、デフォルトのオプションを使用することを推奨します。</p>
 <div class="paragraph">
 <p>独自のポリシーを使用する場合は、それが満たされている必要があります <a href="http://mysupport.netapp.com/cloudontap/support/iampolicies" target="_blank" rel="noopener">"Cloud Volumes ONTAP ノードと HA のポリシー要件 メディエーター"</a>。</p>
 </div>
