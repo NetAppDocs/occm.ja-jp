@@ -56,6 +56,9 @@ Cloud Sync ライセンスは、ネットアップの担当者からも入手で
 
 link:concept_cloud_sync.html["ライセンスの詳細については、こちらをご覧ください。"]。
 
+
+NOTE: Cloud Volumes Service と Azure NetApp Files には Cloud Sync 関係が無償で用意されています。
+
 * リソース料金 *
 
 リソース料金は、クラウドでデータブローカーを実行するためのコンピューティングコストとストレージコストに関連しています。

@@ -149,7 +149,15 @@ Cloud Manager にライセンスを追加する際には、シリアル番号を
 
 .手順
 . にアクセスします https://mysupport.netapp.com["ネットアップサポートサイト"^] [ システム ] 、 [ ソフトウェアライセンス ] の順にクリックします。
-. ライセンスファイルを取得するには、 Cloud Backup のシリアル番号と Cloud Manager System ID （サポートサイトではテナント ID と呼ばれます）を入力します。
+. Cloud Backup のシリアル番号を入力します。
++
+image:screenshot_cloud_backup_license_step1.gif["シリアル番号で検索したあとのライセンスの一覧を示すスクリーンショット。"]
+
+. [* License Key] で、 [* Get NetApp License File* ] をクリックします。
+. Cloud Manager システム ID （サポートサイトではテナント ID と呼ばれます）を入力し、 * Submit * をクリックします。
++
+image:screenshot_cloud_backup_license_step2.gif["ライセンスの取得ダイアログボックスを示すスクリーンショット。テナント ID を入力し、送信をクリックしてライセンスファイルをダウンロードします。"]
+
 +
 link:task_finding_system_id.html["システム ID の確認方法について説明します"]。
 

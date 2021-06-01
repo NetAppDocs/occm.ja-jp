@@ -10479,7 +10479,6 @@
   <block id="583571647e284c9fed0a15301f155dba" category="section-title">Cloud Backup ライセンスファイルを取得します</block>
   <block id="26d69ee75480a17160357d140e6e88b1" category="paragraph">Cloud Manager にライセンスを追加する際には、シリアル番号を入力するか、 NLF ライセンスファイルをアップロードできます。</block>
   <block id="fe2108e5ca97a96400711d61ab05d245" category="list-text">にアクセスします<block ref="fcc52edac3ce57829c48ee35d97a295d" category="inline-link-rx"></block> [ システム ] 、 [ ソフトウェアライセンス ] の順にクリックします。</block>
-  <block id="9f2aebf05073d80bcffdd3338211f992" category="list-text">ライセンスファイルを取得するには、 Cloud Backup のシリアル番号と Cloud Manager System ID （サポートサイトではテナント ID と呼ばれます）を入力します。</block>
   <block id="06439c1a8a7d76c8738cc05a9c7d261a" category="inline-link-macro">システム ID の確認方法について説明します</block>
   <block id="868c0fce77eaa7db10627404ab096f55" category="paragraph"><block ref="8522e0bfe607f9cdf38a37b711a67e4a" category="inline-link-macro-rx"></block>。</block>
   <block id="132ebd95e1229f92e8ab53968783e1bc" category="section-title">Cloud Backup ライセンスを追加または更新する</block>
@@ -10500,4 +10499,12 @@
   <block id="a6f44cada6b6ce69a44f85c0c202e270" category="list-text">9.7 以前： 2 日から 63 日</block>
   <block id="2e1602577b506088aeed8165e506d1e4" category="list-text">ボリュームの作成時や既存のボリュームの変更時に、 API 要求で _minimumCoolingDays_ パラメータを使用します。</block>
   <block id="ae608892fc80b71b90aa467b2e5a2e0b" category="sidebar">BYOL のライセンス</block>
+  <block id="28e72eb89ddfdb4da0dd6569b502b074" category="admonition">Cloud Volumes Service と Azure NetApp Files には Cloud Sync 関係が無償で用意されています。</block>
+  <block id="a5b5b0541e53323b7a48d3cc8e16aa16" category="list-text">Cloud Backup のシリアル番号を入力します。</block>
+  <block id="5190e9ec018f5e661ec4b31ff1b34423" category="inline-image-macro">シリアル番号で検索したあとのライセンスの一覧を示すスクリーンショット。</block>
+  <block id="193bccfc2cf277cad00678895e527b35" category="paragraph"><block ref="193bccfc2cf277cad00678895e527b35" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8e04bab9d0c0964365e3483da66e2f09" category="list-text">[* License Key] で、 [* Get NetApp License File* ] をクリックします。</block>
+  <block id="d24f4170fb73ab7e4225910af6a7b6b3" category="list-text">Cloud Manager システム ID （サポートサイトではテナント ID と呼ばれます）を入力し、 * Submit * をクリックします。</block>
+  <block id="56273f3344c87fabbf5196fba9816fff" category="inline-image-macro">ライセンスの取得ダイアログボックスを示すスクリーンショット。テナント ID を入力し、送信をクリックしてライセンスファイルをダウンロードします。</block>
+  <block id="7ca3a83129f844a42c263755a0fa4a32" category="paragraph"><block ref="7ca3a83129f844a42c263755a0fa4a32" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
