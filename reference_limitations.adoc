@@ -61,3 +61,9 @@ Cloud Manager では、 Cloud Volumes ONTAP を以前のバージョンにダウ
 == Cloud Manager は FlexGroup ボリュームをサポートしていません
 
 Cloud Volumes ONTAP では FlexGroup ボリュームがサポートされますが、 Cloud Manager ではサポートされません。System Manager または CLI から FlexGroup ボリュームを作成する場合は、 Cloud Manager の容量管理モードを手動に設定する必要があります。FlexGroup ボリュームで自動モードが適切に機能しない可能性があります。
+
+
+
+== Cloud Manager は ONTAP S3 をサポートしていません
+
+Azure の Cloud Volumes ONTAP は S3 を使用するオブジェクトをサポートしていますが、 Cloud Manager はこの機能の管理機能を提供しません。CLI を使用することが、 Cloud Volumes ONTAP からの S3 クライアントアクセスを設定するためのベストプラクティスです。詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-s3-cg/home.html["S3 構成パワーガイド"^]。

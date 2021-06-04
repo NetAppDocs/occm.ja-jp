@@ -226,7 +226,7 @@ NOTE: 現在、 Cloud Compliance インスタンスがオンプレミスにイ�
 を参照してください <<Reviewing prerequisites,前提条件の確認>> Cloud Compliance がインターネット経由でアクセスできる必要がある要件とエンドポイントの一覧については、を参照してください。
 
 .手順
-. から Cloud Compliance ソフトウェアをダウンロードします https://mysupport.netapp.com/site/products/all/details/cloud-compliance/downloads-tab/["ネットアップサポートサイト"^]。
+. から Cloud Compliance ソフトウェアをダウンロードします https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["ネットアップサポートサイト"^]。
 . 使用する Linux ホストにインストーラファイルをコピーします (`cp またはその他の方法を使用 ) 。
 . Cloud Manager で、 * コンプライアンス * をクリックします。
 . [Activate Cloud Compliance] をクリックします。

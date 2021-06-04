@@ -2905,7 +2905,6 @@
   <block id="d7be65dc8db5048008197292f0b965c1" category="list-text">Cloud Compliance をインストールするには root 権限が必要です。</block>
   <block id="5fa46b040631a276395a8268036807be" category="paragraph">を参照してください <block ref="25129395e5b12ac67164b21d221e0162" category="inline-xref-macro-rx"></block> Cloud Compliance がインターネット経由でアクセスできる必要がある要件とエンドポイントの一覧については、を参照してください。</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">ネットアップサポートサイト</block>
-  <block id="39988fb6532e60acf35d7aaaeb0bee15" category="list-text">から Cloud Compliance ソフトウェアをダウンロードします<block ref="c11821707a75d4202291b064307903ec" category="inline-link-rx"></block>。</block>
   <block id="bbdb5f5f026c712f36de4a68700316f5" category="list-text">使用する Linux ホストにインストーラファイルをコピーします (`cp またはその他の方法を使用 ) 。</block>
   <block id="3ff3d473d5af3742f1ab9faf10179618" category="inline-image-macro">Cloud Compliance をオンプレミスに導入するボタンを選択するスクリーンショット。</block>
   <block id="c7e29f2a9d31a48c059703af31007d31" category="paragraph"><block ref="c7e29f2a9d31a48c059703af31007d31" category="inline-image-macro-rx" type="image"></block></block>
@@ -10507,4 +10506,8 @@
   <block id="d24f4170fb73ab7e4225910af6a7b6b3" category="list-text">Cloud Manager システム ID （サポートサイトではテナント ID と呼ばれます）を入力し、 * Submit * をクリックします。</block>
   <block id="56273f3344c87fabbf5196fba9816fff" category="inline-image-macro">ライセンスの取得ダイアログボックスを示すスクリーンショット。テナント ID を入力し、送信をクリックしてライセンスファイルをダウンロードします。</block>
   <block id="7ca3a83129f844a42c263755a0fa4a32" category="paragraph"><block ref="7ca3a83129f844a42c263755a0fa4a32" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ddaee728b8a565988a2f24a7b6d7444f" category="list-text">から Cloud Compliance ソフトウェアをダウンロードします<block ref="0a75c5e2697813218978a09f1ac8297e" category="inline-link-rx"></block>。</block>
+  <block id="bad6c02700d31ece20defc3ac35d1492" category="section-title">Cloud Manager は ONTAP S3 をサポートしていません</block>
+  <block id="53a519b7a61b6af057f2717112606b16" category="inline-link">S3 構成パワーガイド</block>
+  <block id="4243a5dbf12019d6d2f3c44c07bc42c1" category="paragraph">Azure の Cloud Volumes ONTAP は S3 を使用するオブジェクトをサポートしていますが、 Cloud Manager はこの機能の管理機能を提供しません。CLI を使用することが、 Cloud Volumes ONTAP からの S3 クライアントアクセスを設定するためのベストプラクティスです。詳細については、を参照してください<block ref="49e8fee748cd4c8d6f01bdb03113fc2a" category="inline-link-rx"></block>。</block>
 </blocks>
