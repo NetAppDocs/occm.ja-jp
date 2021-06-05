@@ -6590,13 +6590,9 @@
   <block id="f5f5988698b949e49e36702f4fc7df36" category="inline-link-macro">ネットアップサポートサイトのアカウントをクラウドに追加する方法をご確認ください マネージャー</block>
   <block id="f1cd6d31c3a036a598e321c723c0be53" category="paragraph"><block ref="32e626c7d76b78d19230190de52230bd" category="inline-link-macro-rx"></block>。</block>
   <block id="d3a6b59205bcd443ea7b2bf7e8be93ef" category="paragraph">Cloud Manager がセキュアなインターネット接続経由でライセンスファイルにアクセスできない場合は、ユーザがファイルを取得して、 Cloud Manager に手動でアップロードできます。手順については、を参照してください <block ref="95cc1032e7981b665be882d0689efeb3" category="inline-link-macro-rx"></block>。</block>
-  <block id="4bfd46a9460dc48fe14e777a12b55637" category="section-title">ライセンスの有効期限に関する警告</block>
-  <block id="7146d69ab946ed17d9e6d96a5af27612" category="paragraph">ライセンスの有効期限が切れる 30 日前と、ライセンスの有効期限が切れる 30 日前に、 Cloud Manager から警告が表示されます。次の図は、 30 日間の有効期限の警告を示しています。</block>
   <block id="f79123cc25e79510a95a889982410bd2" category="inline-image-macro">スクリーンショット：警告アイコンが含まれている Cloud Volumes ONTAP の作業環境を示します。アイコンは、アクションが必要であることを示します。</block>
-  <block id="35426c6a6df687e2a21cb45cdf86f0c3" category="paragraph"><block ref="35426c6a6df687e2a21cb45cdf86f0c3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c37e9cbce7ccf91185287d367ae50550" category="paragraph">メッセージを確認する作業環境を選択できます。</block>
   <block id="07dca0e3c1c76892753cb53a563914c8" category="paragraph">期限までにライセンスを更新しない場合は、 Cloud Volumes ONTAP システムがシャットダウンされます。再起動すると、自動的にシャットダウンされます。</block>
-  <block id="c4c51374fda12f05a9ee0dab7722011b" category="admonition">Cloud Volumes ONTAP では、 EMS （ Event Management System ）イベント通知を使用して、電子メール、 SNMP トラップホスト、または syslog サーバから通知することもできます。手順については、を参照してください<block ref="962809e6f801fb7dcd1dc71b8b507838" category="inline-link-rx"></block>。</block>
   <block id="318fdc8c42906f86f42afc53f8abf7c1" category="section-title">ライセンスの更新</block>
   <block id="9f2436ac2b76abf588a0062483967798" category="section-title">BYOL バックアップライセンス</block>
   <block id="0319f293dd0e5b1d2694066499385585" category="summary">Cloud Manager では、 Cloud Volumes ONTAP の導入時に使用する AWS クレデンシャルを選択できます。すべての Cloud Volumes ONTAP システムは、初期の AWS クレデンシャルを使用して導入することも、クレデンシャルを追加することもできます。</block>
@@ -8500,7 +8496,6 @@
   <block id="e1bba09cbe5efe3bebe61f9c17015ce4" category="paragraph"><block ref="e1bba09cbe5efe3bebe61f9c17015ce4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="19592537bd50c63100e725f5747acd5b" category="admonition">Cloud Compliance で準拠スキャンを開始するにはバックアップの作成を完了する必要があるため、スキャン結果はすぐには使用できません。</block>
   <block id="1b9c804e51ed46be07c65d2c1e4fa799" category="paragraph">Cloud Manager によってライセンスが追加または更新され、 Cloud Backup Service がアクティブになります。</block>
-  <block id="aff6def6123d0e8f26461c52363dc459" category="summary">各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Cloud Backup でも利用できます。</block>
   <block id="ac985ea9c4d878384361c6105a375a9d" category="paragraph">BYOL バックアップライセンスを使用すると、一定期間、および最大容量のバックアップスペースの間、 Cloud Backup を使用するライセンスをネットアップから購入できます。いずれかの制限に達すると、ライセンスを更新する必要があります。</block>
   <block id="681f1084166f20d74471209f7ae3801c" category="inline-link-macro">Cloud Backup BYOL ライセンスの詳細については、こちらをご覧ください</block>
   <block id="026eaad4af2341087f3379f38245f2d3" category="paragraph"><block ref="35d7c3c904ba1c00e82974a26d8119ce" category="inline-link-macro-rx"></block>。</block>
@@ -10510,4 +10505,14 @@
   <block id="bad6c02700d31ece20defc3ac35d1492" category="section-title">Cloud Manager は ONTAP S3 をサポートしていません</block>
   <block id="53a519b7a61b6af057f2717112606b16" category="inline-link">S3 構成パワーガイド</block>
   <block id="4243a5dbf12019d6d2f3c44c07bc42c1" category="paragraph">Azure の Cloud Volumes ONTAP は S3 を使用するオブジェクトをサポートしていますが、 Cloud Manager はこの機能の管理機能を提供しません。CLI を使用することが、 Cloud Volumes ONTAP からの S3 クライアントアクセスを設定するためのベストプラクティスです。詳細については、を参照してください<block ref="49e8fee748cd4c8d6f01bdb03113fc2a" category="inline-link-rx"></block>。</block>
+  <block id="8141cbd2dd808b9e48e91eaf3d5f2fe1" category="list-text">グローバルアクセスは無効です</block>
+  <block id="83d4ff33554cb62b1f10057bae8d85ce" category="paragraph">グローバルアクセスはデフォルトでは無効になっていますが、展開後に有効にすることができます。クロスリージョントラフィックのレイテンシが大幅に高くなるため、この機能は無効にしました。誤ってリージョン間にマウントすることが原因でマイナスの体験が得られないようにしたいと考えていました。このオプションを有効にすることは、ビジネスニーズに固有のものです。</block>
+  <block id="c2ab99bd945e5cbe0ced8065b7f0697f" category="summary">各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager は、ライセンスを管理し、期限が切れる前に警告を表示することでプロセスを簡易化します。BYOL ライセンスは、 Cloud Backup でも利用できます。</block>
+  <block id="9e46ae67606bb59984f8428d1749a0ae" category="section-title">ライセンスの有効期限</block>
+  <block id="def7321c87f4d842fa49c35c563e78b7" category="paragraph">Cloud Manager では、ライセンスの有効期限の 30 日前と、ライセンスの有効期限が切れる 30 日後に警告が表示されます。次の図は、ユーザインターフェイスに表示される 30 日間の有効期限に関する警告を示しています。</block>
+  <block id="b84ac98f9fe044e030979954b40bbc4b" category="paragraph"><block ref="b84ac98f9fe044e030979954b40bbc4b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="37c21fd5ff2fa9bde93634bf5a932af5" category="paragraph">アカウント管理者がオプションを有効にしている場合、 Cloud Manager は Cloud Volumes ONTAP レポートにライセンス有効期限の警告を E メールで送信します。</block>
+  <block id="56f75fdbb9ce5a4752e551f959b89e4a" category="inline-image-macro">E メールで Cloud Volumes ONTAP レポートを有効にするチェックボックスを示すユーザプロファイルパネルのスクリーンショット。</block>
+  <block id="1fb455e5aae29505f4d1b89c2809abec" category="paragraph"><block ref="1fb455e5aae29505f4d1b89c2809abec" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3bfafbc86fa9c51143431cac68dd84be" category="paragraph">E メールで送信されたレポートには、 2 週間ごとにライセンスの有効期限に関する警告が記載され</block>
 </blocks>

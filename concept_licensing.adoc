@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_licensing.html 
 keywords: licenses, licensing, byol, license, subscription, renewal, expire, netapp support site, account, credentials, file, license file, upload, nlf, cloud backup license, byol backup, license for cloud backup 
-summary: 各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Cloud Backup でも利用できます。 
+summary: 各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager は、ライセンスを管理し、期限が切れる前に警告を表示することでプロセスを簡易化します。BYOL ライセンスは、 Cloud Backup でも利用できます。 
 ---
 = BYOL のライセンスの概要
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: 各 Cloud Volumes ONTAP BYOL システムには、アクティブなサ
 
 
 [role="lead"]
-各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Cloud Backup でも利用できます。
+各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager は、ライセンスを管理し、期限が切れる前に警告を表示することでプロセスを簡易化します。BYOL ライセンスは、 Cloud Backup でも利用できます。
 
 https://docs.netapp.com/us-en/cloud-volumes-ontap/index.html["その他の情報については、『 Cloud Volumes ONTAP リリースノート』を参照してください ライセンスオプション"^]。
 
@@ -42,18 +42,21 @@ Cloud Manager がセキュアなインターネット接続経由でライセン
 
 
 
-=== ライセンスの有効期限に関する警告
+=== ライセンスの有効期限
 
-ライセンスの有効期限が切れる 30 日前と、ライセンスの有効期限が切れる 30 日前に、 Cloud Manager から警告が表示されます。次の図は、 30 日間の有効期限の警告を示しています。
+Cloud Manager では、ライセンスの有効期限の 30 日前と、ライセンスの有効期限が切れる 30 日後に警告が表示されます。次の図は、ユーザインターフェイスに表示される 30 日間の有効期限に関する警告を示しています。
 
 image:screenshot_warning.gif["スクリーンショット：警告アイコンが含まれている Cloud Volumes ONTAP の作業環境を示します。アイコンは、アクションが必要であることを示します。"]
 
 メッセージを確認する作業環境を選択できます。
 
+アカウント管理者がオプションを有効にしている場合、 Cloud Manager は Cloud Volumes ONTAP レポートにライセンス有効期限の警告を E メールで送信します。
+
+image:screenshot_cvo_report.gif["E メールで Cloud Volumes ONTAP レポートを有効にするチェックボックスを示すユーザプロファイルパネルのスクリーンショット。"]
+
+E メールで送信されたレポートには、 2 週間ごとにライセンスの有効期限に関する警告が記載され
+
 期限までにライセンスを更新しない場合は、 Cloud Volumes ONTAP システムがシャットダウンされます。再起動すると、自動的にシャットダウンされます。
-
-
-NOTE: Cloud Volumes ONTAP では、 EMS （ Event Management System ）イベント通知を使用して、電子メール、 SNMP トラップホスト、または syslog サーバから通知することもできます。手順については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-ems/home.html["ONTAP 9 EMS 構成エクスプレスガイド"^]。
 
 
 
