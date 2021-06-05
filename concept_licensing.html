@@ -9,7 +9,7 @@
   <meta property="og:title" content="BYOL のライセンスの概要 | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ja-jp/occm/concept_licensing.html" />
-	<meta property="og:description" content="各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Clou..." />
+	<meta property="og:description" content="各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager は、ライセンスを管理し、期限が切れる前に警告を表示することでプロセスを簡易化します。BYOL ライセンスは、 Cloud..." />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/occm/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,7 +18,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Clou...">
+  <meta name="description" content="各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager は、ライセンスを管理し、期限が切れる前に警告を表示することでプロセスを簡易化します。BYOL ライセンスは、 Cloud...">
   <meta name="keywords" content=" licenses, licensing, byol, license, subscription, renewal, expire, netapp support site, account, credentials, file, license file, upload, nlf, cloud backup license, byol backup, license for cloud backup">
   
   
@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-31 05:29:06 +0000">05/31/2021</time>
+    <time datetime="2021-06-05 18:06:49 +0000">06/05/2021</time>
     
   
 
@@ -2507,7 +2507,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager では、ライセンスを管理し、有効期限が切れる前に通知することで、プロセスを簡素化します。BYOL ライセンスは、 Cloud Backup でも利用できます。</p>
+<p>各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager は、ライセンスを管理し、期限が切れる前に警告を表示することでプロセスを簡易化します。BYOL ライセンスは、 Cloud Backup でも利用できます。</p>
 </div>
 <div class="paragraph">
 <p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap/index.html" target="_blank" rel="noopener">"その他の情報については、『 Cloud Volumes ONTAP リリースノート』を参照してください ライセンスオプション"</a>。</p>
@@ -2551,9 +2551,9 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="ライセンスの有効期限に関する警告">ライセンスの有効期限に関する警告</h3>
+<h3 id="ライセンスの有効期限">ライセンスの有効期限</h3>
 <div class="paragraph">
-<p>ライセンスの有効期限が切れる 30 日前と、ライセンスの有効期限が切れる 30 日前に、 Cloud Manager から警告が表示されます。次の図は、 30 日間の有効期限の警告を示しています。</p>
+<p>Cloud Manager では、ライセンスの有効期限の 30 日前と、ライセンスの有効期限が切れる 30 日後に警告が表示されます。次の図は、ユーザインターフェイスに表示される 30 日間の有効期限に関する警告を示しています。</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/screenshot_warning.gif" alt="スクリーンショット：警告アイコンが含まれている Cloud Volumes ONTAP の作業環境を示します。アイコンは、アクションが必要であることを示します。"></span></p>
@@ -2562,19 +2562,16 @@
 <p>メッセージを確認する作業環境を選択できます。</p>
 </div>
 <div class="paragraph">
-<p>期限までにライセンスを更新しない場合は、 Cloud Volumes ONTAP システムがシャットダウンされます。再起動すると、自動的にシャットダウンされます。</p>
+<p>アカウント管理者がオプションを有効にしている場合、 Cloud Manager は Cloud Volumes ONTAP レポートにライセンス有効期限の警告を E メールで送信します。</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="注記"></i>
-</td>
-<td class="content">
-Cloud Volumes ONTAP では、 EMS （ Event Management System ）イベント通知を使用して、電子メール、 SNMP トラップホスト、または syslog サーバから通知することもできます。手順については、を参照してください <a href="http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-ems/home.html" target="_blank" rel="noopener">"ONTAP 9 EMS 構成エクスプレスガイド"</a>。
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cvo_report.gif" alt="E メールで Cloud Volumes ONTAP レポートを有効にするチェックボックスを示すユーザプロファイルパネルのスクリーンショット。"></span></p>
+</div>
+<div class="paragraph">
+<p>E メールで送信されたレポートには、 2 週間ごとにライセンスの有効期限に関する警告が記載され</p>
+</div>
+<div class="paragraph">
+<p>期限までにライセンスを更新しない場合は、 Cloud Volumes ONTAP システムがシャットダウンされます。再起動すると、自動的にシャットダウンされます。</p>
 </div>
 </div>
 <div class="sect2">
