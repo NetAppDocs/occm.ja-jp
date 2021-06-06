@@ -9,7 +9,7 @@
   <meta property="og:title" content="データベーススキーマをスキャンしています | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ja-jp/occm/task_scanning_databases.html" />
-	<meta property="og:description" content="Cloud Compliance でデータベーススキーマのスキャンを開始するには、いくつかの手順を実行します。" />
+	<meta property="og:description" content="Cloud Data Sense でデータベーススキーマのスキャンを開始するには、いくつかの手順を実行します。" />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/occm/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,8 +18,8 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Cloud Compliance でデータベーススキーマのスキャンを開始するには、いくつかの手順を実行します。">
-  <meta name="keywords" content=" cloud compliance, enable cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, databases, database schemas, Oracle, SAP HANA, SQL Server, MongoDB, PostgreSQL">
+  <meta name="description" content="Cloud Data Sense でデータベーススキーマのスキャンを開始するには、いくつかの手順を実行します。">
+  <meta name="keywords" content=" cloud compliance, enable cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, databases, database schemas, Oracle, SAP HANA, SQL Server, MongoDB, PostgreSQL, Data Sense">
   
   
 
@@ -2267,12 +2267,12 @@
         <div class="na-navbar-padding"> データプライバシーに関する分析情報を入手できます</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_compliance.html">
-        Cloud Compliance の詳細をご確認ください
+        クラウドデータの意味をご確認ください
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> はじめに</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_deploy_cloud_compliance.html">
-        Cloud Compliance の導入
+        クラウドデータの導入センス
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
@@ -2303,7 +2303,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="reference_private_data_categories.html">
         プライベートデータのカテゴリ
       </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_compliance.html">
-        Cloud Compliance からデータソースを削除します
+        データセンスからデータソースを削除します
       </a></li><li class=" "><a class="na-navbar-padding" href="faq_cloud_compliance.html">
         よく寄せられる質問
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-20 14:13:06 +0000">05/20/2021</time>
+    <time datetime="2021-06-06 14:15:10 +0000">06/06/2021</time>
     
   
 
@@ -2499,7 +2499,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Cloud Compliance でデータベーススキーマのスキャンを開始するには、いくつかの手順を実行します。</p>
+<p>Cloud Data Sense でデータベーススキーマのスキャンを開始するには、いくつかの手順を実行します。</p>
 </div>
 </div>
 </div>
@@ -2516,9 +2516,9 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="cloud-compliance-インスタンスを導入します">Cloud Compliance インスタンスを導入します</h4>
+<h4 id="cloud-data-sense-インスタンスを導入する">Cloud Data Sense インスタンスを導入する</h4>
 <div class="paragraph quick-margin-para">
-<p><a href="task_deploy_cloud_compliance.html" target="_blank" rel="noopener">"Cloud Compliance の導入"</a> インスタンスが展開されていない場合。</p>
+<p><a href="task_deploy_cloud_compliance.html" target="_blank" rel="noopener">"クラウドデータの導入センス"</a> インスタンスが展開されていない場合。</p>
 </div>
 </div>
 <div class="sect3">
@@ -2539,12 +2539,12 @@
 <h2 id="前提条件の確認">前提条件の確認</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cloud Compliance を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認してください。</p>
+<p>Cloud Data Sense を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認します。</p>
 </div>
 <div class="sect2">
 <h3 id="サポートされるデータベース">サポートされるデータベース</h3>
 <div class="paragraph">
-<p>Cloud Compliance では、次のデータベースからスキーマをスキャンできます。</p>
+<p>Cloud Data Sense では、次のデータベースからスキーマをスキャンできます。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2587,7 +2587,7 @@
 <div class="sect2">
 <h3 id="データベースの要件">データベースの要件</h3>
 <div class="paragraph">
-<p>Cloud Compliance インスタンスに接続されたデータベースは、ホストされている場所に関係なくすべてスキャンできます。データベースに接続するには、次の情報が必要です。</p>
+<p>Cloud Data Sense インスタンスに接続されているデータベースは、どこでホストしているかに関係なく、すべてスキャンできます。データベースに接続するには、次の情報が必要です。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2603,7 +2603,7 @@
 <li>
 <p>スキーマへの読み取りアクセスを許可するクレデンシャル</p>
 <div class="paragraph">
-<p>ユーザー名とパスワードを選択する場合は、スキャンするすべてのスキーマとテーブルに対する完全な読み取り権限を持つユーザーを選択することが重要です。必要なすべての権限を持つ専用のユーザを Cloud Compliance システムに作成することを推奨します。</p>
+<p>ユーザー名とパスワードを選択する場合は、スキャンするすべてのスキーマとテーブルに対する完全な読み取り権限を持つユーザーを選択することが重要です。必要なすべての権限を持つクラウドデータセンスシステム専用のユーザを作成することを推奨します。</p>
 </div>
 </li>
 <li>
@@ -2618,7 +2618,7 @@
 <h2 id="データベースサーバを追加しています">データベースサーバを追加しています</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>が必要です <a href="task_deploy_cloud_compliance.html" target="_blank" rel="noopener">"Cloud Manager に Cloud Compliance のインスタンスを導入済みである"</a>。</p>
+<p>が必要です <a href="task_deploy_cloud_compliance.html" target="_blank" rel="noopener">"Cloud Manager に Cloud Data Sense のインスタンスをすでに導入している"</a>。</p>
 </div>
 <div class="paragraph">
 <p>スキーマが存在するデータベース・サーバを追加します。</p>
@@ -2645,7 +2645,7 @@
 <p>Oracle データベースの場合は、サービス名を入力します。</p>
 </li>
 <li>
-<p>Cloud Compliance がサーバにアクセスできるように、クレデンシャルを入力します。</p>
+<p>Cloud Data Sense がサーバにアクセスできるように、クレデンシャルを入力します。</p>
 </li>
 <li>
 <p>[Add DB Server* ] をクリックします。</p>
@@ -2686,7 +2686,7 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>Cloud Compliance によって、有効にしたデータベーススキーマのスキャンが開始されます。エラーが発生した場合は、エラーを修正するために必要なアクションとともに、 [ ステータス ] 列に表示されます。</p>
+<p>Cloud Data Sense は、有効にしたデータベーススキーマのスキャンを開始します。エラーが発生した場合は、エラーを修正するために必要なアクションとともに、 [ ステータス ] 列に表示されます。</p>
 </div>
 </div>
 </div>

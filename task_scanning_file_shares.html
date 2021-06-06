@@ -9,7 +9,7 @@
   <meta property="og:title" content="ファイル共有をスキャンしています | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ja-jp/occm/task_scanning_file_shares.html" />
-	<meta property="og:description" content="NetApp 以外の NFS または CIFS ファイル共有を Cloud Compliance で直接スキャンするには、いくつかの手順を実行します。これらのファイル共有は、オンプレミスでもクラウドでもかまいません。" />
+	<meta property="og:description" content="NetApp 以外の NFS または CIFS ファイル共有を Cloud Data Sense で直接スキャンするには、いくつかの手順を実行します。これらのファイル共有は、オンプレミスでもクラウドでもかまいません。" />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/occm/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,8 +18,8 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="NetApp 以外の NFS または CIFS ファイル共有を Cloud Compliance で直接スキャンするには、いくつかの手順を実行します。これらのファイル共有は、オンプレミスでもクラウドでもかまいません。">
-  <meta name="keywords" content=" cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb">
+  <meta name="description" content="NetApp 以外の NFS または CIFS ファイル共有を Cloud Data Sense で直接スキャンするには、いくつかの手順を実行します。これらのファイル共有は、オンプレミスでもクラウドでもかまいません。">
+  <meta name="keywords" content=" cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, Data Sense">
   
   
 
@@ -2267,12 +2267,12 @@
         <div class="na-navbar-padding"> データプライバシーに関する分析情報を入手できます</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_compliance.html">
-        Cloud Compliance の詳細をご確認ください
+        クラウドデータの意味をご確認ください
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> はじめに</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_deploy_cloud_compliance.html">
-        Cloud Compliance の導入
+        クラウドデータの導入センス
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
@@ -2303,7 +2303,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="reference_private_data_categories.html">
         プライベートデータのカテゴリ
       </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_compliance.html">
-        Cloud Compliance からデータソースを削除します
+        データセンスからデータソースを削除します
       </a></li><li class=" "><a class="na-navbar-padding" href="faq_cloud_compliance.html">
         よく寄せられる質問
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-04-24 02:35:46 +0000">04/24/2021</time>
+    <time datetime="2021-06-06 14:15:10 +0000">06/06/2021</time>
     
   
 
@@ -2499,7 +2499,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>NetApp 以外の NFS または CIFS ファイル共有を Cloud Compliance で直接スキャンするには、いくつかの手順を実行します。これらのファイル共有は、オンプレミスでもクラウドでもかまいません。</p>
+<p>NetApp 以外の NFS または CIFS ファイル共有を Cloud Data Sense で直接スキャンするには、いくつかの手順を実行します。これらのファイル共有は、オンプレミスでもクラウドでもかまいません。</p>
 </div>
 </div>
 </div>
@@ -2516,9 +2516,9 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="cloud-compliance-インスタンスを導入します">Cloud Compliance インスタンスを導入します</h4>
+<h4 id="cloud-data-sense-インスタンスを導入する">Cloud Data Sense インスタンスを導入する</h4>
 <div class="paragraph quick-margin-para">
-<p><a href="task_deploy_cloud_compliance.html" target="_blank" rel="noopener">"Cloud Compliance の導入"</a> インスタンスが展開されていない場合。</p>
+<p><a href="task_deploy_cloud_compliance.html" target="_blank" rel="noopener">"クラウドデータの導入センス"</a> インスタンスが展開されていない場合。</p>
 </div>
 </div>
 <div class="sect3">
@@ -2539,7 +2539,7 @@
 <h2 id="ファイル共有の要件の確認">ファイル共有の要件の確認</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cloud Compliance を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認してください。</p>
+<p>Cloud Data Sense を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認します。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2547,10 +2547,10 @@
 <p>共有は、クラウド内やオンプレミスなど、どこでもホストできます。ネットアップ以外のストレージシステム上のファイル共有です。</p>
 </li>
 <li>
-<p>Cloud Compliance インスタンスと共有の間にネットワーク接続が必要です。</p>
+<p>データセンスインスタンスと共有の間にネットワーク接続が必要です。</p>
 </li>
 <li>
-<p>次のポートが Cloud Compliance インスタンスに対して開いていることを確認します。</p>
+<p>これらのポートが Data Sense インスタンスに対して開いていることを確認します。</p>
 <div class="ulist">
 <ul>
 <li>
@@ -2566,7 +2566,7 @@
 <p>追加する共有のリストは、「 &lt;host_name&gt; ： /&lt;share_path&gt;` 」の形式で指定する必要があります。共有は個別に入力することも、スキャンするファイル共有の行区切りリストを指定することもできます。</p>
 </li>
 <li>
-<p>CIFS （ SMB ）共有の場合は、共有への読み取りアクセスを提供する Active Directory クレデンシャルがあることを確認します。管理者クレデンシャルが推奨されるのは、 Cloud Compliance で高い権限が必要なデータをスキャンする場合です。</p>
+<p>CIFS （ SMB ）共有の場合は、共有への読み取りアクセスを提供する Active Directory クレデンシャルがあることを確認します。管理者クレデンシャルが推奨されるのは、 Cloud Data Sense で管理者権限が必要なデータをスキャンする必要がある場合です。</p>
 </li>
 </ul>
 </div>
@@ -2576,7 +2576,7 @@
 <h2 id="ファイル共有のグループを作成します">ファイル共有のグループを作成します</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>が必要です <a href="task_deploy_cloud_compliance.html" target="_blank" rel="noopener">"Cloud Manager に Cloud Compliance のインスタンスを導入済みである"</a>。</p>
+<p>が必要です <a href="task_deploy_cloud_compliance.html" target="_blank" rel="noopener">"Cloud Manager に Cloud Data Sense のインスタンスをすでに導入している"</a>。</p>
 </div>
 <div class="paragraph">
 <p>ファイル共有を追加する前に、「 group 」というファイル共有を追加する必要があります。グループはスキャンするファイル共有のコンテナであり、グループ名はそれらのファイル共有の作業環境名として使用されます。</p>
@@ -2607,7 +2607,7 @@
 <h2 id="グループへのファイル共有の追加">グループへのファイル共有の追加</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ファイル共有グループにファイル共有を追加すると、それらの共有内のファイルが Cloud Compliance でスキャンされます。共有は、「 &lt;host_name&gt; ： /&lt;share_path&gt;` 」の形式で追加します。</p>
+<p>ファイル共有グループにファイル共有を追加すると、これらの共有内のファイルが Cloud Data Sense によってスキャンされます。共有は、「 &lt;host_name&gt; ： /&lt;share_path&gt;` 」の形式で追加します。</p>
 </div>
 <div class="paragraph">
 <p>個々のファイル共有を追加することも、スキャンするファイル共有を 1 行で区切って指定することもできます。一度に最大 100 個の共有を追加できます。</p>
@@ -2654,7 +2654,7 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>Cloud Compliance によるスキャンが開始され、追加したファイル共有内のファイルがスキャンされ、ダッシュボードやその他の場所に結果が表示されます。</p>
+<p>Cloud Data Sense によって、追加したファイル共有内のファイルのスキャンが開始され、その結果がダッシュボードやその他の場所に表示されます。</p>
 </div>
 </div>
 </div>

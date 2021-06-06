@@ -9,7 +9,7 @@
   <meta property="og:title" content="組織に保存されているデータのコンプライアンスの詳細を表示する | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ja-jp/occm/task_controlling_private_data.html" />
-	<meta property="og:description" content="組織内の個人データと機密性の高い個人データに関する詳細を表示することで、個人データを管理できます。また、データに含まれる Cloud Compliance のカテゴリとファイルタイプを確認して、情報を可視化することもできます。" />
+	<meta property="og:description" content="組織内の個人データと機密性の高い個人データに関する詳細を表示することで、個人データを管理できます。また、クラウドデータで見つかったカテゴリやファイルタイプを確認することで、データを可視化することもできます。" />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/occm/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,7 +18,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="組織内の個人データと機密性の高い個人データに関する詳細を表示することで、個人データを管理できます。また、データに含まれる Cloud Compliance のカテゴリとファイルタイプを確認して、情報を可視化することもできます。">
+  <meta name="description" content="組織内の個人データと機密性の高い個人データに関する詳細を表示することで、個人データを管理できます。また、クラウドデータで見つかったカテゴリやファイルタイプを確認することで、データを可視化することもできます。">
   <meta name="keywords" content=" personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, filter data, permissions, csv file, highlights, policies">
   
   
@@ -2267,12 +2267,12 @@
         <div class="na-navbar-padding"> データプライバシーに関する分析情報を入手できます</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_compliance.html">
-        Cloud Compliance の詳細をご確認ください
+        クラウドデータの意味をご確認ください
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> はじめに</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_deploy_cloud_compliance.html">
-        Cloud Compliance の導入
+        クラウドデータの導入センス
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
@@ -2303,7 +2303,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="reference_private_data_categories.html">
         プライベートデータのカテゴリ
       </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_compliance.html">
-        Cloud Compliance からデータソースを削除します
+        データセンスからデータソースを削除します
       </a></li><li class=" "><a class="na-navbar-padding" href="faq_cloud_compliance.html">
         よく寄せられる質問
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-06 18:20:26 +0000">05/06/2021</time>
+    <time datetime="2021-06-06 14:15:10 +0000">06/06/2021</time>
     
   
 
@@ -2499,13 +2499,13 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>組織内の個人データと機密性の高い個人データに関する詳細を表示することで、個人データを管理できます。また、データに含まれる Cloud Compliance のカテゴリとファイルタイプを確認して、情報を可視化することもできます。</p>
+<p>組織内の個人データと機密性の高い個人データに関する詳細を表示することで、個人データを管理できます。また、クラウドデータで見つかったカテゴリやファイルタイプを確認することで、データを可視化することもできます。</p>
 </div>
 <div class="paragraph">
-<p>デフォルトでは、 Cloud Compliance ダッシュボードには、すべての作業環境とデータベースのコンプライアンスデータが表示されます。</p>
+<p>デフォルトでは、 Cloud Data Sense ダッシュボードには、すべての作業環境とデータベースのコンプライアンスデータが表示されます。</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_compliance_dashboard.png" alt="Cloud Compliance ダッシュボードのスクリーンショット"></span></p>
+<p><span class="image"><img src="./media/screenshot_compliance_dashboard.png" alt="クラウドデータセンスダッシュボードのスクリーンショット"></span></p>
 </div>
 <div class="paragraph">
 <p>一部の作業環境のデータだけを表示する場合は、 <a href="#Viewing Dashboard data for specific working environments">それらの作業環境を選択します</a>。</p>
@@ -2516,24 +2516,22 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="個人データ">個人データ</h2>
+<h2 id="個人データを含むファイルを表示する">個人データを含むファイルを表示する</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cloud Compliance は、データ内の特定の単語、文字列、パターン（ Regex ）を自動的に識別します。たとえば、個人識別情報（ PII ）、クレジットカード番号、社会保障番号、銀行口座番号などです。 <a href="reference_private_data_categories.html#types-of-personal-data" target="_blank" rel="noopener">"すべてのリストを参照してください"</a>。</p>
+<p>Cloud Data Sense は、データ内の特定の単語、文字列、パターン（ Regex ）を自動的に識別します。たとえば、個人識別情報（ PII ）、クレジットカード番号、社会保障番号、銀行口座番号などです。 <a href="reference_private_data_categories.html#types-of-personal-data" target="_blank" rel="noopener">"すべてのリストを参照してください"</a>。</p>
 </div>
 <div class="paragraph">
 <p>また、スキャン対象のデータベースサーバを追加した場合、 Data Fusion の機能を使用してファイルをスキャンし、データベースから一意の識別子がこれらのファイルまたは他のデータベースのいずれに存在するかを特定できます。を参照してください <a href="task_managing_data_fusion.html" target="_blank" rel="noopener">"Data Fusion を使用して個人データ識別子を追加する"</a> を参照してください。</p>
 </div>
 <div class="paragraph">
-<p>一部のタイプの個人データについては、 Cloud Compliance は _ 近接性検証 _ を使用してその結果を検証します。検証は、見つかった個人データに近接した 1 つまたは複数の定義済みキーワードを検索することによって行われます。たとえば、 Cloud Compliance は米国を識別しますソーシャルセキュリティ番号（ SSN ）は、 IT の横に近接語（ <em>SSN_or_social security</em> など）が表示されている場合、 SSN として表示されます。 <a href="reference_private_data_categories.html#types-of-personal-data" target="_blank" rel="noopener">"個人データのテーブル"</a> Cloud Compliance がプロキシミティ検証を使用する状況を示します。</p>
+<p>一部のタイプの個人データについては、データセンスは _ 近接性検証 _ を使用してその結果を検証します。検証は、見つかった個人データに近接した 1 つまたは複数の定義済みキーワードを検索することによって行われます。たとえば、データセンスは米国を識別しますソーシャルセキュリティ番号（ SSN ）は、 IT の横に近接語（ <em>SSN_or_social security</em> など）が表示されている場合、 SSN として表示されます。 <a href="reference_private_data_categories.html#types-of-personal-data" target="_blank" rel="noopener">"個人データのテーブル"</a> データセンスがプロキシミティ検証を使用する場合に表示されます</p>
 </div>
-<div class="sect2">
-<h3 id="個人データを含むファイルを表示する">個人データを含むファイルを表示する</h3>
 <div class="olist arabic">
 <div class="title">手順</div>
 <ol class="arabic">
 <li>
-<p>Cloud Manager の上部で、 * コンプライアンス * をクリックし、 * ダッシュボード * タブをクリックします。</p>
+<p>Cloud Manager の上部で、 * Data Sense * をクリックし、 * Compliance * タブをクリックします。</p>
 </li>
 <li>
 <p>すべての個人データの詳細を調査するには、個人データの割合の横にあるアイコンをクリックします。</p>
@@ -2542,7 +2540,7 @@
 </div>
 </li>
 <li>
-<p>特定の種類の個人データの詳細を調べるには、 [ * すべて表示 * ] をクリックし、特定の種類の個人データの [ 結果の調査 * ] アイコンをクリックします。</p>
+<p>特定の種類の個人データの詳細を調査するには、 [ * すべて表示 * ] をクリックしてから、特定の種類の個人データの [ 調査結果 * ] アイコン（電子メールアドレスなど）をクリックします。</p>
 <div class="paragraph">
 <p><span class="image"><img src="./media/screenshot_personal_files.gif" alt="個人ファイルダイアログボックスのスクリーンショット。個人データタイプの横にある調査結果アイコンをクリックできます。"></span></p>
 </div>
@@ -2557,18 +2555,17 @@
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
-<h2 id="機密性の高い個人データ">機密性の高い個人データ</h2>
+<h2 id="機密性の高い個人データを含むファイルを表示する">機密性の高い個人データを含むファイルを表示する</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cloud Compliance は、などのプライバシー規制に従って、機密性の高い特別な個人情報を自動的に識別します <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&amp;from=EN#d1e2051-1-1" target="_blank" rel="noopener">"GDPR の第 9 、 10 記事"</a>。たとえば、人の健康、民族の起源、性的指向に関する情報などです。 <a href="reference_private_data_categories.html#types-of-sensitive-personal-data" target="_blank" rel="noopener">"すべてのリストを参照してください"</a>。</p>
+<p>クラウドデータセンスは、などのプライバシー規制によって定義された、特別な種類の機密情報を自動的に識別します <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&amp;from=EN#d1e2051-1-1" target="_blank" rel="noopener">"GDPR の第 9 、 10 記事"</a>。たとえば、人の健康、民族の起源、性的指向に関する情報などです。 <a href="reference_private_data_categories.html#types-of-sensitive-personal-data" target="_blank" rel="noopener">"すべてのリストを参照してください"</a>。</p>
 </div>
 <div class="paragraph">
-<p>Cloud Compliance は、人工知能（ AI ）、自然言語処理（ NLP ）、機械学習（ ML ）、コグニティブコンピューティング（ CC ）を使用して、スキャンするコンテンツの意味を理解し、エンティティを抽出してそれに応じて分類します。</p>
+<p>Cloud Data Sense は、人工知能（ AI ）、自然言語処理（ NLP ）、機械学習（ ML ）、コグニティブコンピューティング（ CC ）を使用して、スキャンするコンテンツの意味を理解し、エンティティを抽出してそれに応じて分類します。</p>
 </div>
 <div class="paragraph">
-<p>たとえば、機密性の高い GDPR データカテゴリの 1 つは民族起源です。クラウドコンプライアンスは、 NLP の能力を備えているため、「ジョージ・メキシカン」（ GDPR の第 9 条で規定されている機密データを示す）と「ジョージ・イメキシカン・フード」を読み取る文との違いを区別できます。</p>
+<p>たとえば、機密性の高い GDPR データカテゴリの 1 つは民族起源です。データセンスは NLP の能力を持つため、「ジョージ・メキシカン」と書かれた文（ GDPR の第 9 条に規定されている機密データを示す文）と「ジョージ・メキシカン料理を食べている文（ George is exican food ）」の違いを区別することができます。</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2582,13 +2579,11 @@
 </tr>
 </table>
 </div>
-<div class="sect2">
-<h3 id="機密性の高い個人データを含むファイルを表示する">機密性の高い個人データを含むファイルを表示する</h3>
 <div class="olist arabic">
 <div class="title">手順</div>
 <ol class="arabic">
 <li>
-<p>Cloud Manager の上部で、 * Compliance * をクリックします。</p>
+<p>Cloud Manager の上部で、 * Data Sense * をクリックし、 * Compliance * タブをクリックします。</p>
 </li>
 <li>
 <p>機密性の高い個人データの詳細を調べるには、個人データの割合の横にあるアイコンをクリックします。</p>
@@ -2609,12 +2604,11 @@
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
-<h2 id="カテゴリ">カテゴリ</h2>
+<h2 id="カテゴリ別にファイルを表示します">カテゴリ別にファイルを表示します</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cloud Compliance は、スキャンしたデータをさまざまなタイプのカテゴリに分類します。カテゴリは、各ファイルのコンテンツとメタデータの AI 分析に基づくトピックです。 <a href="reference_private_data_categories.html#types-of-categories" target="_blank" rel="noopener">"カテゴリのリストを参照してください"</a>。</p>
+<p>Cloud Data Sense は、スキャンしたデータをさまざまなタイプのカテゴリに分割します。カテゴリは、各ファイルのコンテンツとメタデータの AI 分析に基づくトピックです。 <a href="reference_private_data_categories.html#types-of-categories" target="_blank" rel="noopener">"カテゴリのリストを参照してください"</a>。</p>
 </div>
 <div class="paragraph">
 <p>カテゴリを使用すると、保有している情報の種類を表示して、データの状況を把握することができます。たとえば、履歴書や従業員契約などのカテゴリには機密データを含めることができます。結果を調査すると、従業員契約が安全でない場所に保存されていることがわかります。その後、その問題を修正できます。</p>
@@ -2631,13 +2625,11 @@
 </tr>
 </table>
 </div>
-<div class="sect2">
-<h3 id="カテゴリ別にファイルを表示します">カテゴリ別にファイルを表示します</h3>
 <div class="olist arabic">
 <div class="title">手順</div>
 <ol class="arabic">
 <li>
-<p>Cloud Manager の上部で、 * Compliance * をクリックします。</p>
+<p>Cloud Manager の上部で、 * Data Sense * をクリックし、 * Compliance * タブをクリックします。</p>
 </li>
 <li>
 <p>メイン画面から上位 4 つのカテゴリのいずれかの * 調査結果 * アイコンを直接クリックするか、 * すべて表示 * をクリックして、いずれかのカテゴリのアイコンをクリックします。</p>
@@ -2652,23 +2644,20 @@
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
-<h2 id="ファイルの種類">ファイルの種類</h2>
+<h2 id="ファイルタイプ別にファイルを表示する">ファイルタイプ別にファイルを表示する</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cloud Compliance は、スキャンしたデータをファイルタイプ別に分類し、ファイルタイプを確認すると、特定のファイルタイプが正しく保存されない可能性があるため、機密データを制御するのに役立ちます。 <a href="reference_private_data_categories.html#types-of-files" target="_blank" rel="noopener">"ファイルタイプのリストを参照してください"</a>。</p>
+<p>Cloud Data Sense は、スキャンしたデータをファイルタイプ別に分類します。ファイルタイプを確認すると、特定のファイルタイプが正しく保存されない可能性があるため、機密データを制御するのに役立ちます。 <a href="reference_private_data_categories.html#types-of-files" target="_blank" rel="noopener">"ファイルタイプのリストを参照してください"</a>。</p>
 </div>
 <div class="paragraph">
 <p>たとえば ' 組織に関する非常に機密性の高い情報を含む CAD ファイルを保存する場合がありますセキュリティで保護されていない場合は、権限を制限するか、ファイルを別の場所に移動することで、機密データを制御できます。</p>
 </div>
-<div class="sect2">
-<h3 id="ファイルタイプを表示しています">ファイルタイプを表示しています</h3>
 <div class="olist arabic">
 <div class="title">手順</div>
 <ol class="arabic">
 <li>
-<p>Cloud Manager の上部で、 * Compliance * をクリックします。</p>
+<p>Cloud Manager の上部で、 * Data Sense * をクリックし、 * Compliance * タブをクリックします。</p>
 </li>
 <li>
 <p>メイン画面で上位 4 つのファイルタイプのうちの 1 つに対応する * 調査結果 * アイコンをクリックするか、 * すべて表示 * をクリックして、任意のファイルタイプのアイコンをクリックします。</p>
@@ -2683,7 +2672,6 @@
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="ファイルメタデータを表示しています">ファイルメタデータを表示しています</h2>
 <div class="sectionbody">
@@ -2694,13 +2682,13 @@
 <p><span class="image"><img src="./media/screenshot_compliance_file_details.png" alt="&quot;[ データ調査"></span> ページのファイルのメタデータの詳細を示すスクリーンショット。"]</p>
 </div>
 <div class="paragraph">
-<p>ファイルが存在する作業環境とボリュームを表示するだけでなく、メタデータには、ファイル権限、ファイルの所有者、このファイルの重複がないかどうか、および AIP ラベルが割り当てられている場合など、より多くの情報が表示されます <a href="task_managing_highlights.html#categorizing-your-data-using-aip-labels" target="_blank" rel="noopener">"クラウドコンプライアンスにおける AIP の統合"</a>）。この情報は、を計画している場合に役立ちます <a href="task_managing_highlights.html#creating-custom-policies">"ポリシーを作成します"</a> データのフィルタリングに使用できるすべての情報が表示されます。</p>
+<p>ファイルが存在する作業環境とボリュームを表示するだけでなく、メタデータには、ファイル権限、ファイルの所有者、このファイルの重複がないかどうか、および AIP ラベルが割り当てられている場合など、より多くの情報が表示されます <a href="task_managing_highlights.html#categorizing-your-data-using-aip-labels" target="_blank" rel="noopener">"クラウドデータセンスで AIP を統合"</a>）。この情報は、を計画している場合に役立ちます <a href="task_managing_highlights.html#creating-custom-policies">"ポリシーを作成します"</a> データのフィルタリングに使用できるすべての情報が表示されます。</p>
 </div>
 <div class="paragraph">
 <p>すべてのデータソースについて、すべての情報が表示されるわけではなく、そのデータソースに適した情報だけが表示されることに注意してください。たとえば、ボリューム名、権限、および AIP ラベルは、データベースファイルには関係ありません。</p>
 </div>
 <div class="paragraph">
-<p>単一のファイルの詳細を表示する場合は、そのファイルに対して次の 2 つの操作を実行できます。</p>
+<p>単一のファイルの詳細を表示する場合は、ファイルに対していくつかの操作を実行できます。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2708,12 +2696,18 @@
 <p>ファイルを削除できます。を参照してください <a href="task_managing_highlights.html#deleting-source-files" target="_blank" rel="noopener">"ソースファイルを削除しています"</a> を参照してください。</p>
 </li>
 <li>
-<p>AIP ラベルを Cloud Compliance と統合している場合は、このファイルにラベルを割り当てることも、すでに存在する場合は別のラベルに変更することもできます。を参照してください <a href="task_managing_highlights.html#assigning-aip-labels-manually" target="_blank" rel="noopener">"AIP ラベルを手動で割り当てる"</a> を参照してください。</p>
+<p>ファイルに特定のステータスを割り当てることができます。を参照してください <a href="task_managing_highlights.html#applying-status-codes-to-manage-your-scanned-files">"ステータスタグを適用しています"</a> を参照してください。</p>
+</li>
+<li>
+<p>AIP ラベルを Cloud Data Sense と統合している場合は、このファイルにラベルを割り当てるか、すでに存在する場合は別のラベルに変更できます。を参照してください <a href="task_managing_highlights.html#assigning-aip-labels-manually" target="_blank" rel="noopener">"AIP ラベルを手動で割り当てる"</a> を参照してください。</p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="ファイルの権限を表示しています">ファイルの権限を表示しています</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ファイルの権限を表示しています">ファイルの権限を表示しています</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>ファイルへのアクセス権を持つすべてのユーザーまたはグループのリストと、そのファイルに含まれるアクセス権の種類を表示するには、 * すべてのアクセス権を表示 * をクリックします。</p>
 </div>
@@ -2724,19 +2718,35 @@
 <p>このボタンは、 CIFS 共有内のファイルに対してのみ使用できます。</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="ストレージシステムでファイルが複製されているかどうかを表示する">ストレージシステムでファイルが複製されているかどうかを表示する</h3>
+</div>
+<div class="sect1">
+<h2 id="ストレージシステム内に重複ファイルがないかどうかを確認しています">ストレージシステム内に重複ファイルがないかどうかを確認しています</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>特定のファイルが重複している場合、この情報は _Duplicats_field の横に表示されます。これは、ストレージスペースを節約できる領域を特定する場合に便利です。また、特定の権限や機密情報を持つファイルが、ストレージシステム内で不必要に重複しないようにすることもできます。</p>
+<p>重複ファイルがストレージシステムに保存されているかどうかを確認できます。これは、ストレージスペースを節約できる領域を特定する場合に便利です。また、特定の権限や機密情報を持つファイルが、ストレージシステム内で不必要に重複しないようにすることもできます。</p>
 </div>
 <div class="paragraph">
-<p>重複ファイルのリストを表示するには、 * 詳細の表示 * をクリックします。次のページで、 [ 重複の表示 *] をクリックして、 [ 調査 ] ページでファイルを表示します。</p>
+<p>重複ファイルのリストをダウンロードし、ストレージ管理者に送信して、削除可能なファイルをユーザが判別できるようにします。または <a href="task_managing_highlights.html#deleting-source-files" target="_blank" rel="noopener">"ファイルを削除します"</a> 特定のバージョンのファイルが不要であることが確信できる場合は、自分自身で実行します。</p>
+</div>
+<div class="sect2">
+<h3 id="重複するすべてのファイルを表示します">重複するすべてのファイルを表示します</h3>
+<div class="paragraph">
+<p>スキャンする作業環境およびデータソースで複製されているすべてのファイルのリストが必要な場合は、 [ データの調査 ] ページで、 [ 重複 ] &gt; [ 重複しているもの ] というフィルタを使用できます。</p>
+</div>
+<div class="paragraph">
+<p>すべてのファイルタイプ（データベースを除く）から重複しているすべてのファイルが 50 MB 以上のサイズで、個人情報または機密情報を含むすべてのファイルが結果ページに表示されます。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="特定のファイルが複製されているかどうかを表示します">特定のファイルが複製されているかどうかを表示します</h3>
+<div class="paragraph">
+<p>1 つのファイルに重複があるかどうかを確認するには、 [ データ調査結果 ] ペインでをクリックします <span class="image"><img src="./media/button_subfolder.png" alt="右キャレット"></span> をクリックすると、単一のファイルについてファイルのメタデータが表示されます。特定のファイルが重複している場合、この情報は _Duplicats_field の横に表示されます。</p>
+</div>
+<div class="paragraph">
+<p>重複したファイルとその場所のリストを表示するには、 [ * 詳細の表示 * ] をクリックします。次のページで、 [ 重複の表示 *] をクリックして、 [ 調査 ] ページでファイルを表示します。</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/screenshot_compliance_duplicate_file.png" alt="重複するファイルが配置されている場所を確認する方法を示すスクリーンショット。"></span></p>
-</div>
-<div class="paragraph">
-<p>重複ファイルのリストをダウンロードし、ストレージ管理者に送信して、削除可能なファイルをユーザが判別できるようにします。あなたのできる <a href="task_managing_highlights.html#deleting-source-files" target="_blank" rel="noopener">"ファイルを削除します"</a> このバージョンのファイルが不要であると確信している場合は、自分自身で実行します。</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -2745,7 +2755,7 @@
 <i class="fa icon-tip" title="ヒント"></i>
 </td>
 <td class="content">
-このページで指定されている「ハッシュ」値を使用して、 ［ 調査 ］ ページに直接入力すると、いつでも特定の重複ファイルを検索したり、ポリシーで使用することができます。
+このページで指定されている「ファイルハッシュ」値を使用して、 ［ 調査 ］ ページに直接入力すると、いつでも特定の重複ファイルを検索したり、ポリシーで使用することができます。
 </td>
 </tr>
 </table>
@@ -2757,10 +2767,10 @@
 <h2 id="特定の作業環境のダッシュボードデータの表示">特定の作業環境のダッシュボードデータの表示</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cloud Compliance ダッシュボードの内容をフィルタリングして、すべての作業環境とデータベース、または特定の作業環境のコンプライアンスデータを表示できます。</p>
+<p>Cloud Data Sense ダッシュボードの内容をフィルタリングして、すべての作業環境とデータベース、または特定の作業環境のコンプライアンスデータを表示できます。</p>
 </div>
 <div class="paragraph">
-<p>ダッシュボードをフィルタすると、 Cloud Compliance は選択した作業環境だけにコンプライアンスデータとレポートをスコープします。</p>
+<p>ダッシュボードをフィルタすると、 Data Sense によって、選択した作業環境だけにコンプライアンスデータとレポートがスコープされます。</p>
 </div>
 <div class="olist arabic">
 <div class="title">手順</div>
@@ -2793,7 +2803,68 @@
 <p>各列の上部にあるコントロールを使用して、結果を数値またはアルファベット順にソートできます。</p>
 </li>
 <li>
-<p>左側のペインフィルタを使用すると、作業環境、ストレージリポジトリ、カテゴリ、プライベートデータ、ファイルタイプ、ファイルサイズ、最終変更日、 S3 オブジェクトの権限がパブリックアクセスに対して許可されているかどうかなどを指定して、結果を絞り込むことができます。</p>
+<p>左側のペインフィルタを使用すると、次の属性を選択して結果を絞り込むことができます。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ポリシー</p>
+</li>
+<li>
+<p>[ アクセス許可 ] を開きます</p>
+</li>
+<li>
+<p>ファイルの所有者</p>
+</li>
+<li>
+<p>ラベル</p>
+</li>
+<li>
+<p>作業環境</p>
+</li>
+<li>
+<p>ストレージリポジトリ</p>
+</li>
+<li>
+<p>ファイルパス</p>
+</li>
+<li>
+<p>カテゴリ</p>
+</li>
+<li>
+<p>感度レベル</p>
+</li>
+<li>
+<p>個人データ</p>
+</li>
+<li>
+<p>機密性の高い個人データ</p>
+</li>
+<li>
+<p>データの件名</p>
+</li>
+<li>
+<p>ファイルタイプ</p>
+</li>
+<li>
+<p>ファイルサイズ</p>
+</li>
+<li>
+<p>作成時刻（ Created Time ）</p>
+</li>
+<li>
+<p>最終変更日</p>
+</li>
+<li>
+<p>重複があります</p>
+</li>
+<li>
+<p>ステータス</p>
+</li>
+<li>
+<p>ファイル・ハッシュ</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>[ フィルタ ] ペインの上部にある _Policies_filter には、保存されたデータベースクエリや [ お気に入り ] リストなど、よく要求されるフィルタの組み合わせを提供するカスタムフィルタがリストされます。実行します <a href="task_managing_highlights.html#controlling-your-data-using-policies" target="_blank" rel="noopener">"こちらをご覧ください"</a> 事前定義されたポリシーのリストを表示し、独自のカスタムポリシーを作成する方法を確認できます。</p>
@@ -2806,10 +2877,13 @@
 <h2 id="各ファイルリストレポート-csv-ファイルに含まれる内容">各ファイルリストレポート（ CSV ファイル）に含まれる内容</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>各 [ 調査 ] ページで、をクリックできます <span class="image"><img src="./media/button_download.png" alt=""></span> ボタンをクリックして、特定されたファイルの詳細を含むファイルリスト（ CSV 形式）をダウンロードします。10 、 000 件を超える結果がある場合は、上位 10 、 000 件のみがリストに表示されます。</p>
+<p>各 [ 調査 ] ページで、をクリックできます <span class="image"><img src="./media/button_download.png" alt=""></span> ボタンをクリックして、特定されたファイルの詳細を含むファイルリスト（ CSV 形式）をダウンロードします。データ検出で、構造化データ（データベーステーブル）と非構造化データ（ファイル）の両方がスキャンされている場合は、ダウンロードした ZIP ファイルに 2 つのレポートが含まれています。</p>
 </div>
 <div class="paragraph">
-<p>各ファイルリストには、次の情報が含まれています。</p>
+<p>10 、 000 件を超える結果がある場合は、上位 10 、 000 件のみがリストに表示されます。</p>
+</div>
+<div class="paragraph">
+<p>非構造化データ・レポート * には、次の情報が含まれています。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2826,13 +2900,19 @@
 <p>ストレージリポジトリ</p>
 </li>
 <li>
-<p>プロトコル</p>
+<p>プロトコルタイプ</p>
 </li>
 <li>
 <p>ファイルパス</p>
 </li>
 <li>
 <p>ファイルタイプ</p>
+</li>
+<li>
+<p>時刻を作成しました</p>
+</li>
+<li>
+<p>最終更新日</p>
 </li>
 <li>
 <p>ファイルサイズ</p>
@@ -2854,6 +2934,37 @@
 <div class="paragraph">
 <p>削除の検出日は、ファイルが削除または移動された日付を示します。これにより、機密ファイルがいつ移動されたかを識別できます。削除されたファイルは、ダッシュボードまたは [ 調査 ] ページに表示されるファイル番号カウントの一部ではありません。ファイルは CSV レポートにのみ表示されます。</p>
 </div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>構造化データレポート * には、次の情報が含まれています。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>DB テーブル名</p>
+</li>
+<li>
+<p>場所のタイプ</p>
+</li>
+<li>
+<p>作業環境</p>
+</li>
+<li>
+<p>ストレージリポジトリ</p>
+</li>
+<li>
+<p>列数</p>
+</li>
+<li>
+<p>行数</p>
+</li>
+<li>
+<p>個人情報</p>
+</li>
+<li>
+<p>機密性の高い個人情報</p>
 </li>
 </ul>
 </div>

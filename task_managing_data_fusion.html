@@ -9,7 +9,7 @@
   <meta property="og:title" content="Data Fusion を使用して個人データ識別子を追加する | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ja-jp/occm/task_managing_data_fusion.html" />
-	<meta property="og:description" content="「 Data Fusion 」と呼ばれる機能を使用すると、組織のデータをスキャンして、データベースから一意の識別子がファイルやその他のデータベースで見つかったかどうかを確認できます。基本的には、 Cloud Compliance スキャンで識別される「個人データ」のリストを作成します。これにより、機密性の高いデー..." />
+	<meta property="og:description" content="「 Data Fusion 」と呼ばれる機能を使用すると、組織のデータをスキャンして、データベースからの一意の識別子がファイルやその他のデータベースで見つかったかどうかを確認できます。基本的には、クラウドデータ検出スキャンで識別される「個人データ」のリストを作成します。これにより、機密性の高いデータがすべてのファ..." />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/occm/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,8 +18,8 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="「 Data Fusion 」と呼ばれる機能を使用すると、組織のデータをスキャンして、データベースから一意の識別子がファイルやその他のデータベースで見つかったかどうかを確認できます。基本的には、 Cloud Compliance スキャンで識別される「個人データ」のリストを作成します。これにより、機密性の高いデー...">
-  <meta name="keywords" content=" data identifiers, personal data, sensitive personal data, compliance, data fusion">
+  <meta name="description" content="「 Data Fusion 」と呼ばれる機能を使用すると、組織のデータをスキャンして、データベースからの一意の識別子がファイルやその他のデータベースで見つかったかどうかを確認できます。基本的には、クラウドデータ検出スキャンで識別される「個人データ」のリストを作成します。これにより、機密性の高いデータがすべてのファ...">
+  <meta name="keywords" content=" data identifiers, personal data, sensitive personal data, compliance, data fusion, data sense">
   
   
 
@@ -2267,12 +2267,12 @@
         <div class="na-navbar-padding"> データプライバシーに関する分析情報を入手できます</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_compliance.html">
-        Cloud Compliance の詳細をご確認ください
+        クラウドデータの意味をご確認ください
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> はじめに</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_deploy_cloud_compliance.html">
-        Cloud Compliance の導入
+        クラウドデータの導入センス
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
@@ -2303,7 +2303,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="reference_private_data_categories.html">
         プライベートデータのカテゴリ
       </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_compliance.html">
-        Cloud Compliance からデータソースを削除します
+        データセンスからデータソースを削除します
       </a></li><li class=" "><a class="na-navbar-padding" href="faq_cloud_compliance.html">
         よく寄せられる質問
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-06 18:20:26 +0000">05/06/2021</time>
+    <time datetime="2021-06-06 14:15:10 +0000">06/06/2021</time>
     
   
 
@@ -2499,7 +2499,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Data Fusion では、次の機能を使用して組織のデータをスキャンし、データベースから一意の識別子がファイルやその他のデータベースで見つかったかどうかを確認できます。基本的には、クラウドコンプライアンススキャンで識別される「個人データ」のリストを作成します。これにより、機密データが存在する可能性のある場所に関する全体像が _all_your ファイルに表示されます。</p>
+<p>Data Fusion では ' 企業のデータをスキャンして ' データベースから一意の識別子がファイルまたはその他のデータベースで見つかったかどうかを確認できます基本的には ' クラウドデータ検出スキャンで識別される個人データの一覧を作成しますこれにより、機密データが存在する可能性のある場所に関する全体像が _all_your ファイルに表示されます。</p>
 </div>
 </div>
 </div>
@@ -2507,7 +2507,7 @@
 <h2 id="データベースからカスタムの個人データ識別子を作成する">データベースからカスタムの個人データ識別子を作成する</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>データベーステーブルで特定の列を選択することで、 Cloud Compliance がスキャンで検索する追加の識別子を選択できます。たとえば、次の図は、データ Fusion を使用してボリューム、バケット、およびデータベースをスキャンし、 Oracle データベースからすべての顧客 ID が出現する状況を示しています。</p>
+<p>データベーステーブルで特定の列を選択することにより、クラウドデータセンスがスキャンで検索する追加の識別子を選択できます。たとえば、次の図は、データ Fusion を使用してボリューム、バケット、およびデータベースをスキャンし、 Oracle データベースからすべての顧客 ID が出現する状況を示しています。</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/diagram_compliance_data_fusion.png" alt="データベースのコンテンツをソースとして使用して、同じデータを含むファイルを識別する方法を示す図。"></span></p>
@@ -2516,7 +2516,7 @@
 <p>このように、 2 つのボリュームと 1 つの S3 バケットにそれぞれ一意の顧客 ID が見つかりました。データベーステーブル内の一致も識別されます。</p>
 </div>
 <div class="paragraph">
-<p>が必要です <a href="task_scanning_databases.html#adding-the-database-server" target="_blank" rel="noopener">"データベースサーバを少なくとも 1 つ追加しました"</a> データ Fusion ソースを追加する前に、を Cloud Compliance に追加します。</p>
+<p>が必要です <a href="task_scanning_databases.html#adding-the-database-server" target="_blank" rel="noopener">"データベースサーバを少なくとも 1 つ追加しました"</a> データ Fusion ソースを追加する前にクラウドデータを検出</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -2554,7 +2554,7 @@
 <li>
 <p>[Add Data Fusion Source*] をクリックします。</p>
 <div class="paragraph">
-<p>Data Fusion のインベントリページには、クラウドコンプライアンスでスキャンするように設定したデータベースソース列が表示されます。</p>
+<p>Data Fusion インベントリページには、クラウドデータセンスでスキャンするように設定したデータベースソース列が表示されます。</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/screenshot_compliance_data_fusion_list.png" alt="Data Fusion で設定したすべてのデータソース参照のスクリーンショット。"></span></p>

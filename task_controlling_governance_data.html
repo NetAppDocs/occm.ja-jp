@@ -9,7 +9,7 @@
   <meta property="og:title" content="組織に保存されているデータに関するガバナンスの詳細を表示する | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ja-jp/occm/task_controlling_governance_data.html" />
-	<meta property="og:description" content="組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Compliance は、古いデータ、ビジネス以外のデータ、重複ファイル、および非常に大容量のファイルを特定するため、一部のファイルを削除するか低コストのオブジェクトストレージに階層化するかを決定できます。" />
+	<meta property="og:description" content="組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Data Sense は、古いデータ、ビジネス以外のデータ、重複するファイル、および非常に大きなファイルをシステム内で特定するため、一部のファイルを削除するか、低コストのオブジェクトストレージに階層化するかを判断できます。" />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/occm/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,7 +18,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Compliance は、古いデータ、ビジネス以外のデータ、重複ファイル、および非常に大容量のファイルを特定するため、一部のファイルを削除するか低コストのオブジェクトストレージに階層化するかを決定できます。">
+  <meta name="description" content="組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Data Sense は、古いデータ、ビジネス以外のデータ、重複するファイル、および非常に大きなファイルをシステム内で特定するため、一部のファイルを削除するか、低コストのオブジェクトストレージに階層化するかを判断できます。">
   <meta name="keywords" content=" savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, policies">
   
   
@@ -2267,12 +2267,12 @@
         <div class="na-navbar-padding"> データプライバシーに関する分析情報を入手できます</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_compliance.html">
-        Cloud Compliance の詳細をご確認ください
+        クラウドデータの意味をご確認ください
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> はじめに</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_deploy_cloud_compliance.html">
-        Cloud Compliance の導入
+        クラウドデータの導入センス
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
@@ -2303,7 +2303,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="reference_private_data_categories.html">
         プライベートデータのカテゴリ
       </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_compliance.html">
-        Cloud Compliance からデータソースを削除します
+        データセンスからデータソースを削除します
       </a></li><li class=" "><a class="na-navbar-padding" href="faq_cloud_compliance.html">
         よく寄せられる質問
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-04-24 02:35:46 +0000">04/24/2021</time>
+    <time datetime="2021-06-06 14:15:10 +0000">06/06/2021</time>
     
   
 
@@ -2499,7 +2499,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Compliance は、古いデータ、ビジネス以外のデータ、重複ファイル、および非常に大容量のファイルを特定するため、一部のファイルを削除するか低コストのオブジェクトストレージに階層化するかを決定できます。</p>
+<p>組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Data Sense は、古いデータ、ビジネス以外のデータ、重複するファイル、および非常に大きなファイルをシステム内で特定するため、一部のファイルを削除するか、低コストのオブジェクトストレージに階層化するかを判断できます。</p>
 </div>
 <div class="paragraph">
 <p>また、オンプレミスの場所からクラウドにデータを移行する予定の場合は、移動前にデータのサイズと、機密情報が含まれているデータの有無を確認できます。</p>
@@ -2513,7 +2513,7 @@
 <p>Governance ダッシュボードには情報が表示されるため、ストレージリソースに保存されているデータの効率性を高め、コストを管理できます。</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_compliance_governance_dashboard.png" alt="Cloud Compliance Governance ダッシュボードのスクリーンショット。"></span></p>
+<p><span class="image"><img src="./media/screenshot_compliance_governance_dashboard.png" alt="クラウドデータセンスガバナンスダッシュボードのスクリーンショット。"></span></p>
 </div>
 <div class="sect2">
 <h3 id="機会の節約">機会の節約</h3>
@@ -2554,9 +2554,15 @@
 </div>
 </li>
 <li>
-<p>* 大容量ファイル * - 100MB 超のファイル。</p>
+<p>* 重複ファイル * - スキャンしているデータソース内の他の場所に複製されているファイル。 <a href="task_controlling_private_data.html#viewing-all-duplicated-files">"表示される重複ファイルの種類を確認します"</a>。</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="データの概要">データの概要</h3>
+<div class="paragraph">
+<p>スキャンされているすべてのデータの概要。ボタンをクリックして、すべての作業環境とデータソースの使用容量、データの使用年数、データのサイズ、ファイルタイプを含む完全なデータマッピングレポートをダウンロードします。を参照してください <a href="task_generating_compliance_reports.html#data-mapping-report">"データマッピングレポート"</a> を参照してください。</p>
 </div>
 </div>
 <div class="sect2">
@@ -2649,7 +2655,7 @@ OneDrive アカウントとデータベース内のファイルは、このグ�
 <div class="sect2">
 <h3 id="最も識別されているデータ分類">最も識別されているデータ分類</h3>
 <div class="paragraph">
-<p>_Classification_area には ' 最も識別されたリストが表示されます <a href="task_controlling_private_data.html#categories" target="_blank" rel="noopener">"カテゴリ"</a>、 <a href="task_controlling_private_data.html#file-types" target="_blank" rel="noopener">"ファイルの種類"</a>および <a href="task_managing_highlights.html#categorizing-your-data-using-aip-labels" target="_blank" rel="noopener">"AIP ラベル"</a> をスキャンしたデータに保存します。</p>
+<p>_Classification_area には ' 最も識別されたリストが表示されます <a href="task_controlling_private_data.html#viewing-files-by-categories" target="_blank" rel="noopener">"カテゴリ"</a>、 <a href="task_controlling_private_data.html#viewing-files-by-file-types" target="_blank" rel="noopener">"ファイルの種類"</a>および <a href="task_managing_highlights.html#categorizing-your-data-using-aip-labels" target="_blank" rel="noopener">"AIP ラベル"</a> をスキャンしたデータに保存します。</p>
 </div>
 <div class="sect3">
 <h4 id="カテゴリ">カテゴリ</h4>
@@ -2666,7 +2672,7 @@ OneDrive アカウントとデータベース内のファイルは、このグ�
 <p>ファイルタイプを確認すると、特定のファイルタイプが正しく保存されない可能性があるため、機密データを制御するのに役立ちます。</p>
 </div>
 <div class="paragraph">
-<p>を参照してください <a href="task_controlling_private_data.html#viewing-file-types" target="_blank" rel="noopener">"ファイルタイプを表示しています"</a> を参照してください。</p>
+<p>を参照してください <a href="task_controlling_private_data.html#viewing-files-by-file-types" target="_blank" rel="noopener">"ファイルタイプを表示しています"</a> を参照してください。</p>
 </div>
 </div>
 <div class="sect3">
