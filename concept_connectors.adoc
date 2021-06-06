@@ -23,11 +23,11 @@ Cloud Manager の次の機能を使用するには、コネクタが必要です
 
 * Cloud Volumes ONTAP
 * オンプレミスの ONTAP クラスタ
-* クラウドコンプライアンス
+* クラウドデータの意味
 * Kubernetes
 * クラウドバックアップ
 * 監視
-* オンプレミスでの階層化
+* オンプレミスデータの階層化
 * グローバルファイルキャッシュ
 * Amazon S3 バケットの検出
 
@@ -35,7 +35,7 @@ Cloud Manager の次の機能を使用するには、コネクタが必要です
 Azure NetApp Files 、 Cloud Volumes Service 、または Cloud Sync には、コネクタは * _ 必要ではありません。
 
 
-NOTE: Azure NetApp Files のセットアップと管理にコネクタは必要ありませんが、 Azure NetApp Files データのスキャンに Cloud Compliance を使用する場合はコネクタが必要になります。
+NOTE: Azure NetApp Files のセットアップと管理にコネクタは必要ありませんが、 Azure NetApp Files データのスキャンにクラウドデータセンスを使用する場合はコネクタが必要です。
 
 
 

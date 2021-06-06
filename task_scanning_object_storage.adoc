@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task_scanning_object_storage.html 
-keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage 
-summary: Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Azure Blob （ MinIO を使用）、 Linode 、 B2 Cloud Storage などです。 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage, Data Sense 
+summary: Cloud Data Sense で、オブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。データセンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Azure Blob （ MinIO を使用）、 Linode 、 B2 Cloud Storage などです。 
 ---
 = S3 プロトコルを使用するオブジェクトストレージをスキャンしています
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: Cloud Compliance でオブジェクトストレージ内のデータの
 
 
 [role="lead"]
-Cloud Compliance でオブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。コンプライアンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Azure Blob （ MinIO を使用）、 Linode 、 B2 Cloud Storage などです。
+Cloud Data Sense で、オブジェクトストレージ内のデータのスキャンを開始するには、いくつかの手順を実行します。データセンスは、 Simple Storage Service （ S3 ）プロトコルを使用する任意の Object Storage サービスからデータをスキャンできます。具体的には、 NetApp StorageGRID 、 IBM Cloud Object Store 、 Azure Blob （ MinIO を使用）、 Linode 、 B2 Cloud Storage などです。
 
 
 
@@ -29,45 +29,45 @@ Cloud Compliance でオブジェクトストレージ内のデータのスキャ
 オブジェクトストレージサービスに接続するには、エンドポイント URL が必要です。
 
 [role="quick-margin-para"]
-Cloud Compliance でバケットにアクセスできるようにするには、オブジェクトストレージプロバイダからアクセスキーとシークレットキーを入手する必要があります。
+Cloud Data Sense でバケットにアクセスできるように、オブジェクトストレージプロバイダからアクセスキーとシークレットキーを入手する必要があります。
 
 
 
-==== Cloud Compliance インスタンスを導入します
+==== Cloud Data Sense インスタンスを導入する
 
 [role="quick-margin-para"]
-link:task_deploy_cloud_compliance.html["Cloud Compliance の導入"^] インスタンスが展開されていない場合。
+link:task_deploy_cloud_compliance.html["クラウドデータの導入センス"^] インスタンスが展開されていない場合。
 
 
 
 ==== オブジェクトストレージサービスを追加します
 
 [role="quick-margin-para"]
-オブジェクトストレージサービスを Cloud Compliance に追加します。
+オブジェクトストレージサービスをクラウドデータセンスに追加します。
 
 
 
 ==== スキャンするバケットを選択します
 
 [role="quick-margin-para"]
-スキャンするバケットを選択すると、 Cloud Compliance でスキャンが開始されます。
+スキャンするバケットを選択すると、 Cloud Data Sense によってスキャンが開始されます。
 
 
 
 == オブジェクトストレージ要件の確認
 
-Cloud Compliance を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認してください。
+Cloud Data Sense を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認します。
 
 * オブジェクトストレージサービスに接続するには、エンドポイント URL が必要です。
-* Cloud Compliance でバケットにアクセスできるようにするには、オブジェクトストレージプロバイダからアクセスキーとシークレットキーを入手する必要があります。
+* データセンスでバケットにアクセスできるようにするには、オブジェクトストレージプロバイダからアクセスキーとシークレットキーを取得する必要があります。
 * Azure Blob のサポートにはを使用する必要があります link:https://min.io/["MinIO サービス"^]。
 
 
 
 
-== Cloud Compliance へのオブジェクトストレージサービスの追加
+== Cloud Data Sense へのオブジェクトストレージサービスの追加
 
-が必要です link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Compliance のインスタンスを導入済みである"^]。
+が必要です link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Data Sense のインスタンスをすでに導入している"^]。
 
 オブジェクトストレージサービスを追加します。
 
@@ -80,7 +80,7 @@ image:screenshot_compliance_add_object_storage_button.png["［ スキャン設�
 +
 .. 作業環境に使用する名前を入力します。この名前には、接続先のオブジェクトストレージサービスの名前を指定する必要があります。
 .. エンドポイントの URL を入力してオブジェクトストレージサービスにアクセスします。
-.. Cloud Compliance がオブジェクトストレージ内のバケットにアクセスできるように、アクセスキーとシークレットキーを入力します。
+.. Cloud Data Sense がオブジェクトストレージ内のバケットにアクセスできるように、アクセスキーとシークレットキーを入力します。
 +
 image:screenshot_compliance_add_object_storage.png["オブジェクトストレージサービスにアクセスするための値を入力するダイアログのスクリーンショット。"]
 
@@ -94,7 +94,7 @@ image:screenshot_compliance_add_object_storage.png["オブジェクトストレ�
 
 == オブジェクトストレージバケットでの準拠スキャンの有効化と無効化
 
-オブジェクトストレージサービスで Cloud Compliance を有効にしたら、次はスキャンするバケットを設定します。Cloud Compliance によって、それらのバケットが検出され、作成した作業環境に表示されます。
+オブジェクトストレージサービスで Cloud Data Sense を有効にしたら、次の手順でスキャンするバケットを設定します。Data Sense は、これらのバケットを検出し、作成した作業環境に表示します。
 
 .手順
 . 設定ページで、 Object Storage Service 作業環境の * 設定 * をクリックします。
@@ -107,4 +107,4 @@ image:screenshot_compliance_object_storage_select_buckets.png["スキャンす�
 
 
 
-Cloud Compliance で、有効にしたバケットのスキャンが開始されます。エラーが発生した場合は、エラーを修正するために必要なアクションとともに、 [ ステータス ] 列に表示されます。
+Cloud Data Sense は、有効にしたバケットのスキャンを開始します。エラーが発生した場合は、エラーを修正するために必要なアクションとともに、 [ ステータス ] 列に表示されます。

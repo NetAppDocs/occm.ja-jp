@@ -359,13 +359,13 @@ Cloud Volumes ONTAP HA Mediator 用に事前定義された内部セキュリテ
 | SSH | 22 | コネクタホストへの SSH アクセスを提供します 
 
 
-| HTTP | 80 | クライアント Web ブラウザからローカルへの HTTP アクセスを提供します Cloud Compliance からのユーザインターフェイスと接続 
+| HTTP | 80 | クライアント Web ブラウザからローカルユーザインターフェイスへの HTTP アクセス、および Cloud Data Sense からの接続を提供します 
 
 
 | HTTPS | 443 | クライアント Web ブラウザからローカルへの HTTPS アクセスを提供します ユーザインターフェイス 
 
 
-| TCP | 3128 | AWS ネットワークで NAT やプロキシを使用していない場合に、 Cloud Compliance インスタンスにインターネットアクセスを提供します 
+| TCP | 3128 | AWS ネットワークで NAT やプロキシを使用していない場合に、 Cloud Data Sense インスタンスにインターネットアクセスを提供します 
 |===
 
 
@@ -442,5 +442,5 @@ NOTE: 送信元 IP アドレスは、コネクタホストです。
 | DNS | UDP | 53 | DNS | Cloud Manager による DNS 解決に使用されます 
 
 
-| クラウドコンプライアンス | HTTP | 80 | Cloud Compliance インスタンス | Cloud Volumes ONTAP 向けクラウドコンプライアンス 
+| クラウドデータの意味 | HTTP | 80 | Cloud Data Sense インスタンス | Cloud Volumes ONTAP に最適なクラウドデータ 
 |===

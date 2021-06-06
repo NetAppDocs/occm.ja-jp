@@ -17,7 +17,7 @@ Cloud Volumes ONTAP システムは、クラウドプロバイダのコンソー
 
 作業環境を削除すると、 Cloud Volumes ONTAP インスタンスが終了し、ディスクと Snapshot が削除されます。
 
-作業環境を削除しても、 Cloud Backup のバックアップや Cloud Compliance と Monitoring のインスタンスなど、他のサービスによって管理されているリソースは削除されません。手動で削除する必要があります。そうしないと、これらのリソースの料金が引き続き請求されます。
+作業環境を削除しても、 Cloud Backup のバックアップや Cloud Data Sense のインスタンスや監視など、他のサービスによって管理されているリソースは削除されません。手動で削除する必要があります。そうしないと、これらのリソースの料金が引き続き請求されます。
 
 
 WARNING: Cloud Volumes ONTAP インスタンスでは、 AWS からの偶発的な終了を防止するために、終端保護が有効になっています。ただし、 AWS から Cloud Volumes ONTAP インスタンスを終了する場合は、 AWS CloudFormation コンソールに移動して、インスタンスのスタックを削除する必要があります。スタック名は、作業環境の名前です。
@@ -27,9 +27,9 @@ WARNING: Cloud Volumes ONTAP インスタンスでは、 AWS からの偶発的�
 +
 クラウドバックアップは、設計上 Cloud Volumes ONTAP から独立しています。Cloud Volumes ONTAP システムを削除しても、 Cloud Backup はバックアップを自動的に削除しません。また、システムを削除した後でバックアップを削除するための UI で現在サポートされていません。
 
-. 作業環境で Cloud Compliance または Monitoring を有効にし、他の作業環境でこれらのサービスを使用していない場合は、それらのサービスのインスタンスを削除する必要があります。
+. この作業環境で Cloud Data Sense または Monitoring を有効にし、他の作業環境でこれらのサービスを使用していない場合は、それらのサービスのインスタンスを削除する必要があります。
 +
-** link:concept_cloud_compliance.html#the-cloud-compliance-instance["Cloud Compliance インスタンスの詳細については、こちらをご覧ください"]。
+** link:concept_cloud_compliance.html#the-cloud-data-sense-instance["Cloud Data Sense インスタンスの詳細については、こちらをご覧ください"]。
 ** link:concept_monitoring.html#the-acquisition-unit["Monitoring Acquisition Unit の詳細については、こちらを参照してください"]。
 
 

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task_scanning_file_shares.html 
-keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb 
-summary: NetApp 以外の NFS または CIFS ファイル共有を Cloud Compliance で直接スキャンするには、いくつかの手順を実行します。これらのファイル共有は、オンプレミスでもクラウドでもかまいません。 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, Data Sense 
+summary: NetApp 以外の NFS または CIFS ファイル共有を Cloud Data Sense で直接スキャンするには、いくつかの手順を実行します。これらのファイル共有は、オンプレミスでもクラウドでもかまいません。 
 ---
 = ファイル共有をスキャンしています
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: NetApp 以外の NFS または CIFS ファイル共有を Cloud Complia
 
 
 [role="lead"]
-NetApp 以外の NFS または CIFS ファイル共有を Cloud Compliance で直接スキャンするには、いくつかの手順を実行します。これらのファイル共有は、オンプレミスでもクラウドでもかまいません。
+NetApp 以外の NFS または CIFS ファイル共有を Cloud Data Sense で直接スキャンするには、いくつかの手順を実行します。これらのファイル共有は、オンプレミスでもクラウドでもかまいません。
 
 
 
@@ -30,10 +30,10 @@ CIFS （ SMB ）共有の場合は、共有にアクセスするためのクレ�
 
 
 
-==== Cloud Compliance インスタンスを導入します
+==== Cloud Data Sense インスタンスを導入する
 
 [role="quick-margin-para"]
-link:task_deploy_cloud_compliance.html["Cloud Compliance の導入"^] インスタンスが展開されていない場合。
+link:task_deploy_cloud_compliance.html["クラウドデータの導入センス"^] インスタンスが展開されていない場合。
 
 
 
@@ -53,25 +53,25 @@ link:task_deploy_cloud_compliance.html["Cloud Compliance の導入"^] インス�
 
 == ファイル共有の要件の確認
 
-Cloud Compliance を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認してください。
+Cloud Data Sense を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認します。
 
 * 共有は、クラウド内やオンプレミスなど、どこでもホストできます。ネットアップ以外のストレージシステム上のファイル共有です。
-* Cloud Compliance インスタンスと共有の間にネットワーク接続が必要です。
-* 次のポートが Cloud Compliance インスタンスに対して開いていることを確認します。
+* データセンスインスタンスと共有の間にネットワーク接続が必要です。
+* これらのポートが Data Sense インスタンスに対して開いていることを確認します。
 +
 ** NFS –ポート 111 および 2049 。
 ** CIFS の場合 - ポート 139 および 445
 
 
 * 追加する共有のリストは、「 <host_name> ： /<share_path>` 」の形式で指定する必要があります。共有は個別に入力することも、スキャンするファイル共有の行区切りリストを指定することもできます。
-* CIFS （ SMB ）共有の場合は、共有への読み取りアクセスを提供する Active Directory クレデンシャルがあることを確認します。管理者クレデンシャルが推奨されるのは、 Cloud Compliance で高い権限が必要なデータをスキャンする場合です。
+* CIFS （ SMB ）共有の場合は、共有への読み取りアクセスを提供する Active Directory クレデンシャルがあることを確認します。管理者クレデンシャルが推奨されるのは、 Cloud Data Sense で管理者権限が必要なデータをスキャンする必要がある場合です。
 
 
 
 
 == ファイル共有のグループを作成します
 
-が必要です link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Compliance のインスタンスを導入済みである"^]。
+が必要です link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Data Sense のインスタンスをすでに導入している"^]。
 
 ファイル共有を追加する前に、「 group 」というファイル共有を追加する必要があります。グループはスキャンするファイル共有のコンテナであり、グループ名はそれらのファイル共有の作業環境名として使用されます。
 
@@ -91,7 +91,7 @@ image:screenshot_compliance_add_fileshares_button.png["［ スキャン設定 �
 
 == グループへのファイル共有の追加
 
-ファイル共有グループにファイル共有を追加すると、それらの共有内のファイルが Cloud Compliance でスキャンされます。共有は、「 <host_name> ： /<share_path>` 」の形式で追加します。
+ファイル共有グループにファイル共有を追加すると、これらの共有内のファイルが Cloud Data Sense によってスキャンされます。共有は、「 <host_name> ： /<share_path>` 」の形式で追加します。
 
 個々のファイル共有を追加することも、スキャンするファイル共有を 1 行で区切って指定することもできます。一度に最大 100 個の共有を追加できます。
 
@@ -127,7 +127,7 @@ image:screenshot_compliance_fileshares_add_file_shares.png["［ ファイル共�
 
 
 
-Cloud Compliance によるスキャンが開始され、追加したファイル共有内のファイルがスキャンされ、ダッシュボードやその他の場所に結果が表示されます。
+Cloud Data Sense によって、追加したファイル共有内のファイルのスキャンが開始され、その結果がダッシュボードやその他の場所に表示されます。
 
 
 

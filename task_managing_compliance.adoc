@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_managing_compliance.html 
-keywords: remove, delete, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, delete cloud compliance, terminate, deactivate, deactivating cloud compliance 
-summary: 必要に応じて、 Cloud Compliance のスキャンを停止して、作業環境、データベース、ファイル共有グループ、 OneDrive アカウントをスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。 
+keywords: remove, delete, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, delete cloud compliance, terminate, deactivate, deactivating cloud compliance, Data Sense 
+summary: 必要に応じて、 Cloud Data Sense を停止することで、 1 つ以上の作業環境、データベース、ファイル共有グループ、 OneDrive アカウントをスキャンできます。作業環境で Cloud Data Sense を使用する必要がなくなった場合は、 Cloud Data Sense インスタンスを削除することもできます。 
 ---
-= Cloud Compliance からのデータソースの削除
+= Cloud Data Sense からのデータソースの削除
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -13,27 +13,27 @@ summary: 必要に応じて、 Cloud Compliance のスキャンを停止して�
 
 
 [role="lead"]
-必要に応じて、 Cloud Compliance のスキャンを停止して、作業環境、データベース、ファイル共有グループ、 OneDrive アカウントをスキャンすることができます。作業環境で Cloud Compliance を使用する必要がなくなった場合は、 Cloud Compliance インスタンスを削除することもできます。
+必要に応じて、 Cloud Data Sense を停止することで、 1 つ以上の作業環境、データベース、ファイル共有グループ、 OneDrive アカウントをスキャンできます。作業環境で Cloud Data Sense を使用する必要がなくなった場合は、 Cloud Data Sense インスタンスを削除することもできます。
 
 
 
 == 作業環境のコンプライアンススキャンを非アクティブにします
 
-スキャンを非アクティブ化すると、 Cloud Compliance は作業環境上のデータをスキャンしなくなり、インデックス付けされたコンプライアンス分析情報を Cloud Compliance インスタンスから削除します（作業環境自体のデータは削除されません）。
+スキャンを非アクティブ化すると、 Cloud Data Sense は作業環境上のデータをスキャンしなくなり、データセンスインスタンスからインデックス付きのコンプライアンスインサイトを削除します（作業環境自体のデータは削除されません）。
 
-. [_Configuration_] ページで、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] ボタンをクリックして作業環境を選択し、 * コンプライアンスの非アクティブ化 * をクリックします。
+. [_Configuration_] ページで、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] ボタンをクリックして作業環境を選択し、 [* データセンスを非活動化 * （ Deactivate Data Sense * ） ] をクリックします。
 
 
-image:screenshot_deactivate_compliance_scan.png["アクションアイコンのスクリーンショット。スキャンを非活動化（ Deactivate scan ）を選択できます。このオプションは、キャンバスページから作業環境を選択した後で使用できます。"]
+image:screenshot_deactivate_compliance_scan.png["データセンスを非活動化（ Deactivate Data Sense ）を選択できるアクションアイコンのスクリーンショット。このオプションは、キャンバスページから作業環境を選択した後で使用できます。"]
 
 
 TIP: 作業環境を選択するときに、サービスパネルから作業環境のコンプライアンススキャンを無効にすることもできます。
 
 
 
-== Cloud Compliance からデータベースを削除しています
+== Cloud Data Sense からのデータベースの削除
 
-特定のデータベースをスキャンする必要がなくなった場合は、そのデータベースを Cloud Compliance インターフェイスから削除して、すべてのスキャンを停止できます。
+特定のデータベースをスキャンする必要がなくなった場合は、 Cloud Data Sense インターフェイスからそのデータベースを削除して、すべてのスキャンを停止できます。
 
 . [_Configuration_] ページで、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] ボタンをクリックし、 * DB サーバの削除 * をクリックします。
 
@@ -42,9 +42,9 @@ image:screenshot_compliance_remove_db.png["Scan Configuration ページの Remov
 
 
 
-== Cloud Compliance から OneDrive アカウントを削除します
+== Cloud Data Sense から OneDrive アカウントを削除する
 
-特定の OneDrive アカウントからユーザーファイルをスキャンする必要がなくなった場合は、 Cloud Compliance インターフェイスからアカウントを削除して、すべてのスキャンを停止できます。
+特定の OneDrive アカウントからユーザーファイルをスキャンする必要がなくなった場合は、 Cloud Data Sense インターフェイスからアカウントを削除して、すべてのスキャンを停止できます。
 
 .手順
 . [_Configuration_] ページで、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] ボタンをクリックして OneDrive アカウントを選び、 [ * OneDrive アカウントの削除 * ] をクリックします。
@@ -56,9 +56,9 @@ image:screenshot_compliance_remove_onedrive.png["[ スキャン構成 ] ペー�
 
 
 
-== Cloud Compliance からのファイル共有のグループの削除
+== Cloud Data Sense からのファイル共有のグループの削除
 
-ファイル共有グループからユーザファイルをスキャンする必要がなくなった場合は、 Cloud Compliance インターフェイスからファイル共有グループを削除して、すべてのスキャンを停止できます。
+ファイル共有グループからユーザファイルをスキャンする必要がなくなった場合は、 Cloud Data Sense インターフェイスからファイル共有グループを削除して、すべてのスキャンを停止できます。
 
 .手順
 . [_Configuration_] ページで、をクリックします image:screenshot_gallery_options.gif["[ 詳細 ] ボタン"] [ ファイル共有グループ ] の行にあるボタンをクリックし、 [ * ファイル共有グループの削除 * ] をクリックします。
@@ -70,11 +70,11 @@ image:screenshot_compliance_remove_fileshare_group.png["スキャン設定ペー
 
 
 
-== Cloud Compliance インスタンスを削除しています
+== クラウドデータセンスインスタンスを削除しています
 
-Cloud Compliance の使用が不要になった場合は、 Cloud Compliance インスタンスを削除できます。インスタンスを削除すると、インデックス付きデータが存在する関連ディスクも削除されます。
+データセンスを使用する必要がなくなった場合は、 Cloud Data Sense インスタンスを削除できます。インスタンスを削除すると、インデックス付きデータが存在する関連ディスクも削除されます。
 
-. クラウドプロバイダのコンソールに移動して、 Cloud Compliance インスタンスを削除します。
+. クラウドプロバイダのコンソールに移動して、 Cloud Data Sense インスタンスを削除します。
 +
 インスタンスの名前は _CloudCompliancy_with で、生成されたハッシュ（ UUID ）を連結しています。例： _CloudCompliion-16bb6564-38ad-40802-9a92-36f5fd2f71c7_
 

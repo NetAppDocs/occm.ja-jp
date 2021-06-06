@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task_scanning_onedrive.html 
-keywords: cloud compliance, enable cloud compliance, privacy, compliance, onedrive 
-summary: Cloud Compliance を使って OneDrive フォルダ内のファイルのスキャンを開始するには、いくつかの手順を実行します。 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, onedrive, Data Sense 
+summary: いくつかの手順を実行して、クラウドデータセンスを使用した OneDrive フォルダのファイルのスキャンを開始します。 
 ---
 = OneDrive アカウントをスキャンしています
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: Cloud Compliance を使って OneDrive フォルダ内のファイル�
 
 
 [role="lead"]
-Cloud Compliance を使って OneDrive フォルダ内のファイルのスキャンを開始するには、いくつかの手順を実行します。
+いくつかの手順を実行して、クラウドデータセンスを使用した OneDrive フォルダのファイルのスキャンを開始します。
 
 
 
@@ -30,10 +30,10 @@ OneDrive アカウントにログインするための管理者資格情報が�
 
 
 
-==== Cloud Compliance インスタンスを導入します
+==== Cloud Data Sense インスタンスを導入する
 
 [role="quick-margin-para"]
-link:task_deploy_cloud_compliance.html["Cloud Compliance の導入"^] インスタンスが展開されていない場合。
+link:task_deploy_cloud_compliance.html["クラウドデータの導入センス"^] インスタンスが展開されていない場合。
 
 
 
@@ -53,7 +53,7 @@ Admin ユーザクレデンシャルを使用して、アクセスする OneDriv
 
 == OneDrive の要件を確認する
 
-Cloud Compliance を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認してください。
+Cloud Data Sense を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認します。
 
 * すべてのユーザファイルに読み取りアクセスを提供する OneDrive for Business アカウントの管理者ログインクレデンシャルが必要です。
 * OneDrive フォルダをスキャンするすべてのユーザーに対して、電子メールアドレスの行区切りリストが必要です。
@@ -63,7 +63,7 @@ Cloud Compliance を有効にする前に、次の前提条件を確認し、サ
 
 == OneDrive アカウントを追加します
 
-が必要です link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Compliance のインスタンスを導入済みである"^]。
+が必要です link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Data Sense のインスタンスをすでに導入している"^]。
 
 ユーザファイルが存在する OneDrive アカウントを追加します。
 
@@ -73,7 +73,7 @@ Cloud Compliance を有効にする前に、次の前提条件を確認し、サ
 image:screenshot_compliance_add_onedrive_button.png["[OneDrive の追加 ] ボタンをクリックできる [ スキャン構成 ] ページのスクリーンショット。"]
 
 . [ OneDrive アカウントの追加 ] ダイアログで、 [* OneDrive にサインイン ] をクリックします。
-. 表示される Microsoft ページで、 OneDrive アカウントを選択し、必要な管理者ユーザーとパスワードを入力してから、 * 同意する * をクリックして、 Cloud Compliance がこのアカウントからデータを読み取ることを許可します。
+. 表示される Microsoft ページで、 OneDrive アカウントを選択し、必要な管理者ユーザーとパスワードを入力してから、 [*Accept*] をクリックして、 Cloud Data Sense がこのアカウントからデータを読み取ることを許可します。
 
 
 OneDrive アカウントが作業環境の一覧に追加されます。
@@ -82,7 +82,7 @@ OneDrive アカウントが作業環境の一覧に追加されます。
 
 == OneDrive ユーザーをコンプライアンススキャンに追加する
 
-個々の OneDrive ユーザまたはすべての OneDrive ユーザを追加して、ファイルを Cloud Compliance でスキャンすることができます。
+個々の OneDrive ユーザーまたはすべての OneDrive ユーザーを追加して、ファイルを Cloud Data Sense でスキャンすることができます。
 
 .手順
 . [_Configuration_] ページで、 OneDrive アカウントの [* 構成 *] ボタンをクリックします。
@@ -111,7 +111,7 @@ image:screenshot_compliance_onedrive_add_email_addresses.png["スキャンする
 
 
 
-Cloud Compliance によるスキャンが開始され、追加したユーザのファイルがスキャンされます。結果はダッシュボードやその他の場所に表示されます。
+Cloud Data Sense によって、追加したユーザのファイルのスキャンが開始され、その結果がダッシュボードやその他の場所に表示されます。
 
 
 

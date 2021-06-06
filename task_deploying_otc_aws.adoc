@@ -70,7 +70,7 @@ TIP: 複数の IAM ユーザが同じ AWS アカウントで作業する場合�
 
 . * サービス *: サービスを有効にしておくか、 Cloud Volumes ONTAP で使用しない個々のサービスを無効にします。
 +
-** link:concept_cloud_compliance.html["Cloud Compliance の詳細はこちらをご覧ください"]。
+** link:concept_cloud_compliance.html["クラウドデータセンスの詳細をご確認ください"]。
 ** link:concept_backup_to_cloud.html["Cloud Backup の詳細については、こちらをご覧ください"]。
 ** link:concept_monitoring.html["モニタリングの詳細"]。
 
@@ -301,7 +301,7 @@ TIP: 複数の IAM ユーザが同じ AWS アカウントで作業する場合�
 
 . * サービス *: この Cloud Volumes ONTAP システムで使用しない個々のサービスを有効または無効にしておきます。
 +
-** link:concept_cloud_compliance.html["Cloud Compliance の詳細はこちらをご覧ください"]。
+** link:concept_cloud_compliance.html["クラウドデータセンスの詳細をご確認ください"]。
 ** link:task_backup_to_s3.html["Cloud Backup の詳細については、こちらをご覧ください"]。
 ** link:concept_monitoring.html["モニタリングの詳細"]。
 

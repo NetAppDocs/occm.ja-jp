@@ -92,7 +92,7 @@ Cloud Manager は AWS アカウントを使用して、 EC2 、 S3 、 CloudForm
 | "EC2:CreatePlacementGroup" 、 "EC2:DeletePlacementGroup" | 単一の AWS アベイラビリティゾーンに HA 構成を導入すると、 Cloud Manager は 2 つの HA ノードと AWS 分散配置グループ内のメディエーターを起動します。 
 
 
-| EC2: DescribeReservedInstancesOffers ( 英語 ) | Cloud Manager は、 Cloud Compliance の導入の一環としてこの権限を使用して、使用するインスタンスタイプを選択します。 
+| EC2: DescribeReservedInstancesOffers ( 英語 ) | Cloud Manager は、 Cloud Data Sense の導入の一環としてこの権限を使用して、使用するインスタンスタイプを選択します。 
 
 
 | 「 s3 ： DeleteBucket 」、「 s3 ： GetLifecycleConfiguration 」、「 s3 ： PutBucketLifeConfiguration 」、「 s3 ： PutBucketTagging 」、「 s3 ： ListBucketVersions 」、「 s3 ： ListBucket 」、「 s3 ： ListAllMyBuckets 」、「 s3 ： GetBucketAccessBuckets3 ： GetBucketAccessBuckets3 、 GetBucketAccessBuckets3 ： GetBucketAccessBlock | Cloud Manager では、 S3 へのバックアップサービスを有効にする際にこれらの権限を使用します。 

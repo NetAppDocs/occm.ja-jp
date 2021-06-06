@@ -15,7 +15,7 @@ summary: Connector を AWS にインストールすると、 Cloud Manager は�
 [role="lead"]
 Connector を AWS にインストールすると、 Cloud Manager は、その Connector がインストールされている AWS アカウントにある Amazon S3 バケットに関する情報を自動的に検出できます。
 
-リージョン、アクセスレベル、ストレージクラス、バケットが Cloud Volumes ONTAP でバックアップに使用されているかデータの階層化に使用されているかなど、 S3 バケットの詳細を確認できます。また、 Cloud Compliance で S3 バケットをスキャンすることもできます。
+リージョン、アクセスレベル、ストレージクラス、バケットが Cloud Volumes ONTAP でバックアップに使用されているかデータの階層化に使用されているかなど、 S3 バケットの詳細を確認できます。また、 Cloud Data Sense を使って S3 バケットをスキャンすることもできます。
 
 .手順
 . link:task_creating_connectors_aws.html["コネクタを取り付ける"] Amazon S3 バケットを表示する AWS アカウントで実行します。
@@ -31,7 +31,7 @@ image:screenshot_s3_actions.gif["Amazon S3 作業環境を選択したあとの�
 
 . S3 バケットをスキャンして個人データおよび機密データを検索するには、 * コンプライアンスを有効にする * をクリックします。
 +
-詳細については、を参照してください link:task_scanning_s3.html["Cloud Compliance for Amazon S3 の利用を開始してください"]。
+詳細については、を参照してください link:task_scanning_s3.html["Amazon S3 向けのクラウドデータセンスの導入"]。
 
 . AWS アカウントの S3 バケットの詳細を表示するには、 * バケットの表示 * をクリックします。
 +

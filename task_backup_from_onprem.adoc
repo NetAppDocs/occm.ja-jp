@@ -20,7 +20,7 @@ NetApp StorageGRID システムを使用しており、バックアップを作�
 ヒント:: ほとんどの場合、 Cloud Manager を使用してすべてのバックアップおよびリストア処理を実行します。ただし、 ONTAP 9.9.1 以降では、 ONTAP System Manager を使用して、オンプレミスの ONTAP クラスタのボリュームバックアップ処理を開始できます。 https://docs.netapp.com/us-en/ontap/task_cloud_backup_data_using_cbs.html["Cloud Backup を使用してボリュームをクラウドにバックアップする方法については、 System Manager の説明を参照してください。"^]
 
 
-2021 年 1 月にリリースされたベータ版の機能により、バックアップされたボリュームに対して、オンプレミスシステムからコンプライアンススキャンを実行できます。通常、コンプライアンススキャンでは最大 1TB のデータを解放し、サービスのコストは 1TB を超えるデータに対して適用されます。オンプレミスのボリュームにバックアップとコンプライアンスを組み合わせることで、オンプレミスのボリューム上のスキャンコストを抑えることができます。詳細については、こちらをご覧ください link:concept_cloud_compliance.html["クラウドコンプライアンス"^] ビジネスアプリケーションとクラウド環境のプライバシーを確保できます。
+2021 年 1 月にリリースされたベータ版の機能により、バックアップされたボリュームに対して、オンプレミスシステムからコンプライアンススキャンを実行できます。通常、コンプライアンススキャンでは最大 1TB のデータを解放し、サービスのコストは 1TB を超えるデータに対して適用されます。オンプレミスボリュームに Backup と Data Sense を組み合わせると、オンプレミスボリュームでのスキャンコストは無料になります。詳細については、こちらをご覧ください link:concept_cloud_compliance.html["クラウドデータの意味"^] ビジネスアプリケーションとクラウド環境のプライバシーを確保できます。
 
 
 
@@ -82,7 +82,7 @@ image:screenshot_backup_onprem_policy.png["クラウドバックアップの設�
 ==== バックアップしたボリュームで Compliance スキャンをアクティブ化（オプション）
 
 [role="quick-margin-para"]
-クラウドにバックアップされているボリュームを Cloud Compliance でスキャンするかどうかを選択します。
+クラウドにバックアップされているボリュームを Cloud Data Sense スキャンでスキャンするかどうかを選択します。
 
 
 
@@ -366,20 +366,20 @@ image:screenshot_backup_select_volumes.png["バックアップするボリュー
 
 . Activate Backup * をクリックすると、ボリュームの初期バックアップの作成が開始されます。
 +
-AWS または Azure でバックアップファイルを作成する場合、バックアップされたボリュームで準拠スキャンを実行するかどうかの確認を求められます。Cloud Compliance スキャンは、実行時に無料で実行できます バックアップされたボリューム（を除く） link:concept_cloud_compliance.html#cost["導入された Cloud Compliance インスタンスのコスト"^]）。
+AWS または Azure でバックアップファイルを作成する場合、バックアップされたボリュームで準拠スキャンを実行するかどうかの確認を求められます。Cloud Data Sense スキャンは、バックアップしたボリューム（を除く）で実行すると無料で実行できます link:concept_cloud_compliance.html#cost["導入した Cloud Data Sense インスタンスのコスト"^]）。
 
 +
-image:screenshot_compliance_on_backups.png["バックアップしたボリュームで Cloud Compliance をアクティブ化するように選択できるページのスクリーンショット。"]
+image:screenshot_compliance_on_backups.png["バックアップされたボリュームで Cloud Data Sense をアクティブ化することを選択できるページのスクリーンショット。"]
 
-. コンプライアンスへ移動 * をクリックして、ボリュームのコンプライアンススキャンをアクティブ化します。（バックアップされたボリュームをスキャンせずに * Close * を選択すると、いつでもスキャンできます link:task_getting_started_compliance.html#scanning-backup-files-from-on-premises-ontap-systems["この機能を有効にします"^] Cloud Compliance を後で参照）。
+. コンプライアンスへ移動 * をクリックして、ボリュームのコンプライアンススキャンをアクティブ化します。（バックアップされたボリュームをスキャンせずに * Close * を選択すると、いつでもスキャンできます link:task_getting_started_compliance.html#scanning-backup-files-from-on-premises-ontap-systems["この機能を有効にします"^] 後でクラウドデータの意味から）
 +
-** Cloud Compliance のインスタンスがすでに環境に導入されている場合は、バックアップがある各オンプレミスの作業環境でスキャンするボリュームを設定ページで選択するように求められます。を参照してください link:task_getting_started_compliance.html#enabling-cloud-compliance-in-your-working-environments["ボリュームを選択する方法"^]。
+** Cloud Data Sense のインスタンスがすでに環境に導入されている場合は、バックアップがある各オンプレミスの作業環境でスキャンするボリュームを設定ページで選択するように指示されます。を参照してください link:task_getting_started_compliance.html#enabling-cloud-data-sense-in-your-working-environments["ボリュームを選択する方法"^]。
 +
 image:screenshot_compliance_onprem_backups.png["スキャンするボリュームを選択するためのコンプライアンスページのスクリーンショット。"]
 
-** クラウドコンプライアンスが導入されていない場合は、コンプライアンスページが表示され、クラウドまたは社内にコンプライアンスを導入できます。クラウドに導入することを強く推奨します。実行します link:task_deploy_cloud_compliance.html["こちらをご覧ください"^] を参照してください。
+** クラウドデータセンスが導入されていない場合は、コンプライアンスページが表示されます。コンプライアンスページでは、クラウドまたは社内にコンプライアンスを導入できます。クラウドに導入することを強く推奨します。実行します link:task_deploy_cloud_compliance.html["こちらをご覧ください"^] を参照してください。
 +
-image:screenshot_cloud_compliance_deploy_options.png["Cloud Compliance の導入方法を選択するためのコンプライアンスページのスクリーンショット。"]
+image:screenshot_cloud_compliance_deploy_options.png["クラウドデータをどのように導入するかを選択するためのコンプライアンスページのスクリーンショット。"]
 
 +
 Compliance の導入が完了したら、上記の手順でスキャンするボリュームを選択できます。
@@ -388,11 +388,11 @@ Compliance の導入が完了したら、上記の手順でスキャンするボ
 
 
 
-Cloud Backup は、オンプレミスの ONTAP システムからボリュームをバックアップします。必要に応じて、 Cloud Compliance はバックアップしたボリュームに対してコンプライアンススキャンを実行します。
+Cloud Backup は、オンプレミスの ONTAP システムからボリュームをバックアップします。必要に応じて、バックアップされたボリュームに対してコンプライアンススキャンを実行します。
 
 可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です link:task_restore_backups.html["ボリューム全体または個々のファイルをバックアップファイルからリストアする"^]。
 
-また可能です link:task_controlling_private_data.html["コンプライアンススキャンの結果を表示します"^] また、データコンテキストを理解し、組織内の機密データを識別するのに役立つ、 Cloud Compliance のその他の機能についても確認できます。
+また可能です link:task_controlling_private_data.html["コンプライアンススキャンの結果を表示します"^] また、データコンテキストを理解し、組織内の機密データを特定するのに役立つ、クラウドデータセンスのその他の機能についても確認します。
 
 
-NOTE: Cloud Compliance で準拠スキャンを開始するにはバックアップの作成を完了する必要があるため、スキャン結果はすぐには使用できません。
+NOTE: Cloud Backup では、コンプライアンススキャンを開始する前にバックアップの作成を完了する必要があるため、スキャン結果はすぐには使用できません。

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task_scanning_databases.html 
-keywords: cloud compliance, enable cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, databases, database schemas, Oracle, SAP HANA, SQL Server, MongoDB, PostgreSQL 
-summary: Cloud Compliance でデータベーススキーマのスキャンを開始するには、いくつかの手順を実行します。 
+keywords: cloud compliance, enable cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, databases, database schemas, Oracle, SAP HANA, SQL Server, MongoDB, PostgreSQL, Data Sense 
+summary: Cloud Data Sense でデータベーススキーマのスキャンを開始するには、いくつかの手順を実行します。 
 ---
 = データベーススキーマをスキャンしています
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: Cloud Compliance でデータベーススキーマのスキャンを開
 
 
 [role="lead"]
-Cloud Compliance でデータベーススキーマのスキャンを開始するには、いくつかの手順を実行します。
+Cloud Data Sense でデータベーススキーマのスキャンを開始するには、いくつかの手順を実行します。
 
 
 
@@ -30,10 +30,10 @@ Cloud Compliance でデータベーススキーマのスキャンを開始する
 
 
 
-==== Cloud Compliance インスタンスを導入します
+==== Cloud Data Sense インスタンスを導入する
 
 [role="quick-margin-para"]
-link:task_deploy_cloud_compliance.html["Cloud Compliance の導入"^] インスタンスが展開されていない場合。
+link:task_deploy_cloud_compliance.html["クラウドデータの導入センス"^] インスタンスが展開されていない場合。
 
 
 
@@ -53,13 +53,13 @@ link:task_deploy_cloud_compliance.html["Cloud Compliance の導入"^] インス�
 
 == 前提条件の確認
 
-Cloud Compliance を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認してください。
+Cloud Data Sense を有効にする前に、次の前提条件を確認し、サポートされている構成であることを確認します。
 
 
 
 === サポートされるデータベース
 
-Cloud Compliance では、次のデータベースからスキーマをスキャンできます。
+Cloud Data Sense では、次のデータベースからスキーマをスキャンできます。
 
 * Amazon リレーショナルデータベースサービス（ Amazon RDS ）
 * MongoDB
@@ -77,14 +77,14 @@ CAUTION: 統計収集機能 * は、データベースで有効にする必要�
 
 === データベースの要件
 
-Cloud Compliance インスタンスに接続されたデータベースは、ホストされている場所に関係なくすべてスキャンできます。データベースに接続するには、次の情報が必要です。
+Cloud Data Sense インスタンスに接続されているデータベースは、どこでホストしているかに関係なく、すべてスキャンできます。データベースに接続するには、次の情報が必要です。
 
 * IP アドレスまたはホスト名
 * ポート
 * サービス名（ Oracle データベースにアクセスする場合のみ）
 * スキーマへの読み取りアクセスを許可するクレデンシャル
 +
-ユーザー名とパスワードを選択する場合は、スキャンするすべてのスキーマとテーブルに対する完全な読み取り権限を持つユーザーを選択することが重要です。必要なすべての権限を持つ専用のユーザを Cloud Compliance システムに作成することを推奨します。
+ユーザー名とパスワードを選択する場合は、スキャンするすべてのスキーマとテーブルに対する完全な読み取り権限を持つユーザーを選択することが重要です。必要なすべての権限を持つクラウドデータセンスシステム専用のユーザを作成することを推奨します。
 
 
 
@@ -94,7 +94,7 @@ Cloud Compliance インスタンスに接続されたデータベースは、ホ
 
 == データベースサーバを追加しています
 
-が必要です link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Compliance のインスタンスを導入済みである"^]。
+が必要です link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Data Sense のインスタンスをすでに導入している"^]。
 
 スキーマが存在するデータベース・サーバを追加します。
 
@@ -107,7 +107,7 @@ image:screenshot_compliance_add_db_server_button.png["［ Scan Configuration ］
 .. データベースタイプを選択します。
 .. データベースに接続するポートおよびホスト名または IP アドレスを入力します。
 .. Oracle データベースの場合は、サービス名を入力します。
-.. Cloud Compliance がサーバにアクセスできるように、クレデンシャルを入力します。
+.. Cloud Data Sense がサーバにアクセスできるように、クレデンシャルを入力します。
 .. [Add DB Server* ] をクリックします。
 +
 image:screenshot_compliance_add_db_server_dialog.png["データベースを識別するための [Add DB Server] ページのスクリーンショット。"]
@@ -134,4 +134,4 @@ image:screenshot_compliance_select_schemas.png["スキャンするスキーマ�
 
 
 
-Cloud Compliance によって、有効にしたデータベーススキーマのスキャンが開始されます。エラーが発生した場合は、エラーを修正するために必要なアクションとともに、 [ ステータス ] 列に表示されます。
+Cloud Data Sense は、有効にしたデータベーススキーマのスキャンを開始します。エラーが発生した場合は、エラーを修正するために必要なアクションとともに、 [ ステータス ] 列に表示されます。

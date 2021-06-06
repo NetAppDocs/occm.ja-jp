@@ -59,7 +59,7 @@ NetApp ONTAP ベースのすべてのストレージソリューションを対�
 
 == SaaS プラットフォームを使用しているのでコネクタを取り外してもよろしいですか？
 
-いいえ、できません。Connector は、 Cloud Volumes ONTAP の導入と管理、 Cloud Backup Service の有効化、クラウドコンプライアンスの導入など、パブリッククラウド環境内でリソースとプロセスを管理するために使用されたソフトウェアと同じです。
+いいえ、できません。Connector は、 Cloud Volumes ONTAP の導入と管理、 Cloud Backup の有効化、 Cloud Data Sense の導入など、パブリッククラウド環境内でリソースやプロセスを管理するために使用されたソフトウェアと同じです。
 
 
 
@@ -69,13 +69,13 @@ SaaS ベースのサブスクリプションは、クラウドプロバイダの
 
 * Cloud Volumes ONTAP （ AWS と GCP ではバージョン 9.6 、 Azure ではバージョン 9.7 以降）
 * クラウドバックアップ
-* クラウドコンプライアンス
+* クラウドデータの意味
 * クラウド階層化
 
 
 Cloud Volumes ONTAP 、クラウドバックアップ、クラウド階層化の場合は、ネットアップからライセンスを直接購入することもできます。このような場合、 SaaS ベースのサブスクリプションは必要ありません。
 
-SaaS ベースのサブスクリプションは、 Cloud Compliance の唯一の支払い方法です。
+SaaS ベースのサブスクリプションは、クラウドデータを利用した場合の唯一の支払い方法です。
 
 これらのサービスの利用を開始すると、 Cloud Manager はサブスクリプションが設定されていない場合にサブスクライブするよう求めます。登録が必要になるのは 1 回だけです。 Cloud Manager は、これらのサービスごとに同じサブスクリプションを使用します。
 
@@ -99,10 +99,10 @@ SaaS ベースのサブスクリプションは、 Cloud Compliance の唯一の
 ** link:task_licensing_cloud_tiering.html["Cloud Tiering のライセンスを設定する方法について説明します"]
 
 
-* クラウドコンプライアンス
+* クラウドデータの意味
 +
-** link:concept_cloud_compliance.html#cost["クラウドコンプライアンスのコストをご確認ください"]
-** link:task_deploy_cloud_compliance.html#subscribing-to-the-cloud-compliance-service["Cloud Compliance への登録方法をご確認ください"]
+** link:concept_cloud_compliance.html#cost["クラウドデータの意味に関するコストをご確認ください"]
+** link:task_deploy_cloud_compliance.html#subscribing-to-the-cloud-data-sense-service["Cloud Data Sense への登録方法をご確認ください"]
 
 
 
@@ -143,7 +143,7 @@ SaaS プラットフォームは、ユーザの Web ブラウザとローカル�
 
 == VPC / VNet に導入されたコネクタによって格納されるデータやメタデータは何ですか。
 
-コネクタ / Cloud Manager は変更されていません。以前のリリースと同じデータが保存されています。Cloud Volumes ONTAP の導入と管理、 Cloud Backup Service の有効化、 Cloud Compliance の導入と使用など、パブリッククラウド環境でリソースとプロセスを管理するために必要なメタデータのみを保持します（を参照） link:concept_connectors.html["コネクタについて説明します"] ページを参照してください）。
+コネクタ / Cloud Manager は変更されていません。以前のリリースと同じデータが保存されています。Cloud Volumes ONTAP の導入と管理、クラウドバックアップの有効化、クラウドデータの導入と使用など、パブリッククラウド環境内でリソースやプロセスを管理するために必要なメタデータのみを保持します（を参照） link:concept_connectors.html["コネクタについて説明します"] ページを参照してください）。
 
 
 
@@ -151,11 +151,11 @@ SaaS プラットフォームは、ユーザの Web ブラウザとローカル�
 
 コネクタからお客様へのデータは HTTPS 経由で転送され、ネットアップの証明書で暗号化されて署名されます。SaaS ベースの UI は、クライアントの Web ブラウザとコネクタの間のセキュアなパイプラインとして機能します。これは、許可されたユーザーのみがコネクタからのデータにアクセスできることを意味します。
 
-Cloud Compliance サービスを利用するお客様は、エンドツーエンドで暗号化されるようになりましたWeb ブラウザとコネクタの間で鍵の交換が行われるため、ネットアップはデータを読み取ることができません。 https://cloud.netapp.com/cloud-compliance["Cloud Compliance の詳細はこちらをご覧ください"^]。
+クラウドデータセンスサービスを利用するお客様は、エンドツーエンドで暗号化されるようになりましたWeb ブラウザとコネクタの間で鍵の交換が行われるため、ネットアップはデータを読み取ることができません。 https://cloud.netapp.com/cloud-compliance["クラウドデータセンスの詳細をご確認ください"^]。
 
 
 
-== SaaS エンドポイント経由で Cloud Compliance サービスを使用すると、 GDPR の影響はありますか。
+== SaaS エンドポイント経由でクラウドデータセンスサービスを使用すると、 GDPR の影響はありますか。
 
 データはエンドツーエンドで暗号化されますWeb ブラウザとコネクタの間で鍵の交換が行われるため、ネットアップはデータを読み取ることができません。
 

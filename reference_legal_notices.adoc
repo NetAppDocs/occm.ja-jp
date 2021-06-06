@@ -50,11 +50,11 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[""^]
 通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。
 
 * link:media/notice_cloud_manager_3.9.pdf["Cloud Manager 3.9 に関する注意事項"^]
-* link:media/notice_cloud_backup_service.pdf["Cloud Backup Service の注意事項を参照してください"^]
+* link:media/notice_cloud_backup_service.pdf["Cloud Backup に関する通知です"^]
 * link:media/notice_single_file_restore.pdf["Single File Restore に関する注意事項を参照してください"^]
 * link:media/notice_global_file_cache.pdf["Global File Cache に関する注意事項"^]
 * link:media/notice_cloud_sync.pdf["クラウドの同期に関する注意事項"^]
 * link:media/notice_cloud_tiering.pdf["Cloud Tiering への通知"^]
-* link:media/notice_cloud_compliance.pdf["Cloud Compliance に関する通知"^]
+* link:media/notice_cloud_compliance.pdf["クラウドデータセンスに関する通知（クラウドコンプライアンス）"^]
 * link:media/notice_application_templates.pdf["アプリケーションテンプレートに関する注意事項"^]
 

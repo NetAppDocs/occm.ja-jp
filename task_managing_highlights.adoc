@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task_managing_highlights.html 
-keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels 
-summary: Cloud Compliance では、さまざまな方法でプライベートデータを管理できます。一部の機能では、最も重要なデータを簡単に確認できます。その他の機能を使用すると、データに変更を加えることができます。 
+keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, data sense 
+summary: Cloud Data Sense は、プライベートデータを管理するためのさまざまな方法を提供します。一部の機能では、最も重要なデータを簡単に確認できます。その他の機能を使用すると、データに変更を加えることができます。 
 ---
 = プライベートデータの管理
 :hardbreaks:
@@ -13,21 +13,20 @@ summary: Cloud Compliance では、さまざまな方法でプライベートデ
 
 
 [role="lead"]
-Cloud Compliance では、さまざまな方法でプライベートデータを管理できます。一部の機能では、最も重要なデータを簡単に確認できます。その他の機能を使用すると、データに変更を加えることができます。
+Cloud Data Sense は、プライベートデータを管理するためのさまざまな方法を提供します。一部の機能では、最も重要なデータを簡単に確認できます。その他の機能を使用すると、データに変更を加えることができます。
 
 * 「ポリシー」機能を使用すると、 1 つのボタンをクリックして簡単に結果を表示できるように、独自のカスタム検索クエリを作成できます。
 * 特定の重要なポリシーが結果を返すと、 Cloud Manager ユーザに E メールアラートを送信できます。
-* に登録している場合は link:https://azure.microsoft.com/en-us/services/information-protection/["Azure 情報保護（ AIP ）"^] ファイルを分類して保護するには、 Cloud Compliance を使用して AIP ラベルを管理します。
+* ステータスは、特定の種類のフォローアップのためにマークするファイルに追加できます。
+* に登録している場合は link:https://azure.microsoft.com/en-us/services/information-protection/["Azure 情報保護（ AIP ）"^] ファイルを分類して保護するには、 Cloud Data Sense を使用して AIP ラベルを管理します。
 * 安全でないようであるか危険すぎると思われるファイルを削除して、ストレージシステムに残すことも、重複として識別したファイルを削除することもできます。
 
-
-ポリシー機能と AIP 機能の両方で提供される機能の詳細については、以下を参照してください。
 
 
 
 == ポリシーを使用したデータの制御
 
-ポリシーは、よく要求されるコンプライアンスクエリーの [ 調査 ] ページで検索結果を表示するカスタムフィルタのお気に入りリストのようなものです。Cloud Compliance では、お客様からの一般的な要求に基づいて、一連のポリシーが事前定義されています。組織固有の検索結果を提供するカスタムポリシーを作成できます。
+ポリシーは、よく要求されるコンプライアンスクエリーの [ 調査 ] ページで検索結果を表示するカスタムフィルタのお気に入りリストのようなものです。Cloud Data Sense は、お客様からの一般的なリクエストに基づいて、一連の事前定義されたポリシーを提供します。組織固有の検索結果を提供するカスタムポリシーを作成できます。
 
 ポリシーには次の機能があります。
 
@@ -38,9 +37,9 @@ Cloud Compliance では、さまざまな方法でプライベートデータを
 * AIP の割り当て（ Azure 情報保護） 定義された条件に一致するすべてのファイルに自動的にラベルを付けます ポリシー内
 
 
-コンプライアンスダッシュボードの * ポリシー * タブには、このクラウドコンプライアンスインスタンスで利用可能なすべての事前定義ポリシーとカスタムポリシーが表示されます。
+順守ダッシュボードの * ポリシー * タブには、クラウドデータセンスのこのインスタンスで使用可能なすべての定義済みおよびカスタムポリシーが一覧表示されます。
 
-image:screenshot_compliance_highlights_tab.png["Cloud Compliance ダッシュボードの Policies タブのスクリーンショット。"]
+image:screenshot_compliance_highlights_tab.png["Cloud Data Sense ダッシュボードの Policies タブのスクリーンショット。"]
 
 さらに、 [ 調査 ] ページの [ フィルタ ] リストにポリシーが表示されます。
 
@@ -60,7 +59,7 @@ image:screenshot_compliance_highlights_investigate.png["［ ポリシー ］ タ
 
 .手順
 . [ データ調査 ] ページで、使用するすべてのフィルタを選択して検索を定義します。を参照してください link:task_controlling_private_data.html#filtering-data-in-the-data-investigation-page["[ データ調査 ] ページでデータをフィルタリングします"^] を参照してください。
-. フィルタの特性をすべて希望どおりに設定したら、 [ * この検索をポリシーとして保存 * ] をクリックします。
+. 必要な方法でフィルタ特性をすべて設定したら、 [ この検索からポリシーを作成する *] をクリックします。
 +
 image:screenshot_compliance_save_as_highlight.png["フィルタされたクエリをポリシーとして保存する方法を示すスクリーンショット。"]
 
@@ -68,7 +67,7 @@ image:screenshot_compliance_save_as_highlight.png["フィルタされたクエ�
 +
 .. 一意の名前と説明を入力します。
 .. 必要に応じて、 Cloud Manager ユーザに通知 E メールを送信する場合はチェックボックスをオンにし、 E メールの送信間隔を選択します。
-.. 必要に応じて、このチェックボックスをオンにすると、ポリシーパラメータに一致するファイルに AIP ラベルが自動的に割り当てられ、ラベルが選択されます。の詳細を確認してください <<Categorizing your data using AIP labels,AIP ラベル>>. ）
+.. 必要に応じて、このチェックボックスをオンにすると、ポリシーパラメータに一致するファイルに AIP ラベルが自動的に割り当てられ、ラベルが選択されます。（ AIP ラベルがすでに統合されている場合のみ。の詳細を確認してください <<Categorizing your data using AIP labels,AIP ラベル>>. ）
 .. [ ポリシーの作成 *] をクリックします。
 +
 image:screenshot_compliance_save_highlight.png["ポリシーを設定して保存する方法を示すスクリーンショット。"]
@@ -104,22 +103,82 @@ NOTE: カスタムポリシーのフィルタパラメータを変更する必�
 
 
 
+== ステータスタグを適用して、スキャンしたファイルを管理します
+
+ステータスは、特定の種類のフォローアップのためにマークするファイルに追加できます。たとえば、重複するファイルがいくつか見つかった場合に、それらのファイルを 1 つ削除する必要がありますが、削除するファイルを確認する必要があります。このファイルに「削除するチェック」のステータスを追加すると、このファイルに何らかの調査と将来のアクションが必要であることがわかります。
+
+データセンスを使用すると、ファイルに割り当てられているステータスの表示、ファイルへのステータスの追加、名前の変更、または既存のステータスの削除を行うことができます。
+
+AIP ラベルがファイルメタデータの一部であるのと同じ方法で、ステータスがファイルに追加されないことに注意してください。ステータスは、 Cloud Data Sense を使用している Cloud Manager ユーザから確認できるようになったため、ファイルの削除が必要かどうかを確認したり、フォローアップの種類を確認したりすることができます。
+
+
+
+=== ファイルに割り当てられているステータスタグの表示
+
+特定のステータスが割り当てられているすべてのファイルを表示できます。
+
+. Cloud Data Sense の [* Investigation* （調査 * ） ] タブをクリックします。
+. [ データ調査 ] ページで、 [ フィルタ ] ペインの [ ステータス *] をクリックし、 [ 必要なステータス ] を選択します。
++
+image:screenshot_compliance_filter_status.png["[ フィルタ ] ペインから特定のステータスを選択する方法を示すスクリーンショット。"]
+
++
+[ 調査結果 ] ペインには、そのステータスが割り当てられているすべてのファイルが一覧表示されます。
+
+
+
+
+
+=== ファイルへの Status タグの割り当て
+
+ファイルに Status タグを追加、変更、および削除できます。
+
+.手順
+. [ データ調査結果 ] ペインで、をクリックします image:button_subfolder.png["右キャレット"] をクリックします。
+. [ ステータス * （ Status * ） ] フィールドをクリックして、 [ ステータス（ Status ） ] ：
++
+** 既存のステータスを割り当てるには、そのステータスをクリックします。たとえば、「 Action Required 」などです。
+** 新しいステータスを作成してファイルに割り当てるには、 [ 新規ステータスの追加 ] をクリックし、新しいステータスの名前を入力して、 [ 完了 *] をクリックします。
++
+image:screenshot_compliance_add_status_manually.png["[ データ調査 ] ページでステータスタグをファイルに割り当てる方法を示すスクリーンショット。"]
+
++
+Status タグがファイルメタデータに表示されます。
+
+
+
+
+
+
+
+=== Status タグの編集と削除
+
+Status タグを編集して名前を変更したり、不要になった Status タグを削除したりできます。をクリックします image:button_3_vert_dots.png[""] 既存のステータスの場合は、 * ステータス名の編集 * または * ステータスの削除 * をクリックします。
+
+image:screenshot_compliance_edit_delete_status.png["Status タグを削除する方法またはタグの名前を変更する方法を示すスクリーンショット。"]
+
+ステータス名を変更すると、古い名前を使用していたすべてのファイルで変更されます。
+
+Status タグを削除すると、 Status を使用していたすべてのファイルから消去されます。
+
+
+
 == AIP ラベルを使用してデータを分類する
 
-クラウドファイルで AIP ラベルを管理できます 登録している場合は、コンプライアンスがスキャンされます link:https://azure.microsoft.com/en-us/services/information-protection/["Azure 情報保護（ AIP ）"^]。AIP を使用すると、コンテンツにラベルを適用することで、ドキュメントやファイルを分類して保護できます。Cloud Compliance では、すでにファイルに割り当てられているラベルを表示したり、ファイルにラベルを追加したり、すでにラベルが存在する場合にラベルを変更したりできます。
+加入している場合、 Cloud Data Sense がスキャンしているファイルで AIP ラベルを管理できます link:https://azure.microsoft.com/en-us/services/information-protection/["Azure 情報保護（ AIP ）"^]。AIP を使用すると、コンテンツにラベルを適用することで、ドキュメントやファイルを分類して保護できます。データセンスを使用すると、既にファイルに割り当てられているラベルを表示したり、ファイルにラベルを追加したり、ラベルが既に存在する場合にラベルを変更したりできます。
 
-Cloud Compliance は、 .pdf 、 .DOCX 、 .DOC 、 .PPTX 、 .XLS 、 .xlsx の各ファイルタイプで AIP ラベルをサポートします。
+クラウドデータセンスは、 .DOC 、 .DOCX 、 .pdf 、 .PPTX 、 .XLS 、 .xlsx 。
 
 現在、 30MB を超えるファイルのラベルは変更できません。OneDrive アカウントの場合、最大ファイルサイズは 4MB です。
 
 
-TIP: AIP に存在しないラベルがファイルにある場合、 Cloud Compliance はラベルのないファイルと見なします。
+TIP: AIP に存在しないラベルがファイルにある場合、 Cloud Data Sense はラベルのないファイルと見なします。
 
 
 
 === ワークスペースへの AIP ラベルの統合
 
-AIP ラベルを管理するには、既存の Azure アカウントにサインインして AIP ラベル機能をクラウド準拠に統合する必要があります。有効にすると、すべてのファイルの AIP ラベルを管理できます link:concept_cloud_compliance.html#supported-working-environments-and-data-sources["作業環境とデータソース"^] をクリックします。
+AIP ラベルを管理するには、既存の Azure アカウントにサインインして AIP ラベル機能をクラウドデータセンスに統合する必要があります。有効にすると、すべてのファイルの AIP ラベルを管理できます link:concept_cloud_compliance.html#supported-working-environments-and-data-sources["作業環境とデータソース"^] をクリックします。
 
 .要件
 * アカウントと Azure Information Protection のライセンスが必要です。
@@ -128,13 +187,13 @@ AIP ラベルを管理するには、既存の Azure アカウントにサイン
 
 
 .手順
-. Cloud Compliance Configuration ページで、 * Integrate AIP Labels* をクリックします。
+. Cloud Data Sense Configuration ページで、 *Integrate AIP Labels* をクリックします。
 +
-image:screenshot_compliance_integrate_aip_labels.png["ボタンをクリックして AIP ラベル機能を Cloud Compliance に統合することを示すスクリーンショット。"]
+image:screenshot_compliance_integrate_aip_labels.png["ボタンをクリックして AIP ラベル機能を Cloud Data Sense に統合することを示すスクリーンショット。"]
 
 . [Integrate AIP Labels （ AIP ラベルの統合） ] ダイアログで、 [* Sign in to Azure* （ Azure にサインイン） ]
 . 表示される Microsoft ページで、アカウントを選択し、必要なクレデンシャルを入力します。
-. Cloud Compliance タブに戻り、「 _AIP Labels were successfully integrated with the account <account_name>_ 」というメッセージが表示されます。
+. Cloud Data Sense タブに戻り、「 _AIP Labels were successfully integrated with the account <account_name>_ 」というメッセージが表示されます。
 . [* 閉じる ] をクリックすると、ページの上部に「 _AIP ラベル integrated__ 」というテキストが表示されます。
 +
 image:screenshot_compliance_aip_labels_int.png["AIP ラベルが正常に統合されたことを示すスクリーンショット。"]
@@ -157,7 +216,7 @@ image:screenshot_compliance_show_label.png["割り当てられた AIP ラベル�
 
 === AIP ラベルを手動で割り当てる
 
-Cloud Compliance を使用して、ファイルに AIP ラベルを追加、変更、および削除できます。
+Cloud Data Sense を使用して、ファイルに AIP ラベルを追加、変更、および削除できます。
 
 AIP ラベルを 1 つのファイルに割り当てる手順は、次のとおりです。
 
@@ -178,7 +237,7 @@ image:screenshot_compliance_add_label_manually.png["[ データ調査 ] ペー�
 
 AIP ラベルは、ポリシーの条件を満たすすべてのファイルに割り当てることができます。ポリシーの作成時に AIP ラベルを指定することも、ポリシーの編集時にラベルを追加することもできます。
 
-Cloud Compliance がファイルをスキャンすると、ファイルにラベルが追加または更新されます。
+Cloud Data Sense がファイルをスキャンすると、ファイルにラベルが追加または更新されます。
 
 ラベルがすでにファイルに適用されているかどうか、およびラベルの分類レベルによって、ラベルを変更するときに次のアクションが実行されます。
 
@@ -222,14 +281,14 @@ NOTE: ポリシーにラベルが設定されていても、ラベルが AIP か
 
 === AIP 連動の削除
 
-ファイルの AIP ラベルを管理できないようにするには、クラウドコンプライアンスインターフェイスから AIP アカウントを削除します。
+ファイル内の AIP ラベルを管理する機能が不要になった場合は、クラウドデータセンスインターフェイスから AIP アカウントを削除できます。
 
-Cloud Compliance で追加したラベルは変更されません。ファイルに存在するラベルは、現在存在しているラベルのままになります。
+データセンスを使用して追加したラベルは変更されません。ファイルに存在するラベルは、現在存在しているラベルのままになります。
 
 .手順
 . _Configuration_page で、 *AIP ラベル統合 > 統合の削除 * をクリックします。
 +
-image:screenshot_compliance_un_integrate_aip_labels.png["クラウドコンプライアンスとの AIP 統合を削除する方法を示すスクリーンショット。"]
+image:screenshot_compliance_un_integrate_aip_labels.png["クラウドデータセンスとの AIP 統合を削除する方法を示すスクリーンショット。"]
 
 . 確認ダイアログで、 [ 統合の削除（ Remove Integration ） ] をクリックします。
 
@@ -238,7 +297,7 @@ image:screenshot_compliance_un_integrate_aip_labels.png["クラウドコンプ�
 
 == 準拠していないデータが見つかった場合に E メールアラートを送信する
 
-Cloud Compliance は、特定の重要なポリシーの結果が返されたときに Cloud Manager ユーザに E メールアラートを送信して、データを保護する通知を受け取ることができます。E メール通知は、日単位、週単位、または月単位で送信することができます。
+Cloud Data Sense は、特定の重要なポリシーの結果が返されたときに Cloud Manager ユーザに E メールアラートを送信して、データを保護する通知を受け取ることができます。E メール通知は、日単位、週単位、または月単位で送信することができます。
 
 この設定は、ポリシーの作成時または任意のポリシーの編集時に設定できます。
 
@@ -287,7 +346,7 @@ image:screenshot_compliance_delete_file.png["[ データ調査 ] ページのフ
 
 === 事前定義されたポリシーのリスト
 
-Cloud Compliance で提供されるシステム定義のポリシーは次のとおりです。
+Cloud Data Sense で提供されるシステム定義のポリシーは次のとおりです。
 
 [cols="25,40,40"]
 |===

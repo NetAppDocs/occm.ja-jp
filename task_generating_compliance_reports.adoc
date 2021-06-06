@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_generating_compliance_reports.html 
 keywords: report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa 
-summary: Cloud Compliance では、組織のデータプライバシープログラムのステータスをより詳しく把握するために使用できるレポートが用意されています。 
+summary: Cloud Data Sense は、組織のデータプライバシープログラムの状況をよりよく把握するために使用できるレポートを提供します。 
 ---
 = コンプライアンスレポートの表示
 :hardbreaks:
@@ -13,12 +13,12 @@ summary: Cloud Compliance では、組織のデータプライバシープログ
 
 
 [role="lead"]
-Cloud Compliance では、組織のデータプライバシープログラムのステータスをより詳しく把握するために使用できるレポートが用意されています。
+Cloud Data Sense は、組織のデータプライバシープログラムの状況をよりよく把握するために使用できるレポートを提供します。
 
-デフォルトでは、 Cloud Compliance ダッシュボードには、すべての作業環境とデータベースのコンプライアンスデータが表示されます。一部の作業環境のデータのみを含むレポートを表示する場合は、 <<Selecting the working environments for reports,それらの作業環境を選択します>>。
+デフォルトでは、 Cloud Data Sense ダッシュボードには、すべての作業環境およびデータベースのコンプライアンスデータとガバナンスデータが表示されます。一部の作業環境のデータのみを含むレポートを表示する場合は、 <<Selecting the working environments for reports,それらの作業環境を選択します>>。
 
 
-NOTE: ネットアップでは、 Cloud Compliance によって識別される個人データと機密性の高い個人データの正確性を 100% 保証することはできません。必ずデータを確認して情報を検証してください。
+NOTE: ネットアップでは、 Cloud Data Sense が特定した個人データと機密性の高い個人データの正確性を 100% 保証することはできません。必ずデータを確認して情報を検証してください。
 
 
 
@@ -35,23 +35,23 @@ NOTE: ネットアップでは、 Cloud Compliance によって識別される�
 
 === プライバシーリスク評価レポートの生成
 
-コンプライアンスタブに移動してレポートを生成します。
+[ データセンス ] タブに移動してレポートを生成します。
 
 .手順
-. Cloud Manager の上部で、 * Compliance * をクリックします。
-. [*Reports*] の下にある [* Privacy Risk Assessment* ] の横にあるダウンロードアイコンをクリックします。
+. Cloud Manager の上部で、 * Data Sense * をクリックします。
+. [*Compliance] をクリックし、 [*Reports] の下にある [*Privacy Risk Assessment*] の横にあるダウンロードアイコンをクリックします。
 +
 image:screenshot_privacy_risk_assessment.gif["Cloud Manager の Compliance タブのスクリーンショット。 Reports ペインに、 Privacy Risk Assessment をクリックします。"]
 
 
 
-Cloud Compliance によって PDF レポートが生成され、必要に応じて他のグループに送信して確認できます。
+Cloud Data Sense は、必要に応じて他のグループにレビューして送信できる PDF レポートを生成します。
 
 
 
 === 重要度スコア
 
-Cloud Compliance は、次の 3 つの変数に基づいて、プライバシーリスク評価レポートの重大度スコアを計算します。
+Cloud Data Sense は、プライバシーリスク評価レポートの重要度スコアを次の 3 つの変数に基づいて計算します。
 
 * すべてのデータの個人データの割合。
 * すべてのデータの機密性の高い個人データの割合。
@@ -114,23 +114,23 @@ Payment Card Industry Data Security Standard （ PCI DSS ） Report は、クレ
 
 === PCI DSS レポートの生成
 
-コンプライアンスタブに移動してレポートを生成します。
+[ データセンス ] タブに移動してレポートを生成します。
 
 .手順
-. Cloud Manager の上部で、 * Compliance * をクリックします。
-. [*Reports*] の下にある [PCI DSS Report*] の横にあるダウンロードアイコンをクリックします。
+. Cloud Manager の上部で、 * Data Sense * をクリックします。
+. [* コンプライアンス * ] をクリックし、 [* レポート ] の下の [* PCI DSS レポート * ] の横にあるダウンロード・アイコンをクリックします。
 +
 image:screenshot_pci_dss.gif["Cloud Manager の Compliance タブのスクリーンショット。 Reports ペインに、 Privacy Risk Assessment をクリックします。"]
 
 
 
-Cloud Compliance によって PDF レポートが生成され、必要に応じて他のグループに送信して確認できます。
+Cloud Data Sense は、必要に応じて他のグループにレビューして送信できる PDF レポートを生成します。
 
 
 
 == HIPAA レポート
 
-Health Insurance Portability and Accountability Act （ HIPAA ：医療保険の携行性と責任に関する法律）レポートは、健康に関する情報を含むファイルを特定するのに役立ちます。このポリシーは、 HIPAA データプライバシー法に準拠するという組織の要件を支援するように設計されています。Cloud Compliance は、次の情報を検索します。
+Health Insurance Portability and Accountability Act （ HIPAA ：医療保険の携行性と責任に関する法律）レポートは、健康に関する情報を含むファイルを特定するのに役立ちます。このポリシーは、 HIPAA データプライバシー法に準拠するという組織の要件を支援するように設計されています。Cloud Data Sense が探している情報には、次のものがあります。
 
 * ヘルス参照パターン
 * ICD-10-CM 医療コード
@@ -152,25 +152,55 @@ Health Insurance Portability and Accountability Act （ HIPAA ：医療保険の
 
 === HIPAA レポートの生成
 
-コンプライアンスタブに移動してレポートを生成します。
+[ データセンス ] タブに移動してレポートを生成します。
 
 .手順
-. Cloud Manager の上部で、 * Compliance * をクリックします。
-. [*Reports*] で、 [*HIPAA Report*] の横にあるダウンロードアイコンをクリックします。
+. Cloud Manager の上部で、 * Data Sense * をクリックします。
+. [*Compliance] をクリックし、 [*Reports*] の下にある [*HIPAA Report*] の横にあるダウンロードアイコンをクリックします。
 +
 image:screenshot_hipaa.gif["Cloud Manager の Compliance タブのスクリーンショット。 HIPAA をクリックできる Reports ペインが表示されます。"]
 
 
 
-Cloud Compliance によって PDF レポートが生成され、必要に応じて他のグループに送信して確認できます。
+Cloud Data Sense は、必要に応じて他のグループにレビューして送信できる PDF レポートを生成します。
+
+
+
+== データマッピングレポート
+
+データマッピングレポートには、企業データソースに保存されているデータの概要が表示され、移行、バックアップ、セキュリティ、コンプライアンスの各プロセスの決定に役立ちます。最初に、すべての作業環境とデータソースをまとめた概要レポートが表示され、それぞれの作業環境の内訳が表示されます。
+
+このレポートには次の情報が含まれます。
+
+使用容量:: すべての作業環境：各作業環境のファイル数と使用済み容量が表示されます。単一の作業環境の場合：容量が最も多いファイルが表示されます。
+データの経過時間:: すべての作業環境：特定の日付範囲に基づいて変更されたファイルの数が表示されます。単一の作業環境の場合：特定の日付範囲に基づいて作成、アクセス、および変更されたファイルの数が表示されます。
+データのサイズ:: 作業環境の特定のサイズ範囲内に存在するファイルの数を示します。
+ファイルの種類:: 作業環境に保存されているファイルタイプごとのファイルの総数と使用容量が表示されます。
+
+
+
+
+=== データマッピングレポートの生成
+
+[ データセンス ] タブに移動してレポートを生成します。
+
+.手順
+. Cloud Manager の上部で、 * Data Sense * をクリックします。
+. [* Governance * ] をクリックし、 [Governance Dashboard] から [ * データマッピングレポートのダウンロード ] ボタンをクリックします。
++
+image:screenshot_compliance_data_mapping_report_button.png["データマッピングレポートの起動方法を示す Governance Dashboard のスクリーンショット。"]
+
+
+
+Cloud Data Sense は、必要に応じて他のグループにレビューして送信できる PDF レポートを生成します。
 
 
 
 == レポートの作業環境を選択する
 
-Cloud Compliance ダッシュボードの内容をフィルタリングして、すべての作業環境とデータベース、または特定の作業環境のコンプライアンスデータを表示できます。
+Cloud Data Sense Compliance ダッシュボードの内容をフィルタリングして、すべての作業環境とデータベース、または特定の作業環境のコンプライアンスデータを表示できます。
 
-ダッシュボードをフィルタすると、 Cloud Compliance は選択した作業環境だけにコンプライアンスデータとレポートをスコープします。
+ダッシュボードをフィルタすると、 Data Sense によって、選択した作業環境だけにコンプライアンスデータとレポートがスコープされます。
 
 .手順
 . フィルタドロップダウンをクリックし、データを表示する作業環境を選択して、 * 表示 * をクリックします。

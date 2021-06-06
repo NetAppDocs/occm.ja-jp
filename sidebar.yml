@@ -314,11 +314,11 @@ entries:
     url: "/faq_sync.html"
 - title: データプライバシーに関する分析情報を入手できます
   entries:
-  - title: Cloud Compliance の詳細をご確認ください
+  - title: クラウドデータの意味をご確認ください
     url: "/concept_cloud_compliance.html"
   - title: はじめに
     entries:
-    - title: Cloud Compliance の導入
+    - title: クラウドデータの導入センス
       url: "/task_deploy_cloud_compliance.html"
     - title: データソースでスキャンをアクティブ化します
       entries:
@@ -348,7 +348,7 @@ entries:
     url: "/task_responding_to_dsar.html"
   - title: プライベートデータのカテゴリ
     url: "/reference_private_data_categories.html"
-  - title: Cloud Compliance からデータソースを削除します
+  - title: データセンスからデータソースを削除します
     url: "/task_managing_compliance.html"
   - title: よく寄せられる質問
     url: "/faq_cloud_compliance.html"

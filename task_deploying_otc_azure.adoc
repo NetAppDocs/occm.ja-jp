@@ -70,7 +70,7 @@ Cloud Volumes ONTAP には、新しい専用のリソースグループを使用
 video::video_subscribing_azure.mp4[width=848,height=480]
 . * サービス *: サービスを有効にしておくか、 Cloud Volumes ONTAP で使用しない個々のサービスを無効にします。
 +
-** link:concept_cloud_compliance.html["Cloud Compliance の詳細はこちらをご覧ください"]。
+** link:concept_cloud_compliance.html["クラウドデータセンスの詳細をご確認ください"]。
 ** link:concept_backup_to_cloud.html["Cloud Backup の詳細については、こちらをご覧ください"]。
 ** link:concept_monitoring.html["監視サービスの詳細については、こちらをご覧ください"]。
 

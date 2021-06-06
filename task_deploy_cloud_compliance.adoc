@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_deploy_cloud_compliance.html 
-keywords: cloud compliance, get started, deploy cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises 
-summary: Cloud Manager のワークスペースに Cloud Compliance インスタンスを導入するには、いくつかの手順を実行します。クラウドまたはオンプレミスシステムに Cloud Compliance を導入できます。 
+keywords: cloud compliance, data sense, get started, deploy cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, 
+summary: Cloud Manager のワークスペースに Cloud Data Sense インスタンスを導入するには、いくつかの手順を実行します。クラウドまたはオンプレミスシステムにデータセンスを導入できます。 
 ---
-= Cloud Compliance の導入
+= クラウドデータの導入センス
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -13,9 +13,9 @@ summary: Cloud Manager のワークスペースに Cloud Compliance インスタ
 
 
 [role="lead"]
-Cloud Manager のワークスペースに Cloud Compliance インスタンスを導入するには、いくつかの手順を実行します。クラウドまたはオンプレミスシステムに Cloud Compliance を導入できます。
+Cloud Manager のワークスペースに Cloud Data Sense インスタンスを導入するには、いくつかの手順を実行します。クラウドまたはオンプレミスシステムにデータセンスを導入できます。
 
-オンプレミスにあるコンプライアンスインスタンスを使用してオンプレミスの ONTAP 作業環境をスキャンする場合は、オンプレミスインストールをお勧めします。ただし、これは必須条件ではありません。Compliance ソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。
+オンプレミスの ONTAP 作業環境を、オンプレミスにあるデータセンスインスタンスを使用してスキャンする場合は、オンプレミス環境をインストールすることをお勧めします。ただし、これは必須条件ではありません。どのインストール方法を選択しても、ソフトウェアはまったく同じように機能します。
 
 
 
@@ -38,36 +38,36 @@ Cloud Manager のワークスペースに Cloud Compliance インスタンスを
 ==== 前提条件を確認する
 
 [role="quick-margin-para"]
-環境が前提条件を満たしていることを確認します。これには、インスタンスのアウトバウンドインターネットアクセス、コネクタとポート 80 経由の Cloud Compliance の間の接続などが含まれます。 <<Reviewing prerequisites,すべてのリストを参照してください>>。
+環境が前提条件を満たしていることを確認します。これには、インスタンスのアウトバウンドインターネットアクセス、コネクタと Cloud Data Sense 間のポート 80 経由の接続などが含まれます。 <<Reviewing prerequisites,すべてのリストを参照してください>>。
 
-* クラウドにインストールした場合は、クラウドコンプライアンスインスタンス用の vCPU が 16 個必要です。を参照してください link:concept_cloud_compliance.html#the-cloud-compliance-instance["インスタンスタイプの詳細"^]。
-* オンプレミスにインストールした場合は、を満たす Linux システムが必要です link:task_deploy_cloud_compliance.html#deploying-the-cloud-compliance-instance-on-premises["次の要件があります"^]。
-
-
+* クラウドにインストールした場合は、 Cloud Data Sense インスタンス用の vCPU が 16 個必要です。を参照してください link:concept_cloud_compliance.html#the-cloud-data-sense-instance["インスタンスタイプの詳細"^]。
+* オンプレミスにインストールした場合は、を満たす Linux システムが必要です link:task_deploy_cloud_compliance.html#deploying-the-cloud-data-sense-instance-on-premises["次の要件があります"^]。
 
 
-==== Cloud Compliance の導入
 
-[role="quick-margin-para"]
-インストールウィザードを起動して Cloud Compliance インスタンスを導入します。
+
+==== クラウドデータの導入センス
 
 [role="quick-margin-para"]
-クラウドまたはオンプレミスの場所に Cloud Compliance を導入できます。UI に表示される唯一の違いは「オンプレミス導入」です。
-
-image:screenshot_compliance_onprem_notprem.png["クラウドの導入とクラウドの導入を比較した、オンプレミスのクラウドコンプライアンスを示すスクリーンショット。"]
-
-
-
-==== Cloud Compliance サービスに登録
+インストールウィザードを起動して、 Cloud Data Sense インスタンスを導入します。
 
 [role="quick-margin-para"]
-Cloud Compliance が Cloud Manager でスキャンする最初の 1TB のデータは無料です。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。
+クラウドまたはオンプレミスの場所に Cloud Data Sense を導入できます。UI に表示される唯一の違いは「オンプレミス導入」です。
+
+image:screenshot_compliance_onprem_notprem.png["オンプレミス環境とクラウド導入の違いを示すクラウドデータの意味を示すスクリーンショット。"]
+
+
+
+==== Cloud Data Sense サービスに登録する
+
+[role="quick-margin-para"]
+Cloud Data Sense によってスキャンされる最初の 1TB のデータは、 Cloud Manager に無料で保存されています。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。
 
 
 
 == コネクタを作成しています
 
-コネクタがない場合は、 Azure または AWS でコネクタを作成します。を参照してください link:task_creating_connectors_aws.html["AWS でコネクタを作成する"^] または link:task_creating_connectors_azure.html["Azure でコネクタを作成する"^]。ほとんどの場合、コネクタセットがあります Cloud Compliance をアクティブ化するのは、ほとんどの場合です link:concept_connectors.html#when-a-connector-is-required["Cloud Manager の機能にはコネクタが必要です"]ただし、ここで設定する必要がある場合もあります。
+コネクタがない場合は、 Azure または AWS でコネクタを作成します。を参照してください link:task_creating_connectors_aws.html["AWS でコネクタを作成する"^] または link:task_creating_connectors_azure.html["Azure でコネクタを作成する"^]。ほとんどの場合、 Cloud Data Sense を有効にする前にコネクタをセットアップしておくことができます link:concept_connectors.html#when-a-connector-is-required["Cloud Manager の機能にはコネクタが必要です"]ただし、ここで設定する必要がある場合もあります。
 
 AWS または Azure に導入されているコネクタを使用する必要がある場合は、次のようなシナリオがあります。
 
@@ -77,7 +77,7 @@ AWS または Azure に導入されているコネクタを使用する必要が
 
 オンプレミスの ONTAP システムでは、どちらのコネクタでも、ネットアップ以外のファイル共有、汎用の S3 オブジェクトストレージ、データベース、 OneDrive のフォルダをスキャンできます。
 
-また、次のことも可能です link:task_installing_linux.html["コネクタをオンプレミスに導入"^] 自社ネットワークまたはクラウド内の既存の Linux ホストCloud Compliance をオンプレミスにインストールする予定のユーザによっては、 Connector をオンプレミスにインストールすることもできます。
+また、次のことも可能です link:task_installing_linux.html["コネクタをオンプレミスに導入"^] 自社ネットワークまたはクラウド内の既存の Linux ホストデータセンスをオンプレミスにインストールする予定のユーザによっては、 Connector をオンプレミスにインストールすることもできます。
 
 ご覧のように、を使用する必要がある状況もあります link:concept_connectors.html#when-to-use-multiple-connectors["複数のコネクタ"]。
 
@@ -88,12 +88,12 @@ NOTE: Azure NetApp Files のスキャンを計画している場合は、スキ�
 
 == 前提条件の確認
 
-Cloud Compliance を導入する前に、次の前提条件を確認し、サポートされている構成であることを確認してください。
+Cloud Data Sense を導入する前に、次の前提条件を確認し、サポートされている構成であることを確認してください。
 
-Cloud Compliance からのアウトバウンドのインターネットアクセスを有効にします::
+Cloud Data Sense からのアウトバウンドインターネットアクセスを有効にする::
 +
 --
-AWS 、 Azure 、オンプレミスのいずれに Cloud Compliance を導入するかに応じて、次の表を参照してください。
+AWS 、 Azure 、オンプレミスのいずれに Cloud Data Sense を導入しているかに応じて、以下の表を参照
 
 * AWS 環境に必要なエンドポイント： *
 
@@ -114,7 +114,7 @@ AWS 、 Azure 、オンプレミスのいずれに Cloud Compliance を導入す
 | \ https://kinesis.us-east-1.amazonaws.com | ネットアップが監査レコードからデータをストリーミングできるようにします。 
 
 
-| ¥ https://cognito-idp.us-east-1.amazonaws.com ¥ https://cognito-identity.us-east-1.amazonaws.com ¥ https://user-feedback-store-prod.s3.us-west-2.amazonaws.com ¥ https://customer-data-production.s3.us-west-2.amazonaws.com | Cloud Compliance でマニフェストとテンプレートにアクセスしてダウンロードしたり、ログと指標を送信したりできます。 
+| ¥ https://cognito-idp.us-east-1.amazonaws.com ¥ https://cognito-identity.us-east-1.amazonaws.com ¥ https://user-feedback-store-prod.s3.us-west-2.amazonaws.com ¥ https://customer-data-production.s3.us-west-2.amazonaws.com | Cloud Data Sense を使用して、マニフェストやテンプレートにアクセスしてダウンロードしたり、ログや指標を送信したりできます。 
 |===
 * Azure およびオンプレミス環境に必要なエンドポイント： *
 
@@ -138,7 +138,7 @@ AWS 、 Azure 、オンプレミスのいずれに Cloud Compliance を導入す
 | * オンプレミスインストールのみ： * 。 https://github.com/docker ¥ https://download.docker.com ¥ https://rhui3.us-west-2.aws.ce.redhat.com ¥ https://github-production-release-asset-2e65be.s3.amazonaws.com ¥ https://pypi.org ¥ https://pypi.python.org ¥ https://files.pythonhosted.org ¥ http://mirror.centos.org ¥ http://mirrorlist.centos.org ¥ http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.107-3.el7.noarch.rpm | インストールの前提条件パッケージを提供します。 
 |===
 --
-Cloud Manager に必要な権限が割り当てられていることを確認します:: Cloud Manager に、リソースを導入する権限と Cloud Compliance インスタンスのセキュリティグループを作成する権限があることを確認します。最新の Cloud Manager 権限は、で確認できます https://mysupport.netapp.com/site/info/cloud-manager-policies["ネットアップが提供するポリシー"^]。
+Cloud Manager に必要な権限が割り当てられていることを確認します:: Cloud Manager に、リソースを導入する権限と、 Cloud Data Sense インスタンス用のセキュリティグループを作成する権限があることを確認します。最新の Cloud Manager 権限は、で確認できます https://mysupport.netapp.com/site/info/cloud-manager-policies["ネットアップが提供するポリシー"^]。
 vCPU の制限を確認してください::
 +
 --
@@ -151,62 +151,62 @@ vCPU の制限の詳細については、次のリンクを参照してくださ
 
 
 --
-Cloud Manager から Cloud Compliance にアクセスできることを確認::
+Cloud Manager が Cloud Data Sense にアクセスできることを確認::
 +
 --
-この接続により、 Cloud Compliance インスタンスの導入が可能になり、コンプライアンスタブに情報を表示できます。
+この接続により、データセンスインスタンスの展開が可能になり、 [ コンプライアンス（ Compliance ） ] タブと [ ガバナンス（ Governance ） ] タブで情報を表示できます。
 
 --
-Cloud Compliance の運用を継続できることを確認します:: データを継続的にスキャンするには、 Cloud Compliance インスタンスをオンのままにする必要があります。
-Web ブラウザから Cloud Compliance への接続を確認します::
+クラウドデータを常に運用しておく必要があります:: データを継続的にスキャンするには、 Cloud Data Sense インスタンスがオンのままになっている必要があります。
+Web ブラウザから Cloud Data Sense への接続を確認する::
 +
 --
-Cloud Compliance インスタンスは、プライベート IP アドレスを使用して、インデックス付きデータがインターネットにアクセスできないようにします。そのため、 Cloud Manager へのアクセスに使用する Web ブラウザは、そのプライベート IP アドレスに接続する必要があります。この接続は、 AWS または Azure への直接接続（ VPN など）、または Cloud Compliance インスタンスと同じネットワーク内にあるホストから確立できます。
+データセンスインスタンスは、プライベート IP アドレスを使用して、インデックス付きデータがインターネットにアクセスできないようにします。そのため、 Cloud Manager へのアクセスに使用する Web ブラウザは、そのプライベート IP アドレスに接続する必要があります。この接続は、 AWS または Azure への直接接続（ VPN など）、またはデータセンスインスタンスと同じネットワーク内にあるホストから確立できます。
 
 --
 
 
 
 
-== クラウドへの Cloud Compliance インスタンスの導入
+== クラウドへの Cloud Data Sense インスタンスの導入
 
-クラウドへの Cloud Compliance インスタンスの導入は、最も一般的な導入モデルです。ただし、を選択することもできます <<Deploying the Cloud Compliance instance on premises,Linux ホストに Compliance ソフトウェアを導入します>> 自社ネットワークまたはクラウドに導入できます。
+クラウドにクラウドデータセンスのインスタンスを導入する方法は、最も一般的な導入モデルです。ただし、を選択することもできます <<Deploying the Cloud Data Sense instance on premises,Linux ホストに Compliance ソフトウェアを導入します>> 自社ネットワークまたはクラウドに導入できます。
 
-Compliance ソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。
+データセンスソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。
 
 .手順
-. Cloud Manager で、 * コンプライアンス * をクリックします。
-. [Activate Cloud Compliance] をクリックします。
+. Cloud Manager で、 * Data sense * をクリックします。
+. [Activate Cloud Data Sense （クラウドデータセンスの有効化） ] をクリック
 +
-image:screenshot_cloud_compliance_deploy_start.png["Cloud Compliance をアクティブ化するボタンを選択するスクリーンショット。"]
+image:screenshot_cloud_compliance_deploy_start.png["Cloud Data Sense を有効にするボタンを選択するスクリーンショット。"]
 
-. コンプライアンスのアクティブ化 * をクリックして、クラウド導入ウィザードを開始します。
+. Activate Data Sense * をクリックして、クラウド導入ウィザードを開始します。
 +
-image:screenshot_cloud_compliance_deploy_cloud.png["クラウドに Cloud Compliance を導入するボタンを選択するスクリーンショット。"]
+image:screenshot_cloud_compliance_deploy_cloud.png["クラウドにクラウドデータセンスを導入するボタンを選択するスクリーンショット。"]
 
 . 導入手順が完了すると、ウィザードに進捗状況が表示されます。問題が発生すると停止し、入力を求められます。
 +
-image:screenshot_cloud_compliance_wizard_start.png["新しいインスタンスを導入するための Cloud Compliance ウィザードのスクリーンショット。"]
+image:screenshot_cloud_compliance_wizard_start.png["新しいインスタンスを導入するための Cloud Data Sense ウィザードのスクリーンショット。"]
 
 . インスタンスが配備されたら、 * 設定に進む * をクリックして _Configuration_page に移動します。
 
 
-Cloud Manager によってクラウドプロバイダに Cloud Compliance インスタンスが導入されます。
+Cloud Manager によってクラウドデータ検出インスタンスがクラウドプロバイダに導入されます。
 
 設定ページで、スキャンするデータソースを選択できます。
 
-また可能です <<Subscribing to the Cloud Compliance service,Cloud Compliance サービスに登録>> 現時点では、データ量が 1TB を超えるまでは料金は発生しません。
+また可能です <<Subscribing to the Cloud Data Sense service,Cloud Data Sense サービスに登録する>> 現時点では、データ量が 1TB を超えるまでは料金は発生しません。
 
 
 
-== Cloud Compliance インスタンスをオンプレミスに導入する
+== クラウドデータセンスインスタンスをオンプレミスに導入する
 
-Compliance ソフトウェアは、にダウンロードしてインストールできます ネットワーク内の Linux ホストが不要な場合 からに <<Deploying the Cloud Compliance instance in the cloud,クラウドに導入できます>>。
+不要な場合は、ネットワーク上の Linux ホストにデータセンスソフトウェアをダウンロードしてインストールできます <<Deploying the Cloud Data Sense instance in the cloud,クラウドに導入できます>>。
 
-Compliance ソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。
+データセンスソフトウェアは、どのインストール方法を選択してもまったく同じように機能します。
 
 
-NOTE: 現在、 Cloud Compliance インスタンスがオンプレミスにインストールされていると、 S3 バケットと Azure NetApp Files をスキャンすることはできません。このような場合は、別のコネクタを配置する必要があります クラウドおよびでのコンプライアンスのインスタンスです link:concept_connectors.html#when-to-switch-between-connectors["コネクタを切り替えます"^] データソースごとに異なる。
+NOTE: Cloud Data Sense は、現在、ソフトウェアがオンプレミスにインストールされている場合、 S3 バケットと Azure NetApp Files をスキャンできない。このような場合は、クラウドとに別のコネクタとデータセンスのインスタンスを導入する必要があります link:concept_connectors.html#when-to-switch-between-connectors["コネクタを切り替えます"^] データソースごとに異なる。
 
 .ホストの要件
 * オペレーティングシステム： Red Hat Enterprise Linux または CentOS バージョン 8.0 または 8.1
@@ -220,24 +220,24 @@ NOTE: 現在、 Cloud Compliance インスタンスがオンプレミスにイ�
 * ディスク： 500GB SSD
 * Red Hat Enterprise Linux システムは、 Red Hat サブスクリプション管理に登録する必要があります。登録されていない場合、システムはインストール中に必要なサードパーティソフトウェアをアップデートするためのリポジトリにアクセスできません。
 * Cloud Manager でインストールの進捗状況を確認できるように、ポート 8080 が開いていることを確認してください。
-* Cloud Compliance をインストールするには root 権限が必要です。
+* Cloud Data Sense をインストールするには root 権限が必要です。
 
 
-を参照してください <<Reviewing prerequisites,前提条件の確認>> Cloud Compliance がインターネット経由でアクセスできる必要がある要件とエンドポイントの一覧については、を参照してください。
+を参照してください <<Reviewing prerequisites,前提条件の確認>> Cloud Data Sense がインターネット経由でアクセスできる必要がある要件とエンドポイントの完全なリストについては、を参照してください。
 
 .手順
-. から Cloud Compliance ソフトウェアをダウンロードします https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["ネットアップサポートサイト"^]。
+. から Cloud Data Sense ソフトウェアをダウンロードします https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["ネットアップサポートサイト"^]。
 . 使用する Linux ホストにインストーラファイルをコピーします (`cp またはその他の方法を使用 ) 。
-. Cloud Manager で、 * コンプライアンス * をクリックします。
-. [Activate Cloud Compliance] をクリックします。
+. Cloud Manager で、 * Data sense * をクリックします。
+. [Activate Cloud Data Sense （クラウドデータセンスの有効化） ] をクリック
 +
-image:screenshot_cloud_compliance_deploy_start.png["Cloud Compliance をアクティブ化するボタンを選択するスクリーンショット。"]
+image:screenshot_cloud_compliance_deploy_start.png["Cloud Data Sense を有効にするボタンを選択するスクリーンショット。"]
 
-. [Activate Compliance] をクリックして、オンプレミス展開ウィザードを開始します。
+. Activate Data Sense * をクリックして、オンプレミス導入ウィザードを開始します。
 +
-image:screenshot_cloud_compliance_deploy_onprem.png["Cloud Compliance をオンプレミスに導入するボタンを選択するスクリーンショット。"]
+image:screenshot_cloud_compliance_deploy_onprem.png["クラウドデータセンスをオンプレミスに導入するボタンを選択するスクリーンショット。"]
 
-. _Deploy Cloud Compliance on Premises _ Dialog で、提供されたコマンドをコピーしてテキストファイルに貼り付け、後で使用できるようにします。例：
+. _Deploy Cloud Data Sense on Premises _ Dialog で、提供されたコマンドをコピーしてテキストファイルに貼り付け、後で使用できるようにします。例：
 +
 sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq
 
@@ -254,11 +254,11 @@ tar -xzf cc_onpm_installer.tar.gz
 
  a| 
 .. 手順 6 からコピーした情報を貼り付けます。 'UDO./install.sh -a <account_id>-c <agent_id>-t<token>`
-.. コネクタインスタンスからアクセスできるように、 Compliance ホストマシンの IP アドレスまたはホスト名を入力します。
-.. Cloud Compliance インスタンスからアクセスできるように、 Cloud Manager Connector ホストマシンの IP アドレスまたはホスト名を入力します。
-.. プロンプトが表示されたら、プロキシの詳細を入力Cloud Manager ですでにプロキシが使用されている場合は、 Cloud Compliance によって Cloud Manager で使用されるプロキシが自動的に使用されるため、ここでもう一度入力する必要はありません。
+.. コネクタインスタンスからアクセスできるように、 Data Sense ホストマシンの IP アドレスまたはホスト名を入力します。
+.. Cloud Manager Connector ホストマシンの IP アドレスまたはホスト名を入力して、 Data Sense インスタンスからアクセスできるようにします。
+.. プロンプトが表示されたら、プロキシの詳細を入力Cloud Manager ですでにプロキシが使用されている場合は、 Cloud Manager が使用するプロキシが Data Sense で自動的に使用されるため、ここでもう一度入力する必要はありません。
 
-| または、コマンド全体を事前に作成して、最初のプロンプトに「 sudo ./install.sh -a <account_id>-c <agent_id>-t <token> --host <cc_host>--cm-host<proxy_host>--proxy-host <proxy_host>--proxy-port-proxy-password</password> 」と入力することもできます 
+| または、コマンド全体を事前に作成して、最初のプロンプトに「 sudo ./install.sh -a <account_id>-c <agent_id>-t <token> --host <ds_host>--cm-host<proxy_host>--proxy-host <proxy_host>--proxy-port-proxy-password</password> 」と入力することもできます 
 |===
 +
 変数値：
@@ -267,7 +267,7 @@ tar -xzf cc_onpm_installer.tar.gz
 ** _account_id _ = ネットアップアカウント ID
 ** _agent_id _ = コネクタ ID
 ** _ctoken _ = JWT ユーザートークン
-** _cc_host_ = Cloud Compliance Linux システムの IP アドレスまたはホスト名。
+** _ds_host_ = Data Sense Linux システムの IP アドレスまたはホスト名
 ** _cm_host_= Cloud Manager Connector システムの IP アドレスまたはホスト名。
 ** _proxy_host_ = ホストがプロキシサーバの背後にある場合は、プロキシサーバの IP 名またはホスト名。
 ** _proxy_port_= プロキシサーバに接続するポート（デフォルトは 80 ）です。
@@ -278,25 +278,25 @@ tar -xzf cc_onpm_installer.tar.gz
 
 
 
-Cloud Compliance インストーラは、パッケージのインストール、 Docker のインストール、インストールの登録、 Cloud Compliance のインストールを行います。インストールには 10~20 分かかります。
+Cloud Data Sense インストーラは、パッケージのインストール、 Docker のインストール、インストールの登録、および Data Sense のインストールを行います。インストールには 10~20 分かかります。
 
-ホストマシンとコネクタインスタンス間のポート 8080 を介した接続がある場合、 Cloud Manager の Compliance タブでインストールの進捗状況を確認できます。
+ホストマシンとコネクタインスタンス間のポート 8080 を介した接続がある場合、 Cloud Manager の Data sense タブにインストールの進行状況が表示されます。
 
 設定ページで、スキャンするデータソースを選択できます。
 
-また可能です <<Subscribing to the Cloud Compliance service,Cloud Compliance サービスに登録>> 現時点では、データ量が 1TB を超えるまでは料金は発生しません。オンプレミスシステムに Cloud Compliance を導入した場合は、 AWS または Azure Marketplace へのサブスクリプションを使用できます。
+また可能です <<Subscribing to the Cloud Data Sense service,Cloud Data Sense サービスに登録する>> 現時点では、データ量が 1TB を超えるまでは料金は発生しません。データセンスをオンプレミスシステムに導入した場合は、 AWS または Azure Marketplace へのサブスクリプションを使用できます。
 
 
 
-== Cloud Compliance サービスへの登録
+== クラウドデータセンスサービスへのサブスクライブ
 
-Cloud Compliance が Cloud Manager ワークスペースでスキャンする最初の 1TB のデータは無料です。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。
+Cloud Data Sense によってスキャンされる、 Cloud Manager のワークスペース内の最初の 1TB のデータは無料です。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。
 
-いつでもサブスクライブでき、データ量が 1TB を超えるまでは料金は発生しません。Cloud Compliance Dashboard でスキャンしているデータの総容量を常に確認できます。また、 [ 今すぐサブスクライブ ] ボタンを使用すると、準備が整ったときに簡単にサブスクライブできます。
+いつでもサブスクライブでき、データ量が 1TB を超えるまでは料金は発生しません。データセンスダッシュボードからスキャンされているデータの総容量を常に確認できます。また、 [ 今すぐサブスクライブ ] ボタンを使用すると、準備が整ったときに簡単にサブスクライブできます。
 
 image:screenshot_compliance_subscribe.png["スキャンされているデータの量を示すスクリーンショットと、サービスにサブスクライブするための [ サブスクライブ（ Subscribe ） ] ボタン。"]
 
-* 注： * Cloud Compliance から登録を求められたものの、すでに Azure サブスクリプションをお持ちの場合は、古い * Cloud Manager * サブスクリプションを使用している可能性があるため、新しい * NetApp Cloud Manager * サブスクリプションに変更する必要があります。を参照してください <<Changing to the new Cloud Manager plan in Azure,Azure で新しい NetApp Cloud Manager プランに変更>> を参照してください。
+* 注： * Cloud Data Sense から登録を求められたが、 Azure サブスクリプションをすでにお持ちの場合は、古い * Cloud Manager * サブスクリプションを使用している可能性があるため、新しい * NetApp Cloud Manager * サブスクリプションに変更する必要があります。を参照してください <<Changing to the new Cloud Manager plan in Azure,Azure で新しい NetApp Cloud Manager プランに変更>> を参照してください。
 
 これらの手順は、 _Account Admin_role 権限を持つユーザが実行する必要があります。
 
@@ -336,12 +336,12 @@ video::video_subscribing_azure.mp4[width=848,height=480]
 
 == Azure で新しい Cloud Manager プランに変更
 
-2020 年 10 月 7 日より、 Azure Marketplace サブスクリプション「 NetApp Cloud Manager * 」に Cloud Compliance が追加されました。元の Azure * Cloud Manager * サブスクリプションをすでにお持ちの場合、 Cloud Compliance の使用は許可されません。
+クラウドデータセンス（ Cloud Compliance ）が、 Azure Marketplace サブスクリプション「 * NetApp Cloud Manager * 」に 2020 年 10 月時点で追加されました。元の Azure * Cloud Manager * サブスクリプションをすでにお持ちの場合、 Cloud Data Sense を使用することはできません。
 
-Cloud Compliance の使用を開始するには、以下の手順に従って、新しい * NetApp Cloud Manager * サブスクリプションに変更する必要があります。
+Cloud Data Sense を使い始める前に、以下の手順に従って、新しい * NetApp Cloud Manager * サブスクリプションに変更する必要があります。
 
 
-NOTE: 既存のサブスクリプションに特別なプライベートオファーが付随して発行された場合、ネットアップに連絡して、コンプライアンスを含む新しい特別なプライベートオファーを発行できるようにする必要があります。
+NOTE: 既存のサブスクリプションに特別なプライベートオファーが含まれていた場合は、ネットアップに連絡して、データに特化した新しいプライベートオファーを問題で提供できるようにする必要があります。
 
 .手順
 . Cloud Manager コンソールの右上にある設定アイコンをクリックし、 * クレデンシャル * を選択します。
@@ -354,6 +354,6 @@ NOTE: 既存のサブスクリプションに特別なプライベートオフ�
 +
 image:screenshot_compliance_azure_subscription.png["すべての Azure サブスクリプションのリストと、変更するサブスクリプションの詳細を示すスクリーンショット。"]
 
-. [ 変更プラン ] ページで、 NetApp Cloud Manager * プランを選択し、 [ * 変更プラン * ] ボタンをクリックします。image:screenshot_compliance_azure_change_plan.png["Cloud Compliance をサポートする新しい計画への変更のスクリーンショット。"]
+. [ 変更プラン ] ページで、 NetApp Cloud Manager * プランを選択し、 [ * 変更プラン * ] ボタンをクリックします。image:screenshot_compliance_azure_change_plan.png["クラウドデータセンスをサポートする新しいプランへの変更のスクリーンショット。"]
 . Cloud Manager に戻り、サブスクリプションを選択し、クレデンシャルカードで上の「 i 」にカーソルを合わせて、サブスクリプションが変更されたことを確認します。
 

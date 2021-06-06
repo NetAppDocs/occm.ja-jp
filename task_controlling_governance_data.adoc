@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_controlling_governance_data.html 
 keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, policies 
-summary: 組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Compliance は、古いデータ、ビジネス以外のデータ、重複ファイル、および非常に大容量のファイルを特定するため、一部のファイルを削除するか低コストのオブジェクトストレージに階層化するかを決定できます。 
+summary: 組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Data Sense は、古いデータ、ビジネス以外のデータ、重複するファイル、および非常に大きなファイルをシステム内で特定するため、一部のファイルを削除するか、低コストのオブジェクトストレージに階層化するかを判断できます。 
 ---
 = 組織に保存されているデータに関するガバナンスの詳細を表示する
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: 組織のストレージリソース上のデータに関連するコ�
 
 
 [role="lead"]
-組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Compliance は、古いデータ、ビジネス以外のデータ、重複ファイル、および非常に大容量のファイルを特定するため、一部のファイルを削除するか低コストのオブジェクトストレージに階層化するかを決定できます。
+組織のストレージリソース上のデータに関連するコストを管理できます。Cloud Data Sense は、古いデータ、ビジネス以外のデータ、重複するファイル、および非常に大きなファイルをシステム内で特定するため、一部のファイルを削除するか、低コストのオブジェクトストレージに階層化するかを判断できます。
 
 また、オンプレミスの場所からクラウドにデータを移行する予定の場合は、移動前にデータのサイズと、機密情報が含まれているデータの有無を確認できます。
 
@@ -23,7 +23,7 @@ summary: 組織のストレージリソース上のデータに関連するコ�
 
 Governance ダッシュボードには情報が表示されるため、ストレージリソースに保存されているデータの効率性を高め、コストを管理できます。
 
-image:screenshot_compliance_governance_dashboard.png["Cloud Compliance Governance ダッシュボードのスクリーンショット。"]
+image:screenshot_compliance_governance_dashboard.png["クラウドデータセンスガバナンスダッシュボードのスクリーンショット。"]
 
 
 
@@ -43,8 +43,14 @@ _Saving Opportunities 領域内の項目を調査して、削除または階層�
 ** その他（一般的な「その他」カテゴリ）
 
 
-* * 大容量ファイル * - 100MB 超のファイル。
+* * 重複ファイル * - スキャンしているデータソース内の他の場所に複製されているファイル。 link:task_controlling_private_data.html#viewing-all-duplicated-files["表示される重複ファイルの種類を確認します"]。
 
+
+
+
+=== データの概要
+
+スキャンされているすべてのデータの概要。ボタンをクリックして、すべての作業環境とデータソースの使用容量、データの使用年数、データのサイズ、ファイルタイプを含む完全なデータマッピングレポートをダウンロードします。を参照してください link:task_generating_compliance_reports.html#data-mapping-report["データマッピングレポート"] を参照してください。
 
 
 
@@ -100,7 +106,7 @@ _Age および _Size_Graphs の項目を調査して、削除または階層化�
 
 === 最も識別されているデータ分類
 
-_Classification_area には ' 最も識別されたリストが表示されます link:task_controlling_private_data.html#categories["カテゴリ"^]、 link:task_controlling_private_data.html#file-types["ファイルの種類"^]および link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["AIP ラベル"^] をスキャンしたデータに保存します。
+_Classification_area には ' 最も識別されたリストが表示されます link:task_controlling_private_data.html#viewing-files-by-categories["カテゴリ"^]、 link:task_controlling_private_data.html#viewing-files-by-file-types["ファイルの種類"^]および link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["AIP ラベル"^] をスキャンしたデータに保存します。
 
 
 
@@ -116,7 +122,7 @@ _Classification_area には ' 最も識別されたリストが表示されま�
 
 ファイルタイプを確認すると、特定のファイルタイプが正しく保存されない可能性があるため、機密データを制御するのに役立ちます。
 
-を参照してください link:task_controlling_private_data.html#viewing-file-types["ファイルタイプを表示しています"^] を参照してください。
+を参照してください link:task_controlling_private_data.html#viewing-files-by-file-types["ファイルタイプを表示しています"^] を参照してください。
 
 
 

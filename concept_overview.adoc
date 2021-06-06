@@ -23,7 +23,7 @@ Cloud Manager は、エンタープライズクラスの SaaS ベースの管理
 * をセットアップして使用します https://cloud.netapp.com/ontap-cloud["Cloud Volumes ONTAP"^] 複数のクラウドにわたって効率的なマルチプロトコルデータ管理を実現します。
 * ファイルストレージサービスをセットアップして使用 https://cloud.netapp.com/azure-netapp-files["Azure NetApp Files の特長"^]、 https://cloud.netapp.com/cloud-volumes-service-for-aws["Cloud Volumes Service for AWS"^]および https://cloud.netapp.com/cloud-volumes-service-for-gcp["Cloud Volumes Service for Google Cloud"^]。
 * ボリュームの作成、クラウドへのバックアップ、ハイブリッドクラウド間でのデータのレプリケート、クラウドへのコールドデータの階層化を行うことで、オンプレミスの ONTAP クラスタを検出して管理できます。
-* などの統合クラウドサービスやソフトウェアを有効にします https://cloud.netapp.com/cloud-compliance["クラウドコンプライアンス"^]、 https://cloud.netapp.com/cloud-insights["Cloud Insights の機能です"^]、 https://cloud.netapp.com/cloud-backup-service["Cloud Backup サービスの略"^]、 https://netapp.io/persistent-storage-provisioner-for-kubernetes/["Trident"^]など。
+* などの統合クラウドサービスやソフトウェアを有効にします https://cloud.netapp.com/cloud-compliance["クラウドデータの意味"^]、 https://cloud.netapp.com/cloud-insights["Cloud Insights の機能です"^]、 https://cloud.netapp.com/cloud-backup-service["Cloud Backup サービスの略"^]、 https://netapp.io/persistent-storage-provisioner-for-kubernetes/["Trident"^]など。
 
 
 https://cloud.netapp.com/cloud-manager["Cloud Manager の詳細については、こちらをご覧ください"^]。

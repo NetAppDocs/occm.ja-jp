@@ -29,7 +29,7 @@ Azure NetApp Files を使用すると、パフォーマンスを重視し、レ�
 == Cloud Manager のその他の機能
 
 * NFS または SMB データを Azure NetApp Files に Cloud Manager から直接移行する。データ移行には、ネットアップの Cloud Sync サービスが採用されています。 link:concept_cloud_sync.html["詳細はこちら。"]。
-* 人工知能（ AI ）ベースのテクノロジを使用して、クラウドコンプライアンスはデータコンテキストを把握し、 Azure NetApp Files アカウントに存在する機密データを特定するのに役立ちます。 link:concept_cloud_compliance.html["詳細はこちら。"]。
+* 人工知能（ AI ）ベースのテクノロジを使用したクラウドデータセンスは、データの状況を把握し、 Azure NetApp Files アカウントに存在する機密データを特定するのに役立ちます。 link:concept_cloud_compliance.html["詳細はこちら。"]。
 
 
 

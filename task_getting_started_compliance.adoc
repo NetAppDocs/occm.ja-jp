@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_getting_started_compliance.html 
-keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, ANF, Azure NetApp Files, CVO, Cloud Volumes ONTAP, backup files 
-summary: Cloud Compliance for Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の導入を開始するには、いくつかの手順を実行します。 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, ANF, Azure NetApp Files, CVO, Cloud Volumes ONTAP, backup files, data sense 
+summary: Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files 向けクラウドデータセンスの導入を開始するには、いくつかの手順を実行します。 
 ---
-= 『 Getting started with Cloud Compliance for Cloud Volumes ONTAP 、 On-Premises ONTAP 、 or Azure NetApp Files 』
+= Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files 向けクラウドデータサービスを最初に導入する方法
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -13,7 +13,7 @@ summary: Cloud Compliance for Cloud Volumes ONTAP 、オンプレミス ONTAP �
 
 
 [role="lead"]
-Cloud Compliance for Cloud Volumes ONTAP 、オンプレミスの ONTAP システム、 Azure NetApp Files の導入を開始するには、いくつかの手順を実行します。
+Cloud Volumes ONTAP 、オンプレミス ONTAP システム、 Azure NetApp Files 向けクラウドデータセンスの導入を開始するには、いくつかの手順を実行します。
 
 
 
@@ -35,14 +35,14 @@ Cloud Compliance for Cloud Volumes ONTAP 、オンプレミスの ONTAP シス�
 
 
 
-==== Cloud Compliance インスタンスを導入します
+==== Cloud Data Sense インスタンスを導入する
 
 [role="quick-margin-para"]
-link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Compliance を導入"^] インスタンスが展開されていない場合。
+link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Data Sense を導入"^] インスタンスが展開されていない場合。
 
 
 
-==== Cloud Compliance を有効にし、スキャンするボリュームを選択します
+==== Cloud Data Sense を有効にして、スキャンするボリュームを選択します
 
 [role="quick-margin-para"]
 コンプライアンス * をクリックし、 * 構成 * タブを選択して、特定の作業環境でボリュームのコンプライアンススキャンを有効にします。
@@ -52,18 +52,18 @@ link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Compliance を�
 ==== ボリュームへのアクセスを確認
 
 [role="quick-margin-para"]
-Cloud Compliance が有効になったので、すべてのボリュームにアクセスできることを確認します。
+Cloud Data Sense が有効になったので、すべてのボリュームにアクセスできることを確認します。
 
-* クラウドコンプライアンスインスタンスには、各 Cloud Volumes ONTAP サブネット、 Azure NetApp Files サブネット、オンプレミスの ONTAP システムへのネットワーク接続が必要です。
-* Cloud Volumes ONTAP のセキュリティグループは、クラウドコンプライアンスインスタンスからのインバウンド接続を許可する必要があります。
-* 次のポートが Cloud Compliance インスタンスに対して開いていることを確認します。
+* クラウドデータセンスインスタンスには、各 Cloud Volumes ONTAP サブネット、 Azure NetApp Files サブネット、またはオンプレミスの ONTAP システムへのネットワーク接続が必要です。
+* Cloud Volumes ONTAP のセキュリティグループは、データセンスインスタンスからのインバウンド接続を許可する必要があります。
+* これらのポートが Data Sense インスタンスに対して開いていることを確認します。
 +
 ** NFS –ポート 111 および 2049 。
 ** CIFS の場合 - ポート 139 および 445
 
 
-* NFS ボリュームのエクスポートポリシーで、 Cloud Compliance インスタンスからのアクセスを許可する必要があります。
-* CIFS ボリュームをスキャンするには、 Cloud Compliance で Active Directory のクレデンシャルが必要です。
+* NFS ボリュームエクスポートポリシーで、データセンスインスタンスからのアクセスを許可する必要があります。
+* CIFS ボリュームをスキャンするには、 Active Directory クレデンシャルが必要です。
 +
 コンプライアンス * > * 構成 * > * CIFS クレデンシャルの編集 * をクリックし、クレデンシャルを入力します。
 
@@ -74,7 +74,7 @@ Cloud Compliance が有効になったので、すべてのボリュームにア
 ==== スキャンするボリュームを管理します
 
 [role="quick-margin-para"]
-スキャンするボリュームを選択または選択解除すると、 Cloud Compliance によるスキャンが開始または停止します。
+スキャンするボリュームを選択または選択解除すると、 Cloud Data Sense でスキャンが開始または停止します。
 
 
 
@@ -86,26 +86,26 @@ Cloud Volumes ONTAP システムは、 Cloud Manager のキャンバスですで
 
 
 
-== Cloud Compliance インスタンスの導入
+== Cloud Data Sense インスタンスの導入
 
-link:task_deploy_cloud_compliance.html["Cloud Compliance の導入"^] インスタンスが展開されていない場合。
+link:task_deploy_cloud_compliance.html["クラウドデータの導入センス"^] インスタンスが展開されていない場合。
 
-Cloud Volumes ONTAP やオンプレミスの ONTAP システムをスキャンする場合、クラウドまたはオンプレミスの場所に Cloud Compliance を導入できます。
+クラウドデータセンスは、 Cloud Volumes ONTAP やオンプレミスの ONTAP システムをスキャンする際に、クラウドやオンプレミスの場所に導入することができます。
 
-Azure NetApp Files ボリュームをスキャンする際にはクラウドに Cloud Compliance を導入し、スキャンするボリュームと同じリージョンに導入する必要があります。
+Azure NetApp Files ボリュームをスキャンするときは、データセンスをクラウドに導入する必要があります。また、スキャンするボリュームと同じリージョンに導入する必要があります。
 
 
 
-== 作業環境での Cloud Compliance の有効化
+== 作業環境でクラウドデータを有効に活用
 
-Cloud Volumes ONTAP システム（ AWS および Azure ）、オンプレミスの ONTAP クラスタ、および Azure NetApp Files で Cloud Compliance を有効にすることができます。
+Cloud Volumes ONTAP システム（ AWS および Azure ）、オンプレミスの ONTAP クラスタ、および Azure NetApp Files でクラウドデータセンスを有効にすることができます。
 
 
 NOTE: オンプレミス ONTAP システムで次の手順を実行すると、オンプレミス ONTAP システム上のボリュームが直接スキャンされます。すでにオンプレミスからバックアップファイルを作成している場合 を使用しています link:concept_backup_to_cloud.html["クラウドバックアップ"^]ではなく、クラウド内のバックアップファイルに対してコンプライアンススキャンを実行できます。に進みます <<Scanning backup files from on-premises ONTAP systems,オンプレミスの ONTAP システムからバックアップファイルをスキャンする>> バックアップファイルをスキャンしてボリュームをスキャンします。
 
-. Cloud Manager の上部で、 * Compliance * をクリックし、 * Configuration * タブを選択します。
+. Cloud Manager の上部で、 * Data Sense * をクリックし、 * Configuration * タブを選択します。
 +
-image:screenshot_cloud_compliance_we_scan_config.png["Cloud Compliance インスタンスの導入直後の Configuration タブのスクリーンショット。"]
+image:screenshot_cloud_compliance_we_scan_config.png["Cloud Data Sense インスタンスを展開した直後の [ 構成 ] タブのスクリーンショット。"]
 
 . 作業環境内のすべてのボリュームをスキャンするには、 * すべてのボリュームのコンプライアンスをアクティブ化 * をクリックします。
 +
@@ -115,41 +115,41 @@ image:screenshot_cloud_compliance_we_scan_config.png["Cloud Compliance インス
 
 を参照してください <<Enabling and disabling compliance scans on volumes,ボリュームのコンプライアンススキャンの有効化と無効化>> を参照してください。
 
-Cloud Compliance によって、作業環境で選択したボリュームのスキャンが開始されます。結果は、 Cloud Compliance ダッシュボードで最初のスキャンが完了するとすぐに表示されます。所要時間はデータ量によって異なります。数分から数時間かかる場合もあります。
+Cloud Data Sense により、作業環境で選択したボリュームのスキャンが開始されます。結果は、 Cloud Data Sense が最初のスキャンを完了するとすぐに Compliance ダッシュボードに表示されます。所要時間はデータ量によって異なります。数分から数時間かかる場合もあります。
 
 
 
-== Cloud Compliance がボリュームにアクセスできることの確認
+== Cloud Data Sense がボリュームにアクセスできることの確認
 
-ネットワーク、セキュリティグループ、およびエクスポートポリシーを確認して、 Cloud Compliance がボリュームにアクセスできることを確認します。CIFS ボリュームにアクセスできるようにするには、 Cloud Compliance に CIFS クレデンシャルを指定する必要があります。
+ネットワーク、セキュリティグループ、およびエクスポートポリシーを確認して、 Cloud Data Sense でボリュームにアクセスできることを確認します。CIFS ボリュームにアクセスできるようにするには、 CIFS クレデンシャルをデータセンスに指定する必要があります。
 
 .手順
-. クラウドコンプライアンスインスタンスと、 Cloud Volumes ONTAP 、 Azure NetApp Files 、またはオンプレミスの ONTAP クラスタのボリュームを含む各ネットワークとの間にネットワーク接続が確立されていることを確認します。
+. クラウドデータセンスインスタンスと、 Cloud Volumes ONTAP 、 Azure NetApp Files 、オンプレミスの ONTAP クラスタのボリュームを含む各ネットワークとの間にネットワーク接続が確立されていることを確認します。
 +
 
-NOTE: Azure NetApp Files の場合、 Cloud Compliance は Cloud Manager と同じリージョンにあるボリュームのみをスキャンできます。
+NOTE: Azure NetApp Files の場合、 Cloud Data Sense は Cloud Manager と同じリージョンにあるボリュームのみをスキャンできます。
 
-. Cloud Volumes ONTAP のセキュリティグループがクラウドコンプライアンスインスタンスからのインバウンドトラフィックを許可していることを確認してください。
+. Cloud Volumes ONTAP のセキュリティグループがデータセンスインスタンスからのインバウンドトラフィックを許可していることを確認します。
 +
-Cloud Compliance インスタンスの IP アドレスからのトラフィックのセキュリティグループを開くか、仮想ネットワーク内からのすべてのトラフィックのセキュリティグループを開くことができます。
+データセンスインスタンスの IP アドレスからのトラフィックのセキュリティグループを開くか、仮想ネットワーク内からのすべてのトラフィックのセキュリティグループを開くことができます。
 
-. 次のポートが Cloud Compliance インスタンスに対して開いていることを確認します。
+. 次のポートがデータセンスインスタンスに対して開いていることを確認します。
 +
 ** NFS –ポート 111 および 2049 。
 ** CIFS の場合 - ポート 139 および 445
 
 
-. NFS ボリュームのエクスポートポリシーに Cloud Compliance インスタンスの IP アドレスが含まれていて、各ボリュームのデータにアクセスできることを確認します。
-. CIFS を使用する場合は、 Active Directory クレデンシャルを使用して Cloud Compliance を提供し、 CIFS ボリュームをスキャンできるようにします。
+. NFS ボリュームのエクスポートポリシーに、各ボリュームのデータにアクセスできるように Data sense インスタンスの IP アドレスが含まれていることを確認します。
+. CIFS を使用する場合は、 CIFS ボリュームをスキャンできるように、 Active Directory クレデンシャルを使用したデータセンスを設定します。
 +
-.. Cloud Manager の上部で、 * Compliance * をクリックします。
+.. Cloud Manager の上部で、 * Data Sense * をクリックします。
 .. [* 構成 *] タブをクリックします。
 +
 image:screenshot_cifs_credentials.gif["コンテンツペインの右上にある [ スキャンステータス ] ボタンを示す [ 遵守 ] タブのスクリーンショット。"]
 
-.. 各作業環境について、 * CIFS 資格情報の編集 * をクリックし、クラウド・コンプライアンスがシステム上の CIFS ボリュームにアクセスするために必要なユーザー名とパスワードを入力します。
+.. 各作業環境について、 * CIFS 資格情報の編集 * をクリックし、システム上の CIFS ボリュームにアクセスするために必要なユーザー名とパスワードを入力します。
 +
-クレデンシャルは読み取り専用ですが、管理者のクレデンシャルを指定することで、 Cloud Compliance は昇格された権限が必要なデータを読み取ることができます。クレデンシャルは Cloud Compliance インスタンスに保存されます。
+クレデンシャルは読み取り専用ですが、管理者のクレデンシャルを指定することで、データセンスは昇格された権限が必要なデータを読み取ることができます。クレデンシャルは Cloud Data Sense インスタンスに保存されます。
 
 +
 クレデンシャルを入力すると、すべての CIFS ボリュームが認証されたことを示すメッセージが表示されます。
@@ -161,10 +161,10 @@ image:screenshot_cifs_status.gif["設定ページと Cloud Volumes ONTAP クレ�
 
 . _Configuration_page で、 *View Details * をクリックして、各 CIFS および NFS ボリュームのステータスを確認し、エラーを修正します。
 +
-たとえば、次の図は 3 つのボリュームを示しています。 1 つは Cloud Compliance インスタンスとボリュームの間のネットワーク接続の問題が原因で Cloud Compliance がスキャンできないボリュームです。
+たとえば、次の図は 3 つのボリュームを示しています。 1 つは、データセンスインスタンスとボリュームの間のネットワーク接続の問題が原因でクラウドデータセンスでスキャンできないボリュームです。
 
 +
-image:screenshot_compliance_volume_details.gif["スキャン設定の View Details ページのスクリーンショット。 3 つのボリュームが表示されます。そのうちの 1 つは、 Cloud Compliance とボリュームの間のネットワーク接続が原因でスキャンされていません。"]
+image:screenshot_compliance_volume_details.gif["スキャン設定の View Details ページのスクリーンショット。 3 つのボリュームが表示されます。 1 つは Data Sense とボリューム間のネットワーク接続が原因でスキャンされていません。"]
 
 
 
@@ -199,21 +199,21 @@ NOTE: 作業環境に追加した新しいボリュームは、すべてのボ�
 
 == オンプレミスの ONTAP システムからバックアップファイルをスキャンする
 
-Cloud Compliance でオンプレミスの ONTAP システム上のボリュームを直接スキャンしない場合は、 2021 年 1 月にリリースされる新しいベータ機能によって、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルに対してコンプライアンススキャンを実行できます。を使用してバックアップファイルを既に作成している場合は link:concept_backup_to_cloud.html["クラウドバックアップ"^]この新機能を使用して、バックアップファイルに対してコンプライアンススキャンを実行できます。
+Cloud Data Sense でオンプレミスの ONTAP システム上のボリュームを直接スキャンしない場合は、 2021 年 1 月にリリースされる新しいベータ機能によって、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルに対してコンプライアンススキャンを実行できます。を使用してバックアップファイルを既に作成している場合は link:concept_backup_to_cloud.html["クラウドバックアップ"^]この新機能を使用して、バックアップファイルに対してコンプライアンススキャンを実行できます。
 
-バックアップファイルで実行したコンプライアンススキャンは * 無料 * - Cloud Compliance サブスクリプションやライセンスは不要です。
+バックアップファイルで実行するコンプライアンススキャンは * 無料 * - Cloud Data Sense サブスクリプションやライセンスは不要です。
 
-* 注：コンプライアンスがバックアップファイルをスキャンする場合、バックアップファイルへのアクセスには、リストアインスタンスから付与された権限が使用されます。通常、ファイルをアクティブにリストアしていない場合はリストアインスタンスの電源がオフになりますが、バックアップファイルをスキャンするときはオンのままになります。を参照してください link:task_restore_backups.html#details["Restore インスタンスに関する詳細情報"^]。
+* 注： * データセンスがバックアップファイルをスキャンすると、 Cloud Restore インスタンスを通じて付与された権限を使用してバックアップファイルにアクセスします。通常、ファイルをアクティブにリストアしていない場合はリストア・インスタンスの電源がオフになりますが、バックアップ・ファイルのスキャン時はオンのまま * になります。を参照してください link:task_restore_backups.html#details["Restore インスタンスに関する詳細情報"^]。
 
 オンプレミスの ONTAP システムからバックアップファイルをスキャンする場合は、次の手順を実行します。
 
-. Cloud Manager の上部で、 * Compliance * をクリックし、 * Configuration * タブを選択します。
+. Cloud Manager の上部で、 * Data Sense * をクリックし、 * Configuration * タブを選択します。
 . 作業環境のリストで、フィルタのリストから * backup * ボタンをクリックします。
 +
 バックアップファイルがあるオンプレミスの ONTAP 作業環境がすべて表示されます。オンプレミスシステムのバックアップファイルがない場合、作業環境は表示されません。
 
 +
-image:screenshot_compliance_onprem_backups.png["スキャンするボリュームを選択するためのコンプライアンスページのスクリーンショット。"]
+image:screenshot_compliance_onprem_backups.png["スキャンするボリュームを選択するデータセンスページのスクリーンショット。"]
 
 . 作業環境でバックアップされたすべてのボリュームをスキャンするには、 * すべてのバックアップされたボリュームのコンプライアンスをアクティブ化 * をクリックします。
 +
@@ -231,7 +231,7 @@ image:screenshot_compliance_onprem_backups.png["スキャンするボリュー�
 
 image:screenshot_compliance_we_scan_2_onprems.png["バックアップファイルがある場合は、オンプレミスクラスタが作業環境のリストに 2 回表示される仕組みを示すスクリーンショット"]
 
-最初の項目はオンプレミスクラスタと実際のボリュームです。2 つ目は、同じオンプレミスクラスタのバックアップファイルです。
+最初の項目はオンプレミスクラスタと実際のボリュームです。2 番目の項目は、同じオンプレミスクラスタにあるボリュームのバックアップファイルです。
 
 オンプレミスシステム上のボリュームをスキャンする最初のオプションを選択します。2 番目のオプションを選択して、対象のボリュームからバックアップファイルをスキャンします。同じクラスタのオンプレミスボリュームとバックアップファイルの両方をスキャンしないでください。
 
@@ -239,7 +239,7 @@ image:screenshot_compliance_we_scan_2_onprems.png["バックアップファイ�
 
 == データ保護ボリュームをスキャンしています
 
-デフォルトでは、データ保護（ DP ）ボリュームは外部から公開されておらず、 Cloud Compliance はアクセスできないため、スキャンされません。オンプレミスの ONTAP システムまたは Cloud Volumes ONTAP システムからの SnapMirror 処理のデスティネーションボリュームです。
+デフォルトでは、データ保護（ DP ）ボリュームは外部から公開されておらず、クラウドデータセンスでアクセスできないため、スキャンされません。オンプレミスの ONTAP システムまたは Cloud Volumes ONTAP システムからの SnapMirror 処理のデスティネーションボリュームです。
 
 最初は、ボリュームリストでこれらのボリュームを _Type_* DP * でスキャンしていないステータス * および必要なアクション _ * DP ボリュームへのアクセスを有効にします * 。
 
@@ -251,7 +251,7 @@ image:screenshot_cloud_compliance_dp_volumes.png["DP ボリュームへのアク
 . 確認メッセージを確認し、もう一度「 * DP ボリュームへのアクセスを有効にする * 」をクリックします。
 +
 ** ソース ONTAP システムで最初に NFS ボリュームとして作成されたボリュームが有効になります。
-** ソース ONTAP システムで最初に CIFS ボリュームとして作成されたボリュームでは、それらの DP ボリュームをスキャンするために CIFS クレデンシャルを入力する必要があります。Cloud Compliance で CIFS ボリュームをスキャンするためにすでに Active Directory クレデンシャルを入力している場合は、それらのクレデンシャルを使用するか、別の管理者クレデンシャルを指定することができます。
+** ソース ONTAP システムで最初に CIFS ボリュームとして作成されたボリュームでは、それらの DP ボリュームをスキャンするために CIFS クレデンシャルを入力する必要があります。Cloud Data Sense で CIFS ボリュームをスキャンするためにすでに Active Directory のクレデンシャルを入力している場合は、それらのクレデンシャルを使用できます。また、別の管理クレデンシャルを指定することもできます。
 +
 image:screenshot_compliance_dp_cifs_volumes.png["CIFS のデータ保護ボリュームを有効にする 2 つのオプションのスクリーンショット。"]
 
@@ -260,6 +260,6 @@ image:screenshot_compliance_dp_cifs_volumes.png["CIFS のデータ保護ボリ�
 . スキャンする各 DP ボリュームをアクティブ化します <<Enabling and disabling compliance scans on volumes,他のボリュームも有効にした場合と同じです>>をクリックするか、すべてのボリュームでコンプライアンスのアクティブ化 * コントロールを使用して、すべての DP ボリュームを含むすべてのボリュームを有効にします。
 
 
-有効にすると、コンプライアンスのためにアクティブ化された各 DP ボリュームから NFS 共有が作成され、スキャンすることができます。共有のエクスポートポリシーでは、 Cloud Compliance インスタンスからのアクセスのみが許可されます。
+有効にすると、スキャン対象としてアクティブ化された各 DP ボリュームから NFS 共有が作成されます。共有エクスポートポリシーでは、データセンスインスタンスからのアクセスのみが許可されます。
 
 * 注： DP ボリュームへのアクセスを最初に有効にしたときに CIFS データ保護ボリュームがない場合は、あとで追加しても、 CIFS DP の有効化ボタン * が設定ページの上部に表示されます。このボタンをクリックして、 CIFS DP ボリュームへのアクセスを有効にする CIFS クレデンシャルを追加します。
