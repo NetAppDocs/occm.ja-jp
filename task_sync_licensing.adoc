@@ -80,8 +80,21 @@ video::video_cloud_sync_registering_azure.mp4[width=848,height=480]
 
 同期関係の料金を事前に支払うには、 1 つ以上のライセンスを購入して Cloud Sync サービスに追加する必要があります。
 
+ライセンスのシリアル番号、およびライセンスが関連付けられているネットアップサポートサイトのアカウントのユーザ名とパスワードが必要です。
+
 .手順
 . mailto ： ng-cloudsync-contact@netapp.com ？ subject= Cloud %20Sync%20Service%20-%20BYOL %20License%20Purchase%20Request までにライセンスを購入してください。 [Contacting NetApp] 。
 . Cloud Manager で、 * Sync > Licensing * をクリックします。
-. [ ライセンスの追加 ] をクリックして、ライセンスを追加します。
+. [ ライセンスの追加 ] をクリックして、必要な情報を追加します。
++
+.. シリアル番号を入力します。
+.. 追加するライセンスに関連付けられているネットアップサポートサイトのアカウントを選択します。
++
+*** Cloud Manager にアカウントがすでに追加されている場合は、ドロップダウンリストから選択します。
+*** アカウントがまだ追加されていない場合は、 *[Add NSS Credentials] をクリックし、ユーザー名とパスワードを入力し、 [*Register] をクリックして、ドロップダウンリストから選択します。
+
+
+.. [ 追加（ Add ） ] をクリックします。
+
+
 

@@ -7228,7 +7228,6 @@
   <block id="6dabde8f330be16cbc68c6ed11cd0dcb" category="paragraph">同期関係の料金を事前に支払うには、 1 つ以上のライセンスを購入して Cloud Sync サービスに追加する必要があります。</block>
   <block id="0f5161c9e18f97b653442fef34de1024" category="list-text">mailto ： ng-cloudsync-contact@netapp.com ？ subject= Cloud %20Sync%20Service%20-%20BYOL %20License%20Purchase%20Request までにライセンスを購入してください。 [Contacting NetApp] 。</block>
   <block id="47073df9c54bc93012bf8231b4da55fe" category="list-text">Cloud Manager で、 * Sync &gt; Licensing * をクリックします。</block>
-  <block id="f0b5ae5198b60cc74224413b266611cc" category="list-text">[ ライセンスの追加 ] をクリックして、ライセンスを追加します。</block>
   <block id="5e4e330a68fd5b85b32d86b44717f091" category="summary">Amazon S3 、 Azure 、または Google Cloud のクレデンシャルが必要な同期関係を作成する場合は、 Cloud Sync のユーザインターフェイスまたは API を使用してそれらのクレデンシャルを指定する必要があります。別の方法として、データブローカーをセットアップして、外部の橋本 Corp ボールトから直接クレデンシャルにアクセスする方法もあります。</block>
   <block id="c1db450ff2a26cde45d0eb82464a7b65" category="doc">外部の橋本 Corp を使用するようにデータブローカーを設定する バックアップ</block>
   <block id="6a0a0f24238384b3ae9b357ea976e885" category="paragraph">Amazon S3 、 Azure 、または Google Cloud のクレデンシャルが必要な同期関係を作成する場合は、 Cloud Sync のユーザインターフェイスまたは API を使用してそれらのクレデンシャルを指定する必要があります。別の方法として、データブローカーをセットアップして、外部の橋本社ボールトから直接クレデンシャル（または _secrets_） にアクセスする方法もあります。</block>
@@ -10262,7 +10261,6 @@
   <block id="953135468f926ef23950412ea3483834" category="list-text">この作業環境で Cloud Data Sense または Monitoring を有効にし、他の作業環境でこれらのサービスを使用していない場合は、それらのサービスのインスタンスを削除する必要があります。</block>
   <block id="7121e7b9f702c61fbd2b509d05e53715" category="inline-link-macro">Cloud Data Sense インスタンスの詳細については、こちらをご覧ください</block>
   <block id="db09712fe8d035f2649a735755e50b51" category="list-text"><block ref="20ffd2fb98c4addcc55890bebde936ba" category="inline-link-macro-rx"></block>。</block>
-  <block id="242a463817674b13f5d23990bed9ea5b" category="section-title">Cloud Manager 3.9.7 アップデート（ 2021 年 6 月 6 日）</block>
   <block id="cfd4ceb542625a4c4de244c9ed9bc77c" category="section-title">Cloud Data Sense （ Cloud Compliance ）の機能拡張</block>
   <block id="d3c761a2e0f04b6d5a3de0a1d64ba674" category="list-text">Cloud Compliance の名称は、今回のリリースから「 Cloud Data Sense * 」に変更されました。製品に含まれている新しいガバナンスやその他の機能を活用することで、コンプライアンスの名称は機能の完全なセットを促進するものではありませんでした。</block>
   <block id="b1c097baa7655613db39bdfee4aa9834" category="list-text">ガバナンスダッシュボードから新しい _ フルデータマッピング _ レポートを使用して、企業のデータソースに保存されているデータの概要を表示し、移行、バックアップ、セキュリティ、コンプライアンスの各プロセスの決定を支援します。</block>
@@ -10570,4 +10568,19 @@
   <block id="602c0f168f5130e35b0d30a889274cc5" category="paragraph">データセンスを使用する必要がなくなった場合は、 Cloud Data Sense インスタンスを削除できます。インスタンスを削除すると、インデックス付きデータが存在する関連ディスクも削除されます。</block>
   <block id="a427a619de4af09b97757f735c05ecd9" category="list-text">クラウドプロバイダのコンソールに移動して、 Cloud Data Sense インスタンスを削除します。</block>
   <block id="f8b28f56cf385c66a4a0078795b69320" category="sidebar">データセンスからデータソースを削除します</block>
+  <block id="95e5c9b9a242ae01ebbab296e59e2a68" category="list-text">Google Cloud Storage バケットがターゲットの場合は、特定のストレージクラスを選択できます。</block>
+  <block id="eb6d8ae6f20283755b339c0dc273988b" category="list-text">標準</block>
+  <block id="2e7b9e91372549a5c9829e3723da3734" category="section-title">Cloud Manager 3.9.7 アップデート（ 2021 年 7 月 6 日）</block>
+  <block id="521c66e2acbe1014744207171946d63b" category="paragraph">新しい Cloud Sync 拡張機能を使用できます。</block>
+  <block id="31139a336ffd2500143012c59ca26281" category="section-title">Cloud Sync は Google Cloud のストレージクラスをサポートしています</block>
+  <block id="d06702d5f77f411d220f00532c68b3a2" category="paragraph">同期関係のターゲットが Google Cloud Storage バケットの場合、使用するストレージクラスを選択できるようになりました。Cloud Sync では、次のストレージクラスがサポートされます。</block>
+  <block id="65a41a843be4287afd7db071dc2faebd" category="section-title">Cloud Manager 3.9.7 アップデート（ 2021 年 6 月 6 日）</block>
+  <block id="3fd623ad234c0b2f226d2ff4a22ae947" category="section-title">Google Cloud のストレージ階層をサポートしていますか？</block>
+  <block id="b38a2bdc58532821724287189003639d" category="paragraph">はい。 Google Cloud Storage バケットがターゲットの場合は、特定のストレージクラスを選択できます。</block>
+  <block id="97e3031ee8bcd0a19765ddc808e71590" category="paragraph">ライセンスのシリアル番号、およびライセンスが関連付けられているネットアップサポートサイトのアカウントのユーザ名とパスワードが必要です。</block>
+  <block id="c705d1b4b3b9a5ab7a62cfb882e27612" category="list-text">[ ライセンスの追加 ] をクリックして、必要な情報を追加します。</block>
+  <block id="a7a65c558a31a52f3a2570581f5170c2" category="list-text">シリアル番号を入力します。</block>
+  <block id="441eaafe617acae90fac942cbac1d2a0" category="list-text">追加するライセンスに関連付けられているネットアップサポートサイトのアカウントを選択します。</block>
+  <block id="cc2908241ba4f3504f13000142ad3e48" category="list-text">Cloud Manager にアカウントがすでに追加されている場合は、ドロップダウンリストから選択します。</block>
+  <block id="93bad0f0398a452d035b9d52ba2724f5" category="list-text">アカウントがまだ追加されていない場合は、 *[Add NSS Credentials] をクリックし、ユーザー名とパスワードを入力し、 [*Register] をクリックして、ドロップダウンリストから選択します。</block>
 </blocks>

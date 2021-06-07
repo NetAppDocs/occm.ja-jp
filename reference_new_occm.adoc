@@ -21,6 +21,24 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
+== Cloud Manager 3.9.7 アップデート（ 2021 年 7 月 6 日）
+
+新しい Cloud Sync 拡張機能を使用できます。
+
+
+
+=== Cloud Sync は Google Cloud のストレージクラスをサポートしています
+
+同期関係のターゲットが Google Cloud Storage バケットの場合、使用するストレージクラスを選択できるようになりました。Cloud Sync では、次のストレージクラスがサポートされます。
+
+* 標準
+* ニアライン
+* コールドライン（ Coldline ）
+* Archive サービスの略
+
+
+
+
 == Cloud Manager 3.9.7 アップデート（ 2021 年 6 月 6 日）
 
 

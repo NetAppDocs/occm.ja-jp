@@ -261,6 +261,14 @@ Cloud Sync を使用すると、ソースからターゲットにデータを同
 ** Glacier Deep Archive
 
 
+. Google Cloud Storage バケットがターゲットの場合は、特定のストレージクラスを選択できます。
++
+** 標準
+** ニアライン
+** コールドライン（ Coldline ）
+** Archive サービスの略
+
+
 
 
 
