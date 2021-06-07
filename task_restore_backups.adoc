@@ -118,7 +118,7 @@ Cloud Manager は、選択したバックアップに基づいて新しいボリ
 ファイルリストア処理を実行するには、 Cloud Volumes ONTAP またはオンプレミスの ONTAP システムで ONTAP のバージョンが 9.6 以降である必要があります。
 
 
-NOTE: バックアップファイルから個々のファイルをリストアする場合は、別のリストアインスタンス / 仮想マシンを使用します。
+NOTE: バックアップファイルから個々のファイルをリストアする場合は、別のリストアインスタンス / 仮想マシンを使用します。を参照してください link:task_backup_to_s3.html#requirements["AWS の要件"] または link:task_backup_to_azure.html#requirements["Azure の要件"] 環境の準備状況を確認
 
 
 
@@ -126,7 +126,7 @@ NOTE: バックアップファイルから個々のファイルをリストア�
 
 プロセスは次のようになります。
 
-. ボリュームから 1 つ以上のファイルを復元する場合は、 [ 復元 ] タブをクリックし、 [* ファイルの復元 *] をクリックして、ファイルが存在するバックアップファイル（またはファイル）を選択します。
+. ボリュームから 1 つ以上のファイルを復元する場合は、 * リストア * タブをクリックし、 * ファイルの復元 * をクリックして、ファイルが存在するバックアップファイル（またはファイル）を選択します。
 . Restore インスタンスが起動し、バックアップファイル内に存在するフォルダとファイルが表示されます。
 +
 * 注：リストアインスタンスは、ファイルを初めてリストアするときにクラウドプロバイダの環境に導入されます。
@@ -136,74 +136,6 @@ NOTE: バックアップファイルから個々のファイルをリストア�
 . ファイルがリストアされ、リストアインスタンスがシャットダウンされて、一定時間非アクティブになったあとのコストが削減されます。
 
 
-
-
-=== 詳細
-
-を参照してください link:concept_backup_to_cloud.html#cost["このトピック"^] Cloud Backup Service と Restore インスタンスのコストを計算します。
-
-.インスタンスタイプ
-* AWS では、 Restore インスタンスはで実行されます https://aws.amazon.com/ec2/instance-types/m5/["m5n.xlarge インスタンス"^] CPU × 4 、 16GiB メモリ、 EBS のみのインスタンスストレージ。m5n.xlarge インスタンスを使用できない領域では、代わりに m5.xlarge インスタンスで Restore が実行されます。
-* Azure では、 Restore 仮想マシンがで実行されます https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D4s_v3 VM"^] CPU × 4 、 16GiB メモリ、 32GB ディスク × 1
-
-
-インスタンスの名前は _Cloud-Restore-Instance_with Your Account ID Concatenated です。例： _Cloud-Restore-Instance-MyAccount_ 。
-
-
-
-=== 前提条件の確認
-
-Cloud Restore を導入する前に、次の前提条件を確認し、サポートされている構成であることを確認してください。
-
-
-
-==== AWS 権限が必要です
-
-AWS でファイルリストアを使用する場合、 Cloud Manager に権限を提供する IAM ロールに最新の S3 権限を含める必要があります https://mysupport.netapp.com/site/info/cloud-manager-policies["Cloud Manager ポリシー"^] を参照してください link:task_backup_to_s3.html#requirements["AWS の要件"^]。
-
-また、ファイルをリストアするには、ポリシーで次の権限が必要です。
-
-[source, json]
-----
-  "Action": [
-    "ec2:DescribeInstanceTypeOfferings",
-    "ec2:startInstances",
-    "ec2:stopInstances",
-    "ec2:terminateInstances"
-  ],
-----
-
-
-==== アウトバウンドインターネットアクセスを有効にします
-
-Cloud Restore にはアウトバウンドのインターネットアクセスが必要です。仮想ネットワークまたは物理ネットワークでインターネットアクセスにプロキシサーバを使用している場合は、インスタンスがアウトバウンドのインターネットアクセスを使用して次のエンドポイントに接続していることを確認してください。クラウドに Cloud Restore を導入する場合、 Connector と同じサブネットに配置されます。
-
-AWS と Azure のどちらに Cloud Restore を導入するかに応じて、該当する表を確認します。
-
-* AWS 環境に必要なエンドポイント： *
-
-[cols="43,57"]
-|===
-| エンドポイント | 目的 
-
-
-| \ http://amazonlinux.us-east-1.amazonaws.com/2/extras/docker/stable/x86_64/4bf88ee77c395ffe1e0c3ca68530dfb3a683ec65a4a1ce9c0ff394be50e922b2/ | クラウドリストアインスタンス AMI 用の CentOS パッケージ。 
-
-
-| ¥ http://cloudmanagerinfraprod.azurecr.io ¥ https://cloudmanagerinfraprod.azurecr.io | Cloud Restore Instance のイメージリポジトリ。 
-|===
-* Azure 導入に必要なエンドポイント： *
-
-[cols="43,57"]
-|===
-| エンドポイント | 目的 
-
-
-| ¥ http://olcentgbl.trafficmanager.net ¥ https://olcentgbl.trafficmanager.net | Cloud Restore 仮想マシン用の CentOS パッケージが用意されています。 
-
-
-| ¥ http://cloudmanagerinfraprod.azurecr.io ¥ https://cloudmanagerinfraprod.azurecr.io | Cloud Restore Instance のイメージリポジトリ。 
-|===
 
 
 === バックアップファイルからの単一ファイルのリストア

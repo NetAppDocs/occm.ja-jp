@@ -26,7 +26,8 @@ Cloud Volumes ONTAP から Amazon S3 へのデータのバックアップを開�
 ==== 構成がサポートされていることを確認します
 
 * Cloud Volumes ONTAP 9.6 以降を AWS で実行している。
-* に登録しておきます https://aws.amazon.com/marketplace/pp/B07QX2QLXX["Cloud Manager Marketplace のバックアップソリューション"^]またはを購入したことが必要です link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
+* バックアップを格納するストレージスペースに対する有効なクラウドプロバイダのサブスクリプションが必要です。
+* に登録しておきます https://aws.amazon.com/marketplace/pp/B07QX2QLXX["Cloud Manager Marketplace のバックアップソリューション"^]またはを購入したことが必要です link:task_managing_licenses.html#manage-cloud-backup-licenses["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
 * Cloud Manager に権限を提供する IAM ロールにはが含まれています 最新のものから S3 権限 https://mysupport.netapp.com/site/info/cloud-manager-policies["Cloud Manager ポリシー"^]。
 
 
@@ -88,8 +89,9 @@ S3 へのボリュームのバックアップを開始する前に、次の要�
 
 image:diagram_cloud_backup_cvo_aws.png["Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"]
 
+クラウドに導入されたクラウドリストアインスタンスは、コネクタと同じサブネットに配置されます。
+
 サポートされている ONTAP のバージョン:: Cloud Volumes ONTAP 9.6 以降
-サポートされている AWS リージョン:: Cloud Backup はすべての AWS リージョンでサポートされます https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。
 ライセンス要件::
 +
 --
@@ -97,12 +99,13 @@ Cloud Volumes ONTAP データとオンプレミスの ONTAP データの両方�
 
 年間契約を使用して Cloud Volumes ONTAP と Cloud Backup Service をバンドルできるようにするには、 Cloud Volumes ONTAP 作業環境の作成時に年間契約を設定する必要があります。このオプションでは、オンプレミスのデータをバックアップすることはできません。
 
-Cloud Backup BYOL ライセンスには、 AWS Cloud Backup サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["バックアップ BYOL ライセンスを追加および更新する"^]。
+Cloud Backup BYOL ライセンスには、 AWS Cloud Backup サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください link:task_managing_licenses.html#manage-cloud-backup-licenses["バックアップ BYOL ライセンスの管理"^]。
 
 また、バックアップを格納するストレージスペース用の AWS サブスクリプションが必要です。
 
 --
-AWS 権限が必要です::
+サポートされている AWS リージョン:: Cloud Backup はすべての AWS リージョンでサポートされます https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP がサポートされている場合"^]。
+AWS Backup 権限が必要です::
 +
 --
 ポリシーの具体的な権限を次に示します。
@@ -134,6 +137,33 @@ AWS 権限が必要です::
             ]
         },
 ----
+--
+AWS Restore 権限が必要です::
++
+--
+[source, json]
+----
+          "Action": [
+              "ec2:DescribeInstanceTypeOfferings",
+              "ec2:StartInstances",
+              "ec2:StopInstances",
+              "ec2:TerminateInstances"
+          ],
+----
+--
+AWS 環境にはアウトバウンドのインターネットアクセスが必要です::
++
+--
+[cols="43,57"]
+|===
+| エンドポイント | 目的 
+
+
+| \ http://amazonlinux.us-east-1.amazonaws.com/2/extras/docker/stable/x86_64/4bf88ee77c395ffe1e0c3ca68530dfb3a683ec65a4a1ce9c0ff394be50e922b2/ | クラウドリストアインスタンス AMI 用の CentOS パッケージ。 
+
+
+| ¥ http://cloudmanagerinfraprod.azurecr.io ¥ https://cloudmanagerinfraprod.azurecr.io | Cloud Restore Instance のイメージリポジトリ。 
+|===
 --
 
 

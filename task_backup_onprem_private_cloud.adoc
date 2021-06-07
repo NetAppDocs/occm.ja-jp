@@ -36,7 +36,7 @@ summary: オンプレミスの ONTAP システムから NetApp StorageGRID シ�
 ** クラスタには SnapMirror ライセンスがあり、 PREM または Data Protection Bundle に含まれています。
 
 
-* を購入済みである link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
+* を購入済みである link:task_managing_licenses.html#manage-cloud-backup-licenses["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
 * StorageGRID バージョン 10.3 以降では、 S3 権限を持つアクセスキーが設定されています。
 
 
@@ -205,7 +205,7 @@ StorageGRID にデータをバックアップするときは、オンプレミ�
 
 === ライセンス要件
 
-Cloud Backup BYOL ライセンスを使用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["バックアップ BYOL ライセンスを追加および更新する"^]。
+Cloud Backup BYOL ライセンスを使用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください link:task_managing_licenses.html#manage-cloud-backup-licenses["バックアップ BYOL ライセンスの管理"^]。
 
 PAYGO ライセンスは、ファイルを StorageGRID にバックアップする場合には現在サポートされていません。
 
@@ -222,7 +222,7 @@ image:screenshot_backup_from_onprem_activate.png["オンプレミスの作業環
 
 . プロバイダとして * StorageGRID * を選択し、 * Next * をクリックして、プロバイダの詳細を入力します。
 +
-.. StorageGRID サーバの FQDN または IP アドレス。
+.. StorageGRID サーバの FQDN と ONTAP が StorageGRID との HTTPS 通信に使用するポート。例：「 3.eng.company.com:8082` 」
 .. バックアップを格納するバケットへのアクセスに使用するアクセスキーとシークレットキー。
 .. バックアップするボリュームが配置されている ONTAP クラスタ内の IPspace 。
 +

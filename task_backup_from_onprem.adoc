@@ -38,7 +38,7 @@ NetApp StorageGRID システムを使用しており、バックアップを作�
 ** クラスタには SnapMirror ライセンスがあり、 PREM または Data Protection Bundle に含まれています。
 
 
-* に登録しておきます https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure"^]、 https://aws.amazon.com/marketplace/pp/B07QX2QLXX["AWS"^]または https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["Google"^] Cloud Manager Marketplace のバックアップ製品またはを購入済みである link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
+* に登録しておきます https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure"^]、 https://aws.amazon.com/marketplace/pp/B07QX2QLXX["AWS"^]または https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["Google"^] Cloud Manager Marketplace のバックアップ製品またはを購入済みである link:task_managing_licenses.html#manage-cloud-backup-licenses["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
 * バックアップを格納するオブジェクトストレージスペース用の有効なクラウドプロバイダサブスクリプションが必要です。
 * AWS と GCP については、 ONTAP クラスタがデータをバックアップできるように、アクセスキーと必要な権限を持つアカウントが必要です。
 
@@ -65,7 +65,7 @@ image:screenshot_backup_from_onprem_activate.png["オンプレミスの作業環
 ==== バックアップポリシーを定義
 
 [role="quick-margin-para"]
-デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。日単位、週単位、または月単位のバックアップに変更するか、システム定義のポリシーの中からオプションを追加するものを 1 つ選択します。
+デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。日単位、週単位、または月単位のバックアップに変更するか、システム定義のポリシーの中からオプションを追加するものを 1 つ選択します。保持するバックアップコピーの数を変更することもできます。
 
 [role="quick-margin-para"]
 image:screenshot_backup_onprem_policy.png["クラウドバックアップの設定を示すスクリーンショット。バックアップのスケジュールと保持期間を選択できます。"]
@@ -96,27 +96,41 @@ image:screenshot_backup_onprem_policy.png["クラウドバックアップの設�
 
 
 
-== 要件
+== 概要図
 
-オンプレミスボリュームをオブジェクトストレージにバックアップする前に、次の要件を確認し、サポートされている構成であることを確認してください。
+次の図は、オンプレミスの ONTAP システムをオブジェクトストレージにバックアップする場合と、それらの間の接続を準備する場合の各コンポーネントを示しています。
 
-次の図は、オンプレミスの ONTAP システムを Amazon S3 にバックアップする場合と、それらの間の接続を準備する必要がある場合の各コンポーネントを示しています。
+* Amazon S3 構成： *
 
 image:diagram_cloud_backup_onprem_aws.png["Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"]
 
-次の図は、オンプレミスの ONTAP システムを Azure Blob にバックアップする場合の各コンポーネントと、その間の準備に必要な接続を示しています。
+クラウドにクラウドリストアインスタンスが導入されている場合、クラウドリストアインスタンスはコネクタと同じサブネットに配置されます。
+
+* Azure Blob Configuration ： *
 
 image:diagram_cloud_backup_onprem_azure.png["Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"]
 
-次の図は、オンプレミスの ONTAP システムを Google Cloud Storage にバックアップする場合の各コンポーネントと、それらの間の準備に必要な接続を示しています。
+クラウドにクラウドリストアインスタンスが導入されている場合、クラウドリストアインスタンスはコネクタと同じサブネットに配置されます。
+
+* Google Cloud Storage の構成： *
 
 image:diagram_cloud_backup_onprem_google.png["Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"]
+
+シングルファイルのリストアは現在 GCP でサポートされていないため、 Cloud Restore インスタンスはこの図には示されていません。
+
+
+
+== 要件
+
+オンプレミスボリュームをオブジェクトストレージにバックアップする前に、次の要件を確認し、サポートされている構成であることを確認してください。
 
 
 
 === ONTAP クラスタの準備
 
-クラウドストレージにデータをバックアップするときは、 ONTAP クラスタが次の要件を満たしている必要があります。
+ボリュームデータのバックアップを開始する前に、 Cloud Manager でオンプレミスの ONTAP クラスタを検出する必要があります。
+
+link:task_discovering_ontap.html["クラスタの検出方法について説明します"]。
 
 ONTAP の要件::
 +
@@ -155,14 +169,6 @@ Cloud Backup をセットアップすると、 IPspace で使用するように�
 
 --
 
-
-
-
-=== ONTAP クラスタを検出しています
-
-ボリュームデータのバックアップを開始する前に、 Cloud Manager でオンプレミスの ONTAP クラスタを検出する必要があります。
-
-link:task_discovering_ontap.html["クラスタの検出方法について説明します"]。
 
 
 
@@ -215,7 +221,7 @@ link:task_discovering_ontap.html["クラスタの検出方法について説明�
 
 Cloud Backup PAYGO ライセンスの場合は、へのサブスクリプションが必要です https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure"^]、 https://aws.amazon.com/marketplace/pp/B07QX2QLXX["AWS"^]または https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["Google"^] Cloud Backup を有効にする前に、 Cloud Manager Marketplace のバックアップサービスを利用できます。Cloud Backup の請求は、このサブスクリプションを通じて行われます。
 
-Cloud Backup BYOL ライセンスを使用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください link:task_managing_licenses.html#adding-and-updating-your-backup-byol-license["バックアップ BYOL ライセンスを追加および更新する"^]。
+Cloud Backup BYOL ライセンスの場合は、サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください link:task_managing_licenses.html#manage-cloud-backup-licenses["バックアップ BYOL ライセンスの管理"^]。
 
 また、バックアップを格納するオブジェクトストレージスペースについて、クラウドプロバイダからのサブスクリプションが必要になります。
 
@@ -269,6 +275,29 @@ Amazon S3 を使用している場合は、 Cloud Manager が S3 バケットに
 +
 を参照してください https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["AWS ドキュメント：「 Creating a Role to Delegate Permissions to an IAM User"^] を参照してください。
 
+. Cloud Restore インスタンスに次の権限を指定します。
++
+[source, json]
+----
+          "Action": [
+              "ec2:DescribeInstanceTypeOfferings",
+              "ec2:StartInstances",
+              "ec2:StopInstances",
+              "ec2:TerminateInstances"
+          ],
+----
+. 仮想ネットワークまたは物理ネットワークでインターネットアクセスにプロキシサーバを使用している場合は、 Cloud Restore インスタンスがアウトバウンドのインターネットアクセスを使用して次のエンドポイントに接続していることを確認してください。
++
+[cols="43,57"]
+|===
+| エンドポイント | 目的 
+
+
+| \ http://amazonlinux.us-east-1.amazonaws.com/2/extras/docker/stable/x86_64/4bf88ee77c395ffe1e0c3ca68530dfb3a683ec65a4a1ce9c0ff394be50e922b2/ | クラウドリストアインスタンス AMI 用の CentOS パッケージ。 
+
+
+| ¥ http://cloudmanagerinfraprod.azurecr.io ¥ https://cloudmanagerinfraprod.azurecr.io | Cloud Restore Instance のイメージリポジトリ。 
+|===
 . アクセスキーを作成または検索します。
 +
 Cloud Backup が ONTAP クラスタにアクセスキーを渡します。クレデンシャルは Cloud Backup Service には保存されません。
@@ -278,6 +307,22 @@ Cloud Backup が ONTAP クラスタにアクセスキーを渡します。クレ
 
 
 
+
+
+=== バックアップ用に Azure BLOB ストレージを準備しています
+
+Cloud Restore 仮想マシンには、アウトバウンドのインターネットアクセスが必要です。仮想ネットワークまたは物理ネットワークでインターネットアクセスにプロキシサーバを使用している場合は、インスタンスがアウトバウンドのインターネットアクセスを使用して次のエンドポイントに接続していることを確認してください。
+
+[cols="43,57"]
+|===
+| エンドポイント | 目的 
+
+
+| ¥ http://olcentgbl.trafficmanager.net ¥ https://olcentgbl.trafficmanager.net | Cloud Restore 仮想マシン用の CentOS パッケージが用意されています。 
+
+
+| ¥ http://cloudmanagerinfraprod.azurecr.io ¥ https://cloudmanagerinfraprod.azurecr.io | Cloud Restore 仮想マシンのイメージリポジトリ。 
+|===
 
 
 === Google Cloud Storage でバックアップを準備しています
