@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-31 05:29:06 +0000">05/31/2021</time>
+    <time datetime="2021-06-07 19:12:31 +0000">06/07/2021</time>
     
   
 
@@ -2658,10 +2658,20 @@
 <li>
 <p>ファイルのリストアの場合、クラウドプロバイダに料金を支払うのは、リストアインスタンスの実行中のみです。</p>
 <div class="paragraph">
-<p>インスタンスは、バックアップファイルを参照してリストアする個々のファイルを探すときにのみ実行されます。コストを節約するために使用していない場合、インスタンスはオフになります。個々のファイルを復元しようとしなかった場合は、まったく展開されません。</p>
+<p>インスタンスは、バックアップファイルを参照してリストアする個々のファイルを探すときにのみ実行されます。コストを節約するために使用していない場合、インスタンスはオフになります。</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>AWS では、 Restore インスタンスはで実行されます <a href="https://aws.amazon.com/ec2/instance-types/m5/" target="_blank" rel="noopener">"m5n.xlarge インスタンス"</a> CPU × 4 、 16GiB メモリ、 EBS のみのインスタンスストレージ。m5n.xlarge インスタンスを使用できない領域では、代わりに m5.xlarge インスタンスで Restore が実行されます。</p>
+</li>
+<li>
+<p>Azure では、 Restore 仮想マシンがで実行されます <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series" target="_blank" rel="noopener">"Standard_D4s_v3 VM"</a> CPU × 4 、 16GiB メモリ、 32GB ディスク × 1</p>
 <div class="paragraph">
-<p>を参照してください <a href="task_restore_backups.html#details" target="_blank" rel="noopener">"導入されている仮想マシン / インスタンスのタイプ"</a> サポートされているクラウドプロバイダごとに、</p>
+<p>インスタンスの名前は <em>Cloud-Restore-Instance_with Your Account ID Concatenated です。例： _Cloud-Restore-Instance-MyAccount</em> 。</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 <li>
@@ -2754,13 +2764,13 @@
 <i class="fa icon-note" title="注記"></i>
 </td>
 <td class="content">
-StorageGRID へのバックアップには BYOL ライセンスが必要です。この場合、クラウドプロバイダのストレージスペースは無償で利用できます。
+StorageGRID へのバックアップには BYOL ライセンスが必要ですが、この場合クラウドプロバイダのストレージスペースはコストなしに使用できます。
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>このサービスを有効にするために、 Cloud Manager のライセンスページに入力するシリアル番号が表示されます。いずれかの制限に達すると、ライセンスを更新する必要があります。を参照してください <a href="task_managing_licenses.html#adding-and-updating-your-backup-byol-license" target="_blank" rel="noopener">"バックアップ BYOL ライセンスを追加および更新する"</a>。バックアップライセンスはすべての Cloud Volumes ONTAP に適用されます に関連付けられているオンプレミスシステムもサポートします <a href="concept_cloud_central_accounts.html" target="_blank" rel="noopener">"Cloud Central アカウント"</a>。</p>
+<p>サービスを有効にするために、 Cloud Manager のデジタルウォレットのページに入力したシリアル番号が表示されます。いずれかの制限に達すると、ライセンスを更新する必要があります。を参照してください <a href="task_managing_licenses.html#manage-cloud-backup-licenses" target="_blank" rel="noopener">"Cloud Backup ライセンスの管理"</a>。Backup BYOL ライセンス環境は、に関連付けられているすべての Cloud Volumes ONTAP およびオンプレミスの ONTAP システムをライセンスしたものです <a href="concept_cloud_central_accounts.html" target="_blank" rel="noopener">"Cloud Central アカウント"</a>。</p>
 </div>
 <div class="sect3">
 <h4 id="byol-ライセンスに関する考慮事項">BYOL ライセンスに関する考慮事項</h4>
@@ -2794,7 +2804,7 @@ StorageGRID へのバックアップには BYOL ライセンスが必要です�
 </ul>
 </div>
 <div class="paragraph">
-<p>BYOL サブスクリプションを更新すると、 Cloud Manager は NetApp から新しいライセンスを自動的に取得してインストールします。Cloud Manager がセキュアなインターネット接続経由でライセンスファイルにアクセスできない場合は、ユーザがファイルを取得して、 Cloud Manager に手動でアップロードできます。手順については、を参照してください <a href="task_managing_licenses.html#adding-and-updating-your-backup-byol-license" target="_blank" rel="noopener">"バックアップ BYOL ライセンスを追加および更新する"</a>。</p>
+<p>BYOL サブスクリプションを更新すると、 Cloud Manager は NetApp から新しいライセンスを自動的に取得してインストールします。Cloud Manager がセキュアなインターネット接続経由でライセンスファイルにアクセスできない場合は、ユーザがファイルを取得して、 Cloud Manager に手動でアップロードできます。手順については、を参照してください <a href="task_managing_licenses.html#manage-cloud-backup-licenses" target="_blank" rel="noopener">"Cloud Backup ライセンスの管理"</a>。</p>
 </div>
 <div class="paragraph">
 <p>PAYGO ライセンスに切り替えられたシステムは、自動的に BYOL ライセンスに戻されます。また、ライセンスなしで実行されていたシステムは警告メッセージの受信を停止し、ライセンスの有効期限が切れている間に実行されたバックアップに対して課金されます。</p>
@@ -2844,7 +2854,7 @@ StorageGRID へのバックアップには BYOL ライセンスが必要です�
 <p>AWS では、 Cloud Manager によってが有効になります <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html" target="_blank" rel="noopener">"Amazon S3 ブロックのパブリックアクセス機能"</a> を S3 バケットに配置します。</p>
 </li>
 <li>
-<p>Azure では、 Cloud Manager は BLOB コンテナのストレージアカウントを持つ新規または既存のリソースグループを使用します。</p>
+<p>Azure では、 Cloud Manager は BLOB コンテナのストレージアカウントを持つ新規または既存のリソースグループを使用します。クラウドマネージャ <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent">"BLOB データへのパブリックアクセスをブロックします"</a> デフォルトでは</p>
 </li>
 <li>
 <p>GCP では、 Cloud Manager は Google Cloud Storage バケット用のストレージアカウントを持つ新規または既存のプロジェクトを使用します。</p>
@@ -3031,14 +3041,14 @@ StorageGRID へのバックアップには BYOL ライセンスが必要です�
 <p>オンプレミスの ONTAP システムから StorageGRID （プライベートクラウド）にバックアップする場合は、 Connector をオンプレミスに導入する必要があります。</p>
 </li>
 <li>
-<p>DP ボリュームをバックアップする場合は、次の点に注意してください。</p>
+<p>データ保護（ DP ）ボリュームをバックアップする場合、次の SnapMirror ラベルが設定されている関係はクラウドにバックアップされません。</p>
 <div class="ulist">
 <ul>
 <li>
-<p>バックアップ / MirrorAndVault 関係のデスティネーションである DP ボリュームのみがサポートされます。MirrorAllSnapshots ポリシーを使用して作成した DP ボリュームはバックアップできず、エラーが発生して失敗します。</p>
+<p>APP_Consistent</p>
 </li>
 <li>
-<p>ソースボリュームの SnapMirror ポリシーに対して定義されたルールでは、許可される Cloud Backup ポリシーの名前（ * daily * 、 * weekly * 、または * monthly * ）に一致するラベルを使用する必要があります。そうしないと、その DP ボリュームのバックアップは失敗します。</p>
+<p>all_source_snapshot</p>
 </li>
 </ul>
 </div>

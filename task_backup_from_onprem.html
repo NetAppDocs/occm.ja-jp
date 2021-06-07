@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-06 14:15:10 +0000">06/06/2021</time>
+    <time datetime="2021-06-07 19:12:31 +0000">06/07/2021</time>
     
   
 
@@ -2541,7 +2541,7 @@
 </div>
 </li>
 <li>
-<p>に登録しておきます <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview" target="_blank" rel="noopener">"Azure"</a>、 <a href="https://aws.amazon.com/marketplace/pp/B07QX2QLXX" target="_blank" rel="noopener">"AWS"</a>または <a href="https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&amp;rif_reserved" target="_blank" rel="noopener">"Google"</a> Cloud Manager Marketplace のバックアップ製品またはを購入済みである <a href="task_managing_licenses.html#adding-and-updating-your-backup-byol-license" target="_blank" rel="noopener">"アクティブ化されます"</a> NetApp の Cloud Backup BYOL ライセンス。</p>
+<p>に登録しておきます <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview" target="_blank" rel="noopener">"Azure"</a>、 <a href="https://aws.amazon.com/marketplace/pp/B07QX2QLXX" target="_blank" rel="noopener">"AWS"</a>または <a href="https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&amp;rif_reserved" target="_blank" rel="noopener">"Google"</a> Cloud Manager Marketplace のバックアップ製品またはを購入済みである <a href="task_managing_licenses.html#manage-cloud-backup-licenses" target="_blank" rel="noopener">"アクティブ化されます"</a> NetApp の Cloud Backup BYOL ライセンス。</p>
 </li>
 <li>
 <p>バックアップを格納するオブジェクトストレージスペース用の有効なクラウドプロバイダサブスクリプションが必要です。</p>
@@ -2570,7 +2570,7 @@
 <div class="sect3">
 <h4 id="バックアップポリシーを定義">バックアップポリシーを定義</h4>
 <div class="paragraph quick-margin-para">
-<p>デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。日単位、週単位、または月単位のバックアップに変更するか、システム定義のポリシーの中からオプションを追加するものを 1 つ選択します。</p>
+<p>デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。日単位、週単位、または月単位のバックアップに変更するか、システム定義のポリシーの中からオプションを追加するものを 1 つ選択します。保持するバックアップコピーの数を変更することもできます。</p>
 </div>
 <div class="paragraph quick-margin-para">
 <p><span class="image"><img src="./media/screenshot_backup_onprem_policy.png" alt="クラウドバックアップの設定を示すスクリーンショット。バックアップのスケジュールと保持期間を選択できます。"></span></p>
@@ -2600,33 +2600,65 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="要件">要件</h2>
+<h2 id="概要図">概要図</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>オンプレミスボリュームをオブジェクトストレージにバックアップする前に、次の要件を確認し、サポートされている構成であることを確認してください。</p>
+<p>次の図は、オンプレミスの ONTAP システムをオブジェクトストレージにバックアップする場合と、それらの間の接続を準備する場合の各コンポーネントを示しています。</p>
 </div>
-<div class="paragraph">
-<p>次の図は、オンプレミスの ONTAP システムを Amazon S3 にバックアップする場合と、それらの間の接続を準備する必要がある場合の各コンポーネントを示しています。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Amazon S3 構成： *</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/diagram_cloud_backup_onprem_aws.png" alt="Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"></span></p>
 </div>
 <div class="paragraph">
-<p>次の図は、オンプレミスの ONTAP システムを Azure Blob にバックアップする場合の各コンポーネントと、その間の準備に必要な接続を示しています。</p>
+<p>クラウドにクラウドリストアインスタンスが導入されている場合、クラウドリストアインスタンスはコネクタと同じサブネットに配置されます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Azure Blob Configuration ： *</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/diagram_cloud_backup_onprem_azure.png" alt="Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"></span></p>
 </div>
 <div class="paragraph">
-<p>次の図は、オンプレミスの ONTAP システムを Google Cloud Storage にバックアップする場合の各コンポーネントと、それらの間の準備に必要な接続を示しています。</p>
+<p>クラウドにクラウドリストアインスタンスが導入されている場合、クラウドリストアインスタンスはコネクタと同じサブネットに配置されます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Google Cloud Storage の構成： *</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/diagram_cloud_backup_onprem_google.png" alt="Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"></span></p>
 </div>
+<div class="paragraph">
+<p>シングルファイルのリストアは現在 GCP でサポートされていないため、 Cloud Restore インスタンスはこの図には示されていません。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="要件">要件</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>オンプレミスボリュームをオブジェクトストレージにバックアップする前に、次の要件を確認し、サポートされている構成であることを確認してください。</p>
+</div>
 <div class="sect2">
 <h3 id="ontap-クラスタの準備">ONTAP クラスタの準備</h3>
 <div class="paragraph">
-<p>クラウドストレージにデータをバックアップするときは、 ONTAP クラスタが次の要件を満たしている必要があります。</p>
+<p>ボリュームデータのバックアップを開始する前に、 Cloud Manager でオンプレミスの ONTAP クラスタを検出する必要があります。</p>
+</div>
+<div class="paragraph">
+<p><a href="task_discovering_ontap.html">"クラスタの検出方法について説明します"</a>。</p>
 </div>
 <div class="dlist">
 <dl>
@@ -2695,15 +2727,6 @@
 </div>
 </dd>
 </dl>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ontap-クラスタを検出しています">ONTAP クラスタを検出しています</h3>
-<div class="paragraph">
-<p>ボリュームデータのバックアップを開始する前に、 Cloud Manager でオンプレミスの ONTAP クラスタを検出する必要があります。</p>
-</div>
-<div class="paragraph">
-<p><a href="task_discovering_ontap.html">"クラスタの検出方法について説明します"</a>。</p>
 </div>
 </div>
 <div class="sect2">
@@ -2789,7 +2812,7 @@
 <p>Cloud Backup PAYGO ライセンスの場合は、へのサブスクリプションが必要です <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview" target="_blank" rel="noopener">"Azure"</a>、 <a href="https://aws.amazon.com/marketplace/pp/B07QX2QLXX" target="_blank" rel="noopener">"AWS"</a>または <a href="https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&amp;rif_reserved" target="_blank" rel="noopener">"Google"</a> Cloud Backup を有効にする前に、 Cloud Manager Marketplace のバックアップサービスを利用できます。Cloud Backup の請求は、このサブスクリプションを通じて行われます。</p>
 </div>
 <div class="paragraph">
-<p>Cloud Backup BYOL ライセンスを使用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください <a href="task_managing_licenses.html#adding-and-updating-your-backup-byol-license" target="_blank" rel="noopener">"バックアップ BYOL ライセンスを追加および更新する"</a>。</p>
+<p>Cloud Backup BYOL ライセンスの場合は、サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください <a href="task_managing_licenses.html#manage-cloud-backup-licenses" target="_blank" rel="noopener">"バックアップ BYOL ライセンスの管理"</a>。</p>
 </div>
 <div class="paragraph">
 <p>また、バックアップを格納するオブジェクトストレージスペースについて、クラウドプロバイダからのサブスクリプションが必要になります。</p>
@@ -2851,6 +2874,44 @@
 </div>
 </li>
 <li>
+<p>Cloud Restore インスタンスに次の権限を指定します。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">          "Action": [
+              "ec2:DescribeInstanceTypeOfferings",
+              "ec2:StartInstances",
+              "ec2:StopInstances",
+              "ec2:TerminateInstances"
+          ],</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>仮想ネットワークまたは物理ネットワークでインターネットアクセスにプロキシサーバを使用している場合は、 Cloud Restore インスタンスがアウトバウンドのインターネットアクセスを使用して次のエンドポイントに接続していることを確認してください。</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 43%;">
+<col style="width: 57%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">エンドポイント</th>
+<th class="tableblock halign-left valign-top">目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\ <a href="http://amazonlinux.us-east-1.amazonaws.com/2/extras/docker/stable/x86_64/4bf88ee77c395ffe1e0c3ca68530dfb3a683ec65a4a1ce9c0ff394be50e922b2/" class="bare">http://amazonlinux.us-east-1.amazonaws.com/2/extras/docker/stable/x86_64/4bf88ee77c395ffe1e0c3ca68530dfb3a683ec65a4a1ce9c0ff394be50e922b2/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">クラウドリストアインスタンス AMI 用の CentOS パッケージ。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">¥ <a href="http://cloudmanagerinfraprod.azurecr.io" class="bare">http://cloudmanagerinfraprod.azurecr.io</a> ¥ <a href="https://cloudmanagerinfraprod.azurecr.io" class="bare">https://cloudmanagerinfraprod.azurecr.io</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud Restore Instance のイメージリポジトリ。</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
 <p>アクセスキーを作成または検索します。</p>
 <div class="paragraph">
 <p>Cloud Backup が ONTAP クラスタにアクセスキーを渡します。クレデンシャルは Cloud Backup Service には保存されません。</p>
@@ -2861,6 +2922,34 @@
 </li>
 </ol>
 </div>
+</div>
+<div class="sect2">
+<h3 id="バックアップ用に-azure-blob-ストレージを準備しています">バックアップ用に Azure BLOB ストレージを準備しています</h3>
+<div class="paragraph">
+<p>Cloud Restore 仮想マシンには、アウトバウンドのインターネットアクセスが必要です。仮想ネットワークまたは物理ネットワークでインターネットアクセスにプロキシサーバを使用している場合は、インスタンスがアウトバウンドのインターネットアクセスを使用して次のエンドポイントに接続していることを確認してください。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 43%;">
+<col style="width: 57%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">エンドポイント</th>
+<th class="tableblock halign-left valign-top">目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">¥ <a href="http://olcentgbl.trafficmanager.net" class="bare">http://olcentgbl.trafficmanager.net</a> ¥ <a href="https://olcentgbl.trafficmanager.net" class="bare">https://olcentgbl.trafficmanager.net</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud Restore 仮想マシン用の CentOS パッケージが用意されています。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">¥ <a href="http://cloudmanagerinfraprod.azurecr.io" class="bare">http://cloudmanagerinfraprod.azurecr.io</a> ¥ <a href="https://cloudmanagerinfraprod.azurecr.io" class="bare">https://cloudmanagerinfraprod.azurecr.io</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud Restore 仮想マシンのイメージリポジトリ。</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="google-cloud-storage-でバックアップを準備しています">Google Cloud Storage でバックアップを準備しています</h3>

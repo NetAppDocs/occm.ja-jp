@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-05 17:09:49 +0000">05/05/2021</time>
+    <time datetime="2021-06-07 19:12:31 +0000">06/07/2021</time>
     
   
 
@@ -2528,7 +2528,7 @@
 <p>バックアップを格納するストレージスペースに対する有効なクラウドプロバイダのサブスクリプションが必要です。</p>
 </li>
 <li>
-<p>に登録しておきます <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview" target="_blank" rel="noopener">"Cloud Manager Marketplace のバックアップソリューション"</a>またはを購入したことが必要です <a href="task_managing_licenses.html#adding-and-updating-your-backup-byol-license" target="_blank" rel="noopener">"アクティブ化されます"</a> NetApp の Cloud Backup BYOL ライセンス。</p>
+<p>に登録しておきます <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview" target="_blank" rel="noopener">"Cloud Manager Marketplace のバックアップソリューション"</a>またはを購入したことが必要です <a href="task_managing_licenses.html#manage-cloud-backup-licenses" target="_blank" rel="noopener">"アクティブ化されます"</a> NetApp の Cloud Backup BYOL ライセンス。</p>
 </li>
 </ul>
 </div>
@@ -2561,7 +2561,7 @@
 <div class="sect3">
 <h4 id="バックアップポリシーを定義">バックアップポリシーを定義</h4>
 <div class="paragraph quick-margin-para">
-<p>デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。日単位、週単位、または月単位のバックアップに変更するか、システム定義のポリシーの中からオプションを追加するものを 1 つ選択します。</p>
+<p>デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。日単位、週単位、または月単位のバックアップに変更するか、システム定義のポリシーの中からオプションを追加するものを 1 つ選択します。保持するバックアップコピーの数を変更することもできます。</p>
 </div>
 <div class="paragraph quick-margin-para">
 <p><span class="image"><img src="./media/screenshot_backup_policy_azure.png" alt="クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"></span></p>
@@ -2596,22 +2596,21 @@
 <div class="paragraph">
 <p><span class="image"><img src="./media/diagram_cloud_backup_cvo_azure.png" alt="Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"></span></p>
 </div>
+<div class="paragraph">
+<p>クラウドに導入された Cloud Restore 仮想マシンは、コネクタと同じサブネットに配置されます。</p>
+</div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">サポートされている ONTAP のバージョン</dt>
 <dd>
 <p>Cloud Volumes ONTAP 9.7 以降。</p>
 </dd>
-<dt class="hdlist1">サポートされている Azure リージョン</dt>
-<dd>
-<p>Cloud Backup はすべての Azure リージョンでサポートされます <a href="https://cloud.netapp.com/cloud-volumes-global-regions" target="_blank" rel="noopener">"Cloud Volumes ONTAP がサポートされている場合"</a>。</p>
-</dd>
 <dt class="hdlist1">ライセンス要件</dt>
 <dd>
 <div class="openblock">
 <div class="content">
 <div class="paragraph">
-<p>Cloud Backup BYOL ライセンスを使用するには、ライセンスの期間と容量にサービスを使用できるように、ネットアップから提供されたシリアル番号が必要です。を参照してください <a href="task_managing_licenses.html#adding-and-updating-your-backup-byol-license" target="_blank" rel="noopener">"バックアップ BYOL ライセンスを追加および更新する"</a>。</p>
+<p>Cloud Backup BYOL ライセンスには、 Azure Cloud Backup サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください <a href="task_managing_licenses.html#manage-cloud-backup-licenses" target="_blank" rel="noopener">"バックアップ BYOL ライセンスの管理"</a>。</p>
 </div>
 <div class="paragraph">
 <p>また、バックアップを格納するストレージスペースには、 Microsoft Azure サブスクリプションが必要です。</p>
@@ -2619,8 +2618,38 @@
 </div>
 </div>
 </dd>
+<dt class="hdlist1">サポートされている Azure リージョン</dt>
+<dd>
+<p>Cloud Backup はすべての Azure リージョンでサポートされます <a href="https://cloud.netapp.com/cloud-volumes-global-regions" target="_blank" rel="noopener">"Cloud Volumes ONTAP がサポートされている場合"</a>。</p>
+</dd>
+<dt class="hdlist1">Azure 環境にはアウトバウンドのインターネットアクセスが必要です</dt>
+<dd>
+<p>Cloud Restore 仮想マシンには、アウトバウンドのインターネットアクセスが必要です。仮想ネットワークまたは物理ネットワークでインターネットアクセスにプロキシサーバを使用している場合は、インスタンスがアウトバウンドのインターネットアクセスを使用して次のエンドポイントに接続していることを確認してください。</p>
+</dd>
 </dl>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 43%;">
+<col style="width: 57%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">エンドポイント</th>
+<th class="tableblock halign-left valign-top">目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">¥ <a href="http://olcentgbl.trafficmanager.net" class="bare">http://olcentgbl.trafficmanager.net</a> ¥ <a href="https://olcentgbl.trafficmanager.net" class="bare">https://olcentgbl.trafficmanager.net</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud Restore 仮想マシン用の CentOS パッケージが用意されています。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">¥ <a href="http://cloudmanagerinfraprod.azurecr.io" class="bare">http://cloudmanagerinfraprod.azurecr.io</a> ¥ <a href="https://cloudmanagerinfraprod.azurecr.io" class="bare">https://cloudmanagerinfraprod.azurecr.io</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud Restore 仮想マシンのイメージリポジトリ。</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect1">
@@ -2710,9 +2739,6 @@
 </div>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p>サービスの開始後に、サブスクリプションまたはリソースグループを変更することはできません。</p>
 </div>
 </li>
 <li>

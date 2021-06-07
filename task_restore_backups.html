@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-05 17:09:49 +0000">05/05/2021</time>
+    <time datetime="2021-06-07 19:12:31 +0000">06/07/2021</time>
     
   
 
@@ -2696,7 +2696,7 @@
 <i class="fa icon-note" title="注記"></i>
 </td>
 <td class="content">
-バックアップファイルから個々のファイルをリストアする場合は、別のリストアインスタンス / 仮想マシンを使用します。
+バックアップファイルから個々のファイルをリストアする場合は、別のリストアインスタンス / 仮想マシンを使用します。を参照してください <a href="task_backup_to_s3.html#requirements">"AWS の要件"</a> または <a href="task_backup_to_azure.html#requirements">"Azure の要件"</a> 環境の準備状況を確認
 </td>
 </tr>
 </table>
@@ -2709,7 +2709,7 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>ボリュームから 1 つ以上のファイルを復元する場合は、 [ 復元 ] タブをクリックし、 [* ファイルの復元 *] をクリックして、ファイルが存在するバックアップファイル（またはファイル）を選択します。</p>
+<p>ボリュームから 1 つ以上のファイルを復元する場合は、 * リストア * タブをクリックし、 * ファイルの復元 * をクリックして、ファイルが存在するバックアップファイル（またはファイル）を選択します。</p>
 </li>
 <li>
 <p>Restore インスタンスが起動し、バックアップファイル内に存在するフォルダとファイルが表示されます。</p>
@@ -2731,118 +2731,6 @@
 <p>ファイルがリストアされ、リストアインスタンスがシャットダウンされて、一定時間非アクティブになったあとのコストが削減されます。</p>
 </li>
 </ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="詳細">詳細</h3>
-<div class="paragraph">
-<p>を参照してください <a href="concept_backup_to_cloud.html#cost" target="_blank" rel="noopener">"このトピック"</a> Cloud Backup Service と Restore インスタンスのコストを計算します。</p>
-</div>
-<div class="ulist">
-<div class="title">インスタンスタイプ</div>
-<ul>
-<li>
-<p>AWS では、 Restore インスタンスはで実行されます <a href="https://aws.amazon.com/ec2/instance-types/m5/" target="_blank" rel="noopener">"m5n.xlarge インスタンス"</a> CPU × 4 、 16GiB メモリ、 EBS のみのインスタンスストレージ。m5n.xlarge インスタンスを使用できない領域では、代わりに m5.xlarge インスタンスで Restore が実行されます。</p>
-</li>
-<li>
-<p>Azure では、 Restore 仮想マシンがで実行されます <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series" target="_blank" rel="noopener">"Standard_D4s_v3 VM"</a> CPU × 4 、 16GiB メモリ、 32GB ディスク × 1</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>インスタンスの名前は <em>Cloud-Restore-Instance_with Your Account ID Concatenated です。例： _Cloud-Restore-Instance-MyAccount</em> 。</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="前提条件の確認">前提条件の確認</h3>
-<div class="paragraph">
-<p>Cloud Restore を導入する前に、次の前提条件を確認し、サポートされている構成であることを確認してください。</p>
-</div>
-<div class="sect3">
-<h4 id="aws-権限が必要です">AWS 権限が必要です</h4>
-<div class="paragraph">
-<p>AWS でファイルリストアを使用する場合、 Cloud Manager に権限を提供する IAM ロールに最新の S3 権限を含める必要があります <a href="https://mysupport.netapp.com/site/info/cloud-manager-policies" target="_blank" rel="noopener">"Cloud Manager ポリシー"</a> を参照してください <a href="task_backup_to_s3.html#requirements" target="_blank" rel="noopener">"AWS の要件"</a>。</p>
-</div>
-<div class="paragraph">
-<p>また、ファイルをリストアするには、ポリシーで次の権限が必要です。</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">  "Action": [
-    "ec2:DescribeInstanceTypeOfferings",
-    "ec2:startInstances",
-    "ec2:stopInstances",
-    "ec2:terminateInstances"
-  ],</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="アウトバウンドインターネットアクセスを有効にします">アウトバウンドインターネットアクセスを有効にします</h4>
-<div class="paragraph">
-<p>Cloud Restore にはアウトバウンドのインターネットアクセスが必要です。仮想ネットワークまたは物理ネットワークでインターネットアクセスにプロキシサーバを使用している場合は、インスタンスがアウトバウンドのインターネットアクセスを使用して次のエンドポイントに接続していることを確認してください。クラウドに Cloud Restore を導入する場合、 Connector と同じサブネットに配置されます。</p>
-</div>
-<div class="paragraph">
-<p>AWS と Azure のどちらに Cloud Restore を導入するかに応じて、該当する表を確認します。</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>AWS 環境に必要なエンドポイント： *</p>
-</li>
-</ul>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 43%;">
-<col style="width: 57%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">エンドポイント</th>
-<th class="tableblock halign-left valign-top">目的</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\ <a href="http://amazonlinux.us-east-1.amazonaws.com/2/extras/docker/stable/x86_64/4bf88ee77c395ffe1e0c3ca68530dfb3a683ec65a4a1ce9c0ff394be50e922b2/" class="bare">http://amazonlinux.us-east-1.amazonaws.com/2/extras/docker/stable/x86_64/4bf88ee77c395ffe1e0c3ca68530dfb3a683ec65a4a1ce9c0ff394be50e922b2/</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">クラウドリストアインスタンス AMI 用の CentOS パッケージ。</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">¥ <a href="http://cloudmanagerinfraprod.azurecr.io" class="bare">http://cloudmanagerinfraprod.azurecr.io</a> ¥ <a href="https://cloudmanagerinfraprod.azurecr.io" class="bare">https://cloudmanagerinfraprod.azurecr.io</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud Restore Instance のイメージリポジトリ。</p></td>
-</tr>
-</tbody>
-</table>
-<div class="ulist">
-<ul>
-<li>
-<p>Azure 導入に必要なエンドポイント： *</p>
-</li>
-</ul>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 43%;">
-<col style="width: 57%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">エンドポイント</th>
-<th class="tableblock halign-left valign-top">目的</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">¥ <a href="http://olcentgbl.trafficmanager.net" class="bare">http://olcentgbl.trafficmanager.net</a> ¥ <a href="https://olcentgbl.trafficmanager.net" class="bare">https://olcentgbl.trafficmanager.net</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud Restore 仮想マシン用の CentOS パッケージが用意されています。</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">¥ <a href="http://cloudmanagerinfraprod.azurecr.io" class="bare">http://cloudmanagerinfraprod.azurecr.io</a> ¥ <a href="https://cloudmanagerinfraprod.azurecr.io" class="bare">https://cloudmanagerinfraprod.azurecr.io</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud Restore Instance のイメージリポジトリ。</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 <div class="sect2">

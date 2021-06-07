@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-31 05:29:06 +0000">05/31/2021</time>
+    <time datetime="2021-06-07 19:12:31 +0000">06/07/2021</time>
     
   
 
@@ -2525,7 +2525,10 @@
 <p>Cloud Volumes ONTAP 9.6 以降を AWS で実行している。</p>
 </li>
 <li>
-<p>に登録しておきます <a href="https://aws.amazon.com/marketplace/pp/B07QX2QLXX" target="_blank" rel="noopener">"Cloud Manager Marketplace のバックアップソリューション"</a>またはを購入したことが必要です <a href="task_managing_licenses.html#adding-and-updating-your-backup-byol-license" target="_blank" rel="noopener">"アクティブ化されます"</a> NetApp の Cloud Backup BYOL ライセンス。</p>
+<p>バックアップを格納するストレージスペースに対する有効なクラウドプロバイダのサブスクリプションが必要です。</p>
+</li>
+<li>
+<p>に登録しておきます <a href="https://aws.amazon.com/marketplace/pp/B07QX2QLXX" target="_blank" rel="noopener">"Cloud Manager Marketplace のバックアップソリューション"</a>またはを購入したことが必要です <a href="task_managing_licenses.html#manage-cloud-backup-licenses" target="_blank" rel="noopener">"アクティブ化されます"</a> NetApp の Cloud Backup BYOL ライセンス。</p>
 </li>
 <li>
 <p>Cloud Manager に権限を提供する IAM ロールにはが含まれています 最新のものから S3 権限 <a href="https://mysupport.netapp.com/site/info/cloud-manager-policies" target="_blank" rel="noopener">"Cloud Manager ポリシー"</a>。</p>
@@ -2596,15 +2599,14 @@
 <div class="paragraph">
 <p><span class="image"><img src="./media/diagram_cloud_backup_cvo_aws.png" alt="Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。"></span></p>
 </div>
+<div class="paragraph">
+<p>クラウドに導入されたクラウドリストアインスタンスは、コネクタと同じサブネットに配置されます。</p>
+</div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">サポートされている ONTAP のバージョン</dt>
 <dd>
 <p>Cloud Volumes ONTAP 9.6 以降</p>
-</dd>
-<dt class="hdlist1">サポートされている AWS リージョン</dt>
-<dd>
-<p>Cloud Backup はすべての AWS リージョンでサポートされます <a href="https://cloud.netapp.com/cloud-volumes-global-regions" target="_blank" rel="noopener">"Cloud Volumes ONTAP がサポートされている場合"</a>。</p>
 </dd>
 <dt class="hdlist1">ライセンス要件</dt>
 <dd>
@@ -2617,7 +2619,7 @@
 <p>年間契約を使用して Cloud Volumes ONTAP と Cloud Backup Service をバンドルできるようにするには、 Cloud Volumes ONTAP 作業環境の作成時に年間契約を設定する必要があります。このオプションでは、オンプレミスのデータをバックアップすることはできません。</p>
 </div>
 <div class="paragraph">
-<p>Cloud Backup BYOL ライセンスには、 AWS Cloud Backup サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください <a href="task_managing_licenses.html#adding-and-updating-your-backup-byol-license" target="_blank" rel="noopener">"バックアップ BYOL ライセンスを追加および更新する"</a>。</p>
+<p>Cloud Backup BYOL ライセンスには、 AWS Cloud Backup サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください <a href="task_managing_licenses.html#manage-cloud-backup-licenses" target="_blank" rel="noopener">"バックアップ BYOL ライセンスの管理"</a>。</p>
 </div>
 <div class="paragraph">
 <p>また、バックアップを格納するストレージスペース用の AWS サブスクリプションが必要です。</p>
@@ -2625,7 +2627,11 @@
 </div>
 </div>
 </dd>
-<dt class="hdlist1">AWS 権限が必要です</dt>
+<dt class="hdlist1">サポートされている AWS リージョン</dt>
+<dd>
+<p>Cloud Backup はすべての AWS リージョンでサポートされます <a href="https://cloud.netapp.com/cloud-volumes-global-regions" target="_blank" rel="noopener">"Cloud Volumes ONTAP がサポートされている場合"</a>。</p>
+</dd>
+<dt class="hdlist1">AWS Backup 権限が必要です</dt>
 <dd>
 <div class="openblock">
 <div class="content">
@@ -2660,6 +2666,52 @@
         },</code></pre>
 </div>
 </div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">AWS Restore 権限が必要です</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">          "Action": [
+              "ec2:DescribeInstanceTypeOfferings",
+              "ec2:StartInstances",
+              "ec2:StopInstances",
+              "ec2:TerminateInstances"
+          ],</code></pre>
+</div>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">AWS 環境にはアウトバウンドのインターネットアクセスが必要です</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 43%;">
+<col style="width: 57%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">エンドポイント</th>
+<th class="tableblock halign-left valign-top">目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\ <a href="http://amazonlinux.us-east-1.amazonaws.com/2/extras/docker/stable/x86_64/4bf88ee77c395ffe1e0c3ca68530dfb3a683ec65a4a1ce9c0ff394be50e922b2/" class="bare">http://amazonlinux.us-east-1.amazonaws.com/2/extras/docker/stable/x86_64/4bf88ee77c395ffe1e0c3ca68530dfb3a683ec65a4a1ce9c0ff394be50e922b2/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">クラウドリストアインスタンス AMI 用の CentOS パッケージ。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">¥ <a href="http://cloudmanagerinfraprod.azurecr.io" class="bare">http://cloudmanagerinfraprod.azurecr.io</a> ¥ <a href="https://cloudmanagerinfraprod.azurecr.io" class="bare">https://cloudmanagerinfraprod.azurecr.io</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud Restore Instance のイメージリポジトリ。</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </dd>
