@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_tiering_onprem_gcp.html 
 keywords: data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, google, gcp, google cloud storage 
-summary: データを Google Cloud Storage に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保できます。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。 
+summary: 非アクティブなデータを Google Cloud Storage に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。 
 ---
 = オンプレミスの ONTAP クラスタから Google Cloud Storage へデータを階層化する
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: データを Google Cloud Storage に階層化することで、オン�
 
 
 [role="lead"]
-データを Google Cloud Storage に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保できます。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。
+非アクティブなデータを Google Cloud Storage に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。
 
 
 
@@ -87,12 +87,9 @@ Google Cloud Interconnect はパフォーマンスの向上とデータ転送コ
 +
 クラスタと Cloud Tiering Service の間の接続は必要ありません。
 
-* 階層化ボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。
+* 階層化するボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。
 +
-IPspace を使用すると、ネットワークトラフィックを分離してプライバシーとセキュリティを確保することができます。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-69120CF0-F188-434F-913E-33ACB8751A5D.html["IPspace の詳細については、こちらをご覧ください"^]。
-
-+
-データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。
+データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。の詳細を確認してください https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] および https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspace"^]。
 
 
 
@@ -144,12 +141,12 @@ https://cloud.google.com/vpc/docs/configure-private-google-access["プライベ�
 
 
 
-=== データ階層化のための Google Cloud Storage の準備
+=== Google Cloud Storage を準備しています
 
 階層化を設定する場合は、 Storage Admin の権限があるサービスアカウントにストレージアクセスキーを指定する必要があります。サービスアカウントを使用すると、 Cloud Tiering で、データの階層化に使用する Cloud Storage バケットを認証し、アクセスできます。キーは、 Google Cloud Storage がリクエストを発行しているユーザーを認識できるようにするために必要です。
 
 
-NOTE: 階層化データが 30 日後に移行する低コストのストレージクラスを選択する場合は、選択したバケットに他のルールが適用されていないことを確認する必要があります。
+NOTE: 階層化データが一定の日数後に移行する低コストのストレージクラスを使用するように Cloud Tiering を設定する場合は、 GCP アカウントでバケットをセットアップするときにライフサイクルルールを選択しないでください。Cloud Tiering は、ライフサイクルの移行を管理します。
 
 .手順
 . https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["事前定義されたストレージ管理者を含むサービスアカウントを作成します ロール"^]。
@@ -184,9 +181,18 @@ image:screenshot_setup_tiering_onprem.png["オンプレミス ONTAP 作業環境
 . 「 * Tiering Setup * 」ページに記載された手順を実行します。
 +
 .. * Bucket * ：新しい Google Cloud Storage バケットを追加するか、既存のバケットを選択します。
-.. * ストレージクラス * ：階層化されたデータを 30 日後に移行するストレージクラスを選択します。
+.. * ストレージクラスのライフサイクル管理 * ： Cloud Tiering は、階層化されたデータのライフサイクル移行を管理します。データは _Standard_class から始まりますが、データを特定の日数後に他のクラスに移動するルールを作成することができます。
 +
-link:reference_google_support.html["「サポートされているストレージクラス」を参照"^]。Standard を選択した場合、データはそのストレージクラスに残り、ルールは適用されません。
+階層化データを移行する Google Cloud ストレージクラスと、データを移動するまでの日数を選択し、 * Continue （続行） * をクリックします。たとえば、次のスクリーンショットは、階層化されたデータが、オブジェクトストレージで 30 日後に _Standard_class から _Nearline _class に移動され、オブジェクトストレージで 60 日後に _Coldline_class に移動されたことを示しています。
+
++
+「 * このストレージクラスにデータを保持する」を選択した場合、データはそのストレージクラスに残ります。 link:reference_google_support.html["「サポートされているストレージクラス」を参照"^]。
+
++
+image:screenshot_tiering_lifecycle_selection_gcp.png["特定の日数が経過したあとにデータが移動される追加のストレージクラスを選択する方法を示すスクリーンショット。"]
+
++
+ライフサイクルルールは、選択したバケット内のすべてのオブジェクトに適用されます。
 
 .. * クレデンシャル * ：ストレージ管理者ロールが割り当てられたサービスアカウントのストレージアクセスキーとシークレットキーを入力します。
 .. * クラスタネットワーク * ： ONTAP がオブジェクトストレージへの接続に使用する IPspace を選択します。

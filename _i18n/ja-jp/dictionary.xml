@@ -3,10 +3,8 @@
   <block id="b13cf55f0ce2b751f69001054e37fd7b" category="summary">Cloud Tiering は、複数の S3 ストレージクラスとほとんどのリージョンをサポートしています。</block>
   <block id="ddc0d211eedc82ce253724f39188a145" category="doc">サポートされている S3 ストレージクラスとリージョン</block>
   <block id="83985bfab8a456963026e9333e67b251" category="section-title">サポートされている S3 ストレージクラス</block>
-  <block id="bd250f06da2f8ae5d4760be390e9dd10" category="paragraph">Cloud Tiering を使用すると、ライフサイクルルールを適用して、データを _Standard_storage クラスから別のストレージクラスに 30 日後に移行できます。次のストレージクラスから選択できます。</block>
   <block id="7a1255ccd32375deedb79fe52eed93f5" category="list-text">標準的なアクセス頻度は低い</block>
   <block id="ce78797e88b3d33e9c2c584edfcd9130" category="list-text">1 ゾーン -IA</block>
-  <block id="9b62305de14f24a0111b59ac6e687b80" category="list-text">インテリジェント</block>
   <block id="c84f9bdf2de63c378b4a57466b3e08bc" category="inline-link">S3 ストレージクラスについて説明します</block>
   <block id="da714780eb0a2a3ce15dd3c59d515474" category="paragraph"><block ref="fa9857a8e7d680b812395a24af3527ff" category="inline-link-rx"></block>。</block>
   <block id="af7680d24e7ce67fad6006c6fc467b53" category="section-title">サポートされている AWS リージョン</block>
@@ -453,7 +451,6 @@
   <block id="b71ed75241f297eae2cc9775c726010d" category="list-text">階層化ポリシーを変更するためにボリューム移動で -tiering-policy _ オプションが指定されています。</block>
   <block id="95bfb9cab1e60976b25e277c0ffbcb84" category="list-text">ボリューム移動で、 generate-destination-key_option が指定されました。</block>
   <block id="36afa058c74d288178950c27927bdb38" category="doc">Cloud Tiering の詳細をご確認ください</block>
-  <block id="44298d9498f9bf788ed31e9888b30787" category="paragraph">ネットアップの Cloud Tiering Service は、アクセス頻度の低いデータをオンプレミスの ONTAP クラスタからオブジェクトストレージに自動的に階層化することで、データセンターをクラウドへと拡張します。これにより、クラスタの貴重なスペースが解放され、アプリケーションレイヤに変更を加えることなく、より多くのワークロードに対応できるようになります。Cloud Tiering を使用すると、データセンターのコストを削減し、 CAPEX モデルから OPEX モデルへの切り替えが可能になります。</block>
   <block id="8219063d84a51d9df9ac9e3ec8088966" category="paragraph">Cloud Tiering サービスには、 FabricPool の機能が活用されています。FabricPool はネットアップデータファブリックのテクノロジで、低コストのオブジェクトストレージへデータを自動で階層化することができます。アクティブなデータはハイパフォーマンスの SSD に保持されますが、非アクティブなデータは低コストのオブジェクトストレージに階層化され、 ONTAP のデータ効率は維持されます。</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">の機能</block>
   <block id="c6a7db5c25117c443a476e127b47fb7e" category="paragraph">Cloud Tiering は、自動化、監視、レポート、共通の管理インターフェイスを提供します。</block>
@@ -463,10 +460,8 @@
   <block id="50ce53d55b005f76b356132a3901cfcf" category="list-text">階層化の健常性ステータスを確認することで、問題を特定して修正できます そのような状況が発生したとき</block>
   <block id="0b8949500e9883a23b1d4fbc204e90ee" category="list-text">Cloud Volumes ONTAP システムを使用している場合は、クラスタダッシュボードにこれらのシステムが表示されるので、ハイブリッドクラウドインフラにおけるデータの階層化を完全に把握できます</block>
   <block id="0f2fe86a510d6ffda7900a01b49c88f9" category="inline-link-macro">Cloud Volumes ONTAP の階層化はで設定します Cloud Manager の作業環境</block>
-  <block id="018eb82c7b669125fc6007727dd9645a" category="admonition">Cloud Volumes ONTAP システムは、 Cloud Tiering から読み取り専用です。 <block ref="651666e30b882a22f8c3060865464241" category="inline-link-macro-rx"></block>。</block>
   <block id="87ade72d5bce2aa059ec00c3d0267dcd" category="inline-link">NetApp Cloud Central の Cloud Tiering ページを確認してください</block>
   <block id="4074a4b2af431bb41b7d6a27a4a0fa8c" category="paragraph">Cloud Tiering が提供する価値の詳細については、<block ref="2b48faa4b3be6c213b2f92c388d8c1e9" category="inline-link-rx"></block>。</block>
-  <block id="ce3e5927a6a6039b4476160a2e2271db" category="admonition">Cloud Tiering を使用すると、ストレージ容量を大幅に削減できますが、バックアップソリューションではありません。</block>
   <block id="002fca37a5e7d8eb724e874566419716" category="section-title">サポートされているオブジェクトストレージプロバイダ</block>
   <block id="fbe34a81206eeac13158d16d0260991b" category="paragraph">ONTAP クラスタから Amazon S3 、 Microsoft Azure Blob ストレージ、 Google Cloud Storage 、 StorageGRID （プライベートクラウド）にアクセス頻度の低いデータを階層化することができます。</block>
   <block id="8c3c2e38ab977ab43a9ebd00e29973df" category="section-title">価格とライセンス</block>
@@ -501,10 +496,8 @@
   <block id="13e7094ae8f89d8e5effd3a70bebd61a" category="paragraph"><block ref="13e7094ae8f89d8e5effd3a70bebd61a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2267604bdde13d39a83a5f78be5a7e06" category="paragraph">Cloud Tiering の仕組みは次のとおりです。</block>
   <block id="26e4bd044876996b02b4075cecfadd4a" category="list-text">オンプレミスクラスタは、 Cloud Manager から検出できます。</block>
-  <block id="1776a43171b01d7104c0a302ddedda72" category="list-text">階層化を設定するには、バケット / コンテナ、ストレージクラスまたはアクセス階層など、オブジェクトストレージの詳細を指定します。</block>
   <block id="1f26d33b5f4eab4d98e019d22db076f7" category="list-text">Cloud Manager は、オブジェクトストレージプロバイダを使用するように ONTAP を設定し、クラスタ上のアクティブなデータと非アクティブデータの量を検出します。</block>
   <block id="f0fbe063f098b4fb5463ff8919a9c737" category="list-text">階層化するボリュームとそれらのボリュームに適用する階層化ポリシーを選択します。</block>
-  <block id="e6a299485c9869d341a3e347b631acbb" category="list-text">ONTAP は、アクセス頻度の低いデータをオブジェクトストアに階層化します。アクセス頻度の低いデータとして扱われるしきい値に達するとすぐにアクセスを開始します（を参照） <block ref="3ab88d3ba20857380b0d484a33d90bf5" category="inline-xref-macro-rx"></block>）。</block>
   <block id="670aaecb1a526fbed439dad3ec353a96" category="section-title">オブジェクトストレージ</block>
   <block id="23e4052d27769d9271277ca8cf4cdee2" category="paragraph">各 ONTAP クラスタは、アクセス頻度の低いデータを 1 つのオブジェクトストアに階層化します。データの階層化を設定するときに、新しいバケット / コンテナを追加するか、ストレージクラスまたはアクセス階層とともに既存のバケット / コンテナを選択するかを選択できます。</block>
   <block id="6d70fe33e257ddf01f6316137f4cc929" category="inline-link-macro">サポートされる S3 ストレージクラスについて説明します</block>
@@ -4009,7 +4002,6 @@
   <block id="c9c82aba1257ee6c6ebbade2353f0b0d" category="list-text"><block ref="c9c82aba1257ee6c6ebbade2353f0b0d" category="inline-link-macro-rx"></block></block>
   <block id="a5e8ac089fe7eb702f683ce020dc2a2a" category="inline-link-macro">Cloud Tiering への通知</block>
   <block id="3754b5e44654d3dc7bfaa36f213a8795" category="list-text"><block ref="3754b5e44654d3dc7bfaa36f213a8795" category="inline-link-macro-rx"></block></block>
-  <block id="b6122ca66d45c4dd150f5506ae4e690e" category="summary">データを Google Cloud Storage に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保できます。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。</block>
   <block id="be0b62dd35badd1c098da00c97d5157d" category="doc">オンプレミスの ONTAP クラスタから Google Cloud Storage へデータを階層化する</block>
   <block id="049f952b8e6cf7689afa066f1a9ea7ed" category="section-title">Google Cloud Storage へのデータの階層化を準備</block>
   <block id="4c6a9048ac276eb9391ebe2abd8e0c0d" category="paragraph">次のものが必要です。</block>
@@ -4039,10 +4031,7 @@
   <block id="92cc6f012ccda72f0aac6364e38469e9" category="paragraph">ONTAP は、オブジェクトストレージとの間でデータの読み取りと書き込みを行います。オブジェクトストレージが開始されることはなく、応答するだけです。</block>
   <block id="1294f14813ee24574ffd22eff5067ccd" category="paragraph">Google Cloud Interconnect はパフォーマンスの向上とデータ転送コストの削減を実現しますが、 ONTAP クラスタと Google Cloud Storage の間では必要ありません。Google Cloud Interconnect の使用時はパフォーマンスが大幅に向上するため、これを推奨するベストプラクティスです。</block>
   <block id="b38a0774c812ca088fc02e75d5a257b6" category="paragraph">クラスタと Cloud Tiering Service の間の接続は必要ありません。</block>
-  <block id="c11c35c69f52a72c03891a6bd06ddb07" category="list-text">階層化ボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。</block>
   <block id="15791d531460b4c275e03017399fcd1a" category="inline-link">IPspace の詳細については、こちらをご覧ください</block>
-  <block id="cfff9c55ea85b0db9b604bdef2f48d4d" category="paragraph">IPspace を使用すると、ネットワークトラフィックを分離してプライバシーとセキュリティを確保することができます。<block ref="099fdf6e8ad70f15bd41fe67513de18c" category="inline-link-rx"></block>。</block>
-  <block id="96788f015626d24d63f6f02843be51c3" category="paragraph">データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。</block>
   <block id="ac711435545c1b14c721179de8ab94a0" category="list-text">サポートされるボリュームとアグリゲート</block>
   <block id="cbd3171b775ecc9b275479726c41ccec" category="inline-link">FabricPool でサポートされていない機能</block>
   <block id="c3fb869301bdf0050425864a1c816fd8" category="admonition">Cloud Tiering は、 FlexGroup ボリュームをサポートしています。セットアップは他のボリュームと同じように機能します。</block>
@@ -4063,7 +4052,6 @@
   <block id="25c1bfd8ade9d838d6946ecb6abe8b4d" category="list-text">オプション：サービスコネクタを配置するサブネットで Google プライベートアクセスを有効にします。</block>
   <block id="b092138563f7b68473c3bf2a6a23a434" category="inline-link">プライベート Google アクセス</block>
   <block id="f4daaef45bd7d11ebf3a4c8dc607eaa4" category="paragraph"><block ref="d1ea0c6b3f95b3376607c57ca3a4265e" category="inline-link-rx"></block> ONTAP クラスタから VPC への直接接続を確立している環境で、 Connector と Google Cloud Storage の間の通信を仮想プライベートネットワークのままにする場合は、を推奨します。プライベート Google アクセスは、内部（プライベート） IP アドレスのみ（外部 IP アドレスは使用しない）を持つ VM インスタンスで機能します。</block>
-  <block id="41ec03cfd8ba1ea7423d017ff307b075" category="section-title">データ階層化のための Google Cloud Storage の準備</block>
   <block id="411d01b4e0c39dc41ade73486478c737" category="paragraph">階層化を設定する場合は、 Storage Admin の権限があるサービスアカウントにストレージアクセスキーを指定する必要があります。サービスアカウントを使用すると、 Cloud Tiering で、データの階層化に使用する Cloud Storage バケットを認証し、アクセスできます。キーは、 Google Cloud Storage がリクエストを発行しているユーザーを認識できるようにするために必要です。</block>
   <block id="08b66c293c38e17964ad1686888ef26c" category="inline-link">事前定義されたストレージ管理者を含むサービスアカウントを作成します ロール</block>
   <block id="442a5b2cd4109c0203483d91fc544ccf" category="list-text"><block ref="cbd838ab5a582921645cc152129d502d" category="inline-link-rx"></block>。</block>
@@ -5585,7 +5573,6 @@
   <block id="82a50f0f6176439f52db3f00249bb062" category="paragraph">デフォルトの Snapshot ポリシーでは、毎時、毎日、および毎週の Snapshot コピーが作成されます。 Snapshot コピーは 6 個の時間単位、 2 個の日単位、および 2 個の週単位 Snapshot コピーが保持されます。</block>
   <block id="ffd11b2f9d7cbf737e9c7fb470bccfa5" category="paragraph">デフォルトの Snapshot ポリシーでは、デフォルトのバックアップポリシーを簡単に使用できます。デフォルトのバックアップポリシーでは、毎日および毎週の Snapshot コピーが複製され、毎日 7 個、毎週 52 個の Snapshot コピーが保持されます。</block>
   <block id="148658bf400475bd13a5edab6c870d2f" category="paragraph">カスタムポリシーを作成する場合は、これらのポリシーで定義されたラベルが一致している必要があります。System Manager を使用してカスタムポリシーを作成できます。</block>
-  <block id="097ccfbc39e7fb1f5073ac423983cad1" category="summary">データを StorageGRID に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保できます。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。</block>
   <block id="075a50bfdbc0e76c495036f6c78ac1fb" category="doc">オンプレミスの ONTAP クラスタから StorageGRID へデータを階層化する</block>
   <block id="24c40467d64d6258e4b21601d2694195" category="section-title">データを StorageGRID に階層化する準備をします</block>
   <block id="5340a2a63ecbb51f5d7c94dfc7714ac4" category="list-text">FAS 9.4 以降を実行しているオール SSD アグリゲートを含む AFF または ONTAP システム。ユーザ指定のポートから StorageGRID への接続に使用します。 <block ref="6c0ffc5a2aa6056daa5fbab63d63470c" category="inline-link-macro-rx"></block>。</block>
@@ -5623,7 +5610,6 @@
   <block id="1b8a3756b590cb811f9726f247097028" category="list-text">必要な S3 権限を持つ AWS アクセスキー。</block>
   <block id="85cd1fc1600a51fdeb99ebc5121fa64e" category="inline-image-macro">オンプレミスの ONTAP 作業環境を選択したあとに画面の右側に表示される「階層化の設定」オプションを示すスクリーンショット。</block>
   <block id="be6ff5555c54c57e40af5ec68ace11c7" category="list-text">* プロバイダを選択 * ：「 StorageGRID 」を選択します。</block>
-  <block id="926cb8d8f2ac4fe3121f93652fd0cfc9" category="list-text">* サーバ * ： StorageGRID サーバの FQDN を入力し、 StorageGRID が ONTAP との HTTPS 通信に使用するポートを入力して、必要な S3 権限を持つ AWS アカウントのアクセスキーとシークレットキーを入力します。</block>
   <block id="e17266c30d86e37ce9a8ec2431886bc2" category="list-text">* Bucket * ：新しいバケットを追加するか、階層化データ用の既存のバケットを選択します。</block>
   <block id="d211aa9c9b0d32735c22312d6ced0bfb" category="paragraph">これで、クラスタのボリュームから StorageGRID へのデータ階層化が設定されました。</block>
   <block id="94876b50070968f60a9bf852bb734bb3" category="paragraph">クラスタを追加したり、クラスタ上のアクティブなデータとアクセス頻度の低いデータに関する情報を確認したりできます。詳細については、を参照してください <block ref="5bf6726659bde87c5ec02c13454ecd30" category="inline-link-macro-rx"></block>。</block>
@@ -5819,7 +5805,6 @@
   <block id="b557ea1f2a5a7cb5138ffd6e247fa5db" category="list-text">バックアップライセンスファイルがある場合は、 * バックアップライセンスのアップロード * オプションを選択し、プロンプトに従ってファイルを接続します。</block>
   <block id="f8f2040da8e7277508c99e4afef2abb2" category="inline-image-macro">バックアップ BYOL ライセンスを追加するページを示すスクリーンショット。</block>
   <block id="30c3a7b58b35391c661066a1bb65d9ae" category="paragraph"><block ref="30c3a7b58b35391c661066a1bb65d9ae" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="337d77a3955619de9a544f1026a547bf" category="summary">データを Amazon S3 に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。</block>
   <block id="eebeeaff2ab28fb4166c53926ad0d0cb" category="doc">オンプレミスの ONTAP クラスタから Amazon S3 へデータを階層化する</block>
   <block id="3b7749dd39ee760804c668772e669bbe" category="section-title">データを Amazon S3 に階層化する準備をします</block>
   <block id="c9e3677691a8ffcbf2361082c861d664" category="list-text">ONTAP 9.2 以降を実行し、 Amazon S3 への HTTPS 接続を備えたオール SSD アグリゲートを含む AFF または FAS システム。 <block ref="6c0ffc5a2aa6056daa5fbab63d63470c" category="inline-link-macro-rx"></block>。</block>
@@ -5850,9 +5835,6 @@
   <block id="fd0b15799911e1006e252a82c698b372" category="paragraph">AWS 環境を準備したら、最初のクラスタからアクセス頻度の低いデータの階層化を開始します。</block>
   <block id="1595204d9df7479eb1cce9861446c4a3" category="list-text">必要な S3 権限を持つ IAM ユーザの AWS アクセスキー。</block>
   <block id="9e9e182cfbb6b30ed8d084607038ca96" category="list-text">* S3 Bucket * ：新しい S3 バケットを追加するか、 prefix_fabric-pool_ で始まる既存の S3 バケットを選択し、 * Continue * をクリックします。</block>
-  <block id="7fb5306dccec3ad08a76dd23263030d0" category="paragraph">コネクタの IAM ポリシーではインスタンスが指定したプレフィックスのバケットに対して S3 処理を実行できるため、 _fabric-pool_prefix が必要です。</block>
-  <block id="db440cb9b95d6a3fe30310c77f0b15f1" category="paragraph">たとえば、 S3 バケットに fabric-pool-AFF1 という名前を付けることができます。 AFF1 はクラスタの名前です。</block>
-  <block id="d6b11a3b3bbbbc6f118497e7ea3b26f1" category="list-text">* クレデンシャル * ：必要な S3 権限を持つ IAM ユーザのアクセスキー ID とシークレットキーを入力します。</block>
   <block id="3be503b52a53c50161649d2d51182eba" category="paragraph">IAM ユーザは、「 * S3 Bucket * 」ページで選択または作成したバケットと同じ AWS アカウントに属している必要があります。</block>
   <block id="b61b40c8c5a9f77191888642b95b268e" category="paragraph">これで、クラスタのボリュームから S3 オブジェクトストレージへのデータ階層化が設定されました。</block>
   <block id="3b8fedc1b41b6f7a3619ff96f76571cf" category="summary">Cloud Manager を使用して、グローバルファイルキャッシュ管理サーバおよびグローバルファイルキャッシュコアソフトウェアを作業環境に導入します。</block>
@@ -6060,7 +6042,6 @@
   <block id="ca9d6825e8e49fc14bc0fe4d1949090e" category="section-title">Cloud Volumes ONTAP について教えてください。</block>
   <block id="a89eb92e67fd2797dc2f3fa39a6f0792" category="paragraph">Cloud Volumes ONTAP システムを使用している場合は、クラスタダッシュボードにこれらのシステムが表示されるので、ハイブリッドクラウドインフラにおけるデータの階層化を完全に把握できます。</block>
   <block id="6586ab793558594cad75789c4381a459" category="paragraph">クラスタダッシュボードでは、オンプレミスの ONTAP クラスタと同様の階層化情報を表示できます。運用の健常性、現在の削減量、削減機会、ボリュームとアグリゲートに関する詳細などです。</block>
-  <block id="e9ff80529e24f2fb01fe4b040bd3be04" category="paragraph">Cloud Volumes ONTAP システムは、 Cloud Tiering から読み取り専用です。Cloud Volumes ONTAP では、クラウド階層化からデータ階層化を設定することはできません。階層化の設定は、 Cloud Manager の作業環境から同じように行います。</block>
   <block id="6145ae0abac8e546e57c1ba1c83ea8f8" category="paragraph">オブジェクトストレージに関連する質問を次に示します。</block>
   <block id="8dc2f269c974385fca1dd7d4bf3a051f" category="section-title">サポートされているオブジェクトストレージプロバイダを教えてください。</block>
   <block id="1914358ba91a09690a61fd3672e3bfdb" category="paragraph">Amazon S3 、 Azure Blob Storage 、 Google Cloud Storage 、 S3 プロトコルを使用した StorageGRID がサポートされます。</block>
@@ -6072,9 +6053,7 @@
   <block id="bdbd44585d11046b8db390866b7172bb" category="inline-link-macro">サポートされている Google Cloud リージョン</block>
   <block id="d738aa592a53a2214b17f165489a9a61" category="list-text"><block ref="d738aa592a53a2214b17f165489a9a61" category="inline-link-macro-rx"></block></block>
   <block id="73451059c29396c7b630ee6960c7e5ba" category="section-title">サポートされている S3 ストレージクラスはどれですか？</block>
-  <block id="858a82d75168ca0565d730be0e016d42" category="paragraph">Cloud Tiering は、 _Standard_'_Standard-Infrequent Access'_1 Zone-IA_'_Intelligent Storage クラスへのデータ階層化をサポートしています。を参照してください <block ref="eefa31d8a18e753c9701a76a86030bbb" category="inline-link-macro-rx"></block> 詳細：</block>
   <block id="0bb4b033070227409733db8bfee0da13" category="section-title">サポートされている Azure Blob アクセス階層はどれですか？</block>
-  <block id="7404d140e625530fbd8d4c43a6061417" category="paragraph">Cloud Tiering は、アクセス頻度の低いデータにホットアクセス階層を自動的に使用します。</block>
   <block id="b58faef38fb676e1e75ee289bb7460fa" category="section-title">Google Cloud Storage ではどのストレージクラスがサポートされていますか。</block>
   <block id="cbf85819c0ec3bd08aea6103a838e42f" category="section-title">Cloud Tiering は、クラスタ全体に 1 つのオブジェクトストアを使用していますか、それともアグリゲートごとに 1 つ使用していますか</block>
   <block id="cb8d52e5219592f36bdfb68231d97d04" category="paragraph">クラスタ全体で 1 つのオブジェクトストアを使用します。</block>
@@ -6102,7 +6081,6 @@
   <block id="0639b88e83c9fb75f608ce27a4447149" category="section-title">Azure で必要な権限</block>
   <block id="516e07b4e60ac0b13608986f125a4fba" category="paragraph">Cloud Manager に提供する必要がある権限以外で追加の権限は必要ありません。</block>
   <block id="fe3f9db90b5b9920406818b6f2f9b91e" category="section-title">Google Cloud Platform に必要な権限は何ですか。</block>
-  <block id="5ce86b4a9f096031827f7eed857c5731" category="paragraph">ストレージ管理者の権限は、ストレージアクセスキーを含むサービスアカウントに必要です。</block>
   <block id="4c22f29fabd1d7091b7c451833ecdce4" category="section-title">StorageGRID に必要な権限</block>
   <block id="b9e0a0d3dfde0dac493e32dc02dc43a7" category="inline-link-macro">S3 権限が必要です</block>
   <block id="08cee80fd0e81397fdfb41830109f5c3" category="paragraph"><block ref="288bdc681f8d9442c8be913d1419c5c8" category="inline-link-macro-rx"></block>。</block>
@@ -6166,9 +6144,7 @@
   <block id="5b3f477437c1f9552e24f326a02b0e37" category="cell">プロキシを使用する場合は HA ペアに必要です。</block>
   <block id="978f303adcd8db6dab5ee24d99c6548e" category="summary">Cloud Tiering は、ホットアクセス階層とほとんどのリージョンをサポートしています。</block>
   <block id="fa62afbf244eb2e9a07f57b1803fe0e6" category="doc">サポートされている Azure Blob アクセス階層とリージョン</block>
-  <block id="dbab2a76df34e709b9d61fe745adadf5" category="paragraph">Cloud Tiering は、 _ ホットアクセス階層とほとんどのリージョンをサポートしています。</block>
   <block id="9325e105c2d24f4bd2d437adacc6f7b8" category="section-title">サポートされる Azure Blob アクセス階層</block>
-  <block id="1d67e5784a26c8aaede902e24323908b" category="paragraph">Azure へのデータ階層化を設定すると、 Cloud Tiering は、アクセス頻度の低いデータに _Hot_access 階層を自動的に使用します。</block>
   <block id="52850ea5b0c4063c74ca8ab0c4533d28" category="paragraph">Cloud Tiering は、次の Azure リージョンをサポートしています。</block>
   <block id="f5cd262901883dff68d06b215fb0f28e" category="section-title">アフリカ</block>
   <block id="d5daca31a462e138266141f6d01ca814" category="list-text">南アフリカ北部</block>
@@ -6349,7 +6325,6 @@
   <block id="e3c2b5a0fe72c4b086407f7fb9b4aafb" category="list-text">クラスタダッシュボード * で、クラスタのメニューアイコンをクリックし、 * クラスタ情報 * を選択します。</block>
   <block id="f493df8ab5710f59a3ed9742a507da2b" category="list-text">クラスタに関する詳細を確認します。</block>
   <block id="5fb2a07fa295e13c5ae33b74f1915075" category="inline-image-macro">" クラスタレポートを示すスクリーンショット。合計使用容量、クラスタの使用済み容量、クラスタ情報、オブジェクトストレージ情報の詳細が表示されます。 "</block>
-  <block id="2f43815a21708128776e097c742a49d1" category="paragraph"><block ref="2f43815a21708128776e097c742a49d1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="27df5f5776d4bab5bcdcfbdeafb746ca" category="section-title">運用の健全性を修正</block>
   <block id="e2d857f900d57bfae2d4e7bb4e1455ed" category="paragraph">障害が発生する可能性があります失敗した場合は、 Cloud Tiering を実行すると、クラスタダッシュボードに「失敗」操作の健常性ステータスが表示されます。ヘルスとして、 ONTAP システムと Cloud Manager のステータスが反映されます。</block>
   <block id="f13e147df4e74e1146734748e3dd0663" category="list-text">処理の健常性が「 Failed 」であるクラスタを特定します。</block>
@@ -7285,7 +7260,6 @@
   <block id="465b9d23562359c56377ba35bfcf5c48" category="list-text">NetApp Cloud Central のクレデンシャルを使用してログインします。</block>
   <block id="7e3c9594a3f6833ecddbf1cbe150528c" category="inline-image-macro">Cloud Central のログイン画面。</block>
   <block id="33ec64420d3361f9794053a9add38468" category="paragraph"><block ref="33ec64420d3361f9794053a9add38468" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3dbeb1f4be4a6bfc83af63e943633f2c" category="summary">データを Azure BLOB ストレージに階層化することにより、オンプレミスの ONTAP クラスタの空きスペースを確保します。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。</block>
   <block id="957364b59094743bfdbab75c269bbe14" category="section-title">Azure BLOB ストレージへのデータの階層化を準備する</block>
   <block id="732a8676055386a6abf9454a2058d64a" category="list-text">ONTAP 9.4 以降を実行し、かつ Azure Blob Storage への HTTPS 接続を備えたオール SSD アグリゲートを含む AFF または FAS システム。 <block ref="6c0ffc5a2aa6056daa5fbab63d63470c" category="inline-link-macro-rx"></block>。</block>
   <block id="971990a0128297e61982fb657642391e" category="list-text">Azure VNet にインストールされるコネクタ。</block>
@@ -7304,8 +7278,6 @@
   <block id="0eb60239b46482f7f72a4986fa40c73a" category="paragraph">ONTAP クラスタから VNet への ExpressRoute または VPN 接続があり、コネクタと BLOB ストレージ間の通信を仮想プライベートネットワーク内に維持する場合は、 Azure ストレージへの VNet サービスエンドポイントを推奨します。</block>
   <block id="0cff75f8a1ea859d852b43f30a5a65c5" category="section-title">最初のクラスタから Azure Blob にアクセス頻度の低いデータを階層化する ストレージ</block>
   <block id="eeee7c2206f30d34992557feb0d7900f" category="paragraph">Azure 環境を準備したら、最初のクラスタからアクセス頻度の低いデータの階層化を開始します。</block>
-  <block id="9c087aaa80221f98f1e2fa8bf29c0574" category="list-text">* リソースグループ *: 既存のコンテナが管理されているリソースグループ ' または階層化されたデータの新しいコンテナを作成する場所を選択します</block>
-  <block id="df3532b2c8995110ec52cd13ffffb67a" category="list-text">* Azure Container * ：ストレージアカウントに新しい BLOB コンテナを追加するか、既存のコンテナを選択します。</block>
   <block id="7c5961bc8d85d1e030c4394a4df65272" category="paragraph">この手順で表示されるストレージアカウントとコンテナは、前の手順で選択したリソースグループに属しています。</block>
   <block id="ade7907875a5b3e50997036947f13251" category="paragraph">クラスタのボリュームから Azure Blob オブジェクトストレージへのデータ階層化のセットアップが完了しました。</block>
   <block id="b7fcbadab1aa67b4ee66fdd86238335a" category="summary">ネットアップのグローバルファイルキャッシュを使用すると、分散したファイルサーバのサイロをパブリッククラウドの 1 つの包括的なグローバルストレージ容量に統合できます。これにより、グローバルにアクセス可能なファイルシステムがクラウド内に作成され、すべてのリモートロケーションがローカルと同じように使用できるようになります。</block>
@@ -8094,26 +8066,16 @@
   <block id="bd24a7e9d8368897df823b65a8960e61" category="list-text">［ 概要 ］ タブで、 SaaS プラットフォームの使用を無効にするオプションを切り替えます。</block>
   <block id="5f5966e9da5716290dfc2b88ceeb2217" category="list-text">リストアするファイルは、デスティネーションボリュームの言語と同じ言語を使用している必要があります。言語が異なる場合は、エラーメッセージが表示されます。</block>
   <block id="e30e8ace540a3d9654f8bbbebf541ba8" category="list-text">異なるサブネットにある異なる Cloud Manager で同じアカウントを使用する場合、単一ファイルのリストアはサポートされません。</block>
-  <block id="5151df6ce6cc73bbd19abca62b875287" category="paragraph">Standard を選択した場合、データはそのストレージクラスに残り、ルールは適用されません。</block>
   <block id="044a101dba61ea5e747aaeee35c6de2d" category="inline-link-macro">階層化ポリシーに関する考慮事項については、「 Cloud Backup の使用」を参照</block>
   <block id="0c91b16c6dc08f00aface9c910673c5b" category="list-text">Cloud Backup も、階層化ポリシーが設定されたボリュームに同様の影響を受けます。 <block ref="2ab75b7ad924698e0b8a148ce8a2a720" category="inline-link-macro-rx"></block>。</block>
-  <block id="dc6a5df973250a4064753321e3d27e23" category="admonition">階層化データが 30 日後に移行する低コストのストレージクラスを選択する場合は、選択したバケットに他のルールが適用されていないことを確認する必要があります。</block>
-  <block id="bce9c2cb17ef2b0d0d3eff1d820a31b0" category="list-text">* ストレージクラス * ：階層化されたデータを 30 日後に移行するストレージクラスを選択します。</block>
   <block id="c171e8fa2a3cb53de525ce805c3883dc" category="inline-link-macro">「サポートされているストレージクラス」を参照</block>
-  <block id="e5fe265c4df1318fc433cf2b1398d9ff" category="paragraph"><block ref="e19616f370d3567c12c820029005ae0d" category="inline-link-macro-rx"></block>。Standard を選択した場合、データはそのストレージクラスに残り、ルールは適用されません。</block>
   <block id="1fa74ff5a0547c12a6e2f2b89c3c8d6e" category="paragraph">新しいクラスタにデータ階層化を設定するときは、 S3 バケットを作成するか、コネクタが設定されている AWS アカウントで既存の S3 バケットを選択するように求められます。AWS アカウントには、 Cloud Tiering で入力できる権限とアクセスキーが必要です。ONTAP クラスタは、アクセスキーを使用して S3 との間でデータを階層化します。</block>
-  <block id="374013065cba3ceebaa73f3255e62c7f" category="list-text">* ストレージクラス * ：階層化データを 30 日後に移行する S3 ストレージクラスを選択します。</block>
-  <block id="8a5f97718657b1e505c181014c8bd9e6" category="paragraph"><block ref="e20f4f41509c1de63b6f9fbad9fd7e26" category="inline-link-macro-rx"></block>。Standard を選択した場合、データはそのストレージクラスに残り、ルールは適用されません。</block>
   <block id="97abcd5318878d2da3df279eeb5b7683" category="inline-link-macro">サポートされている Google Cloud ストレージクラス</block>
-  <block id="75e3ac809bb4030fcdc0601ab436f379" category="paragraph">Cloud Tiering は、 _Standard_、 _Nearline _ 、 _Coldline_、 または _Archive_storage クラスへのデータ階層化をサポートしています。を参照してください <block ref="6848dc6605667a86bd927e448de85836" category="inline-link-macro-rx"></block> 詳細：</block>
-  <block id="99d91d43debe0f66526f1d766e189de9" category="paragraph">はい。Amazon S3 または Google Cloud Storage を使用している場合、 Cloud Tiering を使用すると、 Standard ストレージクラスから別のストレージクラスにデータを 30 日後に移行できます。</block>
   <block id="95d21219a470b4020cc43fd28635e166" category="summary">Cloud Tiering は、複数の Google Cloud ストレージクラスとほとんどのリージョンをサポートしています。</block>
-  <block id="201616a7cf3e1b4c0a4f3660223b73f9" category="section-title">サポートされているストレージクラス</block>
   <block id="aba972473e7cea22067fcd1e1e01bcd1" category="list-text">ニアライン</block>
   <block id="1d5397c0580f85c400887096d12c133e" category="list-text">コールドライン（ Coldline ）</block>
   <block id="e727b00944f81e1d0a95c12886ac4641" category="list-text">Archive サービスの略</block>
   <block id="dbc34efe51fc51cd8b68310ccb7707e0" category="inline-link">Google Cloud Storage のクラスをご確認ください</block>
-  <block id="8982a2e0d2e9dff16cd72dd9bac152ae" category="paragraph"><block ref="9a3335bcfd7b444fe7ff8331f570e325" category="inline-link-rx"></block>。</block>
   <block id="66009842ccd3b5b27255c54219dcb209" category="section-title">Cloud Tiering からの追加クラスタの検出</block>
   <block id="61bf1156d2dd091eed9cbb25cf33c134" category="paragraph">階層化とクラスタダッシュボードから、検出されていないオンプレミスの ONTAP クラスタを Cloud Manager に追加して、クラスタの階層化を有効にすることができます。</block>
   <block id="cd5423e4d843806b46eaebaa1eb84bea" category="list-text">Cloud Tiering から、 * クラスタダッシュボード * タブをクリックします。</block>
@@ -8125,7 +8087,6 @@
   <block id="851ba55b7a9669c2b53281675a9400d7" category="paragraph">Cloud Manager はクラスタを検出し、作業環境名としてクラスタ名を使用してキャンバスの作業環境に追加します。</block>
   <block id="65f5911f922c92104ab33c2cd05d4a45" category="paragraph">右側のパネルで、このクラスタの階層化サービスまたはその他のサービスを有効にできます。</block>
   <block id="a6de011c08144280abbea085810f3465" category="inline-link-macro">サポートされるアクセス階層を参照してください</block>
-  <block id="814151b9011125f9853777ec0f02a434" category="list-text">* アクセス層 * ：階層化データに使用するアクセス層を選択します。 <block ref="7f0318c672cc790e6b07d60940727384" category="inline-link-macro-rx"></block>。</block>
   <block id="b73cfe36c7ff7b1b656525a530b23497" category="list-text">現時点では、汎用 SSD （ gp2 ）のみがサポートされます</block>
   <block id="b695a27bd7c4adeb91651c42c9966f81" category="list-text">_ 汎用 SSD （ gp2 ） _ ディスクは、幅広いワークロードに対してコストとパフォーマンスのバランスを取ります。パフォーマンスは IOPS の観点から定義されます。</block>
   <block id="95d8da7b19238cf835ee8f03b98b04ab" category="list-text">_Provisioned IOPS SSD （ io1 ） _disks は、コストが高くても最高のパフォーマンスが求められる重要なアプリケーション用です。</block>
@@ -9376,7 +9337,6 @@
   <block id="b9a49040f644be90c80120c07751bc2f" category="section-title">アプリケーションテンプレートの機能拡張</block>
   <block id="691cfafd0d9bb4c94df59b7546c37a6c" category="list-text">AppTemplates サービスでユーザーインターフェイスが強化され、テンプレートデザイナーがアクション間を移動したり、現在定義しているアクションを確認したりするのが容易になりました。</block>
   <block id="c0ca2782df985b13537507ee525e1df0" category="list-text">Cloud Volumes ONTAP または Azure NetApp Files のボリュームテンプレートを作成する際に、 Cloud Compliance を統合できるようになりました。これにより、新しく作成した各ボリュームに対して Compliance を有効にしたり、新しく作成した各ボリュームに対して Cloud Backup を有効にしたりできます。また、作成したボリュームに対して Backup と Compliance の両方を有効にするテンプレートを作成することもできます。</block>
-  <block id="b8d8152a3cf27a05efec66ef32ce4a8d" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * 有効化 * をクリックして、プロンプトに従って Google Cloud Storage にデータを階層化します。</block>
   <block id="7c9d1e9b963cefa4de422a2cde4dd4c2" category="list-text">クラウド階層化が可能なボリュームの総数は、 ONTAP システムのボリュームの数よりも少なくなる可能性があります。これは、一部のアグリゲートからボリュームを階層化できないためです。については、 ONTAP のドキュメントを参照してください <block ref="0cf543d58248b945e81ebbce14d54851" category="inline-link-rx"></block>。</block>
   <block id="6700c45eabe136b9fc9be1be1c2604d7" category="list-text">階層化サービスの * 有効化 * をクリックします。</block>
   <block id="b7507ffc73507c1071aa3369e64f9b02" category="paragraph"><block ref="b7507ffc73507c1071aa3369e64f9b02" category="inline-image-macro-rx" type="image"></block></block>
@@ -9390,9 +9350,7 @@
   <block id="8042a9373e3ae1f8fbfa77b3faf46f7d" category="list-text">_Tiering Policy_Dialog で、階層化ポリシーを選択し、必要に応じて選択したボリュームのクーリング日数を調整して、 * 適用 * をクリックします。</block>
   <block id="42bc2622b3c027e663e52353b754034a" category="inline-image-macro">設定可能な階層化ポリシーの設定を示すスクリーンショット。</block>
   <block id="769718038d29144637e71bcba6f6845a" category="paragraph"><block ref="769718038d29144637e71bcba6f6845a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e1d174b13457492ea73ac09a6e5cd0d9" category="paragraph">オンプレミスの作業環境を選択し、「 * 有効化」をクリックして、プロンプトに従ってデータを StorageGRID に階層化します。</block>
   <block id="23d57e0aa543c12cc6f2de0e1d5a38fb" category="paragraph"><block ref="23d57e0aa543c12cc6f2de0e1d5a38fb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="aa18ad95a4aa9af53768416cdff09d92" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * Enable * をクリックして、プロンプトに従って Amazon S3 にデータを階層化します。</block>
   <block id="ae1e3d568dc256d91e65f1141d98faa1" category="admonition">オブジェクトストレージはクラスタの階層化の初期設定時にすでに設定されているため、設定する必要はありません。ONTAP は、アクセス頻度の低いデータを他のボリュームから同じオブジェクトストアに階層化します。</block>
   <block id="edc1bce516f0e4e5cb6bf57de68ce286" category="inline-image-macro">クラスタの階層のボリュームボタンを選択する方法を示すスクリーンショット。</block>
   <block id="7d5d486077d112d9f802c64eea1ab893" category="paragraph"><block ref="7d5d486077d112d9f802c64eea1ab893" category="inline-image-macro-rx" type="image"></block></block>
@@ -9401,7 +9359,6 @@
   <block id="3deb91ba336d29a173415247e2cfbc36" category="list-text">ボリュームの行をクリックし、階層化ポリシーを選択します。必要に応じてクーリング日数を調整し、 * 適用 * をクリックします。</block>
   <block id="1af082a9b50d80018185dba3a91d3276" category="paragraph">階層化ポリシーが変更され、新しいポリシーに基づいてデータが階層化されます。</block>
   <block id="10c6081fa0c96e35db80dd022583a3d9" category="paragraph"><block ref="10c6081fa0c96e35db80dd022583a3d9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="32785291c94dd08fd17a4024a3a78dd4" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * 有効化 * をクリックして、プロンプトに従って Azure Blob Storage にデータを階層化します。</block>
   <block id="19d4853563c9ed77d05ef542fe4b883f" category="list-text">で比較してください</block>
   <block id="080641e325f9b374fef7b233d5c33998" category="list-text">ファイルまたはディレクトリが変更され、再度同期する必要があるかどうかを判断するときに、 Cloud Sync で特定の属性を比較するかどうかを選択します。</block>
   <block id="bf6c2410baf65cd9c33fe767daa2d995" category="paragraph">これらの属性をオフにしても、 Cloud Sync はパス、ファイルサイズ、およびファイル名をチェックしてソースとターゲットを比較します。変更がある場合は、それらのファイルとディレクトリが同期されます。</block>
@@ -10591,4 +10548,99 @@
   <block id="967cc305f75ce742634ab8caa11e3552" category="list-text">に登録しておきます<block ref="ae8f064f2fed74765b33e522bc6c41fc" category="inline-link-rx"></block>またはを購入したことが必要です <block ref="da0ecbb9696e63ce79a1956b30993606" category="inline-link-macro-rx"></block> NetApp の Cloud Backup BYOL ライセンス。</block>
   <block id="85a2ad69bad082451b7411021cbb2271" category="list-text">Google Cloud Storage バケットをバックアップ用に作成する Google Cloud Project とリージョンを選択し、 * Next * をクリックします。</block>
   <block id="437c2bff9e94c6e982529b9d2ef1cd3c" category="paragraph">プロジェクトには、事前定義された Storage Admin ロールを持つサービスアカウントが必要です。</block>
+  <block id="b3c0a261b2734ca1d3179f5e85ff167f" category="paragraph">AWS へのデータ階層化を設定すると、 Cloud Tiering は、アクセス頻度の低いデータに _Standard_storage クラスを自動的に使用します。Cloud Tiering では、ライフサイクルルールを適用して、特定の日数が経過したデータを _Standard_storage クラスから別のストレージクラスに移行できます。次のストレージクラスから選択できます。</block>
+  <block id="d5af3a9669300c1a58b6af2ac906df11" category="list-text">インテリジェントな階層化（ AWS が頻繁なアクセスとアクセス頻度の低いアクセスでアクセスパターンが変化したときに自動的に 2 つの階層間でデータを移動）</block>
+  <block id="9cc96aa415acf4482c36fe27491f4449" category="paragraph">別のストレージクラスを選択しない場合、データは _Standard_storage クラスに残り、ルールは適用されません。</block>
+  <block id="29c1f2d72e2b39ecafc4a98e9390eb20" category="paragraph">クラウド階層化ライフサイクルルールを設定する場合は、 AWS アカウントでバケットをセットアップするときにライフサイクルルールを設定しないでください。</block>
+  <block id="6b5920220b135ba1ff95cfb5b149f138" category="summary">ネットアップの Cloud Tiering Service は、アクセス頻度の低いデータをオンプレミスの ONTAP クラスタからオブジェクトストレージに自動的に階層化することで、データセンターをクラウドへと拡張します。これにより、クラスタの貴重なスペースが解放され、アプリケーションレイヤに変更を加えることなく、より多くのワークロードに対応できるようになります。Cloud Tiering を使用すると、データセンターのコストを削減し、 CAPEX モデルから OPEX モデルに切り替えることができます。</block>
+  <block id="6541954d76e96f1b8ac31c72f38d4cf5" category="list-text">デフォルトのクラウドプロバイダのストレージクラス / アクセス階層を選択するか、ライフサイクル管理を使用して古い階層化データを対費用効果の高い階層に移動できます</block>
+  <block id="f7b757abd199e26890fc4377ed0904ee" category="admonition">Cloud Volumes ONTAP システムは、 Cloud Tiering から読み取り専用です。 <block ref="71abe33cbeee093a9eb1f7b9aa6307a2" category="inline-link-macro-rx"></block>。</block>
+  <block id="952ecf98141368e99f3a215ef7b80187" category="paragraph">Cloud Tiering は、アクセス頻度の低いデータにクラウドプロバイダのデフォルトのストレージクラス / アクセス階層を使用します。ただし、ライフサイクルルールを適用することで、一定の日数が経過した時点でデータがデフォルトのストレージクラスから別のストレージクラスに自動的に移行されるようにすることができます。これにより、コールドデータを低コストのストレージに移動することで、コストを削減できます。</block>
+  <block id="ee32623ddfba76c17a3869197764085b" category="list-text">階層化を設定するには、バケット / コンテナ、ストレージクラスまたはアクセス階層、階層化データのライフサイクルルールなど、オブジェクトストレージに関する詳細を指定します。</block>
+  <block id="7cff4595565023a72889d0ae1bf58e66" category="list-text">ONTAP は、アクセス頻度の低いデータをオブジェクトストアに階層化します。アクセス頻度の低いデータとして扱われるしきい値に達するとすぐにアクセスを開始します（を参照） <block ref="3ab88d3ba20857380b0d484a33d90bf5" category="inline-xref-macro-rx"></block>）。</block>
+  <block id="7f80f0d5982e1a24f340306a8106f0ef" category="list-text">階層化されたデータにライフサイクル・ルールを適用した場合 ' 古い階層化データは ' 一定の日数が経過すると ' よりコスト・パフォーマンスの高い階層に移動されます</block>
+  <block id="636acfcaa9d346397b4061f29f7518bd" category="summary">非アクティブなデータを Google Cloud Storage に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。</block>
+  <block id="5cd65352103dfe667471ab3b65c7908e" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * 有効化 * をクリックして、プロンプトに従って Google Cloud Storage にデータを階層化します。</block>
+  <block id="6f8cf694d04b60dbac7f5bd1f70ffe2d" category="list-text">階層化するボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。</block>
+  <block id="bfa10f7c5e846fdab9228aa316c04549" category="inline-link">LIF</block>
+  <block id="d686186657dc867241ca2a0f2a61422f" category="inline-link">IPspace</block>
+  <block id="448864d4614b43c3d9541b8308faf6df" category="paragraph">データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。の詳細を確認してください<block ref="b7275acfa36ebba0d4abaa0eae46bec7" category="inline-link-rx"></block> および<block ref="bcaf833b6d9ebe7610dbaf3380869814" category="inline-link-rx"></block>。</block>
+  <block id="f32ea6d4515e78dcc3188c0ebbfb8578" category="section-title">Google Cloud Storage を準備しています</block>
+  <block id="11480bb5ef0ecf38526eced6b4a9d574" category="admonition">階層化データが一定の日数後に移行する低コストのストレージクラスを使用するように Cloud Tiering を設定する場合は、 GCP アカウントでバケットをセットアップするときにライフサイクルルールを選択しないでください。Cloud Tiering は、ライフサイクルの移行を管理します。</block>
+  <block id="e0fc0d7372e3bb2831e052c22f634c7e" category="list-text">* ストレージクラスのライフサイクル管理 * ： Cloud Tiering は、階層化されたデータのライフサイクル移行を管理します。データは _Standard_class から始まりますが、データを特定の日数後に他のクラスに移動するルールを作成することができます。</block>
+  <block id="4d37a0bea5cd5e6af86422bf6e5f582c" category="paragraph">階層化データを移行する Google Cloud ストレージクラスと、データを移動するまでの日数を選択し、 * Continue （続行） * をクリックします。たとえば、次のスクリーンショットは、階層化されたデータが、オブジェクトストレージで 30 日後に _Standard_class から _Nearline _class に移動され、オブジェクトストレージで 60 日後に _Coldline_class に移動されたことを示しています。</block>
+  <block id="de605ef08269c4e6d6c3540b40ca87c2" category="paragraph">「 * このストレージクラスにデータを保持する」を選択した場合、データはそのストレージクラスに残ります。 <block ref="e19616f370d3567c12c820029005ae0d" category="inline-link-macro-rx"></block>。</block>
+  <block id="02f2e04342c521beba4c0e40c63a54c6" category="inline-image-macro">特定の日数が経過したあとにデータが移動される追加のストレージクラスを選択する方法を示すスクリーンショット。</block>
+  <block id="82944aceb2b2f9b8317c2c75d8459d31" category="paragraph"><block ref="82944aceb2b2f9b8317c2c75d8459d31" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ea09ff0f2c6993eddf0252bc7fcbd724" category="paragraph">ライフサイクルルールは、選択したバケット内のすべてのオブジェクトに適用されます。</block>
+  <block id="562e713c869e9e0d8e8516f6f6d3f8f0" category="summary">アクセス頻度の低いデータを StorageGRID に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。</block>
+  <block id="cf695ec51933a06ac428c97a1853233a" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * 有効化 * をクリックして、プロンプトに従ってデータを StorageGRID に階層化します。</block>
+  <block id="3c2cb90335798edde06d6964c0c0ed8a" category="list-text">* サーバ * ： StorageGRID サーバの FQDN を入力し、 StorageGRID が ONTAP との HTTPS 通信に使用するポートを入力し、必要な S3 権限を持つアカウントのアクセスキーとシークレットキーを入力します。</block>
+  <block id="562dd7d003296393a3c451d91fa5f691" category="summary">アクセス頻度の低いデータを Amazon S3 に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。</block>
+  <block id="af6fc16804417e13aa40bab43efe1eae" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * Enable * をクリックして、プロンプトに従って Amazon S3 にデータを階層化します。</block>
+  <block id="0c838aa2699493723ba332b70d493cd4" category="admonition">階層化データが一定の日数後にに移行する低コストのストレージクラスを使用するように Cloud Tiering を設定する場合、 AWS アカウントでバケットのセットアップ時にライフサイクルルールを選択しないでください。Cloud Tiering は、ライフサイクルの移行を管理します。</block>
+  <block id="c58cf9282f95328fc92b4502fbef9f23" category="paragraph">コネクタの IAM ポリシーではインスタンスが指定したプレフィックスのバケットに対して S3 処理を実行できるため、 _fabric-pool_prefix が必要です。たとえば、 S3 バケット _fabric-pool-AFF1_、 AFF1 はクラスタの名前です。</block>
+  <block id="f39387c8b1947a13198ad70b1487dae1" category="list-text">* ストレージクラスのライフサイクル管理 * ： Cloud Tiering は、階層化されたデータのライフサイクル移行を管理します。データは _Standard_class から始まりますが、データを特定の日数後に別のクラスに移動するルールを作成できます。</block>
+  <block id="3ef4bb9a8277742de6597e9937678503" category="paragraph">階層化データの移行先となる S3 ストレージクラスと、データを移動するまでの日数を選択し、 * Continue * をクリックします。たとえば、次のスクリーンショットは、オブジェクトストレージで 45 日後に階層化データが _Standard_class から _Standard-IA_class に移動されたことを示しています。</block>
+  <block id="28f041cd7be268fc2d98e41fcb8caa74" category="paragraph">「 * このストレージクラスにデータを保持する」を選択した場合、データは _Standard_storage クラスに残り、ルールは適用されません。 <block ref="e20f4f41509c1de63b6f9fbad9fd7e26" category="inline-link-macro-rx"></block>。</block>
+  <block id="8ae6032dc43b667771c8605a20954b09" category="inline-image-macro">特定の日数が経過したあとにデータを移動する別のストレージクラスの選択方法を示すスクリーンショット。</block>
+  <block id="fadcc9c239b21cc5038ad590074bcf33" category="paragraph"><block ref="fadcc9c239b21cc5038ad590074bcf33" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c6d7cecaf22190d03dd1883702c04c49" category="list-text">* クレデンシャル * ：必要な S3 権限を持つ IAM ユーザのアクセスキー ID とシークレットキーを入力し、 * Continue * をクリックします。</block>
+  <block id="edb5302d21562d6e6d64d3bbe03d94b4" category="list-text">* クラスタネットワーク * ： ONTAP がオブジェクトストレージへの接続に使用する IPspace を選択し、「 * 続行」をクリックします。</block>
+  <block id="ea96d0a2d0001ff4c69b937564994967" category="inline-image-macro">単一のボリューム、複数のボリューム、またはすべてのボリュームを選択する方法、および選択したボリュームを変更するボタンを示すスクリーンショット。</block>
+  <block id="8b3c8c5426f58501a76ec633e59a0e58" category="paragraph"><block ref="8b3c8c5426f58501a76ec633e59a0e58" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c174a2cf38a22e68788bac4dff576428" category="paragraph">Cloud Volumes ONTAP システムは、 Cloud Tiering から読み取り専用です。Cloud Volumes ONTAP では、クラウド階層化からデータ階層化を設定することはできません。 <block ref="71abe33cbeee093a9eb1f7b9aa6307a2" category="inline-link-macro-rx"></block>。</block>
+  <block id="4b4864d8ac95cfd0d9d1b539833006cb" category="paragraph">Cloud Tiering は、 _Standard_'_Standard-Infrequent Access'_1 Zone-IA_'_Intelligent Storage クラスへのデータ階層化をサポートしています。を参照してください <block ref="eefa31d8a18e753c9701a76a86030bbb" category="inline-link-macro-rx"></block> 詳細：</block>
+  <block id="d3c42e8a02bf0ef5c6e1b9b31681b029" category="paragraph">Cloud Tiering は、アクセス頻度の低いデータに対するホットアクセス階層へのデータ階層化をサポートします。を参照してください <block ref="89fab169e2560abadf17f967b91ecc4d" category="inline-link-macro-rx"></block> 詳細：</block>
+  <block id="73929aac1df04b72cf24b928d116e4e1" category="paragraph">Cloud Tiering は、 _Standard_、 _Nearline _ 、 _Coldline_、 および _Archive_storage の各クラスへのデータ階層化をサポートしています。を参照してください <block ref="6848dc6605667a86bd927e448de85836" category="inline-link-macro-rx"></block> 詳細：</block>
+  <block id="76897a6305088a3a5d1fece5a33249ea" category="paragraph">はい。ライフサイクル管理を有効にすると、 Cloud Tiering でデータをデフォルトのストレージクラス / アクセス階層から、一定期間後にコスト効率の高い階層に移行できます。</block>
+  <block id="984a9d1964e75fac051f5e1514887373" category="paragraph">ライフサイクルルールは、選択したバケット内の Amazon S3 および Google Cloud ストレージのすべてのオブジェクト、および選択したストレージアカウント内の Azure Blob に対応するすべてのコンテナに適用されます。</block>
+  <block id="e8cb0b84cef9a781a29475aba9138119" category="inline-link-macro">ストレージアクセスキーがあるサービスアカウント</block>
+  <block id="06801183156dfdcdfa78f3195baae006" category="paragraph">Storage Admin の権限が必要です <block ref="c730d8fbf7d627d524fc5ce932dc46ed" category="inline-link-macro-rx"></block>。</block>
+  <block id="3de433a934cf84ca72051511d3965a3e" category="paragraph">Cloud Tiering は、 2 つのアクセス階層とほとんどのリージョンをサポートしています。</block>
+  <block id="a214c9c814b491d87848f672e94ee0ba" category="paragraph">Azure へのデータ階層化を設定すると、 Cloud Tiering は、アクセス頻度の低いデータに _Hot_access 階層を自動的に使用します。Cloud Tiering を使用すると、ライフサイクルルールを適用して、一定の日数が経過したデータを _Hot_access 階層から _Cool _access 階層に移行できます。</block>
+  <block id="6c02b1bd844652e850bc128a20e71bc7" category="paragraph">アクセス層として _Cool _ を選択しない場合、データは _Hot_access 層に残り、ルールは適用されません。</block>
+  <block id="dee2bc58a49a84e9b7244f93fdc4a53a" category="paragraph">クラウド階層化ライフサイクルルールを設定する場合は、 Azure アカウントでコンテナをセットアップするときにライフサイクルルールを設定しないでください。</block>
+  <block id="07e61ccfcb604b4d08fc03603677751d" category="inline-link">Azure Blob アクセス階層の概要について説明します</block>
+  <block id="5e8950288c896fad8f0921f566543e28" category="paragraph"><block ref="27bbca17cc1afa8d3834a8b61f14f7ee" category="inline-link-rx"></block>。</block>
+  <block id="8f2228fce8c23a4fe2e7622bc8a9d4ea" category="section-title">サポートされている GCP ストレージクラス</block>
+  <block id="68c6ceca1e44cc016c4f2475ef969ba0" category="paragraph">GCP へのデータ階層化を設定すると、 Cloud Tiering は、アクセス頻度の低いデータに _Standard_storage クラスを自動的に使用します。Cloud Tiering では、ライフサイクルルールを適用して、特定の日数が経過したデータを _Standard_storage クラスから他のストレージクラスに移行できます。次のストレージクラスから選択できます。</block>
+  <block id="6f1f822cd7deb7705312526e82ce74ea" category="paragraph">Cloud Tiering ライフサイクルルールを設定する場合、 Google アカウントでバケットを設定するときに、ライフサイクルルールを設定しないでください。</block>
+  <block id="d306f97c688c08da6eda68becadc9b8e" category="paragraph"><block ref="06ddd1b7b339c917275205a14e3e0e6f" category="inline-link-rx"></block>。</block>
+  <block id="607881f35d8174edd89161743c157a25" category="inline-xref">クラウド階層から高パフォーマンス階層へのデータの移行</block>
+  <block id="00bf3510099b9516331efb4e8653be8b" category="paragraph">* 注 : * 「階層化データを取得する」オプションが表示される場合は、を参照してください <block ref="f6263c29373cd4e4175b5bafa956b310" category="inline-xref-macro-rx"></block> を参照してください。</block>
+  <block id="abae1f85fbfa5d228b1f1efb4098d6cb" category="paragraph">クラウドからアクセスされる階層化データは「再加熱」され、パフォーマンス階層に戻されることがあります。ただし、クラウド階層からパフォーマンス階層にデータをプロアクティブに昇格する場合は、 _Tiering Policy_Dialog で実行できます。この機能は、 ONTAP 9.8 以降を使用している場合に使用できます。</block>
+  <block id="2c2a52082e4311af3d3e1c141b0a0b87" category="paragraph">この処理は、ボリュームでの階層化の使用を停止する場合や、すべてのユーザデータを高パフォーマンス階層に保持しながら、 Snapshot コピーをクラウド階層に保持する場合に実行します。</block>
+  <block id="50eefa9dad6a02fcbdff77339516971a" category="paragraph">次の 2 つのオプションがあります。</block>
+  <block id="7d7bebf810a6e57d60bd00965c3eae47" category="cell">階層化ポリシーに影響します</block>
+  <block id="b7aa0e5d538ffa749d7dc77ffb8eaa1f" category="cell">すべてのデータを元に戻します</block>
+  <block id="55ea40c4c42dd7720d53048057a3e2f5" category="cell">クラウドに階層化されたすべてのボリュームデータと Snapshot コピーが取得され、パフォーマンス階層に昇格されます。</block>
+  <block id="7feaaba534c1ad23b2187bca9491715e" category="cell">階層化ポリシーが「ポリシーなし」に変更されました。</block>
+  <block id="d9274a6cb690d694e87440ffeae62ccd" category="cell">アクティブファイルシステムを戻します</block>
+  <block id="bec6ef790b888208733b1195a4c79a9d" category="cell">クラウドに階層化されたアクティブなファイルシステムデータのみを読み出し、パフォーマンス階層に昇格します（ Snapshot コピーはクラウドに残ります）。</block>
+  <block id="b45317b449074be01eb535dc51134b25" category="cell">階層化ポリシーは「コールドスナップショット」に変更されます。</block>
+  <block id="4462bf0f5ca8a6a2218e38c86b45446e" category="admonition">クラウドから転送されたデータの量に基づいて、クラウドプロバイダが課金する場合があります。</block>
+  <block id="518c45bb71686bd34cfd0dd7adfb3ce0" category="paragraph">クラウドから移動するすべてのデータに対して、パフォーマンス階層に十分なスペースがあることを確認してください。</block>
+  <block id="621f6f17b31c046c0e769d995604f944" category="inline-image-macro">に表示される編集アイコンのスクリーンショット ボリューム階層化のテーブルの各行の末尾です</block>
+  <block id="d20bf3b0bd8d1cd785f6590b7b461afe" category="list-text">をクリックします <block ref="8a7b4d9eeceba80332a45bd9abdd9ed5" category="inline-image-macro-rx" type="image"></block> アイコンをクリックし、使用する取得オプションを選択して、 * 適用 * をクリックします。</block>
+  <block id="39ccd40812695aaa7bc077a0fc353a0e" category="paragraph"><block ref="39ccd40812695aaa7bc077a0fc353a0e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="545b5aba8025b05c9a578861eb34e4ac" category="paragraph">階層化ポリシーが変更され、階層化されたデータの高パフォーマンス階層への移行が開始されます。クラウド内のデータ量によっては、転送プロセスに時間がかかることがあります。</block>
+  <block id="5afc7ef8d3c3feeb50817eff11cca91d" category="paragraph"><block ref="5afc7ef8d3c3feeb50817eff11cca91d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7f07b498da08e19eda2c8c1c5ee2c27e" category="summary">非アクティブなデータを Azure Blob Storage に階層化することにより、オンプレミスの ONTAP クラスタの空きスペースを確保します。</block>
+  <block id="9640b1e744d31a5c78f456db676baf9c" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * 有効化 * をクリックして、プロンプトに従って Azure Blob Storage にデータを階層化します。</block>
+  <block id="b1e389999fc3500ff74c433071c6f3d0" category="section-title">必要なコネクタ権限があることを確認します</block>
+  <block id="754a88e65359290644152f75b6a6f4ef" category="paragraph">Cloud Manager バージョン 3.9.7 以降を使用してコネクタを作成した場合は、すべての設定が完了しています。</block>
+  <block id="2a62a07433ae90cff9ffdaff298c867b" category="paragraph">以前のバージョンの Cloud Manager を使用してコネクタを作成していた場合は、権限リストを編集して、新しく必要な権限を 2 つ追加する必要があります。</block>
+  <block id="256fb1d2776e7f3b364ce4414a65b2cd" category="section-title">Azure BLOB ストレージを準備しています</block>
+  <block id="8e864dcb979c8d9684e56e4bfc7ad230" category="paragraph">階層化を設定する場合は、リソースグループ、およびリソースグループに属するストレージアカウントと BLOB コンテナを提供する必要があります。ストレージアカウントを使用すると、 Cloud Tiering でデータの階層化に使用される BLOB コンテナを認証し、アクセスすることができます。</block>
+  <block id="30c0faff624015e8c8016427ebe986eb" category="admonition">低コストのアクセス階層を使用するようにクラウド階層を設定していて、階層化データが一定の日数後にに移行される場合は、 Azure アカウントでコンテナのセットアップ時にライフサイクルルールを選択しないでください。Cloud Tiering は、ライフサイクルの移行を管理します。</block>
+  <block id="3ee477979f5c167102e6a5ac24838ded" category="list-text">* リソースグループ *: 既存のコンテナが管理されているリソースグループ、または階層化データの新しいコンテナを作成する場所を選択し、「 * 続行」をクリックします。</block>
+  <block id="619d038915e6ca347e0644d8b2b3db44" category="list-text">* Azure Container * ：ストレージアカウントに新しい BLOB コンテナを追加するか、既存のコンテナを選択して * Continue * をクリックします。</block>
+  <block id="100dd940ee2bef80e34bc97e7fe2763a" category="list-text">* アクセス層のライフサイクル管理 * ： Cloud Tiering は、階層化されたデータのライフサイクル移行を管理します。データは _Hot_class から始まりますが、特定の日数が経過したあとにデータを _Cool _ クラスに移動するルールを作成できます。</block>
+  <block id="f9ec0a0e3f7751a980419c9235987d65" category="paragraph">階層化データを移行するアクセス階層とデータを移動するまでの日数を選択し、 * 続行 * をクリックします。たとえば、次のスクリーンショットは、オブジェクトストレージの階層化データが _Hot_class から _Cool _class に 45 日後に移動されたことを示しています。</block>
+  <block id="c9e04a3cacfa15a313acbad934b7e94f" category="paragraph">「 * このアクセス層にデータを保持 * 」を選択した場合、データは _Hot_access 層に残り、ルールは適用されません。 <block ref="7f0318c672cc790e6b07d60940727384" category="inline-link-macro-rx"></block>。</block>
+  <block id="68a83a6344da48ff48b7dfe970c4f766" category="inline-image-macro">データを特定の日数後に移動する別のアクセス階層を選択する方法を示すスクリーンショット。</block>
+  <block id="76ebfce4c2c67a5c80f5e3389cadd984" category="paragraph"><block ref="76ebfce4c2c67a5c80f5e3389cadd984" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d2f15cc1f6b52e91b3fa0f67c5683cc7" category="paragraph">ライフサイクルルールは、選択したストレージアカウント内のすべての BLOB コンテナに適用されます。</block>
+  <block id="b9c2da820a39ae715e453dbc44b9065a" category="paragraph"><block ref="b3f320eea54b95003707e5e870c0dfaf" category="inline-xref-macro-rx"></block> ライフサイクル管理機能の場合。</block>
 </blocks>

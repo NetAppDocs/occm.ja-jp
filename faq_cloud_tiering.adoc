@@ -56,7 +56,7 @@ Cloud Volumes ONTAP システムを使用している場合は、クラスタダ
 
 クラスタダッシュボードでは、オンプレミスの ONTAP クラスタと同様の階層化情報を表示できます。運用の健常性、現在の削減量、削減機会、ボリュームとアグリゲートに関する詳細などです。
 
-Cloud Volumes ONTAP システムは、 Cloud Tiering から読み取り専用です。Cloud Volumes ONTAP では、クラウド階層化からデータ階層化を設定することはできません。階層化の設定は、 Cloud Manager の作業環境から同じように行います。
+Cloud Volumes ONTAP システムは、 Cloud Tiering から読み取り専用です。Cloud Volumes ONTAP では、クラウド階層化からデータ階層化を設定することはできません。 link:task_tiering.html["Cloud Volumes ONTAP の階層化はで設定します Cloud Manager の作業環境"^]。
 
 
 
@@ -95,13 +95,13 @@ Cloud Tiering は、 _Standard_'_Standard-Infrequent Access'_1 Zone-IA_'_Intelli
 
 === サポートされている Azure Blob アクセス階層はどれですか？
 
-Cloud Tiering は、アクセス頻度の低いデータにホットアクセス階層を自動的に使用します。
+Cloud Tiering は、アクセス頻度の低いデータに対するホットアクセス階層へのデータ階層化をサポートします。を参照してください link:reference_azure_support.html["サポートされる Azure Blob アクセス階層"] 詳細：
 
 
 
 === Google Cloud Storage ではどのストレージクラスがサポートされていますか。
 
-Cloud Tiering は、 _Standard_、 _Nearline _ 、 _Coldline_、 または _Archive_storage クラスへのデータ階層化をサポートしています。を参照してください link:reference_google_support.html["サポートされている Google Cloud ストレージクラス"] 詳細：
+Cloud Tiering は、 _Standard_、 _Nearline _ 、 _Coldline_、 および _Archive_storage の各クラスへのデータ階層化をサポートしています。を参照してください link:reference_google_support.html["サポートされている Google Cloud ストレージクラス"] 詳細：
 
 
 
@@ -113,7 +113,9 @@ Cloud Tiering は、 _Standard_、 _Nearline _ 、 _Coldline_、 または _Arch
 
 === 階層化とは関係なくオブジェクトストアにポリシーを適用してデータを移動できますか。
 
-はい。Amazon S3 または Google Cloud Storage を使用している場合、 Cloud Tiering を使用すると、 Standard ストレージクラスから別のストレージクラスにデータを 30 日後に移行できます。
+はい。ライフサイクル管理を有効にすると、 Cloud Tiering でデータをデフォルトのストレージクラス / アクセス階層から、一定期間後にコスト効率の高い階層に移行できます。
+
+ライフサイクルルールは、選択したバケット内の Amazon S3 および Google Cloud ストレージのすべてのオブジェクト、および選択したストレージアカウント内の Azure Blob に対応するすべてのコンテナに適用されます。
 
 
 
@@ -179,7 +181,7 @@ Cloud Manager に提供する必要がある権限以外で追加の権限は必
 
 === Google Cloud Platform に必要な権限は何ですか。
 
-ストレージ管理者の権限は、ストレージアクセスキーを含むサービスアカウントに必要です。
+Storage Admin の権限が必要です link:task_tiering_onprem_gcp.html#preparing-google-cloud-storage["ストレージアクセスキーがあるサービスアカウント"]。
 
 
 

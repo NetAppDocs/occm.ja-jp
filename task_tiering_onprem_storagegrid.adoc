@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_tiering_onprem_storagegrid.html 
 keywords: data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, storagegrid, tier to storagegrid, fabricpool storagegrid 
-summary: データを StorageGRID に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保できます。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。 
+summary: アクセス頻度の低いデータを StorageGRID に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。 
 ---
 = オンプレミスの ONTAP クラスタから StorageGRID へデータを階層化する
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: データを StorageGRID に階層化することで、オンプレミ�
 
 
 [role="lead"]
-データを StorageGRID に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保できます。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。
+アクセス頻度の低いデータを StorageGRID に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。
 
 
 
@@ -39,7 +39,7 @@ summary: データを StorageGRID に階層化することで、オンプレミ�
 ==== 階層化をセットアップする
 
 [role="quick-margin-para"]
-オンプレミスの作業環境を選択し、「 * 有効化」をクリックして、プロンプトに従ってデータを StorageGRID に階層化します。
+Cloud Manager で、オンプレミスの作業環境を選択し、 * 有効化 * をクリックして、プロンプトに従ってデータを StorageGRID に階層化します。
 
 
 
@@ -74,12 +74,9 @@ ONTAP は、オブジェクトストレージとの間でデータの読み取�
 +
 クラスタと Cloud Tiering Service の間の接続は必要ありません。
 
-* 階層化ボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。
+* 階層化するボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。
 +
-IPspace を使用すると、ネットワークトラフィックを分離してプライバシーとセキュリティを確保することができます。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-69120CF0-F188-434F-913E-33ACB8751A5D.html["IPspace の詳細については、こちらをご覧ください"^]。
-
-+
-データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。
+データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。の詳細を確認してください https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] および https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspace"^]。
 
 
 
@@ -171,7 +168,7 @@ image:screenshot_setup_tiering_onprem.png["オンプレミスの ONTAP 作業環
 . 「 * Tiering Setup * 」ページに記載された手順を実行します。
 +
 .. * プロバイダを選択 * ：「 StorageGRID 」を選択します。
-.. * サーバ * ： StorageGRID サーバの FQDN を入力し、 StorageGRID が ONTAP との HTTPS 通信に使用するポートを入力して、必要な S3 権限を持つ AWS アカウントのアクセスキーとシークレットキーを入力します。
+.. * サーバ * ： StorageGRID サーバの FQDN を入力し、 StorageGRID が ONTAP との HTTPS 通信に使用するポートを入力し、必要な S3 権限を持つアカウントのアクセスキーとシークレットキーを入力します。
 .. * Bucket * ：新しいバケットを追加するか、階層化データ用の既存のバケットを選択します。
 .. * クラスタネットワーク * ： ONTAP がオブジェクトストレージへの接続に使用する IPspace を選択します。
 +

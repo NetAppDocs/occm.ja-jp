@@ -13,13 +13,19 @@ summary: Cloud Tiering は、ホットアクセス階層とほとんどのリー
 
 
 [role="lead"]
-Cloud Tiering は、 _ ホットアクセス階層とほとんどのリージョンをサポートしています。
+Cloud Tiering は、 2 つのアクセス階層とほとんどのリージョンをサポートしています。
 
 
 
 == サポートされる Azure Blob アクセス階層
 
-Azure へのデータ階層化を設定すると、 Cloud Tiering は、アクセス頻度の低いデータに _Hot_access 階層を自動的に使用します。
+Azure へのデータ階層化を設定すると、 Cloud Tiering は、アクセス頻度の低いデータに _Hot_access 階層を自動的に使用します。Cloud Tiering を使用すると、ライフサイクルルールを適用して、一定の日数が経過したデータを _Hot_access 階層から _Cool _access 階層に移行できます。
+
+アクセス層として _Cool _ を選択しない場合、データは _Hot_access 層に残り、ルールは適用されません。
+
+クラウド階層化ライフサイクルルールを設定する場合は、 Azure アカウントでコンテナをセットアップするときにライフサイクルルールを設定しないでください。
+
+https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers["Azure Blob アクセス階層の概要について説明します"^]。
 
 
 

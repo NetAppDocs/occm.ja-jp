@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_tiering_onprem_aws.html 
 keywords: data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, aws, amazon, s3 
-summary: データを Amazon S3 に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。 
+summary: アクセス頻度の低いデータを Amazon S3 に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。 
 ---
 = オンプレミスの ONTAP クラスタから Amazon S3 へデータを階層化する
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: データを Amazon S3 に階層化することで、オンプレミス
 
 
 [role="lead"]
-データを Amazon S3 に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。
+アクセス頻度の低いデータを Amazon S3 に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。
 
 
 
@@ -87,12 +87,9 @@ AWS Direct Connect を使用するとパフォーマンスが向上し、デー�
 +
 クラスタと Cloud Tiering Service の間の接続は必要ありません。
 
-* 階層化ボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。
+* 階層化するボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。
 +
-IPspace を使用すると、ネットワークトラフィックを分離してプライバシーとセキュリティを確保することができます。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-69120CF0-F188-434F-913E-33ACB8751A5D.html["IPspace の詳細については、こちらをご覧ください"^]。
-
-+
-データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。
+データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。の詳細を確認してください https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] および https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspace"^]。
 
 
 
@@ -151,7 +148,7 @@ ONTAP クラスタから VPC への Direct Connect または VPN 接続が確立
 新しいクラスタにデータ階層化を設定するときは、 S3 バケットを作成するか、コネクタが設定されている AWS アカウントで既存の S3 バケットを選択するように求められます。AWS アカウントには、 Cloud Tiering で入力できる権限とアクセスキーが必要です。ONTAP クラスタは、アクセスキーを使用して S3 との間でデータを階層化します。
 
 
-NOTE: 階層化データが 30 日後に移行する低コストのストレージクラスを選択する場合は、選択したバケットに他のルールが適用されていないことを確認する必要があります。
+NOTE: 階層化データが一定の日数後にに移行する低コストのストレージクラスを使用するように Cloud Tiering を設定する場合、 AWS アカウントでバケットのセットアップ時にライフサイクルルールを選択しないでください。Cloud Tiering は、ライフサイクルの移行を管理します。
 
 .手順
 . IAM ユーザに次の権限を付与します。
@@ -198,26 +195,31 @@ image:screenshot_setup_tiering_onprem.png["オンプレミス ONTAP 作業環境
 +
 .. * S3 Bucket * ：新しい S3 バケットを追加するか、 prefix_fabric-pool_ で始まる既存の S3 バケットを選択し、 * Continue * をクリックします。
 +
-コネクタの IAM ポリシーではインスタンスが指定したプレフィックスのバケットに対して S3 処理を実行できるため、 _fabric-pool_prefix が必要です。
+コネクタの IAM ポリシーではインスタンスが指定したプレフィックスのバケットに対して S3 処理を実行できるため、 _fabric-pool_prefix が必要です。たとえば、 S3 バケット _fabric-pool-AFF1_、 AFF1 はクラスタの名前です。
+
+.. * ストレージクラスのライフサイクル管理 * ： Cloud Tiering は、階層化されたデータのライフサイクル移行を管理します。データは _Standard_class から始まりますが、データを特定の日数後に別のクラスに移動するルールを作成できます。
++
+階層化データの移行先となる S3 ストレージクラスと、データを移動するまでの日数を選択し、 * Continue * をクリックします。たとえば、次のスクリーンショットは、オブジェクトストレージで 45 日後に階層化データが _Standard_class から _Standard-IA_class に移動されたことを示しています。
 
 +
-たとえば、 S3 バケットに fabric-pool-AFF1 という名前を付けることができます。 AFF1 はクラスタの名前です。
+「 * このストレージクラスにデータを保持する」を選択した場合、データは _Standard_storage クラスに残り、ルールは適用されません。 link:reference_aws_support.html["「サポートされているストレージクラス」を参照"^]。
 
-.. * ストレージクラス * ：階層化データを 30 日後に移行する S3 ストレージクラスを選択します。
 +
-link:reference_aws_support.html["「サポートされているストレージクラス」を参照"^]。Standard を選択した場合、データはそのストレージクラスに残り、ルールは適用されません。
+image:screenshot_tiering_lifecycle_selection_aws.png["特定の日数が経過したあとにデータを移動する別のストレージクラスの選択方法を示すスクリーンショット。"]
 
-.. * クレデンシャル * ：必要な S3 権限を持つ IAM ユーザのアクセスキー ID とシークレットキーを入力します。
++
+ライフサイクルルールは、選択したバケット内のすべてのオブジェクトに適用されます。
+
+.. * クレデンシャル * ：必要な S3 権限を持つ IAM ユーザのアクセスキー ID とシークレットキーを入力し、 * Continue * をクリックします。
 +
 IAM ユーザは、「 * S3 Bucket * 」ページで選択または作成したバケットと同じ AWS アカウントに属している必要があります。
 
-.. * クラスタネットワーク * ： ONTAP がオブジェクトストレージへの接続に使用する IPspace を選択します。
+.. * クラスタネットワーク * ： ONTAP がオブジェクトストレージへの接続に使用する IPspace を選択し、「 * 続行」をクリックします。
 +
 正しい IPspace を選択すると、 Cloud Tiering を使用して、 ONTAP からクラウドプロバイダのオブジェクトストレージへの接続をセットアップできます。
 
 
 
-. 「 * Continue * 」をクリックして、階層化するボリュームを選択します。
 . _Tier Volume_page で、階層化を設定するボリュームを選択し、階層化ポリシーページを起動します。
 +
 ** すべてのボリュームを選択するには、タイトル行（image:button_backup_all_volumes.png[""]）をクリックし、 * ボリュームの設定 * をクリックします。

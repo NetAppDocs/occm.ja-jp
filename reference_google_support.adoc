@@ -17,18 +17,20 @@ Cloud Tiering は、複数の Google Cloud ストレージクラスとほとん�
 
 
 
-== サポートされているストレージクラス
+== サポートされている GCP ストレージクラス
 
-Cloud Tiering を使用すると、ライフサイクルルールを適用して、データを _Standard_storage クラスから別のストレージクラスに 30 日後に移行できます。次のストレージクラスから選択できます。
+GCP へのデータ階層化を設定すると、 Cloud Tiering は、アクセス頻度の低いデータに _Standard_storage クラスを自動的に使用します。Cloud Tiering では、ライフサイクルルールを適用して、特定の日数が経過したデータを _Standard_storage クラスから他のストレージクラスに移行できます。次のストレージクラスから選択できます。
 
 * ニアライン
 * コールドライン（ Coldline ）
 * Archive サービスの略
 
 
-Standard を選択した場合、データはそのストレージクラスに残り、ルールは適用されません。
+別のストレージクラスを選択しない場合、データは _Standard_storage クラスに残り、ルールは適用されません。
 
-link:https://cloud.google.com/storage/docs/storage-classes["Google Cloud Storage のクラスをご確認ください"^]。
+Cloud Tiering ライフサイクルルールを設定する場合、 Google アカウントでバケットを設定するときに、ライフサイクルルールを設定しないでください。
+
+https://cloud.google.com/storage/docs/storage-classes["Google Cloud Storage のクラスをご確認ください"^]。
 
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_tiering_onprem_azure.html 
 keywords: data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, azure, blob, azure blob 
-summary: データを Azure BLOB ストレージに階層化することにより、オンプレミスの ONTAP クラスタの空きスペースを確保します。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。 
+summary: 非アクティブなデータを Azure Blob Storage に階層化することにより、オンプレミスの ONTAP クラスタの空きスペースを確保します。 
 ---
 = オンプレミスの ONTAP クラスタから Azure BLOB ストレージへデータを階層化する
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: データを Azure BLOB ストレージに階層化することによ�
 
 
 [role="lead"]
-データを Azure BLOB ストレージに階層化することにより、オンプレミスの ONTAP クラスタの空きスペースを確保します。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。
+非アクティブなデータを Azure Blob Storage に階層化することにより、オンプレミスの ONTAP クラスタの空きスペースを確保します。
 
 
 
@@ -86,12 +86,9 @@ ExpressRoute の方がパフォーマンスが向上し、データ転送コス�
 +
 クラスタと Cloud Tiering Service の間の接続は必要ありません。
 
-* 階層化ボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。
+* 階層化するボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。
 +
-IPspace を使用すると、ネットワークトラフィックを分離してプライバシーとセキュリティを確保することができます。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-69120CF0-F188-434F-913E-33ACB8751A5D.html["IPspace の詳細については、こちらをご覧ください"^]。
-
-+
-データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。
+データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。の詳細を確認してください https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] および https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspace"^]。
 
 
 
@@ -123,6 +120,19 @@ link:task_discovering_ontap.html["クラスタの検出方法について説明�
 
 
 
+=== 必要なコネクタ権限があることを確認します
+
+Cloud Manager バージョン 3.9.7 以降を使用してコネクタを作成した場合は、すべての設定が完了しています。
+
+以前のバージョンの Cloud Manager を使用してコネクタを作成していた場合は、権限リストを編集して、新しく必要な権限を 2 つ追加する必要があります。
+
+[source, json]
+----
+Microsoft.Storage/storageAccounts/managementPolicies/read
+Microsoft.Storage/storageAccounts/managementPolicies/write
+----
+
+
 === コネクタのネットワークを準備しています
 
 コネクタに必要なネットワーク接続があることを確認します。
@@ -143,6 +153,15 @@ ONTAP クラスタから VNet への ExpressRoute または VPN 接続があり�
 
 
 
+=== Azure BLOB ストレージを準備しています
+
+階層化を設定する場合は、リソースグループ、およびリソースグループに属するストレージアカウントと BLOB コンテナを提供する必要があります。ストレージアカウントを使用すると、 Cloud Tiering でデータの階層化に使用される BLOB コンテナを認証し、アクセスすることができます。
+
+
+NOTE: 低コストのアクセス階層を使用するようにクラウド階層を設定していて、階層化データが一定の日数後にに移行される場合は、 Azure アカウントでコンテナのセットアップ時にライフサイクルルールを選択しないでください。Cloud Tiering は、ライフサイクルの移行を管理します。
+
+
+
 == 最初のクラスタから Azure Blob にアクセス頻度の低いデータを階層化する ストレージ
 
 Azure 環境を準備したら、最初のクラスタからアクセス頻度の低いデータの階層化を開始します。
@@ -157,19 +176,33 @@ image:screenshot_setup_tiering_onprem.png["オンプレミス ONTAP 作業環境
 
 . 「 * Tiering Setup * 」ページに記載された手順を実行します。
 +
-.. * リソースグループ *: 既存のコンテナが管理されているリソースグループ ' または階層化されたデータの新しいコンテナを作成する場所を選択します
-.. * Azure Container * ：ストレージアカウントに新しい BLOB コンテナを追加するか、既存のコンテナを選択します。
+.. * リソースグループ *: 既存のコンテナが管理されているリソースグループ、または階層化データの新しいコンテナを作成する場所を選択し、「 * 続行」をクリックします。
+.. * Azure Container * ：ストレージアカウントに新しい BLOB コンテナを追加するか、既存のコンテナを選択して * Continue * をクリックします。
 +
 この手順で表示されるストレージアカウントとコンテナは、前の手順で選択したリソースグループに属しています。
 
-.. * アクセス層 * ：階層化データに使用するアクセス層を選択します。 link:reference_azure_support.html["サポートされるアクセス階層を参照してください"^]。
-.. * クラスタネットワーク * ： ONTAP がオブジェクトストレージへの接続に使用する IPspace を選択します。
+.. * アクセス層のライフサイクル管理 * ： Cloud Tiering は、階層化されたデータのライフサイクル移行を管理します。データは _Hot_class から始まりますが、特定の日数が経過したあとにデータを _Cool _ クラスに移動するルールを作成できます。
++
+階層化データを移行するアクセス階層とデータを移動するまでの日数を選択し、 * 続行 * をクリックします。たとえば、次のスクリーンショットは、オブジェクトストレージの階層化データが _Hot_class から _Cool _class に 45 日後に移動されたことを示しています。
+
++
+「 * このアクセス層にデータを保持 * 」を選択した場合、データは _Hot_access 層に残り、ルールは適用されません。 link:reference_azure_support.html["サポートされるアクセス階層を参照してください"^]。
+
++
+image:screenshot_tiering_lifecycle_selection_azure.png["データを特定の日数後に移動する別のアクセス階層を選択する方法を示すスクリーンショット。"]
+
++
+ライフサイクルルールは、選択したストレージアカウント内のすべての BLOB コンテナに適用されます。
+
++
+<<Verify that you have the necessary Connector permissions,必要なコネクタ権限があることを確認します>> ライフサイクル管理機能の場合。
+
+.. * クラスタネットワーク * ： ONTAP がオブジェクトストレージへの接続に使用する IPspace を選択し、「 * 続行」をクリックします。
 +
 正しい IPspace を選択すると、 Cloud Tiering を使用して、 ONTAP からクラウドプロバイダのオブジェクトストレージへの接続をセットアップできます。
 
 
 
-. 「 * Continue * 」をクリックして、階層化するボリュームを選択します。
 . _Tier Volume_page で、階層化を設定するボリュームを選択し、階層化ポリシーページを起動します。
 +
 ** すべてのボリュームを選択するには、タイトル行（image:button_backup_all_volumes.png[""]）をクリックし、 * ボリュームの設定 * をクリックします。
