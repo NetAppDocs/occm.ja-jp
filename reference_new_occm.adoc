@@ -23,7 +23,12 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 == Cloud Manager 3.9.7 アップデート（ 2021 年 7 月 6 日）
 
-新しい Cloud Sync 拡張機能を使用できます。
+* <<Cloud Sync support for storage classes in Google Cloud>>
+* <<Cloud Tiering enhancements>>
+* <<Cloud Backup enhancements>>
+* <<Application Templates enhancements>>
+* <<Cloud Data Sense (Cloud Compliance) enhancements>>
+
 
 
 
@@ -39,7 +44,48 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
-== Cloud Manager 3.9.7 アップデート（ 2021 年 6 月 6 日）
+=== Cloud Tiering の機能拡張
+
+* 以前のリリースでは、 Amazon S3 または Google Cloud オブジェクトストレージを使用している場合、 30 日後に階層化データを Standard ストレージクラスから別のストレージクラスに移行できました。このリリースには、次の新機能が追加されてい
++
+** 階層化データを対費用効果の高い階層に移動する日数を選択できます。これをデータの「ライフサイクル管理」と呼びます。
+** Azure Blob で _Cool _ アクセス階層がサポートされるようになりました。
+** Google Cloud Storage では、階層化されたデータを複数のストレージ階層に長期的に移動できます。たとえば、階層化されたデータを 45 日後に _Standard_class から _Nearline_class に移動し、その後 75 日後に _Coldline_class に移動してから、 270 日後に _Archive_class に移動できます。
+
+
+* ボリュームでの階層化の使用を停止する場合や、すべてのユーザデータをパフォーマンス階層に保持しながら Snapshot コピーをクラウド階層に保持する場合は、クラウド階層からデータをプロアクティブに移動できるようになりました。この機能は、 ONTAP 9.8 以降を使用している場合に使用できます。
++
+方法を参照してください link:task_managing_tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier["データを高パフォーマンス階層に戻します"]。
+
+
+
+
+
+=== Cloud Backup の機能拡張
+
+* データ保護（ DP ）ボリュームのバックアップに関する 2 つの既知の制限事項が解決されました。システムに ONTAP 9.8 以降がインストールされている必要があります。
++
+** カスケードバックアップは、 SnapMirror 関係のタイプがミラーバックアップまたはバックアップの場合にのみ機能します。関係のタイプが MirrorAllSnapshots の場合は、バックアップを作成できるようになりました。
+** Cloud Backup で、 SnapMirror ポリシーに設定されているかぎり、バックアップに任意のラベルを使用できるようになりました。名前が daily 、 weekly 、または monthly のラベルを要求するという制限はなくなりました。
+
+
+
+
+
+
+=== アプリケーションテンプレートの機能拡張
+
+* 新しい機能を使用すると、ユーザーがテンプレートを実行しているときに、条件付きで特定のアクションを有効にできます。
++
+たとえば、ネットアップの Storage Efficiency を有効にして Cloud Volumes ONTAP ボリュームを作成した場合、そのボリュームで Cloud Backup も有効になります。Storage Efficiency が有効になっていない場合、 Cloud Backup は有効になりません。
+
+* テンプレートを使用してオンプレミスの ONTAP システムにボリュームを作成できるようになりました。
+* テンプレートの作成時に、「ドリフト」という新しい機能がオプションとして追加されました。
++
+この機能を使用すると、 Cloud Manager で、テンプレート内のパラメータに入力したハードコーディングされた値を監視できます。テンプレートを使用してボリュームを作成したあと、 Cloud Manager がパラメータ値が変更されてテンプレート定義に合わせられなくなったと認識した場合は、設計したテンプレートから「ドリフト」のあるすべてのボリュームを表示できます。こうすることで、これらのボリュームを特定し、変更を加えてコンプライアンスに戻すことができます。
+
+* テンプレートダッシュボードからテンプレートを実行できるようになりました。作業環境を開いてテンプレートを起動する必要はありません。
+
 
 
 

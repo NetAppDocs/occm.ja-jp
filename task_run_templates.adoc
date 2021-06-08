@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: task_run_templates.html 
+keywords: templates, resource templates, application templates, volume templates 
+summary: 特定のワークロードとアプリケーションに最適なボリュームを作成するために組織が構築したアプリケーションテンプレートを 1 つ選択します。テンプレートを使用すると、 Cloud Volumes ONTAP 、 Azure NetApp Files 、およびオンプレミスの ONTAP システム用のボリュームを作成できます。また、ボリュームに対して Cloud Backup と Cloud Data Sense をアクティブ化することもできます。 
+---
+= テンプレートを使用してリソースを作成する
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+特定のワークロードとアプリケーションに最適なボリュームを作成するために組織が構築したアプリケーションテンプレートを 1 つ選択します。テンプレートを使用すると、 Cloud Volumes ONTAP 、 Azure NetApp Files 、およびオンプレミスの ONTAP システム用のボリュームを作成できます。また、アクティブ化することもできます link:concept_backup_to_cloud.html["クラウドバックアップ"] および link:concept_cloud_compliance.html["クラウドデータの意味"] をクリックします。
+
+
+
+== クイックスタート
+
+これらの手順を実行すると、すぐに作業を開始できます。また、残りのセクションまでスクロールして詳細を確認することもできます。
+
+
+
+==== 必要な前提条件を確認する
+
+* テンプレートを使用して Cloud Volumes ONTAP 、オンプレミス ONTAP 、または Azure NetApp Files システム用のボリュームを作成する前に、ボリュームを導入する適切な作業環境にアクセスできることを確認してください。
+
+
+* テンプレートが、などのボリュームのクラウドサービスをアクティブにした場合 link:concept_backup_to_cloud.html["クラウドバックアップ"^] または link:concept_cloud_compliance.html["クラウドデータの意味"^]をクリックして、ご使用の環境でサービスがアクティブでライセンスされていることを確認してください。
+
+
+
+
+==== Application Templates サービスを起動します
+
+[role="quick-margin-para"]
+* AppTemplate* サービスを選択し、 * Templates * タブをクリックします。
+
+
+
+==== テンプレートを実行し、パラメータを定義して、リソースを構築します
+
+[role="quick-margin-para"]
+テンプレートを選択し、 *Run Template* をクリックして、編集可能フィールドに値を入力し、リソースを作成します。
+
+
+
+== 要件
+
+以下の要件を読み、サポートされている構成になっていることを確認してください。
+
+* コネクタがない場合は、 link:concept_connectors.html["コネクターの作成方法を参照してください"^] AWS 、 Azure 、 GCP 向け。
+* Cloud Volumes ONTAP ボリュームを作成するときは、 Cloud Volumes ONTAP の作業環境が利用可能であることを確認してください。
+* オンプレミスの ONTAP ボリュームを作成する場合は、オンプレミスの ONTAP 作業環境が利用可能であることを確認します。
+* Azure NetApp Files ボリュームを作成するときは、 Azure NetApp Files の作業環境が利用可能であることを確認してください。
+* テンプレートが、などのボリュームのクラウドサービスをアクティブにした場合 link:concept_backup_to_cloud.html["クラウドバックアップ"^] または link:concept_cloud_compliance.html["クラウドデータの意味"^]をクリックして、ご使用の環境でサービスがアクティブでライセンスされていることを確認してください。
+
+
+
+
+== テンプレートを選択して実行します
+
+テンプレートを選択して実行し、新しいボリュームを作成する方法は複数あります。
+
+どの方法を選択する場合でも、定義する必要があるボリュームの必須パラメータに関する詳細を以下のセクションで確認できます。
+
+* link:task_provisioning_storage.html#creating-volumes-from-templates["Cloud Volumes ONTAP ボリュームをプロビジョニングする方法"^]
+* link:task_manage_anf_volumes.html#creating-volumes-from-templates["Azure NetApp Files ボリュームをプロビジョニングする方法"^]
+* link:task_provisioning_ontap.html#creating-volumes-from-templates["オンプレミスの ONTAP ボリュームをプロビジョニングする方法"^]
+
+
+
+
+=== 作業環境からボリュームテンプレートを実行します
+
+既存の作業環境にボリュームを追加するには '_Working Environment_page および _Volume Details_page を使用します
+
+.手順
+. 作業環境ページまたは _ ボリューム詳細 _ ページで、 * テンプレートからボリュームを追加 * をクリックします。
++
+image:screenshot_template_add_vol_from.png["テンプレートから新しいボリュームを作成する方法を示すスクリーンショットが 2 つあります。"]
+
++
+_Templates Dashboard_ が表示され、選択した作業環境に適用できるテンプレートのみがリストされます。たとえば、 Cloud Volumes ONTAP テンプレートのみが表示されます。
+
+. [ * 表示 * ] ボタンをクリックしてテンプレートのアウトラインを表示し、目的のアウトラインであることを確認してから、をクリックします image:screenshot_horizontal_more_button.gif["[ 詳細 ] アイコン"] および * テンプレートの実行 * 。
++
+image:screenshot_template_run_from_dashboard.png["テンプレートダッシュボードからテンプレートを実行する方法を示すスクリーンショット"]
+
++
+Add_Volume from Template_page が表示されます。
+
+. 編集可能なフィールドに値を入力してボリュームを作成し、 * テンプレートの実行 * をクリックします。
++
+image:screenshot_run_template_from_canvas.png["テンプレートからボリュームを作成するために定義する必要があるパラメータを示すスクリーンショット。"]
+
+
+
+
+
+=== Templates Dashboard からボリュームテンプレートを実行します
+
+既存の作業環境にボリュームを追加するには、 _Templates Dashboard_ を使用します。
+
+.手順
+. * AppTemplate* サービスを選択し、 * Templates * タブをクリックします。
++
+_Templates Dashboard_ が表示されます。
+
+. [ * 表示 * ] ボタンをクリックしてテンプレートのアウトラインを表示し、目的のアウトラインであることを確認してから、をクリックします image:screenshot_horizontal_more_button.gif["[ 詳細 ] アイコン"] および * テンプレートの実行 * 。
++
+image:screenshot_template_run_from_dashboard2.png["テンプレートダッシュボードからテンプレートを実行する方法を示すスクリーンショット"]
+
++
+Run Template_page が表示されます。
+
+. 編集可能なフィールドに値を入力してボリュームを作成し、 * テンプレートの実行 * をクリックします。
++
+image:screenshot_run_template_from_dashboard.png["テンプレートからボリュームを作成するために定義する必要があるパラメータを示すスクリーンショット。"]
+
++
+ダッシュボードからテンプレートを実行するときは、作業環境やその他の変数（ Storage VM やアグリゲートなど）を選択する必要があります。作業環境からテンプレートを実行すると、作業環境が自動的に入力されます。
+
+
