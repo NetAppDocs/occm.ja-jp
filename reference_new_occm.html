@@ -1149,13 +1149,17 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/リソース作成を標準化するためのテンプレートを作成します.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/テンプレートを使用して_リソース作成を標準化します.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            リソース作成を標準化するためのテンプレートを作成します
+            テンプレートを使用して、リソース作成を標準化します
           </a>
         </li>
         <span>
           
+
+
+
+
 
 
 
@@ -2185,12 +2189,16 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_provisioning_ontap.html">
         ONTAP ボリュームを管理します
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> リソース作成を標準化するためのテンプレートを作成します</div>
+        <div class="na-navbar-padding"> テンプレートを使用して、リソース作成を標準化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_resource_templates.html">
         アプリケーションテンプレートについては、こちらをご覧ください
       </a></li><li class=" "><a class="na-navbar-padding" href="task_define_templates.html">
-        はじめに
+        組織のテンプレートを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_check_template_compliance.html">
+        テンプレートのコンプライアンスについては、リソースを確認してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_run_templates.html">
+        テンプレートを実行してリソースを作成する
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> データをクラウドにバックアップ</div>
       </a>
@@ -2471,7 +2479,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-07 17:05:25 +0000">06/07/2021</time>
+    <time datetime="2021-06-08 14:00:24 +0000">06/08/2021</time>
     
   
 
@@ -2527,8 +2535,24 @@
 <div class="sect1">
 <h2 id="cloud-manager-3-9-7-アップデート-2021-年-7-月-6-日">Cloud Manager 3.9.7 アップデート（ 2021 年 7 月 6 日）</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>新しい Cloud Sync 拡張機能を使用できます。</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Cloud Sync support for storage classes in Google Cloud">[Cloud Sync support for storage classes in Google Cloud]</a></p>
+</li>
+<li>
+<p><a href="#Cloud Tiering enhancements">[Cloud Tiering enhancements]</a></p>
+</li>
+<li>
+<p><a href="#Cloud Backup enhancements">[Cloud Backup enhancements]</a></p>
+</li>
+<li>
+<p><a href="#Application Templates enhancements">[Application Templates enhancements]</a></p>
+</li>
+<li>
+<p><a href="#Cloud Data Sense (Cloud Compliance) enhancements">[Cloud Data Sense (Cloud Compliance) enhancements]</a></p>
+</li>
+</ul>
 </div>
 <div class="sect2">
 <h3 id="cloud-sync-は-google-cloud-のストレージクラスをサポートしています">Cloud Sync は Google Cloud のストレージクラスをサポートしています</h3>
@@ -2552,11 +2576,80 @@
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="cloud-tiering-の機能拡張">Cloud Tiering の機能拡張</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>以前のリリースでは、 Amazon S3 または Google Cloud オブジェクトストレージを使用している場合、 30 日後に階層化データを Standard ストレージクラスから別のストレージクラスに移行できました。このリリースには、次の新機能が追加されてい</p>
+<div class="ulist">
+<ul>
+<li>
+<p>階層化データを対費用効果の高い階層に移動する日数を選択できます。これをデータの「ライフサイクル管理」と呼びます。</p>
+</li>
+<li>
+<p>Azure Blob で _Cool _ アクセス階層がサポートされるようになりました。</p>
+</li>
+<li>
+<p>Google Cloud Storage では、階層化されたデータを複数のストレージ階層に長期的に移動できます。たとえば、階層化されたデータを 45 日後に _Standard_class から _Nearline_class に移動し、その後 75 日後に _Coldline_class に移動してから、 270 日後に _Archive_class に移動できます。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ボリュームでの階層化の使用を停止する場合や、すべてのユーザデータをパフォーマンス階層に保持しながら Snapshot コピーをクラウド階層に保持する場合は、クラウド階層からデータをプロアクティブに移動できるようになりました。この機能は、 ONTAP 9.8 以降を使用している場合に使用できます。</p>
+<div class="paragraph">
+<p>方法を参照してください <a href="task_managing_tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier">"データを高パフォーマンス階層に戻します"</a>。</p>
+</div>
+</li>
+</ul>
 </div>
 </div>
-<div class="sect1">
-<h2 id="cloud-manager-3-9-7-アップデート-2021-年-6-月-6-日">Cloud Manager 3.9.7 アップデート（ 2021 年 6 月 6 日）</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="cloud-backup-の機能拡張">Cloud Backup の機能拡張</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>データ保護（ DP ）ボリュームのバックアップに関する 2 つの既知の制限事項が解決されました。システムに ONTAP 9.8 以降がインストールされている必要があります。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>カスケードバックアップは、 SnapMirror 関係のタイプがミラーバックアップまたはバックアップの場合にのみ機能します。関係のタイプが MirrorAllSnapshots の場合は、バックアップを作成できるようになりました。</p>
+</li>
+<li>
+<p>Cloud Backup で、 SnapMirror ポリシーに設定されているかぎり、バックアップに任意のラベルを使用できるようになりました。名前が daily 、 weekly 、または monthly のラベルを要求するという制限はなくなりました。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="アプリケーションテンプレートの機能拡張">アプリケーションテンプレートの機能拡張</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>新しい機能を使用すると、ユーザーがテンプレートを実行しているときに、条件付きで特定のアクションを有効にできます。</p>
+<div class="paragraph">
+<p>たとえば、ネットアップの Storage Efficiency を有効にして Cloud Volumes ONTAP ボリュームを作成した場合、そのボリュームで Cloud Backup も有効になります。Storage Efficiency が有効になっていない場合、 Cloud Backup は有効になりません。</p>
+</div>
+</li>
+<li>
+<p>テンプレートを使用してオンプレミスの ONTAP システムにボリュームを作成できるようになりました。</p>
+</li>
+<li>
+<p>テンプレートの作成時に、「ドリフト」という新しい機能がオプションとして追加されました。</p>
+<div class="paragraph">
+<p>この機能を使用すると、 Cloud Manager で、テンプレート内のパラメータに入力したハードコーディングされた値を監視できます。テンプレートを使用してボリュームを作成したあと、 Cloud Manager がパラメータ値が変更されてテンプレート定義に合わせられなくなったと認識した場合は、設計したテンプレートから「ドリフト」のあるすべてのボリュームを表示できます。こうすることで、これらのボリュームを特定し、変更を加えてコンプライアンスに戻すことができます。</p>
+</div>
+</li>
+<li>
+<p>テンプレートダッシュボードからテンプレートを実行できるようになりました。作業環境を開いてテンプレートを起動する必要はありません。</p>
+</li>
+</ul>
+</div>
+</div>
 <div class="sect2">
 <h3 id="cloud-data-sense-cloud-compliance-の機能拡張">Cloud Data Sense （ Cloud Compliance ）の機能拡張</h3>
 <div class="ulist">
@@ -2726,7 +2819,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-backup-の機能拡張">Cloud Backup の機能拡張</h3>
+<h3 id="cloud-backup-の機能拡張-2">Cloud Backup の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2839,7 +2932,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-2">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2852,7 +2945,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="アプリケーションテンプレートの機能拡張">アプリケーションテンプレートの機能拡張</h3>
+<h3 id="アプリケーションテンプレートの機能拡張-2">アプリケーションテンプレートの機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3241,7 +3334,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張-2">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-3">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3371,7 +3464,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張-3">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-4">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3507,7 +3600,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-backup-の機能拡張-2">Cloud Backup の機能拡張</h3>
+<h3 id="cloud-backup-の機能拡張-3">Cloud Backup の機能拡張</h3>
 <div class="paragraph">
 <p>個々のファイルを追加のデスティネーション作業環境にリストアできます。</p>
 </div>
@@ -3631,7 +3724,7 @@ GCP の制限により、ディスクのみの場合の最大システム容量�
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張-4">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-5">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3730,7 +3823,7 @@ GCP の制限により、ディスクのみの場合の最大システム容量�
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-backup-の機能拡張-3">Cloud Backup の機能拡張</h3>
+<h3 id="cloud-backup-の機能拡張-4">Cloud Backup の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3805,7 +3898,7 @@ GCP の制限により、ディスクのみの場合の最大システム容量�
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張-5">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-6">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3973,7 +4066,7 @@ GCP の制限により、ディスクのみの場合の最大システム容量�
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張-6">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-7">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>

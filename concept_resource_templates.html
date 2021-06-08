@@ -1136,9 +1136,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/リソース作成を標準化するためのテンプレートを作成します.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/テンプレートを使用して_リソース作成を標準化します.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            リソース作成を標準化するためのテンプレートを作成します
+            テンプレートを使用して、リソース作成を標準化します
           </a>
         </li>
         <span>
@@ -1156,6 +1156,10 @@
 
 
   
+
+
+
+
 
 
 
@@ -2185,12 +2189,16 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_provisioning_ontap.html">
         ONTAP ボリュームを管理します
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> リソース作成を標準化するためのテンプレートを作成します</div>
+        <div class="na-navbar-padding"> テンプレートを使用して、リソース作成を標準化します</div>
       </a>
       <ul><li class="  active "><a class="na-navbar-padding" href="concept_resource_templates.html">
         アプリケーションテンプレートについては、こちらをご覧ください
       </a></li><li class=" "><a class="na-navbar-padding" href="task_define_templates.html">
-        はじめに
+        組織のテンプレートを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_check_template_compliance.html">
+        テンプレートのコンプライアンスについては、リソースを確認してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_run_templates.html">
+        テンプレートを実行してリソースを作成する
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> データをクラウドにバックアップ</div>
       </a>
@@ -2471,7 +2479,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-05 17:09:49 +0000">05/05/2021</time>
+    <time datetime="2021-06-08 14:00:24 +0000">06/08/2021</time>
     
   
 
@@ -2518,12 +2526,18 @@
 <p>インフラの設計と開発を自動化し、改善します</p>
 </li>
 <li>
-<p>複数の NetApp クラウドサービスを 1 箇所でアクティブ化できます</p>
+<p>クラウドバックアップやクラウドデータセンスなど、さまざまな NetApp クラウドサービスを 1 箇所でアクティブ化できます</p>
 </li>
 <li>
-<p>「ドリフト」機能を使用して、作成されたリソースにテンプレート設定を適用します （今後）</p>
+<p>変更され、テンプレートに適合しなくなったリソースを特定します（「ドリフト」機能を使用）。</p>
 </li>
 </ul>
+</div>
+<div class="sect3">
+<h4 id="ドリフトとは何ですか">「ドリフト」とは何ですか？</h4>
+<div class="paragraph">
+<p>「ドリフト」を使用すると、テンプレートを使用してリソースを作成するときに使用されるパラメータ値を Cloud Manager で監視できます。この時点で、「ドリフト」はリソースがいつ変更されたかを特定できるため、手動で調整を行って、テンプレートに準拠するように戻すことができます。将来的には、リソースがコンプライアンス違反になったときに通知を送信したり、テンプレートから作成されたすべてのリソースが自動的にコンプライアンスに戻されるようにユーザーの変更を元に戻したりすることができます。</p>
+</div>
 </div>
 </div>
 </div>
@@ -2562,10 +2576,13 @@
 <p>Azure NetApp Files ボリュームを作成します</p>
 </li>
 <li>
-<p>作成したボリュームで Cloud Backup を有効にします （ Cloud Volumes ONTAP ボリュームのみ）</p>
+<p>オンプレミスの ONTAP ボリュームを作成</p>
 </li>
 <li>
-<p>作成したボリュームで Cloud Compliance を有効にします</p>
+<p>作成したボリュームで Cloud Backup を有効にする（ Azure NetApp Files には該当しません）</p>
+</li>
+<li>
+<p>作成したボリュームで Cloud Data Sense を有効にする</p>
 </li>
 </ul>
 </div>
