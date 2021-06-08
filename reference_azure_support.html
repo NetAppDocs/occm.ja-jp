@@ -2471,11 +2471,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-03-15 13:40:22 +0000">03/15/2021</time>
+    <time datetime="2021-06-08 13:37:05 +0000">06/08/2021</time>
     
   
 
 <span>寄稿者
+  <a target="_blank" href="https://github.com/netapp-tonacki">
+    <img  class="avatar avatar-small"
+          alt="netapp-tonacki"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/38222299?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" href="https://github.com/netapp-bcammett">
     <img  class="avatar avatar-small"
           alt="netapp-bcammett"
@@ -2499,7 +2507,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Cloud Tiering は、 _ ホットアクセス階層とほとんどのリージョンをサポートしています。</p>
+<p>Cloud Tiering は、 2 つのアクセス階層とほとんどのリージョンをサポートしています。</p>
 </div>
 </div>
 </div>
@@ -2507,7 +2515,16 @@
 <h2 id="サポートされる-azure-blob-アクセス階層">サポートされる Azure Blob アクセス階層</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Azure へのデータ階層化を設定すると、 Cloud Tiering は、アクセス頻度の低いデータに _Hot_access 階層を自動的に使用します。</p>
+<p>Azure へのデータ階層化を設定すると、 Cloud Tiering は、アクセス頻度の低いデータに _Hot_access 階層を自動的に使用します。Cloud Tiering を使用すると、ライフサイクルルールを適用して、一定の日数が経過したデータを _Hot_access 階層から _Cool _access 階層に移行できます。</p>
+</div>
+<div class="paragraph">
+<p>アクセス層として _Cool _ を選択しない場合、データは _Hot_access 層に残り、ルールは適用されません。</p>
+</div>
+<div class="paragraph">
+<p>クラウド階層化ライフサイクルルールを設定する場合は、 Azure アカウントでコンテナをセットアップするときにライフサイクルルールを設定しないでください。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers" target="_blank" rel="noopener">"Azure Blob アクセス階層の概要について説明します"</a>。</p>
 </div>
 </div>
 </div>

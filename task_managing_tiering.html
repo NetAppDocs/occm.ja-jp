@@ -2471,24 +2471,24 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-03 16:50:29 +0000">05/03/2021</time>
+    <time datetime="2021-06-08 13:37:05 +0000">06/08/2021</time>
     
   
 
 <span>寄稿者
-  <a target="_blank" href="https://github.com/netapp-bcammett">
-    <img  class="avatar avatar-small"
-          alt="netapp-bcammett"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/18287750?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" href="https://github.com/netapp-tonacki">
     <img  class="avatar avatar-small"
           alt="netapp-tonacki"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/38222299?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-bcammett">
+    <img  class="avatar avatar-small"
+          alt="netapp-bcammett"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/18287750?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -2599,11 +2599,92 @@
 <div class="paragraph">
 <p><span class="image"><img src="./media/screenshot_tiering_policy_settings.png" alt="設定可能な階層化ポリシーの設定を示すスクリーンショット。"></span></p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>注 : * 「階層化データを取得する」オプションが表示される場合は、を参照してください <a href="#Migrating data from the cloud tier back to the performance tier">クラウド階層から高パフォーマンス階層へのデータの移行</a> を参照してください。</p>
+</li>
+</ul>
+</div>
 </li>
 </ol>
 </div>
 <div class="paragraph">
 <p>階層化ポリシーが変更され、新しいポリシーに基づいてデータが階層化されます。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="クラウド階層から高パフォーマンス階層へのデータの移行">クラウド階層から高パフォーマンス階層へのデータの移行</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>クラウドからアクセスされる階層化データは「再加熱」され、パフォーマンス階層に戻されることがあります。ただし、クラウド階層からパフォーマンス階層にデータをプロアクティブに昇格する場合は、 _Tiering Policy_Dialog で実行できます。この機能は、 ONTAP 9.8 以降を使用している場合に使用できます。</p>
+</div>
+<div class="paragraph">
+<p>この処理は、ボリュームでの階層化の使用を停止する場合や、すべてのユーザデータを高パフォーマンス階層に保持しながら、 Snapshot コピーをクラウド階層に保持する場合に実行します。</p>
+</div>
+<div class="paragraph">
+<p>次の 2 つのオプションがあります。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 21.5686%;">
+<col style="width: 44.1176%;">
+<col style="width: 34.3138%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">オプション</th>
+<th class="tableblock halign-left valign-top">説明</th>
+<th class="tableblock halign-left valign-top">階層化ポリシーに影響します</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">すべてのデータを元に戻します</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">クラウドに階層化されたすべてのボリュームデータと Snapshot コピーが取得され、パフォーマンス階層に昇格されます。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">階層化ポリシーが「ポリシーなし」に変更されました。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">アクティブファイルシステムを戻します</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">クラウドに階層化されたアクティブなファイルシステムデータのみを読み出し、パフォーマンス階層に昇格します（ Snapshot コピーはクラウドに残ります）。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">階層化ポリシーは「コールドスナップショット」に変更されます。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="注記"></i>
+</td>
+<td class="content">
+クラウドから転送されたデータの量に基づいて、クラウドプロバイダが課金する場合があります。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>クラウドから移動するすべてのデータに対して、パフォーマンス階層に十分なスペースがあることを確認してください。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Cloud Manager の上部で、 * Tiering * をクリックします。</p>
+</li>
+<li>
+<p>クラスタダッシュボード * で、クラスタの * 階層ボリューム * をクリックします。</p>
+</li>
+<li>
+<p>をクリックします <span class="image"><img src="./media/screenshot_edit_icon.gif" alt="に表示される編集アイコンのスクリーンショット ボリューム階層化のテーブルの各行の末尾です"></span> アイコンをクリックし、使用する取得オプションを選択して、 * 適用 * をクリックします。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_tiering_policy_settings_with_retrieve.png" alt="設定可能な階層化ポリシーの設定を示すスクリーンショット。"></span></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>階層化ポリシーが変更され、階層化されたデータの高パフォーマンス階層への移行が開始されます。クラウド内のデータ量によっては、転送プロセスに時間がかかることがあります。</p>
 </div>
 </div>
 </div>
@@ -2695,7 +2776,7 @@ IDR を有効にしておくと、アクセス頻度の低いデータや削減�
 <p>次に例を示します。</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_cluster_info.gif" alt=" クラスタレポートを示すスクリーンショット。合計使用容量、クラスタの使用済み容量、クラスタ情報、オブジェクトストレージ情報の詳細が表示されます。 "></span></p>
+<p><span class="image"><img src="./media/screenshot_tiering_cluster_info.png" alt=" クラスタレポートを示すスクリーンショット。合計使用容量、クラスタの使用済み容量、クラスタ情報、オブジェクトストレージ情報の詳細が表示されます。 "></span></p>
 </div>
 </li>
 </ol>

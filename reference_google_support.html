@@ -2471,7 +2471,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-03-15 13:40:22 +0000">03/15/2021</time>
+    <time datetime="2021-06-08 13:37:05 +0000">06/08/2021</time>
     
   
 
@@ -2512,10 +2512,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="サポートされているストレージクラス">サポートされているストレージクラス</h2>
+<h2 id="サポートされている-gcp-ストレージクラス">サポートされている GCP ストレージクラス</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cloud Tiering を使用すると、ライフサイクルルールを適用して、データを _Standard_storage クラスから別のストレージクラスに 30 日後に移行できます。次のストレージクラスから選択できます。</p>
+<p>GCP へのデータ階層化を設定すると、 Cloud Tiering は、アクセス頻度の低いデータに _Standard_storage クラスを自動的に使用します。Cloud Tiering では、ライフサイクルルールを適用して、特定の日数が経過したデータを _Standard_storage クラスから他のストレージクラスに移行できます。次のストレージクラスから選択できます。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2531,7 +2531,10 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>Standard を選択した場合、データはそのストレージクラスに残り、ルールは適用されません。</p>
+<p>別のストレージクラスを選択しない場合、データは _Standard_storage クラスに残り、ルールは適用されません。</p>
+</div>
+<div class="paragraph">
+<p>Cloud Tiering ライフサイクルルールを設定する場合、 Google アカウントでバケットを設定するときに、ライフサイクルルールを設定しないでください。</p>
 </div>
 <div class="paragraph">
 <p><a href="https://cloud.google.com/storage/docs/storage-classes" target="_blank" rel="noopener">"Google Cloud Storage のクラスをご確認ください"</a>。</p>

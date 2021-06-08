@@ -9,7 +9,7 @@
   <meta property="og:title" content="オンプレミスの ONTAP クラスタから Google Cloud Storage へデータを階層化する | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ja-jp/occm/task_tiering_onprem_gcp.html" />
-	<meta property="og:description" content="データを Google Cloud Storage に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保できます。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。" />
+	<meta property="og:description" content="非アクティブなデータを Google Cloud Storage に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。" />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/occm/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,7 +18,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="データを Google Cloud Storage に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保できます。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。">
+  <meta name="description" content="非アクティブなデータを Google Cloud Storage に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。">
   <meta name="keywords" content=" data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, google, gcp, google cloud storage">
   
   
@@ -2471,24 +2471,24 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-03 16:50:29 +0000">05/03/2021</time>
+    <time datetime="2021-06-08 13:37:05 +0000">06/08/2021</time>
     
   
 
 <span>寄稿者
-  <a target="_blank" href="https://github.com/netapp-bcammett">
-    <img  class="avatar avatar-small"
-          alt="netapp-bcammett"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/18287750?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" href="https://github.com/netapp-tonacki">
     <img  class="avatar avatar-small"
           alt="netapp-tonacki"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/38222299?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-bcammett">
+    <img  class="avatar avatar-small"
+          alt="netapp-bcammett"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/18287750?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -2507,7 +2507,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>データを Google Cloud Storage に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保できます。データ階層化には、ネットアップの Cloud Tiering サービスが採用されています。</p>
+<p>非アクティブなデータを Google Cloud Storage に階層化することで、オンプレミスの ONTAP クラスタの空きスペースを確保します。</p>
 </div>
 </div>
 </div>
@@ -2624,12 +2624,9 @@ Connector と Google Cloud Storage の間の通信は、オブジェクトスト
 </div>
 </li>
 <li>
-<p>階層化ボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。</p>
+<p>階層化するボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。</p>
 <div class="paragraph">
-<p>IPspace を使用すると、ネットワークトラフィックを分離してプライバシーとセキュリティを確保することができます。 <a href="http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/GUID-69120CF0-F188-434F-913E-33ACB8751A5D.html" target="_blank" rel="noopener">"IPspace の詳細については、こちらをご覧ください"</a>。</p>
-</div>
-<div class="paragraph">
-<p>データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。</p>
+<p>データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。の詳細を確認してください <a href="https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html" target="_blank" rel="noopener">"LIF"</a> および <a href="https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html" target="_blank" rel="noopener">"IPspace"</a>。</p>
 </div>
 </li>
 </ul>
@@ -2718,7 +2715,7 @@ Cloud Tiering は、 FlexGroup ボリュームをサポートしています。�
 </div>
 </div>
 <div class="sect2">
-<h3 id="データ階層化のための-google-cloud-storage-の準備">データ階層化のための Google Cloud Storage の準備</h3>
+<h3 id="google-cloud-storage-を準備しています">Google Cloud Storage を準備しています</h3>
 <div class="paragraph">
 <p>階層化を設定する場合は、 Storage Admin の権限があるサービスアカウントにストレージアクセスキーを指定する必要があります。サービスアカウントを使用すると、 Cloud Tiering で、データの階層化に使用する Cloud Storage バケットを認証し、アクセスできます。キーは、 Google Cloud Storage がリクエストを発行しているユーザーを認識できるようにするために必要です。</p>
 </div>
@@ -2729,7 +2726,7 @@ Cloud Tiering は、 FlexGroup ボリュームをサポートしています。�
 <i class="fa icon-note" title="注記"></i>
 </td>
 <td class="content">
-階層化データが 30 日後に移行する低コストのストレージクラスを選択する場合は、選択したバケットに他のルールが適用されていないことを確認する必要があります。
+階層化データが一定の日数後に移行する低コストのストレージクラスを使用するように Cloud Tiering を設定する場合は、 GCP アカウントでバケットをセットアップするときにライフサイクルルールを選択しないでください。Cloud Tiering は、ライフサイクルの移行を管理します。
 </td>
 </tr>
 </table>
@@ -2798,11 +2795,24 @@ Cloud Tiering は、 FlexGroup ボリュームをサポートしています。�
 <p>* Bucket * ：新しい Google Cloud Storage バケットを追加するか、既存のバケットを選択します。</p>
 </li>
 <li>
-<p>* ストレージクラス * ：階層化されたデータを 30 日後に移行するストレージクラスを選択します。</p>
+<p>* ストレージクラスのライフサイクル管理 * ： Cloud Tiering は、階層化されたデータのライフサイクル移行を管理します。データは _Standard_class から始まりますが、データを特定の日数後に他のクラスに移動するルールを作成することができます。</p>
 <div class="paragraph">
-<p><a href="reference_google_support.html" target="_blank" rel="noopener">"「サポートされているストレージクラス」を参照"</a>。Standard を選択した場合、データはそのストレージクラスに残り、ルールは適用されません。</p>
+<p>階層化データを移行する Google Cloud ストレージクラスと、データを移動するまでの日数を選択し、 * Continue （続行） * をクリックします。たとえば、次のスクリーンショットは、階層化されたデータが、オブジェクトストレージで 30 日後に _Standard_class から _Nearline _class に移動され、オブジェクトストレージで 60 日後に _Coldline_class に移動されたことを示しています。</p>
+</div>
+<div class="paragraph">
+<p>「 * このストレージクラスにデータを保持する」を選択した場合、データはそのストレージクラスに残ります。 <a href="reference_google_support.html" target="_blank" rel="noopener">"「サポートされているストレージクラス」を参照"</a>。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_tiering_lifecycle_selection_gcp.png" alt="特定の日数が経過したあとにデータが移動される追加のストレージクラスを選択する方法を示すスクリーンショット。"></span></p>
 </div>
 </li>
+</ol>
+</div>
+<div class="paragraph">
+<p>ライフサイクルルールは、選択したバケット内のすべてのオブジェクトに適用されます。</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
 <p>* クレデンシャル * ：ストレージ管理者ロールが割り当てられたサービスアカウントのストレージアクセスキーとシークレットキーを入力します。</p>
 </li>
