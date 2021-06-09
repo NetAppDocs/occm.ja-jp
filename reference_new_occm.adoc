@@ -28,6 +28,7 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 * <<Cloud Backup enhancements>>
 * <<Application Templates enhancements>>
 * <<Cloud Data Sense (Cloud Compliance) enhancements>>
+* <<Global File Cache enhancements>>
 
 
 
@@ -107,6 +108,12 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 * クラウドデータセンスは、 .dcm と .dicom の 2 種類の追加ファイルで個人識別情報（ PII ）をスキャンできます。
 * CSV 形式で出力するレポートには、 [ ファイルサイズ ] 、 [ 作成日 ] 、および [ 最終変更日 ] の値が追加されています。作成日は、調査ページの検索結果を絞り込むために使用できる新しいフィルタでもあります。
 
+
+
+
+=== グローバルファイルキャッシュの機能拡張
+
+グローバルファイルキャッシュソフトウェアバージョン 1.1.0 がリリースされました。新しい「エッジ同期」機能を使用して、リモートオフィスの複数のエッジを同期できます。ファイルが 1 つのエッジでフェッチされると、 Edge Sync に参加しているすべてのエッジ上の同じファイルが更新され、キャッシュされます。を参照してください link:concept_gfc.html#whats-new-in-version-1-1-0["このリリースの新機能および解決済みの問題"]。
 
 
 

@@ -1039,11 +1039,8 @@
   <block id="7d3786abf2ebb473a5ba70b680734525" category="section-title">BYOL ライセンスに関する考慮事項</block>
   <block id="7425d5f89a4e332992c97c91d4ed6317" category="list-text">バックアップがライセンスで許可された容量の 80% に達したとき、および制限に達したときに再度実行されます</block>
   <block id="d8ea74d0bc0e6f3c5be22312a953d7fb" category="list-text">ライセンスの有効期限が切れる 30 日前と、ライセンスの有効期限が切れたあとに再度有効になります</block>
-  <block id="9c09066c8e56496b251794a698d4a3f3" category="paragraph">これらの通知を受け取った場合は、 Cloud Manager インターフェイスの右下にあるチャットアイコンを使用してライセンスを更新してください。</block>
   <block id="788e4ff805005ba0a3c88a392b87f9a6" category="paragraph">ライセンスの有効期限が切れると、次の 2 つのことが起こります。</block>
   <block id="288d3e65aa18410408ae9a510f353398" category="list-text">ONTAP システムに使用しているアカウントにマーケットプレイスアカウントがある場合、バックアップサービスは引き続き実行されますが、 PAYGO ライセンスモデルに切り替えられます。バックアップに使用する容量のバックアップライセンスのコストについては、クラウドプロバイダに課金されます。バックアップに必要なストレージコストについては、ネットアップにお問い合わせください。</block>
-  <block id="e46c2969860a3f8d6f28785e1056d243" category="list-text">ONTAP システムに使用しているアカウントに Marketplace アカウントがない場合、バックアップサービスは引き続き実行されますが、有効期限に関するメッセージは引き続き送信されます。</block>
-  <block id="e794cedc0d935d886bd0c7691565235d" category="paragraph">PAYGO ライセンスに切り替えられたシステムは、自動的に BYOL ライセンスに戻されます。また、ライセンスなしで実行されていたシステムは警告メッセージの受信を停止し、ライセンスの有効期限が切れている間に実行されたバックアップに対して課金されます。</block>
   <block id="57739bc049ff58f3d3db6f5281e84b85" category="section-title">バックアップの保管場所バックアップノバショ</block>
   <block id="2a01d572b1447155c310cabafac3fae9" category="paragraph">注：</block>
   <block id="e6c344acbe141c46bf8617b9d43d0c2f" category="inline-link">Amazon S3 ブロックのパブリックアクセス機能</block>
@@ -7953,7 +7950,6 @@
   <block id="150d0b73810898f0438b1126fa9d43d2" category="paragraph">30 日間の無償トライアルを使用すると、残りの無料試用日数が通知されます。無償トライアルが終了すると、バックアップは作成されなくなります。サービスを引き続き使用するには、サービスに登録するかライセンスを購入する必要があります。</block>
   <block id="b84cc74d10ff69ffebf0cd86adfcb685" category="paragraph">PAYGO の場合は、（前述のとおり）オブジェクトストレージのコストについてクラウドプロバイダに支払い、バックアップライセンスのコストについてはネットアップに支払う必要があります。ライセンスコストは、（ ONTAP の Storage Efficiency 機能を使用する前の）ターゲットのバックアップ容量に基づいて決まります。</block>
   <block id="4f7307b358c4b6d450aaf97581f83b75" category="paragraph">BYOL は、期間ベース（ 1 年間 / 2 年間 / 3 年間）で容量ベースであり、バックアップされた容量を（ ONTAP Storage Efficiency の前の）論理的なバックアップに基づいて、 1TB 単位で増分されます。ネットアップに料金を支払うことで、このサービスを一定期間（たとえば 1 年）利用でき、最大バックアップ容量である 10TB にしたとします。その場合、オブジェクトストレージのコストについてクラウドプロバイダの支払いが必要になります（前述した金額をクラウドプロバイダに支払う必要があります）。</block>
-  <block id="bac880709657cfbc1f5bc367fa3b31d4" category="paragraph">Cloud Backup BYOL ライセンスを使用している場合、 Cloud Manager はバックアップが容量の上限に近づいたときやライセンスの有効期限に近づいたときに通知します。次の通知が表示されます。</block>
   <block id="50b80798372065ac20ad628faaa584d9" category="section-title">Cloud Backup の仕組み</block>
   <block id="c52853b1987e32e91e9d3bb04191312c" category="paragraph">Cloud Backup を有効にすると、システムに指定したすべてのボリュームがクラウドにバックアップされます。</block>
   <block id="fcae27d58dd5579ee96d1418e7e3ccfc" category="paragraph">Cloud Backup は、 FlexVol の読み書き可能ボリュームとデータ保護（ DP ）ボリュームをサポートしています。</block>
@@ -10799,4 +10795,12 @@
   <block id="e8cdf46b30eda1b6da8eed70347d25ac" category="list-text">事前入力（ TappN ）ログが拡張され、すべてのファイルのファイル転送ステータスが記録されるようになりました。</block>
   <block id="537f35739e01ac333f01ac9b4cbc3e9f" category="list-text">このサービスは、ストレージアーキテクトが決定した「ドリフト」機能を使用して、テンプレートで定義されている特定のリソース設定を追跡します。</block>
   <block id="a75f59b7ae683d16a9279c8eec69424a" category="paragraph">グローバルファイルキャッシュエッジの高度な設定の詳細については、を参照してください<block ref="0f1e08336ba0ac25d056248c22c33aaf" category="inline-link-rx"></block>。</block>
+  <block id="0ce873415e7053e2e907184de799a067" category="paragraph">Cloud Backup BYOL ライセンスを使用している場合、バックアップが容量の上限に近づいている場合やライセンスの有効期限に近づいている場合、 Cloud Manager のユーザインターフェイスに警告が表示されます。次の警告が表示されます。</block>
+  <block id="e8c240ac70f9e6acaa6b979acb3be469" category="paragraph">Cloud Manager インターフェイスの右下にあるチャットアイコンを使用して、警告が表示されたときにライセンスを更新してください。</block>
+  <block id="97086d6835beeb0577d0d77473d5a034" category="list-text">ONTAP システムに使用しているアカウントに Marketplace アカウントがない場合、バックアップサービスは引き続き実行されますが、警告は引き続き表示されます。</block>
+  <block id="3a74c624b78ecc1e907383de85bf82c3" category="paragraph">PAYGO ライセンスに切り替えられたシステムは、自動的に BYOL ライセンスに戻されます。また、ライセンスなしで実行していたシステムでは警告が表示されなくなり、ライセンスの有効期限が切れている間に実行されたバックアップに課金されます。</block>
+  <block id="2992a0bc4f2a32fe509939fe9966ca6e" category="list-text"><block ref="f7cc17ca04535ddd39849d0f0b9cac10" category="inline-xref-macro-rx"></block></block>
+  <block id="36dd597df4be7836397bf1fc26b7c190" category="section-title">グローバルファイルキャッシュの機能拡張</block>
+  <block id="80c52adcfc113546fd49ce079a0302f0" category="inline-link-macro">このリリースの新機能および解決済みの問題</block>
+  <block id="a16eec32bca711e0f20a84944ee24e81" category="paragraph">グローバルファイルキャッシュソフトウェアバージョン 1.1.0 がリリースされました。新しい「エッジ同期」機能を使用して、リモートオフィスの複数のエッジを同期できます。ファイルが 1 つのエッジでフェッチされると、 Edge Sync に参加しているすべてのエッジ上の同じファイルが更新され、キャッシュされます。を参照してください <block ref="461b41b00984d207275081a22d088210" category="inline-link-macro-rx"></block>。</block>
 </blocks>
