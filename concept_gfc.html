@@ -2479,7 +2479,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-04-08 16:19:15 +0000">04/08/2021</time>
+    <time datetime="2021-06-09 14:42:47 +0000">06/09/2021</time>
     
   
 
@@ -2615,7 +2615,7 @@
 <p>グローバルファイルキャッシュの構成は、 Microsoft Azure 、 Google Cloud Platform 、または Amazon Web Services パブリッククラウドストレージインフラにインストールされた Cloud Volumes ONTAP 、 Cloud Volumes Service 、または Azure NetApp Files でもサポートされます。オンプレミスソリューションは、ネットアップの AFF プラットフォームと FAS プラットフォームでも利用できます。このインストールでは、 Cloud Manager ではなく、グローバルファイルキャッシュサーバ側のコンポーネントを手動で設定して導入する必要があります。</p>
 </div>
 <div class="paragraph">
-<p>を参照してください <a href="https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf" target="_blank" rel="noopener">"『 NetApp Global File Cache User Guide 』を参照してください"</a> を参照してください。</p>
+<p>を参照してください <a href="https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.1.0.pdf" target="_blank" rel="noopener">"『 NetApp Global File Cache User Guide 』を参照してください"</a> を参照してください。</p>
 </div>
 </div>
 </div>
@@ -2745,7 +2745,7 @@
 <p>追加の Edge ライセンスを購入するか、サブスクリプションを更新すると、サポート / 運用部門は、サイト数やサブスクリプションの終了日など、ライセンスの詳細を更新します。LMS がサブスクリプションサービスを照会すると、ライセンスの詳細が LMS インスタンスで自動的に更新され、 GFC Core インスタンスおよび Edge インスタンスに適用されます。</p>
 </div>
 <div class="paragraph">
-<p>を参照してください <a href="https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf" target="_blank" rel="noopener">"『 NetApp Global File Cache User Guide 』を参照してください"</a> ライセンスの詳細については、を参照してください。</p>
+<p>を参照してください <a href="https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.1.0.pdf" target="_blank" rel="noopener">"『 NetApp Global File Cache User Guide 』を参照してください"</a> ライセンスの詳細については、を参照してください。</p>
 </div>
 </div>
 </div>
@@ -2770,6 +2770,41 @@
 <div class="sect1">
 <h2 id="リリースノート">リリースノート</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="バージョン-1-1-0-の新機能">バージョン 1.1.0 の新機能</h3>
+<div class="paragraph">
+<p>リリース： 2021 年 6 月 9 日</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>「エッジ同期」機能が追加されました。この機能では、リモートオフィスの複数のエッジが同期され、データは常にキャッシュ / ウォームに保存されます。ファイルを 1 つのエッジでフラッシュ / フェッチすると、 Edge Sync に参加するすべてのエッジ上の同じファイルが更新され、キャッシュされます。Optimus UI は、 Edge Sync 設定用に拡張されています。のセクション 8.4 を参照してください <a href="https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.1.0.pdf" target="_blank" rel="noopener">"『 NetApp Global File Cache User Guide 』を参照してください"</a> を参照してください。</p>
+</li>
+<li>
+<p>OpenSSL モジュールは、 GFC Edge と GFC Core の間のセキュアな通信に使用されます。このモジュールは、最新かつより安全なバージョン（バージョン 1.1.1k ）にアップグレードされました。</p>
+</li>
+<li>
+<p>GFC ライセンス登録ページには、ネットアップのサブスクリプションを通じてアクティブ化されたライセンスの数が表示されます。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="バージョン-1-1-0-で解決された問題">バージョン 1.1.0 で解決された問題</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>構成 UI （ Optimus ）の [ 事前入力の編集（ Edit Pre-Population ） ] ページに、エッジホスト名が正しく表示されるようになりました。</p>
+</li>
+<li>
+<p>ライセンス登録時にネットアップライセンスサブスクリプションサーバからの JSON 応答を解析する問題が修正されました。</p>
+</li>
+<li>
+<p>事前入力（ TappN ）ログが拡張され、すべてのファイルのファイル転送ステータスが記録されるようになりました。</p>
+</li>
+</ul>
+</div>
+</div>
 <div class="sect2">
 <h3 id="バージョン-1-0-4-で解決された問題">バージョン 1.0.4 で解決された問題</h3>
 <div class="paragraph">
