@@ -29,4 +29,4 @@ link:https://docs.netapp.com/us-en/occm/media/Global_File_Cache_Onboarding_Email
 * オンボーディングコミュニケーションlink:https://repo.cloudsync.netapp.com/gfc/Global%20File%20Cache%20Customer%20Onboarding%20-%20Draft.docx["Word 文書 (.docx)"]
 
 
-の第 13 章を参照してください link:https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^] を参照してください。
+の第 13 章を参照してください https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.1.0.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^] を参照してください。

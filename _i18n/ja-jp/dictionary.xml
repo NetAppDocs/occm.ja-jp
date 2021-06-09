@@ -7295,8 +7295,6 @@
   <block id="0f01e44182d4ad208ac99fd86195b6c6" category="paragraph">グローバルファイルキャッシュは、次のコンポーネントで構成されています。</block>
   <block id="85942e5503c1c00d276d3a32787e60ba" category="list-text">Global File Cache Edge （リモートサイトに導入）</block>
   <block id="fc8176d8f355dbfc4247953d6bf4d346" category="paragraph">グローバルファイルキャッシュコアインスタンスは、選択したバックエンドストレージプラットフォーム（ Cloud Volumes ONTAP 、 Cloud Volumes Service 、 Azure NetApp Files ）を使用してグローバルファイルキャッシュファブリックを構築します。このファブリックを使用すると、非構造化データを単一のデータセットに統合し、パブリッククラウド内の 1 つまたは複数のストレージプラットフォームに格納できます。</block>
-  <block id="512d57d5f310af479ff8f49c3e23bc7a" category="inline-image-macro">グローバルファイルキャッシュの詳細を示す図 リモートオフィスとにソフトウェアをインストールして導入する クラウド内の中央サーバー</block>
-  <block id="7b01e2d25b092ab4377ea4e6f996a837" category="paragraph"><block ref="7b01e2d25b092ab4377ea4e6f996a837" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e55dde8ab8d8ac9594c265cd439c94bf" category="section-title">サポートされているストレージプラットフォーム</block>
   <block id="4639eb8d355012539c92019d722efa12" category="paragraph">グローバルファイルキャッシュでサポートされるストレージプラットフォームは、選択する導入オプションによって異なります。</block>
   <block id="af1bba2ce5f90eecf243bb554ad8673d" category="section-title">導入の自動化オプション</block>
@@ -8598,16 +8596,11 @@
   <block id="c03a0c0df9a0b88fbbd1d953882813ed" category="list-text"><block ref="c03a0c0df9a0b88fbbd1d953882813ed" category="inline-link-macro-rx"></block></block>
   <block id="2dc4d97cccbbe2b28b34205adfc982fe" category="cell">support.netapp.com:443 https://mysupport.netapp.com</block>
   <block id="e96b128a90734a984118f076d76538c7" category="cell">ネットアップ AutoSupport との通信：コネクタは support.netapp.com:443 と通信し、 https://mysupport.netapp.com にリダイレクトされます。</block>
-  <block id="35864a34ef748a9929163207544aa48d" category="paragraph"><block ref="6782961ca8bb00dc020892795d4e714a" category="inline-link-rx"></block>
-<block ref="bba9d0f10705bbe3d98a315767a8bbef" category="inline-link-rx"></block></block>
-  <block id="4c9afdb681bd307daf7aeee36f32cc7a" category="paragraph"><block ref="4c9afdb681bd307daf7aeee36f32cc7a" category="inline-link-rx"></block></block>
   <block id="4b2d1e89406fad567f90d7f405a89a0a" category="list-text">プロセッサ（ CPU ）： CPU は「 * 静的 * ：最小： 4 vCPU コア」として設定する必要があります。</block>
   <block id="e2dc7db2b7946e399b3526201828d47b" category="list-text">ハードディスクのプロビジョニング：ハードディスクは * 固定ディスク * として構成する必要があります。</block>
   <block id="486ca25a7b25a59aefc91d70f0803203" category="list-text">ネットワーク：ネットワークインターフェイスは *VMXNET3* に設定する必要があります（ VM Tools が必要な場合があります）。</block>
   <block id="724a9580f889e10d97820373eb8ca1f3" category="list-text">C ： \- 最小 250GB （システム / ブートボリューム）</block>
   <block id="31e57f0e2f21035dcd125996fc7910f1" category="list-text">D ： \ - 最小 1TB （グローバル・ファイル・キャッシュ・インテリジェント・ファイル・キャッシュ用の個別データ・ボリューム * ）</block>
-  <block id="c60e84300ddf76dd43a1026637fbce08" category="paragraph">詳細については、を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block>。</block>
-  <block id="dec490d060595f3cf6fdcc4ef3e43555" category="paragraph">グローバルファイルキャッシュは、グローバルファイルキャッシュが有効なインスタンス（コアまたはエッジ）に監視ソリューションやアンチウイルスソリューションをインストールしたり、適用したりすることは推奨しません。ソリューションをインストールするか、選択したか、またはポリシーに基づいて、次のベストプラクティスと推奨事項を適用する必要があります。一般的なウィルス対策スイートについては、の付録 A を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block>。</block>
   <block id="7e97ed382f6a1568b4024c1aafe5994c" category="paragraph">ウイルス対策ソフトウェアまたはその他のサードパーティ製のインデックス付けまたはスキャンユーティリティでは、 Edge インスタンス上のドライブ D ： \ をスキャンしないでください。Edge サーバードライブ D:\ をスキャンすると、キャッシュネームスペース全体に対する多数のファイルオープン要求が発生します。これにより、データセンターで最適化されているすべてのファイルサーバに対して、 WAN 経由でファイルがフェッチされます。WAN 接続フラッディングおよび Edge インスタンス上の不要な負荷が発生すると、パフォーマンスが低下します。</block>
   <block id="7f58313a3e0bc8a0479b6f4849ec1e77" category="list-text">C ： \Program Files\TalonFAST\Bin\TappN.exe`</block>
   <block id="7fa72ec93fc5979b56e163380b01c0b2" category="list-text">C ： \Program Files\TalonFAST\Bin\FTLSummaryGenerator.exe`</block>
@@ -8625,19 +8618,14 @@
   <block id="7810d0ca3a66369587e6a56cf4192b2c" category="list-text">ネットアップの従来型ライセンスを使用している場合：</block>
   <block id="90fa5a5ac66630ff8491eb335e51bdc9" category="list-text">https://talonazuremicroservices.azurewebsites.net</block>
   <block id="5ed3a104f8850c15acaec08814cbd9b4" category="list-text">https://talonlicensing.table.core.windows.net</block>
-  <block id="3c6412cc62438c01c4a00065ad5c3547" category="list-text"><block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block></block>
-  <block id="75433780f1909e6f2dd8c2eec8189435" category="paragraph">の第 13 章を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block> を参照してください。</block>
-  <block id="7f40effd57385de7a567e0616ba361bf" category="paragraph">を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block> を参照してください。</block>
   <block id="771dcff1843f23a97fc2a57e936d4a9f" category="paragraph">Azure では、これは、 27GB のプレミアム SSD を搭載した D2S_V3 または同等の（ vCPU 2 基 / 8GB の RAM ） VM 上で実行されます</block>
   <block id="c6b798b0bebd4b2ec1cf891e6cd66c67" category="paragraph">AWS では、 127GB の汎用 SSD を搭載した m4.large インスタンスまたは同等のインスタンス（ 2 vCPU / 8GB RAM ）で実行されます</block>
   <block id="817000ba632406cdb4b5a4da3a5c5221" category="paragraph">Azure では、 D4s_V3 または 127GB の Premium SSD を搭載した同等の（ vCPU 4 基 / 16GB RAM ） VM で実行されます</block>
   <block id="6869983628ce136a6778d9ced07d3b4b" category="paragraph">AWS では、 127GB の汎用 SSD を搭載した m4.xlarge インスタンスまたは同等のインスタンス（ 4 vCPU / 16GB RAM ）で実行されます</block>
-  <block id="a8a7a8a7aa88c77a487bb4b387274cfa" category="paragraph">を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block> ライセンスの詳細については、を参照してください。</block>
   <block id="dcf0a49958e5c7a70ac6f315e1a17133" category="section-title">バージョン 1.0.3 の新機能</block>
   <block id="7a471b1e4141c6cec5dcf9437bfb622d" category="paragraph">デフォルトのインストール場所を使用することを推奨します。</block>
   <block id="366cc1d4ff6cff6676cf51ea1a645ab0" category="list-text">インストールの選択を確認し、 * Install * をクリックしてインストールを開始します。</block>
   <block id="ca226cca3bd1375b5e9fbcf3bd9cb3be" category="paragraph">インストールプロセスが開始されます。</block>
-  <block id="c253587e8df15090843fe5b43928340e" category="paragraph">グローバルファイルキャッシュエッジの高度な設定の詳細については、を参照してください <block ref="3c6412cc62438c01c4a00065ad5c3547" category="inline-link-rx"></block>。</block>
   <block id="f6c96f9db00475dfd6c371ca50af3d5b" category="doc">Cloud Volumes ONTAP データの Azure BLOB ストレージへのバックアップ</block>
   <block id="362e1fd025fbc54170675a786630faff" category="inline-image-macro">Cloud Backup が、ソースシステム上のボリュームおよびバックアップファイルが配置されているデスティネーションストレージと通信する仕組みを示す図。</block>
   <block id="6ecfc2b370e7d4995270910a47116471" category="paragraph"><block ref="6ecfc2b370e7d4995270910a47116471" category="inline-image-macro-rx" type="image"></block></block>
@@ -8663,8 +8651,6 @@
   <block id="2e87d4ef1e0516d893da73de140af706" category="sidebar">Cloud Volumes ONTAP データを Azure Blob にバックアップ</block>
   <block id="a6102a3b147e0d099222dfd5f8fa1b0b" category="sidebar">Cloud Volumes ONTAP データを Google Cloud にバックアップ</block>
   <block id="f88afd09c4785dd31f4239d5df7ce8c7" category="sidebar">オンプレミスの ONTAP データをパブリッククラウドにバックアップ</block>
-  <block id="9535c61b798aabbac8338220d5bb8b13" category="paragraph"><block ref="e896c2037b75b86e95e1ff5c8579616b" category="inline-link-rx"></block>
-<block ref="a62c880b64a65d9bff9d3ad944a283da" category="inline-link-rx"></block></block>
   <block id="0f0e0fd62d9aeb92f473300f6a51c27b" category="list-text">グローバルファイルキャッシュソフトウェアインストーラは、すべての GFC プロセスを Windows Defender ソフトウェアのオンデマンドスキャンから除外するためのプロセス情報を追加しました。</block>
   <block id="bc87696af9c3c5c3a52fd6dc3e2f436e" category="list-text">ソフトウェアで使用するメモリが少なくなり、パフォーマンスと安定性が向上するように、多くの機能が強化されています。</block>
   <block id="481ffd68053d79d65068d0aa1585b571" category="section-title">バージョン 1.0.3 で解決された問題</block>
@@ -8749,7 +8735,6 @@
   <block id="66dba6862cea04391bc5944894d8ddb1" category="list-text">[*Close*] をクリックすると、ウィンドウを閉じて Active IQ ページに戻ることができます。または、リンクをクリックして Cloud Volumes ONTAP Licensing ページに移動し、そのシステムのライセンスの詳細を表示することもできます。</block>
   <block id="2d81026f14897c87dcb49f898d05f792" category="list-text">NFS の場合は、 NFS バージョン 4 以降を使用する必要があります。</block>
   <block id="10a3e9f58ad31290c6f365e5e735f663" category="paragraph">ソースとターゲットのバージョンが同じである必要があります。たとえば、ソースでは 4.0 、ターゲットでは 4.0 がサポートされます。ただし、ソースでは 4.0 、ターゲットでは 4.1 はサポートされていません。これは、バージョンが異なるためです。</block>
-  <block id="26677af4c9ee9ebb05824f61086736f6" category="paragraph"><block ref="26677af4c9ee9ebb05824f61086736f6" category="inline-link-rx"></block></block>
   <block id="c02f6931ac1cb0d6f6c43728f2c59458" category="list-text">Global File Cache SCOM （ Microsoft Systems Center Operations Manager ）パッケージ：</block>
   <block id="6cfcd1fac0b2e806d26cc363f98afe52" category="inline-link">NetApp GFC SCOM 管理パッケージ（ ZIP ）</block>
   <block id="94ab5cbee962c68b827980048c10c188" category="paragraph"><block ref="94ab5cbee962c68b827980048c10c188" category="inline-link-rx"></block></block>
@@ -9130,7 +9115,6 @@
   <block id="ce92c4a83ef7c525ea0ff26711c3269e" category="list-text">ストレージ管理者は、テンプレートを使用して、使用するアプリケーションに合わせて最適化されたリソースを作成します。</block>
   <block id="f8f85ac75a9d32ac7e4bd19a88c88489" category="paragraph">たとえば、データベース用に作成したボリュームテンプレートを使用して、 Oracle データベースに使用するボリュームを作成します。</block>
   <block id="5611a7cbf7c2c41cd9364b8a5d3fd089" category="list-text">アプリケーションテンプレートサービスは、 Gov Cloud リージョンや「ダーク」サイトではサポートされていません。</block>
-  <block id="84d930c9136e976286c4f6d414f26f33" category="list-text">複数の Storage VM （ SVM ）を含む Cloud Volumes ONTAP システム上にボリュームを作成する場合は、テンプレートを使用することはできません。</block>
   <block id="cc371045494864a1be09aecf8486813b" category="summary">ネットアップが提供する「アクション」を 1 つ以上選択し、組織がリソース作成の最適化を開始するために使用できるアプリケーションテンプレートを迅速に構築します。</block>
   <block id="ad294588f5cfab0f3260de0d032b303b" category="section-title">必要な前提条件を確認する</block>
   <block id="2bc67b37308da683bbad8936dc934670" category="section-title">Application Templates サービスを起動します</block>
@@ -10790,4 +10774,29 @@
   <block id="d878dbf9ab702cfef892ea35b53108d3" category="sidebar">テンプレートを使用して、リソース作成を標準化します</block>
   <block id="52b2438a3d1515af5b3918e6d0fa443d" category="sidebar">組織のテンプレートを作成します</block>
   <block id="1ff123cfbf88ad9c58cfd44c2b72c291" category="sidebar">テンプレートを実行してリソースを作成する</block>
+  <block id="e30b0d06cdec4f7811dc8d0b485da6c1" category="paragraph"><block ref="000c59ec0f27b3df8cf60ffea2ffd0e1" category="inline-link-rx"></block>
+<block ref="2f5e7b0c06c38f7759a1926e832c2d44" category="inline-link-rx"></block></block>
+  <block id="32e1ce624b882de6b8b8d22ce5f53360" category="paragraph"><block ref="bc15e58802de31a92fb7314952be2321" category="inline-link-rx"></block>
+<block ref="698e0f8e6293c09539827f8c23e77f55" category="inline-link-rx"></block></block>
+  <block id="92304f0a7c485018f7bf263c3e46fa8f" category="paragraph"><block ref="92304f0a7c485018f7bf263c3e46fa8f" category="inline-link-rx"></block></block>
+  <block id="902e21b51073e1263d69ddcfe6053a5d" category="paragraph"><block ref="902e21b51073e1263d69ddcfe6053a5d" category="inline-link-rx"></block></block>
+  <block id="004900c685652a75205564c9679b2be4" category="paragraph">詳細については、を参照してください<block ref="0f1e08336ba0ac25d056248c22c33aaf" category="inline-link-rx"></block>。</block>
+  <block id="b924b9145d6f4426935534d7b26de3da" category="paragraph">グローバルファイルキャッシュは、グローバルファイルキャッシュが有効なインスタンス（コアまたはエッジ）に監視ソリューションやアンチウイルスソリューションをインストールしたり、適用したりすることは推奨しません。ソリューションをインストールするか、選択したか、またはポリシーに基づいて、次のベストプラクティスと推奨事項を適用する必要があります。一般的なウィルス対策スイートについては、の付録 A を参照してください<block ref="0f1e08336ba0ac25d056248c22c33aaf" category="inline-link-rx"></block>。</block>
+  <block id="26dbf4bee42458d4736cd9fd8e959fc6" category="list-text"><block ref="26dbf4bee42458d4736cd9fd8e959fc6" category="inline-link-rx"></block></block>
+  <block id="9084910038dd88a4c2a9aea7b0c1cd9e" category="paragraph">の第 13 章を参照してください<block ref="0f1e08336ba0ac25d056248c22c33aaf" category="inline-link-rx"></block> を参照してください。</block>
+  <block id="813fe3f0ec18c33865dff38f15acf6e8" category="inline-image-macro">グローバルファイルキャッシュの詳細を示す図 リモートオフィスとにソフトウェアをインストールして導入する クラウド内の中央サーバー</block>
+  <block id="5187ea0e239dfeb5ab25be21adb6c5f7" category="paragraph"><block ref="5187ea0e239dfeb5ab25be21adb6c5f7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="71c2e99da61c94e7dc7d60497059a783" category="paragraph">を参照してください<block ref="0f1e08336ba0ac25d056248c22c33aaf" category="inline-link-rx"></block> を参照してください。</block>
+  <block id="783b7f6f326468b70647d047949b4a2d" category="paragraph">を参照してください<block ref="0f1e08336ba0ac25d056248c22c33aaf" category="inline-link-rx"></block> ライセンスの詳細については、を参照してください。</block>
+  <block id="a1f0d600b1fe72c4a468e6e5ab8afd79" category="section-title">バージョン 1.1.0 の新機能</block>
+  <block id="85589ef8bd5aaadd7996db543690f102" category="paragraph">リリース： 2021 年 6 月 9 日</block>
+  <block id="53fe59e87796d1c6ecdec7346fd84ac6" category="list-text">「エッジ同期」機能が追加されました。この機能では、リモートオフィスの複数のエッジが同期され、データは常にキャッシュ / ウォームに保存されます。ファイルを 1 つのエッジでフラッシュ / フェッチすると、 Edge Sync に参加するすべてのエッジ上の同じファイルが更新され、キャッシュされます。Optimus UI は、 Edge Sync 設定用に拡張されています。のセクション 8.4 を参照してください<block ref="0f1e08336ba0ac25d056248c22c33aaf" category="inline-link-rx"></block> を参照してください。</block>
+  <block id="6b6a511e29e0e051c292c99d2c00dd44" category="list-text">OpenSSL モジュールは、 GFC Edge と GFC Core の間のセキュアな通信に使用されます。このモジュールは、最新かつより安全なバージョン（バージョン 1.1.1k ）にアップグレードされました。</block>
+  <block id="7d665bd7a868c6a88da7f79d548d85a1" category="list-text">GFC ライセンス登録ページには、ネットアップのサブスクリプションを通じてアクティブ化されたライセンスの数が表示されます。</block>
+  <block id="f03a5d79fc0ba01627e7731eaa1b6c2f" category="section-title">バージョン 1.1.0 で解決された問題</block>
+  <block id="6685765d4afda2255c6ac8d5a8cea526" category="list-text">構成 UI （ Optimus ）の [ 事前入力の編集（ Edit Pre-Population ） ] ページに、エッジホスト名が正しく表示されるようになりました。</block>
+  <block id="9437dcfd300c52c159a6d4703daa54ad" category="list-text">ライセンス登録時にネットアップライセンスサブスクリプションサーバからの JSON 応答を解析する問題が修正されました。</block>
+  <block id="e8cdf46b30eda1b6da8eed70347d25ac" category="list-text">事前入力（ TappN ）ログが拡張され、すべてのファイルのファイル転送ステータスが記録されるようになりました。</block>
+  <block id="537f35739e01ac333f01ac9b4cbc3e9f" category="list-text">このサービスは、ストレージアーキテクトが決定した「ドリフト」機能を使用して、テンプレートで定義されている特定のリソース設定を追跡します。</block>
+  <block id="a75f59b7ae683d16a9279c8eec69424a" category="paragraph">グローバルファイルキャッシュエッジの高度な設定の詳細については、を参照してください<block ref="0f1e08336ba0ac25d056248c22c33aaf" category="inline-link-rx"></block>。</block>
 </blocks>

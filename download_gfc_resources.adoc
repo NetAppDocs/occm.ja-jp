@@ -23,17 +23,17 @@ summary: グローバルファイルキャッシュエッジソフトウェア�
 
 * Windows Server 2016 仮想テンプレート：
 +
-https://repo.cloudsync.netapp.com/gfc/2k16-1.0.3.60.zip["NetApp GFC を含む Windows Server * 2016.OVA （ VMware vSphere 6.5 以降）"^]
-https://repo.cloudsync.netapp.com/gfc/2k16Hyperv.zip["NetApp GFC を含む Windows Server 2016-0x （ Microsoft Hyper-V ）"^]
+https://repo.cloudsync.netapp.com/gfc/2K16_ova_1-1-0-78.zip["NetApp GFC を含む Windows Server * 2016.OVA （ VMware vSphere 6.5 以降）"^]
+https://repo.cloudsync.netapp.com/gfc/2K16_vhd_1-1-0-78.zip["NetApp GFC を含む Windows Server 2016-0x （ Microsoft Hyper-V ）"^]
 
 * Windows Server 2019 仮想テンプレート：
 +
-https://repo.cloudsync.netapp.com/gfc/2k19-1.0.3.60.zip["Windows Server 206.OVA （ NetApp GFC を含む）（ VMware vSphere 6.5 以降）"^]
-https://repo.cloudsync.netapp.com/gfc/2K19Hyperv.zip["NetApp GFC （ Microsoft Hyper-V ）を含む Windows Server 19VHDX"^]
+https://repo.cloudsync.netapp.com/gfc/2K19_ova_1-1-0-78.zip["Windows Server 206.OVA （ NetApp GFC を含む）（ VMware vSphere 6.5 以降）"^]
+https://repo.cloudsync.netapp.com/gfc/2K19_vhd_1-1-0-78.zip["NetApp GFC （ Microsoft Hyper-V ）を含む Windows Server 19VHDX"^]
 
 * グローバルファイルキャッシュエッジソフトウェア：
 +
-https://repo.cloudsync.netapp.com/gfc/GFC-1-0-4-63-Release.exe["NetApp GFC ソフトウェアインストールパッケージ（ .EXE ）"^]
+https://repo.cloudsync.netapp.com/gfc/GFC-1-1-0-78-Release.exe["NetApp GFC ソフトウェアインストールパッケージ（ .EXE ）"^]
 
 * Global File Cache SCOM （ Microsoft Systems Center Operations Manager ）パッケージ：
 +
@@ -41,7 +41,7 @@ https://repo.cloudsync.netapp.com/gfc/SCOM-151.zip["NetApp GFC SCOM 管理パッ
 
 * グローバルファイルキャッシュのドキュメント：
 +
-link:https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf["『 NetApp Global File Cache User Guide 』（ .pdf ）"^]
+https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.1.0.pdf["『 NetApp Global File Cache User Guide 』（ .pdf ）"^]
 
 
 
@@ -143,7 +143,7 @@ VMware vSphere 6.x 以降：
 
 グローバルファイルキャッシュインテリジェントファイルキャッシュディスク（ D ： \ ）のディスクレイテンシは、同時ユーザーあたり 0.5 ミリ秒未満の平均 I/O ディスクレイテンシと 1 MiBps のスループットを実現する必要があります。
 
-詳細については、を参照してください link:https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^]。
+詳細については、を参照してください https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.1.0.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^]。
 
 
 
@@ -164,7 +164,7 @@ Global File Cache は、お客様の環境に透過的に統合されるため�
 
 最適なエクスペリエンスとパフォーマンスを確保するには、『グローバルファイルキャッシュユーザーガイド』に記載されている Microsoft Windows クライアントの要件およびベストプラクティスに準拠することが重要です。これは、すべてのバージョンの Microsoft Windows に適用されます。
 
-詳細については、を参照してください link:https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^]。
+詳細については、を参照してください https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.1.0.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^]。
 
 
 
@@ -172,7 +172,7 @@ Global File Cache は、お客様の環境に透過的に統合されるため�
 
 グローバルファイルキャッシュは、最も一般的なウィルス対策アプリケーションスイートがグローバルファイルキャッシュと互換性があるかどうかを検証するために相応の努力を払いますが、ネットアップでは、これらのプログラムや関連する更新、サービスパック、変更によって発生する互換性の問題やパフォーマンス上の問題については保証できず、責任も負いません。
 
-グローバルファイルキャッシュは、グローバルファイルキャッシュが有効なインスタンス（コアまたはエッジ）に監視ソリューションやアンチウイルスソリューションをインストールしたり、適用したりすることは推奨しません。ソリューションをインストールするか、選択したか、またはポリシーに基づいて、次のベストプラクティスと推奨事項を適用する必要があります。一般的なウィルス対策スイートについては、の付録 A を参照してください link:https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^]。
+グローバルファイルキャッシュは、グローバルファイルキャッシュが有効なインスタンス（コアまたはエッジ）に監視ソリューションやアンチウイルスソリューションをインストールしたり、適用したりすることは推奨しません。ソリューションをインストールするか、選択したか、またはポリシーに基づいて、次のベストプラクティスと推奨事項を適用する必要があります。一般的なウィルス対策スイートについては、の付録 A を参照してください https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.1.0.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^]。
 
 
 
@@ -203,7 +203,7 @@ Global File Cache は、お客様の環境に透過的に統合されるため�
 
 NOTE: Edge アプライアンスにウィルス対策を追加すると、ユーザのパフォーマンスが 10~20% 低下する可能性があります。
 
-詳細については、を参照してください link:https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^]。
+詳細については、を参照してください https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.1.0.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^]。
 
 
 

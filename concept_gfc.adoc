@@ -76,7 +76,7 @@ image:diagram_gfc_image2.png["グローバルファイルキャッシュの詳�
 
 グローバルファイルキャッシュの構成は、 Microsoft Azure 、 Google Cloud Platform 、または Amazon Web Services パブリッククラウドストレージインフラにインストールされた Cloud Volumes ONTAP 、 Cloud Volumes Service 、または Azure NetApp Files でもサポートされます。オンプレミスソリューションは、ネットアップの AFF プラットフォームと FAS プラットフォームでも利用できます。このインストールでは、 Cloud Manager ではなく、グローバルファイルキャッシュサーバ側のコンポーネントを手動で設定して導入する必要があります。
 
-を参照してください link:https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^] を参照してください。
+を参照してください https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.1.0.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^] を参照してください。
 
 
 
@@ -150,7 +150,7 @@ AWS では、 127GB の汎用 SSD を搭載した m4.xlarge インスタンス�
 
 追加の Edge ライセンスを購入するか、サブスクリプションを更新すると、サポート / 運用部門は、サイト数やサブスクリプションの終了日など、ライセンスの詳細を更新します。LMS がサブスクリプションサービスを照会すると、ライセンスの詳細が LMS インスタンスで自動的に更新され、 GFC Core インスタンスおよび Edge インスタンスに適用されます。
 
-を参照してください link:https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.0.3.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^] ライセンスの詳細については、を参照してください。
+を参照してください https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.1.0.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^] ライセンスの詳細については、を参照してください。
 
 
 
@@ -168,6 +168,26 @@ AWS では、 127GB の汎用 SSD を搭載した m4.xlarge インスタンス�
 
 
 == リリースノート
+
+
+
+=== バージョン 1.1.0 の新機能
+
+リリース： 2021 年 6 月 9 日
+
+* 「エッジ同期」機能が追加されました。この機能では、リモートオフィスの複数のエッジが同期され、データは常にキャッシュ / ウォームに保存されます。ファイルを 1 つのエッジでフラッシュ / フェッチすると、 Edge Sync に参加するすべてのエッジ上の同じファイルが更新され、キャッシュされます。Optimus UI は、 Edge Sync 設定用に拡張されています。のセクション 8.4 を参照してください https://repo.cloudsync.netapp.com/gfc/Netapp%20GFC%20User%20Guide%201.1.0.pdf["『 NetApp Global File Cache User Guide 』を参照してください"^] を参照してください。
+* OpenSSL モジュールは、 GFC Edge と GFC Core の間のセキュアな通信に使用されます。このモジュールは、最新かつより安全なバージョン（バージョン 1.1.1k ）にアップグレードされました。
+* GFC ライセンス登録ページには、ネットアップのサブスクリプションを通じてアクティブ化されたライセンスの数が表示されます。
+
+
+
+
+=== バージョン 1.1.0 で解決された問題
+
+* 構成 UI （ Optimus ）の [ 事前入力の編集（ Edit Pre-Population ） ] ページに、エッジホスト名が正しく表示されるようになりました。
+* ライセンス登録時にネットアップライセンスサブスクリプションサーバからの JSON 応答を解析する問題が修正されました。
+* 事前入力（ TappN ）ログが拡張され、すべてのファイルのファイル転送ステータスが記録されるようになりました。
+
 
 
 
