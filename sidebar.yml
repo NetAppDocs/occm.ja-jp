@@ -88,6 +88,8 @@ entries:
       url: https://docs.netapp.com/us-en/cloud-volumes-ontap/index.html
     - title: サポートされている地域
       url: https://cloud.netapp.com/cloud-volumes-global-regions
+    - title: AutoSupport と Active IQ デジタルアドバイザ
+      url: "/concept_active_iq.html"
     - title: デフォルト設定
       url: "/reference_default_configs.html"
   - title: AWS を始めましょう

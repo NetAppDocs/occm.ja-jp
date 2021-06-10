@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: concept_active_iq.html 
+keywords: autosupport, active iq, digital advisor, active iq digital advisor, telemetry 
+summary: ONTAP の AutoSupport コンポーネントはテレメトリを収集し、分析用に送信します。Active IQ デジタルアドバイザは AutoSupport からデータを分析し、プロアクティブなサポートと最適化を提供します。Active IQ は、人工知能を使用して潜在的な問題を特定し、ビジネスに影響が及ぶ前に解決を支援します。 
+---
+= AutoSupport と Active IQ デジタルアドバイザ
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP の AutoSupport コンポーネントはテレメトリを収集し、分析用に送信します。Active IQ デジタルアドバイザは AutoSupport からデータを分析し、プロアクティブなサポートと最適化を提供します。Active IQ は、人工知能を使用して潜在的な問題を特定し、ビジネスに影響が及ぶ前に解決を支援します。
+
+Active IQ では、クラウドベースのポータルとモバイルアプリを通じて、実用的な予測分析とプロアクティブなサポートを提供することで、グローバルハイブリッドクラウド全体でデータインフラを最適化できます。SupportEdge との契約が締結されているネットアップのすべてのお客様は、 Active IQ が提供するデータ主体の分析情報と推奨事項を利用できます（機能は製品やサポートレベルによって異なります）。
+
+Active IQ でできることは次のとおりです。
+
+* アップグレードを計画する。
++
+Active IQ では、 ONTAP の新しいバージョンにアップグレードすることで解決可能な問題が環境内で特定されます。また、アップグレードを計画する際に役立つ Upgrade Advisor コンポーネントも用意されています。
+
+* システムの健全性を表示します。
++
+Active IQ ダッシュボードで、健全性に関する問題が報告されるため、それらの問題の解決に役立ちます。システム容量を監視して、ストレージスペースが不足しないようにします。システムのサポートケースを表示します。
+
+* パフォーマンスを管理
++
+Active IQ には、 ONTAP System Manager に表示されるよりも長期間にわたるシステムパフォーマンスが表示されます。パフォーマンスに影響を与えている構成やシステムの問題を特定します。効率性の最大化Storage Efficiency 指標を表示し、より多くのデータをより少ないスペースに格納する方法を特定します。
+
+* インベントリと構成を表示します。
++
+Active IQ は、インベントリおよびソフトウェアとハードウェアの構成に関するすべての情報を表示します。サービス契約がいつ期限切れになるかを確認し、サービス契約を更新してサポートを継続するかを確認します。
+
+
+
+.関連情報
+* https://docs.netapp.com/us-en/active-iq/["ネットアップのマニュアル： Active IQ Digital Advisor"^]
+* https://aiq.netapp.com/custom-dashboard/search["Active IQ を起動します"^]
+* https://www.netapp.com/us/services/support-edge.aspx["SupportEdge サービス"^]
+

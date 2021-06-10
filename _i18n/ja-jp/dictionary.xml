@@ -309,7 +309,6 @@
   <block id="af7d09d8e320bd6a243e7e191eb7025d" category="cell">ボリュームを選択し、 * 情報 * をクリックします。</block>
   <block id="fa66a5498542b41c797489000210e5cb" category="cell">ボリュームの編集（読み取り / 書き込みボリュームのみ）</block>
   <block id="3a952a555dd0c4bc3d26bcf0d7fde45e" category="list-text">ボリュームを選択し、 * 編集 * をクリックします。</block>
-  <block id="74b11740a1501fbc85831cf5e09c92b4" category="list-text">ボリュームの Snapshot ポリシー、 NFS プロトコルバージョン、 NFS アクセス制御リスト、または共有権限を変更し、 * Update * をクリックします。</block>
   <block id="4d72f256b7a978be1277616666d0ce81" category="admonition">カスタムの Snapshot ポリシーが必要な場合は、 System Manager を使用して作成できます。</block>
   <block id="d50044469c0bf9ab38eff9cf7243fb25" category="cell">ボリュームのクローンを作成します</block>
   <block id="94c63f19be46a66b73356db561854603" category="list-text">ボリュームを選択し、 * Clone * をクリックします。</block>
@@ -7621,9 +7620,7 @@
   <block id="c15bb50c43eaf0ceb1bc0ce3d7503ebd" category="list-text"><block ref="c15bb50c43eaf0ceb1bc0ce3d7503ebd" category="inline-link-rx"></block></block>
   <block id="a06e9c241b02eb678d35f19c0eec257f" category="inline-link">『 SVM ディザスタリカバリエクスプレスガイド』</block>
   <block id="84e6a974fd77c552b4d54c8a9b0727ab" category="list-text"><block ref="84e6a974fd77c552b4d54c8a9b0727ab" category="inline-link-rx"></block></block>
-  <block id="4565c0bd825c32e95e0236c15291479d" category="summary">プロジェクトに Cloud Manager を導入するには、 Google Cloud アカウントを使用します。その後、同じプロジェクトまたは別のプロジェクトに Cloud Volumes ONTAP を導入できます。Cloud Manager に追加した Google Cloud アカウントは、データの階層化に使用されます。</block>
   <block id="0384f4ba39f6a15ffd9b42bfb03b8d83" category="doc">Google Cloud のプロジェクト、権限、アカウント</block>
-  <block id="92f037616c97829d85e15fb85b1129a1" category="paragraph">サービスアカウントを使用すると、 Cloud Manager と同じプロジェクトまたは異なるプロジェクトに Cloud Volumes ONTAP システムを導入して管理する権限が Cloud Manager に付与されます。</block>
   <block id="132816ed2024389d8f7e01bacac81778" category="section-title">Cloud Manager のプロジェクトと権限</block>
   <block id="3fb6500db5f2cccec7627a9cb9fbd38d" category="paragraph">Google Cloud に Cloud Volumes ONTAP を導入する前に、まず Google Cloud プロジェクトに Connector を導入する必要があります。Connector は、オンプレミスでも別のクラウドプロバイダでも実行できません。</block>
   <block id="9233d9e2d56c82c6f122b2d20ce21c26" category="paragraph">Cloud Manager からコネクタを直接導入するには、次の 2 組の権限が必要です。</block>
@@ -9523,7 +9520,6 @@
   <block id="cf9dbb454d116d537856c90591e6e208" category="list-text">Activate Backup * をクリックすると、ボリュームの初期バックアップの作成が開始されます。</block>
   <block id="5853165343224a78fee94389519a9b28" category="list-text">テンプレートを使用して既存のアグリゲートに Cloud Volumes ONTAP ボリュームを作成することはできません。新しいアグリゲートに新しいボリュームが作成されます。</block>
   <block id="c971742a6d0202d2d127e01aef1d9cf5" category="sidebar">オンプレミスの ONTAP データをプライベートクラウドにバックアップ</block>
-  <block id="3ab030725cf2fa531c64f33807a91977" category="paragraph">たとえば、ディスクをクラウドプロバイダから直接削除または移動した場合、ボリュームは有効期限が切れる前に削除できます。</block>
   <block id="aeeec0576922eb4490b5fabadc6c4e36" category="summary">NetApp SnapMirror は、 LAN または WAN 経由でデータを高速でレプリケートするため、仮想環境と従来の環境の両方で、高いデータ可用性と高速なデータレプリケーションを実現できます。ネットアップストレージシステムにデータをレプリケートし、セカンダリデータを継続的に更新することで、データを最新の状態に保ちながら、必要なときにいつでもデータを利用できるようになります。外部レプリケーションサーバは必要ありません。</block>
   <block id="e60519215887d589e148f68a2f5d2a06" category="doc">レプリケーションサービスについて説明します</block>
   <block id="a7633cb435980111bd6034965db779d0" category="list-text">ストレージシステム間でデータをレプリケートして、クラウドまたはクラウド間でバックアップとディザスタリカバリをサポートします。</block>
@@ -10805,4 +10801,29 @@
   <block id="56687950ee1692c1c4b88c4fd8cd206f" category="paragraph">階層化ポリシーが変更され、階層化されたデータの高パフォーマンス階層への移行が開始されます。クラウド内のデータ量によっては、転送プロセスに時間がかかることがあります。</block>
   <block id="801e9079b48c523d52a05513463997fe" category="list-text">* アクション名 * ：オプションで、デフォルト値の代わりにカスタマイズされたアクション名を入力します。</block>
   <block id="a5a5986754b343a286af80fd084ea988" category="paragraph">ドリフトダッシュボードでリソースのドリフトアイコンをクリックすると、非準拠の各リソースのパラメータのリストが表示されます。</block>
+  <block id="283bd8d2789891eb1b037cfdbcb2d28c" category="list-text">信頼できるストレージ管理者モデルに加えて、 Cloud Volumes ONTAP の WORM ストレージも「信頼できるクラウド管理者」モデルで暗黙的に動作します。クラウド管理者は、クラウドプロバイダからクラウドストレージを直接削除するか、編集することで、有効期限が切れる前に WORM データを削除できました。</block>
+  <block id="fbec2ab2a5e28a01696c847ad1605c40" category="list-text">ボリュームの Snapshot ポリシー、 NFS プロトコルバージョン、 NFS アクセス制御リスト（エクスポートポリシー）、または共有権限を変更し、 * Update * をクリックします。</block>
+  <block id="2e41b6df544fc6e3dae54d0f364e3942" category="list-text">NFS ボリュームをマウントする場合は、クライアント VPC のサブネットと一致するようにエクスポートポリシーを設定します。</block>
+  <block id="b5db75984831b38729eaafcd865d67e4" category="inline-link-macro">ボリュームを編集する方法について説明します</block>
+  <block id="64afad3e23afe1889ac21587282b7c44" category="paragraph"><block ref="853e5f55415b423a1ddfdd9cb23b3363" category="inline-link-macro-rx"></block>。</block>
+  <block id="d6e98757d1df5cdc1234e534f0d83efe" category="summary">ONTAP の AutoSupport コンポーネントはテレメトリを収集し、分析用に送信します。Active IQ デジタルアドバイザは AutoSupport からデータを分析し、プロアクティブなサポートと最適化を提供します。Active IQ は、人工知能を使用して潜在的な問題を特定し、ビジネスに影響が及ぶ前に解決を支援します。</block>
+  <block id="0f68b2b3e9b96354c8791aefa8416cb6" category="doc">AutoSupport と Active IQ デジタルアドバイザ</block>
+  <block id="534cf99258be6454cc1c45fef4893c42" category="paragraph">Active IQ では、クラウドベースのポータルとモバイルアプリを通じて、実用的な予測分析とプロアクティブなサポートを提供することで、グローバルハイブリッドクラウド全体でデータインフラを最適化できます。SupportEdge との契約が締結されているネットアップのすべてのお客様は、 Active IQ が提供するデータ主体の分析情報と推奨事項を利用できます（機能は製品やサポートレベルによって異なります）。</block>
+  <block id="4bb6101fde7dd3c4118f6c5807213e74" category="paragraph">Active IQ でできることは次のとおりです。</block>
+  <block id="c47f9b3777f430e38cd3c0ae2055b8d1" category="list-text">アップグレードを計画する。</block>
+  <block id="4d29491e869afe09d1800a5dfad089f6" category="paragraph">Active IQ では、 ONTAP の新しいバージョンにアップグレードすることで解決可能な問題が環境内で特定されます。また、アップグレードを計画する際に役立つ Upgrade Advisor コンポーネントも用意されています。</block>
+  <block id="945e0025643b0030db4eb79effddf1e9" category="list-text">システムの健全性を表示します。</block>
+  <block id="589b90e2e2daa989170300c9cd948b00" category="paragraph">Active IQ ダッシュボードで、健全性に関する問題が報告されるため、それらの問題の解決に役立ちます。システム容量を監視して、ストレージスペースが不足しないようにします。システムのサポートケースを表示します。</block>
+  <block id="20e2eede2c5919a473004ca356d93413" category="list-text">パフォーマンスを管理</block>
+  <block id="ecd6bb6a4fc5a84223f5f3e0d766d80a" category="paragraph">Active IQ には、 ONTAP System Manager に表示されるよりも長期間にわたるシステムパフォーマンスが表示されます。パフォーマンスに影響を与えている構成やシステムの問題を特定します。効率性の最大化Storage Efficiency 指標を表示し、より多くのデータをより少ないスペースに格納する方法を特定します。</block>
+  <block id="f09f89f93d1b162f9bb2ce8cba2684c4" category="list-text">インベントリと構成を表示します。</block>
+  <block id="e42a107e48352d575a987f69367e797c" category="paragraph">Active IQ は、インベントリおよびソフトウェアとハードウェアの構成に関するすべての情報を表示します。サービス契約がいつ期限切れになるかを確認し、サービス契約を更新してサポートを継続するかを確認します。</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="list-title">関連情報</block>
+  <block id="8ebe1398dcefc296b0072bc4530c150c" category="inline-link">ネットアップのマニュアル： Active IQ Digital Advisor</block>
+  <block id="9ef1865545667eeff8a540374f3a7bfc" category="list-text"><block ref="9ef1865545667eeff8a540374f3a7bfc" category="inline-link-rx"></block></block>
+  <block id="a783a523d1f410c5aed80b24061544fb" category="inline-link">Active IQ を起動します</block>
+  <block id="5070674230fc0cc73a00eee7e2e2c117" category="list-text"><block ref="5070674230fc0cc73a00eee7e2e2c117" category="inline-link-rx"></block></block>
+  <block id="c5511c7773a6c5295d79f6a8496c4458" category="inline-link">SupportEdge サービス</block>
+  <block id="ea0b284b83d41ae97d5b96dc6fc68e39" category="list-text"><block ref="ea0b284b83d41ae97d5b96dc6fc68e39" category="inline-link-rx"></block></block>
+  <block id="aa4a2d39c40b194469bb9cbe09c12c88" category="summary">サービスアカウントを使用すると、 Cloud Manager に対し、 Connector と同じプロジェクトまたは異なるプロジェクトにある Cloud Volumes ONTAP システムを導入および管理する権限が付与されます。</block>
 </blocks>
