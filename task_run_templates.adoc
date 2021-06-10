@@ -109,7 +109,7 @@ image:screenshot_run_template_from_canvas.png["テンプレートからボリュ
 +
 _Templates Dashboard_ が表示されます。
 
-. [ * 表示 * ] ボタンをクリックしてテンプレートのアウトラインを表示し、目的のアウトラインであることを確認してから、をクリックします image:screenshot_horizontal_more_button.gif["[ 詳細 ] アイコン"] および * テンプレートの実行 * 。
+. 使用するテンプレートの場合は、 [ * 表示 * ] ボタンをクリックしてテンプレートのアウトラインを表示し、目的のアウトラインであることを確認してから、をクリックします image:screenshot_horizontal_more_button.gif["[ 詳細 ] アイコン"] および * テンプレートの実行 * 。
 +
 image:screenshot_template_run_from_dashboard2.png["テンプレートダッシュボードからテンプレートを実行する方法を示すスクリーンショット"]
 

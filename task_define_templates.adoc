@@ -191,6 +191,7 @@ Cloud Volumes ONTAP アクション定義ページでのボリュームの作成
 +
 image:screenshot_create_template_define_action_cvo.png["入力が必要な空の CVO テンプレートを示すスクリーンショット。"]
 
+. * アクション名 * ：オプションで、デフォルト値の代わりにカスタマイズされたアクション名を入力します。
 . * コンテキスト： * Cloud Volumes ONTAP 作業環境コンテキストを入力します（必要な場合）。
 +
 ユーザが既存の作業環境からテンプレートを起動すると、この情報は自動的に入力されます。
@@ -292,6 +293,7 @@ Azure NetApp Files アクション定義ページでのボリュームの作成�
 +
 image:screenshot_create_template_define_action_anf.png["入力する必要がある空の ANF テンプレートを示すスクリーンショット。"]
 
+. * アクション名 * ：オプションで、デフォルト値の代わりにカスタマイズされたアクション名を入力します。
 . * コンテキスト： * Cloud Volumes ONTAP 作業環境コンテキストを入力します（必要な場合）。
 +
 ユーザが既存の作業環境からテンプレートを起動すると、この情報は自動的に入力されます。
@@ -397,6 +399,7 @@ image:screenshot_create_template_primary_action_onprem.png["新しいアクシ�
 +
 image:screenshot_create_template_define_action_onprem.png["入力する必要がある空のオンプレミス ONTAP テンプレートを示すスクリーンショット。"]
 
+. * アクション名 * ：オプションで、デフォルト値の代わりにカスタマイズされたアクション名を入力します。
 . * コンテキスト： * 必要に応じて、オンプレミスの ONTAP 作業環境を入力します。
 +
 ユーザが既存の作業環境からテンプレートを起動すると、この情報は自動的に入力されます。

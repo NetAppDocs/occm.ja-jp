@@ -4071,8 +4071,6 @@
   <block id="494e659680f3920311106585f89fc251" category="list-text">* クラスタネットワーク * ： ONTAP がオブジェクトストレージへの接続に使用する IPspace を選択します。</block>
   <block id="3da4793f70832a1f06de77ca02441aed" category="paragraph">正しい IPspace を選択すると、 Cloud Tiering を使用して、 ONTAP からクラウドプロバイダのオブジェクトストレージへの接続をセットアップできます。</block>
   <block id="6d954756dedc1d7d245aee367353a05f" category="list-text">「 * Continue * 」をクリックして、階層化するボリュームを選択します。</block>
-  <block id="c3a343dec05d89cab0e884fffef6fd25" category="inline-link-macro">ボリューム階層化ポリシーの詳細については、こちらをご覧ください</block>
-  <block id="9f9742f883f4b565d4a9ae4acaf98c7a" category="paragraph"><block ref="bba6be7e75577329e2362902b0fce016" category="inline-link-macro-rx"></block>。</block>
   <block id="635253659dacfccaf41ba250260189aa" category="paragraph">クラスタのボリュームから Google Cloud オブジェクトストレージへのデータ階層化の設定が完了しました。</block>
   <block id="d2b703645dbe8ebea7d4acb1cec4c8f7" category="inline-link-macro">Cloud Tiering サービスに登録してください</block>
   <block id="eecb0135346d22b101bfcb4a01e70c54" category="paragraph"><block ref="da28acee08343ddaabe9233075f8b119" category="inline-link-macro-rx"></block>。</block>
@@ -9058,7 +9056,6 @@
   <block id="ea73180f9c8cb441163847f36b7e315b" category="cell">ローカルまたはドメインの Windows ユーザまたはグループ、あるいは UNIX ユーザまたはグループを指定します。ドメインの Windows ユーザ名を指定する場合は、 domain\username 形式でユーザのドメインを指定する必要があります。</block>
   <block id="e8ef245792950f46479876f766e2e142" category="inline-link-macro">ボリューム階層化ポリシー</block>
   <block id="b0e17b25c2ac5fdfcde0ef543eb85101" category="inline-link-macro">使用頻度の低いデータをオブジェクトストレージに階層化します</block>
-  <block id="0eda2ac7e8c25c619dc1e1b5bb0801fa" category="list-text">[ ボリュームの作成 ] をクリックします。</block>
   <block id="f97c61e27cbf22f850ec5f0412358f0b" category="paragraph">Cloud Volumes ONTAP によってボリュームがプロビジョニングされ、進捗状況を確認するためのページが表示されます。</block>
   <block id="d1ad4ec8d83a0a6b7ef8ac4c5acc2d2f" category="paragraph"><block ref="d1ad4ec8d83a0a6b7ef8ac4c5acc2d2f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0ca2ea4d1ed88de2980b88af718eedaf" category="paragraph">また、テンプレートにセカンダリ操作が実装されている場合は、たとえばボリュームで Cloud Backup を有効にすると、その操作も実行されます。</block>
@@ -9231,7 +9228,6 @@
   <block id="23785f6732c3c514916bbd8928a06972" category="paragraph"><block ref="23785f6732c3c514916bbd8928a06972" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4eeea4d2c00cd83e33db552c5d9445b2" category="list-text">確認ダイアログで * 共有のグループを削除 * をクリックします。</block>
   <block id="c2d47b6bc95c845ff73e9809734fad1a" category="sidebar">ファイル共有</block>
-  <block id="4d15e800c9b20f5e568052d17678cbd9" category="list-text">このボリュームに必要なすべてのパラメータを定義したら、 * Create Volume * （ボリュームの作成）をクリックします。</block>
   <block id="db382d688e4cb3e09b6e7a743ce00edb" category="paragraph">他のアクションがある場合は、左ペインのアクションをクリックして、完了する必要のあるパラメータを表示します。</block>
   <block id="a31e4f2aa7f454321015e4c5b02bae97" category="inline-image-macro">完了する必要のある追加の操作を選択する方法を示すスクリーンショット。</block>
   <block id="0fdf861b8e72c9acd6caea0924545667" category="paragraph"><block ref="0fdf861b8e72c9acd6caea0924545667" category="inline-image-macro-rx" type="image"></block></block>
@@ -9261,7 +9257,6 @@
   <block id="659cd3bfbac2b58cde01b6e0d80dad9d" category="list-text">* 詳細： * 新規または既存の Azure NetApp Files アカウントの詳細を入力します。</block>
   <block id="18801e3c62d625d360e2e7ea2b62c1b7" category="list-text">テンプレートに使用する名前を左上に入力します。</block>
   <block id="984606c7cc03192959742ae575daf739" category="paragraph">冷却期間 _ を調整することもできます。ボリューム内のユーザデータが「コールド」とみなされてオブジェクトストレージに移動されるまでの日数です。階層化ポリシーでクーリング期間を調整できる場合、 ONTAP 9.8 以降では 2 ~ 183 日、 ONTAP の以前のバージョンでは 2 ~ 63 日の有効値を使用することを推奨します。ベストプラクティスは 2 ~ 63 です。</block>
-  <block id="5a7b583ef6277e6013440c8d2b7a3eb0" category="list-text">なし（ポリシーなし）</block>
   <block id="8bb6337d1f1156b70c31413e7e5c382f" category="list-text">パフォーマンス階層内のボリュームのデータを保持し、クラウド階層に移動されないようにします。</block>
   <block id="0858038570405a06210cfc28ef3aaab3" category="paragraph">データが階層化されるのは、アグリゲートの容量が 50% に達し、データがクーリング期間に達した場合のみです。デフォルトのクーリング日数は 2 ですが、この数は調整できます。</block>
   <block id="8addc19d860e305ae5b980d1caee3858" category="admonition">再加熱されたデータは、スペースがある場合にのみパフォーマンス階層に書き戻されます。パフォーマンス階層の容量が 70% を超えている場合、ブロックはクラウド階層から引き続きアクセスされます。</block>
@@ -9843,7 +9838,6 @@
   <block id="3e6ed63cf0403cbacdfd715ea0874110" category="paragraph">Cloud Backup Service をアクティブにするために、 Cloud Backup ライセンスを Cloud Manager に追加または更新します。</block>
   <block id="c07a71714d1c498b3b812c962b059fc1" category="inline-link-macro">Cloud Backup のライセンスに関する詳細は、こちらをご覧ください</block>
   <block id="575314fc83ec25137bb6939c8869da8c" category="paragraph"><block ref="490987703a6abe453436426a9955d523" category="inline-link-macro-rx"></block>。</block>
-  <block id="1e05d41cec519503f91c48584ed0e100" category="list-text">Cloud Backup をクリックします。</block>
   <block id="d7141d5cb43713979d2ad5828e5b5af3" category="list-text">既存のライセンスがない場合は、 * バックアップライセンスの追加 * をクリックします。</block>
   <block id="c817dd42d2aba7f3adc6992013374ecd" category="list-text">ライセンス情報を入力し、 * バックアップライセンスの追加 * または * バックアップライセンスの更新 * をクリックします。</block>
   <block id="3d70b13cc8147d2605ce9df2e857b776" category="doc">BYOL のライセンスの概要</block>
@@ -10560,7 +10554,6 @@
   <block id="621f6f17b31c046c0e769d995604f944" category="inline-image-macro">に表示される編集アイコンのスクリーンショット ボリューム階層化のテーブルの各行の末尾です</block>
   <block id="d20bf3b0bd8d1cd785f6590b7b461afe" category="list-text">をクリックします <block ref="8a7b4d9eeceba80332a45bd9abdd9ed5" category="inline-image-macro-rx" type="image"></block> アイコンをクリックし、使用する取得オプションを選択して、 * 適用 * をクリックします。</block>
   <block id="39ccd40812695aaa7bc077a0fc353a0e" category="paragraph"><block ref="39ccd40812695aaa7bc077a0fc353a0e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="545b5aba8025b05c9a578861eb34e4ac" category="paragraph">階層化ポリシーが変更され、階層化されたデータの高パフォーマンス階層への移行が開始されます。クラウド内のデータ量によっては、転送プロセスに時間がかかることがあります。</block>
   <block id="5afc7ef8d3c3feeb50817eff11cca91d" category="paragraph"><block ref="5afc7ef8d3c3feeb50817eff11cca91d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7f07b498da08e19eda2c8c1c5ee2c27e" category="summary">非アクティブなデータを Azure Blob Storage に階層化することにより、オンプレミスの ONTAP クラスタの空きスペースを確保します。</block>
   <block id="9640b1e744d31a5c78f456db676baf9c" category="paragraph">Cloud Manager で、オンプレミスの作業環境を選択し、 * 有効化 * をクリックして、プロンプトに従って Azure Blob Storage にデータを階層化します。</block>
@@ -10642,7 +10635,6 @@
   <block id="5bc96ba8ddc4433dd0df94e6350c496e" category="list-text">をクリックします <block ref="a5c9b85c9e509567688aed8106bc419c" category="inline-image-macro-rx" type="image"></block> &gt; * テンプレートからボリュームを追加 * 。</block>
   <block id="f916a27cf580c1cb72d910a796827151" category="list-text">_Context_area では、作業環境に、で開始した作業環境の名前が入力されます。ボリュームを作成する Storage VM を選択する必要があります。</block>
   <block id="fc01b5d15753136b32180a3d2d1f934e" category="list-text">テンプレートからハードコーディングされていないすべてのパラメータに値を追加します。を参照してください <block ref="ffc210af29e51df9a0f7789340c3d70b" category="inline-xref-macro-rx"></block> Cloud Volumes ONTAP ボリュームを導入するために必要なすべてのパラメータの詳細については、を参照してください。</block>
-  <block id="141784e171ceabef283cdfa7412b9143" category="list-text">定義する必要がある他のアクションがない場合（例えば、クラウドバックアップの構成）は、 * ボリュームの作成 * をクリックします。</block>
   <block id="628898f2daed85c109f1e353f32ae510" category="list-text">クラウドバックアップやクラウドデータセンスなど、さまざまな NetApp クラウドサービスを 1 箇所でアクティブ化できます</block>
   <block id="b56e74814d72e13b8bd9eb4561010dba" category="list-text">変更され、テンプレートに適合しなくなったリソースを特定します（「ドリフト」機能を使用）。</block>
   <block id="8c1079a8c3d5e5b11329bf8605fb5f44" category="section-title">「ドリフト」とは何ですか？</block>
@@ -10755,7 +10747,6 @@
   <block id="30055c2914e5982a3d4520c8d7341dae" category="inline-image-macro">1 つのテンプレートに対してドリフトチェックを実行する方法を示すスクリーンショット。</block>
   <block id="09ba0e6ca6c933763f67961bc73d1c49" category="paragraph"><block ref="09ba0e6ca6c933763f67961bc73d1c49" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b36ada9c7c56f786c71fdfbea02d95d3" category="section-title">非準拠リソースのドリフトレポートを作成します</block>
-  <block id="00661f124bb83afa00569a9bc82b778f" category="paragraph">ドリフトダッシュボードでリソースの名前をクリックすると、非準拠の各リソースのパラメータのリストが表示されます。</block>
   <block id="ecbe0476f7995436a619fbec67b150ea" category="inline-image-macro">単一リソースのドリフトレポートのスクリーンショット。</block>
   <block id="e278cbaa988c388eb4f070a874cc7c84" category="paragraph"><block ref="e278cbaa988c388eb4f070a874cc7c84" category="inline-image-macro-rx" type="image"></block></block>
   <block id="afe466f073b1387a5eab0283552b7517" category="paragraph">特定のアプリケーションのワークロード要件に最適化されたボリュームを導入できるように、社内の ONTAP ボリュームテンプレートを作成している場合は、このセクションの手順に従います。</block>
@@ -10803,4 +10794,15 @@
   <block id="36dd597df4be7836397bf1fc26b7c190" category="section-title">グローバルファイルキャッシュの機能拡張</block>
   <block id="80c52adcfc113546fd49ce079a0302f0" category="inline-link-macro">このリリースの新機能および解決済みの問題</block>
   <block id="a16eec32bca711e0f20a84944ee24e81" category="paragraph">グローバルファイルキャッシュソフトウェアバージョン 1.1.0 がリリースされました。新しい「エッジ同期」機能を使用して、リモートオフィスの複数のエッジを同期できます。ファイルが 1 つのエッジでフェッチされると、 Edge Sync に参加しているすべてのエッジ上の同じファイルが更新され、キャッシュされます。を参照してください <block ref="461b41b00984d207275081a22d088210" category="inline-link-macro-rx"></block>。</block>
+  <block id="81f66d76c516c294b128be863cddca8f" category="list-text">ポリシーなし（なし）</block>
+  <block id="f19655713131a95df8c65728557636b2" category="list-text">使用するテンプレートの場合は、 [ * 表示 * ] ボタンをクリックしてテンプレートのアウトラインを表示し、目的のアウトラインであることを確認してから、をクリックします <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> および * テンプレートの実行 * 。</block>
+  <block id="886c4f74c72959b1193d0560ea0547a5" category="inline-link-macro">ボリューム階層化ポリシーとクーリング期間の詳細を確認できます</block>
+  <block id="1139b9a1eeda8411fd62413ee521748f" category="paragraph"><block ref="f8d86c480535d2ceac51a60918448816" category="inline-link-macro-rx"></block>。</block>
+  <block id="2bc51d1d472e80f2611fe5ff280c4ebe" category="list-text">このボリュームに必要なすべてのパラメータを定義したら、 * テンプレートの実行 * をクリックします。</block>
+  <block id="7c40758a149a5a65989345e1641d496d" category="list-text">定義する必要がある他のアクションがない場合（たとえば、 Cloud Backup を構成する場合）は、 * テンプレートを実行 * をクリックします。</block>
+  <block id="4e4c407dde2bf455a9c4fcfb4d35f0cb" category="list-text">[ テンプレートの実行 ] をクリックします。</block>
+  <block id="450b278790e1aa5c116691ead37f4db6" category="list-text">Cloud Backup Licenses （クラウドバックアップライセンス） * をクリックします。</block>
+  <block id="56687950ee1692c1c4b88c4fd8cd206f" category="paragraph">階層化ポリシーが変更され、階層化されたデータの高パフォーマンス階層への移行が開始されます。クラウド内のデータ量によっては、転送プロセスに時間がかかることがあります。</block>
+  <block id="801e9079b48c523d52a05513463997fe" category="list-text">* アクション名 * ：オプションで、デフォルト値の代わりにカスタマイズされたアクション名を入力します。</block>
+  <block id="a5a5986754b343a286af80fd084ea988" category="paragraph">ドリフトダッシュボードでリソースのドリフトアイコンをクリックすると、非準拠の各リソースのパラメータのリストが表示されます。</block>
 </blocks>

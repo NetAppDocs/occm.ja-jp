@@ -42,7 +42,7 @@ image:screenshot_tiering_modify_volumes.gif["単一のボリューム、複数�
 
 . _Tiering Policy_Dialog で、階層化ポリシーを選択し、必要に応じて選択したボリュームのクーリング日数を調整して、 * 適用 * をクリックします。
 +
-link:concept_cloud_tiering.html#volume-tiering-policies["ボリューム階層化ポリシーの詳細については、こちらをご覧ください"]。
+link:concept_cloud_tiering.html#volume-tiering-policies["ボリューム階層化ポリシーとクーリング期間の詳細を確認できます"]。
 
 +
 image:screenshot_tiering_policy_settings.png["設定可能な階層化ポリシーの設定を示すスクリーンショット。"]
@@ -62,7 +62,7 @@ image:screenshot_tiering_policy_settings.png["設定可能な階層化ポリシ�
 . クラスタダッシュボード * で、クラスタの * 階層ボリューム * をクリックします。
 . ボリュームの行をクリックし、階層化ポリシーを選択します。必要に応じてクーリング日数を調整し、 * 適用 * をクリックします。
 +
-link:concept_cloud_tiering.html#volume-tiering-policies["ボリューム階層化ポリシーの詳細については、こちらをご覧ください"]。
+link:concept_cloud_tiering.html#volume-tiering-policies["ボリューム階層化ポリシーとクーリング期間の詳細を確認できます"]。
 
 +
 image:screenshot_tiering_policy_settings.png["設定可能な階層化ポリシーの設定を示すスクリーンショット。"]
