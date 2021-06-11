@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_getting_started_aws_c2s.html 
 keywords: commercial cloud services, c2s, secret region, aws secret region 
-summary: 標準の AWS リージョンと同様に、 AWS Commercial クラウドサービス（ C2S ）環境で Cloud Manager を使用して Cloud Volumes ONTAP を導入できます。 C2S はクラウドストレージにエンタープライズクラスの機能を提供します。 
+summary: 標準の AWS リージョンと同様に、 AWS Commercial クラウドサービス（ C2S ）環境で Cloud Manager を使用して Cloud Volumes ONTAP を導入できます。 C2S はクラウドストレージにエンタープライズクラスの機能を提供します。AWS C2S は米国に固有の閉じたリージョンですIntelligence Community 。このページの手順は、 AWS C2S リージョンユーザにのみ該当します。 
 ---
 = AWS C2S で Cloud Volumes ONTAP を使用する方法を確認します 環境
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: 標準の AWS リージョンと同様に、 AWS Commercial クラウ�
 
 
 [role="lead"]
-標準の AWS リージョンと同様に、 AWS Commercial クラウドサービス（ C2S ）環境で Cloud Manager を使用して Cloud Volumes ONTAP を導入できます。 C2S はクラウドストレージにエンタープライズクラスの機能を提供します。
+標準の AWS リージョンと同様に、で Cloud Manager を使用できます https://aws.amazon.com/federal/us-intelligence-community/["AWS Commercial クラウドサービス（ C2S ）"] Cloud Volumes ONTAP を導入する環境。クラウドストレージにエンタープライズクラスの機能を提供します。AWS C2S は米国に固有の閉じたリージョンですIntelligence Community 。このページの手順は、 AWS C2S リージョンユーザにのみ該当します。
 
 
 

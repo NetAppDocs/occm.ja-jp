@@ -8299,7 +8299,6 @@
   <block id="d18fa3eb2b8c7307a90a60cc4f05ecd6" category="paragraph"><block ref="b3b9bb8617bac69b973f92800bf3807b" category="inline-link-macro-rx"></block>。</block>
   <block id="0ac19842b01b2e595d367d49d3a2f512" category="section-title">Azure で利用できる機能拡張</block>
   <block id="f4ddf81019b69d6e9ec665b8c011944c" category="paragraph">Cloud Volumes ONTAP 9.8 を、国防総省（ DoD ）の影響レベル 6 （ IL6 ）に導入できるようになりました。</block>
-  <block id="a98676a0aecc96c4144acc4018dba3ca" category="summary">標準の AWS リージョンと同様に、 AWS Commercial クラウドサービス（ C2S ）環境で Cloud Manager を使用して Cloud Volumes ONTAP を導入できます。 C2S はクラウドストレージにエンタープライズクラスの機能を提供します。</block>
   <block id="ac46f2b5d78e0710ebb1765d7e4ba12a" category="doc">AWS C2S で Cloud Volumes ONTAP を使用する方法を確認します 環境</block>
   <block id="55ac98eae564c353eeef8edc0d7097c1" category="section-title">C2S でサポートされている機能</block>
   <block id="953b8019e01e302cfda1407c42757ca9" category="paragraph">C2S 環境の Cloud Manager から使用可能な機能は次のとおりです。</block>
@@ -10826,4 +10825,19 @@
   <block id="aa4a2d39c40b194469bb9cbe09c12c88" category="summary">サービスアカウントを使用すると、 Cloud Manager に対し、 Connector と同じプロジェクトまたは異なるプロジェクトにある Cloud Volumes ONTAP システムを導入および管理する権限が付与されます。</block>
   <block id="700f2827ad3c6f919ae6138b4d60a5e1" category="paragraph">クラウドデータセンスの使用コストは、スキャンするデータの量によって異なります。データをスキャンする、 Cloud Manager ワークスペース内の最初の 1TB のデータは無料です。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。を参照してください<block ref="6bbe1a830896033f3d42bc42c545c572" category="inline-link-rx"></block> を参照してください。</block>
   <block id="6deb5c6e27820e725efcd4150fe731f3" category="paragraph"><block ref="980ee729f7602ada6becedc64d110fdb" category="inline-link-rx"></block>。</block>
+  <block id="c98e385ff0cb29fa72690e7823e1bc3c" category="summary">標準の AWS リージョンと同様に、 AWS Commercial クラウドサービス（ C2S ）環境で Cloud Manager を使用して Cloud Volumes ONTAP を導入できます。 C2S はクラウドストレージにエンタープライズクラスの機能を提供します。AWS C2S は米国に固有の閉じたリージョンですIntelligence Community 。このページの手順は、 AWS C2S リージョンユーザにのみ該当します。</block>
+  <block id="5e2af697d363d750a2757a32a4987829" category="inline-link">AWS Commercial クラウドサービス（ C2S ）</block>
+  <block id="5e1976febada1fa49b700760dd574954" category="paragraph">標準の AWS リージョンと同様に、で Cloud Manager を使用できます<block ref="5d288b71381e3fb57ca0bda26da6a1f9" category="inline-link-rx"></block> Cloud Volumes ONTAP を導入する環境。クラウドストレージにエンタープライズクラスの機能を提供します。AWS C2S は米国に固有の閉じたリージョンですIntelligence Community 。このページの手順は、 AWS C2S リージョンユーザにのみ該当します。</block>
+  <block id="e1cf1ab3b6a13be04adaec0e1a631763" category="list-text">VPC とトランジットゲートウェイルートテーブルを関連付ける。</block>
+  <block id="a06cdbb8a44f2c294640279d3f82c73b" category="list-text">*VPC サービスで、 *Transit Gateway Route Tables * をクリックします。</block>
+  <block id="605b1fe731f89c70695aa6338d6054e9" category="list-text">ルートテーブルを選択します。</block>
+  <block id="265f12c96dbdc3de42dcff4362bb573d" category="list-text">[*Associations] をクリックし、 [Create associations] を選択します。</block>
+  <block id="a5eca9db985ea055b47be47eb2ce5e7c" category="list-text">関連付ける添付ファイル（ VPC ）を選択し、 * 関連付けの作成 * をクリックします。</block>
+  <block id="301ebdf8067a213d5a55c65fbb488290" category="section-title">セキュリティに関する推奨事項</block>
+  <block id="cbf7ac8dbbee47678fd563919556b802" category="paragraph">データブローカーマシンのセキュリティを確保するために、次のことを推奨します。</block>
+  <block id="e55d32d29f143f215d415eb6175f7da2" category="list-text">SSH で X11 転送を許可しないでください</block>
+  <block id="db09b1be959d23ab50bb4433e7bced01" category="list-text">SSH では、 TCP 接続の転送を許可しないでください</block>
+  <block id="6bd308c902f8d543a732d9bf38a64e8a" category="list-text">SSH ではトンネルを許可しないでください</block>
+  <block id="ca8fc8fcd76604a346d1a3fd6d719699" category="list-text">SSH では、クライアント環境変数を受け入れないでください</block>
+  <block id="13f13b9a93a0627cafed957d1ab49177" category="paragraph">これらのセキュリティ推奨事項は、データブローカーマシンへの不正な接続を防止するのに役立ちます。</block>
 </blocks>

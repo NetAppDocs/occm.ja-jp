@@ -29,6 +29,14 @@ image:diagram_transit_gateway.png["1 つの VPC における HA 構成を示し�
 
 .手順
 . https://docs.aws.amazon.com/vpc/latest/tgw/tgw-getting-started.html["トランジットゲートウェイを作成し、 VPC をに接続します ゲートウェイ"^]。
+. VPC とトランジットゲートウェイルートテーブルを関連付ける。
++
+.. *VPC サービスで、 *Transit Gateway Route Tables * をクリックします。
+.. ルートテーブルを選択します。
+.. [*Associations] をクリックし、 [Create associations] を選択します。
+.. 関連付ける添付ファイル（ VPC ）を選択し、 * 関連付けの作成 * をクリックします。
+
+
 . HA ペアのフローティング IP アドレスを指定して、転送ゲートウェイのルートテーブルにルートを作成します。
 +
 フローティング IP アドレスは、 Cloud Manager の Working Environment Information ページで確認できます。次に例を示します。
