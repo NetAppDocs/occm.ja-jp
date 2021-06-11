@@ -18,7 +18,7 @@ Cloud Data Sense は、社内のオンプレミスデータソースやクラウ
 
 NOTE: * Cloud Compliance * の名称が 2021 年 6 月に * Cloud Data Sense * に変更されました。
 
-https://cloud.netapp.com/cloud-compliance["Cloud Data Sense のユースケースについて説明します"^]。
+https://cloud.netapp.com/netapp-cloud-data-sense["Cloud Data Sense のユースケースについて説明します"^]。
 
 
 

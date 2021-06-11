@@ -79,7 +79,7 @@ link:concept_cloud_compliance.html["Cloud Data Sense の仕組みの詳細はこ
 
 == クラウドデータのコストはどれくらいですか？
 
-クラウドデータセンスの使用コストは、スキャンするデータの量によって異なります。データをスキャンする、 Cloud Manager ワークスペース内の最初の 1TB のデータは無料です。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。を参照してください https://cloud.netapp.com/cloud-compliance#pricing["価格設定"^] を参照してください。
+クラウドデータセンスの使用コストは、スキャンするデータの量によって異なります。データをスキャンする、 Cloud Manager ワークスペース内の最初の 1TB のデータは無料です。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。を参照してください https://cloud.netapp.com/netapp-cloud-data-sense#Pricing["価格設定"^] を参照してください。
 
 
 

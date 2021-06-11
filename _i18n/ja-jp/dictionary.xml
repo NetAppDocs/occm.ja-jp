@@ -10062,7 +10062,6 @@
   <block id="197b9359d5eb91a4bad52b6e13342baf" category="inline-link-macro">Cloud Data Sense の仕組みの詳細はこちらをご覧ください</block>
   <block id="55d3cce73f7c126fffc5e7e2486ee26c" category="paragraph"><block ref="d2658a3eddb802f7a16f1efcbd3c53ea" category="inline-link-macro-rx"></block>。</block>
   <block id="507eddf0133d6696604714a129b07a0a" category="section-title">クラウドデータのコストはどれくらいですか？</block>
-  <block id="f24f3b2fd59c3e13d9ee632d74b50eb3" category="paragraph">クラウドデータセンスの使用コストは、スキャンするデータの量によって異なります。データをスキャンする、 Cloud Manager ワークスペース内の最初の 1TB のデータは無料です。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。を参照してください<block ref="3c1b53bec1b7cb8a4a4d6b6aa9f27379" category="inline-link-rx"></block> を参照してください。</block>
   <block id="96e962ef0775cfff1c6fd6a71c485c8e" category="section-title">クラウドデータセンスにはどのようなタイプのインスタンスまたは VM が必要ですか。</block>
   <block id="c50ed3e22a4bfeee9406b38e0c990d7d" category="list-text">Azure では、 Cloud Data Sense は、 512 GB のディスクを搭載した Standard_D16s_v3 VM で実行されます。</block>
   <block id="ef56cc072a6aac56c9a359e54f9bf51e" category="list-text">AWS では、 Cloud Data Sense は、 500 GB の gp2 ディスクを使用する m5.-m構築 インスタンスで実行されます。</block>
@@ -10214,7 +10213,6 @@
   <block id="8bfe6344cf4da234d6389ef571fd8648" category="doc">クラウドデータの意味をご確認ください</block>
   <block id="9a8b870ce70f33944148215ae640716e" category="admonition">* Cloud Compliance * の名称が 2021 年 6 月に * Cloud Data Sense * に変更されました。</block>
   <block id="204c243905d5df7c4c3d0da1c22a5f3f" category="inline-link">Cloud Data Sense のユースケースについて説明します</block>
-  <block id="2fdfc2fa621c1d92d05f18c2b4f106fb" category="paragraph"><block ref="675bfe4232912df9ce153f81490222bf" category="inline-link-rx"></block>。</block>
   <block id="06a51c52ef02a569af2a9307dacc091c" category="paragraph">Cloud Data Sense には、コンプライアンスの取り組みに役立つツールがいくつか用意されています。データセンスを使用すると、次のことができます。</block>
   <block id="8ddf12e24e0d5e2abf487fdcc0c9dc41" category="list-text">カスタムステータスをファイルに追加して、ファイルのフォローアップが必要かどうか、または検証済みかどうかを確認できるようにします</block>
   <block id="4daf20d23efab7d2dd169161e78b8602" category="paragraph">クラウドデータセンスには、ガバナンスの取り組みに役立つツールも用意されています。Cloud Data Sense を使用すると、次のことが可能になります。</block>
@@ -10826,4 +10824,6 @@
   <block id="c5511c7773a6c5295d79f6a8496c4458" category="inline-link">SupportEdge サービス</block>
   <block id="ea0b284b83d41ae97d5b96dc6fc68e39" category="list-text"><block ref="ea0b284b83d41ae97d5b96dc6fc68e39" category="inline-link-rx"></block></block>
   <block id="aa4a2d39c40b194469bb9cbe09c12c88" category="summary">サービスアカウントを使用すると、 Cloud Manager に対し、 Connector と同じプロジェクトまたは異なるプロジェクトにある Cloud Volumes ONTAP システムを導入および管理する権限が付与されます。</block>
+  <block id="700f2827ad3c6f919ae6138b4d60a5e1" category="paragraph">クラウドデータセンスの使用コストは、スキャンするデータの量によって異なります。データをスキャンする、 Cloud Manager ワークスペース内の最初の 1TB のデータは無料です。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。を参照してください<block ref="6bbe1a830896033f3d42bc42c545c572" category="inline-link-rx"></block> を参照してください。</block>
+  <block id="6deb5c6e27820e725efcd4150fe731f3" category="paragraph"><block ref="980ee729f7602ada6becedc64d110fdb" category="inline-link-rx"></block>。</block>
 </blocks>
