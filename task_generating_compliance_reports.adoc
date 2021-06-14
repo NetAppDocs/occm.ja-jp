@@ -186,7 +186,7 @@ Cloud Data Sense は、必要に応じて他のグループにレビューして
 
 .手順
 . Cloud Manager の上部で、 * Data Sense * をクリックします。
-. [* Governance * ] をクリックし、 [Governance Dashboard] から [ * データマッピングレポートのダウンロード ] ボタンをクリックします。
+. [* Governance （ガバナンス） ] をクリックし、 [Governance Dashboard] から [* Full Data Mapping Overview Report] ボタンをクリックします。
 +
 image:screenshot_compliance_data_mapping_report_button.png["データマッピングレポートの起動方法を示す Governance Dashboard のスクリーンショット。"]
 

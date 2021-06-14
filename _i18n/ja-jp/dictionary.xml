@@ -10198,7 +10198,6 @@
   <block id="e22f9909ed0cc14af3ae41c9e280cf13" category="list-text">作業環境の特定のサイズ範囲内に存在するファイルの数を示します。</block>
   <block id="7d8121f1bc518fb0e6e184fba09d6b2b" category="list-text">作業環境に保存されているファイルタイプごとのファイルの総数と使用容量が表示されます。</block>
   <block id="e880ed205f16cce0e493e65a4bcedcf6" category="section-title">データマッピングレポートの生成</block>
-  <block id="49363d64166aefc2d7ed5cd8e0841514" category="list-text">[* Governance * ] をクリックし、 [Governance Dashboard] から [ * データマッピングレポートのダウンロード ] ボタンをクリックします。</block>
   <block id="d0af64c4f7407af8df6fa7c454508e42" category="inline-image-macro">データマッピングレポートの起動方法を示す Governance Dashboard のスクリーンショット。</block>
   <block id="da4c7ab91ffb468d191513a8d6c2bdae" category="paragraph"><block ref="da4c7ab91ffb468d191513a8d6c2bdae" category="inline-image-macro-rx" type="image"></block></block>
   <block id="26b847443fa0cba1e0e89bc161a96dc4" category="paragraph">Cloud Data Sense Compliance ダッシュボードの内容をフィルタリングして、すべての作業環境とデータベース、または特定の作業環境のコンプライアンスデータを表示できます。</block>
@@ -10840,4 +10839,5 @@
   <block id="6bd308c902f8d543a732d9bf38a64e8a" category="list-text">SSH ではトンネルを許可しないでください</block>
   <block id="ca8fc8fcd76604a346d1a3fd6d719699" category="list-text">SSH では、クライアント環境変数を受け入れないでください</block>
   <block id="13f13b9a93a0627cafed957d1ab49177" category="paragraph">これらのセキュリティ推奨事項は、データブローカーマシンへの不正な接続を防止するのに役立ちます。</block>
+  <block id="618cc1d8fab41cc033780366f37dfbf9" category="list-text">[* Governance （ガバナンス） ] をクリックし、 [Governance Dashboard] から [* Full Data Mapping Overview Report] ボタンをクリックします。</block>
 </blocks>
