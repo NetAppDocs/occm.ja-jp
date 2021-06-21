@@ -416,10 +416,10 @@ entries:
   url: "/task_viewing_amazon_s3.html"
 - title: Cloud Manager の管理
   entries:
-  - title: システム ID を確認します
-    url: "/task_finding_system_id.html"
   - title: コネクタを管理します
     entries:
+    - title: コネクタのシステム ID を確認します
+      url: "/task_finding_system_id.html"
     - title: 既存のコネクタを管理します
       url: "/task_managing_connectors.html"
     - title: コネクタを作成するさまざまな方法

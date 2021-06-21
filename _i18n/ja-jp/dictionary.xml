@@ -2306,11 +2306,7 @@
   <block id="754f44e5568224983fac09222a6e960e" category="paragraph">このインスタンスの導入には、約 5 ～ 10 分かかります。Cloud Sync サービスから進捗状況を監視できます。このサービスは、インスタンスが使用可能になると自動的に更新されます。</block>
   <block id="d78ea8d5b2348d428c520d98d26204f1" category="list-text">ウィザードのページに入力して、新しい同期関係を作成します。</block>
   <block id="2b5a586719e312931f095b18720b5752" category="paragraph">GCP にデータブローカーを導入し、新しい同期関係を作成しておきます。このデータブローカーは、追加の同期関係とともに使用できます。</block>
-  <block id="9bc9621c18522421888117ea0c2d438f" category="summary">作業の開始を支援するために、ネットアップの担当者から Cloud Manager システムを識別するシステム ID の入力を求められる場合があります。この ID は通常、ライセンスの取得やトラブルシューティングの目的で使用されます。</block>
-  <block id="eb8acdd1be46ebe0645ab7bfd07fa3f7" category="doc">Cloud Manager システム ID を確認する</block>
-  <block id="6bbb2cc740f02cb936245a63255091eb" category="paragraph">作業を開始する際に、ネットアップの担当者から Cloud Manager システム ID の入力を求められることがあります。この ID は通常、ライセンスの取得やトラブルシューティングの目的で使用されます。</block>
   <block id="ae9a2c864810f853fda2fb6bd5cc8d31" category="list-text">Cloud Manager コンソールの右上にあるヘルプアイコンをクリックします。</block>
-  <block id="52dcba8ab7eb7fb84ae25f7cf36529e7" category="paragraph">システム ID が一番上に表示されます。</block>
   <block id="fd21898b0fd643f28eb295f227e2e435" category="inline-image-macro">サポートダッシュボードに表示される Cloud Manager のシステム ID を示すスクリーンショット。</block>
   <block id="c4d1d3ab364ac78cd8691b99102c328b" category="paragraph"><block ref="c4d1d3ab364ac78cd8691b99102c328b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3fea8d091148f89efaad03bb59aa8560" category="summary">Web UI で使用できるクラウド同期機能は、 RESTful API でも使用できます。</block>
@@ -7756,7 +7752,6 @@
   <block id="483b947377ff3a8f0bfe2df65d4f5292" category="sidebar">サポートされている Azure アクセス階層とリージョン</block>
   <block id="1b2031911cafda95c58570aad6f2e65e" category="sidebar">Amazon S3 バケットを表示します</block>
   <block id="6edea119df8ceb037e21f33c59986aaa" category="sidebar">Cloud Manager の管理</block>
-  <block id="b0dbe127c4d3f20fc7c7d9d6be29a60a" category="sidebar">システム ID を確認します</block>
   <block id="c8aded93abddb2318a41b08cba739012" category="sidebar">コネクタを管理します</block>
   <block id="dd6f576fe34949ea5c3d4b196b2c626d" category="sidebar">既存のコネクタを管理します</block>
   <block id="9fa6b4a5aee9ba11ba11ccb17d5d689d" category="sidebar">コネクタを作成するさまざまな方法</block>
@@ -10840,4 +10835,8 @@
   <block id="ca8fc8fcd76604a346d1a3fd6d719699" category="list-text">SSH では、クライアント環境変数を受け入れないでください</block>
   <block id="13f13b9a93a0627cafed957d1ab49177" category="paragraph">これらのセキュリティ推奨事項は、データブローカーマシンへの不正な接続を防止するのに役立ちます。</block>
   <block id="618cc1d8fab41cc033780366f37dfbf9" category="list-text">[* Governance （ガバナンス） ] をクリックし、 [Governance Dashboard] から [* Full Data Mapping Overview Report] ボタンをクリックします。</block>
+  <block id="8c9a93bc06e9dc5b98908a0afff5fbf2" category="summary">作業を開始する際に、ネットアップの担当者からコネクタのシステム ID を尋ねられることがあります。この ID は通常、ライセンスの取得やトラブルシューティングの目的で使用されます。</block>
+  <block id="fc0e712369c80222a41f681969823f7f" category="doc">コネクタのシステム ID の確認</block>
+  <block id="cd9ffc2440addbacdf692ee7105ad41f" category="paragraph">システム ID が一番上に表示されます。</block>
+  <block id="4d23d12ce4b0de2019310ec73c45d09b" category="sidebar">コネクタのシステム ID を確認します</block>
 </blocks>
