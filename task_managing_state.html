@@ -2483,7 +2483,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-31 05:29:06 +0000">05/31/2021</time>
+    <time datetime="2021-06-29 13:22:55 +0000">06/29/2021</time>
     
   
 
@@ -2521,11 +2521,25 @@
 <div class="paragraph">
 <p>特定の時間間隔で Cloud Volumes ONTAP をシャットダウンして、コンピューティングコストを削減できます。これを手動で行う代わりに、 Cloud Manager を設定して、システムを自動的にシャットダウンし、特定の時間に再起動することができます。</p>
 </div>
+<div class="ulist">
+<div class="title">このタスクについて</div>
+<ul>
+<li>
+<p>Cloud Volumes ONTAP システムの自動シャットダウンをスケジュールする際、アクティブなデータ転送が実行中の場合のシャットダウンは延期されます。</p>
 <div class="paragraph">
-<p>Cloud Volumes ONTAP システムの自動シャットダウンをスケジュールする際、アクティブなデータ転送が実行中の場合のシャットダウンは延期されます。転送が完了すると、 Cloud Manager によってシステムがシャットダウンされます。</p>
+<p>転送が完了すると、 Cloud Manager によってシステムがシャットダウンされます。</p>
 </div>
-<div class="paragraph">
+</li>
+<li>
 <p>このタスクでは、 HA ペアの両方のノードの自動シャットダウンをスケジューリングします。</p>
+</li>
+<li>
+<p>スケジュールされたシャットダウンによって Cloud Volumes ONTAP をオフにすると、ブートディスクとルートディスクのスナップショットは作成されません。</p>
+<div class="paragraph">
+<p>スナップショットは、次のセクションで説明するように、手動シャットダウンを実行した場合にのみ自動的に作成されます。</p>
+</div>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">手順</div>
