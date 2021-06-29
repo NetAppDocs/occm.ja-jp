@@ -3336,7 +3336,6 @@
   <block id="049a8722d9a2366145bef1fc4b429506" category="doc">Cloud Volumes ONTAP の状態の管理</block>
   <block id="43a0c13e1a1befde3ea78446dc73bc97" category="section-title">Cloud Volumes ONTAP の自動シャットダウンのスケジュール設定</block>
   <block id="c2faab6b222b905d32bd66117bc13fdd" category="paragraph">特定の時間間隔で Cloud Volumes ONTAP をシャットダウンして、コンピューティングコストを削減できます。これを手動で行う代わりに、 Cloud Manager を設定して、システムを自動的にシャットダウンし、特定の時間に再起動することができます。</block>
-  <block id="2be2b2ddd179c7bce7c6d1446433aa82" category="paragraph">Cloud Volumes ONTAP システムの自動シャットダウンをスケジュールする際、アクティブなデータ転送が実行中の場合のシャットダウンは延期されます。転送が完了すると、 Cloud Manager によってシステムがシャットダウンされます。</block>
   <block id="4df66712f957d539001edc73bbb48742" category="paragraph">このタスクでは、 HA ペアの両方のノードの自動シャットダウンをスケジューリングします。</block>
   <block id="8a1b478d84a6f80cc4e08b04f317d63b" category="list-text">作業環境で、時計アイコンをクリックします。</block>
   <block id="34e70391062bd14a2cecba6e39595285" category="inline-image-macro">スクリーンショット：自動シャットダウンページをロードするアイコンが表示されます。</block>
@@ -10839,4 +10838,8 @@
   <block id="fc0e712369c80222a41f681969823f7f" category="doc">コネクタのシステム ID の確認</block>
   <block id="cd9ffc2440addbacdf692ee7105ad41f" category="paragraph">システム ID が一番上に表示されます。</block>
   <block id="4d23d12ce4b0de2019310ec73c45d09b" category="sidebar">コネクタのシステム ID を確認します</block>
+  <block id="972f49492b79b862ba2dd16a8389b76b" category="list-text">Cloud Volumes ONTAP システムの自動シャットダウンをスケジュールする際、アクティブなデータ転送が実行中の場合のシャットダウンは延期されます。</block>
+  <block id="03ead0a3f8a82f03c58c6d2f5181001a" category="paragraph">転送が完了すると、 Cloud Manager によってシステムがシャットダウンされます。</block>
+  <block id="a38060fa2aae177f0fbef99ef2923324" category="list-text">スケジュールされたシャットダウンによって Cloud Volumes ONTAP をオフにすると、ブートディスクとルートディスクのスナップショットは作成されません。</block>
+  <block id="1f9d590b21cddc0cc992effc141a9be2" category="paragraph">スナップショットは、次のセクションで説明するように、手動シャットダウンを実行した場合にのみ自動的に作成されます。</block>
 </blocks>
