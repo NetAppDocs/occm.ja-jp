@@ -116,7 +116,7 @@ BYOL システムには、 NetApp Support Site のアカウントが必要です
 
 . * IAM ロール * ： Cloud Manager にロールを割り当てるには、デフォルトのオプションを使用することを推奨します。
 +
-独自のポリシーを使用する場合は、それが満たされている必要があります http://mysupport.netapp.com/cloudontap/support/iampolicies["Cloud Volumes ONTAP ノードのポリシーの要件"^]。
+独自のポリシーを使用する場合は、それが満たされている必要があります https://mysupport.netapp.com/site/info/cloud-manager-policies["Cloud Volumes ONTAP ノードのポリシーの要件"^]。
 
 . * ライセンス * ：必要に応じて Cloud Volumes ONTAP のバージョンを変更し、ライセンス、インスタンスタイプ、インスタンステナンシーを選択します。
 +
@@ -357,7 +357,7 @@ BYOL システムには、 NetApp Support Site のアカウントが必要です
 
 . * IAM ロール * ： Cloud Manager にロールを割り当てるには、デフォルトのオプションを使用することを推奨します。
 +
-独自のポリシーを使用する場合は、それが満たされている必要があります http://mysupport.netapp.com/cloudontap/support/iampolicies["Cloud Volumes ONTAP ノードと HA のポリシー要件 メディエーター"^]。
+独自のポリシーを使用する場合は、それが満たされている必要があります https://mysupport.netapp.com/site/info/cloud-manager-policies["Cloud Volumes ONTAP ノードと HA のポリシー要件 メディエーター"^]。
 
 . * ライセンス * ：必要に応じて Cloud Volumes ONTAP のバージョンを変更し、ライセンス、インスタンスタイプ、インスタンステナンシーを選択します。
 +

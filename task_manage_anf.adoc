@@ -116,7 +116,7 @@ image:screenshot_anf_client_secret.gif["Azure AD サービスプリンシパル�
 .手順
 . https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles["Azure でカスタムロールを作成します"^]。
 +
-Azure ポータルでロールを作成する手順は次のとおりです。
+以下に、 Azure ポータルからロールを作成する手順について説明します。
 
 +
 .. サブスクリプションを開き、 * アクセスコントロール（ IAM ） * をクリックします。

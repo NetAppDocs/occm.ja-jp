@@ -873,7 +873,6 @@
   <block id="4c52768b52ca020200e5a926929d951d" category="paragraph">サービスプリンシパルを Azure サブスクリプションにバインドし、必要な権限を持つカスタムロールを割り当てる必要があります。</block>
   <block id="c7fd7910cc533c79ed570ea74704425d" category="inline-link">Azure でカスタムロールを作成します</block>
   <block id="ef25c1a0b85945d65e29d5346a5dd23f" category="list-text"><block ref="e0180ab247b74a9d02ca0dcc4d9ef2d3" category="inline-link-rx"></block>。</block>
-  <block id="9def016d68c45d4e0e61636da67f9b10" category="paragraph">Azure ポータルでロールを作成する手順は次のとおりです。</block>
   <block id="e2ae07d27d3384c0537318da23aa8883" category="list-text">サブスクリプションを開き、 * アクセスコントロール（ IAM ） * をクリックします。</block>
   <block id="1ea0456d996b2276ee91fd4362bb66bb" category="list-text">[ 追加 ] 、 [ カスタムロールの追加 ] の順にクリックします。</block>
   <block id="b935122082d20535294a96ce8dd46599" category="paragraph"><block ref="b935122082d20535294a96ce8dd46599" category="inline-image-macro-rx" type="image"></block></block>
@@ -2028,7 +2027,6 @@
   <block id="3f0092edf66c1dcd1cf938e94eecec23" category="paragraph">NetApp Support Site のアカウントは、従量課金制の場合は任意ですが、 BYOL システムの場合は必須です。 <block ref="f98142e0c5ea80f30a730068b4c56c2a" category="inline-link-macro-rx"></block>。</block>
   <block id="07745782b2f663acabec45bb85011c26" category="paragraph">いずれかのパッケージを選択した場合は、ボリュームを指定してから、設定を確認して承認するだけで済みます。</block>
   <block id="bef2f3bc1b5f6b5fc3eaabff818b8b07" category="inline-link">Cloud Volumes ONTAP ノードのポリシーの要件</block>
-  <block id="f078caf8a52583e42e77d3b027a4d088" category="paragraph">独自のポリシーを使用する場合は、それが満たされている必要があります<block ref="2797a84517d384e383362d2bdf4eae98" category="inline-link-rx"></block>。</block>
   <block id="f897dd944b67f372edf158d00528750c" category="list-text">* ライセンス * ：必要に応じて Cloud Volumes ONTAP のバージョンを変更し、ライセンス、インスタンスタイプ、インスタンステナンシーを選択します。</block>
   <block id="b59834296bbda44060c172c5eee2f7e7" category="inline-image-macro">Licensing （ライセンス）ページのスクリーンショット。Cloud Volumes ONTAP のバージョン、ライセンス（ Explore 、 Standard 、または Premium ）、およびインスタンスタイプが表示されます。</block>
   <block id="809a940715f19de45df54545981f9252" category="paragraph"><block ref="809a940715f19de45df54545981f9252" category="inline-image-macro-rx" type="image"></block></block>
@@ -2104,7 +2102,6 @@
   <block id="a2c930bd534343e87d585c2ee3011f52" category="inline-link">AWS のドキュメント：「 Route Tables</block>
   <block id="5e2b7cebb4bf10923692995c621e2e85" category="paragraph">複数のルートテーブルがある場合は、正しいルートテーブルを選択することが非常に重要です。そうしないと、一部のクライアントが Cloud Volumes ONTAP HA ペアにアクセスできない場合があります。ルーティングテーブルの詳細については、を参照してください<block ref="8ed06851f50fcdbded65cb78f986bfa5" category="inline-link-rx"></block>。</block>
   <block id="b2bb3f64fb5b828b17cb684f3c44b684" category="inline-link">Cloud Volumes ONTAP ノードと HA のポリシー要件 メディエーター</block>
-  <block id="c28c32a77ee0ea01a848deb779696faa" category="paragraph">独自のポリシーを使用する場合は、それが満たされている必要があります<block ref="6c2e6b1a73e6560a550e8fb9f57d1a51" category="inline-link-rx"></block>。</block>
   <block id="bcb01838b65b85f35ba0eb30aab65df6" category="paragraph">インスタンスの起動後に必要な変更があった場合は、後でライセンスまたはインスタンスタイプを変更できます。</block>
   <block id="e33d0575f3a1479ae00cc2fb1764511c" category="list-text">* CIFS セットアップ * ： CIFS プロトコルを選択した場合は、 CIFS サーバをセットアップします。</block>
   <block id="b687eeea7d6170a303a1764ea5284467" category="paragraph">Cloud Manager が Cloud Volumes ONTAP HA ペアを起動します。タイムラインで進行状況を追跡できます。</block>
@@ -7236,7 +7233,6 @@
   <block id="b3ba0fe968ce39dcfc6fe8cc0f1b02da" category="list-text">ネームスペース</block>
   <block id="cf44b4165baccb3bf3e80daa9840aaf8" category="list-text">ネームスペース（必要に応じて X-Vault - 名前空間ヘッダー）</block>
   <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="section-title">例</block>
-  <block id="1e0ebdfe3946d66b2ba776cc948a07cd" category="section-title">ヴォールトのシークレットを使用して、新しい同期関係を作成します</block>
   <block id="aea6bdca8526169a7ce9163bff6fd0c5" category="paragraph">Cloud Sync REST API を使用して関係をポストします。</block>
   <block id="f04d1ca5db491ee5c350c88febbfd65c" category="inline-link">のドキュメントのこのページを参照してください</block>
   <block id="5e9e7d95aabd54bb527be0d397709c97" category="list-text">ユーザトークンと Cloud Central アカウント ID を取得するには、<block ref="73dc639d62ae090371f4b685c336669b" category="inline-link-rx"></block>。</block>
@@ -10842,4 +10838,8 @@
   <block id="03ead0a3f8a82f03c58c6d2f5181001a" category="paragraph">転送が完了すると、 Cloud Manager によってシステムがシャットダウンされます。</block>
   <block id="a38060fa2aae177f0fbef99ef2923324" category="list-text">スケジュールされたシャットダウンによって Cloud Volumes ONTAP をオフにすると、ブートディスクとルートディスクのスナップショットは作成されません。</block>
   <block id="1f9d590b21cddc0cc992effc141a9be2" category="paragraph">スナップショットは、次のセクションで説明するように、手動シャットダウンを実行した場合にのみ自動的に作成されます。</block>
+  <block id="10952fdd0e78f38d00c02822bb64d9b1" category="paragraph">以下に、 Azure ポータルからロールを作成する手順について説明します。</block>
+  <block id="28df6ca63a931a73e42bb1a5832f842b" category="paragraph">独自のポリシーを使用する場合は、それが満たされている必要があります<block ref="e6af531133ecd89e70d5f32cb2437c92" category="inline-link-rx"></block>。</block>
+  <block id="75b4ad07a93bd884b4cecba578453c90" category="paragraph">独自のポリシーを使用する場合は、それが満たされている必要があります<block ref="a2de7a18595694bfdf2d090235d628ca" category="inline-link-rx"></block>。</block>
+  <block id="2551f9b8e10e8b9a8eaf44b595104527" category="section-title">ヴォールトのシークレットを使用して、新しい同期関係を作成します</block>
 </blocks>
