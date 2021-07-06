@@ -9,7 +9,7 @@
   <meta property="og:title" content="バックアップファイルからのデータのリストア | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ja-jp/occm/task_restore_backups.html" />
-	<meta property="og:description" content="バックアップは、特定の時点のデータをリストアできるように、クラウドアカウントのオブジェクトストアに格納されます。保存したバックアップファイルからボリューム全体をリストアすることも、いくつかのファイルのみをリストアする必要がある場合は、保存したバックアップファイルから最大 8 つのファイルを（一度に）リストアするこ..." />
+	<meta property="og:description" content="バックアップは、特定の時点のデータをリストアできるように、クラウドアカウントのオブジェクトストアに格納されます。保存したバックアップファイルからボリューム全体をリストアすることも、いくつかのファイルだけをリストアする必要がある場合は、保存したバックアップファイルから個々のファイルをリストアすることもできます。" />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/occm/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,7 +18,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="バックアップは、特定の時点のデータをリストアできるように、クラウドアカウントのオブジェクトストアに格納されます。保存したバックアップファイルからボリューム全体をリストアすることも、いくつかのファイルのみをリストアする必要がある場合は、保存したバックアップファイルから最大 8 つのファイルを（一度に）リストアするこ...">
+  <meta name="description" content="バックアップは、特定の時点のデータをリストアできるように、クラウドアカウントのオブジェクトストアに格納されます。保存したバックアップファイルからボリューム全体をリストアすることも、いくつかのファイルだけをリストアする必要がある場合は、保存したバックアップファイルから個々のファイルをリストアすることもできます。">
   <meta name="keywords" content=" restoring, restore, restore volumes, restore files, Cloud Backup, cloud backup service, single file restore">
   
   
@@ -1233,6 +1233,32 @@
 
 
 
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/クロスアカウント構成とクロスリージョン構成.pdf" >
+            <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
+            クロスアカウント構成とクロスリージョン構成
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
 
           
         </span>
@@ -2225,7 +2251,14 @@
         バックアップを管理します
       </a></li><li class="  active "><a class="na-navbar-padding" href="task_restore_backups.html">
         バックアップからリストアします
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li><li class="subfolders "><a href="reference_cross_account.html">
+        <div class="na-navbar-padding"> クロスアカウント構成とクロスリージョン構成</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="reference_backup_multi_account_aws.html">
+        AWS でマルチアカウントアクセス用にバックアップを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_backup_multi_account_azure.html">
+        Azure でマルチアカウントアクセス用にバックアップを設定
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> データをコピーして同期</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_sync.html">
@@ -2483,7 +2516,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-07 19:12:31 +0000">06/07/2021</time>
+    <time datetime="2021-07-06 13:43:08 +0000">07/06/2021</time>
     
   
 
@@ -2519,7 +2552,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>バックアップは、特定の時点のデータをリストアできるように、クラウドアカウントのオブジェクトストアに格納されます。保存したバックアップファイルからボリューム全体をリストアすることも、いくつかのファイルのみをリストアする必要がある場合は、保存したバックアップファイルから最大 8 つのファイルを（一度に）リストアすることもできます。</p>
+<p>バックアップは、特定の時点のデータをリストアできるように、クラウドアカウントのオブジェクトストアに格納されます。保存したバックアップファイルからボリューム全体をリストアすることも、いくつかのファイルだけをリストアする必要がある場合は、保存したバックアップファイルから個々のファイルをリストアすることもできます。</p>
 </div>
 <div class="paragraph">
 <p>ボリューム全体を同じ作業環境、同じクラウドアカウントを使用している別の作業環境、またはオンプレミスの ONTAP システムにリストアできます。を参照してください <a href="#Restoring a volume from a backup file">バックアップからのボリュームのリストア</a>。</p>
@@ -2696,22 +2729,23 @@
 <p>ボリュームから数個のファイルのみをリストアする必要がある場合は、ボリューム全体をリストアする代わりに、個々のファイルをリストアすることもできます。同じ作業環境内のボリューム、または同じクラウドアカウントを使用している別の作業環境にファイルをリストアできます。オンプレミスの ONTAP システムにファイルをリストアすることもできます。</p>
 </div>
 <div class="paragraph">
-<p>バックアップファイル内のボリュームから一度に最大 8 個のファイルをリストアできます。選択したデスティネーションボリュームにすべてのファイルがリストアされます。8 個以上のファイルをリストアする必要がある場合は、リストアプロセスをもう一度実行できます。</p>
+<p>選択したデスティネーションボリュームにすべてのファイルがリストアされます。ファイルを別のボリュームにリストアする場合は、リストアプロセスをもう一度実行する必要があります。</p>
 </div>
-<div class="paragraph">
+<div class="sect2">
+<h3 id="前提条件">前提条件</h3>
+<div class="ulist">
+<ul>
+<li>
 <p>ファイルリストア処理を実行するには、 Cloud Volumes ONTAP またはオンプレミスの ONTAP システムで ONTAP のバージョンが 9.6 以降である必要があります。</p>
+</li>
+<li>
+<p>バックアップファイルから個々のファイルをリストアする場合は、別のリストアインスタンス / 仮想マシンを使用します。を参照してください <a href="task_backup_to_s3.html#requirements">"AWS の要件"</a> または <a href="task_backup_to_azure.html#requirements">"Azure の要件"</a> 環境の準備状況を確認</p>
+</li>
+<li>
+<p>AWS のクロスアカウントリストアでは、クラウドプロバイダコンソールで手動の操作が必要になります。AWS のトピックを参照してください <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-walkthroughs-managing-access-example2.html" target="_blank" rel="noopener">"クロスアカウントバケットの権限を付与しています"</a> を参照してください。</p>
+</li>
+</ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="注記"></i>
-</td>
-<td class="content">
-バックアップファイルから個々のファイルをリストアする場合は、別のリストアインスタンス / 仮想マシンを使用します。を参照してください <a href="task_backup_to_s3.html#requirements">"AWS の要件"</a> または <a href="task_backup_to_azure.html#requirements">"Azure の要件"</a> 環境の準備状況を確認
-</td>
-</tr>
-</table>
 </div>
 <div class="sect2">
 <h3 id="ファイルのリストアプロセス">ファイルのリストアプロセス</h3>
@@ -2746,9 +2780,9 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="バックアップファイルからの単一ファイルのリストア">バックアップファイルからの単一ファイルのリストア</h3>
+<h3 id="バックアップファイルからファイルを復元しています">バックアップファイルからファイルを復元しています</h3>
 <div class="paragraph">
-<p>ボリュームバックアップからボリュームに最大 8 つのファイルをリストアする手順は、次のとおりです。ボリュームの名前と、ファイルのリストアに使用するバックアップファイルの日付を確認しておく必要があります。この機能では、ライブブラウズを使用して、バックアップファイル内のディレクトリとファイルのリストを表示できます。</p>
+<p>ボリュームバックアップからボリュームにファイルをリストアするには、次の手順を実行します。ボリュームの名前と、ファイルのリストアに使用するバックアップファイルの日付を確認しておく必要があります。この機能では、ライブブラウズを使用して、バックアップファイル内のディレクトリとファイルのリストを表示できます。</p>
 </div>
 <div class="paragraph">
 <p>バックアップファイルは NetApp Snapshot テクノロジを使用して作成されるため、 UI の中の表現では、各バックアップファイルに「 snapshot 」が呼び出されます。</p>
@@ -2760,18 +2794,6 @@
 <div class="content">
 <iframe width="848" height="480" src="https://www.youtube.com/embed/ROAY6gPL9N0?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="注記"></i>
-</td>
-<td class="content">
-ソースおよびデスティネーションの ONTAP システムで ONTAP のバージョンが 9.6 以降である必要があります。
-</td>
-</tr>
-</table>
 </div>
 <div class="olist arabic">
 <div class="title">手順</div>

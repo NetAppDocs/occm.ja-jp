@@ -1233,6 +1233,32 @@
 
 
 
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/クロスアカウント構成とクロスリージョン構成.pdf" >
+            <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
+            クロスアカウント構成とクロスリージョン構成
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
 
           
         </span>
@@ -2225,7 +2251,14 @@
         バックアップを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_restore_backups.html">
         バックアップからリストアします
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li><li class="subfolders "><a href="reference_cross_account.html">
+        <div class="na-navbar-padding"> クロスアカウント構成とクロスリージョン構成</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="reference_backup_multi_account_aws.html">
+        AWS でマルチアカウントアクセス用にバックアップを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_backup_multi_account_azure.html">
+        Azure でマルチアカウントアクセス用にバックアップを設定
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> データをコピーして同期</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_sync.html">
@@ -2483,7 +2516,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-07 19:12:31 +0000">06/07/2021</time>
+    <time datetime="2021-07-06 13:43:08 +0000">07/06/2021</time>
     
   
 
@@ -2564,10 +2597,10 @@
 <div class="sect3">
 <h4 id="プロバイダの詳細を入力します">プロバイダの詳細を入力します</h4>
 <div class="paragraph quick-margin-para">
-<p>プロバイダのサブスクリプションとリージョンを選択し、新しいリソースグループを作成するか、既存のリソースグループを使用するかを選択します。</p>
+<p>プロバイダのサブスクリプションとリージョンを選択し、新しいリソースグループを作成するか、既存のリソースグループを使用するかを選択します。また、 Microsoft が管理するデフォルトの暗号化キーを使用する代わりに、お客様が管理する独自のキーを選択してデータを暗号化することもできます。</p>
 </div>
 <div class="paragraph quick-margin-para">
-<p><span class="image"><img src="./media/screenshot_backup_provider_settings_azure.png" alt="ONTAP クラスタから Azure Blob Tier にボリュームをバックアップする場合のクラウドプロバイダの詳細を示すスクリーンショット。"></span></p>
+<p><span class="image"><img src="./media/screenshot_backup_provider_settings_azure.png" alt="Cloud Volumes ONTAP システムから Azure Blob Tier にボリュームをバックアップする場合のクラウドプロバイダの詳細を示すスクリーンショット。"></span></p>
 </div>
 </div>
 <div class="sect3">
@@ -2576,7 +2609,7 @@
 <p>デフォルトポリシーでは、毎日ボリュームがバックアップされ、各ボリュームの最新の 30 個のバックアップコピーが保持されます。日単位、週単位、または月単位のバックアップに変更するか、システム定義のポリシーの中からオプションを追加するものを 1 つ選択します。保持するバックアップコピーの数を変更することもできます。</p>
 </div>
 <div class="paragraph quick-margin-para">
-<p><span class="image"><img src="./media/screenshot_backup_policy_azure.png" alt="クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"></span></p>
+<p><span class="image"><img src="./media/screenshot_backup_policy_azure.png" alt="クラウドバックアップの設定を示すスクリーンショット。バックアップポリシーを選択して、バックアップの保持期間を選択できます"></span></p>
 </div>
 </div>
 <div class="sect3">
@@ -2633,6 +2666,14 @@
 <dt class="hdlist1">サポートされている Azure リージョン</dt>
 <dd>
 <p>Cloud Backup はすべての Azure リージョンでサポートされます <a href="https://cloud.netapp.com/cloud-volumes-global-regions" target="_blank" rel="noopener">"Cloud Volumes ONTAP がサポートされている場合"</a>。</p>
+</dd>
+<dt class="hdlist1">別の Azure サブスクリプションでバックアップを作成するために必要なセットアップ</dt>
+<dd>
+<p>デフォルトでは、バックアップは Cloud Volumes ONTAP システムと同じサブスクリプションを使用して作成されます。バックアップに別の Azure サブスクリプションを使用する場合は、が必要です <a href="reference_backup_multi_account_azure.html">"Azure ポータルにログインして、 2 つのサブスクリプションをリンクできます"</a>。</p>
+</dd>
+<dt class="hdlist1">データ暗号化にお客様が管理するキーを使用するために必要な情報</dt>
+<dd>
+<p>Microsoft が管理するデフォルトの暗号化キーを使用する代わりに、アクティベーションウィザードで、お客様が管理する独自のキーを使用してデータを暗号化できます。この場合、 Azure サブスクリプション、キー・ボールト名、およびキーが必要です。 <a href="https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview">"独自のキーの使用方法を参照してください"</a>。</p>
 </dd>
 <dt class="hdlist1">Azure 環境にはアウトバウンドのインターネットアクセスが必要です</dt>
 <dd>
@@ -2731,7 +2772,7 @@
 <li>
 <p>作業環境を選択し、右パネルの [ バックアップと復元 ] サービスの横にある [*Enable] をクリックします。</p>
 <div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_backup_cvo_enable.png" alt="作業環境を選択したあとに使用できるクラウドバックアップ設定ボタンを示すスクリーンショット。"></span></p>
+<p><span class="image"><img src="./media/screenshot_backup_cvo_enable.png" alt="作業環境を選択したあとに使用できる Cloud Backup Enable ボタンを示すスクリーンショット。"></span></p>
 </div>
 </li>
 <li>
@@ -2739,15 +2780,21 @@
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>バックアップの格納に使用する Azure サブスクリプション。</p>
-</li>
-<li>
-<p>バックアップを保存するリージョン。</p>
-</li>
-<li>
-<p>リソースグループ - 新しいリソースグループを作成することも、を選択して既存のリソースグループを選択することもできます。</p>
+<p>バックアップの格納に使用する Azure サブスクリプション。これは、 Cloud Volumes ONTAP システムとは異なるサブスクリプションにすることもできます。</p>
 <div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_backup_provider_settings_azure.png" alt="バッキング時にクラウドプロバイダの詳細を示すスクリーンショット オンプレミスクラスタから Azure Blob にボリュームをバックアップ 階層"></span></p>
+<p>バックアップに別の Azure サブスクリプションを使用する場合は、が必要です <a href="reference_backup_multi_account_azure.html">"Azure ポータルにログインして、 2 つのサブスクリプションをリンクできます"</a>。</p>
+</div>
+</li>
+<li>
+<p>バックアップを保存するリージョン。これは、 Cloud Volumes ONTAP システムが配置されているリージョンとは異なるリージョンにすることもできます。</p>
+</li>
+<li>
+<p>リソースグループ - 新しいリソースグループを作成するか、既存のリソースグループを選択できます。</p>
+</li>
+<li>
+<p>Microsoft が管理するデフォルトの暗号化キーを使用するか、お客様が管理する独自のキーを選択するか (<a href="https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview">"独自のキーの使用方法を参照してください"</a>）。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_backup_provider_settings_azure.png" alt="Cloud Volumes ONTAP システムから Azure Blob Tier にボリュームをバックアップする場合のクラウドプロバイダの詳細を示すスクリーンショット。"></span></p>
 </div>
 </li>
 </ol>
@@ -2756,7 +2803,7 @@
 <li>
 <p>[<em>Define Policy</em>] ページで、バックアップスケジュールと保持の値を選択し、 [* Next] をクリックします。</p>
 <div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_backup_policy_azure.png" alt="クラウドバックアップの設定を示すスクリーンショット。機能を有効または無効にして、バックアップの保持期間を選択できます。"></span></p>
+<p><span class="image"><img src="./media/screenshot_backup_policy_azure.png" alt="クラウドバックアップの設定を示すスクリーンショット。バックアップポリシーを選択して、バックアップの保持期間を選択できます。"></span></p>
 </div>
 <div class="paragraph">
 <p>を参照してください <a href="concept_backup_to_cloud.html#the-schedule-is-daily-weekly-monthly-or-a-combination" target="_blank" rel="noopener">"既存のポリシーのリスト"</a>。</p>

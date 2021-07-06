@@ -1233,6 +1233,32 @@
 
 
 
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/クロスアカウント構成とクロスリージョン構成.pdf" >
+            <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
+            クロスアカウント構成とクロスリージョン構成
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
 
           
         </span>
@@ -2225,7 +2251,14 @@
         バックアップを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_restore_backups.html">
         バックアップからリストアします
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li><li class="subfolders "><a href="reference_cross_account.html">
+        <div class="na-navbar-padding"> クロスアカウント構成とクロスリージョン構成</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="reference_backup_multi_account_aws.html">
+        AWS でマルチアカウントアクセス用にバックアップを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_backup_multi_account_azure.html">
+        Azure でマルチアカウントアクセス用にバックアップを設定
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> データをコピーして同期</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_sync.html">
@@ -2483,7 +2516,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-09 16:22:24 +0000">06/09/2021</time>
+    <time datetime="2021-07-06 13:43:08 +0000">07/06/2021</time>
     
   
 
@@ -2541,19 +2574,22 @@
 <p>クラウドからクラウドへ、オンプレミスの ONTAP システムからパブリッククラウドやプライベートクラウドへバックアップできます。</p>
 </li>
 <li>
+<p>バックアップは、 Cloud Volumes ONTAP システムとは別のサブスクリプションやアカウントに配置することも、別のリージョンに配置することもできます。</p>
+</li>
+<li>
 <p>バックアップデータは、転送中の AES-256 ビット暗号化と TLS 1.2 HTTPS 接続によって保護されます。</p>
 </li>
 <li>
 <p>単一ボリュームで最大 4 、 000 個のバックアップがサポートされます。</p>
 </li>
 <li>
-<p>バックアップは、 Cloud Volumes ONTAP システムと同じリージョンまたは異なるリージョンに保存できます。</p>
-</li>
-<li>
 <p>特定の時点からデータをリストアします。</p>
 </li>
 <li>
 <p>ボリュームまたは個々のファイルをソースシステムまたは別のシステムにリストアする。</p>
+</li>
+<li>
+<p>別のサブスクリプション / アカウントを使用して、または別のリージョンにある作業環境にデータをリストアする。</p>
 </li>
 <li>
 <p>単一ファイルのリストアに使用できる参照可能なファイルカタログです。</p>
@@ -3090,13 +3126,10 @@ StorageGRID へのバックアップには BYOL ライセンスが必要です�
 <div class="ulist">
 <ul>
 <li>
-<p>単一ファイルのリストアでは、個々のファイルをリストアできます。現在、フォルダ / ディレクトリのリストアはサポートされていません。</p>
+<p>単一ファイルのリストアでは、一度に最大 100 個のファイルをリストアできます。現在、フォルダ / ディレクトリのリストアはサポートされていません。</p>
 </li>
 <li>
 <p>リストアするファイルは、デスティネーションボリュームの言語と同じ言語を使用している必要があります。言語が異なる場合は、エラーメッセージが表示されます。</p>
-</li>
-<li>
-<p>AWS のクロスアカウントリストアでは、クラウドプロバイダコンソールで手動の操作が必要になります。を参照してください <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-walkthroughs-managing-access-example2.html" target="_blank" rel="noopener">"クロスアカウントバケットの権限を付与しています"</a> を参照してください。</p>
 </li>
 <li>
 <p>異なるサブネットにある異なる Cloud Manager で同じアカウントを使用する場合、単一ファイルのリストアはサポートされません。</p>

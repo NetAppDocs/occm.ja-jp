@@ -1233,6 +1233,32 @@
 
 
 
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/クロスアカウント構成とクロスリージョン構成.pdf" >
+            <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
+            クロスアカウント構成とクロスリージョン構成
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
 
           
         </span>
@@ -2225,7 +2251,14 @@
         バックアップを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_restore_backups.html">
         バックアップからリストアします
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li><li class="subfolders "><a href="reference_cross_account.html">
+        <div class="na-navbar-padding"> クロスアカウント構成とクロスリージョン構成</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="reference_backup_multi_account_aws.html">
+        AWS でマルチアカウントアクセス用にバックアップを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_backup_multi_account_azure.html">
+        Azure でマルチアカウントアクセス用にバックアップを設定
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> データをコピーして同期</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_sync.html">
@@ -2483,7 +2516,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-07 19:12:31 +0000">06/07/2021</time>
+    <time datetime="2021-07-06 13:43:08 +0000">07/06/2021</time>
     
   
 
@@ -2615,7 +2648,7 @@
 <h2 id="概要図">概要図</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>次の図は、オンプレミスの ONTAP システムをオブジェクトストレージにバックアップする場合と、それらの間の接続を準備する場合の各コンポーネントを示しています。</p>
+<p>次の図は、オンプレミスの ONTAP クラスタをオブジェクトストレージにバックアップする場合と、クラスタ間の接続を準備する場合のそれぞれのコンポーネントの例を示しています。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2937,9 +2970,10 @@
 </div>
 <div class="sect2">
 <h3 id="バックアップ用に-azure-blob-ストレージを準備しています">バックアップ用に Azure BLOB ストレージを準備しています</h3>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Cloud Restore 仮想マシンには、アウトバウンドのインターネットアクセスが必要です。仮想ネットワークまたは物理ネットワークでインターネットアクセスにプロキシサーバを使用している場合は、インスタンスがアウトバウンドのインターネットアクセスを使用して次のエンドポイントに接続していることを確認してください。</p>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 43%;">
@@ -2962,6 +2996,12 @@
 </tr>
 </tbody>
 </table>
+</li>
+<li>
+<p>また、 Microsoft が管理するデフォルトの暗号化キーを使用する代わりに、アクティベーションウィザードで、ユーザーが管理する独自のキーを選択してデータを暗号化します。この場合、 Azure サブスクリプション、キー・ボールト名、およびキーが必要です。 <a href="https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview">"独自のキーの使用方法を参照してください"</a>。</p>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect2">
 <h3 id="google-cloud-storage-でバックアップを準備しています">Google Cloud Storage でバックアップを準備しています</h3>
@@ -3011,7 +3051,10 @@
 </div>
 </li>
 <li>
-<p>プロバイダを選択し、 * 次へ * をクリックして、プロバイダの詳細を入力します。</p>
+<p>プロバイダを選択し、 * 次へ * をクリックします。</p>
+</li>
+<li>
+<p>プロバイダの詳細を入力しますこの情報は、サービスの開始後は変更できないことに注意してください。</p>
 <div class="ulist">
 <ul>
 <li>
@@ -3023,6 +3066,9 @@
 </li>
 <li>
 <p>リソースグループ - 新しいリソースグループを作成することも、を選択して既存のリソースグループを選択することもできます。</p>
+</li>
+<li>
+<p>Microsoft が管理するデフォルトの暗号化キーを使用するか、お客様が管理する独自のキーを選択するか (<a href="https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview">"独自のキーの使用方法を参照してください"</a>）。</p>
 </li>
 <li>
 <p>バックアップするボリュームが配置されている ONTAP クラスタ内の IPspace 。</p>
@@ -3057,13 +3103,13 @@
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
-<p>バックアップ用に Google Cloud Storage バケットを作成する Google Cloud Project 。これは、 Cloud Manager が配置されているプロジェクトとは異なる場合があります。（プロジェクトには、事前定義された Storage Admin ロールを持つサービスアカウントが必要です）。</p>
+<p>バックアップ用に Google Cloud Storage バケットを作成する Google Cloud Project 。（プロジェクトには、事前定義された Storage Admin ロールを持つサービスアカウントが必要です）。</p>
 </li>
 <li>
 <p>バックアップの保存に使用する Google Access Key および Secret Key 。</p>
 </li>
 <li>
-<p>バックアップが保存される Google リージョン。これは、 Cloud Manager が配置されているリージョンとは異なるリージョンにすることもできます。</p>
+<p>バックアップが保存される Google リージョン。</p>
 </li>
 <li>
 <p>バックアップするボリュームが配置されている ONTAP クラスタ内の IPspace 。</p>
@@ -3076,9 +3122,6 @@
 </li>
 <li>
 <p>StorageGRID については、「方法」を参照してください <a href="task_backup_onprem_private_cloud.html">"オンプレミスの ONTAP データをプライベートクラウドにバックアップ"</a>。</p>
-<div class="paragraph">
-<p>この情報は、サービスの開始後は変更できないことに注意してください。</p>
-</div>
 </li>
 </ul>
 </div>
