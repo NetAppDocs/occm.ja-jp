@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: reference_cross_account.html 
+keywords: cross account, backup, aws, azure 
+summary: これらのトピックでは、異なるクラウドプロバイダを使用する場合のクロスアカウント構成用の Cloud Backup の設定方法について説明します。 
+---
+= クロスアカウント構成とクロスリージョン構成
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+これらのトピックでは、異なるクラウドプロバイダを使用する場合のクロスアカウント構成用の Cloud Backup の設定方法について説明します。
+
+* link:reference_backup_multi_account_aws.html["AWS でマルチアカウントアクセス用に Cloud Backup を設定"]
+* link:reference_backup_multi_account_azure.html["Azure でマルチアカウントアクセスに Cloud Backup を設定"]
+

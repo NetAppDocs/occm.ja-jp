@@ -1,0 +1,132 @@
+---
+sidebar: sidebar 
+permalink: reference_backup_multi_account_azure.html 
+keywords: microsoft azure, azure, regions, blob, multiple accounts, multiple regions, backup 
+summary: Cloud Backup では、ソースボリュームとは別の、 Cloud Manager Connector が存在するアカウントとは別のバックアップファイルを Azure アカウントに作成できます。 
+---
+= Azure でマルチアカウントアクセスのバックアップを設定する
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Backup を使用すると、ソースボリュームとは別の Azure アカウントにバックアップファイルを作成できます。これらのアカウントは、 Cloud Manager Connector がインストールされているアカウントとは異なる場合があります。
+
+この方法で設定を行うには、次の手順を実行します。
+
+
+
+== アカウント間の VNet ピアリングを設定します
+
+Cloud Manager で別のアカウントやリージョンの Cloud Volumes ONTAP システムを管理する場合は、 VNet ピアリングを設定する必要があります。ストレージアカウントの接続に VNet ピアリングは必要ありません。
+
+. Azure ポータルにログインし、ホームから仮想ネットワークを選択します。
+. サブスクリプション 1 として使用するサブスクリプションを選択し、ピアリングを設定する VNet 上でクリックします。
++
+image:screenshot_azure_peer1.png[""]
+
+. *cbsnetwork* を選択し、左パネルから *peerings* をクリックし、 * Add * をクリックします。
++
+image:screenshot_azure_peer2.png[""]
+
+. ピアリングページで次の情報を入力し、 * 追加 * をクリックします。
++
+** このネットワークのピアリングリンク名：ピアリング接続を識別する任意の名前を指定できます。
+** リモート仮想ネットワークピアリングリンク名：リモート VNet を識別するための名前を入力します。
+** すべての選択をデフォルト値のままにします。
+** [ サブスクリプション ] で、サブスクリプション 2 を選択します。
+** 仮想ネットワーク：ピアリングを設定するサブスクリプション 2 の仮想ネットワークを選択します。
++
+image:screenshot_azure_peer3.png[""]
+
+
+
+. サブスクリプション 2 VNet 内で同じ手順を実行し、サブスクリプション 1 のサブスクリプションおよびリモート VNet の詳細を指定します。
++
+image:screenshot_azure_peer4.png[""]
+
++
+ピアリング設定が追加されます。
+
++
+image:screenshot_azure_peer5.png[""]
+
+
+
+
+
+== ストレージアカウントのプライベートエンドポイントを作成します
+
+次に、ストレージアカウント用のプライベートエンドポイントを作成する必要があります。この例では、サブスクリプション 1 でストレージアカウントが作成され、 Cloud Volumes ONTAP システムはサブスクリプション 2 で実行されています。
+
+
+NOTE: 次の操作を実行するには、ネットワーク作成者の権限が必要です。
+
+[source, json]
+----
+{
+  "id": "/subscriptions/d333af45-0d07-4154-943dc25fbbce1b18/providers/Microsoft.Authorization/roleDefinitions/4d97b98b-1d4f-4787-a291-c67834d212e7",
+  "properties": {
+    "roleName": "Network Contributor",
+    "description": "Lets you manage networks, but not access to them.",
+    "assignableScopes": [
+      "/"
+    ],
+    "permissions": [
+      {
+        "actions": [
+          "Microsoft.Authorization/*/read",
+          "Microsoft.Insights/alertRules/*",
+          "Microsoft.Network/*",
+          "Microsoft.ResourceHealth/availabilityStatuses/read",
+          "Microsoft.Resources/deployments/*",
+          "Microsoft.Resources/subscriptions/resourceGroups/read",
+          "Microsoft.Support/*"
+        ],
+        "notActions": [],
+        "dataActions": [],
+        "notDataActions": []
+      }
+    ]
+  }
+}
+----
+. ストレージアカウント > ネットワーク > プライベートエンドポイント接続に移動し、 * + プライベートエンドポイント * をクリックします。
++
+image:screenshot_azure_networking1.png[""]
+
+. Private Endpoint_Basics_page で、次の手順を実行します。
++
+** サブスクリプション 2 （ Cloud Manager Connector と Cloud Volumes ONTAP システムを導入する場所）とリソースグループを選択します。
+** エンドポイント名を入力します。
+** リージョンを選択します。
++
+image:screenshot_azure_networking2.png[""]
+
+
+
+. _Resource_page で ' ターゲットサブリソースとして *blob * を選択します
++
+image:screenshot_azure_networking3.png[""]
+
+. 設定ページで、次の操作を行います。
++
+** 仮想ネットワークとサブネットを選択します。
+** [ はい * ] ラジオボタンをクリックして、 [ プライベート DNS ゾーンと統合 ] を選択します。
++
+image:screenshot_azure_networking4.png[""]
+
+
+
+. [ プライベート DNS ゾーン ] リストで、正しいリージョンからプライベートゾーンが選択されていることを確認し、 [ * レビュー + 作成 * ] をクリックします。
++
+image:screenshot_azure_networking5.png[""]
+
++
+これで、ストレージアカウント（サブスクリプション 1 ）は、サブスクリプション 2 で実行されている Cloud Volumes ONTAP システムにアクセスできます。
+
+. Cloud Volumes ONTAP システムでクラウドバックアップの有効化を再度実行して、成功することを確認します。
+

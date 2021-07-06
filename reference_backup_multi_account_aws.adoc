@@ -1,0 +1,189 @@
+---
+sidebar: sidebar 
+permalink: reference_backup_multi_account_aws.html 
+keywords: aws, amazon, s3, multiple accounts, multiple regions, backup 
+summary: Cloud Backup では、ソースボリュームとは別の、 Cloud Manager Connector が存在するアカウントとは別の AWS アカウントにバックアップファイルを作成できます。 
+---
+= AWS でマルチアカウントアクセスのバックアップを設定します
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Backup では、ソースボリュームとは別の AWS アカウントにバックアップファイルを作成できます。これらのアカウントは、 Cloud Manager Connector がインストールされているアカウントとは異なる場合があります。
+
+この方法で設定を行うには、次の手順を実行します。
+
+
+
+== アカウント間に VPC ピアリングを設定します
+
+. 2 つ目のアカウントにログインし、ピアリング接続を作成します。
++
+.. ローカル VPC を選択： 2 つ目のアカウントの VPC を選択します。
+.. 別の VPC を選択：最初のアカウントのアカウント ID を入力します。
+.. Cloud Manager Connector が実行されているリージョンを選択します。このテストセットアップでは、両方のアカウントが同じリージョンで実行されています。
+.. VPC ID ：最初のアカウントにログインし、アクセプタ VPC ID を入力します。Cloud Manager Connector の VPC ID です。
++
+image:screenshot_aws_peer1.png[""]
+
++
+成功ダイアログが表示されます。
+
++
+image:screenshot_aws_peer2.png[""]
+
++
+ピアリング接続のステータスは、 Pending Acceptance と表示されます。
+
++
+image:screenshot_aws_peer3.png[""]
+
+
+
+. 最初のアカウントにログインし、ピアリング要求を承認します。
++
+image:screenshot_aws_peer4.png[""]
+
++
+image:screenshot_aws_peer5.png[""]
+
++
+.. 「 * はい * 」をクリックします。
++
+image:screenshot_aws_peer6.png[""]
+
++
+接続がアクティブと表示されます。また、「 CBS-multi-account 」と呼ばれるピアリング接続を識別するための Name タグも追加しました。
+
++
+image:screenshot_aws_peer7.png[""]
+
+.. 2 つ目のアカウントのピアリング接続を更新し、ステータスが Active に変わったことを確認します。
++
+image:screenshot_aws_peer8.png[""]
+
+
+
+
+
+
+
+== 両方のアカウントのルートテーブルにルートを追加します
+
+. VPC > サブネット > ルートテーブルに移動します。
++
+image:screenshot_aws_route1.png[""]
+
+. [ ルート ] タブをクリックします。
++
+image:screenshot_aws_route2.png[""]
+
+. * ルートの編集 * をクリックします。
++
+image:screenshot_aws_route3.png[""]
+
+. [Add route* ] をクリックし、 [Target] ドロップダウンリストから [* ピアリング接続 *] を選択して、作成したピアリング接続を選択します。
++
+.. デスティネーションで、もう一方のアカウントのサブネット CIDR を入力します。
++
+image:screenshot_aws_route4.png[""]
+
+.. [ ルートの保存（ Save Routes ） ] をクリックすると、 [ 成功（ Success ） ] ダイアログが
++
+image:screenshot_aws_route5.png[""]
+
+
+
+
+
+
+
+== Cloud Manager で 2 つ目の AWS アカウントのクレデンシャルを追加します
+
+. 2 つ目の AWS アカウントを追加します。例： _Saran - XCP - Dev_.
++
+image:screenshot_aws_second_account1.png[""]
+
+. Discover Cloud Volumes ONTAP ページで、新しく追加したクレデンシャルを選択します。
++
+image:screenshot_aws_second_account2.png[""]
+
+. 2 つ目のアカウントから検出する Cloud Volumes ONTAP システムを選択します。2 番目のアカウントに新しい Cloud Volumes ONTAP システムを導入することもできます。
++
+image:screenshot_aws_second_account3.png[""]
+
++
+2 番目のアカウントの Cloud Volumes ONTAP システムが、別のアカウントで実行されている Cloud Manager に追加されます。
+
++
+image:screenshot_aws_second_account4.png[""]
+
+
+
+
+
+== もう一方の AWS アカウントでバックアップを有効にします
+
+. Cloud Manager で、最初のアカウントで実行されている Cloud Volumes ONTAP システムのバックアップを有効にし、 2 番目のアカウントをバックアップファイルの作成場所として選択します。
++
+image:screenshot_aws_pick_second_account1.png[""]
+
+. 次に、バックアップポリシーとバックアップするボリュームを選択し、 Cloud Backup は選択したアカウントで新しいバケットを作成しようとします。
++
+ただし、 Cloud Volumes ONTAP システムへのバケットの追加は失敗します。これは、 Cloud Backup がインスタンスプロファイルを使用してバケットを追加するためで、 Cloud Manager インスタンスプロファイルが 2 番目のアカウントのリソースにアクセスできないためです。
+
+. Cloud Volumes ONTAP システムの作業環境 ID を取得します。
++
+image:screenshot_aws_onprem_we_id.png[""]
+
++
+Cloud Backup は「 NetApp-backup- 」というプレフィックスを付けてすべてのバケットを作成し、作業環境 ID を含めます。たとえば「 87ULea10 」となります
+
+. EC2 ポータルで S3 に移動し、「 87uLea10 」で終わる名前のバケットを検索すると、「 NetApp-backup-vsa87uLea10 」と表示されるバケット名が表示されます。
++
+image:screenshot_aws_find_bucket.png[""]
+
+. バケットをクリックし、 [ 権限 ] タブをクリックして、 [ バケットポリシー ] セクションの *Edit* をクリックします。
++
+image:screenshot_aws_bucket_policy.png[""]
+
+. 新しく作成したバケットのバケットポリシーを追加して、 Cloud Manager の AWS アカウントにアクセスできるようにしてから、変更を保存します。
++
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicRead",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::464262061435:root"
+      },
+      "Action": [
+        "s3:ListBucket",
+        "s3:GetBucketLocation",
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::netapp-backup-vsa87uleai0",
+        "arn:aws:s3:::netapp-backup-vsa87uleai0/*"
+      ]
+    }
+  ]
+}
+----
++
+「 aws 」： "aws ： "arn ： aws ： 464262061435 ： root 」ではアカウント 464262061435 のすべてのリソースにこのバケットへのアクセスを許可しています。特定のロールレベルに減らすには、特定のロールでポリシーを更新します。ロールを個別に追加する場合は、 occm ロールも追加する必要があります。追加しないと、 Cloud Backup UI でバックアップが更新されません。
+
++
+例： "AWS" ： "arn ： aws ： IAM ： 464262061435 ： role/CVO-instance-profileversion10-d8e-IamInstanceRole-IKJP1HC2E7R"
+
+. Cloud Volumes ONTAP システムでクラウドバックアップの有効化を再度実行して、成功することを確認します。
+
