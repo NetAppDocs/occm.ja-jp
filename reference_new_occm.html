@@ -660,6 +660,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1460,6 +1462,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1591,9 +1595,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/データをクラウドに階層化.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/オンプレミスのデータをクラウドに階層化.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            データをクラウドに階層化
+            オンプレミスのデータをクラウドに階層化
           </a>
         </li>
         <span>
@@ -1977,8 +1981,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_overview.html">
         Cloud Manager の詳細をご確認ください
-      </a></li><li class=" "><a class="na-navbar-padding" href="reference_networking.html">
-        ネットワークの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_checklist_cm.html">
+        はじめにチェックリスト
       </a></li><li class=" "><a class="na-navbar-padding" href="task_signing_up.html">
         Cloud Central に登録します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_logging_in.html">
@@ -2037,10 +2041,12 @@
         Azure の HA ペア
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_google_cloud.html">
         GCP の HA ペア
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_license_management.html">
+        ノードベースの BYOL の管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
-      </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2146,12 +2152,12 @@
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 管理</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="task_registering.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
+        ライセンスを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_registering.html">
         従量課金制システムを登録
       </a></li><li class=" "><a class="na-navbar-padding" href="task_setting_up_ontap_cloud.html">
         Cloud Volumes ONTAP をセットアップする
-      </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
-        BYOL ライセンスを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_updating_ontap_cloud.html">
         ソフトウェアを更新します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_modifying_ontap_cloud.html">
@@ -2322,7 +2328,9 @@
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_getting_started_compliance.html">
-        Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+        Cloud Volumes ONTAP とオンプレミス ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_anf.html">
+        Azure NetApp Files の特長
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_s3.html">
         Amazon S3 バケット
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_databases.html">
@@ -2376,7 +2384,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_getting_started_compute.html">
         はじめに
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> データをクラウドに階層化</div>
+        <div class="na-navbar-padding"> オンプレミスのデータをクラウドに階層化</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_tiering.html">
         Cloud Tiering の詳細をご確認ください
@@ -2516,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-09 16:22:24 +0000">06/09/2021</time>
+    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
     
   
 
@@ -2570,6 +2578,269 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="cloud-manager-3-9-8-2021-年-7-月-7-日">Cloud Manager 3.9.8 （ 2021 年 7 月 7 日）</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Cloud Volumes ONTAP enhancements">[Cloud Volumes ONTAP enhancements]</a></p>
+</li>
+<li>
+<p><a href="#Cloud Backup enhancements">[Cloud Backup enhancements]</a></p>
+</li>
+<li>
+<p><a href="#Cloud Tiering enhancements">[Cloud Tiering enhancements]</a></p>
+</li>
+<li>
+<p><a href="#Cloud Data Sense enhancements">[Cloud Data Sense enhancements]</a></p>
+</li>
+<li>
+<p><a href="#Cloud Sync enhancements">[Cloud Sync enhancements]</a></p>
+</li>
+<li>
+<p><a href="#Connector enhancement">[Connector enhancement]</a></p>
+</li>
+<li>
+<p><a href="#Support Dashboard enhancement">[Support Dashboard enhancement]</a></p>
+</li>
+<li>
+<p><a href="#Digital Wallet enhancement">[Digital Wallet enhancement]</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="cloud-volumes-ontap-の機能拡張">Cloud Volumes ONTAP の機能拡張</h3>
+<div class="paragraph">
+<p>このリリースの Cloud Manager では、 Cloud Volumes ONTAP の管理が強化されています。</p>
+</div>
+<div class="sect3">
+<h4 id="すべてのクラウドプロバイダで利用できる機能拡張">すべてのクラウドプロバイダで利用できる機能拡張</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Volumes ONTAP では、新しい充電方法を利用できます。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>* 容量ベースの BYOL * ：容量ベースのライセンスでは、 TiB あたりの Cloud Volumes ONTAP 料金を支払うことができます。このライセンスはネットアップアカウントに関連付けられており、ライセンスで十分な容量が確保されていれば、複数の Cloud Volumes ONTAP システムを作成できるようになっています。容量ベースのライセンスは、 <em>Essential_or_Professional</em> のいずれかのパッケージ形式で提供されます。</p>
+</li>
+<li>
+<p>* Freemium offering * ： Freemium により、ネットアップのすべての Cloud Volumes ONTAP 機能を無償で使用できます（クラウドプロバイダの料金は引き続き適用されます）。システムあたりの割り当て容量は 500 GB に制限されており、サポート契約はありません。最大 10 個の Freemium システムを使用できます。</p>
+<div class="paragraph">
+<p><a href="concept_licensing.html">"これらのライセンスオプションの詳細については、こちらをご覧ください"</a>。</p>
+</div>
+<div class="paragraph">
+<p>次に、 Azure に新しい Cloud Volumes ONTAP システムを導入する際に選択できる充電方法の例を示します。</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_cvo_charging_methods.png" alt="Cloud Volumes ONTAP 作業環境ウィザードのスクリーンショット。充電方法を選択できます。"></span></p>
+</div>
+</li>
+<li>
+<p>Write Once 、 Read Many （ WORM ）ストレージはプレビューではなくなり、 Cloud Volumes ONTAP で一般的に使用できるようになりました。 <a href="concept_worm.html">"WORM ストレージの詳細については、こちらをご覧ください。"</a>。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="aws-で利用できる機能拡張">AWS で利用できる機能拡張</h4>
+<div class="paragraph">
+<p>9.9.1 リリース以降、 Cloud Volumes ONTAP では m5dn.24xlarge インスタンスタイプがサポートされるようになりました。課金方式は PAYGO Premium 、 Bring Your Own License （ BYOL ；お客様所有のライセンスを使用）、 Freemium です。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_991.html" target="_blank" rel="noopener">"AWS で Cloud Volumes ONTAP のサポートされている構成を表示します"</a>。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="azure-で利用できる機能拡張">Azure で利用できる機能拡張</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Azure で Cloud Volumes ONTAP システムを作成する際に、 VM とその関連リソースに対して既存のリソースグループを選択できるようになりました。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_azure_resource_group.png" alt="既存のリソースグループを選択できる作業環境作成ウィザードのスクリーンショット。"></span></p>
+</div>
+<div class="paragraph">
+<p>導入に失敗したり削除したりした場合、 Cloud Manager は次の権限を使用してリソースグループから Cloud Volumes ONTAP リソースを削除します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"Microsoft.Network/privateEndpoints/delete",
+"Microsoft.Compute/availabilitySets/delete",</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cloud Manager に追加した Azure クレデンシャルの各セットに、これらの権限を必ず付与してください。最新の権限のリストは、で確認できます <a href="https://mysupport.netapp.com/site/info/cloud-manager-policies" target="_blank" rel="noopener">"Cloud Manager のポリシーのページです"</a>。</p>
+</div>
+</li>
+<li>
+<p>セキュリティの強化として、 Cloud Volumes ONTAP 用のストレージアカウントの作成時に Cloud Manager で * Blob パブリックアクセス * が無効になるようになりました。</p>
+</li>
+<li>
+<p>デフォルトで、 Cloud Manager は、新しい Cloud Volumes ONTAP システムのブート診断ストレージアカウントで Azure Private Link 接続を有効にするようになりました。</p>
+<div class="paragraph">
+<p>つまり、 Cloud Volumes ONTAP の _all_storage アカウントでプライベートリンクが使用されるようになります。</p>
+</div>
+<div class="paragraph">
+<p><a href="task_enabling_private_link.html">"Azure プライベートリンクとクラウドの使用の詳細については、こちらをご覧ください Volume ONTAP の略"</a>。</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="google-cloud-で利用可能な機能強化">Google Cloud で利用可能な機能強化</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>9.9.1 リリース以降、 Cloud Volumes ONTAP では Balanced Persistent Disk （ pd-bBalanced ）がサポートされるようになりました。</p>
+<div class="paragraph">
+<p>この SSD は、 GB あたりの IOPS を下げて、パフォーマンスとコストのバランスを取ります。</p>
+</div>
+</li>
+<li>
+<p>新しい Cloud Volumes ONTAP システムでは、 custom-4-16384 マシンタイプはサポートされなくなりました。</p>
+<div class="paragraph">
+<p>このタイプのマシンで既存のシステムを実行している場合は、引き続き使用できますが、 n2 標準 -4 マシンタイプに切り替えることをお勧めします。</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_gcp_991.html" target="_blank" rel="noopener">"GCP で Cloud Volumes ONTAP のサポートされている構成を表示します"</a>。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cloud-backup-の機能拡張">Cloud Backup の機能拡張</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Backup で、 Cloud Volumes ONTAP システムで使用していたものとは異なるアカウント / サブスクリプションを使用してバックアップを作成できるようになりました。Cloud Volumes ONTAP システムの導入リージョンとは異なるリージョンにバックアップファイルを作成することもできます。</p>
+<div class="paragraph">
+<p>この機能は、 AWS または Azure を使用している場合にのみ使用できます。既存の作業環境でバックアップを有効にする場合にのみ使用できます。新しい Cloud Volumes ONTAP 作業環境を作成する場合は使用できません。</p>
+</div>
+</li>
+<li>
+<p>セキュリティと制御を強化するために、 Microsoft が管理するデフォルトの暗号化キーを使用する代わりに、アクティベーションウィザードで、お客様が管理する独自のキーを選択してデータを暗号化できます。</p>
+<div class="paragraph">
+<p>オンプレミスの ONTAP システムまたは Azure の Cloud Volumes ONTAP システムからバックアップを設定する場合に使用できます。</p>
+</div>
+</li>
+<li>
+<p>バックアップファイルからの単一ファイルの復元を使用して一度に 8 ファイルのみを復元するという制限がなくなりました。一度に最大 100 個のファイルをリストアできるようになりました。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cloud-tiering-の機能拡張">Cloud Tiering の機能拡張</h3>
+<div class="paragraph">
+<p>データを Azure BLOB ストレージに階層化するときに、 Connector をオンプレミスで実行できるようになりました。Azure VNet にインストールされたコネクタを使用する必要はなくなりました。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cloud-data-sense-の強化">Cloud Data Sense の強化</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>新しい機能を使用すると、データ検出でスキャンしているすべてのソースファイルを任意の NFS 共有に移動できます。これにより、機密ファイルやセキュリティ関連ファイルを特別な領域に移動して、より詳細な分析を行うことができます。</p>
+</li>
+<li>
+<p>完全な分類スキャンを実行する代わりに、データをカテゴリにすばやくマッピングするように選択できるようになりました。これにより、 Governance Dashboard からデータマッピングレポートを表示して、完全なスキャンを実行する必要がない特定のデータソースがある場合にデータの概要を確認できます。</p>
+</li>
+<li>
+<p>特定の Cloud Manager ユーザにファイルを割り当てて、ファイルに対して実行する必要があるフォローアップアクションをそのユーザが実行できるようにします。この機能を既存の機能とともに使用して、カスタムステータスタグをファイルに追加できます。</p>
+<div class="paragraph">
+<p>[ 調査 ] ページの新しいフィルタを使用すると、 [ 割り当て先 ] フィールドに同じユーザーを持つすべてのファイルを簡単に表示できます。</p>
+</div>
+</li>
+<li>
+<p>スキャン要件が小さいユーザの中には、より小さいクラウドデータセンスインスタンスを使用できるようにする必要のあるユーザもいます。できるようになりました。これらの小規模なインスタンスを使用する場合は、いくつかの制限事項があります <a href="https://review.docs.netapp.com/us-en/occm_jul_2021_cc/concept_cloud_compliance.html#using-a-smaller-instance-type">"これらの制限事項を最初に確認してください"</a>。</p>
+</li>
+<li>
+<p>データスキャンは、ストレージシステムとデータにほとんど影響を与えません。ただし、影響が非常に小さい場合でも、「低速」スキャンを実行するように Data Sense を設定できます。</p>
+</li>
+<li>
+<p>[ ファイルの詳細 ] ページとレポートに [ 最終アクセス日時 ] の値が追加され、 CSV 形式で出力されます。これにより、ユーザーがファイルに最後にアクセスしたときを確認できます。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cloud-sync-の機能拡張">Cloud Sync の機能拡張</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Sync のユーザインターフェイスで、 ONTAP S3 ストレージと Google Cloud Storage バケットの間の同期関係がサポートされるようになりました。</p>
+<div class="paragraph">
+<p><a href="reference_sync_requirements.html">"サポートされている同期関係を表示する"</a>。</p>
+</div>
+</li>
+<li>
+<p>同期関係を作成して設定を有効にすると、 Cloud Sync でオブジェクトベースのストレージ間でオブジェクトのメタデータとタグをコピーできるようになりました。</p>
+<div class="paragraph">
+<p><a href="task_sync_creating_relationships.html#settings">"[ オブジェクトのコピー </a> 設定の詳細については、を参照してください"]。</p>
+</div>
+</li>
+<li>
+<p>Google Cloud サービスアカウントで認証することで、外部の橋本 Vault からクレデンシャルにアクセスするようにデータブローカーを設定できるようになりました。</p>
+<div class="paragraph">
+<p><a href="task_external_vault.html">"データブローカーでの橋 Corp Vault の使用の詳細を確認"</a>。</p>
+</div>
+</li>
+<li>
+<p>AWS S3 バケットへの同期関係を設定する際に、ターゲットの S3 バケット内のオブジェクトに保存するタグまたはメタデータを同期関係ウィザードで定義できるようになりました。</p>
+<div class="paragraph">
+<p>タグ付けオプションは、以前は同期関係の設定に含まれていました。</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="コネクターの拡張">コネクターの拡張</h3>
+<div class="paragraph">
+<p>新しいオプションを追加して使いやすくするために、 * コネクターの追加 * ウィザードを再設計しました。タグの追加、ロール（ AWS または Azure ）の指定、プロキシサーバのルート証明書のアップロード、 Terraform Automation のコードの表示、進捗状況の詳細の表示などが可能になりました。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="task_creating_connectors_aws.html">"AWS でコネクタを作成します"</a></p>
+</li>
+<li>
+<p><a href="task_creating_connectors_azure.html">"Azure でコネクタを作成します"</a></p>
+</li>
+<li>
+<p><a href="task_creating_connectors_gcp.html">"GCP でコネクターを作成します"</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="サポートダッシュボードの機能拡張">サポートダッシュボードの機能拡張</h3>
+<div class="paragraph">
+<p>ネットアップサポートサイト（ NSS ）アカウントは、設定メニューではなくサポートダッシュボードで管理できるようになりました。この変更により、すべてのサポート関連情報を 1 箇所から簡単に検索して管理できるようになります。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_nss_management.png" alt="NSS アカウントを追加できる Support Dashboard の NSS Management タブのスクリーンショット。"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="デジタルウォレットの機能強化">デジタルウォレットの機能強化</h3>
+<div class="paragraph">
+<p>これで、 [ デジタルウォレット ] ページは、 [ リソース ] セクションの下にある独自のタブに表示されます。 <a href="task_managing_licenses.html">"デジタルウォレットからライセンスを管理する方法について説明します"</a>。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_digital_wallet_menu.png" alt="All Services オプションの下の Digital Wallet のスクリーンショット。"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="cloud-manager-3-9-7-アップデート-2021-年-7-月-6-日">Cloud Manager 3.9.7 アップデート（ 2021 年 7 月 6 日）</h2>
 <div class="sectionbody">
 <div class="ulist">
@@ -2617,7 +2888,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-2">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2646,7 +2917,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-backup-の機能拡張">Cloud Backup の機能拡張</h3>
+<h3 id="cloud-backup-の機能拡張-2">Cloud Backup の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2746,12 +3017,12 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-volumes-ontap-の機能拡張">Cloud Volumes ONTAP の機能拡張</h3>
+<h3 id="cloud-volumes-ontap-の機能拡張-2">Cloud Volumes ONTAP の機能拡張</h3>
 <div class="paragraph">
 <p>このリリースの Cloud Manager では、 Cloud Volumes ONTAP の管理が強化されています。</p>
 </div>
 <div class="sect3">
-<h4 id="aws-で利用できる機能拡張">AWS で利用できる機能拡張</h4>
+<h4 id="aws-で利用できる機能拡張-2">AWS で利用できる機能拡張</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2773,7 +3044,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="すべてのクラウドプロバイダで利用できる機能拡張">すべてのクラウドプロバイダで利用できる機能拡張</h4>
+<h4 id="すべてのクラウドプロバイダで利用できる機能拡張-2">すべてのクラウドプロバイダで利用できる機能拡張</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2865,7 +3136,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-backup-の機能拡張-2">Cloud Backup の機能拡張</h3>
+<h3 id="cloud-backup-の機能拡張-3">Cloud Backup の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2978,7 +3249,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張-2">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-3">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3004,7 +3275,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-sync-の機能拡張">Cloud Sync の機能拡張</h3>
+<h3 id="cloud-sync-の機能拡張-2">Cloud Sync の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3053,7 +3324,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-volumes-ontap-の機能拡張-2">Cloud Volumes ONTAP の機能拡張</h3>
+<h3 id="cloud-volumes-ontap-の機能拡張-3">Cloud Volumes ONTAP の機能拡張</h3>
 <div class="paragraph">
 <p>このリリースの Cloud Manager では、 Cloud Volumes ONTAP の管理が強化されています。</p>
 </div>
@@ -3067,7 +3338,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="aws-で利用できる機能拡張-2">AWS で利用できる機能拡張</h4>
+<h4 id="aws-で利用できる機能拡張-3">AWS で利用できる機能拡張</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3083,14 +3354,14 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="azure-で利用できる機能拡張">Azure で利用できる機能拡張</h4>
+<h4 id="azure-で利用できる機能拡張-2">Azure で利用できる機能拡張</h4>
 <div class="paragraph">
 <p>Cloud Manager が Azure for Cloud Volumes ONTAP でストレージアカウントを作成する際に、ストレージアカウントの TLS のバージョンが 1.2 になりました。</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-sync-の機能拡張-2">Cloud Sync の機能拡張</h3>
+<h3 id="cloud-sync-の機能拡張-3">Cloud Sync の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3164,7 +3435,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="コネクターの拡張">コネクターの拡張</h3>
+<h3 id="コネクターの拡張-2">コネクターの拡張</h3>
 <div class="paragraph">
 <p>プロキシサーバを設定している場合、プロキシを経由せずに Cloud Manager に API 呼び出しを直接送信するオプションを有効にできるようになりました。このオプションは、 AWS または Google Cloud で実行されているコネクタでサポートされます。</p>
 </div>
@@ -3267,7 +3538,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-volumes-ontap-の機能拡張-3">Cloud Volumes ONTAP の機能拡張</h3>
+<h3 id="cloud-volumes-ontap-の機能拡張-4">Cloud Volumes ONTAP の機能拡張</h3>
 <div class="paragraph">
 <p>このリリースの Cloud Manager では、 Cloud Volumes ONTAP の管理が強化されています。</p>
 </div>
@@ -3281,7 +3552,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="aws-で利用できる機能拡張-3">AWS で利用できる機能拡張</h4>
+<h4 id="aws-で利用できる機能拡張-4">AWS で利用できる機能拡張</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3303,13 +3574,13 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="azure-で利用できる機能拡張-2">Azure で利用できる機能拡張</h4>
+<h4 id="azure-で利用できる機能拡張-3">Azure で利用できる機能拡張</h4>
 <div class="paragraph">
 <p>Cloud Volumes ONTAP 9.8 を、国防総省（ DoD ）の影響レベル 6 （ IL6 ）に導入できるようになりました。</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="google-cloud-で利用可能な機能強化">Google Cloud で利用可能な機能強化</h4>
+<h4 id="google-cloud-で利用可能な機能強化-2">Google Cloud で利用可能な機能強化</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3348,7 +3619,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-sync-の機能拡張-3">Cloud Sync の機能拡張</h3>
+<h3 id="cloud-sync-の機能拡張-4">Cloud Sync の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3380,7 +3651,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張-3">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-4">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3510,7 +3781,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張-4">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-5">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3538,7 +3809,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-sync-の機能拡張-4">Cloud Sync の機能拡張</h3>
+<h3 id="cloud-sync-の機能拡張-5">Cloud Sync の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3646,7 +3917,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-backup-の機能拡張-3">Cloud Backup の機能拡張</h3>
+<h3 id="cloud-backup-の機能拡張-4">Cloud Backup の機能拡張</h3>
 <div class="paragraph">
 <p>個々のファイルを追加のデスティネーション作業環境にリストアできます。</p>
 </div>
@@ -3683,7 +3954,7 @@
 </ul>
 </div>
 <div class="sect2">
-<h3 id="cloud-volumes-ontap-の機能拡張-4">Cloud Volumes ONTAP の機能拡張</h3>
+<h3 id="cloud-volumes-ontap-の機能拡張-5">Cloud Volumes ONTAP の機能拡張</h3>
 <div class="paragraph">
 <p>このリリースの Cloud Manager では、 Cloud Volumes ONTAP に関して次の機能拡張が導入されています。</p>
 </div>
@@ -3770,7 +4041,7 @@ GCP の制限により、ディスクのみの場合の最大システム容量�
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張-5">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-6">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3869,7 +4140,7 @@ GCP の制限により、ディスクのみの場合の最大システム容量�
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-backup-の機能拡張-4">Cloud Backup の機能拡張</h3>
+<h3 id="cloud-backup-の機能拡張-5">Cloud Backup の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3944,7 +4215,7 @@ GCP の制限により、ディスクのみの場合の最大システム容量�
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張-6">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-7">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3963,7 +4234,7 @@ GCP の制限により、ディスクのみの場合の最大システム容量�
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-sync-の機能拡張-5">Cloud Sync の機能拡張</h3>
+<h3 id="cloud-sync-の機能拡張-6">Cloud Sync の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -4112,7 +4383,7 @@ GCP の制限により、ディスクのみの場合の最大システム容量�
 </div>
 </div>
 <div class="sect2">
-<h3 id="cloud-tiering-の機能拡張-7">Cloud Tiering の機能拡張</h3>
+<h3 id="cloud-tiering-の機能拡張-8">Cloud Tiering の機能拡張</h3>
 <div class="ulist">
 <ul>
 <li>

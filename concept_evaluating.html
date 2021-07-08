@@ -9,7 +9,7 @@
   <meta property="og:title" content="評価中 | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ja-jp/occm/concept_evaluating.html" />
-	<meta property="og:description" content="Cloud Volumes ONTAP は、ソフトウェアの代金を支払う前に評価できます。最も一般的な方法は、 PAYGO バージョンの最初の Cloud Volumes ONTAP システムを起動して 30 日間の無償トライアルを入手することです。BYOL の評価ライセンスもオプションです。" />
+	<meta property="og:description" content="Cloud Volumes ONTAP は、ソフトウェアの代金を支払う前に評価できます。3 つのオプションがあります。Freemium 製品、 30 日間無料トライアル、評価ライセンス。" />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/occm/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,8 +18,8 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Cloud Volumes ONTAP は、ソフトウェアの代金を支払う前に評価できます。最も一般的な方法は、 PAYGO バージョンの最初の Cloud Volumes ONTAP システムを起動して 30 日間の無償トライアルを入手することです。BYOL の評価ライセンスもオプションです。">
-  <meta name="keywords" content=" free trial, evaluation, evaluate, eval license, evaluation license, 30-day trial, 30 day trial, 30 day free trial">
+  <meta name="description" content="Cloud Volumes ONTAP は、ソフトウェアの代金を支払う前に評価できます。3 つのオプションがあります。Freemium 製品、 30 日間無料トライアル、評価ライセンス。">
+  <meta name="keywords" content=" free trial, evaluation, evaluate, eval license, evaluation license, 30-day trial, 30 day trial, 30 day free trial, freemium">
   
   
 
@@ -629,6 +629,10 @@
   
 
 
+
+
+
+
     <div class="n-pdf-section">
   <span class="n-pdf-section-title">このページ</span>
 </div>
@@ -642,8 +646,6 @@
 
 
   
-
-
 
 
 
@@ -1460,6 +1462,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1591,9 +1595,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/データをクラウドに階層化.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/オンプレミスのデータをクラウドに階層化.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            データをクラウドに階層化
+            オンプレミスのデータをクラウドに階層化
           </a>
         </li>
         <span>
@@ -1977,8 +1981,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_overview.html">
         Cloud Manager の詳細をご確認ください
-      </a></li><li class=" "><a class="na-navbar-padding" href="reference_networking.html">
-        ネットワークの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_checklist_cm.html">
+        はじめにチェックリスト
       </a></li><li class=" "><a class="na-navbar-padding" href="task_signing_up.html">
         Cloud Central に登録します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_logging_in.html">
@@ -2037,10 +2041,12 @@
         Azure の HA ペア
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_google_cloud.html">
         GCP の HA ペア
-      </a></li></ul></li><li class="  active "><a class="na-navbar-padding" href="concept_evaluating.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_license_management.html">
+        ノードベースの BYOL の管理
+      </a></li><li class="  active "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
-      </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2146,12 +2152,12 @@
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 管理</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="task_registering.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
+        ライセンスを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_registering.html">
         従量課金制システムを登録
       </a></li><li class=" "><a class="na-navbar-padding" href="task_setting_up_ontap_cloud.html">
         Cloud Volumes ONTAP をセットアップする
-      </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
-        BYOL ライセンスを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_updating_ontap_cloud.html">
         ソフトウェアを更新します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_modifying_ontap_cloud.html">
@@ -2322,7 +2328,9 @@
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_getting_started_compliance.html">
-        Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+        Cloud Volumes ONTAP とオンプレミス ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_anf.html">
+        Azure NetApp Files の特長
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_s3.html">
         Amazon S3 バケット
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_databases.html">
@@ -2376,7 +2384,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_getting_started_compute.html">
         はじめに
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> データをクラウドに階層化</div>
+        <div class="na-navbar-padding"> オンプレミスのデータをクラウドに階層化</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_tiering.html">
         Cloud Tiering の詳細をご確認ください
@@ -2516,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-04-24 05:54:00 +0000">04/24/2021</time>
+    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
     
   
 
@@ -2544,10 +2552,21 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Cloud Volumes ONTAP は、ソフトウェアの代金を支払う前に評価できます。最も一般的な方法は、 PAYGO バージョンの最初の Cloud Volumes ONTAP システムを起動して 30 日間の無償トライアルを入手することです。BYOL の評価ライセンスもオプションです。</p>
+<p>Cloud Volumes ONTAP は、ソフトウェアの代金を支払う前に評価できます。Freemium 製品、 30 日間無料トライアル、評価ライセンスの 3 つのオプションがあります。</p>
 </div>
 <div class="paragraph">
 <p>コンセプトの実証のサポートが必要な場合は、にお問い合わせください <a href="https://cloud.netapp.com/contact-cds" target="_blank" rel="noopener">"営業チーム"</a> または、から利用できるチャットオプションを使用して、連絡してください <a href="https://cloud.netapp.com" target="_blank" rel="noopener">"NetApp Cloud Central"</a> さらに、 Cloud Manager からも実行できます。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="フリーミアムのサービス">フリーミアムのサービス</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Freemium サービスでは、ネットアップのすべての Cloud Volumes ONTAP 機能を無償で使用できます（クラウドプロバイダの料金が引き続き適用されます）。ノードあたりの割り当て容量は 500GB に制限されており、サポート契約はありません。最大 10 個の Freemium システムを使用できます。</p>
+</div>
+<div class="paragraph">
+<p><a href="concept_licensing.html">"Freemium 製品の詳細をご覧ください"</a>。</p>
 </div>
 </div>
 </div>
@@ -2569,7 +2588,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="byol-の評価ライセンス">BYOL の評価ライセンス</h2>
+<h2 id="ノードベースのライセンスの評価用ライセンスです">ノードベースのライセンスの評価用ライセンスです</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>BYOL の評価ライセンスは、ネットアップから期間ライセンスを購入することで Cloud Volumes ONTAP の支払いを検討しているお客様向けのオプションです。評価用ライセンスは、アカウントチーム、セールスエンジニア、またはパートナーから入手できます。</p>
@@ -2578,7 +2597,7 @@
 <p>評価キーは 30 日間有効で、作成日に関係なく、 30 日間ごとに複数回使用できます。</p>
 </div>
 <div class="paragraph">
-<p>30 日が経過すると毎日シャットダウンが発生するため、先に計画することをお勧めします。インプレースアップグレードの評価ライセンスの上に新しい BYOL ライセンスを適用できます（シングルノードシステムの再起動が必要です）。ホストされているデータは、トライアル期間の終了時に削除されません。</p>
+<p>30 日が経過すると、毎日のシャットダウンが発生するため、先に計画することをお勧めします。インプレースアップグレードの評価ライセンスの上に新しい BYOL ライセンスを適用できます（シングルノードシステムの再起動が必要です）。ホストされているデータは、トライアル期間の終了時に削除されません。</p>
 </div>
 <div class="admonitionblock tip">
 <table>

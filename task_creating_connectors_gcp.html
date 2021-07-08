@@ -19,7 +19,7 @@
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
   <meta name="description" content="Cloud Manager のほとんどの機能を使用するには、 Account Admin がコネクタを導入する必要があります。Connector を使用すると、 Cloud Manager でパブリッククラウド環境内のリソースとプロセスを管理できます。">
-  <meta name="keywords" content=" create connector in GCP, create connector in azure, create connector in gcp, launch connector in GCP, launch connector in azure, launch connector in gcp, deploy connector in GCP, deploy connector in azure, deploy connector in gcp">
+  <meta name="keywords" content=" create connector in gcp, launch connector in gcp, deploy connector in gcp, gcp connector, connector gcp, connector permissions">
   
   
 
@@ -640,6 +640,8 @@
     
 
   
+
+
 
 
 
@@ -1460,6 +1462,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1591,9 +1595,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/データをクラウドに階層化.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/オンプレミスのデータをクラウドに階層化.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            データをクラウドに階層化
+            オンプレミスのデータをクラウドに階層化
           </a>
         </li>
         <span>
@@ -1977,8 +1981,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_overview.html">
         Cloud Manager の詳細をご確認ください
-      </a></li><li class=" "><a class="na-navbar-padding" href="reference_networking.html">
-        ネットワークの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_checklist_cm.html">
+        はじめにチェックリスト
       </a></li><li class=" "><a class="na-navbar-padding" href="task_signing_up.html">
         Cloud Central に登録します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_logging_in.html">
@@ -2037,10 +2041,12 @@
         Azure の HA ペア
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_google_cloud.html">
         GCP の HA ペア
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_license_management.html">
+        ノードベースの BYOL の管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
-      </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2146,12 +2152,12 @@
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 管理</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="task_registering.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
+        ライセンスを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_registering.html">
         従量課金制システムを登録
       </a></li><li class=" "><a class="na-navbar-padding" href="task_setting_up_ontap_cloud.html">
         Cloud Volumes ONTAP をセットアップする
-      </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
-        BYOL ライセンスを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_updating_ontap_cloud.html">
         ソフトウェアを更新します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_modifying_ontap_cloud.html">
@@ -2322,7 +2328,9 @@
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_getting_started_compliance.html">
-        Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+        Cloud Volumes ONTAP とオンプレミス ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_anf.html">
+        Azure NetApp Files の特長
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_s3.html">
         Amazon S3 バケット
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_databases.html">
@@ -2376,7 +2384,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_getting_started_compute.html">
         はじめに
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> データをクラウドに階層化</div>
+        <div class="na-navbar-padding"> オンプレミスのデータをクラウドに階層化</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_tiering.html">
         Cloud Tiering の詳細をご確認ください
@@ -2516,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-05-14 13:06:40 +0000">05/14/2021</time>
+    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
     
   
 
@@ -2675,13 +2683,13 @@
 <div class="title">必要なもの</div>
 <ul>
 <li>
-<p>。 <a href="https://mysupport.netapp.com/site/info/cloud-manager-policies" target="_blank" rel="noopener">"必要な権限"</a> をクリックしてください。</p>
+<p>。 <a href="https://mysupport.netapp.com/site/info/cloud-manager-policies" target="_blank" rel="noopener">"必要な権限"</a> Google Cloud アカウントの場合は、このページの最初のセクションで説明します。</p>
 </li>
 <li>
 <p>Google Cloud プロジェクト。</p>
 </li>
 <li>
-<p>Cloud Volumes ONTAP の作成と管理に必要な権限を持つサービスアカウント。</p>
+<p>このページの最初のセクションで説明するように、 Cloud Volumes ONTAP の作成と管理に必要な権限を持つサービスアカウント。</p>
 </li>
 <li>
 <p>Google Cloud リージョン内の VPC とサブネット。</p>
@@ -2698,9 +2706,6 @@
 </div>
 </li>
 <li>
-<p>[ * 開始しましょう * ] をクリックします。</p>
-</li>
-<li>
 <p>クラウドプロバイダとして * Google Cloud Platform * を選択します。</p>
 <div class="paragraph">
 <p>Connector は、作成する作業環境の種類や有効にするサービスへのネットワーク接続を確立する必要があることに注意してください。</p>
@@ -2710,7 +2715,11 @@
 </div>
 </li>
 <li>
-<p>必要な情報を確認し、 [* Continue （続行） ] をクリックします。</p>
+<p>ウィザードの手順に従って、コネクタを作成します。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>* 準備をしてください * ：必要なものを確認してください。</p>
 </li>
 <li>
 <p>プロンプトが表示されたら、 Google アカウントにログインします。このアカウントには、仮想マシンインスタンスを作成するために必要な権限が付与されている必要があります。</p>
@@ -2719,11 +2728,7 @@
 </div>
 </li>
 <li>
-<p>必要な情報を入力します。</p>
-<div class="ulist">
-<ul>
-<li>
-<p>* 基本設定 * ：仮想マシンインスタンスの名前を入力し、必要な権限を持つプロジェクトおよびサービスアカウントを指定します。</p>
+<p>* 基本設定 * ：仮想マシンインスタンスの名前を入力し、タグを指定し、プロジェクトを選択してから、必要な権限を持つサービスアカウントを選択します（詳細については、上記のセクションを参照してください）。</p>
 </li>
 <li>
 <p>* 場所 * ：インスタンスのリージョン、ゾーン、 VPC 、およびサブネットを指定します。</p>
@@ -2746,11 +2751,14 @@
 </table>
 </div>
 </li>
+<li>
+<p>* 復習 * ：選択内容を確認して、設定が正しいことを確認してください。</p>
+</li>
 </ul>
 </div>
 </li>
 <li>
-<p>[ 作成（ Create ） ] をクリックします。</p>
+<p>[ 追加（ Add ） ] をクリックします。</p>
 <div class="paragraph">
 <p>インスタンスの準備が完了するまでに約 7 分かかります。処理が完了するまで、ページには表示されたままにしておいてください。</p>
 </div>

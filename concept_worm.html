@@ -660,6 +660,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1460,6 +1462,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1591,9 +1595,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/データをクラウドに階層化.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/オンプレミスのデータをクラウドに階層化.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            データをクラウドに階層化
+            オンプレミスのデータをクラウドに階層化
           </a>
         </li>
         <span>
@@ -1977,8 +1981,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_overview.html">
         Cloud Manager の詳細をご確認ください
-      </a></li><li class=" "><a class="na-navbar-padding" href="reference_networking.html">
-        ネットワークの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_checklist_cm.html">
+        はじめにチェックリスト
       </a></li><li class=" "><a class="na-navbar-padding" href="task_signing_up.html">
         Cloud Central に登録します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_logging_in.html">
@@ -2037,10 +2041,12 @@
         Azure の HA ペア
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_google_cloud.html">
         GCP の HA ペア
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_license_management.html">
+        ノードベースの BYOL の管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
-      </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2146,12 +2152,12 @@
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 管理</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="task_registering.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
+        ライセンスを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_registering.html">
         従量課金制システムを登録
       </a></li><li class=" "><a class="na-navbar-padding" href="task_setting_up_ontap_cloud.html">
         Cloud Volumes ONTAP をセットアップする
-      </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
-        BYOL ライセンスを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_updating_ontap_cloud.html">
         ソフトウェアを更新します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_modifying_ontap_cloud.html">
@@ -2322,7 +2328,9 @@
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_getting_started_compliance.html">
-        Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+        Cloud Volumes ONTAP とオンプレミス ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_anf.html">
+        Azure NetApp Files の特長
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_s3.html">
         Amazon S3 バケット
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_databases.html">
@@ -2376,7 +2384,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_getting_started_compute.html">
         はじめに
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> データをクラウドに階層化</div>
+        <div class="na-navbar-padding"> オンプレミスのデータをクラウドに階層化</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_tiering.html">
         Cloud Tiering の詳細をご確認ください
@@ -2516,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-10 21:34:33 +0000">06/10/2021</time>
+    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
     
   
 
@@ -2549,18 +2557,24 @@
 </p>
 
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>Cloud Volumes ONTAP システム上で Write Once Read Many （ WORM ）ストレージをアクティブにして、指定した保存期間内にファイルを変更せずに保持できます。WORM ストレージには、エンタープライズモードの SnapLock テクノロジが採用されています。つまり、 WORM ファイルはファイルレベルで保護されます。</p>
 </div>
 <div class="paragraph">
-<p>WORM ストレージにコミットされたファイルは、保存期間が終了した後でも変更できません。改ざん防止クロックは、 WORM ファイルの保持期間が経過したタイミングを決定します。</p>
+<p>WORM ストレージにコミットされたファイルは、保持期間が過ぎたあとも変更することはできません。改ざん防止クロックは、 WORM ファイルの保持期間が経過したタイミングを決定します。</p>
 </div>
 <div class="paragraph">
 <p>保存期間が経過すると、不要になったファイルを削除する必要があります。</p>
 </div>
-<h3 id="worm-ストレージのアクティブ化" class="discrete">WORM ストレージのアクティブ化</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="worm-ストレージのアクティブ化">WORM ストレージのアクティブ化</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>新しい作業環境を作成するときに、 Cloud Volumes ONTAP システムで WORM ストレージをアクティブにできます。これには、アクティベーションコードの指定とファイルのデフォルトの保存期間の設定が含まれます。アクティベーションコードを取得するには、 Cloud Manager インターフェイスの右下にあるチャットアイコンを使用します。</p>
+<p>新しい作業環境を作成するときに、 Cloud Volumes ONTAP システムで WORM ストレージをアクティブにできます。これには、ファイルのデフォルトの保持期間の設定も含まれます。</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2578,9 +2592,13 @@
 <p>次の図は、作業環境の作成時に WORM ストレージをアクティブにする方法を示しています。</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_enabling_worm.gif" alt="に、新しい作業環境を作成するときに使用できる WORM オプションを示します。"></span></p>
+<p><span class="image"><img src="./media/screenshot_enable_worm.png" alt="に、新しい作業環境を作成するときに使用できる WORM オプションを示します。"></span></p>
 </div>
-<h3 id="ファイルを-worm-にコミットしています" class="discrete">ファイルを WORM にコミットしています</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ファイルを-worm-にコミットしています">ファイルを WORM にコミットしています</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>アプリケーションを使用して、 NFS または CIFS を介してファイルを WORM にコミットしたり、 ONTAP CLI を使用してファイルを WORM に自動コミットしたりできます。また、追記可能 WORM ファイルを使用して、ログ情報のように増分的に書き込まれるデータを保持することもできます。</p>
 </div>
@@ -2599,7 +2617,11 @@ WORM ストレージに対する Cloud Volumes ONTAP のサポートは、 SnapL
 </tr>
 </table>
 </div>
-<h3 id="制限" class="discrete">制限</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="制限">制限</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -2615,6 +2637,8 @@ WORM ストレージに対する Cloud Volumes ONTAP のサポートは、 SnapL
 <p>WORM ストレージを有効にするには、 Cloud Backup を無効にする必要があります。</p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 
     </article>

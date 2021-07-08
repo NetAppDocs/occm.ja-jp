@@ -660,6 +660,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1460,6 +1462,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1591,9 +1595,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/データをクラウドに階層化.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/オンプレミスのデータをクラウドに階層化.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            データをクラウドに階層化
+            オンプレミスのデータをクラウドに階層化
           </a>
         </li>
         <span>
@@ -1977,8 +1981,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_overview.html">
         Cloud Manager の詳細をご確認ください
-      </a></li><li class=" "><a class="na-navbar-padding" href="reference_networking.html">
-        ネットワークの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_checklist_cm.html">
+        はじめにチェックリスト
       </a></li><li class=" "><a class="na-navbar-padding" href="task_signing_up.html">
         Cloud Central に登録します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_logging_in.html">
@@ -2037,10 +2041,12 @@
         Azure の HA ペア
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_google_cloud.html">
         GCP の HA ペア
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_license_management.html">
+        ノードベースの BYOL の管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
-      </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2146,12 +2152,12 @@
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 管理</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="task_registering.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
+        ライセンスを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_registering.html">
         従量課金制システムを登録
       </a></li><li class=" "><a class="na-navbar-padding" href="task_setting_up_ontap_cloud.html">
         Cloud Volumes ONTAP をセットアップする
-      </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
-        BYOL ライセンスを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_updating_ontap_cloud.html">
         ソフトウェアを更新します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_modifying_ontap_cloud.html">
@@ -2322,7 +2328,9 @@
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_getting_started_compliance.html">
-        Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+        Cloud Volumes ONTAP とオンプレミス ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_anf.html">
+        Azure NetApp Files の特長
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_s3.html">
         Amazon S3 バケット
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_databases.html">
@@ -2376,7 +2384,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_getting_started_compute.html">
         はじめに
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> データをクラウドに階層化</div>
+        <div class="na-navbar-padding"> オンプレミスのデータをクラウドに階層化</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_tiering.html">
         Cloud Tiering の詳細をご確認ください
@@ -2516,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-06 14:15:10 +0000">06/06/2021</time>
+    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
     
   
 
@@ -2553,6 +2561,44 @@
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>既知の制限事項は、このリリースの製品でサポートされていないプラットフォーム、デバイス、機能、または製品と正しく相互運用できない機能を特定します。これらの制限事項を慎重に確認してください</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="従量課金制の-azure-と-google-cloud-のパートナーは利用できません">従量課金制の Azure と Google Cloud のパートナーは利用できません</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Microsoft Cloud 解決策 Provider （ CSP ）パートナー様または Google Cloud パートナー様は、従量課金制のサブスクリプションをご利用いただけません。ライセンスを購入し、 BYOL ライセンスを使用した NetApp クラウドソリューションを導入する必要があります。</p>
+</div>
+<div class="paragraph">
+<p>従量課金制のサブスクリプションは、次の NetApp クラウドサービスでは利用できません。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Volumes ONTAP Explore 、 Standard 、または Premium</p>
+</li>
+<li>
+<p>Cloud Tiering Service の略</p>
+</li>
+<li>
+<p>Cloud Backup サービスの略</p>
+</li>
+<li>
+<p>クラウドデータの意味</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="azure-リソースグループには-ha-ペアが-1-つしかありません">Azure リソースグループには HA ペアが 1 つしかありません</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Azure に導入する Cloud Volumes ONTAP HA ペアごとに専用のリソースグループを使用する必要があります。リソースグループでサポートされる HA ペアは 1 つだけです。</p>
+</div>
+<div class="paragraph">
+<p>Azure リソースグループに 2 つ目の Cloud Volumes ONTAP HA ペアを導入しようとすると、 Cloud Manager で接続の問題が発生します。</p>
 </div>
 </div>
 </div>

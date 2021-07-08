@@ -647,6 +647,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1460,6 +1462,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1591,9 +1595,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/データをクラウドに階層化.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/オンプレミスのデータをクラウドに階層化.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            データをクラウドに階層化
+            オンプレミスのデータをクラウドに階層化
           </a>
         </li>
         <span>
@@ -1977,8 +1981,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_overview.html">
         Cloud Manager の詳細をご確認ください
-      </a></li><li class=" "><a class="na-navbar-padding" href="reference_networking.html">
-        ネットワークの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_checklist_cm.html">
+        はじめにチェックリスト
       </a></li><li class=" "><a class="na-navbar-padding" href="task_signing_up.html">
         Cloud Central に登録します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_logging_in.html">
@@ -2037,10 +2041,12 @@
         Azure の HA ペア
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_google_cloud.html">
         GCP の HA ペア
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_license_management.html">
+        ノードベースの BYOL の管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
-      </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2146,12 +2152,12 @@
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 管理</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="task_registering.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
+        ライセンスを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_registering.html">
         従量課金制システムを登録
       </a></li><li class=" "><a class="na-navbar-padding" href="task_setting_up_ontap_cloud.html">
         Cloud Volumes ONTAP をセットアップする
-      </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
-        BYOL ライセンスを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_updating_ontap_cloud.html">
         ソフトウェアを更新します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_modifying_ontap_cloud.html">
@@ -2322,7 +2328,9 @@
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_getting_started_compliance.html">
-        Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+        Cloud Volumes ONTAP とオンプレミス ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_anf.html">
+        Azure NetApp Files の特長
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_s3.html">
         Amazon S3 バケット
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_databases.html">
@@ -2376,7 +2384,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_getting_started_compute.html">
         はじめに
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> データをクラウドに階層化</div>
+        <div class="na-navbar-padding"> オンプレミスのデータをクラウドに階層化</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_tiering.html">
         Cloud Tiering の詳細をご確認ください
@@ -2516,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-06 14:15:10 +0000">06/06/2021</time>
+    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
     
   
 
@@ -2593,10 +2601,10 @@
 <td class="content">
 <div class="title">データ損失の可能性があります</div>
 <div class="paragraph">
-<p>データ損失のリスクがあるため、既存の共有リソースグループに Cloud Volumes ONTAP を導入することは推奨されません。API を使用して既存のリソースグループに導入する場合、ロールバックは現在デフォルトで無効になっていますが、 Cloud Volumes ONTAP を削除すると、その共有グループから他のリソースが削除される可能性があります。</p>
+<p>Cloud Volumes ONTAP システムごとに新しい専用のリソースグループを使用することを推奨します。</p>
 </div>
 <div class="paragraph">
-<p>Cloud Volumes ONTAP には、新しい専用のリソースグループを使用することを推奨します。これはデフォルトであり、 Cloud Manager から Azure に Cloud Volumes ONTAP を導入する場合にのみ推奨されるオプションです。</p>
+<p>データ損失のリスクがあるため、既存の共有リソースグループに Cloud Volumes ONTAP を導入することは推奨されません。導入の失敗や削除が発生した場合、 Cloud Manager は共有リソースグループから Cloud Volumes ONTAP リソースを削除できますが、 Azure ユーザが誤って共有リソースグループから Cloud Volumes ONTAP リソースを削除してしまう可能性があります。</p>
 </div>
 </td>
 </tr>
@@ -2612,7 +2620,10 @@
 <p>* 場所を選択 * ：「 * Microsoft * Azure * 」および「 * Cloud Volumes ONTAP シングルノード * 」または「 * Cloud Volumes ONTAP 高可用性 * 」を選択します。</p>
 </li>
 <li>
-<p>* 詳細とクレデンシャル * ：必要に応じて Azure クレデンシャルとサブスクリプションを変更し、クラスタ名とリソースグループ名を指定し、必要に応じてタグを追加してから、クレデンシャルを指定します。</p>
+<p>プロンプトが表示されたら、 <a href="task_creating_connectors_aws.html">"コネクタを作成します"</a>。</p>
+</li>
+<li>
+<p>* 詳細とクレデンシャル * ：必要に応じて Azure のクレデンシャルとサブスクリプションを変更し、クラスタ名を指定し、タグを追加し、クレデンシャルを指定することもできます。</p>
 <div class="paragraph">
 <p>次の表では、ガイダンスが必要なフィールドについて説明します。</p>
 </div>
@@ -2633,16 +2644,12 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cloud Manager は、作業環境名を使用して、 Cloud Volumes ONTAP システムと Azure 仮想マシンの両方に名前を付けます。また、このオプションを選択した場合は、事前定義されたセキュリティグループのプレフィックスとして名前が使用されます。</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">リソースグループ名</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">新しいリソースグループのデフォルト名をそのまま使用するか、 [ デフォルトを使用する *] をオフにして、新しいリソースグループの独自の名前を入力します。Cloud Volumes ONTAP には、新しい専用のリソースグループを使用することを推奨します。API を使用して既存の共有リソースグループに Cloud Volumes ONTAP を導入することは可能ですが、データ損失のリスクがあるため推奨されません。詳細については、上記の警告を参照してください。</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">タグ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">リソースグループタグ</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">タグは、 Azure リソースのメタデータです。このフィールドにタグを入力すると、 Cloud Volumes ONTAP システムに関連付けられているリソースグループにタグが追加されます。作業環境を作成するときに、ユーザインターフェイスから最大 4 つのタグを追加し、作成後にさらに追加できます。API では、作業環境の作成時にタグを 4 つに制限することはありません。タグの詳細については、を参照してください <a href="https://azure.microsoft.com/documentation/articles/resource-group-using-tags/" target="_blank" rel="noopener">"Microsoft Azure のドキュメント：「 Using tags to organize your Azure resources"</a>。</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ユーザ名とパスワード</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">これらは、 Cloud Volumes ONTAP クラスタ管理アカウントのクレデンシャルです。これらのクレデンシャルを使用して、 OnCommand System Manager またはその CLI を使用して Cloud Volumes ONTAP に接続できます。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">これらは、 Cloud Volumes ONTAP クラスタ管理アカウントのクレデンシャルです。このクレデンシャルを使用して、 System Manager またはその CLI から Cloud Volumes ONTAP に接続できます。</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="video"></a> 資格情報を編集します</p></td>
@@ -2678,18 +2685,58 @@ Your browser does not support the video tag.
 </div>
 </li>
 <li>
-<p>* 場所と接続性 * ：場所とセキュリティグループを選択し、チェックボックスをオンにして、コネクタとターゲットの場所の間のネットワーク接続を確認します。</p>
+<p>* 場所と接続 * ：場所、リソースグループ、セキュリティグループを選択し、チェックボックスを選択して、コネクタとターゲットの場所間のネットワーク接続を確認します。</p>
 <div class="paragraph">
-<p>シングルノードシステムの場合は、 Cloud Volumes ONTAP を導入するアベイラビリティゾーンを選択できます。AZ を選択しない場合は、 Cloud Manager によってその AZ が選択されます。</p>
+<p>次の表では、ガイダンスが必要なフィールドについて説明します。</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">フィールド</th>
+<th class="tableblock halign-left valign-top">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">場所</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">シングルノードシステムの場合は、 Cloud Volumes ONTAP を導入するアベイラビリティゾーンを選択できます。AZ を選択しない場合は、 Cloud Manager によってその AZ が選択されます。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">リソースグループ</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Cloud Volumes ONTAP の新しいリソースグループを作成するか、既存のリソースグループを使用します。Cloud Volumes ONTAP には、新しい専用のリソースグループを使用することを推奨します。既存の共有リソースグループに Cloud Volumes ONTAP を導入することは可能ですが、データ損失のリスクがあるため推奨されません。詳細については、上記の警告を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>Azure に導入する Cloud Volumes ONTAP HA ペアごとに専用のリソースグループを使用する必要があります。リソースグループでサポートされる HA ペアは 1 つだけです。Azure リソースグループに 2 つ目の Cloud Volumes ONTAP HA ペアを導入しようとすると、 Cloud Manager で接続の問題が発生します。</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="ヒント"></i>
+</td>
+<td class="content">
+使用している Azure アカウントにが割り当てられている場合 <a href="https://mysupport.netapp.com/site/info/cloud-manager-policies" target="_blank" rel="noopener">"必要な権限"</a>導入の失敗や削除が発生した場合、 Cloud Manager はリソースグループから Cloud Volumes ONTAP リソースを削除します。
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">セキュリティグループ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">既存のセキュリティグループを選択する場合は、 Cloud Volumes ONTAP の要件を満たす必要があります。 <a href="reference_networking_azure.html#security-group-rules-for-cloud-volumes-ontap">"デフォルトのセキュリティグループを表示します"</a>。</p></td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
-<p>* ライセンスとサポートサイトのアカウント * ：従量課金制または BYOL のどちらを使用するかを指定し、 NetApp Support Site のアカウントを指定します。</p>
+<p>* 充電方法と NSS アカウント * ：このシステムで使用する充電オプションを指定し、ネットアップサポートサイトのアカウントを指定します。</p>
 <div class="paragraph">
-<p>ライセンスの仕組みについては、を参照してください <a href="concept_licensing.html">"ライセンス"</a>。</p>
-</div>
-<div class="paragraph">
-<p>NetApp Support Site のアカウントは、従量課金制の場合は任意ですが、 BYOL システムの場合は必須です。 <a href="task_adding_nss_accounts.html">"ネットアップサポートサイトのアカウントを追加する方法について説明します"</a>。</p>
+<p><a href="concept_licensing.html">"これらの充電方法について説明します"</a>。</p>
 </div>
 </li>
 <li>
@@ -2756,7 +2803,7 @@ Your browser does not support the video tag.
 <p><a href="concept_write_speed.html">"書き込み速度の詳細については、こちらをご覧ください。"</a>。</p>
 </div>
 <div class="paragraph">
-<p>データの階層化が有効になっていると、 WORM を有効にできません。</p>
+<p>Cloud Backup が有効になっている場合やデータ階層化が有効になっている場合は、 WORM を有効にすることはできません。</p>
 </div>
 <div class="paragraph">
 <p><a href="concept_worm.html">"WORM ストレージの詳細については、こちらをご覧ください。"</a>。</p>

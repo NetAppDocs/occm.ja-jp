@@ -647,6 +647,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1447,6 +1449,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1578,9 +1582,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/データをクラウドに階層化.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/オンプレミスのデータをクラウドに階層化.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            データをクラウドに階層化
+            オンプレミスのデータをクラウドに階層化
           </a>
         </li>
         <span>
@@ -1977,8 +1981,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_overview.html">
         Cloud Manager の詳細をご確認ください
-      </a></li><li class=" "><a class="na-navbar-padding" href="reference_networking.html">
-        ネットワークの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_checklist_cm.html">
+        はじめにチェックリスト
       </a></li><li class=" "><a class="na-navbar-padding" href="task_signing_up.html">
         Cloud Central に登録します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_logging_in.html">
@@ -2037,10 +2041,12 @@
         Azure の HA ペア
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_google_cloud.html">
         GCP の HA ペア
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_license_management.html">
+        ノードベースの BYOL の管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
-      </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2146,12 +2152,12 @@
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 管理</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="task_registering.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
+        ライセンスを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_registering.html">
         従量課金制システムを登録
       </a></li><li class=" "><a class="na-navbar-padding" href="task_setting_up_ontap_cloud.html">
         Cloud Volumes ONTAP をセットアップする
-      </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
-        BYOL ライセンスを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_updating_ontap_cloud.html">
         ソフトウェアを更新します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_modifying_ontap_cloud.html">
@@ -2322,7 +2328,9 @@
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_getting_started_compliance.html">
-        Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+        Cloud Volumes ONTAP とオンプレミス ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_anf.html">
+        Azure NetApp Files の特長
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_s3.html">
         Amazon S3 バケット
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_databases.html">
@@ -2376,7 +2384,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_getting_started_compute.html">
         はじめに
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> データをクラウドに階層化</div>
+        <div class="na-navbar-padding"> オンプレミスのデータをクラウドに階層化</div>
       </a>
       <ul><li class="  active "><a class="na-navbar-padding" href="concept_cloud_tiering.html">
         Cloud Tiering の詳細をご確認ください
@@ -2516,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-10 17:34:19 +0000">06/10/2021</time>
+    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
     
   
 
@@ -2608,10 +2616,26 @@ Cloud Volumes ONTAP システムは、 Cloud Tiering から読み取り専用で
 <h2 id="サポートされているオブジェクトストレージプロバイダ">サポートされているオブジェクトストレージプロバイダ</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ONTAP クラスタから Amazon S3 、 Microsoft Azure Blob ストレージ、 Google Cloud Storage 、 StorageGRID （プライベートクラウド）にアクセス頻度の低いデータを階層化することができます。</p>
+<p>オンプレミスの ONTAP クラスタから次のオブジェクトストレージプロバイダにアクセス頻度の低いデータを階層化できます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Amazon S3</p>
+</li>
+<li>
+<p>Microsoft Azure Blob</p>
+</li>
+<li>
+<p>Google クラウドストレージ</p>
+</li>
+<li>
+<p>NetApp StorageGRID</p>
+</li>
+</ul>
 </div>
 <div class="sect2">
-<h3 id="オブジェクトストレージ">オブジェクトストレージ</h3>
+<h3 id="オブジェクトストレージ階層">オブジェクトストレージ階層</h3>
 <div class="paragraph">
 <p>各 ONTAP クラスタは、アクセス頻度の低いデータを 1 つのオブジェクトストアに階層化します。データの階層化を設定するときに、新しいバケット / コンテナを追加するか、ストレージクラスまたはアクセス階層とともに既存のバケット / コンテナを選択するかを選択できます。</p>
 </div>
@@ -2630,6 +2654,18 @@ Cloud Volumes ONTAP システムは、 Cloud Tiering から読み取り専用で
 </div>
 <div class="paragraph">
 <p>Cloud Tiering は、アクセス頻度の低いデータにクラウドプロバイダのデフォルトのストレージクラス / アクセス階層を使用します。ただし、ライフサイクルルールを適用することで、一定の日数が経過した時点でデータがデフォルトのストレージクラスから別のストレージクラスに自動的に移行されるようにすることができます。これにより、コールドデータを低コストのストレージに移動することで、コストを削減できます。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="注記"></i>
+</td>
+<td class="content">
+StorageGRID に階層化されたデータのライフサイクルルールは選択できません。
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -2739,7 +2775,7 @@ Cloud Volumes ONTAP システムは、 Cloud Tiering から読み取り専用で
 <p>ONTAP は、アクセス頻度の低いデータをオブジェクトストアに階層化します。アクセス頻度の低いデータとして扱われるしきい値に達するとすぐにアクセスを開始します（を参照） <a href="#Volume tiering policies">[Volume tiering policies]</a>）。</p>
 </li>
 <li>
-<p>階層化されたデータにライフサイクル・ルールを適用した場合 ' 古い階層化データは ' 一定の日数が経過すると ' よりコスト・パフォーマンスの高い階層に移動されます</p>
+<p>階層化されたデータ（一部のプロバイダのみが使用可能）にライフサイクルルールを適用した場合、古い階層化データは、一定の日数が経過すると、よりコスト効率の高い階層に移動されます。</p>
 </li>
 </ol>
 </div>
@@ -2749,7 +2785,7 @@ Cloud Volumes ONTAP システムは、 Cloud Tiering から読み取り専用で
 <p>階層化するボリュームを選択する場合は、各ボリュームに適用するボリューム階層化ポリシーを選択します。階層化ポリシーは、ボリュームのユーザデータブロックをクラウドに移動するタイミングと、移動するかどうかを決定します。</p>
 </div>
 <div class="paragraph">
-<p>冷却期間 _ を調整することもできます。ボリューム内のユーザデータが「コールド」とみなされてオブジェクトストレージに移動されるまでの日数です。階層化ポリシーでクーリング期間を調整できる場合、 ONTAP 9.8 以降では 2 ~ 183 日、 ONTAP の以前のバージョンでは 2 ~ 63 日の有効値を使用することを推奨します。ベストプラクティスは 2 ~ 63 です。</p>
+<p>冷却期間 * を調整することもできます。ボリューム内のユーザデータが「コールド」とみなされてオブジェクトストレージに移動されるまでの日数です。階層化ポリシーでクーリング期間を調整できる場合、 ONTAP 9.8 以降では 2 ~ 183 日、 ONTAP の以前のバージョンでは 2 ~ 63 日の有効値を使用することを推奨します。ベストプラクティスは 2 ~ 63 です。</p>
 </div>
 <div class="dlist">
 <dl>

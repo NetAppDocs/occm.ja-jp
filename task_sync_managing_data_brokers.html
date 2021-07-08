@@ -647,6 +647,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1460,6 +1462,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1591,9 +1595,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/データをクラウドに階層化.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/オンプレミスのデータをクラウドに階層化.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            データをクラウドに階層化
+            オンプレミスのデータをクラウドに階層化
           </a>
         </li>
         <span>
@@ -1977,8 +1981,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_overview.html">
         Cloud Manager の詳細をご確認ください
-      </a></li><li class=" "><a class="na-navbar-padding" href="reference_networking.html">
-        ネットワークの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_checklist_cm.html">
+        はじめにチェックリスト
       </a></li><li class=" "><a class="na-navbar-padding" href="task_signing_up.html">
         Cloud Central に登録します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_logging_in.html">
@@ -2037,10 +2041,12 @@
         Azure の HA ペア
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_google_cloud.html">
         GCP の HA ペア
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_license_management.html">
+        ノードベースの BYOL の管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
-      </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2146,12 +2152,12 @@
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 管理</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="task_registering.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
+        ライセンスを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_registering.html">
         従量課金制システムを登録
       </a></li><li class=" "><a class="na-navbar-padding" href="task_setting_up_ontap_cloud.html">
         Cloud Volumes ONTAP をセットアップする
-      </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
-        BYOL ライセンスを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_updating_ontap_cloud.html">
         ソフトウェアを更新します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_modifying_ontap_cloud.html">
@@ -2322,7 +2328,9 @@
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_getting_started_compliance.html">
-        Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+        Cloud Volumes ONTAP とオンプレミス ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_anf.html">
+        Azure NetApp Files の特長
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_s3.html">
         Amazon S3 バケット
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_databases.html">
@@ -2376,7 +2384,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_getting_started_compute.html">
         はじめに
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> データをクラウドに階層化</div>
+        <div class="na-navbar-padding"> オンプレミスのデータをクラウドに階層化</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_tiering.html">
         Cloud Tiering の詳細をご確認ください
@@ -2516,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-11 22:52:25 +0000">06/11/2021</time>
+    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
     
   
 
@@ -2558,7 +2566,6 @@
 <li><a href="#グループの名前を編集します">グループの名前を編集します</a></li>
 <li><a href="#データブローカーの問題に対処">データブローカーの問題に対処</a></li>
 <li><a href="#データブローカーグループのユニファイド構成を定義する">データブローカーグループのユニファイド構成を定義する</a></li>
-<li><a href="#オブジェクトストレージのメタデータをコピーするようにデータブローカーを設定">オブジェクトストレージのメタデータをコピーするようにデータブローカーを設定</a></li>
 </ul>
 </div>
 <div id="preamble">
@@ -2945,86 +2952,6 @@
 <p>ユニファイド構成を設定すると、新しいデータブローカーでは自動的に新しい構成が使用されます。</p>
 </li>
 </ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="オブジェクトストレージのメタデータをコピーするようにデータブローカーを設定">オブジェクトストレージのメタデータをコピーするようにデータブローカーを設定</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>デフォルトでは、 Cloud Sync はのオブジェクトストレージメタデータをコピーします <a href="faq_sync.html#object-storage-metadata">"同期関係にはいくつかのタイプがあります"</a>。ただし、次のタイプの同期関係間でオブジェクトストレージのメタデータをコピーする場合は、データブローカーを設定する必要があります。</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Amazon S3 &#8594; Amazon S3</p>
-</li>
-<li>
-<p>Google Cloud Storage &#8594; StorageGRID</p>
-</li>
-<li>
-<p>Google Cloud Storage &#8594; IBM Cloud Object Storage</p>
-</li>
-<li>
-<p>Google Cloud Storage &#8594; Amazon S3</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Amazon S3 から Amazon S3 へのステップ</div>
-<ol class="arabic">
-<li>
-<p>データブローカーホストにログインします。</p>
-</li>
-<li>
-<p>local.json を次のように変更します。</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">{
-  "protocols": {
-    "s3": {
-      "copy-metadata-from": true
-    }
-  }
-}</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>データブローカーを再起動</p>
-<div class="paragraph">
-<p>PM2 stop all <code>PM2 start all</code></p>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Google Cloud から StorageGRID 、 IBM 、 Amazon S3 への移行の手順</div>
-<ol class="arabic">
-<li>
-<p>データブローカーホストにログインします。</p>
-</li>
-<li>
-<p>local.json を次のように変更します。</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">{
-  "protocols": {
-    "gcp": {
-      "copy-metadata-from": true
-    }
-  }
-}</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>データブローカーを再起動</p>
-<div class="paragraph">
-<p>PM2 stop all <code>PM2 start all</code></p>
 </div>
 </li>
 </ol>

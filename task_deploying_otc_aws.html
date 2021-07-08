@@ -647,6 +647,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1460,6 +1462,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1591,9 +1595,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/データをクラウドに階層化.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/オンプレミスのデータをクラウドに階層化.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            データをクラウドに階層化
+            オンプレミスのデータをクラウドに階層化
           </a>
         </li>
         <span>
@@ -1977,8 +1981,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_overview.html">
         Cloud Manager の詳細をご確認ください
-      </a></li><li class=" "><a class="na-navbar-padding" href="reference_networking.html">
-        ネットワークの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_checklist_cm.html">
+        はじめにチェックリスト
       </a></li><li class=" "><a class="na-navbar-padding" href="task_signing_up.html">
         Cloud Central に登録します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_logging_in.html">
@@ -2037,10 +2041,12 @@
         Azure の HA ペア
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_google_cloud.html">
         GCP の HA ペア
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_license_management.html">
+        ノードベースの BYOL の管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
-      </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2146,12 +2152,12 @@
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 管理</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="task_registering.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
+        ライセンスを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_registering.html">
         従量課金制システムを登録
       </a></li><li class=" "><a class="na-navbar-padding" href="task_setting_up_ontap_cloud.html">
         Cloud Volumes ONTAP をセットアップする
-      </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
-        BYOL ライセンスを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_updating_ontap_cloud.html">
         ソフトウェアを更新します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_modifying_ontap_cloud.html">
@@ -2322,7 +2328,9 @@
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_getting_started_compliance.html">
-        Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+        Cloud Volumes ONTAP とオンプレミス ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_anf.html">
+        Azure NetApp Files の特長
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_s3.html">
         Amazon S3 バケット
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_databases.html">
@@ -2376,7 +2384,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_getting_started_compute.html">
         はじめに
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> データをクラウドに階層化</div>
+        <div class="na-navbar-padding"> オンプレミスのデータをクラウドに階層化</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_tiering.html">
         Cloud Tiering の詳細をご確認ください
@@ -2516,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-30 21:39:06 +0000">06/30/2021</time>
+    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
     
   
 
@@ -2615,6 +2623,9 @@
 <p>* 場所を選択 * ：「 * Amazon Web Services * 」と「 * Cloud Volumes ONTAP シングルノード * 」を選択します。</p>
 </li>
 <li>
+<p>プロンプトが表示されたら、 <a href="task_creating_connectors_aws.html">"コネクタを作成します"</a>。</p>
+</li>
+<li>
 <p>* 詳細とクレデンシャル * ：必要に応じて、 AWS のクレデンシャルとサブスクリプションを変更し、作業環境名を入力してタグを追加し、パスワードを入力します。</p>
 <div class="paragraph">
 <p>このページの一部のフィールドは、説明のために用意されています。次の表では、ガイダンスが必要なフィールドについて説明します。</p>
@@ -2645,7 +2656,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[[subscribe] クリデンシャルを編集します</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">この Cloud Volumes ONTAP システムで使用する AWS クレデンシャルと Marketplace サブスクリプションを選択します。Add Subscription * をクリックして、選択したクレデンシャルを新しい AWS Marketplace サブスクリプションに関連付けます。サブスクリプションは、年間契約の場合と、 Cloud Volumes ONTAP の料金を 1 時間ごとに支払う場合があります。NetApp （ BYOL ）からライセンスを直接購入した場合、 AWS サブスクリプションは必要ありません。<a href="task_adding_aws_accounts.html">"Cloud Manager に AWS クレデンシャルを追加する方法について説明します"</a>。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">このシステムを導入するアカウントに関連付けられている AWS クレデンシャルを選択します。この Cloud Volumes ONTAP システムで使用する AWS Marketplace サブスクリプションを関連付けることもできます。Add Subscription * をクリックして、選択したクレデンシャルを新しい AWS Marketplace サブスクリプションに関連付けます。サブスクリプションは、年間契約の場合と、 Cloud Volumes ONTAP の料金を 1 時間ごとに支払う場合があります。NetApp （ BYOL ）からライセンスを直接購入した場合、 AWS サブスクリプションは必要ありません。<a href="task_adding_aws_accounts.html">"Cloud Manager に AWS クレデンシャルを追加する方法について説明します"</a>。</p></td>
 </tr>
 </tbody>
 </table>
@@ -2689,7 +2700,7 @@ Your browser does not support the video tag.
 </div>
 </li>
 <li>
-<p>* Location &amp; Connectivity * ： AWS のワークシートに記録したネットワーク情報を入力します。</p>
+<p>* 場所と接続 * ：に記録したネットワーク情報を入力します <a href="task_planning_your_config.html#aws-network-information-worksheet">"AWS ワークシート"</a>。</p>
 <div class="paragraph">
 <p>AWS Outpost を使用している場合は、 Outpost VPC を選択して、その Outpost に単一のノードの Cloud Volumes ONTAP システムを導入できます。エクスペリエンスは、 AWS に存在する他の VPC と同じです。</p>
 </div>
@@ -2725,16 +2736,13 @@ Cloud Volumes ONTAP システムの作成後に AWS のデータ暗号化方式�
 </div>
 </li>
 <li>
-<p>* License and NSS Account * ：このシステムで使用するライセンスオプションを指定し、ネットアップサポートサイトのアカウントを指定します。</p>
+<p>* 充電方法と NSS アカウント * ：このシステムで使用する充電オプションを指定し、ネットアップサポートサイトのアカウントを指定します。</p>
 <div class="paragraph">
-<p>BYOL ライセンスの仕組みについては、を参照してください <a href="concept_licensing.html">"ライセンス"</a>。</p>
-</div>
-<div class="paragraph">
-<p>BYOL システムには、 NetApp Support Site のアカウントが必要です。 <a href="task_adding_nss_accounts.html">"ネットアップサポートサイトのアカウントを追加する方法について説明します"</a>。</p>
+<p><a href="concept_licensing.html">"これらの充電方法について説明します"</a>。</p>
 </div>
 </li>
 <li>
-<p>* Cloud Volumes ONTAP 環境設定 * （年間契約のみ）：デフォルト設定を確認して [* 続行 ] をクリックするか、 [* 構成の変更 *] をクリックして独自の構成を選択します。</p>
+<p>* Cloud Volumes ONTAP 構成 * （ AWS Marketplace の年間契約のみ）：デフォルトの構成を確認して「 * Continue * 」をクリックするか、「 * 構成の変更 * 」をクリックして独自の構成を選択します。</p>
 <div class="paragraph">
 <p>デフォルトの設定を使用している場合、ボリュームを指定し、構成を確認および承認するだけで済みます。</p>
 </div>
@@ -2806,7 +2814,7 @@ Cloud Volumes ONTAP システムの作成後に AWS のデータ暗号化方式�
 <p><a href="concept_write_speed.html">"書き込み速度の詳細については、こちらをご覧ください。"</a>。</p>
 </div>
 <div class="paragraph">
-<p>データの階層化が有効になっていると、 WORM を有効にできません。</p>
+<p>Cloud Backup が有効になっている場合やデータ階層化が有効になっている場合は、 WORM を有効にすることはできません。</p>
 </div>
 <div class="paragraph">
 <p><a href="concept_worm.html">"WORM ストレージの詳細については、こちらをご覧ください。"</a>。</p>
@@ -3141,16 +3149,13 @@ Cloud Volumes ONTAP システムの作成後に AWS のデータ暗号化方式�
 </div>
 </li>
 <li>
-<p>* License and NSS Account * ：このシステムで使用するライセンスオプションを指定し、ネットアップサポートサイトのアカウントを指定します。</p>
+<p>* 充電方法と NSS アカウント * ：このシステムで使用する充電オプションを指定し、ネットアップサポートサイトのアカウントを指定します。</p>
 <div class="paragraph">
-<p>BYOL ライセンスの仕組みについては、を参照してください <a href="concept_licensing.html">"ライセンス"</a>。</p>
-</div>
-<div class="paragraph">
-<p>BYOL システムには、 NetApp Support Site のアカウントが必要です。 <a href="task_adding_nss_accounts.html">"ネットアップサポートサイトのアカウントを追加する方法について説明します"</a>。</p>
+<p><a href="concept_licensing.html">"これらの充電方法について説明します"</a>。</p>
 </div>
 </li>
 <li>
-<p>* Cloud Volumes ONTAP 環境設定 * （年間契約のみ）：デフォルト設定を確認して [* 続行 ] をクリックするか、 [* 構成の変更 *] をクリックして独自の構成を選択します。</p>
+<p>* Cloud Volumes ONTAP 構成 * （ AWS Marketplace の年間契約のみ）：デフォルトの構成を確認して「 * Continue * 」をクリックするか、「 * 構成の変更 * 」をクリックして独自の構成を選択します。</p>
 <div class="paragraph">
 <p>デフォルトの設定を使用している場合、ボリュームを指定し、構成を確認および承認するだけで済みます。</p>
 </div>
@@ -3222,7 +3227,7 @@ Cloud Volumes ONTAP システムの作成後に AWS のデータ暗号化方式�
 <p><a href="concept_write_speed.html">"書き込み速度の詳細については、こちらをご覧ください。"</a>。</p>
 </div>
 <div class="paragraph">
-<p>データの階層化が有効になっていると、 WORM を有効にできません。</p>
+<p>Cloud Backup が有効になっている場合やデータ階層化が有効になっている場合は、 WORM を有効にすることはできません。</p>
 </div>
 <div class="paragraph">
 <p><a href="concept_worm.html">"WORM ストレージの詳細については、こちらをご覧ください。"</a>。</p>

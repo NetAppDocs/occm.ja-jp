@@ -647,6 +647,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1447,6 +1449,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1591,9 +1595,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/データをクラウドに階層化.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/オンプレミスのデータをクラウドに階層化.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            データをクラウドに階層化
+            オンプレミスのデータをクラウドに階層化
           </a>
         </li>
         <span>
@@ -1977,8 +1981,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_overview.html">
         Cloud Manager の詳細をご確認ください
-      </a></li><li class=" "><a class="na-navbar-padding" href="reference_networking.html">
-        ネットワークの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_checklist_cm.html">
+        はじめにチェックリスト
       </a></li><li class=" "><a class="na-navbar-padding" href="task_signing_up.html">
         Cloud Central に登録します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_logging_in.html">
@@ -2037,10 +2041,12 @@
         Azure の HA ペア
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_google_cloud.html">
         GCP の HA ペア
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_license_management.html">
+        ノードベースの BYOL の管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
-      </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2146,12 +2152,12 @@
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 管理</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="task_registering.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
+        ライセンスを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_registering.html">
         従量課金制システムを登録
       </a></li><li class=" "><a class="na-navbar-padding" href="task_setting_up_ontap_cloud.html">
         Cloud Volumes ONTAP をセットアップする
-      </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
-        BYOL ライセンスを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_updating_ontap_cloud.html">
         ソフトウェアを更新します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_modifying_ontap_cloud.html">
@@ -2322,7 +2328,9 @@
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_getting_started_compliance.html">
-        Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+        Cloud Volumes ONTAP とオンプレミス ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_anf.html">
+        Azure NetApp Files の特長
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_s3.html">
         Amazon S3 バケット
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_databases.html">
@@ -2376,7 +2384,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_getting_started_compute.html">
         はじめに
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> データをクラウドに階層化</div>
+        <div class="na-navbar-padding"> オンプレミスのデータをクラウドに階層化</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_tiering.html">
         Cloud Tiering の詳細をご確認ください
@@ -2516,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-06 14:15:10 +0000">06/06/2021</time>
+    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
     
   
 
@@ -2545,6 +2553,18 @@
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>組織内の個人データと機密性の高い個人データに関する詳細を表示することで、個人データを管理できます。また、クラウドデータで見つかったカテゴリやファイルタイプを確認することで、データを可視化することもできます。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="注記"></i>
+</td>
+<td class="content">
+このセクションで説明する機能は、データソースに対して完全な分類スキャンを実行することを選択した場合にのみ使用できます。マッピングのみのスキャンを実行したデータソースでは、ファイルレベルの詳細は表示されません。
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>デフォルトでは、 Cloud Data Sense ダッシュボードには、すべての作業環境とデータベースのコンプライアンスデータが表示されます。</p>
@@ -2721,7 +2741,7 @@
 <h2 id="ファイルメタデータを表示しています">ファイルメタデータを表示しています</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>[ データ調査結果 ] ペインで、をクリックできます <span class="image"><img src="./media/button_subfolder.png" alt="右キャレット"></span> をクリックすると、単一のファイルについてファイルのメタデータが表示されます。</p>
+<p>[ データ調査結果 ] ペインで、をクリックできます <span class="image"><img src="./media/button_down_caret.png" alt="下キャレット"></span> をクリックすると、単一のファイルについてファイルのメタデータが表示されます。</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/screenshot_compliance_file_details.png" alt="&quot;[ データ調査"></span> ページのファイルのメタデータの詳細を示すスクリーンショット。"]</p>
@@ -2738,10 +2758,16 @@
 <div class="ulist">
 <ul>
 <li>
-<p>ファイルを削除できます。を参照してください <a href="task_managing_highlights.html#deleting-source-files" target="_blank" rel="noopener">"ソースファイルを削除しています"</a> を参照してください。</p>
+<p>任意の NFS 共有にファイルを移動できます。を参照してください <a href="task_managing_highlights.html#moving-source-files-to-an-nfs-share">"ソースファイルを NFS 共有に移動しています"</a> を参照してください。</p>
 </li>
 <li>
-<p>ファイルに特定のステータスを割り当てることができます。を参照してください <a href="task_managing_highlights.html#applying-status-codes-to-manage-your-scanned-files">"ステータスタグを適用しています"</a> を参照してください。</p>
+<p>ファイルを削除できます。を参照してください <a href="task_managing_highlights.html#deleting-source-files">"ソースファイルを削除しています"</a> を参照してください。</p>
+</li>
+<li>
+<p>ファイルに特定のステータスを割り当てることができます。を参照してください <a href="task_managing_highlights.html#applying-status-tags-to-manage-your-scanned-files">"ステータスタグを適用しています"</a> を参照してください。</p>
+</li>
+<li>
+<p>ファイルに対して実行する必要があるフォローアップアクションを担当するファイルを Cloud Manager ユーザに割り当てることができます。を参照してください <a href="task_managing_highlights.html#assigning-users-to-manage-certain-files">"ファイルへのユーザの割り当て"</a> を参照してください。</p>
 </li>
 <li>
 <p>AIP ラベルを Cloud Data Sense と統合している場合は、このファイルにラベルを割り当てるか、すでに存在する場合は別のラベルに変更できます。を参照してください <a href="task_managing_highlights.html#assigning-aip-labels-manually" target="_blank" rel="noopener">"AIP ラベルを手動で割り当てる"</a> を参照してください。</p>
@@ -2785,7 +2811,7 @@
 <div class="sect2">
 <h3 id="特定のファイルが複製されているかどうかを表示します">特定のファイルが複製されているかどうかを表示します</h3>
 <div class="paragraph">
-<p>1 つのファイルに重複があるかどうかを確認するには、 [ データ調査結果 ] ペインでをクリックします <span class="image"><img src="./media/button_subfolder.png" alt="右キャレット"></span> をクリックすると、単一のファイルについてファイルのメタデータが表示されます。特定のファイルが重複している場合、この情報は _Duplicats_field の横に表示されます。</p>
+<p>1 つのファイルに重複があるかどうかを確認するには、 [ データ調査結果 ] ペインでをクリックします <span class="image"><img src="./media/button_down_caret.png" alt="下キャレット"></span> をクリックすると、単一のファイルについてファイルのメタデータが表示されます。特定のファイルが重複している場合、この情報は _Duplicats_field の横に表示されます。</p>
 </div>
 <div class="paragraph">
 <p>重複したファイルとその場所のリストを表示するには、 [ * 詳細の表示 * ] をクリックします。次のページで、 [ 重複の表示 *] をクリックして、 [ 調査 ] ページでファイルを表示します。</p>
@@ -2834,7 +2860,7 @@
 <h2 id="データ調査-ページでデータをフィルタリングします">[ データ調査 ] ページでデータをフィルタリングします</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>調査ページの内容をフィルタリングして、表示する結果のみを表示できます。CSV バージョンのコンテンツをリファインした後でレポートとして保存する場合は、をクリックします <span class="image"><img src="./media/button_download.png" alt="下矢印ボタン"></span> ボタンを押します。</p>
+<p>調査ページの内容をフィルタリングして、表示する結果のみを表示できます。CSV バージョンのコンテンツをリファインした後でレポートとして保存する場合は、をクリックします <span class="image"><img src="./media/button_download.png" alt="&quot;[ ダウンロード"></span> ボタン"] ボタンを押します。</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/screenshot_compliance_investigation_filtered.png" alt="調査ページで結果を絞り込むときに使用できるフィルタのスクリーンショット。"></span></p>
@@ -2894,16 +2920,22 @@
 <p>ファイルサイズ</p>
 </li>
 <li>
-<p>作成時刻（ Created Time ）</p>
+<p>作成日</p>
 </li>
 <li>
 <p>最終変更日</p>
+</li>
+<li>
+<p>最終アクセス日（の場合 <a href="reference_private_data_categories.html#types-of-files">"コンテンツをスキャンするファイルの種類"</a> これは、データ検出がファイルを最後にスキャンした時刻です）。</p>
 </li>
 <li>
 <p>重複があります</p>
 </li>
 <li>
 <p>ステータス</p>
+</li>
+<li>
+<p>割り当て先</p>
 </li>
 <li>
 <p>ファイル・ハッシュ</p>
@@ -2922,7 +2954,7 @@
 <h2 id="各ファイルリストレポート-csv-ファイルに含まれる内容">各ファイルリストレポート（ CSV ファイル）に含まれる内容</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>各 [ 調査 ] ページで、をクリックできます <span class="image"><img src="./media/button_download.png" alt=""></span> ボタンをクリックして、特定されたファイルの詳細を含むファイルリスト（ CSV 形式）をダウンロードします。データ検出で、構造化データ（データベーステーブル）と非構造化データ（ファイル）の両方がスキャンされている場合は、ダウンロードした ZIP ファイルに 2 つのレポートが含まれています。</p>
+<p>各 [ 調査 ] ページで、をクリックできます <span class="image"><img src="./media/button_download.png" alt="&quot;[ ダウンロード"></span> ボタン"] ボタンをクリックして、特定されたファイルの詳細を含むファイルリスト（ CSV 形式）をダウンロードします。データ検出で、構造化データ（データベーステーブル）と非構造化データ（ファイル）の両方がスキャンされている場合は、ダウンロードした ZIP ファイルに 2 つのレポートが含まれています。</p>
 </div>
 <div class="paragraph">
 <p>10 、 000 件を超える結果がある場合は、上位 10 、 000 件のみがリストに表示されます。</p>
@@ -2958,6 +2990,9 @@
 </li>
 <li>
 <p>最終更新日</p>
+</li>
+<li>
+<p>最後にアクセスした</p>
 </li>
 <li>
 <p>ファイルサイズ</p>

@@ -647,6 +647,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -909,10 +911,6 @@
         </li>
         <span>
           
-
-
-
-
     <div class="n-pdf-section">
   <span class="n-pdf-section-title">このページ</span>
 </div>
@@ -926,6 +924,10 @@
 
 
   
+
+
+
+
 
 
 
@@ -1460,6 +1462,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1591,9 +1595,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/データをクラウドに階層化.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/オンプレミスのデータをクラウドに階層化.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            データをクラウドに階層化
+            オンプレミスのデータをクラウドに階層化
           </a>
         </li>
         <span>
@@ -1977,8 +1981,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_overview.html">
         Cloud Manager の詳細をご確認ください
-      </a></li><li class=" "><a class="na-navbar-padding" href="reference_networking.html">
-        ネットワークの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_checklist_cm.html">
+        はじめにチェックリスト
       </a></li><li class=" "><a class="na-navbar-padding" href="task_signing_up.html">
         Cloud Central に登録します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_logging_in.html">
@@ -2037,10 +2041,12 @@
         Azure の HA ペア
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_google_cloud.html">
         GCP の HA ペア
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_license_management.html">
+        ノードベースの BYOL の管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
-      </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2146,12 +2152,12 @@
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 管理</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="task_registering.html">
+      <ul><li class="  active "><a class="na-navbar-padding" href="task_managing_licenses.html">
+        ライセンスを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_registering.html">
         従量課金制システムを登録
       </a></li><li class=" "><a class="na-navbar-padding" href="task_setting_up_ontap_cloud.html">
         Cloud Volumes ONTAP をセットアップする
-      </a></li><li class="  active "><a class="na-navbar-padding" href="task_managing_licenses.html">
-        BYOL ライセンスを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_updating_ontap_cloud.html">
         ソフトウェアを更新します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_modifying_ontap_cloud.html">
@@ -2322,7 +2328,9 @@
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_getting_started_compliance.html">
-        Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+        Cloud Volumes ONTAP とオンプレミス ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_anf.html">
+        Azure NetApp Files の特長
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_s3.html">
         Amazon S3 バケット
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_databases.html">
@@ -2376,7 +2384,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_getting_started_compute.html">
         はじめに
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> データをクラウドに階層化</div>
+        <div class="na-navbar-padding"> オンプレミスのデータをクラウドに階層化</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_tiering.html">
         Cloud Tiering の詳細をご確認ください
@@ -2516,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-10 17:34:19 +0000">06/10/2021</time>
+    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
     
   
 
@@ -2554,37 +2562,123 @@
 <div class="paragraph lead">
 <p>デジタルウォレットページでは、 Cloud Volumes ONTAP とクラウドバックアップのライセンスを 1 箇所から管理できます。新しいライセンスを追加したり、既存のライセンスを更新したりできます。</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="cloud-volumes-ontap-ライセンスを管理します">Cloud Volumes ONTAP ライセンスを管理します</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>Cloud Volumes ONTAP の次のタイプのライセンスを管理できます。</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>お客様所有のライセンスを使用（ BYOL ）：ネットアップから購入するライセンスです。</p>
+<p>容量ベースのライセンス： TiB 単位の Cloud Volumes ONTAP 料金を負担できます。</p>
+<div class="paragraph">
+<p><a href="https://cloud.netapp.com/contact-cds" target="_blank" rel="noopener">"ネットアップ営業にお問い合わせください"</a> 容量ベースのライセンスを購入する方法</p>
+</div>
 </li>
 <li>
-<p>Marketplace サブスクリプション。クラウドプロバイダのマーケットプレイスから 1 時間ごとまたは 1 年ごとのサブスクリプションです。</p>
+<p>従量課金制（ PAYGO ）ライセンス：クラウドプロバイダが提供するマーケットプレイスサブスクリプションを使用して 1 時間単位で支払いが可能</p>
+<div class="paragraph">
+<p>PAYGO の利用を開始するには、 Cloud Volumes ONTAP の作業環境を構築し、クラウドプロバイダの市場への登録を求められたら同意する必要があります。</p>
+</div>
 </li>
 <li>
-<p>eval ライセンス。ライセンスを評価するためのライセンスで、あとで BYOL ライセンスモデルに変換できます。</p>
+<p>ノードベースのライセンス。ネットアップから購入した BYOL ライセンスです。これには、あとでノードベースの BYOL ライセンスモデルに変換できる Eval ライセンスが含まれます。</p>
+<div class="paragraph">
+<p><a href="https://cloud.netapp.com/contact-cds" target="_blank" rel="noopener">"ネットアップ営業にお問い合わせください"</a> ノードベースのライセンスを購入する方法</p>
+</div>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p><a href="concept_licensing.html">"Cloud Volumes ONTAP ライセンスの詳細については、こちらをご覧ください"</a>。</p>
 </div>
-<div class="sect2">
-<h3 id="byol-システムのライセンスを管理します">BYOL システムのライセンスを管理します</h3>
-<div class="paragraph">
-<p>Cloud Volumes ONTAP システムごとにシステムライセンスが必要です。</p>
 </div>
-<div class="sect3">
-<h4 id="システムライセンスファイルを取得します">システムライセンスファイルを取得します</h4>
+</div>
+<div class="sect1">
+<h2 id="cloud-volumes-ontap-の容量ベースのライセンスを管理します">Cloud Volumes ONTAP の容量ベースのライセンスを管理します</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>容量ベースのライセンスを管理して、ネットアップアカウントに Cloud Volumes ONTAP システム用の十分な容量があることを確認します。</p>
+</div>
+<div class="sect2">
+<h3 id="アカウントのライセンス容量と割り当て容量を表示します">アカウントのライセンス容量と割り当て容量を表示します</h3>
+<div class="paragraph">
+<p>パッケージごとにライセンスで許可されている容量と割り当て済みの容量を表示して、データボリューム用の十分なスペースを確保します。</p>
+</div>
+<div class="olist arabic">
+<div class="title">手順</div>
+<ol class="arabic">
+<li>
+<p>［ * すべてのサービス ］ &gt; ［ デジタルウォレット ］ &gt; ［ 容量ベースのライセンス * ］ の順にクリックします。</p>
+</li>
+<li>
+<p>各パッケージのライセンスで許可されている容量と割り当てられている容量を表示します。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_capacity-based-licenses.png" alt="プロフェッショナルパッケージと必須パッケージに割り当てられた容量とライセンスで許可された容量の割合を示すスクリーンショット。"></span></p>
+</div>
+</li>
+<li>
+<p>必要に応じて、ライセンスで許可された容量を追加で購入し、アカウントにライセンスを追加します。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="購入済みライセンスをアカウントに追加します">購入済みライセンスをアカウントに追加します</h3>
+<div class="paragraph">
+<p>ネットアップアカウントのライセンスを購入したら、 Cloud Volumes ONTAP で容量を使用できるように、 Cloud Manager にライセンスを追加する必要があります。</p>
+</div>
+<div class="olist arabic">
+<div class="title">手順</div>
+<ol class="arabic">
+<li>
+<p>［ * すべてのサービス ］ &gt; ［ デジタルウォレット ］ &gt; ［ 容量ベースのライセンス * ］ の順にクリックします。</p>
+</li>
+<li>
+<p>[ ライセンスの追加 ] をクリックします。</p>
+</li>
+<li>
+<p>容量ベースのライセンスのシリアル番号を入力し、 * ライセンスの追加 * をクリックします。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-volumes-ontap-の-paygo-ライセンスを管理します">Cloud Volumes ONTAP の PAYGO ライセンスを管理します</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>デジタルウォレットページでは、シリアル番号と PAYGO ライセンスタイプを含む、 PAYGO Cloud Volumes ONTAP の各システムに関する詳細を表示できます。</p>
+</div>
+<div class="olist arabic">
+<div class="title">手順</div>
+<ol class="arabic">
+<li>
+<p>[ すべてのサービス ] 、 [ デジタルウォレット ] 、 [ Cloud Volumes ONTAP ライセンス ] の順にクリックします。</p>
+</li>
+<li>
+<p>[PAYGO] をクリックします。</p>
+</li>
+<li>
+<p>PAYGO ライセンスごとに詳細を表に示します。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_paygo_licenses.png" alt="3 つのペイゴライセンスを含むデジタルウォレットページの表を示すスクリーンショット。各行には、名前、システムのタイプ、シリアル番号、パッケージ、およびライセンスを管理するためのリンクが表示されます。"></span></p>
+</div>
+</li>
+<li>
+<p>必要に応じて、 [PAYGO ライセンスの管理（ Manage PAYGO License ） ] をクリックして、 PAYGO ライセンスを変更するか、インスタンスタイプを変更します。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-volumes-ontap-のノードベースのライセンスを管理します">Cloud Volumes ONTAP のノードベースのライセンスを管理します</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ノードベースのライセンスを管理して、各 Cloud Volumes ONTAP システムに必要な容量を含む有効なライセンスがあることを確認します。</p>
+</div>
+<div class="sect2">
+<h3 id="システムライセンスファイルを取得します">システムライセンスファイルを取得します</h3>
 <div class="paragraph">
 <p>ほとんどの場合、 Cloud Manager はネットアップサポートサイトのアカウントを使用してライセンスファイルを自動的に取得できます。ただし、アップロードできない場合は、ライセンスファイルを手動でアップロードする必要があります。ライセンスファイルがない場合は、 netapp.com から入手できます。</p>
 </div>
@@ -2613,8 +2707,8 @@
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="システムライセンスを更新する">システムライセンスを更新する</h4>
+<div class="sect2">
+<h3 id="システムライセンスを更新する">システムライセンスを更新する</h3>
 <div class="paragraph">
 <p>ネットアップの担当者に連絡して BYOL サブスクリプションを更新すると、 Cloud Manager は自動的にネットアップから新しいライセンスを取得し、 Cloud Volumes ONTAP システムにインストールします。</p>
 </div>
@@ -2625,7 +2719,7 @@
 <div class="title">手順</div>
 <ol class="arabic">
 <li>
-<p>[ * 設定 ] &gt; [ デジタルウォレット * ] をクリックします。</p>
+<p>[ * すべてのサービス ] &gt; [ デジタルウォレット * ] をクリックします。</p>
 </li>
 <li>
 <p>BYOL * タブで、 Cloud Volumes ONTAP システムの詳細を展開します。</p>
@@ -2645,9 +2739,8 @@
 <p>Cloud Manager によって、 Cloud Volumes ONTAP システムのライセンスが更新されます。</p>
 </div>
 </div>
-</div>
 <div class="sect2">
-<h3 id="byol-の追加容量ライセンスを管理します">BYOL の追加容量ライセンスを管理します</h3>
+<h3 id="追加の容量ライセンスを管理する">追加の容量ライセンスを管理する</h3>
 <div class="paragraph">
 <p>Cloud Volumes ONTAP BYOL システムの追加容量ライセンスを購入すると、 BYOL システムライセンスで提供される 368 TB を超える容量を割り当てることができます。たとえば、 1 つのライセンス容量を追加購入して、最大 736TB の容量を Cloud Volumes ONTAP に割り当てることができます。また、容量ライセンスを 3 つ追加購入すれば、最大 1.4 PB まで拡張できます。</p>
 </div>
@@ -2663,7 +2756,7 @@
 <div class="title">手順</div>
 <ol class="arabic">
 <li>
-<p>[ * 設定 ] &gt; [ デジタルウォレット * ] をクリックします。</p>
+<p>[ * すべてのサービス ] &gt; [ デジタルウォレット * ] をクリックします。</p>
 </li>
 <li>
 <p>BYOL * タブで、 Cloud Volumes ONTAP システムの詳細を展開します。</p>
@@ -2689,7 +2782,7 @@
 <div class="title">手順</div>
 <ol class="arabic">
 <li>
-<p>[ * 設定 ] &gt; [ デジタルウォレット * ] をクリックします。</p>
+<p>[ * すべてのサービス ] &gt; [ デジタルウォレット * ] をクリックします。</p>
 </li>
 <li>
 <p>BYOL * タブで、 Cloud Volumes ONTAP システムの詳細を展開します。</p>
@@ -2715,7 +2808,7 @@
 <div class="title">手順</div>
 <ol class="arabic">
 <li>
-<p>[ * 設定 ] &gt; [ デジタルウォレット * ] をクリックします。</p>
+<p>[ * すべてのサービス ] &gt; [ デジタルウォレット * ] をクリックします。</p>
 </li>
 <li>
 <p>BYOL * タブで、 Cloud Volumes ONTAP システムの詳細を展開します。</p>
@@ -2742,7 +2835,7 @@
 <div class="title">手順</div>
 <ol class="arabic">
 <li>
-<p>[ * 設定 ] &gt; [ デジタルウォレット * ] をクリックします。</p>
+<p>[ * すべてのサービス ] &gt; [ デジタルウォレット * ] をクリックします。</p>
 </li>
 <li>
 <p>「 * 評価 * 」をクリックします。</p>
@@ -2811,7 +2904,7 @@
 <div class="title">手順</div>
 <ol class="arabic">
 <li>
-<p>[ * 設定 ] &gt; [ デジタルウォレット * ] をクリックします。</p>
+<p>[ * すべてのサービス ] &gt; [ デジタルウォレット * ] をクリックします。</p>
 </li>
 <li>
 <p>Cloud Backup Licenses （クラウドバックアップライセンス） * をクリックします。</p>

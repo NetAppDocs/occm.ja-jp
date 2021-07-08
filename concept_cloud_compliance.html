@@ -9,7 +9,7 @@
   <meta property="og:title" content="クラウドデータの意味をご確認ください | NetApp Cloud Docs" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ja-jp/occm/concept_cloud_compliance.html" />
-	<meta property="og:description" content="Cloud Data Sense は、社内のオンプレミスデータソースやクラウドデータソースをスキャンしてデータをマッピング、分類し、プライベート情報を特定する、 Cloud Manager のデータガバナンスサービスです。これにより、セキュリティとコンプライアンスのリスクを軽減し、ストレージコストを削減し、データ..." />
+	<meta property="og:description" content="Cloud Data Sense は、社内のオンプレミスデータソースやクラウドデータソース、作業環境をスキャンしてデータをマッピング、分類し、プライベート情報を特定する、 Cloud Manager のデータガバナンスサービスです。これにより、セキュリティとコンプライアンスのリスクを軽減し、ストレージコストを削減..." />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/occm/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,7 +18,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Cloud Data Sense は、社内のオンプレミスデータソースやクラウドデータソースをスキャンしてデータをマッピング、分類し、プライベート情報を特定する、 Cloud Manager のデータガバナンスサービスです。これにより、セキュリティとコンプライアンスのリスクを軽減し、ストレージコストを削減し、データ...">
+  <meta name="description" content="Cloud Data Sense は、社内のオンプレミスデータソースやクラウドデータソース、作業環境をスキャンしてデータをマッピング、分類し、プライベート情報を特定する、 Cloud Manager のデータガバナンスサービスです。これにより、セキュリティとコンプライアンスのリスクを軽減し、ストレージコストを削減...">
   <meta name="keywords" content=" artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, azure netapp files, cloud volumes ontap, Amazon S3, database, onedrive, on-prem ontap, file shares, object storage, backup files, aip labels, governance, data sense">
   
   
@@ -627,6 +627,8 @@
     
 
   
+
+
 
 
 
@@ -1460,6 +1462,8 @@
 
 
 
+
+
           
         </span>
       </span>
@@ -1591,9 +1595,9 @@
           </div>
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/データをクラウドに階層化.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/オンプレミスのデータをクラウドに階層化.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            データをクラウドに階層化
+            オンプレミスのデータをクラウドに階層化
           </a>
         </li>
         <span>
@@ -1977,8 +1981,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_overview.html">
         Cloud Manager の詳細をご確認ください
-      </a></li><li class=" "><a class="na-navbar-padding" href="reference_networking.html">
-        ネットワークの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_checklist_cm.html">
+        はじめにチェックリスト
       </a></li><li class=" "><a class="na-navbar-padding" href="task_signing_up.html">
         Cloud Central に登録します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_logging_in.html">
@@ -2037,10 +2041,12 @@
         Azure の HA ペア
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_ha_google_cloud.html">
         GCP の HA ペア
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_license_management.html">
+        ノードベースの BYOL の管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="concept_evaluating.html">
         評価中
-      </a></li><li class=" "><a class="na-navbar-padding" href="concept_licensing.html">
-        BYOL のライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_security.html">
         セキュリティ
       </a></li><li class=" "><a class="na-navbar-padding" href="concept_performance.html">
@@ -2146,12 +2152,12 @@
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 管理</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="task_registering.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
+        ライセンスを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_registering.html">
         従量課金制システムを登録
       </a></li><li class=" "><a class="na-navbar-padding" href="task_setting_up_ontap_cloud.html">
         Cloud Volumes ONTAP をセットアップする
-      </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_licenses.html">
-        BYOL ライセンスを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_updating_ontap_cloud.html">
         ソフトウェアを更新します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_modifying_ontap_cloud.html">
@@ -2322,7 +2328,9 @@
         <div class="na-navbar-padding"> データソースでスキャンをアクティブ化します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="task_getting_started_compliance.html">
-        Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+        Cloud Volumes ONTAP とオンプレミス ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_anf.html">
+        Azure NetApp Files の特長
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_s3.html">
         Amazon S3 バケット
       </a></li><li class=" "><a class="na-navbar-padding" href="task_scanning_databases.html">
@@ -2376,7 +2384,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="task_getting_started_compute.html">
         はじめに
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> データをクラウドに階層化</div>
+        <div class="na-navbar-padding"> オンプレミスのデータをクラウドに階層化</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="concept_cloud_tiering.html">
         Cloud Tiering の詳細をご確認ください
@@ -2516,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-11 16:02:33 +0000">06/11/2021</time>
+    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
     
   
 
@@ -2544,7 +2552,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Cloud Data Sense は、社内のオンプレミスデータソースやクラウドデータソースをスキャンしてデータをマッピング、分類し、プライベート情報を特定する、 Cloud Manager のデータガバナンスサービスです。これにより、セキュリティとコンプライアンスのリスクを軽減し、ストレージコストを削減し、データ移行プロジェクトを支援できます。</p>
+<p>Cloud Data Sense は、社内のオンプレミスデータソースやクラウドデータソース、作業環境をスキャンしてデータをマッピング、分類し、プライベート情報を特定する、 Cloud Manager のデータガバナンスサービスです。これにより、セキュリティとコンプライアンスのリスクを軽減し、ストレージコストを削減し、データ移行プロジェクトを支援できます。</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2587,10 +2595,10 @@
 <p>表示と変更 <a href="https://azure.microsoft.com/en-us/services/information-protection/" target="_blank" rel="noopener">"Azure Information Protection （ AIP ）ラベル"</a> ファイルに保存できます</p>
 </li>
 <li>
-<p>カスタムステータスをファイルに追加して、ファイルのフォローアップが必要かどうか、または検証済みかどうかを確認できるようにします</p>
+<p>カスタムステータスをファイルに追加し（「移動が必要」など）、 Cloud Manager ユーザを割り当てて、ユーザがファイルの変更を所有できるようにします</p>
 </li>
 <li>
-<p>個々のファイルを削除します</p>
+<p>個々のファイルを移動および削除します</p>
 </li>
 </ul>
 </div>
@@ -2672,7 +2680,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>クラウドデータセンスの使用コストは、スキャンするデータの量によって異なります。データをスキャンする、 Cloud Manager ワークスペース内の最初の 1TB のデータは無料です。これには、すべての作業環境とデータソースのすべてのデータが含まれます。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。を参照してください <a href="https://cloud.netapp.com/cloud-compliance#pricing" target="_blank" rel="noopener">"価格設定"</a> を参照してください。</p>
+<p>クラウドデータセンスの使用コストは、スキャンするデータの量によって異なります。データをスキャンする、 Cloud Manager ワークスペース内の最初の 1TB のデータは無料です。これには、すべての作業環境とデータソースのすべてのデータが含まれます。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。を参照してください <a href="https://cloud.netapp.com/netapp-cloud-data-sense" target="_blank" rel="noopener">"価格設定"</a> を参照してください。</p>
 <div class="paragraph">
 <p><a href="task_deploy_cloud_compliance.html#subscribing-to-the-cloud-data-sense-service" target="_blank" rel="noopener">"登録方法については、こちらをご覧ください"</a>。</p>
 </div>
@@ -2707,30 +2715,6 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="cloud-data-sense-の仕組み">Cloud Data Sense の仕組み</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Cloud Data Sense の概要は次のようになります。</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Cloud Manager でデータセンスのインスタンスを導入します。</p>
-</li>
-<li>
-<p>1 つ以上の作業環境またはデータソースで有効にします。</p>
-</li>
-<li>
-<p>データセンスは、 AI 学習プロセスを使用してデータをスキャンします。</p>
-</li>
-<li>
-<p>[* Data sense * （データセンス * ） ] をクリックし、提供されているダッシュボードとレポートツールを使用して、コンプライアンスの取り組みを支援します。</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="cloud-data-sense-インスタンス">Cloud Data Sense インスタンス</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -2752,7 +2736,7 @@
 <p><span class="image"><img src="./media/diagram_cloud_compliance_instance.png" alt="クラウドプロバイダで実行されている Cloud Manager インスタンスと Cloud Data Sense インスタンスを示す図。"></span></p>
 </div>
 <div class="paragraph">
-<p>インスタンスについては、次の点に注意してください。</p>
+<p>デフォルトのインスタンスについては、次の点に注意してください。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2763,18 +2747,6 @@
 <p>AWS では、 Cloud Data Sense はで実行されます <a href="https://aws.amazon.com/ec2/instance-types/m5/">"m5.mc2[ インスタンス"</a> 500 GB の gp2 ディスクです。</p>
 <div class="paragraph">
 <p>m5.mcd を使用できない領域では、代わりに m4.mcd インスタンスに対してデータセンスを実行します。</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="注記"></i>
-</td>
-<td class="content">
-インスタンス / VM タイプの変更やサイズ変更はサポートされていません。表示されるサイズを使用する必要があります。
-</td>
-</tr>
-</table>
 </div>
 </li>
 <li>
@@ -2800,6 +2772,73 @@ Cloud Data Sense がデータを継続的にスキャンするため、インス
 </tr>
 </table>
 </div>
+<div class="sect2">
+<h3 id="小さいインスタンスタイプを使用しています">小さいインスタンスタイプを使用しています</h3>
+<div class="paragraph">
+<p>CPU の数と RAM の数が少ないシステムには Data Sense を導入できますが、このような低パフォーマンスのシステムを使用する場合はいくつかの制限事項があります。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 26%;">
+<col style="width: 56%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">システムサイズ</th>
+<th class="tableblock halign-left valign-top">仕様</th>
+<th class="tableblock halign-left valign-top">制限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large （デフォルト）</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPU × 16 、 64GB RAM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">なし</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">中</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPU × 8 、 32GB RAM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">スキャンに時間がかかり、スキャンできるファイルは最大 100 万個です。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">小規模</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPU × 8 、 16GB RAM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">「中」と同じ制限に加えて、の大部分ではコンテキスト AI スキャンの 2 つの機能が無効になっています <a href="reference_private_data_categories.html#types-of-sensitive-personal-data">"機密性の高い個人"</a> 識別子。識別用です <a href="task_responding_to_dsar.html">"データ主体名"</a> ファイル内。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>クラウドにデータセンスを導入する場合は、 <a href="mailto:ng-contact-data-sense@netapp.com">ng-contact-data-sense@netapp.com</a> に電子メールを送信して、これらの小規模なシステムのいずれかを使用する場合のサポートを依頼してください。</p>
+</div>
+<div class="paragraph">
+<p>データセンスをオンプレミスで導入する場合は、この仕様の Linux ホストだけを使用します。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-data-sense-の仕組み">Cloud Data Sense の仕組み</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Data Sense の概要は次のようになります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Cloud Manager でデータセンスのインスタンスを導入します。</p>
+</li>
+<li>
+<p>概要マッピングまたは詳細レベルスキャンは、 1 つ以上の作業環境またはデータソースで有効にします。</p>
+</li>
+<li>
+<p>データセンスは、 AI 学習プロセスを使用してデータをスキャンします。</p>
+</li>
+<li>
+<p>[* Data sense * （データセンス * ） ] をクリックし、提供されているダッシュボードとレポートツールを使用して、コンプライアンスの取り組みを支援します。</p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2819,6 +2858,89 @@ Cloud Data Sense がデータを継続的にスキャンするため、インス
 </div>
 <div class="paragraph">
 <p>スキャンは、ボリュームレベル、バケットレベル、データベーススキーマレベル、および OneDrive ユーザレベルで有効または無効にできます。</p>
+</div>
+<div class="sect2">
+<h3 id="マッピングスキャンと分類スキャンの違いは何ですか">マッピングスキャンと分類スキャンの違いは何ですか</h3>
+<div class="paragraph">
+<p>Cloud Data Sense を使用すると、選択した作業環境やデータソースに対して、一般的な「マッピング」スキャンを実行できます。マッピングではデータの概要のみが示され、分類ではデータの詳細なスキャンが提供されます。データソースでは、ファイルにアクセスしてデータを参照できないため、マッピングは短時間で完了します。</p>
+</div>
+<div class="paragraph">
+<p>多くのユーザは、この機能を気に入っています。これは、より多くの調査が必要なデータソースをすばやくスキャンして特定し、必要なデータソースに対してのみ分類スキャンを有効にするためです。</p>
+</div>
+<div class="paragraph">
+<p>次の表に、いくつかの相違点を示します。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 55.5555%;">
+<col style="width: 22.2222%;">
+<col style="width: 22.2223%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">フィーチャー（ Feature ）</th>
+<th class="tableblock halign-left valign-top">分類</th>
+<th class="tableblock halign-left valign-top">マッピング</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">スキャン速度</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">遅い</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">高速</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ファイルタイプと使用済み容量のリスト</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ファイル数と使用済み容量</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ファイルの経過時間とサイズ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">を実行する機能 <a href="task_generating_compliance_reports.html#data-mapping-report">"データマッピングレポート"</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[ データ調査 ] ページでファイルの詳細を確認します</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">いいえ</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ファイル内の名前を検索します</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">いいえ</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">カスタム検索結果を提供するポリシーを作成する</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">いいえ</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AIP ラベルおよびステータスタグを使用してデータを分類します</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">いいえ</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ソースファイルを削除および移動します</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">いいえ</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">他のレポートを実行できます</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">はい。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">いいえ</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
