@@ -94,7 +94,7 @@ HA ペア:: HA ペアでは、最大ディスクサイズが 8TB の Premium ペ
 
 GCP では、アグリゲートに同じサイズのディスクを 6 本まで含めることができます。最大ディスクサイズは 16TB です。
 
-ディスクタイプには、 _Zonal SSD persistent disks _ または _Zonal standard persistent disks _ を指定できます。永続ディスクを Google Storage バケットとペアリングできます からに link:concept_data_tiering.html["使用頻度の低いデータを低コストのオブジェクトストレージに階層化します"]。
+ディスクタイプは、 _Zonal SSD persistent disks _ 、 _Zonal Balanced persistent disks _ 、または _Zonal standard persistent disks _ のいずれかです。永続ディスクを Google Storage バケットとペアリングできます からに link:concept_data_tiering.html["使用頻度の低いデータを低コストのオブジェクトストレージに階層化します"]。
 
 * 関連リンク *
 

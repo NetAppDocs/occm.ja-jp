@@ -21,6 +21,187 @@ link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機
 
 
 
+== Cloud Manager 3.9.8 （ 2021 年 7 月 7 日）
+
+* <<Cloud Volumes ONTAP enhancements>>
+* <<Cloud Backup enhancements>>
+* <<Cloud Tiering enhancements>>
+* <<Cloud Data Sense enhancements>>
+* <<Cloud Sync enhancements>>
+* <<Connector enhancement>>
+* <<Support Dashboard enhancement>>
+* <<Digital Wallet enhancement>>
+
+
+
+
+=== Cloud Volumes ONTAP の機能拡張
+
+このリリースの Cloud Manager では、 Cloud Volumes ONTAP の管理が強化されています。
+
+
+
+==== すべてのクラウドプロバイダで利用できる機能拡張
+
+* Cloud Volumes ONTAP では、新しい充電方法を利用できます。
++
+** * 容量ベースの BYOL * ：容量ベースのライセンスでは、 TiB あたりの Cloud Volumes ONTAP 料金を支払うことができます。このライセンスはネットアップアカウントに関連付けられており、ライセンスで十分な容量が確保されていれば、複数の Cloud Volumes ONTAP システムを作成できるようになっています。容量ベースのライセンスは、 _Essential_or_Professional_ のいずれかのパッケージ形式で提供されます。
+** * Freemium offering * ： Freemium により、ネットアップのすべての Cloud Volumes ONTAP 機能を無償で使用できます（クラウドプロバイダの料金は引き続き適用されます）。システムあたりの割り当て容量は 500 GB に制限されており、サポート契約はありません。最大 10 個の Freemium システムを使用できます。
++
+link:concept_licensing.html["これらのライセンスオプションの詳細については、こちらをご覧ください"]。
+
++
+次に、 Azure に新しい Cloud Volumes ONTAP システムを導入する際に選択できる充電方法の例を示します。
+
++
+image:screenshot_cvo_charging_methods.png["Cloud Volumes ONTAP 作業環境ウィザードのスクリーンショット。充電方法を選択できます。"]
+
+
+
+* Write Once 、 Read Many （ WORM ）ストレージはプレビューではなくなり、 Cloud Volumes ONTAP で一般的に使用できるようになりました。 link:concept_worm.html["WORM ストレージの詳細については、こちらをご覧ください。"]。
+
+
+
+
+==== AWS で利用できる機能拡張
+
+9.9.1 リリース以降、 Cloud Volumes ONTAP では m5dn.24xlarge インスタンスタイプがサポートされるようになりました。課金方式は PAYGO Premium 、 Bring Your Own License （ BYOL ；お客様所有のライセンスを使用）、 Freemium です。
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_991.html["AWS で Cloud Volumes ONTAP のサポートされている構成を表示します"^]。
+
+
+
+==== Azure で利用できる機能拡張
+
+* Azure で Cloud Volumes ONTAP システムを作成する際に、 VM とその関連リソースに対して既存のリソースグループを選択できるようになりました。
++
+image:screenshot_azure_resource_group.png["既存のリソースグループを選択できる作業環境作成ウィザードのスクリーンショット。"]
+
++
+導入に失敗したり削除したりした場合、 Cloud Manager は次の権限を使用してリソースグループから Cloud Volumes ONTAP リソースを削除します。
+
++
+[source, json]
+----
+"Microsoft.Network/privateEndpoints/delete",
+"Microsoft.Compute/availabilitySets/delete",
+----
++
+Cloud Manager に追加した Azure クレデンシャルの各セットに、これらの権限を必ず付与してください。最新の権限のリストは、で確認できます https://mysupport.netapp.com/site/info/cloud-manager-policies["Cloud Manager のポリシーのページです"^]。
+
+* セキュリティの強化として、 Cloud Volumes ONTAP 用のストレージアカウントの作成時に Cloud Manager で * Blob パブリックアクセス * が無効になるようになりました。
+* デフォルトで、 Cloud Manager は、新しい Cloud Volumes ONTAP システムのブート診断ストレージアカウントで Azure Private Link 接続を有効にするようになりました。
++
+つまり、 Cloud Volumes ONTAP の _all_storage アカウントでプライベートリンクが使用されるようになります。
+
++
+link:task_enabling_private_link.html["Azure プライベートリンクとクラウドの使用の詳細については、こちらをご覧ください Volume ONTAP の略"]。
+
+
+
+
+
+==== Google Cloud で利用可能な機能強化
+
+* 9.9.1 リリース以降、 Cloud Volumes ONTAP では Balanced Persistent Disk （ pd-bBalanced ）がサポートされるようになりました。
++
+この SSD は、 GB あたりの IOPS を下げて、パフォーマンスとコストのバランスを取ります。
+
+* 新しい Cloud Volumes ONTAP システムでは、 custom-4-16384 マシンタイプはサポートされなくなりました。
++
+このタイプのマシンで既存のシステムを実行している場合は、引き続き使用できますが、 n2 標準 -4 マシンタイプに切り替えることをお勧めします。
+
+
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_gcp_991.html["GCP で Cloud Volumes ONTAP のサポートされている構成を表示します"^]。
+
+
+
+=== Cloud Backup の機能拡張
+
+* Cloud Backup で、 Cloud Volumes ONTAP システムで使用していたものとは異なるアカウント / サブスクリプションを使用してバックアップを作成できるようになりました。Cloud Volumes ONTAP システムの導入リージョンとは異なるリージョンにバックアップファイルを作成することもできます。
++
+この機能は、 AWS または Azure を使用している場合にのみ使用できます。既存の作業環境でバックアップを有効にする場合にのみ使用できます。新しい Cloud Volumes ONTAP 作業環境を作成する場合は使用できません。
+
+* セキュリティと制御を強化するために、 Microsoft が管理するデフォルトの暗号化キーを使用する代わりに、アクティベーションウィザードで、お客様が管理する独自のキーを選択してデータを暗号化できます。
++
+オンプレミスの ONTAP システムまたは Azure の Cloud Volumes ONTAP システムからバックアップを設定する場合に使用できます。
+
+* バックアップファイルからの単一ファイルの復元を使用して一度に 8 ファイルのみを復元するという制限がなくなりました。一度に最大 100 個のファイルをリストアできるようになりました。
+
+
+
+
+=== Cloud Tiering の機能拡張
+
+データを Azure BLOB ストレージに階層化するときに、 Connector をオンプレミスで実行できるようになりました。Azure VNet にインストールされたコネクタを使用する必要はなくなりました。
+
+
+
+=== Cloud Data Sense の強化
+
+* 新しい機能を使用すると、データ検出でスキャンしているすべてのソースファイルを任意の NFS 共有に移動できます。これにより、機密ファイルやセキュリティ関連ファイルを特別な領域に移動して、より詳細な分析を行うことができます。
+* 完全な分類スキャンを実行する代わりに、データをカテゴリにすばやくマッピングするように選択できるようになりました。これにより、 Governance Dashboard からデータマッピングレポートを表示して、完全なスキャンを実行する必要がない特定のデータソースがある場合にデータの概要を確認できます。
+* 特定の Cloud Manager ユーザにファイルを割り当てて、ファイルに対して実行する必要があるフォローアップアクションをそのユーザが実行できるようにします。この機能を既存の機能とともに使用して、カスタムステータスタグをファイルに追加できます。
++
+[ 調査 ] ページの新しいフィルタを使用すると、 [ 割り当て先 ] フィールドに同じユーザーを持つすべてのファイルを簡単に表示できます。
+
+* スキャン要件が小さいユーザの中には、より小さいクラウドデータセンスインスタンスを使用できるようにする必要のあるユーザもいます。できるようになりました。これらの小規模なインスタンスを使用する場合は、いくつかの制限事項があります link:https://review.docs.netapp.com/us-en/occm_jul_2021_cc/concept_cloud_compliance.html#using-a-smaller-instance-type["これらの制限事項を最初に確認してください"]。
+* データスキャンは、ストレージシステムとデータにほとんど影響を与えません。ただし、影響が非常に小さい場合でも、「低速」スキャンを実行するように Data Sense を設定できます。
+* [ ファイルの詳細 ] ページとレポートに [ 最終アクセス日時 ] の値が追加され、 CSV 形式で出力されます。これにより、ユーザーがファイルに最後にアクセスしたときを確認できます。
+
+
+
+
+=== Cloud Sync の機能拡張
+
+* Cloud Sync のユーザインターフェイスで、 ONTAP S3 ストレージと Google Cloud Storage バケットの間の同期関係がサポートされるようになりました。
++
+link:reference_sync_requirements.html["サポートされている同期関係を表示する"]。
+
+* 同期関係を作成して設定を有効にすると、 Cloud Sync でオブジェクトベースのストレージ間でオブジェクトのメタデータとタグをコピーできるようになりました。
++
+link:task_sync_creating_relationships.html#settings["[ オブジェクトのコピー ] 設定の詳細については、を参照してください"]。
+
+* Google Cloud サービスアカウントで認証することで、外部の橋本 Vault からクレデンシャルにアクセスするようにデータブローカーを設定できるようになりました。
++
+link:task_external_vault.html["データブローカーでの橋 Corp Vault の使用の詳細を確認"]。
+
+* AWS S3 バケットへの同期関係を設定する際に、ターゲットの S3 バケット内のオブジェクトに保存するタグまたはメタデータを同期関係ウィザードで定義できるようになりました。
++
+タグ付けオプションは、以前は同期関係の設定に含まれていました。
+
+
+
+
+
+=== コネクターの拡張
+
+新しいオプションを追加して使いやすくするために、 * コネクターの追加 * ウィザードを再設計しました。タグの追加、ロール（ AWS または Azure ）の指定、プロキシサーバのルート証明書のアップロード、 Terraform Automation のコードの表示、進捗状況の詳細の表示などが可能になりました。
+
+* link:task_creating_connectors_aws.html["AWS でコネクタを作成します"]
+* link:task_creating_connectors_azure.html["Azure でコネクタを作成します"]
+* link:task_creating_connectors_gcp.html["GCP でコネクターを作成します"]
+
+
+
+
+=== サポートダッシュボードの機能拡張
+
+ネットアップサポートサイト（ NSS ）アカウントは、設定メニューではなくサポートダッシュボードで管理できるようになりました。この変更により、すべてのサポート関連情報を 1 箇所から簡単に検索して管理できるようになります。
+
+image:screenshot_nss_management.png["NSS アカウントを追加できる Support Dashboard の NSS Management タブのスクリーンショット。"]
+
+
+
+=== デジタルウォレットの機能強化
+
+これで、 [ デジタルウォレット ] ページは、 [ リソース ] セクションの下にある独自のタブに表示されます。 link:task_managing_licenses.html["デジタルウォレットからライセンスを管理する方法について説明します"]。
+
+image:screenshot_digital_wallet_menu.png["All Services オプションの下の Digital Wallet のスクリーンショット。"]
+
+
+
 == Cloud Manager 3.9.7 アップデート（ 2021 年 7 月 6 日）
 
 * <<Cloud Sync support for storage classes in Google Cloud>>

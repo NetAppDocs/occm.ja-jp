@@ -107,6 +107,8 @@ image:screenshot_iam_create_role.gif["AWS IAM コンソールの Create role ペ
 
 必要な権限を持つ AWS アカウントを入力したら、そのアカウントのクレデンシャルを Cloud Manager に追加できます。これにより、そのアカウントで Cloud Volumes ONTAP システムを起動できます。
 
+作成したクレデンシャルをクラウドプロバイダで使用できるようになるまでに数分かかることがあります。Cloud Manager にクレデンシャルを追加するまで数分待ってから、
+
 .手順
 . Cloud Manager コンソールの右上にある設定アイコンをクリックし、 * クレデンシャル * を選択します。
 +

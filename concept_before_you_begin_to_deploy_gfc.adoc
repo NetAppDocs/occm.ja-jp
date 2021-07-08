@@ -80,7 +80,7 @@ Global File Cache Core インスタンスは非常にスケーラブルで、 Co
 
 === Cloud Manager インスタンス
 
-Cloud Volumes ONTAP for Azure をストレージプラットフォームとして使用している場合は、最新のものに示す権限が Cloud Manager に割り当てられていることを確認してください https://occm-sample-policies.s3.amazonaws.com/Policy_for_cloud_Manager_Azure_3.8.7.json["Azure 向け Cloud Manager ポリシー"^]。
+Cloud Volumes ONTAP for Azure をストレージプラットフォームとして使用している場合は、最新のものに示す権限が Cloud Manager に割り当てられていることを確認してください https://occm-sample-policies.s3.amazonaws.com/Policy_for_cloud_Manager_Azure_3.9.8.json["Azure 向け Cloud Manager ポリシー"^]。
 
 新しく作成したインスタンスには、デフォルトで必要なすべての権限が付与されます。バージョン 3.8.7 （ 2020 年 8 月 3 日）より前のバージョンでインスタンスを導入している場合は、これらの項目を追加する必要があります。
 

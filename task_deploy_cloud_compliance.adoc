@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_deploy_cloud_compliance.html 
 keywords: cloud compliance, data sense, get started, deploy cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, 
-summary: Cloud Manager のワークスペースに Cloud Data Sense インスタンスを導入するには、いくつかの手順を実行します。クラウドまたはオンプレミスシステムにデータセンスを導入できます。 
+summary: Cloud Manager のワークスペースに Cloud Data Sense を導入するには、いくつかの手順を実行します。クラウドまたはオンプレミスシステムにデータセンスを導入できます。 
 ---
 = クラウドデータの導入センス
 :hardbreaks:
@@ -13,9 +13,9 @@ summary: Cloud Manager のワークスペースに Cloud Data Sense インスタ
 
 
 [role="lead"]
-Cloud Manager のワークスペースに Cloud Data Sense インスタンスを導入するには、いくつかの手順を実行します。クラウドまたはオンプレミスシステムにデータセンスを導入できます。
+Cloud Manager のワークスペースに Cloud Data Sense を導入するには、いくつかの手順を実行します。クラウドまたはオンプレミスシステムにデータセンスを導入できます。
 
-オンプレミスの ONTAP 作業環境を、オンプレミスにあるデータセンスインスタンスを使用してスキャンする場合は、オンプレミス環境をインストールすることをお勧めします。ただし、これは必須条件ではありません。どのインストール方法を選択しても、ソフトウェアはまったく同じように機能します。
+オンプレミスの ONTAP 作業環境を、オンプレミスにも存在するデータセンスインスタンスを使用してスキャンする場合は、オンプレミス環境をインストールすることをお勧めします。ただしこれは必須ではありません。どのインストール方法を選択しても、ソフトウェアはまったく同じように機能します。
 
 
 
@@ -40,8 +40,8 @@ Cloud Manager のワークスペースに Cloud Data Sense インスタンスを
 [role="quick-margin-para"]
 環境が前提条件を満たしていることを確認します。これには、インスタンスのアウトバウンドインターネットアクセス、コネクタと Cloud Data Sense 間のポート 80 経由の接続などが含まれます。 <<Reviewing prerequisites,すべてのリストを参照してください>>。
 
-* クラウドにインストールした場合は、 Cloud Data Sense インスタンス用の vCPU が 16 個必要です。を参照してください link:concept_cloud_compliance.html#the-cloud-data-sense-instance["インスタンスタイプの詳細"^]。
-* オンプレミスにインストールした場合は、を満たす Linux システムが必要です link:task_deploy_cloud_compliance.html#deploying-the-cloud-data-sense-instance-on-premises["次の要件があります"^]。
+* クラウドにインストールされている場合、デフォルトの構成にはクラウドデータセンスインスタンス用の vCPU が 16 個必要です。を参照してください link:concept_cloud_compliance.html#the-cloud-data-sense-instance["インスタンスタイプの詳細"^]。
+* オンプレミスにインストールした場合は、を満たす Linux システムが必要です link:task_deploy_cloud_compliance.html#deploying-the-cloud-data-sense-instance-on-premises["次の要件があります"]。
 
 
 
@@ -82,7 +82,7 @@ AWS または Azure に導入されているコネクタを使用する必要が
 ご覧のように、を使用する必要がある状況もあります link:concept_connectors.html#when-to-use-multiple-connectors["複数のコネクタ"]。
 
 
-NOTE: Azure NetApp Files のスキャンを計画している場合は、スキャンするボリュームと同じ領域に導入していることを確認する必要があります。
+NOTE: Azure NetApp Files ボリュームのスキャンを計画している場合は、スキャンするボリュームと同じリージョンに導入する必要があります。
 
 
 
@@ -148,6 +148,9 @@ vCPU の制限の詳細については、次のリンクを参照してくださ
 
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html["AWS のマニュアル： Amazon EC2 Service Limits"^]
 * https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas["Azure のドキュメント：「仮想マシンの vCPU クォータ"^]
++
+CPU 数と RAM 容量が少ないシステムには Data Sense を導入できますが、これらのシステムの使用には制限があります。を参照してください link:concept_cloud_compliance.html#using-a-smaller-instance-type["小さいインスタンスタイプを使用しています"] を参照してください。
+
 
 
 --
@@ -218,6 +221,9 @@ NOTE: Cloud Data Sense は、現在、ソフトウェアがオンプレミスに
 * RAM ： 64GB （ホストでスワップメモリを無効にする必要があります）
 * CPU ： 16 コア
 * ディスク： 500GB SSD
++
+CPU 数と RAM 容量が少ないシステムには Data Sense を導入できますが、これらのシステムの使用には制限があります。を参照してください link:concept_cloud_compliance.html#using-a-smaller-instance-type["小さいインスタンスタイプを使用しています"] を参照してください。
+
 * Red Hat Enterprise Linux システムは、 Red Hat サブスクリプション管理に登録する必要があります。登録されていない場合、システムはインストール中に必要なサードパーティソフトウェアをアップデートするためのリポジトリにアクセスできません。
 * Cloud Manager でインストールの進捗状況を確認できるように、ポート 8080 が開いていることを確認してください。
 * Cloud Data Sense をインストールするには root 権限が必要です。

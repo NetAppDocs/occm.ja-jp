@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_creating_connectors_aws.html 
-keywords: create connector in aws, create connector in azure, create connector in gcp, launch connector in aws, launch connector in azure, launch connector in gcp, deploy connector in aws, deploy connector in azure, deploy connector in gcp 
+keywords: create connector in aws, launch connector in aws, deploy connector in aws, aws connector, connector aws, connector permissions 
 summary: Cloud Manager のほとんどの機能を使用するには、 Account Admin がコネクタを導入する必要があります。Connector を使用すると、 Cloud Manager でパブリッククラウド環境内のリソースとプロセスを管理できます。 
 ---
 = AWS で Cloud Manager からコネクタを作成する
@@ -46,8 +46,12 @@ AWS ユーザに、 Cloud Manager からコネクタを作成するために必�
 Cloud Manager では、ユーザインターフェイスから AWS に直接コネクタを作成できます。
 
 .必要なもの
-* IAM 用の AWS アクセスキーとシークレットキー を持つユーザ https://mysupport.netapp.com/site/info/cloud-manager-policies["必要な権限"^]。
+* IAM 用の AWS アクセスキーとシークレットキー を持つユーザ https://mysupport.netapp.com/site/info/cloud-manager-policies["必要な権限"^] コネクタを作成します。
 * 選択した AWS リージョン内の VPC 、サブネット、キーペア。
+* Cloud Manager でコネクタ用の IAM ロールが自動的に作成されないようにするには、専用のを作成する必要があります https://occm-sample-policies.s3.amazonaws.com/Policy_for_Cloud_Manager_3.8.7.json["使用するポリシー"^]。
++
+これらの権限はコネクタインスタンス用です。権限のセットは、前述の最初の項目とは異なります。
+
 
 
 .手順
@@ -55,28 +59,28 @@ Cloud Manager では、ユーザインターフェイスから AWS に直接コ�
 +
 image:screenshot_connector_add.gif["ヘッダーのコネクターアイコンとコネクターの追加アクションを示すスクリーンショット。"]
 
-. [ * 開始しましょう * ] をクリックします。
-. クラウドプロバイダとして「 * Amazon Web Services * 」を選択します。
+. クラウドプロバイダとして「 * Amazon Web Services * 」を選択し、「 * Continue * 」をクリックします。
 +
 Connector は、作成する作業環境の種類や有効にするサービスへのネットワーク接続を確立する必要があることに注意してください。
 
 +
 link:reference_networking_cloud_manager.html["Connector のネットワーク要件の詳細については、こちらをご覧ください"]。
 
-. 必要な情報を確認し、 [* Continue （続行） ] をクリックします。
-. 必要な情報を入力します。
+. ウィザードの手順に従って、コネクタを作成します。
 +
-** * AWS クレデンシャル * ：インスタンスの名前を入力し、権限の要件を満たす AWS アクセスキーとシークレットキーを指定します。
-** * 場所 * ：インスタンスの AWS リージョン、 VPC 、およびサブネットを指定します。
-** * ネットワーク * ：インスタンスで使用するキーペア、パブリック IP アドレスを有効にするかどうか、およびオプションでプロキシ設定を指定します。
+** * 準備をしてください * ：必要なものを確認してください。
+** * AWS クレデンシャル * ：権限の要件を満たす AWS アクセスキーとシークレットキーを指定し、地域を選択します。
+** * 詳細 * ：インスタンスの名前を入力し、タグを指定し、必要な権限を持つ新しいロールを Cloud Manager で作成するか、で設定した既存のロールを選択するかを選択します https://occm-sample-policies.s3.amazonaws.com/Policy_for_Cloud_Manager_3.8.7.json["必要な権限"^]。
+** * ネットワーク * ：インスタンスに VPC 、サブネット、キーペアを指定し、パブリック IP アドレスを有効にするかどうかを選択し、必要に応じてプロキシ設定を指定します。
 ** * セキュリティグループ * ：新しいセキュリティグループを作成するか、インバウンド HTTP 、 HTTPS 、 SSH アクセスを許可する既存のセキュリティグループを選択するかを選択します。
 +
 
 NOTE: コネクタへの着信トラフィックは、開始しない限りありません。へのアクセスは、 HTTP および HTTPS を使用して提供されます link:concept_connectors.html#the-local-user-interface["ローカル UI"]は、まれな状況で使用します。SSH が必要になるのは、トラブルシューティングのためにホストに接続する必要がある場合のみです。
 
+** * 復習 * ：選択内容を確認して、設定が正しいことを確認してください。
 
 
-. [ 作成（ Create ） ] をクリックします。
+. [ 追加（ Add ） ] をクリックします。
 +
 インスタンスの準備が完了するまでに約 7 分かかります。処理が完了するまで、ページには表示されたままにしておいてください。
 

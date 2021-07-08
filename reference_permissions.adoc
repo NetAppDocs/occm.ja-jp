@@ -117,6 +117,9 @@ Cloud Manager Azure ポリシーには、 Cloud Manager が Azure で Cloud Volu
 | Microsoft.Compute/disks/delete" 、 Microsoft.Compute/disks/read" 、 Microsoft.Compute/disks/write" 、 "Microsoft.Storage/checknameavailability/read" 、 "Microsoft.Storage/operations/read" 、 "microsoft.StorageAccounts/listkeyss/action" 、 "microsoft.Storage/storageAccounts/read" 、 "microsoft.Storage/regenerateAccounts/action" 、 "Microsoft.Storage/storageAccounts/action" 、 "/writeStorageAccounts" 、 "/StorageAccounts/StorageAccounts/write/StorageAccounts" 、 ",","Microsoft 。 | Azure ストレージアカウントとディスクを管理し、ディスクを Cloud Volumes ONTAP に接続します。 
 
 
+| "microsoft.StorageAccounts/blobServices/containers/read" 、 "microsoft.KeyVault/vaults/read" 、 "microsoft.KeyVault/vaults/accessPolicies/write" | Azure BLOB ストレージへのバックアップとストレージアカウントの暗号化を有効にします 
+
+
 | 「 microsoft.network/networkinterfaces/read 」、「 microsoft.network/networkinterfaces/write 」、「 microsoft.network/networkinterfaces/join/action 」、 | ターゲットサブネット内の Cloud Volumes ONTAP のネットワークインターフェイスを作成および管理します。 
 
 
@@ -166,6 +169,9 @@ Cloud Manager Azure ポリシーには、 Cloud Manager が Azure で Cloud Volu
 
 
 | 「 Microsoft.Compute/diskEncryptionSets/read" | Cloud Manager で、別のアカウントの外部キーを使用してシングルノード Cloud Volumes ONTAP システムの Azure 管理ディスクを暗号化できます。この機能は API を使用してサポートされます。 
+
+
+| 「 Microsoft.Network/privateEndpoints/delete" 」、 Microsoft.Compute/availabilitySets/delete" 、 | 導入の失敗や削除が発生した場合に、 Cloud Manager が Cloud Volumes ONTAP に属するリソースグループからリソースを削除できるようにします。 
 |===
 
 

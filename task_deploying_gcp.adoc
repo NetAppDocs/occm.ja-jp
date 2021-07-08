@@ -89,12 +89,9 @@ video::video_subscribing_gcp.mp4[width=848,height=480]
 +
 コールドデータを Google Cloud Storage バケットに階層化する場合は、 Cloud Volumes ONTAP が配置されているサブネットをプライベート Google アクセス用に構成する必要があります。手順については、を参照してください https://cloud.google.com/vpc/docs/configure-private-google-access["Google Cloud のドキュメント：「 Configuring Private Google Access"^]。
 
-. * ライセンスとサポートサイトのアカウント * ：従量課金制または BYOL のどちらを使用するかを指定し、 NetApp Support Site のアカウントを指定します。
+. * 充電方法と NSS アカウント * ：このシステムで使用する充電オプションを指定し、ネットアップサポートサイトのアカウントを指定します。
 +
-ライセンスの仕組みについては、を参照してください link:concept_licensing.html["ライセンス"]。
-
-+
-NetApp Support Site のアカウントは、従量課金制の場合は任意ですが、 BYOL システムの場合は必須です。 link:task_adding_nss_accounts.html["ネットアップサポートサイトのアカウントを追加する方法について説明します"]。
+link:concept_licensing.html["これらの充電方法について説明します"]。
 
 . * 構成済みパッケージ * ： Cloud Volumes ONTAP システムを迅速に導入するパッケージを 1 つ選択するか、 * 独自の構成を作成 * をクリックします。
 +
@@ -129,7 +126,7 @@ NOTE: 選択したバージョンで新しいリリース候補、一般的な�
 link:concept_write_speed.html["書き込み速度の詳細については、こちらをご覧ください。"]。
 
 +
-データの階層化が有効になっていると、 WORM を有効にできません。
+Cloud Backup が有効になっている場合やデータ階層化が有効になっている場合は、 WORM を有効にすることはできません。
 
 +
 link:concept_worm.html["WORM ストレージの詳細については、こちらをご覧ください。"]。
@@ -315,12 +312,9 @@ link:concept_ha_google_cloud.html["HA 導入モデルの詳細については、
 +
 link:reference_networking_gcp.html["ネットワーク要件の詳細については、こちらをご覧ください"]。
 
-. * ライセンスとサポートサイトのアカウント * ：従量課金制または BYOL のどちらを使用するかを指定し、 NetApp Support Site のアカウントを指定します。
+. * 充電方法と NSS アカウント * ：このシステムで使用する充電オプションを指定し、ネットアップサポートサイトのアカウントを指定します。
 +
-ライセンスの仕組みについては、を参照してください link:concept_licensing.html["ライセンス"]。
-
-+
-NetApp Support Site のアカウントは、従量課金制の場合は任意ですが、 BYOL システムの場合は必須です。 link:task_adding_nss_accounts.html["ネットアップサポートサイトのアカウントを追加する方法について説明します"]。
+link:concept_licensing.html["これらの充電方法について説明します"]。
 
 . * 構成済みパッケージ * ： Cloud Volumes ONTAP システムを迅速に導入するパッケージを 1 つ選択するか、 * 独自の構成を作成 * をクリックします。
 +

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept_evaluating.html 
-keywords: free trial, evaluation, evaluate, eval license, evaluation license, 30-day trial, 30 day trial, 30 day free trial 
-summary: Cloud Volumes ONTAP は、ソフトウェアの代金を支払う前に評価できます。最も一般的な方法は、 PAYGO バージョンの最初の Cloud Volumes ONTAP システムを起動して 30 日間の無償トライアルを入手することです。BYOL の評価ライセンスもオプションです。 
+keywords: free trial, evaluation, evaluate, eval license, evaluation license, 30-day trial, 30 day trial, 30 day free trial, freemium 
+summary: Cloud Volumes ONTAP は、ソフトウェアの代金を支払う前に評価できます。3 つのオプションがあります。Freemium 製品、 30 日間無料トライアル、評価ライセンス。 
 ---
 = 評価中
 :hardbreaks:
@@ -13,9 +13,17 @@ summary: Cloud Volumes ONTAP は、ソフトウェアの代金を支払う前に
 
 
 [role="lead"]
-Cloud Volumes ONTAP は、ソフトウェアの代金を支払う前に評価できます。最も一般的な方法は、 PAYGO バージョンの最初の Cloud Volumes ONTAP システムを起動して 30 日間の無償トライアルを入手することです。BYOL の評価ライセンスもオプションです。
+Cloud Volumes ONTAP は、ソフトウェアの代金を支払う前に評価できます。Freemium 製品、 30 日間無料トライアル、評価ライセンスの 3 つのオプションがあります。
 
 コンセプトの実証のサポートが必要な場合は、にお問い合わせください https://cloud.netapp.com/contact-cds["営業チーム"^] または、から利用できるチャットオプションを使用して、連絡してください https://cloud.netapp.com["NetApp Cloud Central"^] さらに、 Cloud Manager からも実行できます。
+
+
+
+== フリーミアムのサービス
+
+Freemium サービスでは、ネットアップのすべての Cloud Volumes ONTAP 機能を無償で使用できます（クラウドプロバイダの料金が引き続き適用されます）。ノードあたりの割り当て容量は 500GB に制限されており、サポート契約はありません。最大 10 個の Freemium システムを使用できます。
+
+link:concept_licensing.html["Freemium 製品の詳細をご覧ください"]。
 
 
 
@@ -31,13 +39,13 @@ Cloud Volumes ONTAP の料金をお支払いの場合は、 30 日間の無償�
 
 
 
-== BYOL の評価ライセンス
+== ノードベースのライセンスの評価用ライセンスです
 
 BYOL の評価ライセンスは、ネットアップから期間ライセンスを購入することで Cloud Volumes ONTAP の支払いを検討しているお客様向けのオプションです。評価用ライセンスは、アカウントチーム、セールスエンジニア、またはパートナーから入手できます。
 
 評価キーは 30 日間有効で、作成日に関係なく、 30 日間ごとに複数回使用できます。
 
-30 日が経過すると毎日シャットダウンが発生するため、先に計画することをお勧めします。インプレースアップグレードの評価ライセンスの上に新しい BYOL ライセンスを適用できます（シングルノードシステムの再起動が必要です）。ホストされているデータは、トライアル期間の終了時に削除されません。
+30 日が経過すると、毎日のシャットダウンが発生するため、先に計画することをお勧めします。インプレースアップグレードの評価ライセンスの上に新しい BYOL ライセンスを適用できます（シングルノードシステムの再起動が必要です）。ホストされているデータは、トライアル期間の終了時に削除されません。
 
 
 TIP: 評価用ライセンスを使用している場合は、 Cloud Volumes ONTAP ソフトウェアをアップグレードできません。

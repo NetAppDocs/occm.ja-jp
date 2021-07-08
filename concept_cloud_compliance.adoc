@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_cloud_compliance.html 
 keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, azure netapp files, cloud volumes ontap, Amazon S3, database, onedrive, on-prem ontap, file shares, object storage, backup files, aip labels, governance, data sense 
-summary: Cloud Data Sense は、社内のオンプレミスデータソースやクラウドデータソースをスキャンしてデータをマッピング、分類し、プライベート情報を特定する、 Cloud Manager のデータガバナンスサービスです。これにより、セキュリティとコンプライアンスのリスクを軽減し、ストレージコストを削減し、データ移行プロジェクトを支援できます。 
+summary: Cloud Data Sense は、社内のオンプレミスデータソースやクラウドデータソース、作業環境をスキャンしてデータをマッピング、分類し、プライベート情報を特定する、 Cloud Manager のデータガバナンスサービスです。これにより、セキュリティとコンプライアンスのリスクを軽減し、ストレージコストを削減し、データ移行プロジェクトを支援できます。 
 ---
 = クラウドデータの意味をご確認ください
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: Cloud Data Sense は、社内のオンプレミスデータソースや
 
 
 [role="lead"]
-Cloud Data Sense は、社内のオンプレミスデータソースやクラウドデータソースをスキャンしてデータをマッピング、分類し、プライベート情報を特定する、 Cloud Manager のデータガバナンスサービスです。これにより、セキュリティとコンプライアンスのリスクを軽減し、ストレージコストを削減し、データ移行プロジェクトを支援できます。
+Cloud Data Sense は、社内のオンプレミスデータソースやクラウドデータソース、作業環境をスキャンしてデータをマッピング、分類し、プライベート情報を特定する、 Cloud Manager のデータガバナンスサービスです。これにより、セキュリティとコンプライアンスのリスクを軽減し、ストレージコストを削減し、データ移行プロジェクトを支援できます。
 
 
 NOTE: * Cloud Compliance * の名称が 2021 年 6 月に * Cloud Data Sense * に変更されました。
@@ -31,8 +31,8 @@ Cloud Data Sense には、コンプライアンスの取り組みに役立つツ
 * データサブジェクトアクセス要求への応答（ dsar ）
 * ファイルに特定のが含まれている場合は、 Cloud Manager ユーザに E メールで通知します PII （この基準は、を使用して定義します link:task_managing_highlights.html#controlling-your-data-using-policies["ポリシー"^])
 * 表示と変更 link:https://azure.microsoft.com/en-us/services/information-protection/["Azure Information Protection （ AIP ）ラベル"^] ファイルに保存できます
-* カスタムステータスをファイルに追加して、ファイルのフォローアップが必要かどうか、または検証済みかどうかを確認できるようにします
-* 個々のファイルを削除します
+* カスタムステータスをファイルに追加し（「移動が必要」など）、 Cloud Manager ユーザを割り当てて、ユーザがファイルの変更を所有できるようにします
+* 個々のファイルを移動および削除します
 
 
 クラウドデータセンスには、ガバナンスの取り組みに役立つツールも用意されています。Cloud Data Sense を使用すると、次のことが可能になります。
@@ -71,7 +71,7 @@ NOTE: 2021 年 1 月にリリースされたベータ版の機能により、次
 
 == コスト
 
-* クラウドデータセンスの使用コストは、スキャンするデータの量によって異なります。データをスキャンする、 Cloud Manager ワークスペース内の最初の 1TB のデータは無料です。これには、すべての作業環境とデータソースのすべてのデータが含まれます。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。を参照してください https://cloud.netapp.com/cloud-compliance#pricing["価格設定"^] を参照してください。
+* クラウドデータセンスの使用コストは、スキャンするデータの量によって異なります。データをスキャンする、 Cloud Manager ワークスペース内の最初の 1TB のデータは無料です。これには、すべての作業環境とデータソースのすべてのデータが含まれます。その後もデータのスキャンを続行するには、 AWS または Azure Marketplace へのサブスクリプションが必要です。を参照してください https://cloud.netapp.com/netapp-cloud-data-sense["価格設定"^] を参照してください。
 +
 link:task_deploy_cloud_compliance.html#subscribing-to-the-cloud-data-sense-service["登録方法については、こちらをご覧ください"^]。
 
@@ -94,18 +94,6 @@ link:task_deploy_cloud_compliance.html#subscribing-to-the-cloud-data-sense-servi
 
 
 
-== Cloud Data Sense の仕組み
-
-Cloud Data Sense の概要は次のようになります。
-
-. Cloud Manager でデータセンスのインスタンスを導入します。
-. 1 つ以上の作業環境またはデータソースで有効にします。
-. データセンスは、 AI 学習プロセスを使用してデータをスキャンします。
-. [* Data sense * （データセンス * ） ] をクリックし、提供されているダッシュボードとレポートツールを使用して、コンプライアンスの取り組みを支援します。
-
-
-
-
 == Cloud Data Sense インスタンス
 
 クラウドにデータセンスを導入すると、 Cloud Manager はコネクタと同じサブネットにインスタンスを導入します。 link:concept_connectors.html["コネクタの詳細については、こちらをご覧ください。"^]
@@ -115,16 +103,12 @@ NOTE: コネクタがオンプレミスにインストールされている場�
 
 image:diagram_cloud_compliance_instance.png["クラウドプロバイダで実行されている Cloud Manager インスタンスと Cloud Data Sense インスタンスを示す図。"]
 
-インスタンスについては、次の点に注意してください。
+デフォルトのインスタンスについては、次の点に注意してください。
 
 * Azure では、 Cloud Data Sense はで実行されます link:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3 VM"] 512 GB ディスク
 * AWS では、 Cloud Data Sense はで実行されます link:https://aws.amazon.com/ec2/instance-types/m5/["m5.mc2[ インスタンス"] 500 GB の gp2 ディスクです。
 +
 m5.mcd を使用できない領域では、代わりに m4.mcd インスタンスに対してデータセンスを実行します。
-
-+
-
-NOTE: インスタンス / VM タイプの変更やサイズ変更はサポートされていません。表示されるサイズを使用する必要があります。
 
 * インスタンスの名前は _CloudCompliancy_with で、生成されたハッシュ（ UUID ）を連結しています。例： _CloudCompliion-16bb6564-38ad-40802-9a92-36f5fd2f71c7_
 * コネクタごとに展開されるデータセンスインスタンスは 1 つだけです。
@@ -133,6 +117,41 @@ NOTE: インスタンス / VM タイプの変更やサイズ変更はサポー�
 
 
 TIP: Cloud Data Sense がデータを継続的にスキャンするため、インスタンスは常時実行している必要があります。
+
+
+
+=== 小さいインスタンスタイプを使用しています
+
+CPU の数と RAM の数が少ないシステムには Data Sense を導入できますが、このような低パフォーマンスのシステムを使用する場合はいくつかの制限事項があります。
+
+[cols="18,26,56"]
+|===
+| システムサイズ | 仕様 | 制限 
+
+
+| Large （デフォルト） | CPU × 16 、 64GB RAM | なし 
+
+
+| 中 | CPU × 8 、 32GB RAM | スキャンに時間がかかり、スキャンできるファイルは最大 100 万個です。 
+
+
+| 小規模 | CPU × 8 、 16GB RAM | 「中」と同じ制限に加えて、の大部分ではコンテキスト AI スキャンの 2 つの機能が無効になっています link:reference_private_data_categories.html#types-of-sensitive-personal-data["機密性の高い個人"] 識別子。識別用です link:task_responding_to_dsar.html["データ主体名"] ファイル内。 
+|===
+クラウドにデータセンスを導入する場合は、 ng-contact-data-sense@netapp.com に電子メールを送信して、これらの小規模なシステムのいずれかを使用する場合のサポートを依頼してください。
+
+データセンスをオンプレミスで導入する場合は、この仕様の Linux ホストだけを使用します。
+
+
+
+== Cloud Data Sense の仕組み
+
+Cloud Data Sense の概要は次のようになります。
+
+. Cloud Manager でデータセンスのインスタンスを導入します。
+. 概要マッピングまたは詳細レベルスキャンは、 1 つ以上の作業環境またはデータソースで有効にします。
+. データセンスは、 AI 学習プロセスを使用してデータをスキャンします。
+. [* Data sense * （データセンス * ） ] をクリックし、提供されているダッシュボードとレポートツールを使用して、コンプライアンスの取り組みを支援します。
+
 
 
 
@@ -148,6 +167,53 @@ image:diagram_cloud_compliance_scan.png["クラウドプロバイダで実行さ
 
 スキャンは、ボリュームレベル、バケットレベル、データベーススキーマレベル、および OneDrive ユーザレベルで有効または無効にできます。
 
+
+
+=== マッピングスキャンと分類スキャンの違いは何ですか
+
+Cloud Data Sense を使用すると、選択した作業環境やデータソースに対して、一般的な「マッピング」スキャンを実行できます。マッピングではデータの概要のみが示され、分類ではデータの詳細なスキャンが提供されます。データソースでは、ファイルにアクセスしてデータを参照できないため、マッピングは短時間で完了します。
+
+多くのユーザは、この機能を気に入っています。これは、より多くの調査が必要なデータソースをすばやくスキャンして特定し、必要なデータソースに対してのみ分類スキャンを有効にするためです。
+
+次の表に、いくつかの相違点を示します。
+
+[cols="50,20,20"]
+|===
+| フィーチャー（ Feature ） | 分類 | マッピング 
+
+
+| スキャン速度 | 遅い | 高速 
+
+
+| ファイルタイプと使用済み容量のリスト | はい。 | はい。 
+
+
+| ファイル数と使用済み容量 | はい。 | はい。 
+
+
+| ファイルの経過時間とサイズ | はい。 | はい。 
+
+
+| を実行する機能 link:task_generating_compliance_reports.html#data-mapping-report["データマッピングレポート"] | はい。 | はい。 
+
+
+| [ データ調査 ] ページでファイルの詳細を確認します | はい。 | いいえ 
+
+
+| ファイル内の名前を検索します | はい。 | いいえ 
+
+
+| カスタム検索結果を提供するポリシーを作成する | はい。 | いいえ 
+
+
+| AIP ラベルおよびステータスタグを使用してデータを分類します | はい。 | いいえ 
+
+
+| ソースファイルを削除および移動します | はい。 | いいえ 
+
+
+| 他のレポートを実行できます | はい。 | いいえ 
+|===
 
 
 == Cloud Data がインデックス化する情報

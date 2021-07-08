@@ -31,6 +31,7 @@ ONTAP に関連する質問を次に示します。
 * link:task_tiering_onprem_azure.html#preparing-your-ontap-clusters["オンプレミスの ONTAP クラスタから Azure BLOB ストレージへデータを階層化する"]
 * link:task_tiering_onprem_gcp.html#preparing-your-ontap-clusters["オンプレミスの ONTAP クラスタから Google Cloud Storage へデータを階層化する"]
 * link:task_tiering_onprem_storagegrid.html#preparing-your-ontap-clusters["オンプレミスの ONTAP クラスタから StorageGRID へデータを階層化する"]
+* link:task_tiering_onprem_s3_compat.html#preparing-your-ontap-clusters["オンプレミスの ONTAP クラスタから S3 オブジェクトストレージへデータを階層化する"]
 
 
 
@@ -68,7 +69,7 @@ Cloud Volumes ONTAP システムは、 Cloud Tiering から読み取り専用で
 
 === サポートされているオブジェクトストレージプロバイダを教えてください。
 
-Amazon S3 、 Azure Blob Storage 、 Google Cloud Storage 、 S3 プロトコルを使用した StorageGRID がサポートされます。
+Amazon S3 、 Azure BLOB ストレージ、 Google Cloud Storage 、および NetApp StorageGRID オブジェクトストレージプロバイダがサポートされます。
 
 
 
@@ -127,10 +128,10 @@ Cloud Tiering は、 _Standard_、 _Nearline _ 、 _Coldline_、 および _Arch
 
 === コネクタはどこに取り付ける必要がありますか？
 
-* データを S3 に階層化する場合は、 AWS VPC またはオンプレミスにコネクタを配置できます。
-* データを BLOB ストレージに階層化する場合は、コネクタが Azure VNet 内に存在している必要があります。
-* データを Google Cloud Storage に階層化する場合は、 Google Cloud Platform VPC 内に Connector を配置する必要があります。
-* データを StorageGRID に階層化する場合は、コネクタをオンプレミスの Linux ホストに配置する必要があります。
+* データを S3 に階層化する場合、コネクタは AWS VPC またはオンプレミスに配置できます。
+* BLOB ストレージにデータを階層化する場合、コネクタは Azure VNet または自社運用環境に配置できます。
+* データを Google Cloud Storage に階層化する場合、 Connector は Google Cloud Platform VPC 内に存在する必要があります。
+* データを StorageGRID に階層化する場合は、コネクタをオンプレミスに配置する必要があります。
 
 
 

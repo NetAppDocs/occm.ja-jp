@@ -93,7 +93,7 @@ Azure にコネクタを導入したら、を有効にしておく必要があ�
 次の例は、 Azure CLI 2.0 を使用してカスタムロールを作成する方法を示しています。
 
 +
-「 az role definition create -- role-definition C ： \Policy_for _cloud_Manager_azure_3.8.7.json 」という名前で作成します
+「 AZ role definition create -- role-definition C ： \Policy_for _cloud_Manager_azure_3.9.8.json
 
 +
 これで、 Connector 仮想マシンに割り当てることができる Cloud Manager Operator というカスタムロールが作成されます。

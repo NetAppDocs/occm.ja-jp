@@ -1,0 +1,118 @@
+---
+sidebar: sidebar 
+permalink: reference_checklist_cm.html 
+keywords: networking overview, networking requirements, endpoints, urls, get started, getting started, deployment 
+summary: このチェックリストでは、 Cloud Manager を使用するために必要な作業について説明します。 
+---
+= はじめにチェックリスト
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+このチェックリストでは、 Cloud Manager を使用するために必要な作業について説明します。
+
+NetApp Cloud Central へのログイン:: にサインアップする必要があります https://cloud.netapp.com["NetApp Cloud Central"^] そのため、 Cloud Manager などのクラウドサービスにアクセスできます。
+Web ブラウザから複数のエンドポイントへのネットワークアクセス::
++
+--
+[cols="43,57"]
+|===
+| エンドポイント | 目的 
+
+
+| \ https://cloudmanager.cloud.netapp.com | をクリックして、 Cloud Manager SaaS インターフェイスに接続してください。 
+
+
+| \ https://api.services.cloud.netapp.com | をクリックして Cloud Central API にアクセスしてください。 
+
+
+| ¥ https://auth0.com ¥ https://cdn.auth0.com ¥ https://netapp-cloud-account.auth0.com ¥ https://services.cloud.netapp.com | Web ブラウザはこれらのエンドポイントに接続し、 NetApp Cloud Central を介してユーザ認証を一元化します。 
+
+
+| \ https://widget.intercom.io | 製品内でのチャットにより、ネットアップのクラウドエキスパートと会話できます。 
+|===
+--
+コネクタのネットワーク上の場所::
++
+--
+* ネットワークの場所にはアウトバウンドのインターネット接続が必要です。
++
+Connector では、パブリッククラウド環境内のリソースとプロセスを管理するためにアウトバウンドインターネットアクセスが必要です。アウトバウンドのインターネットアクセスは、コネクタを Linux ホストに手動でインストールする場合や、コネクタで実行されているローカル UI にアクセスする場合にも必要です。
+
++
+link:reference_networking_cloud_manager.html#outbound-internet-access["コネクタが接続する特定のエンドポイントを表示します"]。
+
+* コネクタへの着信トラフィックは、開始しない限りありません。
++
+HTTP （ 80 ）と HTTPS （ 443 ）はローカル UI へのアクセスを提供しますが、これはまれに使用されます。SSH （ 22 ）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
+
+
+
+--
+クラウドプロバイダの権限::
++
+--
+
+NOTE: コネクタを作成する別の方法があります。からコネクタを作成することもできます link:task_launching_aws_mktp.html["AWS Marketplace"]、 link:task_launching_azure_mktp.html["Azure Marketplace で入手できます"]またはをに設定します link:task_installing_linux["ソフトウェアを手動でインストールします"]。
+
+[cols="15,55,30"]
+|===
+| 場所 | 手順の概要 | 詳細な手順 
+
+
+| AWS  a| 
+. AWS で IAM ポリシーを作成するために必要な権限を含む JSON ファイルを使用します。
+. Cloud Manager からコネクタを作成する IAM ユーザにポリシーを関連付けます。
+. コネクタを作成するときに、必要な権限を持つ IAM ユーザの AWS アクセスキーとシークレットキーを Cloud Manager に渡します。
+
+| link:task_creating_connectors_aws.html["詳細な手順については、ここをクリックしてください"]。 
+
+
+| Azure  a| 
+. Azure でカスタムロールを作成するには、必要な権限が含まれた JSON ファイルを使用します。
+. Cloud Manager からコネクタを作成するユーザにロールを割り当てます。
+. Connector を作成するときは、必要な権限（ Microsoft が所有およびホストしているログインプロンプト）を持つ Microsoft アカウントでログインします。
+
+| link:task_creating_connectors_azure.html["詳細な手順については、ここをクリックしてください"]。 
+
+
+| Google Cloud  a| 
+. Google Cloud でカスタムロールを作成するために必要な権限を含む YAML ファイルを使用します。
+. Cloud Manager からコネクタを作成するユーザにそのロールを割り当てます。
+. Cloud Volumes ONTAP を使用する場合は、必要な権限を持つサービスアカウントを設定します。
+. Google Cloud API を有効にします
+. Connector を作成するときに、必要な権限を持つ Google アカウントでログインします（ログインプロンプトは Google が所有およびホストします）。
+
+| link:task_creating_connectors_gcp.html["詳細な手順については、ここをクリックしてください"]。 
+|===
+--
+個々のサービスのネットワーク::
++
+--
+* link:reference_networking_aws.html["Cloud Volumes ONTAP for AWS"]
+* link:reference_networking_azure.html["Cloud Volumes ONTAP for Azure"]
+* link:reference_networking_gcp.html["Cloud Volumes ONTAP for GCP の略"]
+* link:task_replicating_data.html["ONTAP システム間のデータレプリケーション"]
+* link:task_getting_started_compliance.html["Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files に最適なクラウドデータ"]
+* link:task_scanning_s3.html["Amazon S3 に最適なクラウドデータ"]
+* link:task_scanning_object_storage.html["汎用の S3 オブジェクトストレージには Cloud Data Sense を使用している"]
+* link:task_scanning_file_shares.html["NetApp 以外の NFS または CIFS ファイル共有での Cloud Data Sense"]
+* link:task_scanning_databases.html["データベースに最適なクラウドデータ"]
+* link:task_scanning_onedrive.html["OneDrive アカウントに最適なクラウドデータ"]
+* link:task_discovering_ontap.html["オンプレミスの ONTAP クラスタ"]
++
+** link:task_tiering_onprem_aws.html["ONTAP クラスタから Amazon S3 へのデータ階層化"]
+** link:task_tiering_onprem_azure.html["ONTAP クラスタから Azure BLOB ストレージへのデータ階層化"]
+** link:task_tiering_onprem_gcp.html["ONTAP クラスタから Google Cloud Storage へのデータ階層化"]
+** link:task_tiering_onprem_storagegrid.html["ONTAP クラスタから StorageGRID へのデータ階層化"]
+** link:task_backup_from_onprem.html["ONTAP クラスタから Amazon S3 または Azure へのデータバックアップ BLOB ストレージ"]
+
+
+
+
+--
+

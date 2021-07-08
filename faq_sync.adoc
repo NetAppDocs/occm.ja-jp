@@ -284,7 +284,7 @@ Cloud Sync は、次のタイプの同期関係について、オブジェクト
 * IBM Cloud Object Storage -> IBM Cloud Object Storage
 
 
-^1 この同期関係には、以下が必要です link:task_sync_managing_data_brokers.html#configure-the-data-broker-to-copy-object-storage-metadata["メタデータをコピーするには、データブローカーの設定を変更してください"]。
+^1 この同期関係には、以下が必要です link:task_sync_creating_relationships.html["同期関係の作成時に設定を有効にします"]。
 
 
 

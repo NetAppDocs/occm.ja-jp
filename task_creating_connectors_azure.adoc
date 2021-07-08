@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_creating_connectors_azure.html 
-keywords: create connector in Azure, create connector in azure, create connector in gcp, launch connector in Azure, launch connector in azure, launch connector in gcp, deploy connector in Azure, deploy connector in azure, deploy connector in gcp 
+keywords: create connector in azure, launch connector in azure, deploy connector in azure, azure connector, connector azure, connector permissions 
 summary: Cloud Manager のほとんどの機能を使用するには、 Account Admin がコネクタを導入する必要があります。Connector を使用すると、 Cloud Manager でパブリッククラウド環境内のリソースとプロセスを管理できます。 
 ---
 = Cloud Manager から Azure にコネクタを作成する
@@ -91,6 +91,10 @@ Cloud Manager では、ユーザインターフェイスから直接 Azure に�
 * 。 https://mysupport.netapp.com/site/info/cloud-manager-policies["必要な権限"^] 使用している Azure アカウントに対して。
 * Azure サブスクリプション。
 * 選択した Azure リージョン内の VNet およびサブネット
+* Cloud Manager で Connector 用の Azure ロールが自動的に作成されないようにするには、独自のを作成する必要があります https://occm-sample-policies.s3.amazonaws.com/Policy_for_cloud_Manager_Azure_3.9.8.json["使用するポリシー"^]。
++
+これらの権限はコネクタインスタンス用です。権限のセットは、前述の最初の項目とは異なります。
+
 
 
 .手順
@@ -98,7 +102,6 @@ Cloud Manager では、ユーザインターフェイスから直接 Azure に�
 +
 image:screenshot_connector_add.gif["ヘッダーのコネクターアイコンとコネクターの追加アクションを示すスクリーンショット。"]
 
-. [ * 開始しましょう * ] をクリックします。
 . クラウドプロバイダとして「 * Microsoft Azure * 」を選択します。
 +
 Connector は、作成する作業環境の種類や有効にするサービスへのネットワーク接続を確立する必要があることに注意してください。
@@ -106,8 +109,10 @@ Connector は、作成する作業環境の種類や有効にするサービス�
 +
 link:reference_networking_cloud_manager.html["Connector のネットワーク要件の詳細については、こちらをご覧ください"]。
 
-. 必要な情報を確認し、 [* Continue （続行） ] をクリックします。
-. プロンプトが表示されたら、 Microsoft アカウントにログインします。このアカウントには、仮想マシンの作成に必要な権限が付与されている必要があります。
+. ウィザードの手順に従って、コネクタを作成します。
++
+** * 準備をしてください * ：必要なものを確認してください。
+** プロンプトが表示されたら、 Microsoft アカウントにログインします。このアカウントには、仮想マシンの作成に必要な権限が付与されている必要があります。
 +
 このフォームは、 Microsoft が所有およびホストしています。クレデンシャルがネットアップに提供されていません。
 
@@ -115,19 +120,21 @@ link:reference_networking_cloud_manager.html["Connector のネットワーク要
 
 TIP: すでに Azure アカウントにログインしている場合、そのアカウントは Cloud Manager によって自動的に使用されます。アカウントが複数ある場合は、適切なアカウントを使用するために、最初にログアウトする必要があります。
 
-. 必要な情報を入力します。
+** * VM 認証 * ： Azure サブスクリプション、場所、新しいリソースグループ、または既存のリソースグループを選択し、認証方法を選択します。
+** * 詳細 * ：インスタンスの名前を入力し、タグを指定し、必要な権限を持つ新しいロールを Cloud Manager で作成するか、で設定した既存のロールを選択するかを選択します https://occm-sample-policies.s3.amazonaws.com/Policy_for_cloud_Manager_Azure_3.9.8.json["必要な権限"^]。
 +
-** * VM 認証 * ：仮想マシンの名前、ユーザ名、パスワード、または公開鍵を入力します。
-** * 基本設定 * ： Azure サブスクリプション、 Azure リージョン、および新しいリソースグループを作成するか既存のリソースグループを使用するかを選択します。
+このロールに関連付けられているサブスクリプションを選択できます。選択した各サブスクリプションには、 Cloud Volumes ONTAP をこれらのサブスクリプションに導入するための権限が Connector に付与されます。
+
 ** * ネットワーク * ： VNet とサブネットを選択し、パブリック IP アドレスを有効にするかどうか、および必要に応じてプロキシ設定を指定します。
 ** * セキュリティグループ * ：新しいセキュリティグループを作成するか、インバウンド HTTP 、 HTTPS 、 SSH アクセスを許可する既存のセキュリティグループを選択するかを選択します。
 +
 
 NOTE: コネクタへの着信トラフィックは、開始しない限りありません。へのアクセスは、 HTTP および HTTPS を使用して提供されます link:concept_connectors.html#the-local-user-interface["ローカル UI"]は、まれな状況で使用します。SSH が必要になるのは、トラブルシューティングのためにホストに接続する必要がある場合のみです。
 
+** * 復習 * ：選択内容を確認して、設定が正しいことを確認してください。
 
 
-. [ 作成（ Create ） ] をクリックします。
+. [ 追加（ Add ） ] をクリックします。
 +
 仮想マシンの準備が完了するまでに約 7 分かかります。処理が完了するまで、ページには表示されたままにしておいてください。
 

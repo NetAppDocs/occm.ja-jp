@@ -123,9 +123,9 @@ URL::
 auth-method を指定します::
 +
 --
-** 外部ボルトへの認証方法
+** データブローカーが外部ボルトのクレデンシャルにアクセスする際に使用する認証方式
 ** 文字列を入力します
-** 有効な値は「 AWS- IAM 」 / 「 role-app 」です。
+** 有効な値は「 AWS- IAM 」 / 「 role-app 」 / 「 GCP-IAM 」です。
 
 
 --
@@ -133,7 +133,7 @@ auth-method を指定します::
 +
 --
 ** 文字列を入力します
-** ロール名（ AWS- IAM を使用している場合）
+** ロール名（ AWS- IAM または GCP-IAM を使用している場合）
 
 
 --
@@ -158,7 +158,7 @@ Secretd&rootid::
 
 
 
-==== 例
+==== AWS ロール認証の例
 
 [source, json]
 ----
@@ -175,6 +175,35 @@ Secretd&rootid::
                          }
                 }
        }
+}
+----
+
+
+==== GCP - IAM 認証の例
+
+[source, json]
+----
+{
+"external-integrations": {
+    "hashicorp": {
+      "enabled": true,
+      "url": http://ip-10-20-30-55.ec2.internal:8200,
+      "path": "v1/secret",
+      "namespace": "",
+      "reject-unauthorized": true,
+      "auth-method": "gcp-iam",
+      "aws-iam": {
+        "role-name": ""
+      },
+      "app-role": {
+        "root_id": "",
+        "secret_id": ""
+      },
+"gcp-iam": {
+          "role-name": "my-iam-role"
+      }
+    }
+  }
 }
 ----
 

@@ -159,10 +159,24 @@ Cloud Manager が Amazon S3 で Cloud Data Sense を有効にしたら、次の�
 +
 image:screenshot_s3_configure_buckets.gif["S3 を選択するためにバケットの設定をクリックするスクリーンショット スキャンするバケット"]
 
-. スキャンするバケットで準拠を有効にします。
+. バケットでマッピング専用スキャン、またはマッピングスキャンと分類スキャンを有効にします。
 +
-image:screenshot_s3_select_buckets.gif["目的の S3 バケットを選択するスクリーンショット スキャン"]
+image:screenshot_s3_select_buckets.png["目的の S3 バケットを選択するスクリーンショット スキャン"]
 
++
+[cols="45,45"]
+|===
+| 終了： | 手順： 
+
+
+| バケットでマッピングのみのスキャンを有効にする | [* マップ * ] をクリックします 
+
+
+| バケットでフルスキャンを有効にします | [ マップと分類 *] をクリックします 
+
+
+| バケットに対するスキャンを無効にする | [ * Off * ] をクリックします 
+|===
 
 
 Cloud Data Sense は、有効にした S3 バケットのスキャンを開始します。エラーが発生した場合は、エラーを修正するために必要なアクションとともに、 [ ステータス ] 列に表示されます。
@@ -246,7 +260,7 @@ Cloud Data Sense インスタンスプロファイルアカウントが追加の
 +
 image:screenshot_activate_and_select_buckets.png[""]
 
-. [Activate Compliance & Select Buckets] をクリックして、スキャンするバケットを選択します。
+. [Activate Data Sense & Select Buckets] をクリックして、スキャンするバケットを選択します。
 
 
 Cloud Data Sense は、有効にした新しい S3 バケットのスキャンを開始します。

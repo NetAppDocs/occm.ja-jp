@@ -15,6 +15,9 @@ summary: 組織内の個人データと機密性の高い個人データに関�
 [role="lead"]
 組織内の個人データと機密性の高い個人データに関する詳細を表示することで、個人データを管理できます。また、クラウドデータで見つかったカテゴリやファイルタイプを確認することで、データを可視化することもできます。
 
+
+NOTE: このセクションで説明する機能は、データソースに対して完全な分類スキャンを実行することを選択した場合にのみ使用できます。マッピングのみのスキャンを実行したデータソースでは、ファイルレベルの詳細は表示されません。
+
 デフォルトでは、 Cloud Data Sense ダッシュボードには、すべての作業環境とデータベースのコンプライアンスデータが表示されます。
 
 image:screenshot_compliance_dashboard.png["クラウドデータセンスダッシュボードのスクリーンショット"]
@@ -116,7 +119,7 @@ image:screenshot_file_types.gif["ファイルタイプダイアログボック�
 
 == ファイルメタデータを表示しています
 
-[ データ調査結果 ] ペインで、をクリックできます image:button_subfolder.png["右キャレット"] をクリックすると、単一のファイルについてファイルのメタデータが表示されます。
+[ データ調査結果 ] ペインで、をクリックできます image:button_down_caret.png["下キャレット"] をクリックすると、単一のファイルについてファイルのメタデータが表示されます。
 
 image:screenshot_compliance_file_details.png["[ データ調査 ] ページのファイルのメタデータの詳細を示すスクリーンショット。"]
 
@@ -126,8 +129,10 @@ image:screenshot_compliance_file_details.png["[ データ調査 ] ページの�
 
 単一のファイルの詳細を表示する場合は、ファイルに対していくつかの操作を実行できます。
 
-* ファイルを削除できます。を参照してください link:task_managing_highlights.html#deleting-source-files["ソースファイルを削除しています"^] を参照してください。
-* ファイルに特定のステータスを割り当てることができます。を参照してください link:task_managing_highlights.html#applying-status-codes-to-manage-your-scanned-files["ステータスタグを適用しています"] を参照してください。
+* 任意の NFS 共有にファイルを移動できます。を参照してください link:task_managing_highlights.html#moving-source-files-to-an-nfs-share["ソースファイルを NFS 共有に移動しています"] を参照してください。
+* ファイルを削除できます。を参照してください link:task_managing_highlights.html#deleting-source-files["ソースファイルを削除しています"] を参照してください。
+* ファイルに特定のステータスを割り当てることができます。を参照してください link:task_managing_highlights.html#applying-status-tags-to-manage-your-scanned-files["ステータスタグを適用しています"] を参照してください。
+* ファイルに対して実行する必要があるフォローアップアクションを担当するファイルを Cloud Manager ユーザに割り当てることができます。を参照してください link:task_managing_highlights.html#assigning-users-to-manage-certain-files["ファイルへのユーザの割り当て"] を参照してください。
 * AIP ラベルを Cloud Data Sense と統合している場合は、このファイルにラベルを割り当てるか、すでに存在する場合は別のラベルに変更できます。を参照してください link:task_managing_highlights.html#assigning-aip-labels-manually["AIP ラベルを手動で割り当てる"^] を参照してください。
 
 
@@ -161,7 +166,7 @@ image:screenshot_compliance_permissions.png["詳細なファイル権限を示�
 
 === 特定のファイルが複製されているかどうかを表示します
 
-1 つのファイルに重複があるかどうかを確認するには、 [ データ調査結果 ] ペインでをクリックします image:button_subfolder.png["右キャレット"] をクリックすると、単一のファイルについてファイルのメタデータが表示されます。特定のファイルが重複している場合、この情報は _Duplicats_field の横に表示されます。
+1 つのファイルに重複があるかどうかを確認するには、 [ データ調査結果 ] ペインでをクリックします image:button_down_caret.png["下キャレット"] をクリックすると、単一のファイルについてファイルのメタデータが表示されます。特定のファイルが重複している場合、この情報は _Duplicats_field の横に表示されます。
 
 重複したファイルとその場所のリストを表示するには、 [ * 詳細の表示 * ] をクリックします。次のページで、 [ 重複の表示 *] をクリックして、 [ 調査 ] ページでファイルを表示します。
 
@@ -189,7 +194,7 @@ image:screenshot_cloud_compliance_filter.gif["特定の作業環境で調査結�
 
 == [ データ調査 ] ページでデータをフィルタリングします
 
-調査ページの内容をフィルタリングして、表示する結果のみを表示できます。CSV バージョンのコンテンツをリファインした後でレポートとして保存する場合は、をクリックします image:button_download.png["下矢印ボタン"] ボタンを押します。
+調査ページの内容をフィルタリングして、表示する結果のみを表示できます。CSV バージョンのコンテンツをリファインした後でレポートとして保存する場合は、をクリックします image:button_download.png["[ ダウンロード ] ボタン"] ボタンを押します。
 
 image:screenshot_compliance_investigation_filtered.png["調査ページで結果を絞り込むときに使用できるフィルタのスクリーンショット。"]
 
@@ -211,10 +216,12 @@ image:screenshot_compliance_investigation_filtered.png["調査ページで結果
 ** データの件名
 ** ファイルタイプ
 ** ファイルサイズ
-** 作成時刻（ Created Time ）
+** 作成日
 ** 最終変更日
+** 最終アクセス日（の場合 link:reference_private_data_categories.html#types-of-files["コンテンツをスキャンするファイルの種類"] これは、データ検出がファイルを最後にスキャンした時刻です）。
 ** 重複があります
 ** ステータス
+** 割り当て先
 ** ファイル・ハッシュ
 
 
@@ -225,7 +232,7 @@ image:screenshot_compliance_investigation_filtered.png["調査ページで結果
 
 == 各ファイルリストレポート（ CSV ファイル）に含まれる内容
 
-各 [ 調査 ] ページで、をクリックできます image:button_download.png[""] ボタンをクリックして、特定されたファイルの詳細を含むファイルリスト（ CSV 形式）をダウンロードします。データ検出で、構造化データ（データベーステーブル）と非構造化データ（ファイル）の両方がスキャンされている場合は、ダウンロードした ZIP ファイルに 2 つのレポートが含まれています。
+各 [ 調査 ] ページで、をクリックできます image:button_download.png["[ ダウンロード ] ボタン"] ボタンをクリックして、特定されたファイルの詳細を含むファイルリスト（ CSV 形式）をダウンロードします。データ検出で、構造化データ（データベーステーブル）と非構造化データ（ファイル）の両方がスキャンされている場合は、ダウンロードした ZIP ファイルに 2 つのレポートが含まれています。
 
 10 、 000 件を超える結果がある場合は、上位 10 、 000 件のみがリストに表示されます。
 
@@ -240,6 +247,7 @@ image:screenshot_compliance_investigation_filtered.png["調査ページで結果
 * ファイルタイプ
 * 時刻を作成しました
 * 最終更新日
+* 最後にアクセスした
 * ファイルサイズ
 * ファイルの所有者
 * カテゴリ

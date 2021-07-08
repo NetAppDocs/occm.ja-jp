@@ -104,6 +104,13 @@ Cloud Manager で新しい機能や拡張機能を導入する際に、クラウ
 
 === Azure
 
+* 3.9.8 リリース以降では、導入に失敗したり削除したりした場合に、 Cloud Manager によってリソースグループから Cloud Volumes ONTAP リソースを削除できます。Cloud Manager に追加した Azure クレデンシャルの各セットに、次の権限を付与してください。
++
+[source, json]
+----
+"Microsoft.Network/privateEndpoints/delete",
+"Microsoft.Compute/availabilitySets/delete",
+----
 * 3.9.7 リリース以降では、 Cloud Volumes ONTAP システムの導入時およびその電源をオフにするたびに作成されたルートディスクとブートディスクの古いクラウド Snapshot を Cloud Manager で削除できるようになりました。Connector で Azure スナップショットを削除するには、新しい権限が必要です。
 +
 [source, json]

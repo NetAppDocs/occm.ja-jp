@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_licensing.html 
-keywords: licenses, licensing, byol, license, subscription, renewal, expire, netapp support site, account, credentials, file, license file, upload, nlf, cloud backup license, byol backup, license for cloud backup 
-summary: 各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager は、ライセンスを管理し、期限が切れる前に警告を表示することでプロセスを簡易化します。BYOL ライセンスは、 Cloud Backup でも利用できます。 
+keywords: freemium, professional, essential, licensing, licenses, cloud volumes ontap charging, cloud volumes ontap licenses, cloud volumes ontap licensing, cvo licenses, cvo licensing, byol, bring your own license, paygo, pay as you go 
+summary: Cloud Volumes ONTAP には、いくつかのライセンスオプションがあります。それぞれのオプションを使用することで、ニーズに合わせた構成を選択できます。 
 ---
-= BYOL のライセンスの概要
+= Cloud Volumes ONTAP ライセンス
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -13,73 +13,176 @@ summary: 各 Cloud Volumes ONTAP BYOL システムには、アクティブなサ
 
 
 [role="lead"]
-各 Cloud Volumes ONTAP BYOL システムには、アクティブなサブスクリプションを使用したシステムライセンスがインストールされている必要があります。Cloud Manager は、ライセンスを管理し、期限が切れる前に警告を表示することでプロセスを簡易化します。BYOL ライセンスは、 Cloud Backup でも利用できます。
-
-https://docs.netapp.com/us-en/cloud-volumes-ontap/index.html["その他の情報については、『 Cloud Volumes ONTAP リリースノート』を参照してください ライセンスオプション"^]。
+Cloud Volumes ONTAP には、いくつかのライセンスオプションがあります。それぞれのオプションを使用することで、ニーズに合わせた構成を選択できます。
 
 
 
-== BYOL システムのライセンス
+== ライセンスの概要
 
-Cloud Volumes ONTAP BYOL システムでは、複数のライセンスを購入して、 368 TB を超える容量を割り当てることができます。たとえば、 2 つのライセンスを購入して、 Cloud Volumes ONTAP に最大 736TB の容量を割り当てることができます。また、 4 つのライセンスを購入して、最大 1.4 PB までライセンスを取得することもできます。
+次の表に、 Cloud Volumes ONTAP のライセンスオプションの概要を示します。
 
-シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。
+これらのライセンスオプション以外にも、ライセンスや契約を購入せずに Cloud Volumes ONTAP を使い始めるための _Freemium_offering を選択することもできます。
 
-
-NOTE: 購入した一部のオンプレミス ONTAP ストレージシステムには、 Cloud Volumes ONTAP のライセンスが無償で付属している場合があります。ライセンスを使用して新しい Cloud Volumes ONTAP システムを作成するか、または既存の Cloud Volumes ONTAP システムにライセンスを適用して容量を拡張できます。 link:task_managing_ontap.html#viewing-unused-cloud-volumes-ontap-licenses["使用できるライセンスがあるかどうかを確認します"^]。
-
-ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます link:concept_data_tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"]。ディスクの制限については、を参照してください https://docs.netapp.com/us-en/cloud-volumes-ontap/["ストレージの制限については、『 Cloud Volumes ONTAP リリースノート』を参照してください"^]。
-
+[cols="22,40,16,22"]
+|===
+| 充電方法 | ハイライト | サポート | 最大システム容量 
 
 
-=== 新しいシステムのライセンス管理
-
-BYOL システムを作成する際、 Cloud Manager はライセンスのシリアル番号と NetApp Support Site のアカウントを入力するよう求めます。Cloud Manager は、アカウントを使用してネットアップからライセンスファイルをダウンロードし、 Cloud Volumes ONTAP システムにインストールします。
-
-link:task_adding_nss_accounts.html["ネットアップサポートサイトのアカウントをクラウドに追加する方法をご確認ください マネージャー"]。
-
-Cloud Manager がセキュアなインターネット接続経由でライセンスファイルにアクセスできない場合は、ユーザがファイルを取得して、 Cloud Manager に手動でアップロードできます。手順については、を参照してください link:task_managing_licenses.html["Cloud Volumes ONTAP の BYOL ライセンスの管理"]。
-
-
-
-=== ライセンスの有効期限
-
-Cloud Manager では、ライセンスの有効期限の 30 日前と、ライセンスの有効期限が切れる 30 日後に警告が表示されます。次の図は、ユーザインターフェイスに表示される 30 日間の有効期限に関する警告を示しています。
-
-image:screenshot_warning.gif["スクリーンショット：警告アイコンが含まれている Cloud Volumes ONTAP の作業環境を示します。アイコンは、アクションが必要であることを示します。"]
-
-メッセージを確認する作業環境を選択できます。
-
-アカウント管理者がオプションを有効にしている場合、 Cloud Manager は Cloud Volumes ONTAP レポートにライセンス有効期限の警告を E メールで送信します。
-
-image:screenshot_cvo_report.gif["E メールで Cloud Volumes ONTAP レポートを有効にするチェックボックスを示すユーザプロファイルパネルのスクリーンショット。"]
-
-E メールで送信されたレポートには、 2 週間ごとにライセンスの有効期限に関する警告が記載され
-
-期限までにライセンスを更新しない場合は、 Cloud Volumes ONTAP システムがシャットダウンされます。再起動すると、自動的にシャットダウンされます。
+ a| 
+容量ベースのライセンス： Essential パッケージ
+ a| 
+* 1 つ以上の Cloud Volumes ONTAP システムの容量は TiB あたりの料金を負担します
+* Cloud Volumes ONTAP の個別ライセンスを提供：
++
+** シングルノードまたは HA システム
+** ファイルおよびブロックストレージまたはセカンダリデータ（ DR ）
 
 
+* お客様所有のライセンスを使用（ BYOL ）することで利用できます
 
-=== ライセンスの更新
-
-ネットアップの担当者に連絡して BYOL サブスクリプションを更新すると、 Cloud Manager は自動的にネットアップから新しいライセンスを取得し、 Cloud Volumes ONTAP システムにインストールします。
-
-Cloud Manager がセキュアなインターネット接続経由でライセンスファイルにアクセスできない場合は、ユーザがファイルを取得して、 Cloud Manager に手動でアップロードできます。手順については、を参照してください link:task_managing_licenses.html["Cloud Volumes ONTAP の BYOL ライセンスの管理"]。
+| 含まれます | 2PB 
 
 
+ a| 
+容量ベースのライセンス：プロフェッショナルパッケージ
+ a| 
+* 1 つ以上の Cloud Volumes ONTAP システムの容量は TiB あたりの料金を負担します
+* すべての Cloud Volumes ONTAP 構成（シングルノードまたは任意のストレージタイプの HA ）にライセンスを提供
+* Cloud Backup Service を使用したボリュームのバックアップを含みます（このライセンスに基づいて課金されるボリュームの場合のみ）
+* AWS Marketplace での年間契約またはネットアップから購入したお客様所有のライセンス（ BYOL ）によって利用できます
 
-=== 新しいシステムへのライセンスの移動
+| 含まれます | 2PB 
 
-既存のシステムを削除してから、同じライセンスを使用して新しいシステムを作成する場合、 BYOL ライセンスは Cloud Volumes ONTAP システム間で移転できます。
 
-たとえば、既存のライセンスが有効なシステムを削除してから、別の VPC / VNet またはクラウドプロバイダ内の新しい BYOL システムでライセンスを使用できます。どのクラウドプロバイダでも使用できるのは、クラウドに依存しないシリアル番号 _ のみです。クラウドに依存しないシリアル番号は、 _908xxxx_prefix で始まります。
+| ノード単位で従量課金制  a| 
+* クラウドプロバイダが提供するマーケットプレイスサブスクリプションを通じて、 1 時間単位で料金を支払うことができます
+* 充電は Cloud Volumes ONTAP ノードごとに行われます
+* Explore 、 Standard 、 Premium の 3 つのライセンスオプションから選択できます
 
-BYOL ライセンスは、お客様の会社およびネットアップサポートサイトの特定のクレデンシャルセットに関連付けられていることに注意してください。
+| 付属していますが、必ず設定してください link:task_registering.html["サポートを有効にします"^]  a| 
+* 調査： 2TB
+* Standard ： 10TB
+* Premium ： 368 TB
 
 
 
-== BYOL バックアップライセンス
 
-BYOL バックアップライセンスを使用すると、一定期間、および最大容量のバックアップスペースの間、 Cloud Backup を使用するライセンスをネットアップから購入できます。いずれかの制限に達すると、ライセンスを更新する必要があります。
+| ノードベースのライセンス  a| 
+* タームベースオプションを使用したシングルノードライセンスまたは HA ライセンス
+* お客様所有のライセンスを使用（ BYOL ）することで利用できます
 
-link:concept_backup_to_cloud.html#cost["Cloud Backup BYOL ライセンスの詳細については、こちらをご覧ください"]。
+| 含まれます | 1 ライセンスあたり 368 TB 
+|===
+以降のセクションでは、これらの各オプションについて詳しく説明します。
+
+
+
+== フリーミアムのサービス
+
+* Cloud Volumes ONTAP のすべての機能をネットアップが無償で提供する新しいサービス（クラウドプロバイダの料金がまだ適用されます）。
+* ライセンスや契約は必要ありません。
+* サポートは含まれていません。
+* Cloud Volumes ONTAP システムあたりの割り当て容量は 500GB に制限されています。
+* ネットアップのアカウントごとに、最大 10 台の Cloud Volumes ONTAP システムを Freemium 製品で使用できます。
+* Cloud Volumes ONTAP システムに割り当てられた容量が 500GB を超えると、 Cloud Manager はシステムを Essential パッケージ（容量ベースのライセンス）に変換して充電を開始します。
++
+割り当てられた容量が 500 GB 未満の他のシステムは、 Freemium 製品に残ります（ Freemium 製品を使用して展開されている場合）。
+
+
+
+Freemium 製品の使用を開始するには、新しい Cloud Volumes ONTAP 作業環境を作成し、充電方法の選択を求めるプロンプトが表示されたら「 * Freemium * 」を選択します。
+
+
+
+== 容量ベースのライセンス
+
+容量単位のライセンスでは、 TiB 単位の Cloud Volumes ONTAP に対して料金を支払うことができます。このライセンスはネットアップアカウントに関連付けられており、ライセンスで十分な容量が使用可能であれば、ライセンスに対して複数のシステムを充電することができます。
+
+たとえば、 20TB のライセンスを 1 つ購入して 4 つの Cloud Volumes ONTAP システムを導入し、各システムに 5TB のボリュームを割り当てて合計 20TB にするとします。
+
+Cloud Volumes ONTAP システム単位でライセンスを購入する場合とは異なり、容量ベースのライセンスがネットアップアカウントに発行されます。作成した容量は、そのアカウントに導入されている各 Cloud Volumes ONTAP システム上のボリュームで使用できます。
+
+容量ベースのライセンスは、 a_packag_ の形式で用意されています。Cloud Volumes ONTAP システムを導入する際には、 Essential または Professional のいずれかのパッケージを選択できます。
+
+このライセンス方式は Cloud Volumes ONTAP 9.7 以降で使用できます。
+
+
+NOTE: 各パッケージの最小割り当て容量は 4TB です。割り当て容量が 4TB 未満の Cloud Volumes ONTAP インスタンスは、 4TB の割合で請求されます。
+
+必須パッケージ::
++
+--
+* Cloud Volumes ONTAP の個別ライセンスを提供：
++
+** シングルノードまたは HA システム
+** ディザスタリカバリ（ DR ）用のファイルストレージとブロックストレージまたはセカンダリデータ
+
+
+* このパッケージは、ネットアップから購入したライセンス（ BYOL ）として利用できます。
+* サブスクリプション期間中はサポートが含まれます。
+* 別のライセンスオプションへの変換はサポートされていません。
+* 個々の Cloud Volumes ONTAP システムでは、ディスクとオブジェクトストレージへの階層化によって、最大 2 PB の容量をサポートしています。
+
+
+--
+プロフェッショナルパッケージ::
++
+--
+* すべての Cloud Volumes ONTAP 構成（シングルノードまたは任意のストレージタイプの HA ）にライセンスを提供します。
+* Cloud Backup Service を使用したボリュームのバックアップを含みます（このライセンスに基づいて課金されるボリュームの場合のみ）。
+* このパッケージは、 AWS Marketplace での年間契約、または NetApp から購入したライセンス（ BYOL ）として提供されます。
++
+AWS Marketplace 契約がある場合、導入する _ALL_Cloud Volumes ONTAP システムにはその契約が適用されます。BYOL と Marketplace 契約を組み合わせることはできません。
+
+* サブスクリプション期間中はサポートが含まれます。
+* 別のライセンスオプションへの変換はサポートされていません。
+* 個々の Cloud Volumes ONTAP システムでは、ディスクとオブジェクトストレージへの階層化によって、最大 2 PB の容量をサポートしています。
+
+
+--
+
+
+容量ベースのライセンスの使用を開始するには、 https://cloud.netapp.com/contact-cds["ネットアップ営業にお問い合わせください"^] 次に link:task_managing_licenses.html["Cloud Manager にライセンスを追加します"]。
+
+
+
+== ノード単位で従量課金制
+
+* 従量課金制の場合は、クラウドプロバイダのマーケットプレイスから 1 時間ごとにサブスクリプションを購入する必要があります。
+* 充電は Cloud Volumes ONTAP ノードごとに行われます。
+* Cloud Volumes ONTAP には、 Explore 、 Standard 、 Premium の 3 種類のライセンスオプションがあります。それぞれのライセンスで、サポートされるストレージ容量とコンピューティング容量が異なります。
+* クラウドプロバイダに初めて導入する Cloud Volumes ONTAP システムについては、 30 日間の無償トライアルを利用できます。 link:concept_evaluating.html["30 日間の無償トライアルの詳細をご覧ください"]。
++
+** ソフトウェア料金は時間単位では発生しませんが、クラウドプロバイダのインフラ料金には（コンピューティング、ストレージ、ネットワーク）が引き続き適用されます。
+** 無料トライアルが終了すると、選択したライセンスに応じて 1 時間ごとに請求されます。ただし、ご登録いただいている場合に限ります。購読していない場合は、システムがシャットダウンします。
++
+Cloud Volumes ONTAP システムの作成時に、 Cloud Manager からクラウドプロバイダのマーケットプレイスに登録するよう求められたら、
+
+
+
+* 別のライセンスオプションへの変換はサポートされていません。
+* 基本的なテクニカルサポートが提供されますが、必ず実施する必要があります link:task_registering.html["に関連付けられたネットアップのシリアル番号を登録してアクティブ化します システム"]。
+
+
+価格設定の詳細はクラウドプロバイダのマーケットプレイスから確認できます：
+
+* https://aws.amazon.com/marketplace/pp/prodview-eap6ybxwk5ycg["AWS Marketplace"^]
+* https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=PlansAndPrice["Azure Marketplace で入手できます"^]
+* https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Platform Marketplace"^]
+
+
+PAYGO の利用を開始するには、 Cloud Volumes ONTAP の作業環境を構築し、クラウドプロバイダの市場への登録を求められたら同意する必要があります。
+
+
+
+== ノードベースのライセンス
+
+* 12 カ月、 24 カ月などの期間ベースのサブスクリプションオプションを使用するシングルノードライセンスまたは HA ライセンスです。
+* お客様所有のライセンスを使用（ BYOL ）することで利用できます。
+* 各 Cloud Volumes ONTAP システムは、ライセンスあたり最大 368 TB の容量をサポートします。
+* 別のライセンスオプションへの変換はサポートされていません。
+
+
+容量ベースのライセンスに移行する場合は、ライセンスを購入して新しい Cloud Volumes ONTAP システムを導入し、その新しいシステムにデータをレプリケートできます。
+
+ノードベースのライセンスの使用を開始するには、 https://cloud.netapp.com/contact-cds["ネットアップ営業にお問い合わせください"^] 次に link:task_managing_licenses.html["Cloud Manager にライセンスを追加します"]。

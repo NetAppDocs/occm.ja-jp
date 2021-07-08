@@ -31,15 +31,16 @@ Azure で Cloud Volumes ONTAP システムを作成すると、リソースグ�
 [WARNING]
 .データ損失の可能性があります
 ====
-データ損失のリスクがあるため、既存の共有リソースグループに Cloud Volumes ONTAP を導入することは推奨されません。API を使用して既存のリソースグループに導入する場合、ロールバックは現在デフォルトで無効になっていますが、 Cloud Volumes ONTAP を削除すると、その共有グループから他のリソースが削除される可能性があります。
+Cloud Volumes ONTAP システムごとに新しい専用のリソースグループを使用することを推奨します。
 
-Cloud Volumes ONTAP には、新しい専用のリソースグループを使用することを推奨します。これはデフォルトであり、 Cloud Manager から Azure に Cloud Volumes ONTAP を導入する場合にのみ推奨されるオプションです。
+データ損失のリスクがあるため、既存の共有リソースグループに Cloud Volumes ONTAP を導入することは推奨されません。導入の失敗や削除が発生した場合、 Cloud Manager は共有リソースグループから Cloud Volumes ONTAP リソースを削除できますが、 Azure ユーザが誤って共有リソースグループから Cloud Volumes ONTAP リソースを削除してしまう可能性があります。
 
 ====
 .手順
 . Canvas ページで、 * Add Working Environment * をクリックし、画面の指示に従います。
 . * 場所を選択 * ：「 * Microsoft * Azure * 」および「 * Cloud Volumes ONTAP シングルノード * 」または「 * Cloud Volumes ONTAP 高可用性 * 」を選択します。
-. * 詳細とクレデンシャル * ：必要に応じて Azure クレデンシャルとサブスクリプションを変更し、クラスタ名とリソースグループ名を指定し、必要に応じてタグを追加してから、クレデンシャルを指定します。
+. プロンプトが表示されたら、 link:task_creating_connectors_aws.html["コネクタを作成します"]。
+. * 詳細とクレデンシャル * ：必要に応じて Azure のクレデンシャルとサブスクリプションを変更し、クラスタ名を指定し、タグを追加し、クレデンシャルを指定することもできます。
 +
 次の表では、ガイダンスが必要なフィールドについて説明します。
 
@@ -52,13 +53,10 @@ Cloud Volumes ONTAP には、新しい専用のリソースグループを使用
 | 作業環境名 | Cloud Manager は、作業環境名を使用して、 Cloud Volumes ONTAP システムと Azure 仮想マシンの両方に名前を付けます。また、このオプションを選択した場合は、事前定義されたセキュリティグループのプレフィックスとして名前が使用されます。 
 
 
-| リソースグループ名 | 新しいリソースグループのデフォルト名をそのまま使用するか、 [ デフォルトを使用する *] をオフにして、新しいリソースグループの独自の名前を入力します。Cloud Volumes ONTAP には、新しい専用のリソースグループを使用することを推奨します。API を使用して既存の共有リソースグループに Cloud Volumes ONTAP を導入することは可能ですが、データ損失のリスクがあるため推奨されません。詳細については、上記の警告を参照してください。 
+| リソースグループタグ | タグは、 Azure リソースのメタデータです。このフィールドにタグを入力すると、 Cloud Volumes ONTAP システムに関連付けられているリソースグループにタグが追加されます。作業環境を作成するときに、ユーザインターフェイスから最大 4 つのタグを追加し、作成後にさらに追加できます。API では、作業環境の作成時にタグを 4 つに制限することはありません。タグの詳細については、を参照してください https://azure.microsoft.com/documentation/articles/resource-group-using-tags/["Microsoft Azure のドキュメント：「 Using tags to organize your Azure resources"^]。 
 
 
-| タグ | タグは、 Azure リソースのメタデータです。このフィールドにタグを入力すると、 Cloud Volumes ONTAP システムに関連付けられているリソースグループにタグが追加されます。作業環境を作成するときに、ユーザインターフェイスから最大 4 つのタグを追加し、作成後にさらに追加できます。API では、作業環境の作成時にタグを 4 つに制限することはありません。タグの詳細については、を参照してください https://azure.microsoft.com/documentation/articles/resource-group-using-tags/["Microsoft Azure のドキュメント：「 Using tags to organize your Azure resources"^]。 
-
-
-| ユーザ名とパスワード | これらは、 Cloud Volumes ONTAP クラスタ管理アカウントのクレデンシャルです。これらのクレデンシャルを使用して、 OnCommand System Manager またはその CLI を使用して Cloud Volumes ONTAP に接続できます。 
+| ユーザ名とパスワード | これらは、 Cloud Volumes ONTAP クラスタ管理アカウントのクレデンシャルです。このクレデンシャルを使用して、 System Manager またはその CLI から Cloud Volumes ONTAP に接続できます。 
 
 
 | [[video]] 資格情報を編集します | この Cloud Volumes ONTAP システムで使用する別の Azure クレデンシャルと別の Azure サブスクリプションを選択できます。従量課金制 Cloud Volumes ONTAP システムを導入するには、選択した Azure サブスクリプションに Azure Marketplace サブスクリプションを関連付ける必要があります。 link:task_adding_azure_accounts.html["クレデンシャルを追加する方法について説明します"]。 
@@ -75,16 +73,34 @@ video::video_subscribing_azure.mp4[width=848,height=480]
 ** link:concept_monitoring.html["監視サービスの詳細については、こちらをご覧ください"]。
 
 
-. * 場所と接続性 * ：場所とセキュリティグループを選択し、チェックボックスをオンにして、コネクタとターゲットの場所の間のネットワーク接続を確認します。
+. * 場所と接続 * ：場所、リソースグループ、セキュリティグループを選択し、チェックボックスを選択して、コネクタとターゲットの場所間のネットワーク接続を確認します。
 +
-シングルノードシステムの場合は、 Cloud Volumes ONTAP を導入するアベイラビリティゾーンを選択できます。AZ を選択しない場合は、 Cloud Manager によってその AZ が選択されます。
-
-. * ライセンスとサポートサイトのアカウント * ：従量課金制または BYOL のどちらを使用するかを指定し、 NetApp Support Site のアカウントを指定します。
-+
-ライセンスの仕組みについては、を参照してください link:concept_licensing.html["ライセンス"]。
+次の表では、ガイダンスが必要なフィールドについて説明します。
 
 +
-NetApp Support Site のアカウントは、従量課金制の場合は任意ですが、 BYOL システムの場合は必須です。 link:task_adding_nss_accounts.html["ネットアップサポートサイトのアカウントを追加する方法について説明します"]。
+[cols="25,75"]
+|===
+| フィールド | 説明 
+
+
+| 場所 | シングルノードシステムの場合は、 Cloud Volumes ONTAP を導入するアベイラビリティゾーンを選択できます。AZ を選択しない場合は、 Cloud Manager によってその AZ が選択されます。 
+
+
+| リソースグループ  a| 
+Cloud Volumes ONTAP の新しいリソースグループを作成するか、既存のリソースグループを使用します。Cloud Volumes ONTAP には、新しい専用のリソースグループを使用することを推奨します。既存の共有リソースグループに Cloud Volumes ONTAP を導入することは可能ですが、データ損失のリスクがあるため推奨されません。詳細については、上記の警告を参照してください。
+
+Azure に導入する Cloud Volumes ONTAP HA ペアごとに専用のリソースグループを使用する必要があります。リソースグループでサポートされる HA ペアは 1 つだけです。Azure リソースグループに 2 つ目の Cloud Volumes ONTAP HA ペアを導入しようとすると、 Cloud Manager で接続の問題が発生します。
+
+
+TIP: 使用している Azure アカウントにが割り当てられている場合 https://mysupport.netapp.com/site/info/cloud-manager-policies["必要な権限"^]導入の失敗や削除が発生した場合、 Cloud Manager はリソースグループから Cloud Volumes ONTAP リソースを削除します。
+
+
+
+| セキュリティグループ | 既存のセキュリティグループを選択する場合は、 Cloud Volumes ONTAP の要件を満たす必要があります。 link:reference_networking_azure.html#security-group-rules-for-cloud-volumes-ontap["デフォルトのセキュリティグループを表示します"]。 
+|===
+. * 充電方法と NSS アカウント * ：このシステムで使用する充電オプションを指定し、ネットアップサポートサイトのアカウントを指定します。
++
+link:concept_licensing.html["これらの充電方法について説明します"]。
 
 . * 構成済みパッケージ * ： Cloud Volumes ONTAP システムを迅速に導入するパッケージを 1 つ選択するか、 * 独自の構成を作成 * をクリックします。
 +
@@ -124,7 +140,7 @@ link:concept_data_tiering.html["データ階層化の詳細については、こ
 link:concept_write_speed.html["書き込み速度の詳細については、こちらをご覧ください。"]。
 
 +
-データの階層化が有効になっていると、 WORM を有効にできません。
+Cloud Backup が有効になっている場合やデータ階層化が有効になっている場合は、 WORM を有効にすることはできません。
 
 +
 link:concept_worm.html["WORM ストレージの詳細については、こちらをご覧ください。"]。

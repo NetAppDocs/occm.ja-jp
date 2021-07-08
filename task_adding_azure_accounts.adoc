@@ -95,7 +95,7 @@ Azure で Cloud Manager に権限を付与するには、サービスプリン�
 次の例は、 Azure CLI 2.0 を使用してカスタムロールを作成する方法を示しています。
 
 +
-「 az role definition create -- role-definition C ： \Policy_for _cloud_Manager_azure_3.8.7.json 」という名前で作成します
+「 AZ role definition create -- role-definition C ： \Policy_for _cloud_Manager_azure_3.9.8.json
 
 +
 これで、 _Cloud Manager Operator _ という名前のカスタムロールが作成されます。
@@ -188,6 +188,8 @@ image:screenshot_azure_client_secret.gif["Azure AD サービスプリンシパ�
 == Cloud Manager に Azure クレデンシャルを追加しています
 
 必要な権限を Azure アカウントに付与したら、そのアカウントのクレデンシャルを Cloud Manager に追加できます。これにより、そのアカウントで Cloud Volumes ONTAP システムを起動できます。
+
+作成したクレデンシャルをクラウドプロバイダで使用できるようになるまでに数分かかることがあります。Cloud Manager にクレデンシャルを追加するまで数分待ってから、
 
 Cloud Manager の設定を変更する前に、コネクタを作成する必要があります。 link:concept_connectors.html#how-to-create-a-connector["詳細をご確認ください"]。
 

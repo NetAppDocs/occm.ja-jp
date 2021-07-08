@@ -22,8 +22,8 @@ entries:
   entries:
   - title: Cloud Manager の詳細をご確認ください
     url: "/concept_overview.html"
-  - title: ネットワークの概要
-    url: "/reference_networking.html"
+  - title: はじめにチェックリスト
+    url: "/reference_checklist_cm.html"
   - title: Cloud Central に登録します
     url: "/task_signing_up.html"
   - title: Cloud Manager にログインします
@@ -76,10 +76,12 @@ entries:
         url: "/concept_ha_azure.html"
       - title: GCP の HA ペア
         url: "/concept_ha_google_cloud.html"
+    - title: ライセンス
+      url: "/concept_licensing.html"
+    - title: ノードベースの BYOL の管理
+      url: "/concept_license_management.html"
     - title: 評価中
       url: "/concept_evaluating.html"
-    - title: BYOL のライセンス
-      url: "/concept_licensing.html"
     - title: セキュリティ
       url: "/concept_security.html"
     - title: パフォーマンス
@@ -176,12 +178,12 @@ entries:
     url: "/task_protecting_ransomware.html"
   - title: 管理
     entries:
+    - title: ライセンスを管理します
+      url: "/task_managing_licenses.html"
     - title: 従量課金制システムを登録
       url: "/task_registering.html"
     - title: Cloud Volumes ONTAP をセットアップする
       url: "/task_setting_up_ontap_cloud.html"
-    - title: BYOL ライセンスを管理します
-      url: "/task_managing_licenses.html"
     - title: ソフトウェアを更新します
       url: "/task_updating_ontap_cloud.html"
     - title: システム設定を変更する
@@ -335,8 +337,10 @@ entries:
       url: "/task_deploy_cloud_compliance.html"
     - title: データソースでスキャンをアクティブ化します
       entries:
-      - title: Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files の各サービスを提供します
+      - title: Cloud Volumes ONTAP とオンプレミス ONTAP
         url: "/task_getting_started_compliance.html"
+      - title: Azure NetApp Files の特長
+        url: "/task_scanning_anf.html"
       - title: Amazon S3 バケット
         url: "/task_scanning_s3.html"
       - title: データベーススキーマ
@@ -387,7 +391,7 @@ entries:
     url: "/concept_compute.html"
   - title: はじめに
     url: "/task_getting_started_compute.html"
-- title: データをクラウドに階層化
+- title: オンプレミスのデータをクラウドに階層化
   entries:
   - title: Cloud Tiering の詳細をご確認ください
     url: "/concept_cloud_tiering.html"

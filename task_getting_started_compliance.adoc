@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_getting_started_compliance.html 
-keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, ANF, Azure NetApp Files, CVO, Cloud Volumes ONTAP, backup files, data sense 
-summary: Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files 向けクラウドデータセンスの導入を開始するには、いくつかの手順を実行します。 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, backup files, data sense 
+summary: Cloud Volumes ONTAP システムとオンプレミスの ONTAP システム向けのクラウドデータセンスを活用するには、いくつかの手順を実行します。 
 ---
-= Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files 向けクラウドデータサービスを最初に導入する方法
+= Cloud Volumes ONTAP とオンプレミス ONTAP 向けのクラウドデータサービスの導入を開始する方法をご紹介します
 :hardbreaks:
 :nofooter: 
 :icons: font
@@ -13,7 +13,7 @@ summary: Cloud Volumes ONTAP 、オンプレミス ONTAP 、 Azure NetApp Files 
 
 
 [role="lead"]
-Cloud Volumes ONTAP 、オンプレミス ONTAP システム、 Azure NetApp Files 向けクラウドデータセンスの導入を開始するには、いくつかの手順を実行します。
+Cloud Volumes ONTAP システムとオンプレミスの ONTAP システム向けのクラウドデータセンスを活用するには、いくつかの手順を実行します。
 
 
 
@@ -30,7 +30,6 @@ Cloud Volumes ONTAP 、オンプレミス ONTAP システム、 Azure NetApp Fil
 
 * Cloud Volumes ONTAP システムの場合、これらの作業環境はすでに Cloud Manager で使用可能になっている必要があります
 * オンプレミスの ONTAP システムでは、 link:task_discovering_ontap.html["ONTAP クラスタは Cloud Manager で検出する必要があります"^]
-* Azure NetApp Files の場合、 link:task_manage_anf.html["構成を検出するには、 Cloud Manager が設定されている必要があります"^]。
 
 
 
@@ -45,7 +44,7 @@ link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Data Sense を�
 ==== Cloud Data Sense を有効にして、スキャンするボリュームを選択します
 
 [role="quick-margin-para"]
-コンプライアンス * をクリックし、 * 構成 * タブを選択して、特定の作業環境でボリュームのコンプライアンススキャンを有効にします。
+[ * データセンス * ] をクリックし、 [ * 構成 * ] タブを選択して、特定の作業環境でボリュームのコンプライアンススキャンを有効にします。
 
 
 
@@ -54,7 +53,7 @@ link:task_deploy_cloud_compliance.html["Cloud Manager に Cloud Data Sense を�
 [role="quick-margin-para"]
 Cloud Data Sense が有効になったので、すべてのボリュームにアクセスできることを確認します。
 
-* クラウドデータセンスインスタンスには、各 Cloud Volumes ONTAP サブネット、 Azure NetApp Files サブネット、またはオンプレミスの ONTAP システムへのネットワーク接続が必要です。
+* クラウドデータセンスインスタンスには、各 Cloud Volumes ONTAP サブネットまたはオンプレミスの ONTAP システムへのネットワーク接続が必要です。
 * Cloud Volumes ONTAP のセキュリティグループは、データセンスインスタンスからのインバウンド接続を許可する必要があります。
 * これらのポートが Data Sense インスタンスに対して開いていることを確認します。
 +
@@ -82,7 +81,7 @@ Cloud Data Sense が有効になったので、すべてのボリュームにア
 
 スキャンするデータソースがまだ Cloud Manager 環境にない場合は、ここでキャンバスに追加できます。
 
-Cloud Volumes ONTAP システムは、 Cloud Manager のキャンバスですでに使用できるようになっている必要があります。オンプレミスの ONTAP システムには、が必要です link:task_discovering_ontap.html["これらのクラスタは Cloud Manager で検出されます"^]。Azure NetApp Files の場合は、 link:task_manage_anf.html["構成を検出するには、 Cloud Manager が設定されている必要があります"^]。
+Cloud Volumes ONTAP システムは、 Cloud Manager のキャンバスですでに使用できるようになっている必要があります。オンプレミスの ONTAP システムには、が必要です link:task_discovering_ontap.html["これらのクラスタは Cloud Manager で検出されます"^]。
 
 
 
@@ -92,13 +91,11 @@ link:task_deploy_cloud_compliance.html["クラウドデータの導入センス"
 
 クラウドデータセンスは、 Cloud Volumes ONTAP やオンプレミスの ONTAP システムをスキャンする際に、クラウドやオンプレミスの場所に導入することができます。
 
-Azure NetApp Files ボリュームをスキャンするときは、データセンスをクラウドに導入する必要があります。また、スキャンするボリュームと同じリージョンに導入する必要があります。
-
 
 
 == 作業環境でクラウドデータを有効に活用
 
-Cloud Volumes ONTAP システム（ AWS および Azure ）、オンプレミスの ONTAP クラスタ、および Azure NetApp Files でクラウドデータセンスを有効にすることができます。
+Cloud Volumes ONTAP システム（ AWS および Azure ）およびオンプレミスの ONTAP クラスタでクラウドデータセンスを有効にすることができます。
 
 
 NOTE: オンプレミス ONTAP システムで次の手順を実行すると、オンプレミス ONTAP システム上のボリュームが直接スキャンされます。すでにオンプレミスからバックアップファイルを作成している場合 を使用しています link:concept_backup_to_cloud.html["クラウドバックアップ"^]ではなく、クラウド内のバックアップファイルに対してコンプライアンススキャンを実行できます。に進みます <<Scanning backup files from on-premises ONTAP systems,オンプレミスの ONTAP システムからバックアップファイルをスキャンする>> バックアップファイルをスキャンしてボリュームをスキャンします。
@@ -107,9 +104,12 @@ NOTE: オンプレミス ONTAP システムで次の手順を実行すると、�
 +
 image:screenshot_cloud_compliance_we_scan_config.png["Cloud Data Sense インスタンスを展開した直後の [ 構成 ] タブのスクリーンショット。"]
 
-. 作業環境内のすべてのボリュームをスキャンするには、 * すべてのボリュームのコンプライアンスをアクティブ化 * をクリックします。
+. 作業環境内のすべてのボリュームをスキャンするには、 * すべてのボリュームのスキャンをアクティブ化 * をクリックします。
 +
-作業環境内の特定のボリュームのみをスキャンするには、 * をクリックするか、 Volumes （ボリューム） * を選択して、スキャンするボリュームを選択します。
+この方法で有効にすると、すべてのボリュームに対して「マッピングと分類」の完全なスキャンが実行されます。
+
++
+特定のボリュームに対してのみスキャンを有効にする場合、または「マッピング専用」のスキャンのみを実行する場合は、 * をクリックするか、ボリュームを選択して、スキャンするボリュームを選択します。
 
 
 
@@ -124,11 +124,7 @@ Cloud Data Sense により、作業環境で選択したボリュームのスキ
 ネットワーク、セキュリティグループ、およびエクスポートポリシーを確認して、 Cloud Data Sense でボリュームにアクセスできることを確認します。CIFS ボリュームにアクセスできるようにするには、 CIFS クレデンシャルをデータセンスに指定する必要があります。
 
 .手順
-. クラウドデータセンスインスタンスと、 Cloud Volumes ONTAP 、 Azure NetApp Files 、オンプレミスの ONTAP クラスタのボリュームを含む各ネットワークとの間にネットワーク接続が確立されていることを確認します。
-+
-
-NOTE: Azure NetApp Files の場合、 Cloud Data Sense は Cloud Manager と同じリージョンにあるボリュームのみをスキャンできます。
-
+. クラウドデータセンスインスタンスと、 Cloud Volumes ONTAP またはオンプレミスの ONTAP クラスタのボリュームを含む各ネットワークとの間にネットワーク接続が確立されていることを確認します。
 . Cloud Volumes ONTAP のセキュリティグループがデータセンスインスタンスからのインバウンドトラフィックを許可していることを確認します。
 +
 データセンスインスタンスの IP アドレスからのトラフィックのセキュリティグループを開くか、仮想ネットワーク内からのすべてのトラフィックのセキュリティグループを開くことができます。
@@ -172,28 +168,31 @@ image:screenshot_compliance_volume_details.gif["スキャン設定の View Detai
 
 == ボリュームのコンプライアンススキャンの有効化と無効化
 
-作業環境内のボリュームのスキャンは、設定ページからいつでも停止または開始できます。すべてのボリュームをスキャンすることを推奨します。
+作業環境では、マッピングのみのスキャン、マッピングおよび分類スキャンを、設定ページからいつでも停止または開始できます。すべてのボリュームをスキャンすることを推奨します。
 
 image:screenshot_volume_compliance_selection.png["個々のボリュームのスキャンを有効または無効にできる設定ページのスクリーンショット。"]
 
-[cols="40,50"]
+[cols="45,45"]
 |===
 | 終了： | 手順： 
 
 
-| ボリュームのスキャンを無効にします | 音量スライダを左に動かします 
+| ボリュームに対してマッピングのみのスキャンを有効にします | [* マップ * ] をクリックします 
 
 
-| すべてのボリュームのスキャンを無効にします | [ すべてのボリュームのコンプライアンスを有効にする * ] スライダをに移動します 左 
+| ボリュームでフルスキャンを有効にします | [ マップと分類 *] をクリックします 
 
 
-| ボリュームのスキャンを有効にします | 音量スライダを右に動かします 
+| すべてのボリュームでフルスキャンを有効にします | [* Map & Classify all* （すべてのマップと分類） ] スライダを右に移動します 
 
 
-| すべてのボリュームのスキャンを有効にします | [ すべてのボリュームのコンプライアンスを有効にする * ] スライダをに移動します 権利 
+| ボリュームのスキャンを無効にします | [ * Off * ] をクリックします 
+
+
+| すべてのボリュームでスキャンを無効にします | [* Map & Classify all* （すべてのマップと分類） ] スライダを左に移動します 
 |===
 
-NOTE: 作業環境に追加した新しいボリュームは、すべてのボリュームのコンプライアンスのアクティブ化 * 設定が有効になっている場合にのみ自動的にスキャンされます。この設定を無効にすると、作業環境で作成する新しいボリュームごとにスキャンを有効にする必要があります。
+NOTE: 作業環境に追加された新しいボリュームは、 * Map & Classify all * 設定が有効になっている場合にのみ自動的にスキャンされます。この設定を無効にすると、作業環境で作成する新しいボリュームごとに、マッピングまたはフルスキャンを有効にする必要があります。
 
 
 

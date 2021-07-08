@@ -85,14 +85,16 @@ link:concept_cloud_compliance.html["Cloud Data Sense の仕組みの詳細はこ
 
 == クラウドデータセンスにはどのようなタイプのインスタンスまたは VM が必要ですか。
 
-* Azure では、 Cloud Data Sense は、 512 GB のディスクを搭載した Standard_D16s_v3 VM で実行されます。
-* AWS では、 Cloud Data Sense は、 500 GB の gp2 ディスクを使用する m5.-m構築 インスタンスで実行されます。
+* Azure では、 Cloud Data Sense はデフォルトで、 512 GB のディスクを搭載した Standard_D16s_v3 VM 上で実行されます。
+* AWS では、 Cloud Data Sense はデフォルトで、 500 GB の gp2 ディスクを使用する m5.-m構築 インスタンスで実行されます。
 +
 m5.mcd を使用できない領域では、代わりに m4.mcd インスタンスに対してデータセンスを実行します。
 
 
 
 また、ネットワーク内またはクラウド内の Linux ホストに Data Sense ソフトウェアをダウンロードしてインストールすることもできます。すべてが同じように機能し、 Cloud Manager を使用してスキャンの設定と結果を引き続き管理できます。を参照してください link:task_deploy_cloud_compliance.html#deploying-the-cloud-data-sense-instance-on-premises["クラウドデータセンスをオンプレミスに導入"^] を参照してください。
+
+CPU 数と RAM 容量が少ないシステムには Data Sense を導入できますが、これらのシステムの使用には制限があります。を参照してください link:concept_cloud_compliance.html#using-a-smaller-instance-type["小さいインスタンスタイプを使用しています"] を参照してください。
 
 
 NOTE: Cloud Data Sense は、オンプレミスにインストールされている S3 バケットと ANF ファイルをスキャンすることができない。
@@ -106,6 +108,8 @@ link:concept_cloud_compliance.html["Cloud Data Sense の仕組みの詳細はこ
 データが頻繁に変更されるため、 Cloud Data Sense は、データに影響を与えることなくデータを継続的にスキャンします。データの初回スキャンには時間がかかる場合がありますが、その後のスキャンでは差分変更のみがスキャンされるため、システムのスキャン時間が短縮されます。
 
 link:concept_cloud_compliance.html#how-scans-work["スキャンの仕組みを説明します"^]。
+
+データスキャンは、ストレージシステムとデータにほとんど影響を与えません。ただし、影響が非常に小さい場合でも、低速スキャンを実行するようにデータセンスを設定できます。 link:task_managing_compliance.html#reducing-the-data-sense-scan-speed["スキャン速度を下げる方法を参照してください"]。
 
 
 
