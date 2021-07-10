@@ -133,7 +133,7 @@ container.*
 
 === セットアップ例
 
-次の図は、 Amazon Elastic Kubernetes Service （ Amazon EKS ）で実行されている Kubernetes クラスタとコネクタおよび Cloud Volumes ONTAP への接続の例を示しています。
+次の図は、 Amazon Elastic Kubernetes Service （ Amazon EKS ）で実行されている Kubernetes クラスタとコネクタおよび Cloud Volumes ONTAP への接続の例を示しています。この例では、 VPC ピアリングによって、 EKS クラスタの VPC とコネクタおよび Cloud Volumes ONTAP の VPC 間の接続が確立されます。
 
 image:diagram_kubernetes.png["AWS で実行されている Kubernetes クラスタのアーキテクチャ図と、 AWS で実行されているコネクタおよび Cloud Volumes ONTAP への接続"]
 

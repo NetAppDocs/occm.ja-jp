@@ -4755,7 +4755,6 @@
   <block id="9dc5a9b1a6d7bcb89b68a5b8af2f3d9d" category="section-title">GKE クラスタの検出と管理に必要な権限</block>
   <block id="94b91905ef6393459229709e2831b933" category="paragraph">Connector は、 Google Kubernetes Engine （ GKE ）で実行されている Kubernetes クラスタを検出して管理するために次の権限を必要とします。</block>
   <block id="3ee2de4187bbc3464c963e80daa5d7c0" category="section-title">セットアップ例</block>
-  <block id="a4442a7193812b984ee99dd8a65c8fe0" category="paragraph">次の図は、 Amazon Elastic Kubernetes Service （ Amazon EKS ）で実行されている Kubernetes クラスタとコネクタおよび Cloud Volumes ONTAP への接続の例を示しています。</block>
   <block id="1547099886e6b7ac1281503829845612" category="inline-image-macro">AWS で実行されている Kubernetes クラスタのアーキテクチャ図と、 AWS で実行されているコネクタおよび Cloud Volumes ONTAP への接続</block>
   <block id="87fe77f64de696c0dc8c282dc7e7e04c" category="paragraph"><block ref="87fe77f64de696c0dc8c282dc7e7e04c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="63893b71ff0d8c47377febdd8dcc5da0" category="section-title">Kubernetes クラスタを追加しています</block>
@@ -11349,4 +11348,5 @@
   <block id="141e0ee5acabd2b9a63fc92c4f5aa348" category="sidebar">ノードベースの BYOL の管理</block>
   <block id="8c7729e22a223978ef26b521fa9ee122" category="sidebar">Cloud Volumes ONTAP とオンプレミス ONTAP</block>
   <block id="7d2282c510a7fb8e2271e7bebbf67d76" category="sidebar">オンプレミスのデータをクラウドに階層化</block>
+  <block id="95d48eaf4f096975a232f030f62bb786" category="paragraph">次の図は、 Amazon Elastic Kubernetes Service （ Amazon EKS ）で実行されている Kubernetes クラスタとコネクタおよび Cloud Volumes ONTAP への接続の例を示しています。この例では、 VPC ピアリングによって、 EKS クラスタの VPC とコネクタおよび Cloud Volumes ONTAP の VPC 間の接続が確立されます。</block>
 </blocks>
