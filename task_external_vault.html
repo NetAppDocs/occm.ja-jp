@@ -1765,9 +1765,9 @@
       <span class="subfolders" style="display:none;">
         
         <li>
-          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/クレデンシャルを管理する.pdf" >
+          <a target="_blank" href="/ja-jp/occm/pdfs/sidebar/クラウドプロバイダのクレデンシャルを管理する.pdf" >
             <img src="/ja-jp/occm/images/pdf.png" width="20" height="20"/>
-            クレデンシャルを管理する
+            クラウドプロバイダのクレデンシャルを管理する
           </a>
         </li>
         <span>
@@ -1852,14 +1852,14 @@
 
 
 
-
-
           
         </span>
       </span>
     
 
   
+
+
 
 
 
@@ -2444,7 +2444,7 @@
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="reference_connector_default_config.html">
         デフォルト設定
       </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> クレデンシャルを管理する</div>
+        <div class="na-navbar-padding"> クラウドプロバイダのクレデンシャルを管理する</div>
       </a>
       <ul><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> AWS</div>
@@ -2467,9 +2467,9 @@
         GCP クレデンシャルについて説明します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_adding_gcp_accounts.html">
         GCP クレデンシャルを管理する
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="task_adding_nss_accounts.html">
-        ネットアップサポートサイトのクレデンシャル
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="task_managing_cloud_central_accounts.html">
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="task_adding_nss_accounts.html">
+        NSS クレデンシャルを管理する
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_managing_cloud_central_accounts.html">
         アカウントを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="task_installing_https_cert.html">
         HTTPS 証明書をインストールします
@@ -2524,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-07-08 18:49:48 +0000">07/08/2021</time>
+    <time datetime="2021-07-11 19:30:35 +0000">07/11/2021</time>
     
   
 
@@ -2813,8 +2813,8 @@
 </li>
 </ol>
 </div>
-<div class="sect3">
-<h4 id="aws-ロール認証の例">AWS ロール認証の例</h4>
+<div class="sect2">
+<h3 id="aws-ロール認証の例">AWS ロール認証の例</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
@@ -2834,8 +2834,8 @@
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="gcp-iam-認証の例">GCP - IAM 認証の例</h4>
+<div class="sect2">
+<h3 id="gcp-iam-認証の例">GCP - IAM 認証の例</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
@@ -2861,6 +2861,20 @@
   }
 }</code></pre>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="gcp-iam-認証を使用する場合に権限を設定します">GCP - IAM 認証を使用する場合に権限を設定します</h3>
+<div class="paragraph">
+<p>_GCP-AM_authentication メソッドを使用している場合、データブローカーには次の GCP 権限が必要です。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">- iam.serviceAccounts.signJwt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="task_sync_installing_gcp.html#permissions-required-for-the-service-account">"データブローカーの GCP 権限要件の詳細については、こちらをご覧ください"</a>。</p>
 </div>
 </div>
 </div>
@@ -2895,8 +2909,8 @@ Body: post relationship v2 body</pre>
 </li>
 </ul>
 </div>
-<div class="sect3">
-<h4 id="例-2">例</h4>
+<div class="sect2">
+<h3 id="例-2">例</h3>
 <div class="paragraph">
 <p>POST 要求の例：</p>
 </div>
