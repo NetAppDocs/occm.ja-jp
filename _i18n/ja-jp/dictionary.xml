@@ -3895,18 +3895,11 @@
   <block id="ae7870763d39d5e92d55d35fdabeef7f" category="list-text">ONTAP 9.6 以降を実行しているクラスタでは、 Cloud Tiering を使用して、 HDD アグリゲートに対する Inactive Data Reporting を有効にできます。</block>
   <block id="97936577d2a1bad5652c153f70b0beb1" category="paragraph">この機能拡張により、 Cloud Tiering では、コールドデータの階層化による削減量を簡単に確認できます。</block>
   <block id="193c3e76cd1e93a6d619c9d6654d34fa" category="list-text">アグリゲート内のボリュームでデータ階層化を有効にする必要がある場合は、 Cloud Tiering に、シックプロビジョニングされたボリュームをシンプロビジョニングされたボリュームに変更するよう求められます。</block>
-  <block id="5958c9c660ca1eb09027f4408ba1da08" category="summary">BYOL システムを導入するには、 NetApp Support Site のアカウントを Cloud Manager に追加する必要があります。また、従量課金制システムの登録や ONTAP ソフトウェアのアップグレードも必要です。</block>
   <block id="53975940dff089fb7acd85cf1488fb6c" category="doc">Cloud Manager へのネットアップサポートサイトのアカウントの追加</block>
-  <block id="5ea931db6e54586e044beb92c58308b7" category="paragraph">次のビデオを視聴して、ネットアップサポートサイトのアカウントを Cloud Manager に追加する方法をご確認ください。または、下にスクロールして手順を確認します。</block>
   <block id="5be2593b5948f30a15179a32daa73ee2" category="inline-link">1 名で登録します</block>
-  <block id="f60fbc292ef496e0763cfe2aef1cf11e" category="list-text">ネットアップサポートサイトのアカウントがない場合は、<block ref="52afcd6d51921ac81a8c3583f1c52d2b" category="inline-link-rx"></block>。</block>
-  <block id="2bffc8c947a1c3494b8610aa22e022d4" category="list-text">Add Credentials * をクリックし、 * NetApp Support Site * を選択します。</block>
-  <block id="ca5afa7b5099598f64dcaf3f849ad9c2" category="list-text">アカウントの名前を指定し、ユーザ名とパスワードを入力します。</block>
   <block id="0f0a0d646a020cf3a65ce82ada4cfb01" category="list-text">お客様レベルのアカウントである必要があります（ゲストや一時アカウントは使用できません）。</block>
-  <block id="665de9c765efe726ade12660acf3227f" category="list-text">BYOL システムを導入する場合は、次の点に注意してください。</block>
   <block id="4f67a838013dae97fbc2ef8c52275e5d" category="list-text">BYOL システムのシリアル番号にアクセスする権限がアカウントに必要です。</block>
   <block id="920eb18d0b8767d6fc05b934ad81e34b" category="list-text">セキュアな BYOL サブスクリプションを購入した場合は、セキュアな NSS アカウントが必要です。</block>
-  <block id="892f0cfeee09e08181a8cca6426f4478" category="list-text">[ アカウントの作成 ] をクリックします。 *</block>
   <block id="f937e1f93abbdf84ee0f2565cf37894b" category="paragraph">新しい Cloud Volumes ONTAP システムの作成時や既存のシステムの登録時に、ユーザがアカウントを選択できるようになりました。</block>
   <block id="4bbc2ccf5176e96f46715beb7edb26b6" category="list-text"><block ref="4bbc2ccf5176e96f46715beb7edb26b6" category="inline-link-macro-rx"></block></block>
   <block id="dd448c1326758451b0539897905027dd" category="list-text"><block ref="dd448c1326758451b0539897905027dd" category="inline-link-macro-rx"></block></block>
@@ -7660,7 +7653,6 @@
   <block id="c135c603177e58023474a65f829c0fd3" category="sidebar">Azure クレデンシャルを管理します</block>
   <block id="4220f564bec1279a5e4cc04678fdb053" category="sidebar">GCP クレデンシャルについて説明します</block>
   <block id="663ba1b0b2a30dcf60a71f4de79d55c0" category="sidebar">GCP クレデンシャルを管理する</block>
-  <block id="5d0a8cdc6b9b55fd93ed84e6766e7b28" category="sidebar">ネットアップサポートサイトのクレデンシャル</block>
   <block id="f20e69549fc23f9df431f9511f177e5e" category="sidebar">アカウントを管理します</block>
   <block id="3b1f4e08a1d9465a576cd2e92f35dde3" category="sidebar">作業環境を削除します</block>
   <block id="f4040f71a7d553f2519487070892b115" category="sidebar">ユーザロール</block>
@@ -11349,4 +11341,17 @@
   <block id="8c7729e22a223978ef26b521fa9ee122" category="sidebar">Cloud Volumes ONTAP とオンプレミス ONTAP</block>
   <block id="7d2282c510a7fb8e2271e7bebbf67d76" category="sidebar">オンプレミスのデータをクラウドに階層化</block>
   <block id="95d48eaf4f096975a232f030f62bb786" category="paragraph">次の図は、 Amazon Elastic Kubernetes Service （ Amazon EKS ）で実行されている Kubernetes クラスタとコネクタおよび Cloud Volumes ONTAP への接続の例を示しています。この例では、 VPC ピアリングによって、 EKS クラスタの VPC とコネクタおよび Cloud Volumes ONTAP の VPC 間の接続が確立されます。</block>
+  <block id="10c5ef3d81c591aadadb7817f4e79de0" category="admonition">「 iam.serviceAccounts.signJwt" 」権限が必要なのは、外部の橋本ボルトを使用するようにデータブローカーを設定する予定の場合のみです。</block>
+  <block id="583b356c729875a5616f4dca232a62fe" category="summary">ノードベースの BYOL システムを導入するには、 NetApp Support Site のアカウントを Cloud Manager に追加する必要があります。また、従量課金制システムの登録や ONTAP ソフトウェアのアップグレードも必要です。</block>
+  <block id="14b05cf61f1aba58d38b393e69b69538" category="list-text">ネットアップサポートサイトのアカウントがない場合は、<block ref="0a8e82436ea73fe635862cfba3acf101" category="inline-link-rx"></block>。</block>
+  <block id="0046efb3377274ff3215d4b30269809e" category="list-text">Cloud Manager コンソールの右上にあるヘルプアイコンをクリックし、 * Support * を選択します。</block>
+  <block id="d17d6b5dafebab6b7659da8850737e70" category="list-text">[*NSS Management] &gt; [Add NSS Account*] をクリックします。</block>
+  <block id="42a07b1a1c73f540db86a3e1ece89d31" category="list-text">アカウントのユーザ名とパスワードを入力します。</block>
+  <block id="f35b3071eb18e73b5274b2d3930c1cec" category="list-text">ノードベースの BYOL システムを導入する場合は、次の点に注意してください。</block>
+  <block id="c4e8f9bc954572562912e03c9f2fbe19" category="section-title">GCP - IAM 認証を使用する場合に権限を設定します</block>
+  <block id="e32a252e42df40beaff7e5a1ce821572" category="paragraph">_GCP-AM_authentication メソッドを使用している場合、データブローカーには次の GCP 権限が必要です。</block>
+  <block id="b872e6417139366489f4ec46ed47e57d" category="inline-link-macro">データブローカーの GCP 権限要件の詳細については、こちらをご覧ください</block>
+  <block id="03f844523948f7cff71e7503a208f402" category="paragraph"><block ref="5b5a98c1185e2fbc19953ab42c782bbf" category="inline-link-macro-rx"></block>。</block>
+  <block id="775bf3ee1192539276369c51ffb1e11a" category="sidebar">クラウドプロバイダのクレデンシャルを管理する</block>
+  <block id="809491e400d5e2dcbace5d5f1a7a33be" category="sidebar">NSS クレデンシャルを管理する</block>
 </blocks>

@@ -158,7 +158,7 @@ Secretd&rootid::
 
 
 
-==== AWS ロール認証の例
+=== AWS ロール認証の例
 
 [source, json]
 ----
@@ -179,7 +179,7 @@ Secretd&rootid::
 ----
 
 
-==== GCP - IAM 認証の例
+=== GCP - IAM 認証の例
 
 [source, json]
 ----
@@ -208,6 +208,18 @@ Secretd&rootid::
 ----
 
 
+=== GCP - IAM 認証を使用する場合に権限を設定します
+
+_GCP-AM_authentication メソッドを使用している場合、データブローカーには次の GCP 権限が必要です。
+
+[source, yaml]
+----
+- iam.serviceAccounts.signJwt
+----
+link:task_sync_installing_gcp.html#permissions-required-for-the-service-account["データブローカーの GCP 権限要件の詳細については、こちらをご覧ください"]。
+
+
+
 == ヴォールトのシークレットを使用して、新しい同期関係を作成します
 
 すべての設定が完了したら、 API 呼び出しを送信して、ヴォールトを使用してシークレットを取得する同期関係を作成できます。
@@ -229,7 +241,7 @@ Body: post relationship v2 body
 
 
 
-==== 例
+=== 例
 
 POST 要求の例：
 

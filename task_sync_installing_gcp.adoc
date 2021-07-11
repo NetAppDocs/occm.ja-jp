@@ -65,7 +65,11 @@ Cloud Sync は、 GCP にデータブローカーを導入すると、必要な�
 - storage.buckets.get
 - storage.buckets.list
 - storage.objects.*
+- iam.serviceAccounts.signJwt
 ----
+
+NOTE: 「 iam.serviceAccounts.signJwt" 」権限が必要なのは、外部の橋本ボルトを使用するようにデータブローカーを設定する予定の場合のみです。
+
 
 
 == データブローカーのインストール

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_adding_nss_accounts.html 
 keywords: adding, creating, netapp support site account, nss 
-summary: BYOL システムを導入するには、 NetApp Support Site のアカウントを Cloud Manager に追加する必要があります。また、従量課金制システムの登録や ONTAP ソフトウェアのアップグレードも必要です。 
+summary: ノードベースの BYOL システムを導入するには、 NetApp Support Site のアカウントを Cloud Manager に追加する必要があります。また、従量課金制システムの登録や ONTAP ソフトウェアのアップグレードも必要です。 
 ---
 = Cloud Manager へのネットアップサポートサイトのアカウントの追加
 :hardbreaks:
@@ -13,24 +13,16 @@ summary: BYOL システムを導入するには、 NetApp Support Site のアカ
 
 
 [role="lead"]
-BYOL システムを導入するには、 NetApp Support Site のアカウントを Cloud Manager に追加する必要があります。また、従量課金制システムの登録や ONTAP ソフトウェアのアップグレードも必要です。
-
-次のビデオを視聴して、ネットアップサポートサイトのアカウントを Cloud Manager に追加する方法をご確認ください。または、下にスクロールして手順を確認します。
-
-video::V2fLTyztqYQ[youtube, width=848,height=480]
-Cloud Manager の設定を変更する前に、コネクタを作成する必要があります。 link:concept_connectors.html#how-to-create-a-connector["詳細をご確認ください"]。
+ノードベースの BYOL システムを導入するには、 NetApp Support Site のアカウントを Cloud Manager に追加する必要があります。また、従量課金制システムの登録や ONTAP ソフトウェアのアップグレードも必要です。
 
 .手順
-. ネットアップサポートサイトのアカウントがない場合は、 http://now.netapp.com/newuser/["1 名で登録します"^]。
-. Cloud Manager コンソールの右上にある設定アイコンをクリックし、 * クレデンシャル * を選択します。
-+
-image:screenshot_settings_icon.gif["Cloud Manager コンソールの右上にある設定アイコンを示すスクリーンショット。"]
-
-. Add Credentials * をクリックし、 * NetApp Support Site * を選択します。
-. アカウントの名前を指定し、ユーザ名とパスワードを入力します。
+. ネットアップサポートサイトのアカウントがない場合は、 https://register.netapp.com/register/start["1 名で登録します"^]。
+. Cloud Manager コンソールの右上にあるヘルプアイコンをクリックし、 * Support * を選択します。
+. [*NSS Management] > [Add NSS Account*] をクリックします。
+. アカウントのユーザ名とパスワードを入力します。
 +
 ** お客様レベルのアカウントである必要があります（ゲストや一時アカウントは使用できません）。
-** BYOL システムを導入する場合は、次の点に注意してください。
+** ノードベースの BYOL システムを導入する場合は、次の点に注意してください。
 +
 *** BYOL システムのシリアル番号にアクセスする権限がアカウントに必要です。
 *** セキュアな BYOL サブスクリプションを購入した場合は、セキュアな NSS アカウントが必要です。
@@ -38,7 +30,7 @@ image:screenshot_settings_icon.gif["Cloud Manager コンソールの右上にあ
 
 
 
-. [ アカウントの作成 ] をクリックします。 *
+. [*Register] をクリックします。
 
 
 新しい Cloud Volumes ONTAP システムの作成時や既存のシステムの登録時に、ユーザがアカウントを選択できるようになりました。

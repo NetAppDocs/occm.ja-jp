@@ -445,7 +445,7 @@ entries:
         url: "/task_installing_linux.html"
     - title: デフォルト設定
       url: "/reference_connector_default_config.html"
-  - title: クレデンシャルを管理する
+  - title: クラウドプロバイダのクレデンシャルを管理する
     entries:
     - title: AWS
       entries:
@@ -465,8 +465,8 @@ entries:
         url: "/concept_accounts_gcp.html"
       - title: GCP クレデンシャルを管理する
         url: "/task_adding_gcp_accounts.html"
-    - title: ネットアップサポートサイトのクレデンシャル
-      url: "/task_adding_nss_accounts.html"
+  - title: NSS クレデンシャルを管理する
+    url: "/task_adding_nss_accounts.html"
   - title: アカウントを管理します
     url: "/task_managing_cloud_central_accounts.html"
   - title: HTTPS 証明書をインストールします
