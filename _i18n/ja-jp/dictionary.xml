@@ -9671,7 +9671,6 @@
   <block id="5190e9ec018f5e661ec4b31ff1b34423" category="inline-image-macro">シリアル番号で検索したあとのライセンスの一覧を示すスクリーンショット。</block>
   <block id="193bccfc2cf277cad00678895e527b35" category="paragraph"><block ref="193bccfc2cf277cad00678895e527b35" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8e04bab9d0c0964365e3483da66e2f09" category="list-text">[* License Key] で、 [* Get NetApp License File* ] をクリックします。</block>
-  <block id="d24f4170fb73ab7e4225910af6a7b6b3" category="list-text">Cloud Manager システム ID （サポートサイトではテナント ID と呼ばれます）を入力し、 * Submit * をクリックします。</block>
   <block id="56273f3344c87fabbf5196fba9816fff" category="inline-image-macro">ライセンスの取得ダイアログボックスを示すスクリーンショット。テナント ID を入力し、送信をクリックしてライセンスファイルをダウンロードします。</block>
   <block id="7ca3a83129f844a42c263755a0fa4a32" category="paragraph"><block ref="7ca3a83129f844a42c263755a0fa4a32" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bad6c02700d31ece20defc3ac35d1492" category="section-title">Cloud Manager は ONTAP S3 をサポートしていません</block>
@@ -10949,16 +10948,12 @@
   <block id="0e3cb01898d99d0091e2a6f5a7572390" category="paragraph">このタイプのマシンで既存のシステムを実行している場合は、引き続き使用できますが、 n2 標準 -4 マシンタイプに切り替えることをお勧めします。</block>
   <block id="346b156b62b438feb8aca3c528a7173c" category="inline-link">GCP で Cloud Volumes ONTAP のサポートされている構成を表示します</block>
   <block id="8c6edd174e07930c8a99bc4d6aee202a" category="paragraph"><block ref="07441dbba334a43317af29f638b08f32" category="inline-link-rx"></block>。</block>
-  <block id="a200b8e3226d9fd7c3b95509ede01068" category="list-text">Cloud Backup で、 Cloud Volumes ONTAP システムで使用していたものとは異なるアカウント / サブスクリプションを使用してバックアップを作成できるようになりました。Cloud Volumes ONTAP システムの導入リージョンとは異なるリージョンにバックアップファイルを作成することもできます。</block>
   <block id="52696f2a46e746ae7be7771283b425f7" category="paragraph">この機能は、 AWS または Azure を使用している場合にのみ使用できます。既存の作業環境でバックアップを有効にする場合にのみ使用できます。新しい Cloud Volumes ONTAP 作業環境を作成する場合は使用できません。</block>
   <block id="1b5f11e3b2af580a71ab826cc6c4a60d" category="list-text">セキュリティと制御を強化するために、 Microsoft が管理するデフォルトの暗号化キーを使用する代わりに、アクティベーションウィザードで、お客様が管理する独自のキーを選択してデータを暗号化できます。</block>
   <block id="b7b14d29e7fa0875a643042a6c856f60" category="paragraph">オンプレミスの ONTAP システムまたは Azure の Cloud Volumes ONTAP システムからバックアップを設定する場合に使用できます。</block>
   <block id="c254594758c0efc15d8b31890ead12e5" category="list-text">バックアップファイルからの単一ファイルの復元を使用して一度に 8 ファイルのみを復元するという制限がなくなりました。一度に最大 100 個のファイルをリストアできるようになりました。</block>
   <block id="db9d9939e6b9449005d6259da868ebcf" category="paragraph">データを Azure BLOB ストレージに階層化するときに、 Connector をオンプレミスで実行できるようになりました。Azure VNet にインストールされたコネクタを使用する必要はなくなりました。</block>
   <block id="3ba77a6d94bba5a650e12785f48ec5ed" category="section-title">Cloud Data Sense の強化</block>
-  <block id="015fb14cf7156a02f51f350460af53e3" category="list-text">新しい機能を使用すると、データ検出でスキャンしているすべてのソースファイルを任意の NFS 共有に移動できます。これにより、機密ファイルやセキュリティ関連ファイルを特別な領域に移動して、より詳細な分析を行うことができます。</block>
-  <block id="790e20b09fa3cbfe6490127c2a7ad340" category="list-text">完全な分類スキャンを実行する代わりに、データをカテゴリにすばやくマッピングするように選択できるようになりました。これにより、 Governance Dashboard からデータマッピングレポートを表示して、完全なスキャンを実行する必要がない特定のデータソースがある場合にデータの概要を確認できます。</block>
-  <block id="af7a53d2051a5329ec89512d8346c958" category="list-text">特定の Cloud Manager ユーザにファイルを割り当てて、ファイルに対して実行する必要があるフォローアップアクションをそのユーザが実行できるようにします。この機能を既存の機能とともに使用して、カスタムステータスタグをファイルに追加できます。</block>
   <block id="cf3f2cc15d62c716232f57e1283f8347" category="inline-link">これらの制限事項を最初に確認してください</block>
   <block id="d19d9799390a059699c587b37e743836" category="list-text">スキャン要件が小さいユーザの中には、より小さいクラウドデータセンスインスタンスを使用できるようにする必要のあるユーザもいます。できるようになりました。これらの小規模なインスタンスを使用する場合は、いくつかの制限事項があります <block ref="159c93cbb070632c0c3c6dd72c47268f" category="inline-link-rx"></block>。</block>
   <block id="04891f4d8d8b514ced99e7d596a05c62" category="list-text">データスキャンは、ストレージシステムとデータにほとんど影響を与えません。ただし、影響が非常に小さい場合でも、「低速」スキャンを実行するように Data Sense を設定できます。</block>
@@ -11354,4 +11349,12 @@
   <block id="03f844523948f7cff71e7503a208f402" category="paragraph"><block ref="5b5a98c1185e2fbc19953ab42c782bbf" category="inline-link-macro-rx"></block>。</block>
   <block id="775bf3ee1192539276369c51ffb1e11a" category="sidebar">クラウドプロバイダのクレデンシャルを管理する</block>
   <block id="809491e400d5e2dcbace5d5f1a7a33be" category="sidebar">NSS クレデンシャルを管理する</block>
+  <block id="edf1881ca101a9f30fe252a033a960a9" category="list-text">Cloud Backup で、 Cloud Volumes ONTAP システムに使用するアカウントやサブスクリプションとは異なるものを使用してバックアップを作成できるようになりました。Cloud Volumes ONTAP システムの導入リージョンとは異なるリージョンにバックアップファイルを作成することもできます。</block>
+  <block id="f30ef67a4274772079ff06a86e3a74e2" category="inline-link">データがスキャンしているソースファイルをすべての NFS 共有に移動します</block>
+  <block id="ee52b98aa14aaa76576053be74431f1a" category="list-text">新しい機能を使用すると、を実行できます <block ref="f2a050ed279648d8b8cbc9116081c750" category="inline-link-rx"></block>。これにより、機密ファイルやセキュリティ関連ファイルを特別な領域に移動して、より詳細な分析を行うことができます。</block>
+  <block id="ed4bdff0b14403bf62e234ebd3b70386" category="inline-link">データマッピングレポートを表示します</block>
+  <block id="b5d1604f8c6b9f3d5d7a5ed44e378c91" category="list-text">完全な分類スキャンを実行する代わりに、データをカテゴリにすばやくマッピングするように選択できるようになりました。これにより、を実行できます <block ref="b565cecb794ea5c378cc0fbff932a78d" category="inline-link-rx"></block> ガバナンスダッシュボードでは、完全なスキャンを実行する必要がない特定のデータソースがある場合に、データの概要を確認できます。</block>
+  <block id="91905b6c0e5bd3b31a5a9faff7fc5218" category="inline-link">ファイルを特定の Cloud Manager ユーザに割り当てます</block>
+  <block id="478399f82d039d1cf5e97a0b48452ddb" category="list-text">できるようになりました。 <block ref="9df62772d8392325b190af3d6ae817a6" category="inline-link-rx"></block> そのため、ファイルに対して行う必要があるフォローアップアクションを担当することができます。この機能を既存の機能とともに使用して、カスタムステータスタグをファイルに追加できます。</block>
+  <block id="a0ddbedd487d598f1d6b711f03a9d3e0" category="list-text">Cloud Manager アカウント ID （サポートサイトではテナント ID と呼ばれます）を入力し、 * Submit * をクリックします。</block>
 </blocks>
