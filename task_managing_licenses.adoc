@@ -213,7 +213,7 @@ image:screenshot_cloud_backup_license_step1.gif["シリアル番号で検索し�
 image:screenshot_cloud_backup_license_step2.gif["ライセンスの取得ダイアログボックスを示すスクリーンショット。テナント ID を入力し、送信をクリックしてライセンスファイルをダウンロードします。"]
 
 +
-link:task_finding_system_id.html["システム ID の確認方法について説明します"]。
+アカウント ID は、 Cloud Manager の上部にある「 * Account * 」ドロップダウンを選択し、アカウントの横にある「 * Manage Account * 」をクリックして確認できます。アカウント ID は、 [ 概要 ] タブにあります。
 
 
 

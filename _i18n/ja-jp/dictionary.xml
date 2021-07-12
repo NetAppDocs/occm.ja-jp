@@ -9651,8 +9651,6 @@
   <block id="583571647e284c9fed0a15301f155dba" category="section-title">Cloud Backup ライセンスファイルを取得します</block>
   <block id="26d69ee75480a17160357d140e6e88b1" category="paragraph">Cloud Manager にライセンスを追加する際には、シリアル番号を入力するか、 NLF ライセンスファイルをアップロードできます。</block>
   <block id="fe2108e5ca97a96400711d61ab05d245" category="list-text">にアクセスします<block ref="fcc52edac3ce57829c48ee35d97a295d" category="inline-link-rx"></block> [ システム ] 、 [ ソフトウェアライセンス ] の順にクリックします。</block>
-  <block id="06439c1a8a7d76c8738cc05a9c7d261a" category="inline-link-macro">システム ID の確認方法について説明します</block>
-  <block id="868c0fce77eaa7db10627404ab096f55" category="paragraph"><block ref="8522e0bfe607f9cdf38a37b711a67e4a" category="inline-link-macro-rx"></block>。</block>
   <block id="132ebd95e1229f92e8ab53968783e1bc" category="section-title">Cloud Backup ライセンスを追加または更新する</block>
   <block id="3e6ed63cf0403cbacdfd715ea0874110" category="paragraph">Cloud Backup Service をアクティブにするために、 Cloud Backup ライセンスを Cloud Manager に追加または更新します。</block>
   <block id="c07a71714d1c498b3b812c962b059fc1" category="inline-link-macro">Cloud Backup のライセンスに関する詳細は、こちらをご覧ください</block>
@@ -11357,4 +11355,5 @@
   <block id="91905b6c0e5bd3b31a5a9faff7fc5218" category="inline-link">ファイルを特定の Cloud Manager ユーザに割り当てます</block>
   <block id="478399f82d039d1cf5e97a0b48452ddb" category="list-text">できるようになりました。 <block ref="9df62772d8392325b190af3d6ae817a6" category="inline-link-rx"></block> そのため、ファイルに対して行う必要があるフォローアップアクションを担当することができます。この機能を既存の機能とともに使用して、カスタムステータスタグをファイルに追加できます。</block>
   <block id="a0ddbedd487d598f1d6b711f03a9d3e0" category="list-text">Cloud Manager アカウント ID （サポートサイトではテナント ID と呼ばれます）を入力し、 * Submit * をクリックします。</block>
+  <block id="0f21fc239ab862f720ce451ac8a4176b" category="paragraph">アカウント ID は、 Cloud Manager の上部にある「 * Account * 」ドロップダウンを選択し、アカウントの横にある「 * Manage Account * 」をクリックして確認できます。アカウント ID は、 [ 概要 ] タブにあります。</block>
 </blocks>
