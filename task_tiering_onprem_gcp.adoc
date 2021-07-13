@@ -49,7 +49,7 @@ Cloud Manager で、オンプレミスの作業環境を選択し、 * 有効化
 無償トライアルの終了後、従量課金制のサブスクリプション、 ONTAP 階層化ライセンス、またはその両方を組み合わせて使用して、クラウド階層化の料金を支払うことができます。
 
 * GCP Marketplace からサブスクライブするには、 [ * 階層化（ * Tiering ） ] > [ ライセンス（ Licensing ） ] をクリックし、 [ * サブスクライブ（ * Subscribe ） ] をクリックして、プロンプトに従います。
-* 階層化ライセンスを追加する場合は、 mailto ： ng-cloud-tiering@netapp.com ？ subject= Licensing [ 購入が必要な場合は当社にお問い合わせください ] を選択してから link:task_licensing_cloud_tiering.html["Cloud Tiering から、クラスタにノードを追加してください"]。
+* 階層化ライセンスを追加する場合は、 mailto ： ng-cloud-tiering@netapp.com ？ subject= Licensing [ 購入が必要な場合は当社にお問い合わせください ] を選択してから 。
 
 
 
@@ -89,7 +89,7 @@ Google Cloud Interconnect はパフォーマンスの向上とデータ転送コ
 
 * 階層化するボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。
 +
-データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。の詳細を確認してください https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] および https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspace"^]。
+データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。の詳細を確認してください https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] および。
 
 
 

@@ -116,8 +116,8 @@ Cloud Volumes ONTAP インスタンスで SMB ファイル共有をセットア�
 
 このグローバルファイルキャッシュ管理サーバでは、クラウドプロバイダサブスクリプションサービスに接続して次の URL にアクセスするために、 HTTPS （ TCP ポート 443 ）経由の外部アクセスが必要です。
 
-* https://talonazuremicroservices.azurewebsites.net["https://talonazuremicroservices.azurewebsites.net[""]"]
-* https://talonlicensing.table.core.windows.net["https://talonlicensing.table.core.windows.net[""]"]
+* https://talonazuremicroservices.azurewebsites.net["https://talonazuremicroservices.azurewebsites.net"]
+* https://talonlicensing.table.core.windows.net["https://talonlicensing.table.core.windows.net"]
 
 
 Global File Cache ソフトウェアが正常に動作するためには、 WAN 最適化デバイスまたはファイアウォール制限ポリシーからこのポートを除外する必要があります。

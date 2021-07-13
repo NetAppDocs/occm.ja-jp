@@ -49,12 +49,21 @@ NOTE: テンプレートを使用すると、作成したリソースにクラ�
 
 テンプレートは、事前に定義された値を持つ「アクション」のチェーンです。次のアクションを含むテンプレートを作成できます。
 
+* 主なアクション： *
+
 * Cloud Volumes ONTAP ボリュームを作成します
 * Azure NetApp Files ボリュームを作成します
 * オンプレミスの ONTAP ボリュームを作成
-* 作成したボリュームで Cloud Backup を有効にする（ Azure NetApp Files には該当しません）
-* 作成したボリュームで Cloud Data Sense を有効にする
 
+
+* 二次アクション： *
+
+* アクティブ化します link:concept_backup_to_cloud.html["クラウドバックアップ"] ボリューム（ Azure NetApp Files には該当しません）
+* アクティブ化します link:concept_cloud_compliance.html["クラウドデータの意味"] ボリューム
+* アクティブ化します link:concept_replication.html["レプリケーション"] ボリューム（ Azure NetApp Files には該当しません）
+
+
+たとえば、 Cloud Volumes ONTAP ボリュームを作成するテンプレートを作成できます。または、 Cloud Volumes ONTAP ボリュームを作成してから、そのボリュームで Cloud Backup を有効にします。または、 Cloud Volumes ONTAP ボリュームを作成し、そのボリュームで Cloud Backup_or_Cloud Data Sense を有効にします。
 
 ネットアップは、時間の経過とともにアクションを追加します。
 

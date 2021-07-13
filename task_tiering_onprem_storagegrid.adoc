@@ -76,7 +76,7 @@ ONTAP は、オブジェクトストレージとの間でデータの読み取�
 
 * 階層化するボリュームをホストする各 ONTAP ノードにクラスタ間 LIF が 1 つ必要です。LIF は、 ONTAP がオブジェクトストレージへの接続に使用する IPspace に関連付けられている必要があります。
 +
-データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。の詳細を確認してください https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] および https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspace"^]。
+データの階層化を設定すると、使用する IPspace を入力するように求められます。各 LIF を関連付ける IPspace を選択する必要があります。これは、「デフォルト」の IPspace または作成したカスタム IPspace です。の詳細を確認してください https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["LIF"^] および。
 
 
 

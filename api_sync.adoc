@@ -88,7 +88,7 @@ API 応答には、トークンの有効期限を示す「 expires_in 」フィ�
 
 == API リファレンス
 
-各 Cloud Sync API のドキュメントは、から入手できます https://api.cloudsync.netapp.com/docs[""]。
+各 Cloud Sync API のドキュメントは、から入手できます https://api.cloudsync.netapp.com/docs[]。
 
 
 

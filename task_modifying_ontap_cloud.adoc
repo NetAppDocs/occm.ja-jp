@@ -83,8 +83,8 @@ Cloud Volumes ONTAP が新しいライセンス、インスタンスタイプま
 . 新しい Cloud Volumes ONTAP の作業環境を作成します。
 +
 link:task_deploying_otc_aws.html["AWS での Cloud Volumes ONTAP の起動"]
-link:task_deploying_otc_azure.html["Azure で Cloud Volumes ONTAP を起動します"]
-link:task_deploying_gcp.html["GCP での Cloud Volumes ONTAP の起動"]
+
+
 
 . link:task_replicating_data.html["1 回限りのデータレプリケーションを設定します"] レプリケートする必要がある各ボリュームのシステム間。
 . 終了した Cloud Volumes ONTAP システムを終了します ニーズ link:task_deleting_working_env.html["元の作業環境を削除します"]。

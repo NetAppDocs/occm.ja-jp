@@ -349,7 +349,7 @@ AWS で Cloud Volumes ONTAP システムを起動するには、まず AWS Marke
 
 . コネクタインスタンスに接続されているホストから Cloud Manager をセットアップします。
 +
-.. Web ブラウザを開き、次の URL を入力します。 http://ipaddress:80[""]
+.. Web ブラウザを開き、次の URL を入力します。 http://ipaddress:80[]
 .. AWS サービスに接続するためのプロキシサーバを指定します。
 .. 手順 1 で取得した証明書をアップロードします。
 .. セットアップウィザードの手順に従って、 Cloud Manager をセットアップします。

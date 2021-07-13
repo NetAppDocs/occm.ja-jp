@@ -129,13 +129,13 @@ CPU の数と RAM の数が少ないシステムには Data Sense を導入で�
 | システムサイズ | 仕様 | 制限 
 
 
-| Large （デフォルト） | CPU × 16 、 64GB RAM | なし 
+| Extra Large （デフォルト） | CPU × 16 、 64GB RAM | なし 
 
 
 | 中 | CPU × 8 、 32GB RAM | スキャンに時間がかかり、スキャンできるファイルは最大 100 万個です。 
 
 
-| 小規模 | CPU × 8 、 16GB RAM | 「中」と同じ制限に加えて、の大部分ではコンテキスト AI スキャンの 2 つの機能が無効になっています link:reference_private_data_categories.html#types-of-sensitive-personal-data["機密性の高い個人"] 識別子。識別用です link:task_responding_to_dsar.html["データ主体名"] ファイル内。 
+| 小規模 | CPU × 8 、 16GB RAM | 「中」と同じ制限に加えて、の大部分ではコンテキスト AI スキャンの 2 つの機能が無効になっています link:reference_private_data_categories.html#types-of-sensitive-personal-data["機密性の高い個人"] 識別子。識別用です  ファイル内。 
 |===
 クラウドにデータセンスを導入する場合は、 ng-contact-data-sense@netapp.com に電子メールを送信して、これらの小規模なシステムのいずれかを使用する場合のサポートを依頼してください。
 
@@ -253,4 +253,4 @@ SaaS モードで Cloud Manager を使用する場合は、 Cloud Manager への
 * コンプライアンスビューア * の役割を持つユーザーは、アクセス権を持つシステムのコンプライアンス情報を表示し、レポートを生成することのみができます。これらのユーザは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。
 
 
-link:reference_user_roles.html["Cloud Manager のロールに関する詳細情報"^] そして方法 link:task_managing_cloud_central_accounts.html#adding-users["特定のロールのユーザを追加します"^]。
+link:reference_user_roles.html["Cloud Manager のロールに関する詳細情報"^] そして方法 。

@@ -53,7 +53,7 @@ NOTE: EC2 の要件により、 Cloud Volumes ONTAP の LIF フェイルオー�
 
 * Cloud Volumes ONTAP は、 HTTPS を使用してコネクタに構成バックアップを送信します。
 +
-バックアップにはからアクセスできます https://ipaddress/occm/offboxconfig/[""] ここで、 _ipaddress_ はコネクタホストの IP アドレスです。
+バックアップにはからアクセスできます https://ipaddress/occm/offboxconfig/[] ここで、 _ipaddress_ はコネクタホストの IP アドレスです。
 
 * Cloud Manager は、他の管理ツール（ System Manager や CLI など）とは異なるボリューム属性をいくつか設定します。
 +

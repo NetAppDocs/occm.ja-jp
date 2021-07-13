@@ -121,7 +121,7 @@ NOTE: Cloud Manager は、作業環境ごとに 1 つのバケットを作成し
 一部の階層化ポリシーには、最小冷却期間が関連付けられています。この期間は、データを「コールド」と見なして容量階層に移動するために、ボリューム内のユーザーデータを非アクティブのままにする必要がある時間を設定します。クーリング期間は、データがアグリゲートに書き込まれると開始されます。
 
 
-TIP: 最小クーリング期間とデフォルトのアグリゲートしきい値を 50% に変更できます（詳細については後述します）。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mgng-stor-tier-fp/GUID-AD522711-01F9-4413-A254-929EAE871EBF.html["冷却期間を変更する方法について説明します"^] および http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mgng-stor-tier-fp/GUID-8FC4BFD5-F258-4AA6-9FCB-663D42D92CAA.html["しきい値を変更する方法について説明します"^]。
+TIP: 最小クーリング期間とデフォルトのアグリゲートしきい値を 50% に変更できます（詳細については後述します）。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mgng-stor-tier-fp/GUID-AD522711-01F9-4413-A254-929EAE871EBF.html["冷却期間を変更する方法について説明します"^] および。
 
 Cloud Manager では、ボリュームを作成または変更するときに、次のボリューム階層化ポリシーのいずれかを選択できます。
 

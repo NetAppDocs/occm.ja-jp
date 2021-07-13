@@ -152,7 +152,7 @@ AWS Marketplace では、次の 2 年間の契約が提供されています。
 
 * 12 カ月、 24 カ月、または 36 カ月の年間契約を使用して Cloud Volumes ONTAP と Cloud Backup Service をバンドルできるプロフェッショナルパッケージ。支払いは TiB あたりです。このオプションでは、オンプレミスのデータをバックアップすることはできません。
 +
-にアクセスします https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace のページ"^] 価格の詳細を表示するには、を参照してください https://docs.netapp.com/us-en/cloud-volumes-ontap["Cloud Volumes ONTAP リリースノート"^] このライセンスオプションの詳細については、を参照してください。
+にアクセスします https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace のページ"^] 価格の詳細を表示するには、を参照してください このライセンスオプションの詳細については、を参照してください。
 
 +
 このオプションを使用する場合は、 Cloud Volumes ONTAP の作業環境を作成するときに年間契約を設定し、 Cloud Manager から AWS Marketplace に登録するように求められます。
@@ -168,7 +168,7 @@ BYOL は、期間ベース（ 1 年間 / 2 年間 / 3 年間）で容量ベー�
 
 NOTE: StorageGRID へのバックアップには BYOL ライセンスが必要ですが、この場合クラウドプロバイダのストレージスペースはコストなしに使用できます。
 
-サービスを有効にするために、 Cloud Manager のデジタルウォレットのページに入力したシリアル番号が表示されます。いずれかの制限に達すると、ライセンスを更新する必要があります。を参照してください link:task_managing_licenses.html#manage-cloud-backup-licenses["Cloud Backup ライセンスの管理"^]。Backup BYOL ライセンス環境は、に関連付けられているすべての Cloud Volumes ONTAP およびオンプレミスの ONTAP システムをライセンスしたものです link:concept_cloud_central_accounts.html["Cloud Central アカウント"^]。
+サービスを有効にするために、 Cloud Manager のデジタルウォレットのページに入力したシリアル番号が表示されます。いずれかの制限に達すると、ライセンスを更新する必要があります。を参照してください link:task_managing_licenses.html#manage-cloud-backup-licenses["Cloud Backup ライセンスの管理"^]。Backup BYOL ライセンス環境は、に関連付けられているすべての Cloud Volumes ONTAP およびオンプレミスの ONTAP システムをライセンスしたものです 。
 
 
 

@@ -123,7 +123,7 @@ image:screenshot_file_types.gif["ファイルタイプダイアログボック�
 
 image:screenshot_compliance_file_details.png["[ データ調査 ] ページのファイルのメタデータの詳細を示すスクリーンショット。"]
 
-ファイルが存在する作業環境とボリュームを表示するだけでなく、メタデータには、ファイル権限、ファイルの所有者、このファイルの重複がないかどうか、および AIP ラベルが割り当てられている場合など、より多くの情報が表示されます link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["クラウドデータセンスで AIP を統合"^]）。この情報は、を計画している場合に役立ちます link:task_managing_highlights.html#creating-custom-policies["ポリシーを作成します"] データのフィルタリングに使用できるすべての情報が表示されます。
+ファイルが存在する作業環境とボリュームを表示するだけでなく、メタデータには、ファイル権限、ファイルの所有者、このファイルの重複がないかどうか、および AIP ラベルが割り当てられている場合など、より多くの情報が表示されます link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["クラウドデータセンスで AIP を統合"^]）。この情報は、を計画している場合に役立ちます  データのフィルタリングに使用できるすべての情報が表示されます。
 
 すべてのデータソースについて、すべての情報が表示されるわけではなく、そのデータソースに適した情報だけが表示されることに注意してください。たとえば、ボリューム名、権限、および AIP ラベルは、データベースファイルには関係ありません。
 

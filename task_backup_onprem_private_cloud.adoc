@@ -257,4 +257,4 @@ image:screenshot_backup_select_volumes.png["バックアップするボリュー
 
 Cloud Backup は、オンプレミスの ONTAP システムからボリュームをバックアップします。
 
-可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です link:task_restore_backups.html["バックアップファイルからボリューム全体をリストアする"^]。
+可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です 。

@@ -24,12 +24,12 @@ summary: グローバルファイルキャッシュエッジソフトウェア�
 * Windows Server 2016 仮想テンプレート：
 +
 https://repo.cloudsync.netapp.com/gfc/2K16_ova_1-1-0-78.zip["NetApp GFC を含む Windows Server * 2016.OVA （ VMware vSphere 6.5 以降）"^]
-https://repo.cloudsync.netapp.com/gfc/2K16_vhd_1-1-0-78.zip["NetApp GFC を含む Windows Server 2016-0x （ Microsoft Hyper-V ）"^]
+
 
 * Windows Server 2019 仮想テンプレート：
 +
 https://repo.cloudsync.netapp.com/gfc/2K19_ova_1-1-0-78.zip["Windows Server 206.OVA （ NetApp GFC を含む）（ VMware vSphere 6.5 以降）"^]
-https://repo.cloudsync.netapp.com/gfc/2K19_vhd_1-1-0-78.zip["NetApp GFC （ Microsoft Hyper-V ）を含む Windows Server 19VHDX"^]
+
 
 * グローバルファイルキャッシュエッジソフトウェア：
 +

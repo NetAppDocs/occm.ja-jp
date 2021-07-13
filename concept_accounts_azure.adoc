@@ -51,7 +51,7 @@ image:screenshot_accounts_switch_azure.gif["[ 詳細と資格情報 ] ページ�
 
 .市場への導入とオンプレミスの導入についてはどうでしょうか。
 ****
-上記のセクションでは、 NetApp Cloud Central のコネクタで推奨される導入方法について説明します。から Azure に Connector を導入することもできます link:task_launching_azure_mktp.html["Azure Marketplace で入手できます"]を使用できます link:task_installing_linux.html["コネクタをオンプレミスにインストールします"]。
+上記のセクションでは、 NetApp Cloud Central のコネクタで推奨される導入方法について説明します。から Azure に Connector を導入することもできます link:task_launching_azure_mktp.html["Azure Marketplace で入手できます"]を使用できます 。
 
 Marketplace を使用する場合も、アクセス許可は同じ方法で提供されます。コネクタの管理 ID を手動で作成してセットアップし、追加のアカウントに権限を付与するだけで済みます。
 

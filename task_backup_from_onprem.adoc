@@ -38,7 +38,7 @@ NetApp StorageGRID システムを使用しており、バックアップを作�
 ** クラスタには SnapMirror ライセンスがあり、 PREM または Data Protection Bundle に含まれています。
 
 
-* に登録しておきます https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure"^]、 https://aws.amazon.com/marketplace/pp/B07QX2QLXX["AWS"^]または https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["Google"^] Cloud Manager Marketplace のバックアップ製品またはを購入済みである link:task_managing_licenses.html#manage-cloud-backup-licenses["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
+* に登録しておきます https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure"^]、または Cloud Manager Marketplace のバックアップ製品またはを購入済みである link:task_managing_licenses.html#manage-cloud-backup-licenses["アクティブ化されます"^] NetApp の Cloud Backup BYOL ライセンス。
 * バックアップを格納するオブジェクトストレージスペース用の有効なクラウドプロバイダサブスクリプションが必要です。
 * AWS と GCP については、 ONTAP クラスタがデータをバックアップできるように、アクセスキーと必要な権限を持つアカウントが必要です。
 
@@ -219,7 +219,7 @@ Cloud Backup をセットアップすると、 IPspace で使用するように�
 
 === ライセンス要件
 
-Cloud Backup PAYGO ライセンスの場合は、へのサブスクリプションが必要です https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure"^]、 https://aws.amazon.com/marketplace/pp/B07QX2QLXX["AWS"^]または https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["Google"^] Cloud Backup を有効にする前に、 Cloud Manager Marketplace のバックアップサービスを利用できます。Cloud Backup の請求は、このサブスクリプションを通じて行われます。
+Cloud Backup PAYGO ライセンスの場合は、へのサブスクリプションが必要です https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure"^]、または Cloud Backup を有効にする前に、 Cloud Manager Marketplace のバックアップサービスを利用できます。Cloud Backup の請求は、このサブスクリプションを通じて行われます。
 
 Cloud Backup BYOL ライセンスの場合は、サブスクリプションは必要ありません。シリアル番号はネットアップから提供される必要があります。この番号を使用すると、ライセンスの期間と容量にサービスを使用できます。を参照してください link:task_managing_licenses.html#manage-cloud-backup-licenses["バックアップ BYOL ライセンスの管理"^]。
 
@@ -437,7 +437,7 @@ Compliance の導入が完了したら、上記の手順でスキャンするボ
 
 Cloud Backup は、オンプレミスの ONTAP システムからボリュームをバックアップします。必要に応じて、バックアップされたボリュームに対してコンプライアンススキャンを実行します。
 
-可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です link:task_restore_backups.html["ボリューム全体または個々のファイルをバックアップファイルからリストアする"^]。
+可能です link:task_managing_backups.html["ボリュームのバックアップを開始および停止したり、バックアップを変更したりできます スケジュール"^] また、次のことも可能です 。
 
 また可能です link:task_controlling_private_data.html["コンプライアンススキャンの結果を表示します"^] また、データコンテキストを理解し、組織内の機密データを特定するのに役立つ、クラウドデータセンスのその他の機能についても確認します。
 

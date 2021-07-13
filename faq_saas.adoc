@@ -43,7 +43,7 @@ NetApp ONTAP ベースのすべてのストレージソリューションを対�
 
 * * API および UI のパブリックエンドポイント *
 +
-新しいリリースでは、 API とにアクセスできます を使用して、 Cloud Manager 用の GUI をセキュアに設定できます  https://cloudmanager.netapp.com[""]。
+新しいリリースでは、 API とにアクセスできます を使用して、 Cloud Manager 用の GUI をセキュアに設定できます  https://cloudmanager.netapp.com[]。
 
 
 
@@ -117,7 +117,7 @@ SaaS ベースのサブスクリプションは、クラウドデータを利用
 
 == 移行や、 Cloud Manager SaaS への移行に必要な具体的な対応はありますか。
 
-必要はありません。参照してください https://cloudmanager.netapp.com[""] 作業を開始します。Cloud Manager へのアクセスは、許可されたユーザにのみ許可されます。
+必要はありません。参照してください https://cloudmanager.netapp.com[] 作業を開始します。Cloud Manager へのアクセスは、許可されたユーザにのみ許可されます。
 
 
 

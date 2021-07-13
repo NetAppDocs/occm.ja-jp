@@ -34,7 +34,7 @@ Cloud Manager を使用して、グローバルファイルキャッシュ管理
 ==== Cloud Volumes ONTAP を導入します
 
 [role="quick-margin-para"]
-Azure または AWS に Cloud Volumes ONTAP を導入し、 SMB ファイル共有を設定詳細については、を参照してください link:task_deploying_otc_azure.html["Azure で Cloud Volumes ONTAP を起動します"^] または link:task_deploying_otc_aws.html["AWS での Cloud Volumes ONTAP の起動"^]。
+Azure または AWS に Cloud Volumes ONTAP を導入し、 SMB ファイル共有を設定詳細については、を参照してください link:task_deploying_otc_azure.html["Azure で Cloud Volumes ONTAP を起動します"^] または 。
 
 
 
@@ -68,7 +68,7 @@ Azure または AWS に Cloud Volumes ONTAP を導入し、 SMB ファイル共�
 
 === ストレージプラットフォームとして Cloud Volumes ONTAP を導入
 
-現在のリリースでは、 Azure または AWS に導入された Cloud Volumes ONTAP がグローバルファイルキャッシュでサポートされています。前提条件、要件、および導入手順の詳細については、を参照してください link:task_deploying_otc_azure.html["Azure で Cloud Volumes ONTAP を起動します"^] または link:task_deploying_otc_aws.html["AWS での Cloud Volumes ONTAP の起動"^]。
+現在のリリースでは、 Azure または AWS に導入された Cloud Volumes ONTAP がグローバルファイルキャッシュでサポートされています。前提条件、要件、および導入手順の詳細については、を参照してください link:task_deploying_otc_azure.html["Azure で Cloud Volumes ONTAP を起動します"^] または 。
 
 次のグローバルファイルキャッシュの追加要件に注意してください。
 
@@ -140,7 +140,7 @@ image:screenshot_gfc_install8.png["インストールが完了した後のグロ
 この例では、パブリッククラウドに展開したばかりのコアインスタンスに LMS サービスを設定します。これは、 LMS サービスをセットアップする 1 回限りのプロセスです。
 
 .手順
-. 次の URL を使用して、グローバルファイルキャッシュコア（ LMS サービスとして指定するコア）の [Global File Cache License Registration] ページを開きます。<IP_address> _ をグローバルファイルキャッシュコアの IP アドレスに置き換えます。https://<ip_address>/lms/api/v1/config/lmsconfig.html[""]
+. 次の URL を使用して、グローバルファイルキャッシュコア（ LMS サービスとして指定するコア）の [Global File Cache License Registration] ページを開きます。<IP_address> _ をグローバルファイルキャッシュコアの IP アドレスに置き換えます。https://<ip_address>/lms/api/v1/config/lmsconfig.html[]
 . 続行するには、 [Continue to this website （ not recommended ）（この Web サイトに進む（推奨しません）） ] をクリックしますLMS を設定したり、既存のライセンス情報を確認したりできるページが表示されます。
 +
 image:screenshot_gfc_license1.png["Global File Cache License Registration ページのスクリーンショット。"]

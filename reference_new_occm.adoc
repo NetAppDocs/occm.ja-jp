@@ -17,7 +17,19 @@ summary: 通常、 Cloud Manager では毎月新しいリリースが導入さ�
 
 
 TIP: 以前のリリースをお探しですか？link:https://docs.netapp.com/us-en/occm38/reference_new_occm.html["3.8 の新機能"^]
-link:https://docs.netapp.com/us-en/occm37/reference_new_occm.html["3.7 の新機能"^]
+
+
+
+
+== Cloud Manager 3.9.8 の更新（ 2021 年 7 月 13 日）
+
+
+
+=== アプリケーションテンプレートの機能拡張
+
+* サポートが追加され、必要なテンプレートに追加できるようになりました link:task_define_templates.html#add-replication-functionality-to-a-volume["作成するボリュームにデータをレプリケートします"] を使用して別のボリュームに移動します 。他のネットアップストレージシステムにデータをレプリケートし、セカンダリデータを継続的に更新することで、データは最新の状態に保たれ、必要なときにいつでも使用できます。
+* ダッシュボードで単一ボリュームの情報を表示するだけでなく、テンプレート設定から「ドリフト」のボリュームをすべて含むレポートをダウンロードできるようになりました。このようにして、これらのボリュームを特定し、ボリュームをコンプライアンスに戻す誰かを割り当てることができます。を参照してください link:task_check_template_compliance.html#create-a-drift-report-for-non-compliant-resources["ドリフトレポートをダウンロードする方法"]。
+
 
 
 
@@ -319,7 +331,7 @@ image:screenshot_digital_wallet_menu.png["All Services オプションの下の 
 この支払いオプションを選択すると、 EBS ディスクを介して Cloud Volumes ONTAP システムあたり最大 2PB をプロビジョニングし、 S3 オブジェクトストレージ（シングルノードまたは HA ）に階層化することができます。
 
 +
-にアクセスします https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace のページ"^] 価格の詳細を表示するには、を参照してください https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_aws_991.html["Cloud Volumes ONTAP リリースノート"^] このライセンスオプションの詳細については、を参照してください。
+にアクセスします https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace のページ"^] 価格の詳細を表示するには、を参照してください このライセンスオプションの詳細については、を参照してください。
 
 * 新しい Cloud Volumes ONTAP 作業環境の作成時に、 Cloud Manager によって EBS ボリュームにタグが追加されるようになりました。タグは、 Cloud Volumes ONTAP の導入後に作成されたものです。
 +
@@ -396,7 +408,7 @@ Azure で Cloud Volumes ONTAP の作業環境を作成する際にエラーが�
 === Cloud Backup の機能拡張
 
 * [ バックアップと復元 ] ダッシュボードは、新しい [ バックアップと復元 *] タブに統合されているため、すべてのバックアップ操作と復元操作を 1 か所から簡単に管理できます。を参照してください link:task_managing_backups.html#viewing-the-volumes-that-are-being-backed-up["バックアップと復元のダッシュボード"^] を参照してください。
-* オンプレミスの ONTAP システムから Google Cloud Storage や NetApp StorageGRID システムへのバックアップを作成できるようになりました。を参照してください link:task_backup_from_onprem.html["Google Cloud Storage へのバックアップ"^] および link:task_backup_onprem_private_cloud.html["StorageGRID にバックアップしています"^] を参照してください。
+* オンプレミスの ONTAP システムから Google Cloud Storage や NetApp StorageGRID システムへのバックアップを作成できるようになりました。を参照してください link:task_backup_from_onprem.html["Google Cloud Storage へのバックアップ"^] および  を参照してください。
 * ONTAP 9.9.1 の新機能では、 System Manager を使用して、オンプレミスの ONTAP のバックアップを Cloud Backup で設定したオブジェクトストレージに送信できます。 link:https://docs.netapp.com/us-en/ontap/task_cloud_backup_data_using_cbs.html["Cloud Backup を使用してボリュームをクラウドにバックアップする方法については、 System Manager の説明を参照してください。"^]
 * バックアップポリシーが次のように強化されています。
 +
@@ -443,7 +455,7 @@ link:task_managing_cloud_central_accounts.html["タイムラインをテナン�
 
 === Cloud Compliance の機能拡張
 
-* クラウドコンプライアンスは「ガバナンスとコンプライアンス」に名称変更されました。Cloud Manager には、「ガバナンス」と「コンプライアンス」という 2 つのタブがあります。[Governance （ガバナンス） ] タブをクリックすると、が表示されます link:task_controlling_governance_data.html#the-governance-dashboard["ガバナンスダッシュボード"] 「ガバナンスとコンプライアンス」サービスと「コンプライアンス」タブでは、が表示されます link:task_controlling_private_data.html["コンプライアンスダッシュボード"]。
+* クラウドコンプライアンスは「ガバナンスとコンプライアンス」に名称変更されました。Cloud Manager には、「ガバナンス」と「コンプライアンス」という 2 つのタブがあります。[Governance （ガバナンス） ] タブをクリックすると、が表示されます link:task_controlling_governance_data.html#the-governance-dashboard["ガバナンスダッシュボード"] 「ガバナンスとコンプライアンス」サービスと「コンプライアンス」タブでは、が表示されます 。
 * Azure Blob に格納されたデータのスキャンがサポートされるようになりました を使用する場合 https://min.io/["MinIO サービス"]。を参照してください link:task_scanning_object_storage.html["S3 プロトコルを使用するオブジェクトストレージをスキャンしています"^] を参照してください。
 * 新しい個人データ型。Cloud Compliance で、オーストリアの SSN をファイルで検索できるようになりました。
 
@@ -573,7 +585,7 @@ Amazon S3 バケットをスキャンするだけでなく、 S3 プロトコル
 +
 方法をご確認ください link:task_controlling_private_data.html#viewing-whether-files-are-duplicated-in-your-storage-systems["重複ファイルを検索します"]。
 
-* 。 link:task_controlling_governance_data.html["ガバナンスダッシュボード"^] に、表示するグラフが追加されました link:task_controlling_governance_data.html#top-data-repositories-listed-by-data-sensitivity["データの機密性に基づいて上位のデータリポジトリが表示されます"] および link:task_controlling_governance_data.html#data-listed-by-types-of-open-permissions["オープンアクセス権のタイプ別に一覧表示されるデータ"]。
+* 。 link:task_controlling_governance_data.html["ガバナンスダッシュボード"^] に、表示するグラフが追加されました  および 。
 
 
 
@@ -909,7 +921,7 @@ image:screenshot_support_dashboard.gif["サポート情報、リンク、ケー�
 Cloud Compliance でオンプレミスの ONTAP システム上のボリュームを直接スキャンしない場合は、今月リリースされた新しいベータ機能を使用して、オンプレミスの ONTAP ボリュームから作成されたバックアップファイルでコンプライアンススキャンを実行できます。オンプレミス ONTAP のバックアップを作成済みの場合も同様です を使用しています link:concept_backup_to_cloud.html["クラウドバックアップ"^]この新機能を使用して、これらのバックアップファイルに対して * 無料 * のコンプライアンススキャンを実行できます。
 
 +
-方法を参照してください link:task_backup_from_onprem.html["オンプレミスの ONTAP ボリュームをオブジェクトストレージにバックアップ"^] そしていかにできるか link:task_getting_started_compliance.html#scanning-backup-files-from-on-premises-ontap-systems["これらのバックアップファイルをスキャンします"]。
+方法を参照してください link:task_backup_from_onprem.html["オンプレミスの ONTAP ボリュームをオブジェクトストレージにバックアップ"^] そしていかにできるか 。
 
 * Cloud Compliance は、個人データ型「 IP アドレス」をファイルで検索できるようになりました。すべてのリストを表示します link:reference_private_data_categories.html#types-of-personal-data["個人データの種類"^] その Cloud Compliance がスキャンで見つかりました。
 

@@ -50,7 +50,7 @@ link:reference_networking_cloud_manager.html#rules-for-the-connector-in-azure["�
 
 . Connector 仮想マシンに接続されているホストから Web ブラウザを開き、次の URL を入力します。
 +
-http://_ipaddress_:80[""]
+http://_ipaddress_:80[]
 
 . ログイン後、コネクタを設定します。
 +

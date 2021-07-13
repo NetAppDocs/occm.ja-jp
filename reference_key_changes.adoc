@@ -214,7 +214,7 @@ Cloud Manager で新しい機能や拡張機能を導入する際に、クラウ
 
 Connector では、パブリッククラウド環境内のリソースとプロセスを管理するためにアウトバウンドインターネットアクセスが必要です。このセクションでは、必要になった新しいエンドポイントについて説明します。
 
-を検索できます link:reference_networking.html["Web ブラウザからアクセスするエンドポイントの完全なリストをここに表示します"] および link:reference_networking_cloud_manager.html#outbound-internet-access["ここでは、コネクタがアクセスするエンドポイントの完全なリストを示します"]。
+を検索できます link:reference_networking.html["Web ブラウザからアクセスするエンドポイントの完全なリストをここに表示します"] および 。
 
 * ユーザは、次のエンドポイントに接続して Web ブラウザから Cloud Manager にアクセスする必要があります。
 +

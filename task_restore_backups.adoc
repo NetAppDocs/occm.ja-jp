@@ -120,7 +120,7 @@ Cloud Manager は、選択したバックアップに基づいて新しいボリ
 === 前提条件
 
 * ファイルリストア処理を実行するには、 Cloud Volumes ONTAP またはオンプレミスの ONTAP システムで ONTAP のバージョンが 9.6 以降である必要があります。
-* バックアップファイルから個々のファイルをリストアする場合は、別のリストアインスタンス / 仮想マシンを使用します。を参照してください link:task_backup_to_s3.html#requirements["AWS の要件"] または link:task_backup_to_azure.html#requirements["Azure の要件"] 環境の準備状況を確認
+* バックアップファイルから個々のファイルをリストアする場合は、別のリストアインスタンス / 仮想マシンを使用します。を参照してください link:task_backup_to_s3.html#requirements["AWS の要件"] または  環境の準備状況を確認
 * AWS のクロスアカウントリストアでは、クラウドプロバイダコンソールで手動の操作が必要になります。AWS のトピックを参照してください https://docs.aws.amazon.com/AmazonS3/latest/dev/example-walkthroughs-managing-access-example2.html["クロスアカウントバケットの権限を付与しています"^] を参照してください。
 
 

@@ -106,7 +106,7 @@ _Age および _Size_Graphs の項目を調査して、削除または階層化�
 
 === 最も識別されているデータ分類
 
-_Classification_area には ' 最も識別されたリストが表示されます link:task_controlling_private_data.html#viewing-files-by-categories["カテゴリ"^]、 link:task_controlling_private_data.html#viewing-files-by-file-types["ファイルの種類"^]および link:task_managing_highlights.html#categorizing-your-data-using-aip-labels["AIP ラベル"^] をスキャンしたデータに保存します。
+_Classification_area には ' 最も識別されたリストが表示されます link:task_controlling_private_data.html#viewing-files-by-categories["カテゴリ"^]、 および  をスキャンしたデータに保存します。
 
 
 

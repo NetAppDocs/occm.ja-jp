@@ -30,7 +30,7 @@ summary: グローバルファイルキャッシュなどのネットアップ�
 * Cloud Volumes ONTAP を使用したグローバルファイルキャッシュユーザに対するカスタマーサポートは、次のチャネルを介して利用できます。
 +
 ** Guided Problem Solving 、ケース管理、ナレッジベース、ダウンロード、ツールなどを開始できます link:https://cloud.netapp.com/gfc-support["こちらをご覧ください"^]
-** ネットアップサポートにログインします https://mysupport.netapp.com[""] NSS のクレデンシャルを使用します
+** ネットアップサポートにログインします https://mysupport.netapp.com[] NSS のクレデンシャルを使用します
 ** P1 問題の迅速なサポートについては、 +1 856.481.3990 （オプション 2 ）までお電話ください。
 
 

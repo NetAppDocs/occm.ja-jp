@@ -57,7 +57,7 @@ HTTP （ 80 ）と HTTPS （ 443 ）はローカル UI へのアクセスを提�
 +
 --
 
-NOTE: コネクタを作成する別の方法があります。からコネクタを作成することもできます link:task_launching_aws_mktp.html["AWS Marketplace"]、 link:task_launching_azure_mktp.html["Azure Marketplace で入手できます"]またはをに設定します link:task_installing_linux["ソフトウェアを手動でインストールします"]。
+NOTE: コネクタを作成する別の方法があります。からコネクタを作成することもできます link:task_launching_aws_mktp.html["AWS Marketplace"]、 またはをに設定します 。
 
 [cols="15,55,30"]
 |===

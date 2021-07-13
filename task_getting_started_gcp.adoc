@@ -20,7 +20,7 @@ Cloud Volumes ONTAP for GCP の使用を開始するには、いくつかの手�
 ==== コネクタを作成します
 
 [role="quick-margin-para"]
-を持っていなければ link:concept_connectors.html["コネクタ"] ただし、アカウント管理者がアカウントを作成する必要があります。 link:task_creating_connectors_gcp.html["GCP でコネクターを作成する方法を説明します"]。
+を持っていなければ link:concept_connectors.html["コネクタ"] ただし、アカウント管理者がアカウントを作成する必要があります。 。
 
 [role="quick-margin-para"]
 最初の Cloud Volumes ONTAP 作業環境を作成する際、まだコネクタがない場合は、 Cloud Manager からコネクタの導入を求められます。
@@ -57,7 +57,7 @@ link:reference_networking_gcp.html["ネットワーク要件の詳細につい�
 ==== サービスアカウントを設定します
 
 [role="quick-margin-para"]
-Cloud Volumes ONTAP には、 2 つの目的で Google Cloud サービスアカウントが必要です。1 つ目は、を有効にする場合です link:concept_data_tiering.html["データの階層化"] Google Cloud でコールドデータを低コストのオブジェクトストレージに階層化すること。2 つ目は、を有効にした場合です link:concept_backup_to_cloud.html["Cloud Backup サービスの略"] ボリュームを低コストのオブジェクトストレージにバックアップできます。
+Cloud Volumes ONTAP には、 2 つの目的で Google Cloud サービスアカウントが必要です。1 つ目は、を有効にする場合です link:concept_data_tiering.html["データの階層化"] Google Cloud でコールドデータを低コストのオブジェクトストレージに階層化すること。2 つ目は、を有効にした場合です  ボリュームを低コストのオブジェクトストレージにバックアップできます。
 
 [role="quick-margin-para"]
 1 つのサービスアカウントを設定して、両方の目的に使用できます。サービスアカウントには * Storage Admin * ロールが必要です。

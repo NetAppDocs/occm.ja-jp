@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_logging_in.html 
 keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account, federated, federation, federated login, federation login 
-summary: Cloud Manager のインターフェイスには、 SaaS ベースのユーザがアクセスできます にアクセスしてインターフェイスを設定します https://cloudmanager.netapp.com[""]。 
+summary: Cloud Manager のインターフェイスには、 SaaS ベースのユーザがアクセスできます にアクセスしてインターフェイスを設定します https://cloudmanager.netapp.com[]。 
 ---
 = Cloud Manager にログインしています
 :hardbreaks:
@@ -13,13 +13,13 @@ summary: Cloud Manager のインターフェイスには、 SaaS ベースのユ
 
 
 [role="lead"]
-Cloud Manager のインターフェイスには、 SaaS ベースのユーザがアクセスできます にアクセスしてインターフェイスを設定します https://cloudmanager.netapp.com[""]。
+Cloud Manager のインターフェイスには、 SaaS ベースのユーザがアクセスできます にアクセスしてインターフェイスを設定します https://cloudmanager.netapp.com[]。
 
 
 TIP: シングルサインオンを使用して、社内ディレクトリ（フェデレーション ID ）からのクレデンシャルを使用してログインできます。詳細については、を参照してください https://cloud.netapp.com/help-center["Cloud Central ヘルプセンター"^] 次に、 * Cloud Central サインインオプション * をクリックします。
 
 .手順
-. Web ブラウザを開き、に進みます https://cloudmanager.netapp.com[""]。
+. Web ブラウザを開き、に進みます https://cloudmanager.netapp.com[]。
 . NetApp Cloud Central のクレデンシャルを使用してログインします。
 +
 image:screenshot_login.gif["Cloud Central のログイン画面。"]

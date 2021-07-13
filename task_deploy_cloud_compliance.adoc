@@ -28,7 +28,7 @@ Cloud Manager のワークスペースに Cloud Data Sense を導入するには
 ==== コネクタを作成します
 
 [role="quick-margin-para"]
-コネクタがない場合は、 Azure または AWS でコネクタを作成します。を参照してください link:task_creating_connectors_aws.html["AWS でコネクタを作成する"^] または link:task_creating_connectors_azure.html["Azure でコネクタを作成する"^]。
+コネクタがない場合は、 Azure または AWS でコネクタを作成します。を参照してください link:task_creating_connectors_aws.html["AWS でコネクタを作成する"^] または 。
 
 [role="quick-margin-para"]
 また可能です link:task_installing_linux.html["コネクタをオンプレミスに導入"^] 自社ネットワークまたはクラウド内の既存の Linux ホスト
@@ -67,7 +67,7 @@ Cloud Data Sense によってスキャンされる最初の 1TB のデータは�
 
 == コネクタを作成しています
 
-コネクタがない場合は、 Azure または AWS でコネクタを作成します。を参照してください link:task_creating_connectors_aws.html["AWS でコネクタを作成する"^] または link:task_creating_connectors_azure.html["Azure でコネクタを作成する"^]。ほとんどの場合、 Cloud Data Sense を有効にする前にコネクタをセットアップしておくことができます link:concept_connectors.html#when-a-connector-is-required["Cloud Manager の機能にはコネクタが必要です"]ただし、ここで設定する必要がある場合もあります。
+コネクタがない場合は、 Azure または AWS でコネクタを作成します。を参照してください link:task_creating_connectors_aws.html["AWS でコネクタを作成する"^] または 。ほとんどの場合、 Cloud Data Sense を有効にする前にコネクタをセットアップしておくことができます ただし、ここで設定する必要がある場合もあります。
 
 AWS または Azure に導入されているコネクタを使用する必要がある場合は、次のようなシナリオがあります。
 
