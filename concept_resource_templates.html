@@ -2524,7 +2524,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-09 14:42:47 +0000">06/09/2021</time>
+    <time datetime="2021-07-13 13:46:57 +0000">07/13/2021</time>
     
   
 
@@ -2615,6 +2615,9 @@
 <div class="ulist">
 <ul>
 <li>
+<p>主なアクション： *</p>
+</li>
+<li>
 <p>Cloud Volumes ONTAP ボリュームを作成します</p>
 </li>
 <li>
@@ -2624,12 +2627,21 @@
 <p>オンプレミスの ONTAP ボリュームを作成</p>
 </li>
 <li>
-<p>作成したボリュームで Cloud Backup を有効にする（ Azure NetApp Files には該当しません）</p>
+<p>二次アクション： *</p>
 </li>
 <li>
-<p>作成したボリュームで Cloud Data Sense を有効にする</p>
+<p>アクティブ化します <a href="concept_backup_to_cloud.html">"クラウドバックアップ"</a> ボリューム（ Azure NetApp Files には該当しません）</p>
+</li>
+<li>
+<p>アクティブ化します <a href="concept_cloud_compliance.html">"クラウドデータの意味"</a> ボリューム</p>
+</li>
+<li>
+<p>アクティブ化します <a href="concept_replication.html">"レプリケーション"</a> ボリューム（ Azure NetApp Files には該当しません）</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>たとえば、 Cloud Volumes ONTAP ボリュームを作成するテンプレートを作成できます。または、 Cloud Volumes ONTAP ボリュームを作成してから、そのボリュームで Cloud Backup を有効にします。または、 Cloud Volumes ONTAP ボリュームを作成し、そのボリュームで Cloud Backup_or_Cloud Data Sense を有効にします。</p>
 </div>
 <div class="paragraph">
 <p>ネットアップは、時間の経過とともにアクションを追加します。</p>
@@ -2833,6 +2845,7 @@
       cookieLaw.invoke = function(){return false;}
     </script>
     <script src='/ja-jp/occm/js/www-ntap.js'></script>
+    <script src='/ja-jp/occm/js/tabbed-blocks.js'></script>
   </body>
 
   
